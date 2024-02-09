@@ -1,0 +1,94 @@
+WEBVTT
+
+00:00.140 --> 00:06.780
+If you don't want to use brackets there is a more advanced option what you can do is go to code Visual
+
+00:06.780 --> 00:13.080
+Studio dot com and this is the name of the text editor or slash I-T Visual Studio code.
+
+00:13.140 --> 00:19.070
+It is my preferred text editor slash IEEE it's really really cool fast loading.
+
+00:19.080 --> 00:23.880
+It's got a lot of great things you can add on to it but with all that being said if you want to use
+
+00:23.880 --> 00:26.610
+this text editor all you have to do is hit download.
+
+00:26.610 --> 00:28.690
+It should pick up what machine you're using.
+
+00:28.890 --> 00:32.010
+But they have different builds for all of the different doses.
+
+00:32.100 --> 00:38.040
+And you'll notice to the right it says stable and insiders stable is going to be just their official
+
+00:38.040 --> 00:43.980
+releases and insiders is going to be the latest latest version of the code that they roll out every
+
+00:43.980 --> 00:45.720
+night or at least every week.
+
+00:45.720 --> 00:50.820
+So you'll have access to the latest features that the people at Microsoft have access to.
+
+00:50.820 --> 00:54.660
+So whichever one you decide to use they both should work perfectly fine.
+
+00:54.660 --> 00:59.090
+But after you have that downloaded the next step is going to be to go to No.
+
+00:59.110 --> 01:00.390
+J.S. dot org.
+
+01:00.600 --> 01:05.820
+And then scroll down here where it says download and it'll pick up what machine you're using but just
+
+01:05.820 --> 01:09.420
+hit the current version or you can use this version.
+
+01:09.450 --> 01:14.830
+Eight point eleven point four at the time you see this video the numbers could be different.
+
+01:14.880 --> 01:19.340
+It's not really going to do anything detrimental if you download a later version.
+
+01:19.340 --> 01:25.080
+It should be fine but once you have that downloaded you can go ahead and make a folder.
+
+01:25.120 --> 01:28.630
+And so what I would do is personally make a folder to organize everything.
+
+01:28.680 --> 01:29.930
+So I've already done that.
+
+01:29.970 --> 01:35.580
+But then you can just right click on the folder that you create and it'll say open with code and so
+
+01:35.580 --> 01:39.720
+that will allow you to basically open this as a VS code project.
+
+01:39.720 --> 01:44.970
+So once you do that it should open up something that looks similar to this without all of the files
+
+01:44.970 --> 01:45.990
+that I have.
+
+01:45.990 --> 01:49.340
+Now the next thing that we're going to do is use our command line.
+
+01:49.380 --> 01:51.170
+So I'm going to hit Control J.
+
+01:51.420 --> 01:56.550
+And that would be Command G on the Mac and go to where it says terminal right here.
+
+01:56.940 --> 02:02.240
+And this is actually why we downloaded no just so we can use NPM package.
+
+02:02.310 --> 02:06.720
+And so as soon as this switches over all you have to do is hit him.
+
+02:06.820 --> 02:12.130
+PM in it and we'll be able to start installing packages inside of our project.

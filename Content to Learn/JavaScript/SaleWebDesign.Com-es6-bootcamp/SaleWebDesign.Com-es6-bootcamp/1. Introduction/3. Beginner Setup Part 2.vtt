@@ -1,0 +1,37 @@
+WEBVTT
+
+00:00.600 --> 00:05.810
+So for this next module we're going to talk about 6 which is a pretty interesting topic.
+
+00:05.820 --> 00:10.560
+I'm going to have a whole separate video explaining it but what you'll need to do is go ahead and go
+
+00:10.560 --> 00:11.660
+to your course folder.
+
+00:11.670 --> 00:16.210
+Open up javascript and then make a new folder inside they're called iOS 6.
+
+00:16.350 --> 00:20.040
+Do a right hand click and open it as a bracket's project.
+
+00:20.040 --> 00:24.540
+Once you have that set up we'll get our basic skeleton so we can kind of test drive a couple of these
+
+00:24.540 --> 00:32.280
+features or do index each TMLC Once you have the folder open up get my skeleton going like so Year 6
+
+00:32.370 --> 00:37.950
+and then after that all we get to do is create our first javascript file.
+
+00:38.070 --> 00:44.120
+So what we'll do is hit new file and then we'll call it block underscore scope.
+
+00:44.250 --> 00:45.970
+Dodgiest like so.
+
+00:46.170 --> 00:53.760
+And after that we can hop back over to our HMO login script tag throw on a source attribute with the
+
+00:53.760 --> 00:55.930
+block scope on it and we're good to go.

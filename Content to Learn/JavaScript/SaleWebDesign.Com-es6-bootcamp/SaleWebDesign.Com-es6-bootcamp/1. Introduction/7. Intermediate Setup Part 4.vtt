@@ -1,0 +1,73 @@
+WEBVTT
+
+00:00.420 --> 00:06.440
+Now what should have happened is a new browser tab should have opened up with your default browser and
+
+00:06.440 --> 00:09.440
+load it in the HCM file that we just created.
+
+00:09.480 --> 00:14.610
+Now that we have that set up the next thing for us to do is going to be to create a new file called
+
+00:14.910 --> 00:17.330
+block underscore scope.
+
+00:17.650 --> 00:21.180
+So go ahead and pause it if you need to and create that file.
+
+00:21.180 --> 00:26.060
+Now mission control and control be to just kind of give me a more full screen view.
+
+00:26.060 --> 00:31.590
+And then after that I'll go to index dot h T.M. and right under or right above the body tag I should
+
+00:31.590 --> 00:34.660
+say I'm going to add a script tag so I'm going to write scripts.
+
+00:34.740 --> 00:41.300
+And then after that SIRC and I'll set that equal to block underscore scope.
+
+00:41.560 --> 00:42.430
+Yes.
+
+00:42.660 --> 00:48.250
+And then after that I'm going to go ahead and open up my console so I do control shift.
+
+00:48.300 --> 00:55.200
+That's command shift on the Mac and it should open up the actual console for me to see and make sure
+
+00:55.200 --> 00:57.950
+that everything's working the way that it's supposed to.
+
+00:57.990 --> 01:02.100
+Now this would work the same on Chrome or Firefox.
+
+01:02.100 --> 01:07.480
+I don't really mess with Internet Explore or edge but I'm assuming it would work the same way.
+
+01:07.600 --> 01:10.730
+I'm not really familiar with their debug but either way.
+
+01:10.770 --> 01:14.580
+Now just to make sure this works we're going to go ahead and cancel that log.
+
+01:15.300 --> 01:19.890
+I'm working like so save that.
+
+01:19.890 --> 01:22.000
+See what happens.
+
+01:22.050 --> 01:23.410
+And let's see.
+
+01:23.620 --> 01:24.110
+Logs.
+
+01:24.120 --> 01:28.040
+I'm working so it seems like everything is working the way that it's supposed to.
+
+01:28.080 --> 01:34.140
+Now the first thing for us to do is going to be talking about a new type of scope available to us inside
+
+01:34.170 --> 01:35.010
+of javascript.

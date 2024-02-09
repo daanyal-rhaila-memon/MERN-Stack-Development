@@ -1,0 +1,40 @@
+WEBVTT
+
+00:00.480 --> 00:06.330
+Once you've gone through all the official steps for NPM in it and just clicked through all of the options
+
+00:06.360 --> 00:11.160
+you should have a package is on file that appears so you should be all set.
+
+00:11.160 --> 00:16.580
+The next thing is going to be to install our first and only package that will need for this course.
+
+00:16.590 --> 00:26.010
+So the way you do that is NPM install light LITV dash server and then dash dash save dash dev.
+
+00:26.280 --> 00:31.230
+This may take a while for it to download but all of this is really going to do is download a very lightweight
+
+00:31.260 --> 00:36.250
+server and that we can spin up very easily without having to worry about a lot of setup.
+
+00:36.420 --> 00:41.430
+So I wanted to do it this way because this isn't a no geas course so I don't want to assume too much
+
+00:41.940 --> 00:47.200
+now after we go ahead and start installing light server the next thing I want to do is open up the package
+
+00:47.370 --> 00:52.520
+JS on file and all we're going to do is add to our script right here.
+
+00:52.530 --> 00:59.840
+So right after test I'm going to add a comma and then there we go start.
+
+01:00.210 --> 01:06.930
+And then after that colon in quotation marks light dash server.
+
+01:06.930 --> 01:12.960
+Now whenever this finishes downloading all we're going to have to do is run NPM start and it'll automatically
+
+01:12.960 --> 01:15.450
+spin up our light server on our local machine.

@@ -1,0 +1,58 @@
+WEBVTT
+
+00:00.180 --> 00:02.070
+Hello and welcome to the course.
+
+00:02.070 --> 00:03.620
+So for those of you who are new here.
+
+00:03.630 --> 00:05.480
+My name is Andrew and welcome.
+
+00:05.580 --> 00:08.810
+In this course we're going to be talking about javascript specifically.
+
+00:08.820 --> 00:10.770
+We're going to be talking about E6.
+
+00:10.770 --> 00:15.270
+And for those of you who are completely new to programming I really don't recommend this course but
+
+00:15.330 --> 00:20.880
+javascript is the programming language of the web as of the time of this recording it's the only language
+
+00:20.880 --> 00:22.220
+that can be used on the front end.
+
+00:22.260 --> 00:29.250
+As a programming language and it is perhaps one of the most popular ones in existence iOS 6 was essentially
+
+00:29.280 --> 00:34.110
+an update and it was perhaps one of the biggest updates in the history of the language.
+
+00:34.110 --> 00:39.090
+So my goal in this course is to teach you everything that you need to know about this update from front
+
+00:39.090 --> 00:39.730
+to back.
+
+00:39.900 --> 00:44.610
+And I only teach you the syntax for the new features that are available to you but also kind of explain
+
+00:44.610 --> 00:49.310
+different use cases and how you might implement these features in your code today.
+
+00:49.320 --> 00:55.260
+Now there is a lot of new features in this course and some of them are still being figured out as far
+
+00:55.260 --> 00:58.290
+as how they can be applied to real life code in the wild.
+
+00:58.290 --> 01:01.090
+But at the end of the day I'm going to teach you from front to back.
+
+01:01.110 --> 01:06.810
+And the use cases that have arisen for a lot of these new features so with all of that being said let's
+
+01:06.810 --> 01:07.930
+go ahead and get star.

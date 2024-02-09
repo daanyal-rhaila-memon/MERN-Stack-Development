@@ -1,0 +1,61 @@
+WEBVTT
+
+00:00.660 --> 00:03.750
+Once everything is finished downloading we should be good to go.
+
+00:03.750 --> 00:08.030
+The last thing for us to do is just to make HCM l file to serve.
+
+00:08.040 --> 00:10.530
+So we'll do index da h Tummo.
+
+00:10.710 --> 00:16.530
+You make new files inside of us code by hitting this kind of hollow document icon right here.
+
+00:16.740 --> 00:22.290
+And then after that we just need to do our set up so as code comes with Amut by default so I have to
+
+00:22.290 --> 00:25.170
+do is hit exclamation point and then enter.
+
+00:25.170 --> 00:27.180
+And that will give me everything that I need.
+
+00:27.210 --> 00:34.980
+I'll maybe change the title to iOS 6 and then after that I'll just display some dummy text Lauren like
+
+00:34.980 --> 00:36.660
+so perfect.
+
+00:36.660 --> 00:38.600
+Like I said it comes of Emett by default.
+
+00:38.700 --> 00:41.700
+And if you don't know about it it's definitely worth checking out.
+
+00:41.700 --> 00:43.350
+It'll save you a lot of time.
+
+00:43.350 --> 00:48.630
+All you have to do is hit the name of a particular tag that you want to use like for example age 1 and
+
+00:48.630 --> 00:52.350
+then you can hit tab or enter and it loads in that tag just like that.
+
+00:52.350 --> 00:56.670
+So we're not going be working with HMO too much so we don't have to worry about that.
+
+00:56.910 --> 01:02.670
+But either way now that we have all of our HMO written now the next thing for us to do is just run NPM
+
+01:02.970 --> 01:03.810
+start.
+
+01:04.320 --> 01:05.540
+And it may take a second.
+
+01:05.550 --> 01:11.010
+But as soon as it finishes up it's going to spin up our server and automatically load it into whatever
+
+01:11.010 --> 01:13.400
+our default browser happens to be.
