@@ -1,0 +1,49 @@
+WEBVTT
+
+00:00.390 --> 00:07.680
+You could actually even go a step further with the array from syntax right here and show you that what
+
+00:07.680 --> 00:11.490
+I mean is you can add a second argument and this will be like a mapping function.
+
+00:11.490 --> 00:18.480
+So essentially what it'll do is what an arrow function and we'll take a value and this value is going
+
+00:18.480 --> 00:24.720
+to be represented as whatever the particular indices of this array like object is whatever their particular
+
+00:24.720 --> 00:25.720
+property is.
+
+00:25.910 --> 00:32.490
+And inside of here I'm going to perform an operation on it and return someone to do value and then plus
+
+00:32.490 --> 00:33.330
+two.
+
+00:33.730 --> 00:36.360
+And in this case I'll make sure that these are numbers.
+
+00:36.540 --> 00:44.250
+That way you don't have to risk is one to like so then I'm going to save this and you can see that whenever
+
+00:44.250 --> 00:46.700
+it was an argument's object it was 1 2.
+
+00:46.800 --> 00:49.140
+But now that it's an array it is 3 4.
+
+00:49.140 --> 00:51.790
+So we add this basic math thing.
+
+00:51.810 --> 00:58.230
+Our mapping function right here and it allows us to do some calculations on it or perform some operations
+
+00:58.230 --> 01:04.340
+on it before storing it as its final value in the corresponding index in the array.
+
+01:04.440 --> 01:10.570
+So it's a great way to do some extra work to your array like object before you convert into an array.
+
+01:10.770 --> 01:16.590
+And then all you have to do is return whatever you would like to be stored as an item in that array.

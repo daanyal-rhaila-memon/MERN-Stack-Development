@@ -1,0 +1,85 @@
+WEBVTT
+
+00:00.390 --> 00:04.200
+So we can basically just completely avoid this quirky behavior.
+
+00:04.200 --> 00:08.330
+So what I'm going to do is I'm going to copy our arrays right here.
+
+00:08.370 --> 00:13.170
+And then I'm going to comment them out and then pop down and add them right here and I'll do the same
+
+00:13.170 --> 00:18.030
+thing with my counseled out logs just copy them and common to melt and move down and pop them right
+
+00:18.030 --> 00:19.030
+down here.
+
+00:19.050 --> 00:23.970
+So the first thing we need to do is get rid of these new keywords right here.
+
+00:23.970 --> 00:30.810
+And then after that all we're going to do is right after the break he will add a dot of like so then
+
+00:30.870 --> 00:38.190
+whenever I do a raid 2 and then I log the length you'll see that the length of this array right here
+
+00:38.190 --> 00:38.750
+is 1.
+
+00:38.760 --> 00:43.040
+Even though I passed in a numeric value as the one and only argument.
+
+00:43.170 --> 00:48.630
+So this is a great way to avoid the quirky behavior associated with the array constructor but other
+
+00:48.630 --> 00:53.610
+than that they work very similarly to each other you just pass in values and those values are set as
+
+00:53.610 --> 00:55.070
+the items in the array.
+
+00:55.080 --> 01:00.870
+So other than that it's pretty normal and it works also very similarly to doing something like for example
+
+01:00.870 --> 01:04.610
+array literal syntax like at are for.
+
+01:05.100 --> 01:07.110
+And then just doing an array like that.
+
+01:07.110 --> 01:10.590
+So most of the time you can use either one of these syntax.
+
+01:10.650 --> 01:12.720
+And it'll work out just fine.
+
+01:12.750 --> 01:19.110
+The one case where you might want to use a array of instead is if you need to pass in for example an
+
+01:19.110 --> 01:20.550
+Array constructor.
+
+01:20.550 --> 01:29.310
+So for example will you function and we'll call it create a array and it's going to take a re construct
+
+01:30.000 --> 01:36.540
+and then some values like so and inside of here we're just going to return array.
+
+01:36.570 --> 01:43.110
+Construct and then call it and with the values that are to be passed in in this case I would definitely
+
+01:43.110 --> 01:49.110
+not recommend passing in a traditional array constructor like so a reference to the Array constructor.
+
+01:49.200 --> 01:55.320
+Instead I would recommend that you pass an array of Especially if you cannot guarantee that the values
+
+01:55.590 --> 01:57.540
+will be non numeric value.
+
+01:57.540 --> 02:03.030
+So in this particular case you would have to use array of instead of passing in for example something
+
+02:03.030 --> 02:04.610
+like an array literal.

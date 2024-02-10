@@ -1,0 +1,76 @@
+WEBVTT
+
+00:00.390 --> 00:06.240
+In the past it's also been kind of a pain to take an object that is very similar to an array and just
+
+00:06.240 --> 00:08.280
+converted into an array.
+
+00:08.310 --> 00:14.400
+For example if I do like let's say a function here and we'll just call it foo and we'll call an Soldat
+
+00:14.520 --> 00:22.620
+log the builtin arguments object right here and then we'll just pass and some arguments like string
+
+00:22.620 --> 00:32.010
+one string to like so and then after that you'll see that we get this re looking object right here and
+
+00:32.010 --> 00:33.330
+arguments really is similar.
+
+00:33.330 --> 00:39.030
+It uses numeric indices and then it has a value associated with each numeric into C and it has a length
+
+00:39.030 --> 00:42.830
+property but technically speaking it is still an object.
+
+00:42.840 --> 00:49.050
+So in order to convert this into an array to work with it as if it were an array we'd have to do something
+
+00:49.050 --> 00:51.680
+like this for example function.
+
+00:51.690 --> 01:06.780
+Convert to or turn into array like so and then we'll take a ray Well B.J. as an argument and then inside
+
+01:06.780 --> 01:14.640
+of here what someone would typically do is something like a radar prototype slice call it with the RBJ
+
+01:15.270 --> 01:22.890
+or do slice and then call with the RBJ like so and this works pretty well because we're using call to
+
+01:22.890 --> 01:30.270
+set the value of this equal to the array like object and all splice really needs to work correctly is
+
+01:30.270 --> 01:36.360
+some numeric indices and length properties so this would work pretty well with array like objects but
+
+01:36.390 --> 01:41.430
+overall it's still kind of a lot of work to do what should be a relatively simple operation.
+
+01:41.640 --> 01:51.220
+So what you can do instead now is to do this you can do array array dot from and then put in your array
+
+01:51.220 --> 01:57.830
+like object right here and then I'm going to store the values you Konst array equals this.
+
+01:57.940 --> 02:03.530
+And so what we'll do now is cancelled out log if I can get it.
+
+02:03.530 --> 02:12.610
+Consider a log type of array and I'm going to move this below because well it's going to be in the TTC.
+
+02:12.620 --> 02:21.590
+So in that case I'll pop it down and then we'll do type of arguments like so and you can see it says
+
+02:21.620 --> 02:23.720
+Object object right here.
+
+02:23.720 --> 02:30.050
+But really this is going to be an array and you can see that if I canceled it because arrays still technically
+
+02:30.050 --> 02:35.630
+are objects but in this case you can see it has all of this different functionality right here.
+
+02:35.630 --> 02:37.700
+But this is a pure array.

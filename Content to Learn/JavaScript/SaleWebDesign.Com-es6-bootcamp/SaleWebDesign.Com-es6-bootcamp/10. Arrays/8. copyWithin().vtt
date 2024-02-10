@@ -1,0 +1,106 @@
+WEBVTT
+
+00:00.360 --> 00:06.840
+Copy within is another good method and it's pretty similar to the fill method that we have available
+
+00:06.840 --> 00:07.840
+in Essex.
+
+00:07.830 --> 00:14.310
+I mean I copy this array down here but it's different in that instead of just passing it a value that
+
+00:14.310 --> 00:21.480
+we want to fill or our RE with what copy within is going to do is take items from within the array itself
+
+00:21.750 --> 00:25.740
+and use it to override other values within the array.
+
+00:25.920 --> 00:33.750
+So what we'll do is we'll take and we'll counseled or log numbers like so and then we're going to copy
+
+00:33.750 --> 00:35.920
+this and we're going to do it down here as well.
+
+00:36.420 --> 00:42.960
+And they're going to show you how this works so what we'll do is we'll take numbers and we'll do copy
+
+00:42.960 --> 00:43.630
+within.
+
+00:43.650 --> 00:44.180
+Right.
+
+00:44.430 --> 00:50.100
+So there's three different arguments that you can specify in here are two of them are necessary.
+
+00:50.100 --> 00:53.970
+The first is where to start pasting.
+
+00:54.030 --> 00:57.390
+The second is where to start copying.
+
+00:57.410 --> 00:58.070
+OK.
+
+00:58.410 --> 01:06.220
+So in other words what it means is let's say I want to start overriding values at 67 right.
+
+01:06.330 --> 01:14.470
+So in that case I would need to specify to the star of pasting and then where I want to start copying.
+
+01:14.460 --> 01:21.030
+In this case I might specify zero like so then if I save this you'll see that now my array goes from
+
+01:21.030 --> 01:26.980
+23:45 67 89 to 23:45 23:45.
+
+01:27.000 --> 01:33.220
+So what I told javascript to do inside of this method is start copying values.
+
+01:33.300 --> 01:39.300
+At this point right here just start copying them and then paste over the values starting at the second
+
+01:39.300 --> 01:46.020
+and so starting at index 2 right here where 67 is not going to change this to 1 2 3 4.
+
+01:46.050 --> 01:50.690
+So I have to say such long numbers but you can see it has the same effect right here.
+
+01:50.730 --> 01:56.780
+Now you can also specify a third argument which is where to stop copying essentially.
+
+01:57.180 --> 02:03.780
+So by doing this what I could do is tell it to stop copying at index 1 and you see that in this case
+
+02:03.840 --> 02:06.360
+it leaves this value completely untouched.
+
+02:06.360 --> 02:15.090
+This final index the reason for that is because I told it to start copying at index zero and stop copying
+
+02:15.240 --> 02:18.030
+at index 1 right here.
+
+02:18.030 --> 02:23.070
+So in other words it's only going to take the number one right here and copy that and then it's going
+
+02:23.070 --> 02:24.660
+to start pasting right here.
+
+02:24.750 --> 02:29.850
+But it only has one item that it can paste in because it only copied one item so it's just going to
+
+02:29.850 --> 02:30.990
+copy three.
+
+02:31.100 --> 02:36.570
+I mean paste over three right here and leave the number for right here the third indices completely
+
+02:36.570 --> 02:37.210
+untouched.
+
+02:37.380 --> 02:42.840
+Very similar to the fill method but in this case you're taking actual values from within your array
+
+02:43.200 --> 02:46.180
+and using it to override other values within the array.

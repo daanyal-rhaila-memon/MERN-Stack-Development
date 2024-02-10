@@ -1,0 +1,61 @@
+WEBVTT
+
+00:00.420 --> 00:04.050
+You can also use the array from method with iterable.
+
+00:04.050 --> 00:11.310
+So to illustrate that we'll make a new set and we'll just pass in an array to initialize some values
+
+00:11.310 --> 00:16.620
+like so and then after that all we have to do is consulate or log this.
+
+00:16.950 --> 00:25.290
+And then we're going to take this and use it to make an array so do Konst array equals array from parentheses
+
+00:25.290 --> 00:33.690
+pass in the set and then counsel dot log array like so as you can see it was originally s.a I used it
+
+00:33.690 --> 00:40.100
+to make an array so we can not only work with array like objects but we can also use this with iterable.
+
+00:40.350 --> 00:46.050
+And by that logic it means we can also work on any kind of object with a symbol da iterator.
+
+00:46.050 --> 00:53.430
+So for example we'll do a concert RBJ equals an object right here and inside of here we're just going
+
+00:53.430 --> 01:03.640
+to do a generator function this symbol if I can't spell correctly this will work to iterator like so.
+
+01:03.640 --> 01:12.090
+Iterator then inside of here we're going to do is just yield one and then yield to then yield three
+
+01:13.320 --> 01:14.610
+like so.
+
+01:14.610 --> 01:23.340
+Then after that I can do Konst array two equals a radar from and I'll just pass this object directly
+
+01:23.340 --> 01:25.230
+since it has an iterator on it.
+
+01:25.230 --> 01:29.790
+And I might even pass in a mapping function so I'll do value plus one.
+
+01:30.300 --> 01:35.220
+And then I don't need parentheses because if it's just a one line return statement there's no need for
+
+01:35.220 --> 01:36.560
+parentheses.
+
+01:36.620 --> 01:49.080
+And then after that I'll just cancel dot log array to like so an unexpected token on line 60 right here
+
+01:49.120 --> 01:51.600
+I use parentheses as always.
+
+01:51.600 --> 01:52.280
+There we go.
+
+01:52.290 --> 01:58.910
+Now you can see it turn this object right here with a symbol iterator on it into an array as well.

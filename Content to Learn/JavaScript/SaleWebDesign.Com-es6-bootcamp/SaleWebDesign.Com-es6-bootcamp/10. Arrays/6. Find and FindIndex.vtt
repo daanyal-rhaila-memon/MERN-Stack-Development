@@ -1,0 +1,142 @@
+WEBVTT
+
+00:00.340 --> 00:04.460
+There are some other new methods that are available that make our lives easier.
+
+00:04.460 --> 00:06.250
+Find and find index.
+
+00:06.330 --> 00:12.080
+These are very useful for looking for items in an array that meet a particular criteria.
+
+00:12.120 --> 00:18.600
+And once we do meet this criteria we'll go ahead and either return the value inside of the array that
+
+00:18.600 --> 00:23.100
+meets the criteria or the index of the value inside of the array.
+
+00:23.100 --> 00:27.920
+So what we do is we'll make a contest and we'll do numbers.
+
+00:28.120 --> 00:29.960
+And it's just going to be an array of numbers will.
+
+00:29.980 --> 00:38.240
+Twenty three forty five sixty seven eighty nine like so then we can call the find method on this array.
+
+00:38.460 --> 00:44.280
+And this can take two arguments the first argument is a callback that's going to be invoked for every
+
+00:44.280 --> 00:45.440
+item in the array.
+
+00:45.570 --> 00:49.770
+And the second argument which is optional is an argument for this.
+
+00:49.770 --> 00:51.690
+So in other words you can define what you want.
+
+00:51.690 --> 00:55.940
+The keyword this to equal for the callback function that you pass in.
+
+00:56.070 --> 01:00.990
+Now I'm going to do this with the traditional function first and then I'll show you another way to do
+
+01:00.990 --> 01:02.630
+it with the arrow function.
+
+01:02.640 --> 01:08.040
+Now the three different arguments that this function is going to get passed in is the same three arguments
+
+01:08.040 --> 01:10.830
+that would get passed in four of four each.
+
+01:10.890 --> 01:12.600
+Or a map function.
+
+01:12.600 --> 01:16.500
+So it would be first the value where we are in the loop.
+
+01:16.500 --> 01:21.910
+And then after that it's going to be the index where we are and the array itself.
+
+01:22.380 --> 01:30.090
+So I can illustrate that to you with let's say Number Singular and then we'll do let's say the soldiers
+
+01:30.090 --> 01:31.000
+do.
+
+01:31.500 --> 01:37.320
+And then we'll just do array like so and do inside of here just cancel the log.
+
+01:37.320 --> 01:39.550
+Each of these number.
+
+01:39.750 --> 01:45.510
+And then array like so you see we go through this entire thing right here.
+
+01:45.600 --> 01:50.060
+And this of course is the array itself the index we're at and the actual value.
+
+01:50.070 --> 01:55.710
+Now one of the big differences here is what we need to include inside of here is a return statement
+
+01:55.740 --> 01:59.320
+the return statement is going to be where we defined our criteria.
+
+01:59.490 --> 02:05.790
+And as soon as we return true we're going to stop going through the array and basically return either
+
+02:05.790 --> 02:11.800
+the value or the index for what return true so I'll define my criteria right here.
+
+02:11.820 --> 02:15.840
+Now we're going to do number is greater than 70.
+
+02:16.950 --> 02:23.640
+Like so now then we go through this and you're going to see nothing happens because we didn't really
+
+02:23.640 --> 02:25.080
+cancel that log our result.
+
+02:25.080 --> 02:32.390
+So it's going to return the result and then we can cancel it out logons console log result.
+
+02:33.190 --> 02:33.930
+Like so.
+
+02:34.460 --> 02:37.630
+And you can see it actually prints out 89.
+
+02:37.660 --> 02:44.530
+So what it does here is it goes through this array and then it compares whatever value we're at in the
+
+02:44.530 --> 02:50.410
+array to our condition right here in a gets all the way to 89 whenever it gets to 89.
+
+02:50.410 --> 02:53.080
+Number 89 is greater than 70.
+
+02:53.200 --> 02:58.120
+So it returns True as soon as the find method returns true.
+
+02:58.120 --> 03:01.990
+It takes the value that met our criteria and returns true.
+
+03:01.990 --> 03:06.880
+So this is really good for checking for values inside of an array that meet a certain criteria instead
+
+03:06.880 --> 03:09.220
+of just looking for a specific value.
+
+03:09.220 --> 03:15.250
+Now a find index is going to do pretty much the same thing except instead of returning the value that
+
+03:15.250 --> 03:16.470
+met our criteria.
+
+03:16.600 --> 03:18.700
+It's going to return where it is in the array.
+
+03:18.700 --> 03:24.730
+So in this case it will return 3 because the value that met our criteria is at index 3.

@@ -1,0 +1,82 @@
+WEBVTT
+
+00:00.420 --> 00:03.390
+Another method that was added is called fill.
+
+00:03.390 --> 00:08.850
+And essentially what it's going to do is fill up the items in the array with a certain value that we
+
+00:08.850 --> 00:09.780
+specify.
+
+00:09.960 --> 00:20.430
+So to show this to you I'm going to basically go and just do numbers fill and then one then counseled.
+
+00:21.030 --> 00:26.870
+Numbers like so and you can see it now it's still the same array.
+
+00:26.970 --> 00:28.600
+It's got four items in it.
+
+00:28.770 --> 00:32.590
+But in this case we've filled it all up with a value of 1.
+
+00:32.640 --> 00:36.720
+So it's a great way to replace certain items in your array.
+
+00:36.720 --> 00:43.230
+Now this is only the first argument that we pass in the first argument is what we want to fill with.
+
+00:43.950 --> 00:49.970
+And then we can specify a second argument which is essentially what we want to start.
+
+00:50.010 --> 00:56.430
+So the starting index so if I specify one that means it's going to start filling this array with the
+
+00:56.430 --> 00:59.060
+number 1 and it's going to start right here.
+
+00:59.060 --> 01:01.570
+Forty five because that's the number one index.
+
+01:01.650 --> 01:04.970
+And I started off at two because I noticed some saying the word one a lot.
+
+01:05.310 --> 01:11.520
+So by specifying a star index of two which is inclusive it means it's going to start at 67 and just
+
+01:11.520 --> 01:13.710
+fill it up with ones right here.
+
+01:13.710 --> 01:19.680
+So we do that and you can see it starts at 67 and fills it up with the value of one and you can also
+
+01:19.740 --> 01:21.480
+do a ending index.
+
+01:21.480 --> 01:27.390
+So in other words where you want it to stop ending if you do not include your end index right here where
+
+01:27.390 --> 01:32.340
+you want it to start filling up then it will just go all the way to the end of the array and use the
+
+01:32.340 --> 01:35.250
+length of the array automatically as an index.
+
+01:35.250 --> 01:40.190
+So what I'll do here is I'll start at 1 and then I'll end it too.
+
+01:40.380 --> 01:44.410
+So we'll start at 45 and we will end 67.
+
+01:44.600 --> 01:48.230
+And so you'll see that it only replaces one value right here.
+
+01:48.240 --> 01:54.870
+The reason for that is because the star index is inclusive and the end index is non-inclusive which
+
+01:54.870 --> 01:59.160
+means it will not include this index right here in the filling.
+
+01:59.160 --> 02:04.730
+So in order to actually fill 67 with one I would have to change this to three like so.
