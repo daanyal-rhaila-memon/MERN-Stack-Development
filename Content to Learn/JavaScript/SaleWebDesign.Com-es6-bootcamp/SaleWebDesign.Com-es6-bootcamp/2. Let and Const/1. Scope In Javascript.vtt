@@ -1,0 +1,301 @@
+WEBVTT
+
+00:00.180 --> 00:02.190
+Now that we're set up let's get started.
+
+00:02.190 --> 00:07.410
+So the first thing we're going to do is kind of talk a little bit about the basics of the scoping mechanism
+
+00:07.410 --> 00:09.290
+inside of Javascript.
+
+00:09.290 --> 00:14.050
+So javascript uses a mic scoping mechanism called lexical scoping.
+
+00:14.340 --> 00:16.770
+All getting into a lot of the details of it.
+
+00:16.770 --> 00:22.080
+Basically what it means is that the scope for your variables or functions in other words the rules by
+
+00:22.080 --> 00:27.390
+which they can be accessed or cannot be accessed is pretty much defined at Author time and it's set
+
+00:27.390 --> 00:31.440
+in stone by the time the javascript engine executes your code.
+
+00:31.440 --> 00:33.180
+Now there are ways around it.
+
+00:33.180 --> 00:39.540
+I understand that evil functions and whatnot but for the most part Javascript is a lexically scoped
+
+00:39.630 --> 00:40.240
+language.
+
+00:40.240 --> 00:43.900
+Now there is another scoping mechanism called dynamic scoping.
+
+00:44.040 --> 00:50.070
+And we're not even going to really cover that but it would probably wreak havoc inside of javascript.
+
+00:50.220 --> 00:54.860
+Now inside of javascript there are two main scopes that is the global scope.
+
+00:54.960 --> 00:56.870
+And then you have a function scope.
+
+00:56.910 --> 01:03.150
+So what we'll do to demonstrate this is we will make a variable called Person and we'll set it equal
+
+01:03.150 --> 01:06.320
+to John and then we're going to do an if.
+
+01:06.420 --> 01:08.590
+So the function.
+
+01:08.590 --> 01:12.850
+And then inside of here we're just going to count that out log person.
+
+01:13.230 --> 01:15.300
+And after that we're going to copy this.
+
+01:15.300 --> 01:20.450
+So I'm going to do Control-C that's commands on the Mac and we'll copy that and paste it with control
+
+01:20.460 --> 01:27.190
+the command VI on the Mac and then we'll just invoke our if he and you'll see that it prints out John
+
+01:27.220 --> 01:32.940
+2 times inside of the global scope what happens is basically our engine goes to look for this person
+
+01:33.000 --> 01:36.330
+variable that we're referencing we're inside of the global scope.
+
+01:36.330 --> 01:40.360
+And so what happens is it finds person variable inside of the global scope.
+
+01:40.500 --> 01:42.890
+And so that is the variable that uses.
+
+01:42.930 --> 01:48.600
+However inside the function scope what happens is the engine looks for this person variable that we're
+
+01:48.600 --> 01:53.160
+referencing inside of the function scope just inside of the function basically.
+
+01:53.370 --> 01:54.420
+And it doesn't find it.
+
+01:54.420 --> 01:55.730
+So what does it do.
+
+01:55.740 --> 02:01.070
+It goes to the next outer enclosing scope which in this case would be the global scope.
+
+02:01.290 --> 02:08.040
+And then it looks for it it sees Oh there is a variable called person in so it uses this variable instead.
+
+02:08.040 --> 02:13.990
+Now if we define our own variable inside of the function scope like so we'll call it Jessica.
+
+02:14.310 --> 02:17.730
+You'll see that it'll actually use that variable instead.
+
+02:17.730 --> 02:22.890
+Because whenever the engine looks for this person variable that we're referencing inside of this function
+
+02:22.890 --> 02:26.850
+scope it's going to immediately find it inside of that function scope.
+
+02:26.850 --> 02:30.430
+So once it finds the variable that it's looking for it's going to stop looking.
+
+02:30.510 --> 02:34.490
+So it will never reach this person variable right here.
+
+02:34.650 --> 02:37.980
+And that is why we can have two different variables of the same name.
+
+02:38.010 --> 02:40.600
+Also referred to as shadowing.
+
+02:40.790 --> 02:42.900
+Now this is where it gets really interesting.
+
+02:42.900 --> 02:44.310
+OK that's kind of the basics.
+
+02:44.310 --> 02:46.470
+Now let's get into something a little weird.
+
+02:46.490 --> 02:54.120
+So how do you function check and we'll define a parameter of Boole and inside of here we'll do a simple
+
+02:54.120 --> 03:05.460
+check if bool then we're going to do var name equals Jessica and then counsel or log Jessica or a log
+
+03:05.460 --> 03:06.620
+the name scuse me.
+
+03:06.750 --> 03:10.120
+Nobody else consulate or log.
+
+03:10.470 --> 03:11.820
+Try again.
+
+03:11.820 --> 03:14.470
+Exclamation point to yell at them.
+
+03:14.640 --> 03:20.360
+So everything should be working fine if I run a check and pass in true it's going to print out Jessica
+
+03:20.500 --> 03:22.830
+or at least it should and it does.
+
+03:22.830 --> 03:28.350
+And if I pass and falls it's going to run the else statement in and it's going to run try again in the
+
+03:28.350 --> 03:30.920
+council and you can see that works pretty well.
+
+03:31.110 --> 03:35.810
+But let's make it a little more interesting just outside of the else statement.
+
+03:35.820 --> 03:43.350
+We're going to counseled or log the name just like that so honorary consul not log the name.
+
+03:43.510 --> 03:48.820
+You can see we get undefined which if you think about it that really shouldn't work.
+
+03:48.820 --> 03:54.790
+So typically whenever you try to reference a variable that doesn't exist it'll actually throw a reference
+
+03:54.790 --> 04:00.520
+error and let you know hey you never defined this variable or you never initialized it or anything like
+
+04:00.520 --> 04:01.260
+that.
+
+04:01.300 --> 04:07.240
+If you however define the variable but you never initialize it with a value it will be undefined.
+
+04:07.300 --> 04:09.380
+So that's what's happening here.
+
+04:09.430 --> 04:15.340
+So basically it's saying that we actually defined the variable but we never assigned a value which would
+
+04:15.340 --> 04:19.030
+be strange to someone who's not very familiar with Javascript.
+
+04:19.030 --> 04:25.490
+So really what's going on here is hoisting and the way that thing works is actually pretty interesting.
+
+04:25.490 --> 04:28.850
+But essentially you have three different mechanisms to worry about.
+
+04:28.890 --> 04:33.940
+You have the compiler you have the scope and you have the engine what really happens is javascript is
+
+04:33.940 --> 04:37.030
+actually compiled just before it's executed.
+
+04:37.060 --> 04:42.940
+It's a common belief that javascript is an interpreted language but actually it is compiled it's not
+
+04:42.940 --> 04:49.960
+compiled in a separate build stage before the execution like most compiled languages but it is indeed
+
+04:49.960 --> 04:50.590
+compiled.
+
+04:50.590 --> 04:56.560
+Often times just seconds before it needs to be executed so it has to do it in a very sophisticated and
+
+04:56.620 --> 04:59.130
+a lot of optimizations and whatnot.
+
+04:59.140 --> 05:05.200
+So essentially what happens is you have lexing so it breaks your code up into little pieces and then
+
+05:05.200 --> 05:10.870
+it's turned into an abstract syntax tree which is just a representation of your code as these little
+
+05:10.870 --> 05:12.350
+token tokens.
+
+05:12.460 --> 05:19.260
+And then after that the compiler generates code for your engine to be executed for your engine to execute.
+
+05:19.270 --> 05:24.960
+So at the end of the day when I'm trying to say very briefly is that whenever the compiler goes through
+
+05:25.150 --> 05:31.930
+and it Genner it flexes your code or tokenize is it and then after that it turns into an abstract syntax
+
+05:31.930 --> 05:32.400
+tree.
+
+05:32.620 --> 05:39.610
+What it does is it goes ahead and it is aware of all of your variable declarations but it generates
+
+05:39.610 --> 05:42.120
+code for your engine to execute later.
+
+05:42.190 --> 05:46.610
+And that code can handle the assignment of the value to the variable.
+
+05:46.660 --> 05:47.320
+OK.
+
+05:47.530 --> 05:54.430
+So in other words what happens is the first time javascript goes through to put it simply it's aware
+
+05:54.430 --> 05:59.870
+of your variable declarations and the second time javascript goes through it's aware of your assignments.
+
+05:59.890 --> 06:06.080
+So what really happens if I rewrite this is I'm going to copy this with Control-C and then commented
+
+06:06.100 --> 06:14.630
+out like so what we really did here is we did like var name up top.
+
+06:15.310 --> 06:22.660
+So just take this out and put that right there and then right here we didn't name equals Jessica.
+
+06:22.740 --> 06:23.110
+OK.
+
+06:23.110 --> 06:29.090
+Because first off there is no block scoping at least originally inside of Javascript.
+
+06:29.170 --> 06:35.650
+And so whenever you have this variable really what it is is it's inside of the function scope right
+
+06:35.650 --> 06:41.500
+here and it's being quote unquote hoisted to the top because of the way that your compiler works inside
+
+06:41.490 --> 06:42.640
+of Javascript.
+
+06:42.640 --> 06:48.670
+So that's all very technical but at the end of the day what I'm saying is that this variable right here
+
+06:48.670 --> 06:52.840
+is going to be available throughout the entirety of this function.
+
+06:52.840 --> 06:53.430
+OK.
+
+06:53.590 --> 06:59.560
+Just because you declare it like you did here inside of these curly braces inside of this code block
+
+06:59.830 --> 07:03.670
+that does not mean it is only available inside of those curly braces.
+
+07:03.700 --> 07:04.330
+OK.
+
+07:04.510 --> 07:06.840
+But that is not the case with LET very.

@@ -1,0 +1,64 @@
+WEBVTT
+
+00:00.300 --> 00:06.280
+You may be wondering what happens if we use a to instead of let for these loops right here.
+
+00:06.290 --> 00:12.030
+Well since we already have our loops written now in a very convenient fashion we can just comment them
+
+00:12.030 --> 00:17.970
+back in and kind of see what happens so I'll go ahead and comment this back in no element of do is change
+
+00:17.970 --> 00:21.810
+the counter to a contest variable instead of a variable.
+
+00:21.810 --> 00:28.290
+Now whenever I do this it does throw an error because once again once the value of a concert is set
+
+00:28.560 --> 00:30.480
+A cannot be redefined.
+
+00:30.510 --> 00:33.900
+And also because when I'm referencing Funk's this doesn't work.
+
+00:33.900 --> 00:40.650
+So let me comment back in funk so the c word is funk songs songs and comment that back in and you can
+
+00:40.650 --> 00:45.600
+see once again you can't really override something once it has been defined.
+
+00:45.600 --> 00:51.930
+Now with that being said a kind of weird thing that does happen though is if we come in this out and
+
+00:51.930 --> 00:56.280
+we use a four in or four of loop it actually does work.
+
+00:56.280 --> 00:57.850
+So it's kind of a weird behavior.
+
+00:57.860 --> 01:02.850
+So let me comment this back in element of do is change this to a concert and you'll see it does the
+
+01:02.850 --> 01:05.190
+exact same thing that it did before.
+
+01:05.250 --> 01:08.970
+So it makes no difference if it was a lead or a concert.
+
+01:08.970 --> 01:10.650
+Let me go ahead and hit.
+
+01:11.130 --> 01:15.130
+And it does the same thing hit a concert does the exact same thing.
+
+01:15.270 --> 01:20.760
+So in other words if you use a concert variable with the regular for loop it's not going to work if
+
+01:20.760 --> 01:23.220
+you use it with a four in or a four of loop.
+
+01:23.220 --> 01:24.240
+It will work.
+
+01:24.240 --> 01:28.550
+But in general just to keep it simple remember use lead with your four loops.

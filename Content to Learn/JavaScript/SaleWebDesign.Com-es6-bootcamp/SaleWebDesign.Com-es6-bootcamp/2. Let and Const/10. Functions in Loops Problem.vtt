@@ -1,0 +1,154 @@
+WEBVTT
+
+00:00.450 --> 00:07.380
+There's another problem that we ran into whenever we worked with variables the VAR keyword variables
+
+00:07.650 --> 00:10.620
+with loops and that is whenever we use loops with functions.
+
+00:10.620 --> 00:17.420
+Now just to kind of revisit the concept will make a regular variable like before 2015.
+
+00:17.490 --> 00:24.680
+Empty array like so then all I want to do is loop through it just like before and will do while I am
+
+00:24.720 --> 00:29.340
+less than nine semi-colon and then will increment I.
+
+00:29.550 --> 00:34.710
+And then inside of here what we want to do is essentially push on a function for every single count
+
+00:34.740 --> 00:36.250
+for every single iteration.
+
+00:36.450 --> 00:39.920
+So in this case what is push on a function like so.
+
+00:40.200 --> 00:43.210
+And then all we're going to do is counseled our log.
+
+00:43.290 --> 00:43.910
+Right.
+
+00:44.130 --> 00:49.920
+And we already know that this doesn't work because whenever we for each through our array and load in
+
+00:49.920 --> 00:56.490
+a function with a argument that will get passed in that represents an item in the array like so come
+
+00:56.490 --> 01:01.140
+back and then we just invoke the function that's inside of the array.
+
+01:01.140 --> 01:06.810
+You know see that it prints nine nine times because whenever we push on this array it goes through the
+
+01:06.810 --> 01:09.890
+entire loop nine times or eight times I should say.
+
+01:10.140 --> 01:16.930
+And so whenever it does that whenever we finish looping the value of this variable is 9.
+
+01:17.070 --> 01:22.800
+And so whenever we invoke this function right here they're all referencing the same variable that their
+
+01:22.810 --> 01:27.840
+consulate out loggy and for that very reason it prints 9 nine times.
+
+01:27.840 --> 01:33.300
+Now originally as we already know there was a very common workaround that you would see in order for
+
+01:33.300 --> 01:39.740
+people to get the expected or at least desired result which is 0 1 2 3 4 6 7 8.
+
+01:39.800 --> 01:45.040
+And the way they would do is they would make the same exact loop.
+
+01:45.210 --> 01:48.920
+And then after that do less than nine increments.
+
+01:49.290 --> 01:55.410
+But whenever they would go and push on the function instead of pushing on a function directly they would
+
+01:55.410 --> 01:59.110
+do an immediately invoked function like.
+
+01:59.120 --> 02:03.240
+So go ahead and throw in this right there.
+
+02:03.240 --> 02:12.780
+Then inside of here they would return a function like so which would cancel log the value.
+
+02:12.780 --> 02:20.020
+That value would get passed in here and then after that you'd come down here and you would pass in your
+
+02:20.020 --> 02:21.300
+index like so.
+
+02:21.510 --> 02:27.550
+And so now whenever I actually try to loop through this like before will just do phone to represent
+
+02:27.550 --> 02:32.050
+that invoke the function and get semi-colons as always.
+
+02:32.290 --> 02:37.890
+And it gets the expected result and we kind of went through the mechanics of why this works.
+
+02:38.050 --> 02:43.690
+Every time we're pushing something we're immediately invoking a function that gets passed in as an argument
+
+02:43.690 --> 02:44.740
+is the variable.
+
+02:44.740 --> 02:50.510
+And so it stores its own copy of the variable that way whenever it cancelled out logs.
+
+02:50.550 --> 02:53.020
+It works as it's expected to.
+
+02:53.110 --> 02:55.960
+Now there is a much simpler way to do this.
+
+02:55.960 --> 03:01.480
+Thanks to let and Konst the way we do it is as you would expect and you're probably going to be a master
+
+03:01.480 --> 03:10.980
+of arrays after this is just you fall for the left equals zero and I have less than nine and then I
+
+03:10.990 --> 03:16.690
+increments like before and then I'll just do phunk push and then I'm just going to do the exact same
+
+03:16.690 --> 03:25.030
+thing function and then I'll do the thing that originally used to not work but now it totally works.
+
+03:25.030 --> 03:31.480
+So in that case now whenever I loop through I believe I still have it saved so I can just know I definitely
+
+03:31.480 --> 03:32.020
+can't.
+
+03:32.070 --> 03:32.840
+OK.
+
+03:33.040 --> 03:35.900
+So now that I have that I'm just going to loop through this.
+
+03:36.040 --> 03:38.070
+Do folks for each.
+
+03:38.440 --> 03:44.760
+Then throw in a function and then invoke it like so.
+
+03:45.040 --> 03:50.330
+And you can see it does the exact same thing as before except without all this syntax.
+
+03:50.350 --> 03:56.470
+In my opinion this looks a lot nicer and it's a lot cleaner to look at and remember whenever you're
+
+03:56.470 --> 04:03.760
+working with loops this let functionality with loops has nothing to do with the way it works in hoisting.
+
+04:03.760 --> 04:09.790
+And this is a specific functionality that was designed specifically for working with loops and it doesn't
+
+04:09.790 --> 04:14.910
+have anything to do with how Let is not hoisted and put into the TTC.

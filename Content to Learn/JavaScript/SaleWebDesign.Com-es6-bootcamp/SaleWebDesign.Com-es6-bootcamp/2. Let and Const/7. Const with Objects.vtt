@@ -1,0 +1,112 @@
+WEBVTT
+
+00:00.650 --> 00:06.570
+There's sort of a subtlety that comes with working with objects and using the conc key word.
+
+00:06.590 --> 00:08.780
+And to really kind of illustrate it's you.
+
+00:08.810 --> 00:14.420
+I'm just going to make one first saw make an object like before I would use var but this time I'm using
+
+00:14.420 --> 00:20.890
+Konst the name of the object in this case I'll call it person e was object literal syntax will write
+
+00:20.900 --> 00:23.840
+a name like Andrew seems like a solid name.
+
+00:24.080 --> 00:29.630
+And then after that what I might try to do is override it so I'll try to set person to something like
+
+00:29.630 --> 00:30.300
+an array.
+
+00:30.470 --> 00:34.980
+And of course this is going to throw an error because my constant has already been declared.
+
+00:35.330 --> 00:41.540
+But what might be interesting to you is I can actually override the name property and I could set it
+
+00:41.540 --> 00:43.700
+equal to something like Leroi.
+
+00:43.940 --> 00:50.660
+And then after that if I cancel it all log this person dot name you're going to see that I don't get
+
+00:50.750 --> 00:52.790
+any error at all it's perfectly fine.
+
+00:52.790 --> 00:54.470
+All it does is printout Leroi.
+
+00:54.650 --> 00:55.760
+So what's going on.
+
+00:55.820 --> 01:02.240
+Well this kind of illustrates a subtlety of the Konski word which is that it prevents you from modifying
+
+01:02.270 --> 01:03.500
+the binding.
+
+01:03.500 --> 01:07.180
+It does not prevent you from modifying the bound value.
+
+01:07.520 --> 01:14.090
+So if you remember from before how we talked about reference types all we're doing is preventing ourselves
+
+01:14.150 --> 01:22.040
+from modifying what this variable references right here which in this case is an object with one property.
+
+01:22.040 --> 01:28.940
+It doesn't prevent me from modifying the values defined within what this thing is referencing.
+
+01:28.940 --> 01:34.880
+So in other words whenever you're working with Konst in objects you can modify whatever is inside of
+
+01:34.880 --> 01:37.320
+it as long as you don't change the binding.
+
+01:37.370 --> 01:43.910
+As long as you don't try to override this object with a completely different object or an array or anything
+
+01:43.910 --> 01:49.940
+else like just a random string or something like that because if I try to do that like person equals
+
+01:49.940 --> 01:55.600
+a string I'm going to get an error because once again I'm trying to say change what this is bound to.
+
+01:55.850 --> 02:01.740
+And I'm not trying to change what is inside of the bound thing inside of the binding.
+
+02:01.760 --> 02:08.240
+So this also applies to arrays for example so if you make a contest with an array will do Konst array
+
+02:09.170 --> 02:15.990
+and then set it equal to just some numbers 1 2 and 3 or 3.
+
+02:15.980 --> 02:17.490
+There we go learn to count.
+
+02:17.660 --> 02:23.860
+And then if I try to do things like for example push things onto it like I'll push on a five or a four
+
+02:24.410 --> 02:27.680
+and then if I try to maybe cancel the log.
+
+02:28.490 --> 02:32.720
+And then after words I try to pop things off radar pop.
+
+02:32.720 --> 02:34.100
+You'll see I don't get any error.
+
+02:34.130 --> 02:35.330
+That's perfectly fine.
+
+02:35.330 --> 02:40.940
+I'm allowed to do that as many times as I want to with no problem because once again I'm not changing
+
+02:40.940 --> 02:46.850
+the binding I'm just changing values inside of the binding just a very important characteristic to keep
+
+02:46.850 --> 02:49.190
+in mind for whenever you're working with conc.

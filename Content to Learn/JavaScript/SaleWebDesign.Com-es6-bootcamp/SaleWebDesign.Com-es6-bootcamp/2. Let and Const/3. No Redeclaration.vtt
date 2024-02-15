@@ -1,0 +1,46 @@
+WEBVTT
+
+00:00.660 --> 00:06.170
+Something else to be aware of Whenever you're making it let variables is that you cannot read declare
+
+00:06.180 --> 00:08.050
+a variable of the same name.
+
+00:08.070 --> 00:10.850
+So if I did for example let me know will do.
+
+00:10.860 --> 00:18.770
+Ages ninety nine and then we did let ages 52 you're going to see that it'll actually throw an error
+
+00:18.800 --> 00:20.290
+in actually let me know.
+
+00:20.410 --> 00:27.630
+Hey read declaration of age you can't do that previously declared at line 59 which is indeed where I
+
+00:27.870 --> 00:30.850
+actually declared my original variable right here.
+
+00:30.960 --> 00:32.460
+So that should be pretty intuitive.
+
+00:32.460 --> 00:37.760
+Just remember you can't have two variables of the same name inside of the same scope.
+
+00:37.890 --> 00:43.740
+But if I nested this inside of a block scope just by wrapping it in a code block like if I only needed
+
+00:43.740 --> 00:47.930
+those variables for a particular operation then I just wanted to get rid of them.
+
+00:47.940 --> 00:49.620
+You can see that works out pretty well.
+
+00:49.620 --> 00:55.200
+It doesn't throw an error because once again the variable is being restrained to the scope defined by
+
+00:55.200 --> 00:56.330
+these curly braces.
+
+00:56.340 --> 00:57.530
+This block scope.

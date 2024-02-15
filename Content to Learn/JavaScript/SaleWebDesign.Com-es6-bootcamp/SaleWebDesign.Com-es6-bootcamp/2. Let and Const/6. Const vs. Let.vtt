@@ -1,0 +1,100 @@
+WEBVTT
+
+00:00.450 --> 00:06.510
+So at this point you may be wondering if there are two different ways to declare a variable using either
+
+00:06.510 --> 00:08.120
+let or cons.
+
+00:08.160 --> 00:10.260
+Then when do I make a variable.
+
+00:10.260 --> 00:12.910
+And when do I declare a concert variable.
+
+00:12.990 --> 00:15.760
+Well first let's talk about the similarities between them.
+
+00:15.810 --> 00:21.690
+First similarity would be that if you have a block scope the block scoping rules explain to you before
+
+00:21.690 --> 00:29.190
+with LET also applies to conc So if I did something like Konst and then maybe tax rate like so and then
+
+00:29.190 --> 00:32.760
+set it to I don't know let's say point nine.
+
+00:33.000 --> 00:35.990
+And then after that I tried to access it.
+
+00:36.330 --> 00:43.500
+If I put it in a block scope you're going to see that this is going to be unavailable to me inside of
+
+00:43.500 --> 00:44.520
+the global scope.
+
+00:44.520 --> 00:51.490
+So now if I do cancel that log and then tax rate like so it's not helping me out tax rate.
+
+00:51.510 --> 00:55.740
+There we go.
+
+00:56.180 --> 01:01.250
+You're going to see that once again it's not available and it's going to say that it's not defined because
+
+01:01.250 --> 01:02.330
+it's in the global scope.
+
+01:02.330 --> 01:04.980
+So they're similar to each other in that way.
+
+01:05.000 --> 01:09.800
+And another way that they're similar to each other is you can't really do read declarations with Konst
+
+01:09.830 --> 01:10.550
+either.
+
+01:10.550 --> 01:18.880
+So if I do something like for example var name equals Andrew and then we'll do let this time age equals
+
+01:18.930 --> 01:20.440
+ninety nine.
+
+01:20.480 --> 01:27.090
+And then I try to do a concert name of John and a Konst age of 54.
+
+01:27.170 --> 01:31.640
+This is going to throw errors because once again these have already been declared.
+
+01:31.640 --> 01:34.370
+So those are the things that they have in common.
+
+01:34.370 --> 01:41.300
+The big difference between a variable and a variable is that whenever you're using a console variable
+
+01:41.480 --> 01:43.260
+you cannot reassign the value.
+
+01:43.250 --> 01:46.370
+So in other words once you said it cannot be changed.
+
+01:46.400 --> 01:52.550
+So if I did once again conc name said it's Andrew and then tried to override what I originally assigned
+
+01:52.790 --> 02:00.170
+going to throw an error but if I just change this to let us see that it will let me assign a new value.
+
+02:00.180 --> 02:04.220
+So now when I do a console log name it's just going to print out John.
+
+02:04.220 --> 02:10.210
+So that's the big difference with the variable you can continue to change the data inside of the variable
+
+02:10.220 --> 02:12.520
+or the data that the variable references.
+
+02:12.530 --> 02:16.370
+You could also change the data type but with Konst things are constant.
+
+02:16.370 --> 02:20.020
+So in other words that data that value is set in place.

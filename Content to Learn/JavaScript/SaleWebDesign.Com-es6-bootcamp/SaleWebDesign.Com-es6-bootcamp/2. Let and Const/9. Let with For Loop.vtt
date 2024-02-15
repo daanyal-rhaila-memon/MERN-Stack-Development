@@ -1,0 +1,115 @@
+WEBVTT
+
+00:00.330 --> 00:07.920
+Another important thing to cover with lead and Konst variables is whenever we use them in loops so essentially
+
+00:08.700 --> 00:15.150
+what happens is whenever I do a variable inside of a loop typically like for example we'll do like a
+
+00:15.150 --> 00:17.970
+for loop and it'll just be real simple.
+
+00:17.960 --> 00:21.530
+We'll do our initial calls for I will zero.
+
+00:21.580 --> 00:23.040
+I'm less than nine.
+
+00:23.070 --> 00:25.230
+That's our conditional clause.
+
+00:25.230 --> 00:32.950
+And then we'll do our incrementation like so and then obviously this works as expected.
+
+00:33.000 --> 00:39.090
+And I can obviously open up my console and we can see that in action but we already know exactly what
+
+00:39.090 --> 00:40.470
+it's going to do.
+
+00:40.470 --> 00:47.460
+The problem with this is as we already talked about before outside of this for loop right here if I
+
+00:47.460 --> 00:51.500
+do a consulate or log you have to do an I'll like that.
+
+00:51.630 --> 00:54.480
+And you can see it prints out nine again.
+
+00:54.570 --> 01:00.160
+And if I do another council log you'll see me go out and copy the Real quick.
+
+01:00.210 --> 01:02.730
+Load it out and you can see it prints out a nine again.
+
+01:02.730 --> 01:08.220
+So in other words what we essentially did was as we said in previous videos we contaminated the global
+
+01:08.220 --> 01:15.000
+scope or if this for loop was inside of another function then we would be contaminating that function
+
+01:15.000 --> 01:21.150
+scope with an accidental variable that we really didn't need to create like we didn't want to have this
+
+01:21.150 --> 01:22.310
+variable available.
+
+01:22.410 --> 01:27.480
+We just kind of needed a temporary placeholder for the number of counter to keep track of where we are
+
+01:27.480 --> 01:28.250
+in the loop.
+
+01:28.380 --> 01:31.040
+And the same thing can apply to other things as well.
+
+01:31.110 --> 01:37.020
+And that's why whenever we did like a nested loop we had to do something like for var J equals zero
+
+01:37.290 --> 01:40.710
+because we already declared this variable right here.
+
+01:40.710 --> 01:46.590
+Now if you use the left keyword with a for loop the result is a little different.
+
+01:46.590 --> 01:49.350
+So I'll do the same exact thing for LET.
+
+01:49.530 --> 01:50.280
+Equal zero.
+
+01:50.280 --> 01:53.110
+The only difference is I'm using a variable instead.
+
+01:53.370 --> 01:59.850
+I'll do it minus nine and then increment 9 and do the same exact thing as I did before I'm just going
+
+01:59.850 --> 02:00.950
+to cancel that log.
+
+02:00.960 --> 02:07.320
+I but then outside of the for loop I'm going to try to do the exact same thing and you can see I get
+
+02:07.320 --> 02:10.460
+a reference error right there and it's saying that it's not defined.
+
+02:10.590 --> 02:16.280
+So in other words we have a way to create temporary variables to keep track of where we are in the loop
+
+02:16.590 --> 02:20.470
+without having to worry about contaminating the enclosing scope.
+
+02:20.580 --> 02:28.000
+Now this behavior or functionality has nothing to do with the block scoping of the variable let.
+
+02:28.050 --> 02:33.430
+In this case it's just a behavior that was added to Exham a script 2015.
+
+02:33.570 --> 02:39.770
+Originally this behavior wasn't even available in Essex 6 but then it was added to that specification.
+
+02:39.780 --> 02:45.000
+So this is a great way to do for loops from now on without having to worry about contaminating your
+
+02:45.000 --> 02:45.370
+scope.

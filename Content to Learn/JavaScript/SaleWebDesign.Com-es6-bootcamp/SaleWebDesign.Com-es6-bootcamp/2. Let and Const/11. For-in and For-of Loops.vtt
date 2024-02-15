@@ -1,0 +1,61 @@
+WEBVTT
+
+00:00.510 --> 00:06.990
+So we learn that whenever we're working with the less variable inside of loops every time we do a loop
+
+00:06.990 --> 00:13.800
+or an iteration of a loop copy of a value gets stored in each variable gets its own copy every time
+
+00:13.800 --> 00:14.880
+the loop runs.
+
+00:14.880 --> 00:22.020
+Like I said before this is specification specific to let being working with loops and is not a part
+
+00:22.020 --> 00:25.690
+of the non hoisting characteristics of the variable.
+
+00:25.710 --> 00:32.150
+With that being said this whole specification or behavior also applies to the different for loops the
+
+00:32.150 --> 00:38.430
+four in in the form of loops so if we do for example in another array and we'll do a cons this time
+
+00:38.520 --> 00:44.070
+empty array and then we'll do an object and we'll just call it over Ejay equals and we don't have to
+
+00:44.070 --> 00:53.420
+do anything too crazy so just do a equals random text and then B equals true and then C is false like
+
+00:53.430 --> 01:04.360
+so then if I loop through this we'll do let's say for and then Lekhi in Bob J.
+
+01:04.620 --> 01:11.900
+And inside of your all iminent do is take the Funk's array and push on a function for every one of them.
+
+01:11.920 --> 01:15.700
+And inside of here I'm just going to cancel that log the key.
+
+01:16.150 --> 01:20.170
+And then after that we'll go ahead and do our For Each loop just like before.
+
+01:21.200 --> 01:26.240
+Then we'll do fun stuff for each and business as usual.
+
+01:26.270 --> 01:28.830
+You should be getting pretty used to this at this point.
+
+01:28.860 --> 01:34.940
+And then we'll just invoke the function like so and then whenever I printed out it prints out every
+
+01:34.940 --> 01:36.920
+single key in the object.
+
+01:36.920 --> 01:43.700
+So once again every single variable stores its own reference its own unique reference to every single
+
+01:43.700 --> 01:44.230
+value.
+
+01:44.240 --> 01:46.490
+And this also applies to four of loops.

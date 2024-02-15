@@ -1,0 +1,52 @@
+WEBVTT
+
+00:00.450 --> 00:06.690
+The other type of new variable that you can create is something called a constant variable now a constant
+
+00:06.690 --> 00:13.770
+variable is essentially a variable that once you store a value inside of this variable that value cannot
+
+00:13.770 --> 00:14.730
+be changed.
+
+00:14.730 --> 00:20.470
+So an example of this might be something as simple as Konst age equals ninety.
+
+00:20.640 --> 00:27.390
+And then if I try to reassign it like what I would do with a typical variable or let's change it to
+
+00:27.390 --> 00:32.680
+something different 93 you'll see I get an error assignment 2 constant variable.
+
+00:32.700 --> 00:38.590
+So if I comment this out you'll see the error goes away because it's OK to assign it.
+
+00:38.640 --> 00:45.290
+Now with that being said that also means that you have to define the variable or assign it a value.
+
+00:45.300 --> 00:48.570
+Initialize it if you will whenever you declare.
+
+00:48.570 --> 00:54.990
+So in this case I'm missing an initializer in my conc declaration and that just means whenever I declared
+
+00:54.990 --> 00:57.590
+my variable I never assigned it a value.
+
+00:57.720 --> 01:02.940
+And that's why we have to assign it a value because once the value is set it cannot be changed.
+
+01:02.940 --> 01:08.910
+And so if you've never set a value then it's kind of just set in this floating space of being a named
+
+01:08.910 --> 01:09.450
+variable.
+
+01:09.450 --> 01:12.350
+But now you can't assign anything new to it.
+
+01:12.450 --> 01:18.390
+But those are constant variables variables that once you set a value to them they cannot manipulate
+
+01:18.390 --> 01:18.850
+that value.

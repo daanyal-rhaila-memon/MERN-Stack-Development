@@ -1,0 +1,55 @@
+WEBVTT
+
+00:00.360 --> 00:06.740
+Now let's say that I go ahead and move this letter inside of a block statement like so I do if true.
+
+00:06.810 --> 00:13.140
+Just to kind of separate it out and I can't sort out log the name and then after that I'm just going
+
+00:13.140 --> 00:20.880
+to take this line of code right here and throw it up top line so tab it over and then if I save this
+
+00:20.880 --> 00:24.560
+you'll see that it prints out Andrew twice instead of throwing an error.
+
+00:24.660 --> 00:28.090
+And now I'm going to change it to John just to really illustrate it to you.
+
+00:28.110 --> 00:35.010
+So as you can see whenever I put this let variable inside of this code block rate here it's restrained
+
+00:35.010 --> 00:36.660
+to this block scope.
+
+00:36.660 --> 00:41.700
+So in other words they're not going to interfere with each other even though in general it's not a good
+
+00:41.700 --> 00:46.980
+idea to give two different variables the same exact name but just to really illustrates to you that
+
+00:46.980 --> 00:50.170
+these really are constrained and they're not the same variable.
+
+00:50.250 --> 00:56.920
+So you could have for example a function just as an example and we'll just call it foo.
+
+00:57.660 --> 01:05.550
+And then you could have another variable inside of here we'll call it let name equals Jessica.
+
+01:05.880 --> 01:12.310
+Then I could copy and paste this and put it inside of here like so.
+
+01:12.600 --> 01:14.640
+And that looks a little messy but that's OK.
+
+01:14.710 --> 01:22.020
+And then I'll just cancel log the name again and then I'll declare my function right about here foo
+
+01:23.610 --> 01:30.000
+and you'll see that it prints out three different names because in this case this variable is restrained
+
+01:30.000 --> 01:32.010
+to this block right here.
+
+01:32.160 --> 01:37.170
+This code block in this variable is restrained to this code block.

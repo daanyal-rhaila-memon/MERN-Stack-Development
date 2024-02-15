@@ -1,0 +1,46 @@
+WEBVTT
+
+00:00.620 --> 00:07.520
+Last but not least we'll go ahead and cover best practices now whenever E6 was originally being defined
+
+00:07.520 --> 00:13.820
+and mapped out there was kind of a wide held belief that by default you should use the variables and
+
+00:13.820 --> 00:19.280
+only use Konst whenever you're sure that you don't need the variable to change the value of the variable.
+
+00:19.280 --> 00:25.790
+I should say now the weird thing about it is as more and more people got their hands on six kind of
+
+00:25.790 --> 00:31.730
+the reverse happened and the best practice that really started to gain a lot of traction was to use
+
+00:31.730 --> 00:33.430
+Konst by default.
+
+00:33.500 --> 00:38.560
+And then only use less when you know that your initial value should change over time.
+
+00:38.630 --> 00:46.160
+And the reason for this is people the idea or the rationale behind it is that once a value is initial
+
+00:46.190 --> 00:52.520
+once a variable is initialized that value shouldn't change because unexpected value changes are a source
+
+00:52.520 --> 00:53.280
+of bugs.
+
+00:53.330 --> 00:57.530
+So it's definitely an idea worth exploring to use Consta by default.
+
+00:57.620 --> 01:03.150
+And then only use variables whenever you're sure that you want the variable or the value I should say
+
+01:03.170 --> 01:04.400
+to change over time.
+
+01:04.430 --> 01:09.950
+But with that being said that's pretty much it for variables in iOS 6 Let's go ahead and move on to
+
+01:09.950 --> 01:10.900
+some other cool stuff.

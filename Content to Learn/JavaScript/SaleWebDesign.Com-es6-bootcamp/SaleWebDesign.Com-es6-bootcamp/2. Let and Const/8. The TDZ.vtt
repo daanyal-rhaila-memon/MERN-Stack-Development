@@ -1,0 +1,85 @@
+WEBVTT
+
+00:00.790 --> 00:06.610
+Now we'll go ahead and comment this out and then afterwards we'll talk about another kind of interesting
+
+00:06.610 --> 00:10.660
+behavior that comes with working with blocks scoping or block bindings.
+
+00:10.810 --> 00:14.430
+And that is referred to sometimes as the PDZ worthy.
+
+00:14.500 --> 00:20.220
+Tim poolhall dead zone and it's kind of a dramatic name but it's really not that bad.
+
+00:20.470 --> 00:26.230
+All it means is that you can access variables until after you've declared them.
+
+00:26.230 --> 00:33.700
+So in this case what I'm going to do is write this out variables until after being declared and then
+
+00:33.700 --> 00:36.280
+I'm going to illustrate it to you as something really simple.
+
+00:36.310 --> 00:42.130
+Like for example a console out logs will just cancel out log value.
+
+00:42.550 --> 00:46.540
+And then I'll make less value equals can.
+
+00:47.050 --> 00:49.160
+And then after that you're going to see I get an error.
+
+00:49.210 --> 00:50.960
+The value is not defined.
+
+00:50.980 --> 00:57.490
+So in other words I can't get access to the variable until after the execution flows over this variable.
+
+00:57.490 --> 01:05.320
+So in other words if I come in this out and then I'll copy paste it right here and then after that I'll
+
+01:05.320 --> 01:10.150
+comment back in like so and you'll see that it actually prints out can.
+
+01:10.270 --> 01:16.060
+So in other words whenever the javascript engine reads a variable it either hoist it to the top of the
+
+01:16.060 --> 01:18.800
+scope or puts it in the temporal dead zone.
+
+01:18.940 --> 01:24.580
+And that just means that you can't access it until after you flow over it after the execution flows
+
+01:24.580 --> 01:25.200
+over it.
+
+01:25.360 --> 01:28.980
+Even if they're in the same scope which in this case would be the global scope.
+
+01:29.140 --> 01:30.610
+It doesn't matter.
+
+01:30.700 --> 01:37.270
+So any operations that require me to use this variable needs to be placed after it not before it.
+
+01:37.390 --> 01:44.650
+And even if I put it in something like a nested block scope like so once again I would still need to
+
+01:44.650 --> 01:47.980
+put the cancel out log before instead of after.
+
+01:47.980 --> 01:54.940
+And if I try to put it after Let's try and copy and paste this and then Common's it back in common this
+
+01:54.940 --> 02:00.250
+one out you're going to see that once again it throws an error because it's in the temporal dead zone
+
+02:00.340 --> 02:03.700
+and you can't access it until after it's been declared.
+
+02:03.700 --> 02:06.070
+So this would work but this would not work.
+
+02:06.140 --> 02:10.390
+And this also applies symmetrically to the conc to variables as well.

@@ -1,0 +1,88 @@
+WEBVTT
+
+00:00.550 --> 00:07.090
+The last difference that we'll talk about when it comes to constantly variables versus the VAR variable
+
+00:07.360 --> 00:09.610
+is how they behave in the global scope.
+
+00:09.610 --> 00:16.060
+Now we've kind of covered this before but whenever I make a variable let's say we make a string and
+
+00:16.060 --> 00:19.650
+said equal to a random string and I'm going uncomment this out.
+
+00:19.750 --> 00:26.110
+We already know that when I define a variable on the global scope that variable then becomes a part
+
+00:26.200 --> 00:31.100
+of the global object which of course depends on the context in which your program is running.
+
+00:31.120 --> 00:35.520
+But since we're in the browser or the Global Object is going to be the window.
+
+00:35.530 --> 00:41.520
+So now let's say we go ahead and cancel the log or something like window docstring.
+
+00:41.530 --> 00:47.710
+Now this is actually already a built in property of the global object and you can see that it actually
+
+00:47.710 --> 00:49.530
+shows the native code right here.
+
+00:49.750 --> 00:57.040
+But if I comment in this variable declaration right here you'll see that I completely override the original
+
+00:57.040 --> 01:02.290
+property of the global object because when I use the VAR keyword and make a variable in the global scope
+
+01:02.650 --> 01:09.700
+it makes a new property on the global object or overrides a previously defined property of the global
+
+01:09.700 --> 01:10.510
+object.
+
+01:10.510 --> 01:18.160
+However if I do this with a variable like so you're going to see that instead of actually overriding
+
+01:18.160 --> 01:23.950
+this global property it chateaus it which just means that they're never going to be the same and the
+
+01:23.950 --> 01:28.130
+left as well as the Consta variable are not going to override each other.
+
+01:28.130 --> 01:32.620
+And I can prove this to you by doing a check to see if they're equal to each other and you're going
+
+01:32.620 --> 01:34.210
+to see they're not equal to each other.
+
+01:34.210 --> 01:40.570
+And then if I do like a cancelled out log regular string and compare that to something like this window
+
+01:40.570 --> 01:46.750
+docstring right here which is stored on a global object you'll see that one is native code and one is
+
+01:46.750 --> 01:49.060
+the code that I defined for my object.
+
+01:49.060 --> 01:54.760
+So in other words it's a great way to make sure that you're not overriding global properties of the
+
+01:54.760 --> 01:55.950
+global object.
+
+01:55.990 --> 02:02.750
+With that being said you may still want to use the VAR keyword to create a variable in the global scope.
+
+02:02.860 --> 02:09.220
+If for example you're working with multiple frames or multiple windows and you want to be able to access
+
+02:09.220 --> 02:12.110
+code across those frames and across those windows.
+
+02:12.130 --> 02:17.860
+So in other words there still might be a use for the VAR keyword even though we have left and Konst
+
+02:17.860 --> 02:19.150
+available to us now.
