@@ -1,0 +1,127 @@
+WEBVTT
+
+00:00.690 --> 00:06.510
+So in the last video we kind of looked at a way for us to simulate default parameters kind of having
+
+00:06.510 --> 00:12.660
+these fallbacks in case someone writing in our program doesn't pass in some arguments for a particular
+
+00:12.660 --> 00:13.490
+parameter.
+
+00:13.620 --> 00:18.280
+So in iOS 6 we pretty much don't need to do this we can just comment that out right there.
+
+00:18.300 --> 00:21.300
+I know right all of that just to find out you don't even need it.
+
+00:21.300 --> 00:28.650
+So what we'll do now is make a new a sync function and we can define default parameters we have syntax
+
+00:28.650 --> 00:30.310
+for that so we can do you r.
+
+00:30.630 --> 00:32.350
+And then to define a default parameter.
+
+00:32.370 --> 00:36.030
+You take your parameter and you said equal to something like that.
+
+00:36.030 --> 00:39.420
+So the timeout equals 2000 for the callback.
+
+00:39.420 --> 00:46.060
+I'll just set it equal to a blank function or matter of fact we'll make it cancel out log something
+
+00:46.070 --> 00:50.520
+so all the consul LOEG and then we can do a like so.
+
+00:50.760 --> 00:53.620
+And then after that we should be good to go.
+
+00:53.700 --> 00:58.280
+So we can go ahead and stretch this just to kind of make it easy to read.
+
+00:58.330 --> 01:02.550
+I know it's a pretty long one right there and you can also break these on multiple lines if you want
+
+01:02.550 --> 01:06.780
+it to just to kind of make it if it makes it easier for you to read than by all means do it.
+
+01:06.990 --> 01:14.160
+But either way with that being said next thing we might do is go inside here do somethin like set time
+
+01:14.160 --> 01:14.510
+out.
+
+01:14.610 --> 01:25.020
+So of course a time out like so and then we'll do our function and inside of here we'll call our callback
+
+01:25.680 --> 01:29.990
+like so and then we'll pass our time out like so.
+
+01:30.000 --> 01:32.850
+So that way we get something a little more authentic slightly.
+
+01:32.850 --> 01:40.840
+So then what I can do is I can call a sink and I might pass any you are like foo and then if I save
+
+01:40.840 --> 01:43.990
+it and reload it you'll see that it prints out.
+
+01:44.040 --> 01:48.510
+So in other words even though I didn't specify a timeout it still worked.
+
+01:48.510 --> 01:51.620
+But now if I want to specify a time out I can.
+
+01:51.620 --> 01:56.700
+So I get to four thousand like so and it'll wait even longer.
+
+01:56.700 --> 01:57.990
+So it's actually working.
+
+01:57.990 --> 01:58.400
+Cool.
+
+01:58.410 --> 01:59.640
+Now 4000.
+
+01:59.790 --> 02:07.410
+Now if I want to pass in a callback but I don't want to pass in a value for a time out then I can pass
+
+02:07.410 --> 02:10.360
+in undefined for this one.
+
+02:10.590 --> 02:15.370
+And then for the function that I pass in I'll just pass in something like it out log.
+
+02:15.480 --> 02:21.660
+It still works like so then whenever it's time for this to be invoked you can see it prints.
+
+02:21.660 --> 02:27.810
+It still works so if you want to pass in a argument for one of your parameters but not the other you
+
+02:27.810 --> 02:31.500
+can just pass it undefined especially if it's in the middle.
+
+02:31.560 --> 02:36.540
+If it's not in the middle for example what we did with the callback when we have or we just wanted to
+
+02:36.690 --> 02:38.550
+let the default be used.
+
+02:38.550 --> 02:40.070
+We just don't have to pass it in.
+
+02:40.080 --> 02:45.750
+But if it is in the middle you can just specify undefined by the way just as a quick side note don't
+
+02:45.750 --> 02:49.890
+pass in null because no is considered to be valid.
+
+02:49.890 --> 02:52.790
+In other words it's going to get passed through.
+
+02:52.790 --> 02:57.280
+So the default parameter value that you define won't be used.

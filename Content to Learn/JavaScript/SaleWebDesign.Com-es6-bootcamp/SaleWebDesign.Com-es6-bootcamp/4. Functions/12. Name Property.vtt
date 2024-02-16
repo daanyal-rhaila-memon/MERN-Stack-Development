@@ -1,0 +1,58 @@
+WEBVTT
+
+00:00.660 --> 00:06.390
+Another thing that's new with six functions is something referred to as the name property.
+
+00:06.390 --> 00:13.320
+So essentially what this means is that whenever you make a function typically before iOS 6 it was kind
+
+00:13.320 --> 00:19.170
+of a pain due to all of the different ways that you can define a function and due to the fact that so
+
+00:19.170 --> 00:21.940
+many people still use anonymous function.
+
+00:21.950 --> 00:23.640
+Sorry it stresses me.
+
+00:23.640 --> 00:29.280
+It can make things like reading a stack trace very difficult very hard to know.
+
+00:29.280 --> 00:34.650
+So now every single function in each six or beyond program has a built in name property.
+
+00:34.650 --> 00:38.720
+And as we already know functions are objects that's why they can have properties on them.
+
+00:38.730 --> 00:44.940
+So for example I could have a function that says do something and then I can do whatever I want with
+
+00:44.940 --> 00:45.080
+it.
+
+00:45.090 --> 00:49.140
+I'm just going to leave it blank for now and then I can have maybe like a function expression that says
+
+00:49.140 --> 00:56.410
+do something else assign a function to it like so then I can just cancel that log the name property.
+
+00:56.430 --> 01:02.260
+So instead of invoking the I'm just going to reference the function itself and access its name property.
+
+01:02.370 --> 01:09.030
+Copy and paste this like so and then I'm going to add else to this so you can see whenever I actually
+
+01:09.060 --> 01:10.310
+cancelled or log this.
+
+01:10.350 --> 01:13.050
+It prints out the name of the function.
+
+01:13.080 --> 01:17.030
+So in this case this is the name that I explicitly gave it in my declaration.
+
+01:17.160 --> 01:22.460
+And in this case that is the name of the variable to which I assigned my anonymous function.
+
+01:22.470 --> 01:28.890
+So very very helpful property that will help making deciphering things like stack traces much easier.

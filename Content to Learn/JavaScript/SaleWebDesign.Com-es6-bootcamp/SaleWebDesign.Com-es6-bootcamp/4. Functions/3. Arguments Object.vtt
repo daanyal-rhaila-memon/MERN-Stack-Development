@@ -1,0 +1,175 @@
+WEBVTT
+
+00:00.700 --> 00:06.550
+We've talked about the arguments object before in this video might seem a little nitpicky but it is
+
+00:06.550 --> 00:11.940
+important to know about this subtle detail especially given how the arguments object might be used.
+
+00:11.950 --> 00:18.290
+So let's make a made up function like function foo and then we'll do like first parameter and we'll
+
+00:18.290 --> 00:19.570
+do second.
+
+00:19.630 --> 00:25.740
+Then all we'll do is just cancel dialog arguments argue it will not let me spell this correctly arguments
+
+00:26.420 --> 00:34.660
+and then after that we'll pass an A and then we'll pass in a string a B call it a day.
+
+00:34.960 --> 00:41.020
+As you can see it prints out this lovely lovely object right here and it's got it this array.
+
+00:41.410 --> 00:45.910
+So in this case you can see it's zeros A and then one is B nothing new.
+
+00:45.910 --> 00:46.210
+Right.
+
+00:46.210 --> 00:47.740
+And we have a length of two.
+
+00:47.800 --> 00:52.930
+Now if we pass in only one argument of course the length of it will change.
+
+00:52.930 --> 00:58.540
+So now you can see there's only one item in the arguments array and it has a length of 1 because we
+
+00:58.540 --> 01:00.280
+only passed him one argument.
+
+01:00.280 --> 01:07.030
+The weird thing about the arguments object is if we do something like this Modu cancelled logs and since
+
+01:07.030 --> 01:11.110
+we're going to be doing a lot of these I would definitely recommend just copy and paste and this bad
+
+01:11.110 --> 01:17.470
+boy right here then and what I'm going to do is I'm going to see if first is equal to then arguments
+
+01:17.920 --> 01:21.850
+and I'm going to access the first item in the arguments array.
+
+01:22.060 --> 01:26.590
+And after that we're going to do the same thing right here and we're going to move this over.
+
+01:26.590 --> 01:29.430
+I hate when it does that and we'll do second.
+
+01:29.530 --> 01:34.770
+Equals arguments one like so.
+
+01:34.910 --> 01:37.170
+Now if we say this of course this is going to be true.
+
+01:37.180 --> 01:37.610
+Right.
+
+01:37.660 --> 01:44.080
+So whenever I call this we'll just pass in some dummy stuff will pass and a and b like so and you're
+
+01:44.080 --> 01:49.990
+going to see it equals true true because obviously the item in this array was the same as the actual
+
+01:49.990 --> 01:51.550
+argument that was passed then.
+
+01:51.790 --> 01:57.310
+But now let's get a little different Let's try let's say to change the parameters values so change it
+
+01:57.310 --> 02:08.470
+to see and change second to D then we'll consulate or log the arguments object like so and then I'm
+
+02:08.470 --> 02:11.700
+going to copy and paste this because I want to do the exact same thing.
+
+02:11.710 --> 02:12.730
+I just want to compare them.
+
+02:12.730 --> 02:17.020
+So in this case load them in you can see it actually updated.
+
+02:17.020 --> 02:19.700
+So now let's go ahead and cancel it out log.
+
+02:19.710 --> 02:28.630
+The original array like so pop that in place you can see that the actual arguments object updates every
+
+02:28.630 --> 02:32.200
+time that we make changes to the values of the parameters.
+
+02:32.200 --> 02:34.480
+So in this case it completely updated it.
+
+02:34.750 --> 02:41.950
+And that is why whenever we compare them the second time to see if they're true it automatically changes
+
+02:42.100 --> 02:43.070
+the arguments array.
+
+02:43.090 --> 02:49.300
+So the first that we say here is equal to arguments 0 right here.
+
+02:49.300 --> 02:53.800
+Now the interesting thing about that is it's kind of unexpected for some people you wouldn't expect
+
+02:53.800 --> 02:59.200
+this object to automatically update every time you make changes to your parameter and it won't if you
+
+02:59.200 --> 03:01.030
+use something like use strict mode.
+
+03:01.060 --> 03:05.350
+MIKE So you're going to see that it actually stays the same instead of doing.
+
+03:05.350 --> 03:06.910
+True True True True it's going to do.
+
+03:06.910 --> 03:08.650
+True true false false.
+
+03:08.650 --> 03:13.240
+So whenever you're in use strict mode it's not going to activate this behavior.
+
+03:13.330 --> 03:19.120
+And the arguments object will not update alongside the parameter values that you change but if commented
+
+03:19.120 --> 03:21.590
+out you can see it does update.
+
+03:21.640 --> 03:23.020
+Why am I talking about this.
+
+03:23.020 --> 03:32.410
+Well if default parameter values are present inside of your code this behavior with use strict is automatically
+
+03:32.410 --> 03:33.280
+activated.
+
+03:33.310 --> 03:38.170
+So I'm going to get really strict just commented out and you can see that update still.
+
+03:38.170 --> 03:42.850
+But in this case I'm going to define a default value.
+
+03:42.850 --> 03:46.870
+So in this case I'll just define random string like that.
+
+03:46.870 --> 03:50.490
+And you can see that the arguments object doesn't update now.
+
+03:50.710 --> 03:57.640
+And on top of that if I go ahead and I get rid of my original value that I pass in you can see that
+
+03:57.640 --> 04:02.440
+the length of the arguments object is once again one because I only passed in one argument.
+
+04:02.440 --> 04:08.500
+So just something important to keep in mind given how the arguments object can be used if default parameter
+
+04:08.500 --> 04:09.810
+values are present.
+
+04:09.910 --> 04:15.020
+This arguments object will automatically behave as if it were in use strict mode.

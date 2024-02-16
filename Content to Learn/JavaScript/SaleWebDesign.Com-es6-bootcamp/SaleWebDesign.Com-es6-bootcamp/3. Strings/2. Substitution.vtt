@@ -1,0 +1,157 @@
+WEBVTT
+
+00:00.330 --> 00:06.120
+So as of right now all we know about simply literals in that is exactly what they're called is that
+
+00:06.120 --> 00:10.770
+they're kind of like fancier strings and they really allow us to make multiline strings.
+
+00:10.770 --> 00:11.960
+Not a problem.
+
+00:11.970 --> 00:17.580
+And on top of that we also learn that any subsequent line after the first line any space inside of that
+
+00:17.580 --> 00:23.610
+line on the string is going to be counted towards the total length property of that particular string.
+
+00:23.610 --> 00:26.990
+Now that is well and good but that's pretty limited.
+
+00:26.990 --> 00:33.120
+So what we need to know now about template literals is something called substitution which I hope I
+
+00:33.120 --> 00:34.200
+spelled correctly.
+
+00:34.260 --> 00:37.030
+Substitution is something pretty cool.
+
+00:37.050 --> 00:42.870
+And I'm going to illustrate it to you like so I'm going to make a variable called Let name in set it
+
+00:42.870 --> 00:43.900
+equal to.
+
+00:43.950 --> 00:46.490
+So I'm going to do a new name like Ricky.
+
+00:46.500 --> 00:48.410
+That's a pretty good name there.
+
+00:48.420 --> 00:54.840
+So with that being said if I ever wanted to let's say make a new name like Leck greeting instead of
+
+00:54.840 --> 00:59.240
+equal to hello there Ricky the way I'd have to do it.
+
+00:59.280 --> 01:03.120
+As we know is with good old fashioned concatenation like so.
+
+01:03.300 --> 01:07.500
+And now if I cancelled out log the greeting you'll see I get.
+
+01:07.500 --> 01:08.760
+Hello there Ricky.
+
+01:08.760 --> 01:12.450
+So of course you should add a comma for good grammar sake.
+
+01:12.540 --> 01:15.790
+With that being said this is kind of cumbersome.
+
+01:15.840 --> 01:23.010
+It's literally as simple as it possibly could be but it's kind of a pain especially if I have multiple
+
+01:23.010 --> 01:25.340
+strings that I want to concatenate like so.
+
+01:25.350 --> 01:27.900
+Hello there Ricky and then period.
+
+01:27.900 --> 01:29.880
+How are you.
+
+01:29.940 --> 01:32.880
+And then maybe you can catch his age or something like that.
+
+01:32.910 --> 01:36.610
+As you can see it becomes a mess year and messier with substitutions.
+
+01:36.610 --> 01:38.190
+That is a thing of the past.
+
+01:38.190 --> 01:41.190
+Instead what I can do is something like this.
+
+01:41.250 --> 01:48.600
+I'll do let greeting tactics which should be to the left of the one on your keyboard the number one
+
+01:49.110 --> 01:49.910
+and I can do.
+
+01:49.920 --> 01:51.310
+Hello there.
+
+01:51.570 --> 01:55.280
+And now this is the substitution syntax dollar sign.
+
+01:55.290 --> 01:59.030
+Curly braces and then the name of the variable.
+
+01:59.310 --> 02:01.200
+And then of course semi-colon.
+
+02:01.230 --> 02:03.800
+Now you can see it does the exact same thing.
+
+02:03.810 --> 02:05.430
+Hello there Ricky.
+
+02:05.550 --> 02:11.220
+But in this particular case instead of having to concatenate the string with the variable that contains
+
+02:11.220 --> 02:15.130
+a string I can just put it directly inside of the template literal.
+
+02:15.270 --> 02:17.450
+And this is referred to as substitution.
+
+02:17.580 --> 02:20.610
+So I can directly link up with variables.
+
+02:20.610 --> 02:23.970
+Now I can have more than one substitution in the same string.
+
+02:23.970 --> 02:31.440
+For example I could do let ages like 57 like that and then I can do for example Hello there your name
+
+02:32.100 --> 02:38.580
+and then your notes your name is where your age is.
+
+02:38.810 --> 02:40.650
+Well do your age is.
+
+02:40.650 --> 02:42.420
+And then another substitution.
+
+02:42.430 --> 02:45.700
+Like so and boom just like that.
+
+02:45.710 --> 02:46.520
+Hello there Ricky.
+
+02:46.520 --> 02:53.570
+Your age is 57 automatically implicitly coerced into a string inserts it after it picks up what the
+
+02:53.570 --> 02:54.430
+value is.
+
+02:54.440 --> 02:55.770
+It's pretty nice stuff.
+
+02:55.790 --> 03:01.730
+And since this is such a cool part of javascript we are going to be using it a lot especially when we
+
+03:01.730 --> 03:04.030
+work with things like ourselves and API.

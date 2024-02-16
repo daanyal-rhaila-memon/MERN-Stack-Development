@@ -1,0 +1,88 @@
+WEBVTT
+
+00:00.540 --> 00:06.930
+Is somewhat not a frequently used feature inside of javascript is the constructor function which allows
+
+00:06.930 --> 00:09.740
+you to create functions on the fly essentially.
+
+00:09.750 --> 00:15.990
+And we talked about this previously but whenever you use iOS 6 the functionality of the constructor
+
+00:15.990 --> 00:21.350
+function is actually extended and that is the constructor for the function object specifically.
+
+00:21.420 --> 00:28.320
+Now kind of confusing but either way for example we could make a new variable and then for that variable
+
+00:28.320 --> 00:29.880
+will define a new function.
+
+00:30.330 --> 00:36.240
+And then all we do is for the parameters we define we just define whatever we want the parameters to
+
+00:36.240 --> 00:36.680
+be.
+
+00:36.870 --> 00:42.810
+And then as the final argument that will pass in it's going to essentially be whatever the body of the
+
+00:42.810 --> 00:43.380
+function is.
+
+00:43.380 --> 00:49.080
+So in this case the first parameter will be first the second parameter will be second and the final
+
+00:49.080 --> 00:51.800
+parameter will just be whatever we want to return.
+
+00:51.870 --> 00:57.650
+So in this case that will be the function body return first plus second like so.
+
+00:57.750 --> 01:02.910
+Now obviously we've got to go down here and just do a good old fashioned concept of log and then will
+
+01:02.910 --> 01:04.510
+pass in two and four.
+
+01:04.700 --> 01:05.730
+And it works like a charm.
+
+01:05.730 --> 01:11.280
+You can see now we can also define default parameters for our constructor function for the arguments
+
+01:11.280 --> 01:12.090
+we pass into it.
+
+01:12.090 --> 01:19.140
+So I can define first like so and now if I just omit the second argument you can see it adds together
+
+01:19.170 --> 01:21.890
+for and you can also use rest arguments.
+
+01:21.890 --> 01:32.820
+So in this case I might just delete this right here and then after that what I'll do is I'll do a rest
+
+01:33.570 --> 01:42.360
+parameter like so add a comma and then I'll just return whatever the first one is whatever the first
+
+01:42.360 --> 01:43.850
+item in the array is.
+
+01:44.010 --> 01:50.430
+And then if I do that you will see that whenever I do pass in an argument it will just print out whatever
+
+01:50.430 --> 01:56.370
+the particular argument was so in this case it prints out one and I could honestly pass in an infinite
+
+01:56.370 --> 01:57.430
+number of these things.
+
+01:57.480 --> 02:00.360
+In this case you can see it only prints out the first one.
+
+02:00.540 --> 02:06.650
+But if I wanted to I could pass and the entire array and it would print out everything that I passed
+
+02:06.660 --> 02:07.320
+in so far.

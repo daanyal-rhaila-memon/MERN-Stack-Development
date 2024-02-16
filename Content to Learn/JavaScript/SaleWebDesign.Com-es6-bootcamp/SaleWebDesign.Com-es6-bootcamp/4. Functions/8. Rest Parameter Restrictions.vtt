@@ -1,0 +1,67 @@
+WEBVTT
+
+00:00.390 --> 00:03.600
+There are some restrictions on the rest parameter.
+
+00:03.600 --> 00:09.450
+Now we learn that arrest parameter is signified by three dots followed by whatever we would like to
+
+00:09.450 --> 00:10.920
+name the parameter.
+
+00:10.920 --> 00:17.100
+And essentially what will happen is any extra parameters that get passed in like what we did here will
+
+00:17.100 --> 00:18.440
+get put into an array.
+
+00:18.480 --> 00:24.300
+And that's why it's called a rest parameter because the rest of the parameters get stuffed into this
+
+00:24.430 --> 00:26.460
+array right here that we named.
+
+00:26.640 --> 00:32.610
+Now like I said there are restrictions so one of the restrictions is that you can't put it in the middle.
+
+00:32.610 --> 00:39.090
+So for example right here if I put a parameter after my rest parameter that would be a syntax error
+
+00:39.420 --> 00:46.330
+because it has to be the last parameter because technically this represents an infinite number of parameters.
+
+00:46.440 --> 00:55.420
+So it would take forever literally to actually get to the final parameter so it has to be the last parameter.
+
+00:55.440 --> 01:01.290
+Now aside from that the other limit is you can't use it with set in object literal syntax so if you
+
+01:01.290 --> 01:07.200
+remember from previous videos when we talked about using a setter function like so we might have said
+
+01:07.650 --> 01:13.300
+and then inside of here we might set the value of one of our properties in this object right here.
+
+01:13.350 --> 01:16.730
+You can't use a rest parameter like so.
+
+01:16.800 --> 01:23.430
+And the reason for this is because set is only intended to receive one argument only intended to have
+
+01:23.430 --> 01:28.810
+one parameter that is whatever value you would like to set your particular property to.
+
+01:28.850 --> 01:33.180
+And in this case rest represents an infinite number of parameters.
+
+01:33.240 --> 01:37.090
+So it completely goes against the grain of what set is supposed to do.
+
+01:37.200 --> 01:41.410
+So those are the two main restrictions on using resk parameters.
+
+01:41.460 --> 01:47.700
+It has to be the last parameter inside of your function parameter list and whenever you use set in object
+
+01:47.700 --> 01:50.040
+literal syntax you can't use resk parameters.

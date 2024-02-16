@@ -1,0 +1,184 @@
+WEBVTT
+
+00:00.680 --> 00:07.880
+Now we're not just limited to using primitive values as default parameters we can also use things like
+
+00:07.880 --> 00:12.140
+for example functions or more specifically whatever a function returns.
+
+00:12.140 --> 00:16.630
+So in this case I'll make a new function and call it foo.
+
+00:16.820 --> 00:20.730
+And then all it's going to do is return a value.
+
+00:21.020 --> 00:23.910
+So now I need to define net values in this case.
+
+00:23.930 --> 00:30.970
+I'm just going to set it to a simple number like five then I'll make a new function called Bar and it'll
+
+00:31.010 --> 00:36.500
+have a first parameter and a second parameter and for the second parameter I'll give it a default value
+
+00:36.950 --> 00:38.990
+of whatever food returns.
+
+00:38.990 --> 00:43.800
+In this case a variable which in this case will evaluate to 5.
+
+00:43.850 --> 00:45.710
+So it's pretty intricate pretty nice.
+
+00:45.900 --> 00:51.320
+And then I'm just going to do a concert or log and it's going to be a template literal and I'm going
+
+00:51.320 --> 00:52.700
+to do a substitution.
+
+00:52.700 --> 00:58.520
+So in this case I'll do the first parameter and then I'll go down in the next line and I'll do the second
+
+00:58.520 --> 01:00.920
+parameter like so after that.
+
+01:00.920 --> 01:03.570
+Throw on your semi colon as always.
+
+01:03.740 --> 01:11.420
+And after that if I call 23 and then load it out you're going to see that out missed my semi colon you'll
+
+01:11.420 --> 01:16.670
+see that it actually loads in 23 and then 5 which is pretty cool.
+
+01:16.850 --> 01:23.450
+And then if I reload this you're going to see it continues to load out 5 which is a really nice behavior.
+
+01:23.540 --> 01:26.240
+That means that this isn't going to be too dynamic.
+
+01:26.240 --> 01:33.380
+It's going to continue to save the same reference so in this case the second parameter for this particular
+
+01:33.380 --> 01:36.770
+function invocation will be five every time.
+
+01:36.920 --> 01:42.500
+But if I copy this and throw it down here and throw another one down you're going to see that it will
+
+01:42.500 --> 01:44.560
+continue to increment.
+
+01:44.810 --> 01:45.910
+If I do this.
+
+01:45.920 --> 01:49.610
+So in this case sort of go six seven eight.
+
+01:49.730 --> 01:56.690
+But you notice that it doesn't go up after this first one so every time I reload this it's always six
+
+01:56.690 --> 01:57.410
+seven eight.
+
+01:57.410 --> 01:59.360
+That pattern never changes.
+
+01:59.360 --> 02:05.660
+So in this case even though I'm incrementing the value for this particular function call the second
+
+02:05.660 --> 02:08.310
+parameter is always going to equal 6.
+
+02:08.390 --> 02:14.480
+No matter how many times I recall the same function which is very nice because obviously that makes
+
+02:14.480 --> 02:20.240
+sense because every time the javascript engine reads this initially this value is set to 5 and then
+
+02:20.240 --> 02:22.510
+the function is invoked for the first time.
+
+02:22.580 --> 02:26.150
+And so it goes through and it sees that didn't pass in a second argument.
+
+02:26.180 --> 02:33.230
+And so this function returning value is going to be used as the default parameter and it's incremented
+
+02:33.350 --> 02:34.670
+to six every time.
+
+02:34.670 --> 02:36.000
+So it makes a lot of sense.
+
+02:36.110 --> 02:41.570
+Now with that being said another thing we could also do that's pretty interesting is instead of using
+
+02:41.570 --> 02:46.030
+this function right here what it could do is I could just use first.
+
+02:46.310 --> 02:55.250
+So I can literally use my first parameter as a default value for my second parameter which I know is
+
+02:55.250 --> 02:56.530
+pretty wild right.
+
+02:56.540 --> 03:02.180
+So as you can see it's 23 23 23 23 and on top of that.
+
+03:02.220 --> 03:03.980
+Another thing I can do is this.
+
+03:03.980 --> 03:04.580
+Check this out.
+
+03:04.580 --> 03:14.750
+So what I'll do is all receive my Param as an argument and then after that I'm going to take the param
+
+03:15.200 --> 03:24.890
+and add it to the variable because just why not add them together like so then all I'm going to do is
+
+03:24.890 --> 03:30.200
+take this default parameter and I'm going to pass it into foo.
+
+03:30.230 --> 03:33.480
+So as you can see you can actually do a lot with this.
+
+03:33.480 --> 03:42.590
+In this case I'm using this function returning value or whatever it returns as a default parameter value
+
+03:42.980 --> 03:51.110
+and I'm passing in my first parameter as its argument and then I take that argument added together with
+
+03:51.110 --> 03:52.580
+this variable and then return it.
+
+03:52.580 --> 03:59.980
+So in this case you're going to see it ends up being 28 because obviously five plus 23 is 28.
+
+04:00.110 --> 04:04.680
+And then if I change it's 22 here to be 27 there I changed three.
+
+04:04.700 --> 04:06.850
+It'll be something like 8 right there.
+
+04:06.860 --> 04:10.910
+So a lot of really cool things that you can do with the fault parameter values.
+
+04:10.970 --> 04:14.570
+You're not at all limited to just using primitive values.
+
+04:14.750 --> 04:20.750
+In fact just remember though that whenever you are using something like whatever a function returns
+
+04:20.810 --> 04:26.930
+as a default parameter value make sure to include your parentheses because if you don't and you just
+
+04:26.930 --> 04:33.420
+include this right here you're actually using a reference to the function as a default parameter value
+
+04:33.710 --> 04:37.550
+instead of using whatever the function returns as the default parameter value.
+
+04:37.550 --> 04:39.020
+So remember your parentheses.

@@ -1,0 +1,175 @@
+WEBVTT
+
+00:00.270 --> 00:06.960
+Know a substitution is essentially just a javascript expression which means that we can insert more
+
+00:06.960 --> 00:08.430
+than just variable names.
+
+00:08.430 --> 00:13.260
+We can actually do calculations since those are expressions we could do function calls.
+
+00:13.260 --> 00:15.470
+We can do all kinds of different stuff with this.
+
+00:15.540 --> 00:20.800
+And so it's a really cool feature that was added and also why it's one of the more popular features.
+
+00:20.880 --> 00:26.010
+So let's say we work at a store and we want to do something like for example the count.
+
+00:26.010 --> 00:31.020
+So we'll do let count is five and then maybe we'll do.
+
+00:31.020 --> 00:35.910
+Price is like 25 cents or something like that.
+
+00:36.120 --> 00:38.520
+And then will you let name is.
+
+00:38.520 --> 00:40.860
+Well that's a good one I would say.
+
+00:41.670 --> 00:43.620
+Well do.
+
+00:44.130 --> 00:45.510
+Or something like that.
+
+00:45.510 --> 00:52.260
+Now what I could do here is counseled log and I can put it directly inside of here but I'll go ahead
+
+00:52.350 --> 00:55.940
+and just write an output so you can clearly see it.
+
+00:56.160 --> 01:02.400
+So inside here template literals back to X like so and then I'm going to insert the name right here
+
+01:02.400 --> 01:07.620
+so the name your total is.
+
+01:07.620 --> 01:10.770
+And then inside of here I'm going to do a dollar sign.
+
+01:10.770 --> 01:14.100
+Now this dollar sign is for the actual output.
+
+01:14.100 --> 01:15.770
+It's going to be like dollar sign.
+
+01:15.930 --> 01:22.330
+And however much money shows the second dollar sign is for the substitution syntax right here.
+
+01:22.530 --> 01:26.660
+And inside of here I'm going to do parentheses.
+
+01:26.660 --> 01:30.010
+Count times price.
+
+01:30.510 --> 01:31.310
+OK.
+
+01:31.710 --> 01:33.600
+And then after that we should be good to go.
+
+01:33.600 --> 01:40.800
+So now I can just put my output in here output as soon as my text editor stops trying to fight me.
+
+01:41.040 --> 01:42.450
+And let's see I made a mistake.
+
+01:42.450 --> 01:44.530
+Output is not defined.
+
+01:44.530 --> 01:45.010
+OK.
+
+01:45.030 --> 01:46.220
+So I spelled it wrong.
+
+01:46.230 --> 01:47.480
+That explains it.
+
+01:47.640 --> 01:49.370
+Got to be careful with how you write things.
+
+01:49.470 --> 01:51.870
+But now you can see that it prints out normally.
+
+01:51.870 --> 01:54.180
+Your total is 125.
+
+01:54.240 --> 01:59.720
+Now if you're wondering about these parentheses right here it's very very easy to just take those away
+
+02:00.060 --> 02:01.710
+and you'll get the exact same result.
+
+02:01.710 --> 02:07.560
+Like I said before people will just use parentheses with things like operations or if they're doing
+
+02:07.560 --> 02:13.170
+comparisons just to really bunch things together and clearly show you what was meant to happen at what
+
+02:13.170 --> 02:13.870
+time.
+
+02:13.950 --> 02:18.690
+And with that being said I could put a space between these two dollar signs just to illustrate to you
+
+02:18.960 --> 02:21.060
+that they are two different dollar signs.
+
+02:21.060 --> 02:27.540
+One is a literal dollar sign for the actual output and the second dollar sign is for these substitution
+
+02:27.540 --> 02:28.980
+syntax that's required.
+
+02:28.980 --> 02:34.050
+So we can do calculations inside of here since those are just expressions we could do functions so for
+
+02:34.050 --> 02:43.380
+example function greeds and it'll be let's say let and then name inside of here and I can declare that
+
+02:43.410 --> 02:48.750
+no problem because some of the blocks scope of the function and that's referred to as lexical scoping.
+
+02:48.750 --> 02:56.490
+And then we'll do Jessica then Allaman to do is just basically return name.
+
+02:56.730 --> 02:57.240
+That's it.
+
+02:57.370 --> 03:04.230
+So iminent do in fact we'll just make this really simple and we'll just return the string directly like
+
+03:04.230 --> 03:04.790
+so.
+
+03:05.550 --> 03:06.240
+Perfect.
+
+03:06.270 --> 03:08.440
+Now that I have that should be good to go.
+
+03:08.700 --> 03:12.430
+And so now what I can do is cancelled or log.
+
+03:12.430 --> 03:16.670
+Then they'll do a template literal Hello.
+
+03:16.890 --> 03:22.860
+And then after the substitution call the function.
+
+03:22.860 --> 03:29.130
+Then after that a semi colon and you can see it says Hello Jessica and all we did was call the function
+
+03:29.220 --> 03:34.620
+in it returned a string which in this case would have just inserted it inside the string.
+
+03:34.620 --> 03:37.040
+Now with that being said I hope you enjoy this.
+
+03:37.050 --> 03:39.350
+I hope you see how useful template literals.

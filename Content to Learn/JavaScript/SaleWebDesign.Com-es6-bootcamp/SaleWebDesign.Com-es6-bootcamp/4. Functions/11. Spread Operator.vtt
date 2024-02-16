@@ -1,0 +1,166 @@
+WEBVTT
+
+00:00.580 --> 00:06.610
+Something very similar to what we've talked about with rest parameters similar in syntax at least is
+
+00:06.610 --> 00:07.720
+the spread operator.
+
+00:07.720 --> 00:11.890
+Now before I explain what it actually is I'm going to go ahead and write out a couple of variables so
+
+00:11.890 --> 00:15.860
+I'll write out let's say let no one equals 20.
+
+00:16.090 --> 00:18.170
+And then we'll do a comma because we're lazy.
+
+00:18.190 --> 00:20.210
+We'll do two equals four.
+
+00:20.260 --> 00:27.100
+Like so now if I wanted to find out the max value whichever variable held the greatest number then it's
+
+00:27.100 --> 00:33.490
+pretty simple business rates nothing tricky we just do a console log and then we use the math object
+
+00:33.790 --> 00:41.110
+in a method on the math object called Max and it'll tell us the maximum or the highest number out of
+
+00:41.140 --> 00:43.160
+all of the arguments that we pass in.
+
+00:43.270 --> 00:46.240
+In this case it's 40 pretty easy business right.
+
+00:46.450 --> 00:52.590
+However if we use something like an array to keep track of our values we'll create a LED array.
+
+00:52.680 --> 00:54.060
+You do a concert as well.
+
+00:54.070 --> 00:55.850
+I'm just making it replaceable.
+
+00:55.870 --> 01:06.700
+So in this case I'll do 25 50 75 100 likes so it would be kind of hard to break this thing up into individual
+
+01:06.700 --> 01:11.960
+items and the way we used to do this was to kind of do a work around with apply and then we pass in
+
+01:11.980 --> 01:13.510
+the math object.
+
+01:13.650 --> 01:19.990
+And after that we pass in our array and we already understand kind of the mechanics of how this works
+
+01:19.990 --> 01:26.530
+and how to apply actually breaks up the array into individual items to be used as arguments.
+
+01:26.710 --> 01:32.340
+However this is kind of confusing especially if you're not super super familiar with javascript.
+
+01:32.350 --> 01:39.100
+This looks very confusing and most people might not have any idea why you used apply and then you just
+
+01:39.100 --> 01:41.890
+passed in a math object as an argument.
+
+01:41.890 --> 01:47.560
+So pretty confusing stuff and that's where the spread operator comes in with the rest parameter.
+
+01:47.560 --> 01:53.410
+What we did was we basically said any extra arguments that you pass in there are going to get put inside
+
+01:53.410 --> 01:54.180
+of this array.
+
+01:54.280 --> 02:01.960
+So we take all of these extra individual arguments and consolidate them into one a re the spread operator
+
+02:01.990 --> 02:03.530
+kind of does the opposite.
+
+02:03.670 --> 02:11.070
+And it takes an array and breaks it up into a bunch of individual arguments to be passed in separately.
+
+02:11.230 --> 02:15.360
+So in this case instead of doing all of this right here you can just do Max.
+
+02:15.370 --> 02:17.280
+And this is what a spread operator looks like we do.
+
+02:17.280 --> 02:19.770
+Dot dot dot just like before.
+
+02:19.840 --> 02:21.010
+And then the array.
+
+02:21.040 --> 02:21.610
+OK.
+
+02:21.820 --> 02:25.270
+Now in this case it does the exact same thing and I can prove that to you.
+
+02:25.300 --> 02:27.520
+I'll pass on another number for my index.
+
+02:27.520 --> 02:30.580
+And now the greatest number is 110.
+
+02:30.580 --> 02:33.190
+Now I could do 200 like so.
+
+02:33.190 --> 02:36.520
+So once again it's kind of like the different end of the spectrum.
+
+02:36.520 --> 02:42.840
+Whenever I was using rest parameters I defined them whenever I defined my function like right here.
+
+02:42.910 --> 02:43.410
+OK.
+
+02:43.570 --> 02:50.050
+On the other end of the spectrum when I pass in arguments if I want to pass in an array but I want to
+
+02:50.050 --> 02:56.620
+pass in each item of the array individually as a separate argument all I have to do now is just pass
+
+02:56.620 --> 03:03.340
+in my array and put a dot dot dot before it and it'll break up all of these arrays into individual arguments
+
+03:03.340 --> 03:06.900
+to be passed and which is much much easier to do.
+
+03:06.970 --> 03:12.190
+Now with that being said unlike the rest parameter with the spread OPERATOR This doesn't have to be
+
+03:12.190 --> 03:15.420
+the last thing the last argument in your list.
+
+03:15.430 --> 03:17.110
+You could also pass in like a zero.
+
+03:17.200 --> 03:22.750
+So that way if for example you had a bunch of negative numbers like this you could make sure that you
+
+03:22.750 --> 03:28.390
+don't show a negative number as the greatest and you can just kind of make sure that if there is a negative
+
+03:28.390 --> 03:29.460
+number you catch it.
+
+03:29.560 --> 03:33.770
+So in this case it will actually print out the maximum number is zero.
+
+03:33.880 --> 03:39.100
+So the reason you can do this is because it's unlikely that you will have an infinite number of items
+
+03:39.100 --> 03:39.840
+in your array.
+
+03:39.970 --> 03:45.580
+So you can set up your spread operator to be the first the second the third or the very last argument
+
+03:45.670 --> 03:46.550
+in your arguments.

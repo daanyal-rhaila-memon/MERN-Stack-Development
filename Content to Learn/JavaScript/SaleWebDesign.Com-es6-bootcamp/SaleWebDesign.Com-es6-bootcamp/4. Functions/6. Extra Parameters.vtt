@@ -1,0 +1,115 @@
+WEBVTT
+
+00:00.660 --> 00:08.160
+So inside of javascript's you're allowed to pass in fewer parameters than you formally defined or you
+
+00:08.160 --> 00:14.490
+can pass in more parameters than you formally defined in the previous videos we talked about how we
+
+00:14.490 --> 00:20.100
+could pass in fewer parameters than we formally defined and it would be perfectly OK because we could
+
+00:20.100 --> 00:25.800
+have default values for any parameter that wasn't passed then even though we formally defined it.
+
+00:25.950 --> 00:32.640
+But we haven't really talked about how we could deal with passing in extra parameters that is passing
+
+00:32.640 --> 00:35.310
+in more parameters than we formally defined.
+
+00:35.430 --> 00:37.380
+Now I have some code right here.
+
+00:37.370 --> 00:43.770
+And essentially this comes from the underscore jast library and its job is pretty simple what you do
+
+00:43.800 --> 00:48.760
+is you take an object that gets passed then and you create sort of a copy of it.
+
+00:48.780 --> 00:54.990
+Now the problem with this in javascript is that it's not all that obvious that this function can handle
+
+00:55.050 --> 01:01.080
+more than one parameter but essentially its job is to return a copy with a subset of properties of that
+
+01:01.080 --> 01:01.530
+object.
+
+01:01.530 --> 01:04.010
+So in this case we have a book object.
+
+01:04.050 --> 01:06.920
+And then after that we invoke a function.
+
+01:07.170 --> 01:11.910
+And in this case we pass an object first and then we pass on some extra parameters.
+
+01:11.910 --> 01:17.880
+Because like I said inside of javascript you don't have to just pass in the formally defined parameters.
+
+01:17.880 --> 01:21.120
+You can pass in more parameters or you can pass in even less.
+
+01:21.300 --> 01:27.270
+So in this case we create an empty object and then after that we loop through it and then what we can
+
+01:27.270 --> 01:34.800
+do before 6 is used the arguments objects kick to kind of deal with these extra parameters that get
+
+01:34.800 --> 01:37.520
+passed them and use them as we need to.
+
+01:37.680 --> 01:43.650
+So in this case we loop through this total number of arguments that actually get passed in and then
+
+01:43.650 --> 01:51.120
+for every single argument inside of here we assign it to the new object as a property of this new object.
+
+01:51.120 --> 01:52.560
+And then all we do is return it.
+
+01:52.740 --> 01:54.580
+So it's pretty simple.
+
+01:54.600 --> 02:01.380
+However like I said before it's not very obvious that we're allowed to work with extra parameters or
+
+02:01.380 --> 02:05.610
+better said that this function can handle extra parameters.
+
+02:05.790 --> 02:12.570
+And on top of that if we're working with extra parameters but we know that this is not an extra parameter
+
+02:12.720 --> 02:18.720
+it's formally defined in order to work with extra parameters by using the arguments object we would
+
+02:18.720 --> 02:21.780
+have to start one higher than we originally would.
+
+02:21.780 --> 02:24.150
+So we couldn't start at the zero index.
+
+02:24.150 --> 02:30.840
+Instead we would have to start at the one index and that's exactly why I use arguments length here instead
+
+02:30.840 --> 02:37.140
+of starting at arguments length minus one or starting at zero like you would typically expect someone
+
+02:37.140 --> 02:37.640
+to do.
+
+02:37.830 --> 02:40.520
+Because this first parameter is OK.
+
+02:41.010 --> 02:43.620
+Now obviously that's not that big of a deal.
+
+02:43.770 --> 02:49.410
+But the problem is it gives me one more thing that I have to think about when I use this function.
+
+02:49.410 --> 02:55.080
+And as we already learned the more things that we have to think about whenever we're writing a program
+
+02:55.320 --> 03:01.410
+the more difficult it becomes and the more prone we are to creating errors in our programs.

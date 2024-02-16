@@ -1,0 +1,100 @@
+WEBVTT
+
+00:00.590 --> 00:06.230
+Now another thing to be aware of Whenever you're working with these default parameters is that the temporal
+
+00:06.230 --> 00:09.950
+dead zone also applies to these parameters.
+
+00:09.950 --> 00:17.150
+So for example if I were to make another function and call it foo I can always do something like this
+
+00:17.150 --> 00:19.680
+first and then second equals first.
+
+00:19.700 --> 00:20.310
+OK.
+
+00:20.510 --> 00:26.420
+Because whenever you actually define this parameter and then maybe we'll just cancel the log.
+
+00:26.600 --> 00:31.740
+Let's say first and then second like so then I call it later on.
+
+00:31.910 --> 00:37.360
+Let's say we just pass in 23 like so it's going to print that out pretty nice right.
+
+00:37.680 --> 00:44.250
+Well whenever we call the function that is actually whenever we initialize our parameters.
+
+00:44.390 --> 00:49.610
+So before we initialize these parameters they're inaccessible they're in the temporal dead zone.
+
+00:49.760 --> 00:57.380
+So in this case we can access first and then after first parameter is initialized then we can use it
+
+00:57.410 --> 01:02.450
+as a default value for a second because now we actually have access to it because it's gone from left
+
+01:02.450 --> 01:03.350
+to right.
+
+01:03.350 --> 01:05.630
+We cannot however do the reverse.
+
+01:05.630 --> 01:11.270
+So that means we can sit second as a default parameter value for first.
+
+01:11.330 --> 01:14.840
+The reason we can't do that is because at this point in time.
+
+01:14.870 --> 01:20.330
+Second is not accessible because it hasn't been initialized right now second is in the temporal dead
+
+01:20.330 --> 01:23.270
+zone and we've only initialized first.
+
+01:23.270 --> 01:28.790
+So we're referencing something that hasn't been initialized yet and whenever we do initialize parameters
+
+01:28.790 --> 01:31.250
+that happens whenever we invoke our function.
+
+01:31.340 --> 01:32.750
+But then it goes from left to right.
+
+01:32.750 --> 01:40.670
+So first the the parameter named first is initialize and then afterwards the second parameter is initialized
+
+01:40.670 --> 01:44.070
+so in this case I'm referencing something that hasn't been defined yet.
+
+01:44.090 --> 01:48.550
+So that is why I get undefined for the second parameter right here.
+
+01:48.620 --> 01:53.900
+So just keep in mind you do have to deal with the temporal dead zone when working with default parameter
+
+01:53.900 --> 01:54.500
+values.
+
+01:54.620 --> 01:58.420
+But all that means is that you can't reference something before it's initialized.
+
+01:58.550 --> 02:03.830
+So in this case we can't use second as a default parameter value but we can definitely use the first
+
+02:03.830 --> 02:09.210
+parameter as a default parameter value and same thing would happen if we use something like third.
+
+02:09.260 --> 02:15.830
+So I could use for example let's say Now I could use second as a default parameter value but I could
+
+02:15.830 --> 02:21.020
+never use third as a default parameter value and that would also throw an error.
+
+02:21.260 --> 02:25.670
+As you can see right here that will also give me a reference here.
+
+02:25.670 --> 02:26.870
+Third is not defined.

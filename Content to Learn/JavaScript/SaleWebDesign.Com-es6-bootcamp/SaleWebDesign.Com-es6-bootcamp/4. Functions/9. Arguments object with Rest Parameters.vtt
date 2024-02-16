@@ -1,0 +1,85 @@
+WEBVTT
+
+00:00.680 --> 00:03.140
+Now at this point I'm going to go ahead and comment all of this.
+
+00:03.170 --> 00:08.540
+And while I'm doing that you probably wondered how rest parameters work with the arguments object.
+
+00:08.540 --> 00:14.990
+Or if they're even meant to work with the arguments object and I can tell you that originally the whole
+
+00:14.990 --> 00:20.740
+entire idea rests parameters and it's a pretty old idea that was just reintroduced in Essex.
+
+00:20.750 --> 00:26.930
+They were intended to actually replace the arguments object and even though it was intended to replace
+
+00:26.930 --> 00:33.140
+the arguments object it's still available inside of six and all of the subsequent versions and it actually
+
+00:33.140 --> 00:38.300
+works with the rest parameters so to give you an example will do a function and we'll call it check
+
+00:38.300 --> 00:45.080
+our eggs and then we're going to do is make a rest parameter and we'll call it args like so.
+
+00:45.080 --> 00:48.400
+And then what we can do is just counselled law.
+
+00:48.770 --> 00:52.230
+Some don't like arguments.
+
+00:52.430 --> 00:54.020
+Let me see if I can get it right.
+
+00:54.020 --> 01:02.030
+Arguments like so now will do another concert or log args and then after that we're going to do a side
+
+01:02.030 --> 01:09.530
+by side comparison so we'll do arguments and then the first into C and then after that we'll do our
+
+01:09.530 --> 01:15.920
+IGS the first into C because once again arguments and args are both arrays that we can access.
+
+01:16.130 --> 01:19.730
+Even though I call args an object because technically it is an object.
+
+01:19.730 --> 01:23.960
+Now I'm just going to go ahead and change this to one and change this to two.
+
+01:24.170 --> 01:25.280
+And we should be good to go.
+
+01:25.280 --> 01:31.340
+So now I'm going to go ahead and invoke check args and get a pass and just some simple letters right
+
+01:31.340 --> 01:31.870
+here.
+
+01:31.940 --> 01:33.390
+Some simple characters.
+
+01:33.530 --> 01:38.450
+And then whenever I invoke this you can see that they kind of work together the arguments object works
+
+01:38.450 --> 01:45.260
+with resk parameters and it continues to reflect how many arguments were actually passed in to your
+
+01:45.260 --> 01:45.800
+function.
+
+01:45.800 --> 01:50.870
+So in this case we have the same array right here and they both print a on the first line and they both
+
+01:50.870 --> 01:52.430
+print B on the second line.
+
+01:52.580 --> 01:57.210
+So they do work together and they both do reflect how many arguments were passed then.
+
+01:57.380 --> 01:59.040
+It's just something to keep in mind.
+
+01:59.080 --> 02:02.110
+And that's pretty much all you really need to know about risk parameters.

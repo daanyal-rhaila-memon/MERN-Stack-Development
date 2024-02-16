@@ -1,0 +1,217 @@
+WEBVTT
+
+00:00.740 --> 00:04.790
+There's more to be said as far as strings go inside of six.
+
+00:04.790 --> 00:08.240
+But for now that's honestly all we really need to know.
+
+00:08.270 --> 00:13.520
+And if you want to know more about strings inside of iOS 6 or more than happy to do a detailed module
+
+00:13.730 --> 00:17.500
+but what I really want to do is give you all of the tools that you need right now.
+
+00:17.600 --> 00:21.940
+And then we can go into sort of kind of the nuances in the really really deep stuff later.
+
+00:21.950 --> 00:24.970
+But for now let's just get you set up with what you need.
+
+00:24.980 --> 00:29.130
+So with that being said we're going to move on to functions so let's make a new file called functions
+
+00:29.180 --> 00:34.400
+Geass and we'll do the same thing as always we're going to come in this out and then we'll throw something
+
+00:34.400 --> 00:40.250
+down here at the bottom and we can just change this to functions like so and we're good to go double
+
+00:40.250 --> 00:41.110
+check that it works.
+
+00:41.120 --> 00:44.500
+If you want to I know that it works so it should be fine.
+
+00:44.600 --> 00:51.440
+Now functions there pretty interesting pretty unique inside of javascript unique in the sense that you
+
+00:51.440 --> 00:58.730
+can pass in as many arguments as you want or as few arguments as you want regardless of how many parameters
+
+00:58.730 --> 00:59.600
+were defined.
+
+00:59.660 --> 01:06.740
+So to give you an example of that I'll make a function and we'll call this a sync function or just func
+
+01:07.220 --> 01:09.850
+and it's going to take a couple of things maybe that you are.
+
+01:09.920 --> 01:15.010
+And then to time out then it'll take a callback.
+
+01:15.020 --> 01:20.490
+Now the thing about this is what if I don't want to pass in the callback Well that's perfectly OK.
+
+01:20.600 --> 01:25.240
+Whenever I'd call it I can just do async fonk pass in a you r o.
+
+01:25.400 --> 01:33.400
+And then just kind of pass then as soon as undefined like so I could pass it in as a string undefined
+
+01:34.190 --> 01:35.020
+and that's ok.
+
+01:35.150 --> 01:40.880
+Nothing happens no where you'd think you would get mad at me for not specifying but it doesn't it's
+
+01:40.880 --> 01:41.770
+perfectly OK.
+
+01:41.960 --> 01:47.380
+I could even pass in no arguments if I really wanted to or I could pass in extra arguments.
+
+01:47.390 --> 01:53.060
+So in this case I can just keep going and pass in four arguments instead of the three parameters that
+
+01:53.060 --> 01:54.000
+I specified.
+
+01:54.050 --> 01:55.180
+That's all well and good.
+
+01:55.400 --> 01:56.930
+However there's a problem with this.
+
+01:56.930 --> 02:02.840
+What if we're performing some logic inside of a function that requires us to have this certain value
+
+02:03.080 --> 02:08.080
+or at least requires us to know whether or not it has been explicitly passed then.
+
+02:08.390 --> 02:12.020
+Well that's where we kind of had to do some work arounds in Javascript.
+
+02:12.020 --> 02:17.330
+So I'll give you an example let's say with the timeout we need to make sure that there is always a value
+
+02:17.330 --> 02:18.050
+for the time.
+
+02:18.050 --> 02:24.330
+So what we might do with something like this will take the time out parameter and set it equal to either
+
+02:24.330 --> 02:27.280
+a time out or 2000.
+
+02:27.290 --> 02:35.030
+So this kind of works because if someone doesn't explicitly pass an argument for a timeout then it's
+
+02:35.030 --> 02:36.420
+going to be undefined.
+
+02:36.440 --> 02:41.440
+And if it is undefined as we know from truthy falsie it will evaluate to false.
+
+02:41.450 --> 02:42.930
+And whenever you use or.
+
+02:43.040 --> 02:49.580
+The first value is false then it's going to give you or return the second value instead.
+
+02:49.580 --> 02:51.500
+There is a problem with that however.
+
+02:51.530 --> 02:54.550
+I mean we could also do it with a callback to just to make sure.
+
+02:54.650 --> 03:04.660
+So we could do callback for a function like so we'll do an anonymous function maybe space it out to
+
+03:04.670 --> 03:05.780
+make it look pretty.
+
+03:05.780 --> 03:12.030
+So with that being said if either of these parameters are undefined then it will give the default value.
+
+03:12.030 --> 03:18.170
+So this is kind of a way to make default parameters that is kind of defaults in case we forget or we
+
+03:18.170 --> 03:20.240
+don't need to pass anything in.
+
+03:20.240 --> 03:21.770
+This is kind of flawed though.
+
+03:21.780 --> 03:25.590
+There's one big flaw and that is that zero is falsie.
+
+03:25.610 --> 03:32.870
+So if we wanted to pass in zero for our time out parameter that would still evaluate to false and then
+
+03:32.870 --> 03:38.750
+we would just return 2000 so it would completely ignore our argument that we pass in even though we
+
+03:38.750 --> 03:41.660
+did indeed explicitly pass in an argument.
+
+03:41.660 --> 03:45.120
+So a way that people might get around this and I'm going to copy this.
+
+03:45.170 --> 03:48.860
+I don't feel like writing it again and just call it a sync funk.
+
+03:48.880 --> 03:50.390
+To very original.
+
+03:50.900 --> 03:56.540
+So a way that people might get around this is to do something along these lines though do turn ternary
+
+03:57.020 --> 03:59.090
+expression maybe put.
+
+03:59.140 --> 03:59.720
+Let's see.
+
+03:59.720 --> 04:05.930
+Time out does not equal an undefined.
+
+04:06.140 --> 04:12.140
+And then if that evaluates to true then we'll make sure that timeout is the value that was passed and
+
+04:12.140 --> 04:14.180
+is assigned as the parameter.
+
+04:14.180 --> 04:20.060
+Else we will set it to 2000 and we can do the same business rate here so we'll just kind of take this
+
+04:20.370 --> 04:29.200
+and do parentheses and do callback whoops my mind sex is kind of fighting me here.
+
+04:29.210 --> 04:30.170
+There we go.
+
+04:30.260 --> 04:31.550
+Call back.
+
+04:31.750 --> 04:32.580
+Perfect.
+
+04:32.650 --> 04:38.890
+Not equal to undefined in said it's callback.
+
+04:39.040 --> 04:45.040
+Else we'll set it to another function like so.
+
+04:45.460 --> 04:49.890
+Now with that being said I'm going to stretch this out a little bit so you can see it more clearly.
+
+04:49.900 --> 04:56.950
+So this does work a lot better but it is a lot of work just to make sure that these are undefined whenever
+
+04:56.950 --> 04:59.630
+we start running through the code inside of our function.
+
+04:59.680 --> 05:02.700
+So we're going to talk about a much better way to do this in the next video.

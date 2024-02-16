@@ -1,0 +1,97 @@
+WEBVTT
+
+00:00.710 --> 00:04.920
+There's a couple of other interesting things I want to show you with the name property for functions
+
+00:04.930 --> 00:10.810
+so what we'll do is we will comment out the first function called do something and we'll comment out
+
+00:10.840 --> 00:12.610
+the second console log.
+
+00:12.820 --> 00:16.100
+And then we'll change the name of the variable to do something.
+
+00:16.300 --> 00:20.980
+And then after that instead of having an anonymous function I'm going to give it a name of do something
+
+00:20.980 --> 00:21.800
+else.
+
+00:21.820 --> 00:27.760
+Now if we print out the variable that we assign it to do something not name you can see that the name
+
+00:27.760 --> 00:31.140
+of the function property is actually do something else.
+
+00:31.150 --> 00:37.540
+So in other words whenever I use a named function expression that's going to take precedence over the
+
+00:37.540 --> 00:42.850
+variable that I assign it to knows a couple of other interesting things to be observed first.
+
+00:42.850 --> 00:47.690
+If I make an objects we'll just do curly braces and we'll make a get.
+
+00:47.700 --> 00:49.940
+So we'll do it better we'll do get.
+
+00:49.960 --> 00:55.380
+And then first name like so and then inside of here we're just going to return something.
+
+00:55.450 --> 00:56.700
+We can do any name.
+
+00:56.710 --> 00:58.040
+Dante is good.
+
+00:58.120 --> 00:59.100
+Why not.
+
+00:59.110 --> 01:02.230
+Then after that we'll make a good old fashion method.
+
+01:02.230 --> 01:08.170
+So do a greet and we'll set it equal to function like so.
+
+01:08.490 --> 01:10.150
+Now we're just counseled.
+
+01:10.720 --> 01:13.900
+Hello or hell either one.
+
+01:13.900 --> 01:22.970
+Now with that being said next thing we can do is we can obviously counseled low boby J dog greets dot
+
+01:23.020 --> 01:29.200
+name if I can spell name correctly and you're going to see that the name of the method is actually Greek
+
+01:29.260 --> 01:32.320
+because it's being interpreted on the object literal.
+
+01:32.320 --> 01:37.740
+Now to get access or to retrieve getters and setters we have to do a little more work.
+
+01:37.780 --> 01:45.100
+So we're going to make a variable and we'll call it descriptor and we'll say let's say Object get own
+
+01:45.100 --> 01:51.190
+property descriptor here we pass in the object and the name of the thing we'd like to retrieve in this
+
+01:51.190 --> 01:51.950
+case.
+
+01:52.030 --> 02:00.420
+Then after that we can cancel the log descriptor dog get and then die name like so.
+
+02:00.760 --> 02:04.120
+And now you can see it shows us get and then first name.
+
+02:04.120 --> 02:09.340
+So it does give us a little extra information about this particular method and it would also do the
+
+02:09.340 --> 02:12.610
+same for a setter so in this case it would show set.
+
+02:12.610 --> 02:13.660
+And then first name.

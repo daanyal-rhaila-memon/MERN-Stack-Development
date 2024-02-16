@@ -1,0 +1,73 @@
+WEBVTT
+
+00:00.540 --> 00:06.720
+So the two problems we talked about with this previously made function is that essentially whenever
+
+00:06.720 --> 00:11.600
+we write it out we have to start at 1 instead of at zero with the arguments object.
+
+00:11.640 --> 00:18.060
+And on top of that whenever we go through this function it's not immediately apparent to someone that
+
+00:18.060 --> 00:20.580
+it can accept more than one parameter.
+
+00:20.580 --> 00:26.110
+So what we can use instead is something called a rest parameters.
+
+00:26.130 --> 00:29.390
+Now I'm going to write out the syntax and then I'm going explain what it does.
+
+00:29.400 --> 00:29.950
+OK.
+
+00:30.180 --> 00:36.120
+So after this function pick and after the first parameter object what I'm going to do is I'm going to
+
+00:36.120 --> 00:40.060
+do dot dot dot triple dots and then Keys.
+
+00:40.080 --> 00:40.760
+OK.
+
+00:41.130 --> 00:48.960
+Now what I could do is let's say first all consulate log key is just to kind of show you what it is.
+
+00:49.080 --> 00:56.130
+So my colon as always and then I'm going to replace argument with keys and I'm going to replace arguments
+
+00:56.130 --> 01:02.950
+object again with keys and I'm going to replace the arguments object again with keys like so now.
+
+01:03.090 --> 01:11.520
+What a rest parameter essentially allows me to do is every single extra parameter that gets passed will
+
+01:11.520 --> 01:14.580
+be put inside of this named parameter right here.
+
+01:14.640 --> 01:18.370
+But this isn't just any named parameter It's an array.
+
+01:18.660 --> 01:24.930
+So in other words what rest parameter is allow us to do is to take any extra parameters that get passed
+
+01:24.930 --> 01:29.930
+in and throw them inside of an unnamed array an array with a name.
+
+01:29.940 --> 01:36.570
+So in this case as you can see when I print out canceled out log keys it's actually an array containing
+
+01:36.570 --> 01:38.580
+the author and the year.
+
+01:38.580 --> 01:40.380
+So this has a couple of benefits.
+
+01:40.380 --> 01:46.370
+First it starts at zero which means that whenever I make this object I can start at zero.
+
+01:46.380 --> 01:51.960
+And I have one less thing to keep track of and on top of that whenever I look at this function it's
+
+01:51.960 --> 01:56.240
+very clear to me that this function can take more than one parameter.

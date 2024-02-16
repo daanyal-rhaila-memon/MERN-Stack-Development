@@ -1,0 +1,199 @@
+WEBVTT
+
+00:00.680 --> 00:06.140
+So we've talked about how variables were changed in ESX So let's go ahead and talk about strings are
+
+00:06.140 --> 00:10.970
+going to make a new file and call it strings dodgiest And you know the drill we're going to comment
+
+00:10.970 --> 00:15.230
+out the script tag here and then add in a script tag.
+
+00:15.230 --> 00:20.750
+Now honestly there is more inside of the update that involves strings that I'm going to tell you about
+
+00:20.750 --> 00:21.520
+right now.
+
+00:21.710 --> 00:28.010
+But a lot of it has to do with like the encoding of strings and characters and honestly it's a bunch
+
+00:28.010 --> 00:31.070
+of stuff that you really might not need to know.
+
+00:31.070 --> 00:36.530
+It's not something that really comes up a lot but what I'm going to teach you here is far and away the
+
+00:36.530 --> 00:41.990
+coolest and definitely one of the most common things you'll see from the updates made to strings.
+
+00:41.990 --> 00:47.270
+Now as we've seen before if we try to make a string and we'll do it this time because now we're more
+
+00:47.330 --> 00:50.090
+fancy and we're hip and we're using new syntax.
+
+00:50.090 --> 00:55.720
+If I try to make a string like this and then I counseled out log it everything goes as planned right.
+
+00:55.890 --> 01:01.310
+But we've talked about how we can't really go down to the next line right because of how javascript
+
+01:01.310 --> 01:01.730
+works.
+
+01:01.730 --> 01:07.910
+It's trying to read this string right here and by going to the next line that's invalid syntax so as
+
+01:07.910 --> 01:12.630
+you can see right here unexpected token it has to do with how javascript is compiled.
+
+01:12.770 --> 01:19.160
+But with that being said there is a bit of a work around that we can use to create multi line sort of
+
+01:19.160 --> 01:22.550
+strings so we can do this for our backslash right here.
+
+01:22.660 --> 01:27.980
+And as you can see my syntax or my highlighting actually changes to where it's valid.
+
+01:27.980 --> 01:33.740
+Of course that doesn't actually change how it's displayed inside of the output of the console right
+
+01:33.740 --> 01:34.370
+here.
+
+01:34.370 --> 01:36.610
+All it shows is a space right here.
+
+01:36.620 --> 01:43.520
+So one kind of trick that you'll see people potentially do is to do backslash in backslash.
+
+01:43.520 --> 01:45.580
+Now this is a hack.
+
+01:45.590 --> 01:51.890
+It takes advantage of a bug inside of javascript that's been around for a very long time but a lot of
+
+01:51.890 --> 01:57.740
+developers will tell you to stay away from it because as I said before it is a hack and it takes advantage
+
+01:57.770 --> 01:59.780
+of a bug inside of Javascript.
+
+01:59.780 --> 02:03.100
+So you can technically make multi-line expressions.
+
+02:03.180 --> 02:09.110
+You could also add another one so you could do backslash in backslash then add some more and you can
+
+02:09.110 --> 02:14.150
+just keep adding to get a multi-line string like that inside of six.
+
+02:14.150 --> 02:20.450
+It is actually much much easier to make a multi line I believe you use a dash with that string.
+
+02:20.450 --> 02:23.170
+So what you do is really simple.
+
+02:23.230 --> 02:29.480
+What we're going to do is make a brand new string instead of using single quotes or double quotes.
+
+02:29.480 --> 02:31.070
+We're going to use back ticks.
+
+02:31.070 --> 02:31.700
+OK.
+
+02:31.850 --> 02:39.800
+Now the back to back on a standard keyboard should be located to the left of the one the number one
+
+02:39.800 --> 02:40.300
+button.
+
+02:40.340 --> 02:40.680
+OK.
+
+02:40.700 --> 02:42.850
+Just above your left tab key.
+
+02:42.950 --> 02:46.560
+So it should be located right there and it looks like a little back ticks now.
+
+02:46.610 --> 02:48.940
+These are referred to as template strings.
+
+02:48.950 --> 02:51.380
+And we're going to see a lot more that we can do with them.
+
+02:51.380 --> 02:56.540
+But in this particular case all I'm going to do is cancelled out log the result.
+
+02:56.570 --> 02:59.360
+So I'll go ahead and go down here comment that back in.
+
+02:59.440 --> 03:06.050
+And then you can see I can make strings all day long on as many lines as I want and that's perfectly
+
+03:06.050 --> 03:06.620
+kosher.
+
+03:06.710 --> 03:10.120
+So now whenever I log this out you can see there is no error.
+
+03:10.220 --> 03:14.800
+There is no crazy kind of I guess you'd call it bug or any kind of work around.
+
+03:14.810 --> 03:18.120
+It's perfectly valid inside of six and beyond.
+
+03:18.170 --> 03:22.610
+Interesting thing to keep in mind is what I'm going to do is I'm going to put these strings on the same
+
+03:22.610 --> 03:24.690
+line are these characters on the same line.
+
+03:24.860 --> 03:26.810
+And then I'm going and print out the links.
+
+03:26.960 --> 03:27.460
+OK.
+
+03:27.590 --> 03:29.880
+And as you can see the link is 16.
+
+03:29.900 --> 03:31.830
+Now I'm going to throw this down to the next line.
+
+03:31.880 --> 03:33.420
+What do you think the links are going to be now.
+
+03:33.590 --> 03:34.630
+It's going to be 17.
+
+03:34.670 --> 03:37.960
+So essentially this is going to count as one space.
+
+03:38.090 --> 03:44.690
+But now if I go ahead and add more spaces like so you can see the length increases to 22.
+
+03:44.690 --> 03:45.820
+So it went up by five.
+
+03:45.860 --> 03:50.870
+And if I decrease it by two then it'll go to 20 like so.
+
+03:51.020 --> 03:57.500
+So in other words the spaces do contribute to the length of the string which is something very important
+
+03:57.500 --> 04:01.240
+to keep in mind especially if you're working with multi-line strings.
+
+04:01.250 --> 04:05.040
+But this is a very good very clean way to make multiline strings.
+
+04:05.090 --> 04:11.690
+You just need to be aware that the length will actually be affected by how you'd structure your multi-line
+
+04:11.690 --> 04:14.960
+string and how much space you add on the subsequent line.
