@@ -1,0 +1,109 @@
+WEBVTT
+
+00:00.520 --> 00:05.910
+Know the original way of doing things isn't necessarily bad but it does have its limits.
+
+00:05.910 --> 00:13.770
+For example if I comment back in this original way we did it right here to override the default behavior
+
+00:13.800 --> 00:15.900
+of this child object.
+
+00:15.960 --> 00:17.700
+It's it does work.
+
+00:17.700 --> 00:22.170
+Technically speaking it does the exact same thing but there is a problem with it.
+
+00:22.170 --> 00:28.260
+Let's say I start working with multiple levels of inheritance right so I have another let in this case
+
+00:28.260 --> 00:28.650
+will do.
+
+00:28.650 --> 00:32.360
+Cousin Will do object create.
+
+00:32.780 --> 00:38.910
+In this case we'll use Friend care after this I'm going to make a couple of cancelled out logs right
+
+00:38.910 --> 00:45.690
+here so I'm just going to copy this and then after that move this down and throw those in.
+
+00:45.690 --> 00:52.320
+So what we could do is essentially type person agree and then cousin agreed.
+
+00:52.680 --> 00:55.850
+But this is going to cause a stack overflow.
+
+00:55.890 --> 01:02.220
+Essentially the reason is this is dynamic so whenever I call personally agree it invokes this function
+
+01:02.220 --> 01:03.810
+right here at the top.
+
+01:03.810 --> 01:06.960
+So if I scroll up let me see if I can scroll up all the way.
+
+01:07.140 --> 01:09.070
+You can see it actually does work at the beginning.
+
+01:09.150 --> 01:10.350
+It returns Hello.
+
+01:10.410 --> 01:11.730
+So that works.
+
+01:12.030 --> 01:18.720
+And then we call friends agree in this case we get the correct prototype of friend which is person.
+
+01:18.840 --> 01:25.010
+And then we call it with the key word this being set correctly inside of the prototype method.
+
+01:25.080 --> 01:29.790
+And last but not least we take whatever is returned and we spend it and then we return that result.
+
+01:29.800 --> 01:31.030
+So we get hello there.
+
+01:31.320 --> 01:34.970
+Then after that we call cousin Doug agree.
+
+01:34.980 --> 01:41.280
+Now if we print out a cousin dog greet you'll see that it has this very same method right here that
+
+01:41.280 --> 01:47.610
+is on friend whenever it's called Inside of Cousin It it it fires off this method right here.
+
+01:47.660 --> 01:50.570
+Object get prototype of this.
+
+01:50.580 --> 01:56.410
+This in this case the prototype of this object is going to be friend.
+
+01:56.640 --> 02:05.640
+And so whenever you invoke a greet with the call and this set to basically cousin what's going to happen
+
+02:05.640 --> 02:11.370
+is it's going to invoke this function with the keyword this set to cousin and it's going to create a
+
+02:11.370 --> 02:16.470
+recursive function that's going to call over and over again until you get stack overflow.
+
+02:16.470 --> 02:18.270
+If you use the keywords super.
+
+02:18.270 --> 02:20.400
+This is not going to happen.
+
+02:20.400 --> 02:24.090
+The reason for this is because the key word super is not dynamic.
+
+02:24.120 --> 02:32.010
+So the key word super is always going to point to the person object right here on the prototype chain.
+
+02:32.010 --> 02:37.980
+So in other words you can think of super as like a pointer that always points to the original prototype
+
+02:37.980 --> 02:40.180
+object that you referenced in the first place.

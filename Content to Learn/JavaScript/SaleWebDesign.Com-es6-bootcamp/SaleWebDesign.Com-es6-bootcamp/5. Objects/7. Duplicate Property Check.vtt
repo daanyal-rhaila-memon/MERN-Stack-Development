@@ -1,0 +1,34 @@
+WEBVTT
+
+00:00.390 --> 00:08.150
+Something that used to happen inside of E.S. 5 in strict mode particularly if I had an object right
+
+00:08.250 --> 00:16.470
+here like we'll do car and I had two different properties make and that would be Ford and then make
+
+00:16.890 --> 00:19.320
+a Chevy.
+
+00:19.320 --> 00:25.320
+This would throw in air so it would check in see that there are two duplicate property names right here.
+
+00:25.410 --> 00:32.480
+And so it would throw an air inside of a six B use strict mode or not using strict mode.
+
+00:32.490 --> 00:33.840
+This doesn't throw an error.
+
+00:33.840 --> 00:37.080
+They got rid of this duplicate property check right here.
+
+00:37.290 --> 00:44.550
+And instead what happens is the last property name that is listed is what is applied to the object as
+
+00:44.550 --> 00:45.880
+its actual property.
+
+00:45.900 --> 00:48.180
+So just a quick side note to keep in mind.
+
+00:48.210 --> 00:51.600
+Another small little change but definitely worth noting.

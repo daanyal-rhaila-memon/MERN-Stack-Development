@@ -1,0 +1,142 @@
+WEBVTT
+
+00:00.450 --> 00:06.310
+So we're going to go ahead and move right along and make a new file called Objects stopgaps.
+
+00:06.330 --> 00:08.850
+And while we're making this I'll go ahead and talk to you about it.
+
+00:08.850 --> 00:11.850
+So we use objects a lot in javascript.
+
+00:11.850 --> 00:18.180
+I don't know if you've noticed but really people love objects and with that being said as a program
+
+00:18.180 --> 00:23.430
+becomes more and more complex you'll find yourself creating more and more objects all the time.
+
+00:23.430 --> 00:31.410
+And so a big focus of iOS 6 was actually making objects more efficient and increasing their usefulness
+
+00:31.410 --> 00:32.420
+overall.
+
+00:32.430 --> 00:36.510
+So there's a number of different types of objects inside of javascript.
+
+00:36.510 --> 00:42.210
+You have ordinary objects which is the ones that you and I build a lot of exotic objects which have
+
+00:42.210 --> 00:46.600
+internal behavior that differs from the default in some kind of way.
+
+00:46.620 --> 00:52.380
+You have your standard objects and those are defined by ECMAScript 6 such as the array and date and
+
+00:52.380 --> 00:59.030
+so on and standard objects may be ordinary or they could be exotic objects so they're not mutually exclusive
+
+00:59.040 --> 00:59.780
+I should say.
+
+01:00.090 --> 01:06.170
+And last but not least built in objects are objects that are present in a javascript execution environment.
+
+01:06.180 --> 01:11.390
+When a script begins to execute an all standard objects are built in objects you could say.
+
+01:11.520 --> 01:13.470
+So like I said they're not mutually exclusive.
+
+01:13.470 --> 01:17.160
+An object can be more than one type of object at the same time.
+
+01:17.160 --> 01:21.600
+Now there are a lot of optimizations made to these different objects.
+
+01:21.690 --> 01:27.510
+Some of them are simple syntax shortcuts and I'll show you one of those right now and other ones are
+
+01:27.810 --> 01:31.560
+really really interesting so we'll do a literal.
+
+01:31.830 --> 01:38.430
+Shorthand syntax and essentially what we'll do is we'll have a function and we'll just call it make
+
+01:38.430 --> 01:45.000
+LBJ or MC person we'll call and person is just going to have a name an age.
+
+01:45.000 --> 01:53.210
+Now typically the way we might do this is we do return name equals name and then age it was age.
+
+01:53.240 --> 01:58.050
+Now this was pretty confusing when you first started out but now you know exactly what's happening right.
+
+01:58.050 --> 02:05.250
+This name represents the object that we're returning and the curly braces and this name represents this
+
+02:05.250 --> 02:08.410
+variable right here this parameter that's getting passed in.
+
+02:08.520 --> 02:12.810
+And that's precisely why there are different colors now inside of iOS 6.
+
+02:12.810 --> 02:15.830
+You don't have to use this repetition rate here.
+
+02:15.860 --> 02:18.000
+Instead you can just get rid of it.
+
+02:18.000 --> 02:24.540
+So in other words what I can do is just delete this assignment right here and I could also delete this
+
+02:24.540 --> 02:25.800
+assignment.
+
+02:25.800 --> 02:32.730
+So essentially what iOS 6 is allowing us to do is whenever we call this function make person like so
+
+02:33.290 --> 02:37.910
+pass in a name John with two O's because he's a rebel.
+
+02:38.150 --> 02:39.480
+Age ninety nine.
+
+02:39.720 --> 02:45.420
+Essentially what's going to happen is javascript's going to look and if it sees that the object literal
+
+02:45.480 --> 02:52.320
+only has a name or only has a key if you will it's going to look around and see if there's any variables
+
+02:52.380 --> 02:56.130
+inside of this scope that have the same name.
+
+02:56.280 --> 03:02.300
+And if it does find a variable with the same name it will assign it to this object as a value.
+
+03:02.460 --> 03:06.560
+So in this case it's going to see oh this object only has a name.
+
+03:06.570 --> 03:11.460
+So I'm going to look and see if there is a variable with name and there is so it will assign it automatically
+
+03:11.460 --> 03:12.800
+same thing with age.
+
+03:12.810 --> 03:16.440
+It seems I only have the name of age for this property right here.
+
+03:16.500 --> 03:21.270
+So it's going to look around and see if there's a variable called age and it does find one so it automatically
+
+03:21.270 --> 03:21.770
+assigns it.
+
+03:21.780 --> 03:23.810
+So nice little shortcut for you.
+
+03:23.810 --> 03:29.940
+And it's pretty common sense a lot of times you want to use the same name for the parameters or that
+
+03:29.940 --> 03:33.680
+you define as well as the name of the object's properties itself.

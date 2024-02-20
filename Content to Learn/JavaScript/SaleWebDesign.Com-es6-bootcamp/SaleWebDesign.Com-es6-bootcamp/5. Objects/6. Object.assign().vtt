@@ -1,0 +1,112 @@
+WEBVTT
+
+00:00.600 --> 00:08.830
+So instead of having to fund misfunction ourselves now we can just use something called object sign.
+
+00:08.880 --> 00:16.410
+Now originally in iOS 6 there was also something called object mixin but it was omitted from iOS 6 because
+
+00:16.470 --> 00:20.640
+there was concern about you know using it with the word super.
+
+00:20.640 --> 00:25.330
+And we're going to get into that later but for now just know that we can use object got a sign.
+
+00:25.410 --> 00:30.630
+And the reason it's named this instead of mixin is because it honestly more accurately reflects the
+
+00:30.630 --> 00:32.860
+actual operation that's taking place.
+
+00:32.940 --> 00:40.340
+You're just copying numerable properties and methods and you can actually give your receiver these accessor
+
+00:40.380 --> 00:42.580
+properties that might be on the supplier.
+
+00:42.630 --> 00:47.370
+So it actually more accurately reflects what's going on which is just your assigning values to your
+
+00:47.370 --> 00:48.400
+properties and methods.
+
+00:48.400 --> 00:49.200
+That's it.
+
+00:49.230 --> 00:54.220
+So with that being said what we can do is instead of using this mixin method What does commented out
+
+00:54.810 --> 00:59.010
+and we'll switch this out with object.
+
+00:59.390 --> 01:05.070
+If I can type Object assign and you could see it has the exact same result.
+
+01:05.210 --> 01:08.310
+And just to illustrate that it really does do the same thing.
+
+01:08.360 --> 01:14.300
+What I'll do is I'll show you how it works so you can see it takes first a receiver and then it can
+
+01:14.300 --> 01:19.880
+take any number of suppliers so you could have one supplier to supplier 25 suppliers.
+
+01:19.970 --> 01:21.090
+Really doesn't matter.
+
+01:21.200 --> 01:25.970
+And the properties and methods will be assigned in the order in which you pass in your suppliers to
+
+01:25.970 --> 01:26.930
+the argument list.
+
+01:26.930 --> 01:33.160
+So for example let's make a cost and we'll call it receiver and it's just going to be an empty object.
+
+01:33.170 --> 01:35.600
+That's all it's going to be business as usual.
+
+01:35.690 --> 01:42.110
+And then after that we'll make some changes to those currently existing object by I do object sign pass
+
+01:42.110 --> 01:43.470
+in our receiver.
+
+01:43.550 --> 01:46.020
+And then after that we'll just pass in some objects.
+
+01:46.190 --> 01:53.500
+In this case we'll do for example wheels which will be four and then tires which will be big.
+
+01:53.720 --> 01:57.650
+Then after that we'll supply another object.
+
+01:57.650 --> 02:02.950
+Matter of fact I'm going to put this on another line like so bring it down.
+
+02:02.950 --> 02:03.560
+There we go.
+
+02:03.580 --> 02:12.860
+Now the next one will be let's say make which will be Ford and then model which will be Raptr.
+
+02:13.060 --> 02:15.340
+Cool name Raptr.
+
+02:15.340 --> 02:16.310
+There we go.
+
+02:16.390 --> 02:25.810
+Semi colon as always then if I cancel all log the receiver you'll see that the properties are actually
+
+02:25.810 --> 02:31.120
+in the order in which I specified them so its wheels tires and then make and model and of course we
+
+02:31.120 --> 02:33.020
+can only have one receiver right here.
+
+02:33.040 --> 02:39.400
+So its not a huge addition to the language but it definitely does kind of formalize and make more of
+
+02:39.400 --> 02:42.990
+a universal standard for a very common operation.

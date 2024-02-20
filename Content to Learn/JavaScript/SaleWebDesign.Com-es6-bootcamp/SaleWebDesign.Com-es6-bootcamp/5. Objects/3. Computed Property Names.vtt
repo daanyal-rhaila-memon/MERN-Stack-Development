@@ -1,0 +1,139 @@
+WEBVTT
+
+00:00.540 --> 00:06.460
+IOS 6 also allows you to create what are called computed property names so I'll give you an example.
+
+00:06.480 --> 00:12.810
+Let's say we have a person will do Konst person equals that inside of here we might have something like
+
+00:12.840 --> 00:13.990
+first.
+
+00:14.780 --> 00:22.170
+And then after that we can put in a Z chiel I should have picked something easier to spell lists just
+
+00:22.170 --> 00:24.260
+do Zach SEC takling.
+
+00:24.270 --> 00:27.210
+So now this works pretty well.
+
+00:27.240 --> 00:33.900
+And in order to access this it would be pretty easy inside of our consulate or a log that we'll make.
+
+00:33.900 --> 00:36.320
+We would just have to use brackets notation right.
+
+00:36.540 --> 00:42.510
+So just do person brackets and then pass in a string like so.
+
+00:42.590 --> 00:43.740
+And this works out pretty well.
+
+00:43.770 --> 00:49.860
+Prince Zach and we could also assign things by creating computed values so we might create a variable
+
+00:49.860 --> 01:01.000
+like so we'll do let's say let in and second name equals and then we'll do a second name like so.
+
+01:01.340 --> 01:08.700
+And this would allow us to basically create another variable or another property.
+
+01:08.700 --> 01:17.670
+I should say on our object Zack attack like so now if I can log my person object you'll see I've made
+
+01:17.670 --> 01:22.500
+a modification to it and now it has a property on it called second name.
+
+01:22.530 --> 01:28.980
+So this is pretty good and we can use this different variables in different evaluations of those variables
+
+01:28.980 --> 01:30.510
+to access our properties.
+
+01:30.510 --> 01:37.490
+So now I could do like first name set it equal to the string right here.
+
+01:37.500 --> 01:44.240
+So I'll just copy this and then I can use brackets notation to even access that particular thing.
+
+01:44.240 --> 01:49.720
+So your first name like so and it prints out Zack again.
+
+01:49.720 --> 01:51.420
+So this works out pretty well.
+
+01:51.430 --> 01:58.420
+However there is a limitation we cannot use computed values inside of our object literal syntax.
+
+01:58.420 --> 02:04.780
+So in other words before Year 6 if I tried to do something like reference this variable like second
+
+02:04.780 --> 02:07.780
+name it wouldn't work out very well.
+
+02:07.840 --> 02:12.370
+It would think that I'm trying to give it a regular property name inside of six.
+
+02:12.370 --> 02:20.470
+However I can actually use variables and make calculations like so for example I could do.
+
+02:20.550 --> 02:23.640
+I'm going to move this up top because right now it's in the TTC.
+
+02:23.930 --> 02:25.680
+So move that above.
+
+02:25.710 --> 02:34.440
+So all I have to do is add brackets in and second name like so and then set this equal to attack and
+
+02:34.450 --> 02:44.280
+then I can just comment this out right here and I might change this to let's say last name or a second
+
+02:44.280 --> 02:47.080
+name like so.
+
+02:47.370 --> 02:52.650
+And you can see a prince out attack right here and then we could easily just cancel out logger object
+
+02:52.650 --> 02:53.390
+like so.
+
+02:53.670 --> 03:01.050
+And you'll see that what javascript did was it took this variable it evaluated it found out what was
+
+03:01.050 --> 03:05.690
+inside of it and set that equal to the property name so that is now the property name.
+
+03:05.910 --> 03:10.950
+So if you ever want to do a computed value you just have to put it inside of brackets and you can even
+
+03:10.950 --> 03:19.290
+do something cooler than you could do something like For example let's string a third and then plus
+
+03:19.350 --> 03:26.050
+suffix and then all I have to do is make a variable here called suffix so go ahead and do that.
+
+03:26.050 --> 03:36.510
+Now soldiers actually make it like this suffix equals name like so and then after that Zack attack Shak
+
+03:37.320 --> 03:39.550
+I'm just making words at this point.
+
+03:39.740 --> 03:46.860
+And after that if I print out this object once again you'll see that it has a third name this time including
+
+03:46.860 --> 03:53.190
+shag so you can put variables in here that evaluates the strings just like you would when you're accessing
+
+03:53.190 --> 03:59.700
+your object with brackets notation and you can also put calculations in here or short little expressions.
+
+03:59.700 --> 04:01.850
+So long as they evaluates the strings.
+
+04:01.860 --> 04:07.980
+So in this case I add third with a variable and that is considered to be my property name whatever This
+
+04:07.980 --> 04:08.610
+evaluates.

@@ -1,0 +1,121 @@
+WEBVTT
+
+00:00.690 --> 00:07.960
+So let's talk about mixdowns mixdowns are a super common pattern for creating objects inside of javascript
+
+00:08.010 --> 00:10.110
+and the idea is really simple.
+
+00:10.200 --> 00:15.250
+What you do is you have an object that you want to make and you have an object that already exists.
+
+00:15.390 --> 00:20.340
+So the idea is to take the object that already exist take all of the properties and methods from that
+
+00:20.340 --> 00:22.210
+object and put it on the new object.
+
+00:22.230 --> 00:28.950
+So the way we might do that is by creating a function like so now we'll call it mixin and it's going
+
+00:28.950 --> 00:32.650
+to take two arguments so we'll do the receiver.
+
+00:33.330 --> 00:37.910
+And then the supplier like so.
+
+00:38.010 --> 00:44.440
+And most libraries have a pattern that's pretty similar to this maybe not exactly the object keys.
+
+00:44.490 --> 00:52.990
+Take the supplier and then after I do that we'll do for each loop through it and we'll do an arrow function.
+
+00:53.040 --> 00:57.870
+So I'll put spaces there just to make it very clear that it's an of function and normally wouldn't do
+
+00:57.870 --> 00:58.950
+that though.
+
+00:59.130 --> 01:01.840
+And after that we'll go ahead and slide that down.
+
+01:01.880 --> 01:10.380
+And then inside of here I'm going to take the receiver in and set it equal to the supplier property
+
+01:10.380 --> 01:16.060
+like so after all of that said and done we'll go ahead and just return the receiver.
+
+01:16.110 --> 01:18.270
+Now I'll walk you through this code really quick.
+
+01:18.270 --> 01:21.540
+So essentially we get two objects as an argument.
+
+01:21.660 --> 01:25.230
+The object we want to make and the object that has what we want.
+
+01:25.290 --> 01:28.220
+So in this case we will use object keys.
+
+01:28.230 --> 01:33.990
+All this is going to do is take an object as an argument and it'll take all of the properties of that
+
+01:33.990 --> 01:36.420
+object and shove them into an array.
+
+01:36.600 --> 01:42.560
+So that's why I can use for each right here because now all of my properties of this object I passed
+
+01:42.560 --> 01:44.650
+in are in the form of an array.
+
+01:44.730 --> 01:47.680
+I loop through each of those items in the array.
+
+01:47.940 --> 01:54.330
+And for each item in the array I set the property of this new object equal to the original property
+
+01:54.540 --> 01:59.280
+of the object that was passed in after it's all said and done we return that object.
+
+01:59.280 --> 02:02.170
+So what it might look like is something like this.
+
+02:02.250 --> 02:08.250
+Konst person equals and then after that we'll do name like so.
+
+02:08.260 --> 02:10.180
+Equals Andrew.
+
+02:10.410 --> 02:12.950
+Age equals ninety nine.
+
+02:12.970 --> 02:19.410
+Then if I wanted to make a new person the way I could do it is like this Konst person two equals and
+
+02:19.410 --> 02:26.130
+then I do a mixed in like so and I'll pass in an empty object as the first argument and for the second
+
+02:26.550 --> 02:29.370
+I'll pass in the object I want to copy from.
+
+02:29.370 --> 02:36.000
+Then if I cancelled out log person to like so you'll see that it actually prints out this new object
+
+02:36.000 --> 02:36.960
+right here.
+
+02:36.960 --> 02:39.060
+Even though clearly I'm printing out person.
+
+02:39.060 --> 02:44.490
+So it took this empty object and set all of the properties on it and it did a pretty good job.
+
+02:44.490 --> 02:50.250
+Now this is such a common pattern that they created it an easier way to do it without us having to define
+
+02:50.250 --> 02:52.280
+our own function in Essex.
+
+02:52.320 --> 02:54.210
+So I'll go and show you how to do that in the next.

@@ -1,0 +1,100 @@
+WEBVTT
+
+00:00.480 --> 00:06.210
+Another cool thing that's available inside of javascript is something referred to as concise method
+
+00:06.210 --> 00:12.810
+syntax like usual it's just a fancy name for a simple concept and that is typically whenever we make
+
+00:12.860 --> 00:19.990
+a object like for example Konst person equals and then maybe we have a name.
+
+00:20.070 --> 00:23.670
+Andrew X. That's a cool name and then we'll do a function.
+
+00:23.670 --> 00:32.430
+So would you like say a name and of course we said equal to a function inside of here we is concert
+
+00:32.430 --> 00:33.270
+or.
+
+00:34.270 --> 00:37.050
+And then we'll do a template literals.
+
+00:38.370 --> 00:41.370
+My name is don't forget you comma good grammar.
+
+00:41.370 --> 00:42.690
+My name is.
+
+00:42.810 --> 00:45.430
+I think that's good grammar substitution.
+
+00:45.480 --> 00:49.150
+This name like so.
+
+00:49.200 --> 00:50.680
+Man look how nice that is.
+
+00:50.760 --> 00:52.850
+We're so we're so modern.
+
+00:52.860 --> 01:00.390
+So with that being said there is actually another way to make a function in or a method I should say
+
+01:00.510 --> 01:06.660
+inside of this new syntax so instead of doing this what we could do I'm going to copy it essentially
+
+01:06.780 --> 01:09.830
+and show it to you put it down here.
+
+01:09.900 --> 01:19.170
+Person 2 is instead of doing all this we can just write say name parentheses and then after that I'll
+
+01:19.170 --> 01:24.030
+just copy the consulate out loud because there is no sense in copying that or writing it out again I
+
+01:24.030 --> 01:24.700
+should say.
+
+01:24.840 --> 01:26.640
+So in this case boom like that.
+
+01:26.940 --> 01:29.260
+And it does the exact same thing as before.
+
+01:29.300 --> 01:35.220
+And whenever we use concise method syntax it just means that we don't have to use a colon and we don't
+
+01:35.220 --> 01:36.940
+have to use the function keyword.
+
+01:37.050 --> 01:42.000
+So it looks a lot nicer to be honest with you and it's more similar to other programming languages that
+
+01:42.000 --> 01:43.260
+you'll run into.
+
+01:43.320 --> 01:47.070
+The only real difference here is in the case of say name.
+
+01:47.070 --> 01:50.130
+It's essentially a signed an anonymous function.
+
+01:50.160 --> 01:53.430
+And in that case that's why we can use it as a function.
+
+01:53.430 --> 01:59.460
+Aside from that whenever you use this concise method syntax you have access to the keywords super which
+
+01:59.460 --> 02:03.620
+we're going to talk about a little later when we talk about prototypes and things like that.
+
+02:03.780 --> 02:09.330
+So whenever you don't use concise method syntax you won't have access to the keywords super But if you
+
+02:09.330 --> 02:14.820
+do use this new syntax you will have access to the key word super which we'll talk about later but once
+
+02:14.820 --> 02:16.750
+again just another syntax optimizer.

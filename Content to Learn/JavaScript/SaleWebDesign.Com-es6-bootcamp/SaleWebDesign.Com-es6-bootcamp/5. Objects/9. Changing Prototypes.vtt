@@ -1,0 +1,151 @@
+WEBVTT
+
+00:00.480 --> 00:06.380
+There were some changes made or really some things that were beginning to be allowed inside of six.
+
+00:06.390 --> 00:12.300
+Now as we already know with prototypes they're one of the foundational building blocks of object oriented
+
+00:12.300 --> 00:14.100
+programming in javascript.
+
+00:14.100 --> 00:19.410
+Now with that being said whenever javascript was first around people weren't really given a lot of control
+
+00:19.410 --> 00:21.350
+over manipulating prototypes.
+
+00:21.360 --> 00:26.850
+But then as people got more and more familiar with how they worked they wanted more control over it
+
+00:27.150 --> 00:28.940
+as is typically the case.
+
+00:28.950 --> 00:35.310
+So with that being said one of the biggest assumptions that was made with javascript is once you create
+
+00:35.400 --> 00:42.120
+an object an instance of another object you know the prototype is set in place either by instantiating
+
+00:42.120 --> 00:46.210
+the object with a constructor or using object create.
+
+00:46.230 --> 00:48.930
+Now that is no longer the case inside of 6.
+
+00:48.930 --> 00:55.470
+You can actually directly manipulate the prototype and change the prototype chain of an object that
+
+00:55.470 --> 00:56.360
+you create.
+
+00:56.370 --> 00:58.440
+Also I misspelled produ I think.
+
+00:58.440 --> 00:59.490
+No idea in prototypes.
+
+00:59.490 --> 00:59.930
+There we go.
+
+00:59.940 --> 01:00.620
+Cool.
+
+01:00.630 --> 01:11.010
+So for example let's say we make a objects called Person and inside of here we have a calling which
+
+01:11.010 --> 01:12.930
+is hello.
+
+01:12.930 --> 01:21.450
+Then we have not a semi-colon then we have like say an animal and it also has a calling and we'll call
+
+01:21.450 --> 01:24.300
+it how you like.
+
+01:24.300 --> 01:30.900
+So now with that being said what I'll do is I'll make a new object and I'll call it friend and I'll
+
+01:30.900 --> 01:39.010
+do this by doing object created and then person like so now at this point the prototype chain is linked
+
+01:39.010 --> 01:39.370
+to.
+
+01:39.390 --> 01:43.200
+So now if I do something like cancelled.
+
+01:43.950 --> 01:50.150
+Whoops did I write it correctly or will the ever friend calling.
+
+01:50.160 --> 01:51.670
+You'll see that it actually prints out.
+
+01:51.690 --> 01:52.110
+Hello.
+
+01:52.110 --> 01:57.070
+Because as we already learned whenever there's a property that's not available on the current object
+
+01:57.070 --> 01:59.190
+then it doesn't exist on the current object.
+
+01:59.220 --> 02:04.140
+It's going to go up the prototype chain to its ancestors and see if that's available.
+
+02:04.140 --> 02:07.710
+It's one of the foundations of inheritance inside of Javascript.
+
+02:07.710 --> 02:11.850
+So originally all we could do is get the prototype.
+
+02:11.850 --> 02:18.430
+So for example I could do a concert or log objects doget prototype.
+
+02:18.810 --> 02:24.700
+And then I could specify whatever prototype on a get and see if it's equal to a person for example and
+
+02:24.710 --> 02:26.610
+this will print out true right here.
+
+02:26.610 --> 02:28.810
+And so this is all we could originally do.
+
+02:28.950 --> 02:32.370
+But in iOS 6 we have what's called Set prototype.
+
+02:32.550 --> 02:39.580
+So what this allows us to do is to pass in an object and then pass in another object.
+
+02:39.720 --> 02:46.170
+And essentially what will happen is the first argument is the prototype we want to set on.
+
+02:46.290 --> 02:49.380
+And the second argument is the prototype we want to set it to.
+
+02:49.380 --> 02:51.760
+So I'll give you an example of this will do.
+
+02:51.760 --> 02:56.170
+Object set prototype of.
+
+02:56.180 --> 02:59.900
+In the first argument will be the objects that we want to set.
+
+03:00.000 --> 03:01.990
+So that would be friend.
+
+03:02.490 --> 03:05.370
+And now the prototype chain we want to set it to.
+
+03:05.370 --> 03:08.390
+So in this case animal and last but not least.
+
+03:08.410 --> 03:16.590
+Now if I cancelled log my calling like so go down here the bottom you're going to see now it actually
+
+03:16.590 --> 03:17.560
+says Oh.
+
+03:17.700 --> 03:23.130
+So we actually have direct control over the prototypes of our objects now which is pretty cool.

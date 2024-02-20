@@ -1,0 +1,151 @@
+WEBVTT
+
+00:00.540 --> 00:06.100
+Now a lot of work was put into making working with the prototype much easier.
+
+00:06.120 --> 00:13.140
+One of the things that was added was a keyword called Super and in its simplest form basically it makes
+
+00:13.140 --> 00:19.740
+working with your prototype objects a lot easier and accessing their functionality just overall much
+
+00:19.770 --> 00:20.910
+facilitated.
+
+00:20.910 --> 00:26.770
+So with that being said we're going to make an example and we'll do a couple of objects here so I'll
+
+00:26.770 --> 00:27.240
+do.
+
+00:27.360 --> 00:31.310
+Person equals an object literal.
+
+00:31.410 --> 00:33.040
+And we'll do agree.
+
+00:33.780 --> 00:35.980
+And then inside of here we'll return Hello.
+
+00:36.240 --> 00:42.360
+Notice here I'm also using this concise method syntax and I'm not doing a colon with the function keyword.
+
+00:42.360 --> 00:43.980
+Just something to keep in mind.
+
+00:43.980 --> 00:45.850
+Make sure you do it this way.
+
+00:46.220 --> 00:48.080
+With that being said I'm going to copy this.
+
+00:48.080 --> 00:52.740
+I do like three of them because I don't want to really write it all out again so I'll just change this
+
+00:52.740 --> 00:54.170
+to animal and change this to.
+
+00:54.180 --> 01:01.260
+Oh and then all I am going to do is change this to friend like so and then down below.
+
+01:01.260 --> 01:08.040
+I'm going to set it some of the set the prototype of friend equal to a person so do a prototype of then
+
+01:08.040 --> 01:14.790
+I'll pass an friend in the prototype I want to set it to or connected to it.
+
+01:15.000 --> 01:22.920
+Now with that being said there is a bit of a problem let's say inside of here I want to call the method
+
+01:22.980 --> 01:28.710
+of my prototype but I've already defined a method of the same name within my friend.
+
+01:28.710 --> 01:37.590
+So in this case if I specify something like let's say hi and then below that and to cancel that log
+
+01:38.430 --> 01:47.180
+friend dog gry and then invoke the function you're going to see it says hi and of course by Calment
+
+01:47.180 --> 01:47.970
+it out.
+
+01:48.140 --> 01:52.160
+You'll see it says hello or at least it should if it remembers.
+
+01:52.290 --> 01:57.580
+But either way the reason it's doing this is because we already have this method right here.
+
+01:57.590 --> 02:01.990
+And so javascript doesn't need to go looking up the prototype chain if you will.
+
+02:02.150 --> 02:04.070
+So how can we override this.
+
+02:04.070 --> 02:07.790
+Well originally what you might have to do is something like this.
+
+02:07.790 --> 02:20.050
+You might have to do something like say object doget prototype and then this and then Daag grete and
+
+02:20.050 --> 02:24.880
+then dot call and then this right here.
+
+02:24.880 --> 02:30.700
+Now obviously this is pretty wacky but it does work and it actually prints out hello instead of what
+
+02:30.700 --> 02:32.860
+I originally defined in my function.
+
+02:32.860 --> 02:40.540
+Now I can append something to this like for example I could add a plus space there and you can see it
+
+02:40.540 --> 02:41.500
+says hello there now.
+
+02:41.500 --> 02:43.630
+So it's clearly working.
+
+02:43.630 --> 02:50.500
+Essentially what's happening is I'm calling object prototype of this to make sure that I'm getting the
+
+02:50.500 --> 02:57.580
+correct prototype and then I invoke gry but I use it with a call and then I pass in this and that's
+
+02:57.580 --> 03:03.150
+just to make sure that the keyword this inside of the prototype method is set correctly.
+
+03:03.160 --> 03:05.950
+Now this is not exactly great.
+
+03:05.950 --> 03:07.870
+It has its limitations.
+
+03:07.870 --> 03:12.260
+And honestly it's just a lot of work it's pretty it's pretty intense here.
+
+03:12.280 --> 03:17.300
+So instead what we could do is we could just use the super keyword.
+
+03:17.320 --> 03:17.860
+That's right.
+
+03:17.860 --> 03:19.000
+That's all you have to do.
+
+03:19.180 --> 03:25.900
+So I'm going to comment out this and I'm going to do old slash hard way.
+
+03:26.200 --> 03:29.810
+And then after that I'm going to do something else when I return.
+
+03:29.980 --> 03:39.000
+And I'm just going to do super and then greet like that just like that and then I'll add there and does
+
+03:39.000 --> 03:44.060
+the same exact thing as you can see it does the same exact thing as it did before right here.
+
+03:44.190 --> 03:50.790
+So this super is allowing me to very easily interface with my prototype without having to do all of
+
+03:50.790 --> 03:51.240
+this.

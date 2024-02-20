@@ -1,0 +1,148 @@
+WEBVTT
+
+00:00.480 --> 00:06.960
+One of the goals of E is six was essentially to make it to where people didn't have to make so many
+
+00:06.960 --> 00:14.130
+globally defined methods on the Object prototype chain or so many globally defined properties on the
+
+00:14.130 --> 00:15.990
+Object prototype chain.
+
+00:15.990 --> 00:20.640
+So in other words we got a lot of new builtin methods on the global objects.
+
+00:20.640 --> 00:24.470
+So one of these is object it is now.
+
+00:24.690 --> 00:31.560
+Essentially it works very similar to the triple equal sign but it addresses some of the remaining quirks
+
+00:31.620 --> 00:36.890
+that are still to be dealt with when working with equal signs and comparisons.
+
+00:36.900 --> 00:43.220
+So for example we'll do a concert log and we're going to copy this and we're going to print this out.
+
+00:43.260 --> 00:45.530
+We'll do like three of those three of those.
+
+00:45.600 --> 00:50.200
+One two three four and then we'll do two more down here because we're crazy.
+
+00:50.250 --> 00:56.520
+And then if I do something like for example positive zero equals negative zero you're going to see this
+
+00:56.520 --> 00:57.030
+prints out.
+
+00:57.030 --> 00:59.940
+True even though clearly they are different.
+
+00:59.930 --> 01:02.090
+Now I know it's kind of confusing.
+
+01:02.180 --> 01:04.790
+It kind of warped my head the first time I heard negative zero.
+
+01:04.800 --> 01:06.420
+But either way you get the point.
+
+01:06.600 --> 01:12.330
+Now even if I do a triple equal sign it makes a whole lot of no difference right here.
+
+01:12.360 --> 01:19.650
+It'll still print out true but if I use object dot is this new builtin method and put a positive zero
+
+01:20.040 --> 01:21.450
+in a negative zero.
+
+01:21.450 --> 01:23.360
+You'll see it actually prints out false.
+
+01:23.370 --> 01:28.880
+So like I said most of the time it works very similarly to this triple equals sign right here.
+
+01:29.070 --> 01:31.800
+But it deals with some of these quirky behaviors.
+
+01:31.800 --> 01:41.430
+Next example would be not a number like so and will do not in number like so and then we'll just copy
+
+01:41.430 --> 01:44.240
+it and then bring it down.
+
+01:44.940 --> 01:48.240
+And then if I go ahead and don't do that again.
+
+01:48.270 --> 01:49.010
+There we go.
+
+01:49.120 --> 01:53.880
+Say that you can see it says not a number is not equal to not a number it's false they're not equal
+
+01:53.880 --> 01:57.210
+to each other which is crazy they should be equal to each other.
+
+01:57.210 --> 02:01.090
+I mean logically it makes sense to me that they should be equal.
+
+02:01.110 --> 02:06.880
+So in this case we'll do not a number and we'll pass it into object is like so.
+
+02:07.050 --> 02:10.590
+And you can see at the very end it actually prints out true.
+
+02:10.590 --> 02:13.770
+So like I said helps deal with kind of quirky behavior.
+
+02:13.980 --> 02:20.370
+Then we'll do a couple of other comparisons we'll do like five equals a string five and then we'll do
+
+02:20.860 --> 02:21.390
+five.
+
+02:21.390 --> 02:28.440
+Strict equals a string five and we'll do five equals five and then we'll do five.
+
+02:28.440 --> 02:32.110
+Strict equals five and we already know what these are going to be right here.
+
+02:32.160 --> 02:33.270
+I'll comment it out.
+
+02:33.270 --> 02:35.100
+These first couple of council dialogues logs.
+
+02:35.100 --> 02:36.910
+You can see the results clearly.
+
+02:37.110 --> 02:41.670
+You can see whenever we do a strict equals right here these types don't equal up.
+
+02:41.670 --> 02:44.490
+So it's not going to work and it doesn't allow type coersion.
+
+02:44.670 --> 02:53.720
+But if I do object is and then let's say 5 string five and then after that we'll just copy and paste
+
+02:54.750 --> 02:58.010
+and throw it into the last console that log right here.
+
+02:58.410 --> 03:00.300
+You're going to see the last two results.
+
+03:00.300 --> 03:06.240
+Object is five and string five do not equal each other so it returns false.
+
+03:06.240 --> 03:08.520
+Now this object will return every time.
+
+03:08.520 --> 03:10.900
+That's why we have to wrap it in a concert log.
+
+03:11.100 --> 03:17.130
+But as you can see most of the time it does operate the same as the triple equal sign just dealing with
+
+03:17.130 --> 03:18.600
+some of these extra quirky.

@@ -1,0 +1,112 @@
+WEBVTT
+
+00:00.630 --> 00:07.740
+So in S-5 and before that the way that property enumeration used to work is they would just leave it
+
+00:07.740 --> 00:09.550
+up to the engine vendors.
+
+00:09.570 --> 00:17.250
+The javascript engine vendors that is now inside of iOS 6 and beyond iOS 6 they strictly define rules
+
+00:17.520 --> 00:21.180
+for how property should be returned whenever they're enumerated.
+
+00:21.180 --> 00:31.230
+So this affects things like Get own property names and also things like refl. doc keys and so I'll give
+
+00:31.230 --> 00:36.780
+you an example it's make an object and we're just going to get crazy with the order so we'll do 0 which
+
+00:36.780 --> 00:37.840
+is zero.
+
+00:38.100 --> 00:47.760
+And then we'll do like a like a C which will b c do like one which will be one and then we'll do let's
+
+00:47.760 --> 00:51.210
+say a which will be a.
+
+00:51.600 --> 00:59.510
+And will do to be two and then we'll do B which will b b and we'll get a little crazy we'll do with
+
+00:59.510 --> 01:01.790
+three which will be a three.
+
+01:02.040 --> 01:06.050
+And then after that we're going to get real wacky and we're going to do.
+
+01:06.270 --> 01:07.770
+We're going to add another property.
+
+01:07.800 --> 01:08.730
+We'll do d.
+
+01:08.730 --> 01:10.100
+In this case.
+
+01:10.310 --> 01:17.240
+Then after that we can just cancel it out log object Dogget own property Nam's Where is that.
+
+01:17.250 --> 01:18.600
+There it is.
+
+01:18.600 --> 01:19.970
+And I'll just add RBJ.
+
+01:20.130 --> 01:24.630
+Now obviously whenever it prints this out it's going to return in a race or we're going to smash this
+
+01:24.630 --> 01:28.690
+array into a string just because we can.
+
+01:28.900 --> 01:32.990
+And now you can see it returns these property names in order.
+
+01:33.090 --> 01:38.010
+First we have the numbers which as the first rule says they're going to be in ascending order so it
+
+01:38.010 --> 01:40.010
+will be 0 1 2 3.
+
+01:40.110 --> 01:45.420
+Then after that all of the string Keys are going to be added or are going to be returned in the order
+
+01:45.420 --> 01:46.560
+in which they were added.
+
+01:46.560 --> 01:49.850
+So in this case it would be C A B.
+
+01:49.860 --> 01:51.760
+And then lastly I added D.
+
+01:51.930 --> 01:56.670
+And so that's why it's in that order it's going to be in the order that I specify in the object and
+
+01:56.670 --> 01:58.830
+the order in which I add them to my object.
+
+01:58.830 --> 02:04.080
+So obviously this makes it a lot better whenever you're doing things like returning your property names
+
+02:04.080 --> 02:05.920
+and it makes it a lot more predictable.
+
+02:05.940 --> 02:10.740
+However things like for example the for in loop and other things like it.
+
+02:10.830 --> 02:14.750
+Jay Sondos string of phi is another good example right here.
+
+02:15.100 --> 02:16.440
+String of phi.
+
+02:16.500 --> 02:22.440
+Unfortunately as of right now these still can be unpredictable and they depend from javascript engine
+
+02:22.470 --> 02:28.080
+to javascript engine but luckily this is a pretty interesting change because there are programs that
+
+02:28.080 --> 02:32.630
+rely on how the enumeration of the order of the object comes out.
