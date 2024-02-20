@@ -1,0 +1,97 @@
+WEBVTT
+
+00:00.550 --> 00:06.730
+So we learn how we could check to make sure that our person constructor function is used with the keyword
+
+00:06.730 --> 00:07.220
+new.
+
+00:07.360 --> 00:09.180
+However there is a way around it.
+
+00:09.190 --> 00:16.210
+It's not foolproof if you will because when I use call like so I'm setting the keyword this equal to
+
+00:16.240 --> 00:20.920
+an instance of the person aka the lowercase person object right here.
+
+00:20.920 --> 00:25.810
+And so javascript can't really tell the difference between if I'm using the keyword new or if I'm really
+
+00:25.810 --> 00:27.260
+not using the keyword new.
+
+00:27.430 --> 00:35.920
+So there is a new way to do it and that is because E-6 introduced a meta property referred to as new
+
+00:36.060 --> 00:37.560
+dot target.
+
+00:38.020 --> 00:44.660
+So what I'm going to do is essentially copy this original function right here with control or command
+
+00:44.730 --> 00:45.790
+C.
+
+00:45.850 --> 00:50.570
+Pop it down here and then after that I'm going to comment it back in like so.
+
+00:50.620 --> 00:56.320
+So instead of doing what we did before which was to essentially just check if it's an instance we're
+
+00:56.320 --> 00:57.660
+going to use the new target.
+
+00:57.670 --> 01:06.350
+So when I write it out first and then we'll talk about it all you type of and then new dot target like
+
+01:06.350 --> 01:12.550
+so and then does not equal undefined.
+
+01:12.560 --> 01:18.680
+Now if I say this again you're going to see it actually catches the error that my original code did
+
+01:18.680 --> 01:19.340
+not catch.
+
+01:19.340 --> 01:22.940
+So what is the new dot target met a property.
+
+01:22.940 --> 01:30.170
+Well a metal property is essentially a property of a non object and it actually gives you information
+
+01:30.530 --> 01:33.100
+about the target of your constructor function.
+
+01:33.110 --> 01:38.730
+That is it gives you information about the new object that you're creating with your constructor function.
+
+01:38.900 --> 01:45.200
+So whenever you call the keyword new on your constructor function this metor property will be filled
+
+01:45.200 --> 01:48.530
+up with Typically the target constructor function.
+
+01:48.530 --> 01:53.210
+That is the object that will be made based on your constructor function.
+
+01:53.210 --> 02:01.460
+So in other words if we use the keyword new this new dot target property will be set to a value and
+
+02:01.490 --> 02:09.050
+if we do not use the keyword new then we're invoking the internal call method right here and whenever
+
+02:09.050 --> 02:15.800
+that internal call method is invoked instead of the internal construct method if that happens then the
+
+02:15.800 --> 02:19.790
+new dot target property a property is set to undefined.
+
+02:19.790 --> 02:24.100
+So in this case we're just invoking the internal call method right here.
+
+02:24.140 --> 02:28.350
+And so the new target property will always be set to undefined.
+
+02:28.490 --> 02:35.870
+So it's a much more foolproof check than just checking to see if this keyword is an instance of person.

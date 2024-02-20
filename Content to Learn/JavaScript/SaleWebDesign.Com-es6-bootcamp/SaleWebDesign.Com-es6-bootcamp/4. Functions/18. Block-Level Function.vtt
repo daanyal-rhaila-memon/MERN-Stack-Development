@@ -1,0 +1,85 @@
+WEBVTT
+
+00:00.520 --> 00:02.530
+So block level functions.
+
+00:02.530 --> 00:05.440
+Very similar idea to using a in concert.
+
+00:05.470 --> 00:10.510
+Let's say I have a code block with a conditional statement like so I'll do if true.
+
+00:10.810 --> 00:16.750
+And then I'll declare my function foo if I can write it correctly foo like so and all it's going to
+
+00:16.750 --> 00:19.970
+do is cancel the log foo like so.
+
+00:20.200 --> 00:27.370
+Now from iOS 3 on this was considered bad syntax but the irony of it is that even though it was considered
+
+00:27.370 --> 00:32.270
+bad syntax almost all browsers supported this syntax right here.
+
+00:32.290 --> 00:37.360
+However most browsers had kind of a different way of handling it depending on what the browser was so
+
+00:37.360 --> 00:41.790
+it was generally considered bad syntax and a type of thing to avoid.
+
+00:41.800 --> 00:48.610
+Now if I use use strict mode in something like yes 5 then I would actually get an error whenever I try
+
+00:48.610 --> 00:51.810
+to do this and it would let me know that I'm not supposed to do this.
+
+00:51.820 --> 00:58.120
+The interesting thing about this inside of 6 is if I go ahead and cancel that log.
+
+00:58.120 --> 01:00.110
+Actually I don't have so I can just call foo.
+
+01:00.400 --> 01:05.250
+So if I call foo in iOS 6 this is perfectly correct.
+
+01:05.260 --> 01:06.560
+You can actually do this.
+
+01:06.560 --> 01:13.000
+You can use a block level function and then the cool thing is once the execution flows outside of this
+
+01:13.000 --> 01:15.580
+code block right here foo no longer exists.
+
+01:15.580 --> 01:25.030
+If I try to do counseled log type of foo it's going to give me a big old fat undefined because we flowed
+
+01:25.060 --> 01:29.280
+outside of this code block and so foo no longer exists.
+
+01:29.320 --> 01:30.000
+Aside from that.
+
+01:30.040 --> 01:34.540
+Another important thing to keep in mind with block level functions is they are hoisted to the top of
+
+01:34.540 --> 01:40.070
+the block so similar to how they would behave inside of a global scope or inside of a function scope.
+
+01:40.240 --> 01:47.030
+So if I do something like cancel the log type of foo like so it's going to tell me that it's a function
+
+01:47.410 --> 01:53.770
+even though you see that I wrote it but lo my counsel log in that's because it's being hoisted to the
+
+01:53.770 --> 01:56.540
+very top of this code block right here.
+
+01:56.560 --> 01:59.670
+So two things with block level functions in six.
+
+01:59.680 --> 02:04.590
+Use strict mode once you flow outside of this code block it no longer exist.
+
+02:04.600 --> 02:09.460
+And also these function are hoisted to the top of this particular block level so.

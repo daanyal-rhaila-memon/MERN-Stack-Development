@@ -1,0 +1,49 @@
+WEBVTT
+
+00:00.450 --> 00:04.590
+Couple other things to be aware of when using the name property.
+
+00:04.590 --> 00:10.500
+So what I'll do is I go ahead and comment these out and I'll comment back in my do something function
+
+00:10.890 --> 00:19.950
+and then just under it all cancel out log do something and then I'm in a bind it like so now then I'm
+
+00:19.950 --> 00:26.020
+going to give it a name like so and you're going to see it prefixes any time I use a function with the
+
+00:26.020 --> 00:29.790
+bind method it's going to prefix it with bound.
+
+00:29.790 --> 00:34.470
+Now on the other hand if I use a constructor function it's going to be a little different.
+
+00:34.470 --> 00:38.660
+So in this case it would be a new function like so.
+
+00:38.910 --> 00:44.100
+And then after that I would give it a name and it's going to be anonymous.
+
+00:44.100 --> 00:50.070
+Now ideally I would wrap this inside of parentheses just to make sure that it evaluates before I access
+
+00:50.070 --> 00:51.120
+the name property.
+
+00:51.300 --> 00:54.050
+But in any case it'll be anonymous.
+
+00:54.050 --> 00:59.270
+And so whenever you make a function using the constructor it's going to be anonymous.
+
+00:59.280 --> 01:04.320
+With that being said this unnamed property is meant to give you extra information about your functions
+
+01:04.650 --> 01:08.570
+and it's not necessarily meant to give you a reference to the function.
+
+01:08.580 --> 01:14.170
+So the Name property may not be equal to for example the name we give our variable right here.
+
+01:14.220 --> 01:16.860
+This is just meant to help make debugging easier.

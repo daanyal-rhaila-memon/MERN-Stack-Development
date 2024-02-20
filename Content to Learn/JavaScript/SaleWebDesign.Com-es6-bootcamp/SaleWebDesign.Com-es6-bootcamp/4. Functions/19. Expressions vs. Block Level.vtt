@@ -1,0 +1,70 @@
+WEBVTT
+
+00:00.750 --> 00:07.380
+So block level functions are really similar to lead in concert variables and that whenever you use them
+
+00:07.620 --> 00:13.890
+they're only going to be available inside of this code block in perhaps any nested block level scopes
+
+00:13.890 --> 00:17.450
+that I have or any other kind of scope that I have nested inside of here.
+
+00:17.550 --> 00:23.280
+They'll be able to access them but once execution flows outside of this code block it's no longer available
+
+00:23.290 --> 00:24.600
+which is good to know.
+
+00:24.600 --> 00:30.390
+Now with that being said you can decide between using something like a let function expression and using
+
+00:30.390 --> 00:36.940
+a block level function like for example right here what I can do is I'll make a copy of this.
+
+00:37.280 --> 00:43.050
+Common this out after I copied it and then I'm going to copy like so and then I'm just going to turn
+
+00:43.050 --> 00:52.020
+this into left foo equals like so and then after that you'll see if I try to do this I get an uncaught
+
+00:52.020 --> 00:55.890
+reference error because I'm using typeof on foo right here.
+
+00:55.890 --> 01:01.600
+Now if I comment this out and then you see it's actually printing out foo like it's supposed to.
+
+01:01.770 --> 01:07.980
+And that's because once again when you were you when we use Scuse me and Konst variables the function
+
+01:07.980 --> 01:08.980
+is not hoisted.
+
+01:09.030 --> 01:09.480
+OK.
+
+01:09.510 --> 01:15.420
+We don't do any hoisting because if you use a function like an expression it gets treated like an expression.
+
+01:15.480 --> 01:18.010
+And in this case let variables do not hoist.
+
+01:18.150 --> 01:19.940
+And so this will stay right here.
+
+01:20.040 --> 01:21.450
+So it'll be in the TTC.
+
+01:21.450 --> 01:26.550
+Meaning that if you try to reference it before it's defined and initiate initialized then you won't
+
+01:26.550 --> 01:27.800
+be able to access it.
+
+01:27.810 --> 01:31.700
+You can only access it after it's been initialized like what I do here.
+
+01:31.710 --> 01:38.310
+So with that being said you can decide to use function expressions with left or using block level functions
+
+01:38.610 --> 01:41.760
+depending on if you want the hoisting behavior or not.

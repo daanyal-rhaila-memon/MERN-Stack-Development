@@ -1,0 +1,94 @@
+WEBVTT
+
+00:00.360 --> 00:06.240
+The last change that's pretty interesting to talk about inside of six doesn't really have to do with
+
+00:06.240 --> 00:13.980
+the syntax of functions but actually it is a engine optimization inside of the six javascript engine.
+
+00:13.980 --> 00:17.460
+Now it has to do with something called tail call optimizations.
+
+00:17.460 --> 00:18.870
+And what are tail calls.
+
+00:18.870 --> 00:23.560
+Well essentially it's this is pretty simple which is make a function called foo.
+
+00:23.760 --> 00:29.200
+And inside of here will return a function invocation called bar like so.
+
+00:29.310 --> 00:31.780
+And that's exactly what a tail call is.
+
+00:31.830 --> 00:39.150
+It is whenever the last statement is a actual function invocation inside of another function.
+
+00:39.150 --> 00:39.870
+That's all it is.
+
+00:39.870 --> 00:44.610
+So as long as this is the last statement this would be considered a tail call because it's at the tail
+
+00:44.610 --> 00:46.920
+end of the function it's the last statement.
+
+00:46.920 --> 00:52.890
+Now originally inside of yes five engines the these would essentially get treated like any other old
+
+00:52.890 --> 00:53.710
+function.
+
+00:53.760 --> 01:00.390
+So a new stack frame would be created and then pushed on to the call stack which can definitely be problematic
+
+01:00.420 --> 01:03.480
+if your call stack gets too large.
+
+01:03.510 --> 01:07.530
+Now inside of six if you're using or.
+
+01:07.590 --> 01:14.370
+Yeah implementing I should say use strict mode then certain rules can apply and it'll optimize your
+
+01:14.370 --> 01:20.220
+tail call and essentially what it will do is instead of creating a new stack frame and putting it on
+
+01:20.220 --> 01:27.300
+the call stack it'll clear out the current stack frame it'll empty it out and use that as the current
+
+01:27.300 --> 01:32.760
+stack frame which is a great way to help make sure that the stack or the call stack doesn't get too
+
+01:32.760 --> 01:33.290
+big.
+
+01:33.480 --> 01:35.590
+Now certain conditions have to be met.
+
+01:35.670 --> 01:41.430
+The first condition is that the tail call does not require access to variables in the current stack
+
+01:41.430 --> 01:45.230
+frame meaning that the function is not using closure essentially.
+
+01:45.350 --> 01:51.060
+As we talked about before and the function making the tail call has no further work to do after that
+
+01:51.060 --> 01:52.650
+tail call returns.
+
+01:52.650 --> 01:59.880
+So in other words this function right here foo can have to do any more work after this return statement
+
+01:59.880 --> 02:05.610
+right here which wouldn't make sense because as soon as you hit the return key word typically your function
+
+02:05.610 --> 02:06.550
+will exit out.
+
+02:06.750 --> 02:11.600
+And lastly the result of the tail call is returned as a function value.
+
+02:11.610 --> 02:16.580
+So in the next video we'll talk about how we can get the most out of these tail call optimized.

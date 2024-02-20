@@ -1,0 +1,76 @@
+WEBVTT
+
+00:00.570 --> 00:05.790
+Now I want to show you how you might use aero functions within arrays so what we'll do is we'll make
+
+00:05.790 --> 00:10.890
+a brand new array and is just going to be a good old fashioned array of numbers so just do Gnome's like
+
+00:10.890 --> 00:17.110
+so and then we'll just said let's do three and then four and then a five and then a six.
+
+00:17.130 --> 00:18.300
+And that should be good.
+
+00:18.300 --> 00:23.610
+Now typically the way we might loop through this is to do something like Gnome's done for each and then
+
+00:23.610 --> 00:28.920
+pass in a function and then it gets an item passed in so we'll just call it.
+
+00:29.220 --> 00:33.920
+And then after that we might do something like for example return.
+
+00:34.350 --> 00:40.350
+Let's say the number plus five or something like that right now will typically work out the way we want
+
+00:40.350 --> 00:41.030
+it to.
+
+00:41.040 --> 00:46.190
+However another way to actually do this would just be to use an arrow function so we could do is Gnome's
+
+00:46.430 --> 00:48.100
+dot for each.
+
+00:48.270 --> 00:56.400
+And then inside of here we can just do numb and then arrow function knowm plus five.
+
+00:56.580 --> 01:01.950
+So I don't know about you but that looks a lot shorter to me and it applies the same thing that we just
+
+01:01.950 --> 01:03.380
+talked about here.
+
+01:03.390 --> 01:09.480
+Essentially we only have one argument or one parameter so we don't need parentheses for our erro functions.
+
+01:09.480 --> 01:13.770
+And then on top of that since we're just returning It's just a one line return statement.
+
+01:13.770 --> 01:19.260
+We can just add curly braces right here and get rid of our curly braces that we would typically have
+
+01:19.260 --> 01:20.220
+right here.
+
+01:20.220 --> 01:24.750
+Now obviously if we wanted to do something else like counseled not log this we might need to add curly
+
+01:24.750 --> 01:26.760
+braces like for example wrap it.
+
+01:26.880 --> 01:33.720
+And then after we wrap it we'll go ahead and just put this inside of cancelled out log and then if we
+
+01:33.720 --> 01:39.780
+actually specified that we want to print out the index to we would need to wrap this in parentheses
+
+01:39.780 --> 01:43.230
+because now we have more than one parameter like so.
+
+01:43.500 --> 01:49.440
+But either way it's just so you know how you might use these different arrow functions with things you
+
+01:49.440 --> 01:50.180
+already know how to do.

@@ -1,0 +1,142 @@
+WEBVTT
+
+00:00.900 --> 00:07.530
+So with that being said as of right now and six this function is not being optimized.
+
+00:07.530 --> 00:09.230
+And that's because we're not using.
+
+00:09.230 --> 00:10.470
+Use strict mode.
+
+00:10.470 --> 00:18.240
+So now what I'll do is show you how we might make a optimized tail call so will activate use strict
+
+00:18.450 --> 00:19.390
+like so.
+
+00:19.560 --> 00:26.310
+And then after that all we have to do is make a function and we'll call it do something and inside of
+
+00:26.310 --> 00:30.660
+here will just return do something else.
+
+00:30.660 --> 00:34.990
+Now obviously I haven't defined this function yet but it's meant to illustrate the concept.
+
+00:35.010 --> 00:39.230
+As of right now this would be considered an optimized tail call.
+
+00:39.240 --> 00:46.410
+Now with that being said if I don't use use strict mode then iOS 6 is going to treat this tail call
+
+00:46.620 --> 00:51.570
+essentially as it would in the yes five engine so going to leave use strict commentated.
+
+00:51.810 --> 00:58.200
+Now there's a couple of ways that you could quote unquote turn off optimization very easily.
+
+00:58.200 --> 01:04.740
+So one example of this won't be to for example make this function again I'm going to make a couple of
+
+01:04.740 --> 01:05.950
+copies of this.
+
+01:06.160 --> 01:13.970
+And then after that if I did something like for example added something to it it's like one plus whatever
+
+01:13.970 --> 01:15.190
+this returns.
+
+01:15.200 --> 01:21.590
+So in this case I'm kind of violating this second rule of making the tail call do further work after
+
+01:21.590 --> 01:23.130
+this function returns.
+
+01:23.150 --> 01:25.390
+So in that case this would fail.
+
+01:25.400 --> 01:27.200
+It would not be optimized.
+
+01:27.200 --> 01:35.480
+Another case where this would fail is if for example instead of putting it right here I actually took
+
+01:35.480 --> 01:37.920
+it and stored the result like LET.
+
+01:37.930 --> 01:40.540
+Result equals this.
+
+01:40.610 --> 01:42.250
+I could honestly do a concert right there.
+
+01:42.260 --> 01:43.320
+But that's fine.
+
+01:43.490 --> 01:48.460
+In that case this tail call right here is not actually in the tail position.
+
+01:48.470 --> 01:50.390
+And so this would fail.
+
+01:50.490 --> 01:57.050
+Another example of this is for example if I just call the function so I'll copy this function right
+
+01:57.050 --> 01:57.830
+here.
+
+01:58.070 --> 02:03.350
+And after that I throw this down here and I get rid of the return keyword.
+
+02:03.350 --> 02:09.950
+In this case I'm not using the return keyword and that violates this first thing right here the result
+
+02:09.950 --> 02:12.900
+of the tail call is returned as the function value.
+
+02:13.160 --> 02:19.250
+And last but not least and probably the hardest one to avoid in order to get your tail calls optimize
+
+02:19.580 --> 02:22.960
+is to avoid something like for example closure.
+
+02:22.970 --> 02:25.360
+So I'll do this function one more time.
+
+02:25.400 --> 02:34.310
+And then what we'll do is we'll do let equals know we'll do a and then after that we'll make a function
+
+02:34.850 --> 02:44.090
+and this function is just going to return the number like so and then after that we're just going to
+
+02:44.090 --> 02:46.110
+replace it right here.
+
+02:46.370 --> 02:53.720
+Well call it do something else like so now the problem with this is I'm access.
+
+02:53.720 --> 02:59.810
+I'm using the closure of this function right here because it has access to the scope after execution
+
+02:59.810 --> 03:00.650
+flows over it.
+
+03:00.650 --> 03:07.550
+So in other words we can return this value every single time and we're accessing closures so none of
+
+03:07.550 --> 03:14.510
+these functions right here will be optimized first because we're making the function do extra work after
+
+03:14.510 --> 03:16.110
+this function is invoked.
+
+03:16.280 --> 03:23.090
+And after it is returning the value in this case we're not putting the actual function in the tail position.
+
+03:23.240 --> 03:28.340
+So we're just storing it in a variable which is then placed in the tail position we're omitting the
+
+03:28.340 --> 03:33.470
+keyword return right here in the third and last but not least we're using closure in this function.

@@ -1,0 +1,253 @@
+WEBVTT
+
+00:00.360 --> 00:04.890
+So there's actually a brand new way to define functions inside of javascript.
+
+00:04.890 --> 00:10.380
+Now before I show you how to do it you need to know there's a couple of differences between these new
+
+00:10.380 --> 00:16.260
+functions referred to as aero functions and the traditional non aero functions.
+
+00:16.260 --> 00:17.970
+So first is the bindings.
+
+00:17.960 --> 00:24.120
+The key word this super arguments in the new target met a property would just learned about their bindings
+
+00:24.120 --> 00:26.120
+are not to the arrow function.
+
+00:26.130 --> 00:30.310
+They're are actually to the binding of the first non arrow function.
+
+00:30.330 --> 00:32.460
+That wraps the arrow function.
+
+00:32.460 --> 00:36.180
+So in other words the keyword this is not going to be equal to the arrow function.
+
+00:36.210 --> 00:38.610
+It will be equal to the parent function.
+
+00:38.610 --> 00:44.560
+Given that it's not an arrow function it cannot be called with the keyword new because there is no built
+
+00:44.560 --> 00:50.670
+in constructor method on the arrow function so you can't have the keyword new used with the arrow function.
+
+00:50.670 --> 00:56.280
+Since there is no need to use the new keyword with the arrow function and you can't call the constructor
+
+00:56.280 --> 00:56.770
+method.
+
+00:56.830 --> 00:58.820
+There is no need for a prototype.
+
+00:58.860 --> 01:00.480
+You can't change the value of this.
+
+01:00.480 --> 01:01.910
+You can't manipulate it.
+
+01:01.920 --> 01:03.360
+There's no arguments object.
+
+01:03.360 --> 01:09.660
+So essentially you have to rely on passing in arguments or using rest parameters to access different
+
+01:09.660 --> 01:15.240
+arguments and you can have duplicate named parameters so you can't have two parameters with the same
+
+01:15.240 --> 01:15.830
+name.
+
+01:15.960 --> 01:21.390
+Unlike using strict mode with non aero functions so how do we make this thing why do we use it in that
+
+01:21.390 --> 01:22.110
+case.
+
+01:22.140 --> 01:29.460
+Well by simply changing the meaning of the keyword this to equal whatever the non aero function parent
+
+01:29.460 --> 01:34.680
+is you're simplifying the code a lot because a lot of times people don't understand how the keyword
+
+01:34.740 --> 01:36.660
+this actually operates.
+
+01:36.660 --> 01:38.860
+And it can be kind of confusing to keep track of.
+
+01:38.910 --> 01:45.750
+So by simplifying it to simply meaning the parent non aero function you eliminate a lot of bugs and
+
+01:45.750 --> 01:51.960
+also by simplifying the meaning of the keyword this you allow engines different javascript engines to
+
+01:52.020 --> 01:54.690
+optimize the code better for the keyword.
+
+01:54.720 --> 01:57.060
+So there's a couple of different reasons for that.
+
+01:57.060 --> 02:01.650
+Overall there is a lot of other things that are done for Aero functions a lot of these other reasons
+
+02:01.950 --> 02:08.100
+that are basically meant to eliminate a lot of ambiguities associated with using functions and to make
+
+02:08.100 --> 02:11.220
+the code faster and less error prone.
+
+02:11.220 --> 02:16.630
+So with that being said let's say we make a function we'll do let And then we'll do add.
+
+02:16.920 --> 02:19.160
+Now here's how we make an arrow function.
+
+02:19.170 --> 02:21.320
+Pretty simple parentheses.
+
+02:21.390 --> 02:24.480
+OK a new function keyword just parentheses.
+
+02:24.480 --> 02:30.780
+And then we can set our parameters so I'll do the one and then vowed to.
+
+02:31.320 --> 02:34.280
+Then we can do an arrow like so.
+
+02:34.320 --> 02:38.280
+So you do equal sign and then greater then then your curly braces.
+
+02:38.760 --> 02:40.700
+And then I'm just going to cancel that log.
+
+02:40.940 --> 02:46.550
+That one plus not double plus just single plus value like so.
+
+02:46.800 --> 02:52.230
+And then after that I can call it like a regular function so it does pass in two and four or two and
+
+02:52.230 --> 02:53.130
+three I guess.
+
+02:53.340 --> 02:54.470
+And you could see it prints out five.
+
+02:54.480 --> 02:56.470
+So it works just like a normal function.
+
+02:56.490 --> 02:58.070
+The syntax is a little different.
+
+02:58.080 --> 03:00.020
+We don't have the key word function.
+
+03:00.030 --> 03:01.790
+We don't have to give it a name.
+
+03:01.920 --> 03:04.730
+We use this arrow and we use these curly braces.
+
+03:04.860 --> 03:11.400
+So other than the benefits I just stated which is to simply simplify the keyword this and to make it
+
+03:11.430 --> 03:16.170
+easier for agents to optimize and eliminate a lot of other ambiguities why would we use this.
+
+03:16.170 --> 03:17.950
+Well it could be shorter.
+
+03:18.060 --> 03:26.430
+So for example if you only have one argument then in that case you can actually omit these parentheses.
+
+03:26.430 --> 03:29.000
+So for example you could do it.
+
+03:29.370 --> 03:36.870
+And then subtract and said equal and then like I said if I only have one argument or one parameter I
+
+03:36.870 --> 03:42.870
+can just omit the parentheses and then inside of here I'm just going to cancel that log let's cancel
+
+03:42.930 --> 03:44.130
+the log.
+
+03:44.410 --> 03:47.970
+Well one minus five like so.
+
+03:48.150 --> 03:54.290
+Now if I invoke subtract and then pass and it's then you'll see it prints out five again.
+
+03:54.300 --> 03:58.660
+So like I said you can omit the parentheses if you only have one argument.
+
+03:58.920 --> 04:04.320
+If you have zero arguments then in that case you need to include the parentheses.
+
+04:04.350 --> 04:11.010
+So we'll get rid of this argument right here and we'll just subtract 10 from 5 like so and you can see
+
+04:11.010 --> 04:13.150
+it still equals five right there.
+
+04:13.170 --> 04:18.600
+So something to keep in mind if you have one argument you can omit the parentheses and if you have zero
+
+04:18.600 --> 04:20.950
+arguments you still need to include them.
+
+04:21.000 --> 04:25.780
+Last but not least the other shortcut that comes with this syntax is returning things.
+
+04:25.800 --> 04:35.500
+So do let multiply multiply and then let's say I will do multiply by five just to make it a super super
+
+04:35.500 --> 04:39.380
+neige function and then I'll take one value.
+
+04:39.400 --> 04:47.710
+So in this case I'll do Val one and all I want to do is return so I can do now 1 times 5.
+
+04:47.770 --> 04:54.100
+Like so now even though I didn't explicitly write return like that it's still going to automatically
+
+04:54.100 --> 04:55.090
+return this.
+
+04:55.090 --> 05:03.520
+So what I can do now is counsel learn how to spell console log multiply by five and then I'll pass in
+
+05:03.520 --> 05:06.140
+five like so.
+
+05:06.340 --> 05:11.790
+And even though I didn't explicitly tell it to return it's still going to return 25.
+
+05:11.800 --> 05:16.600
+So notice here I also left out the prints because I only have one argument.
+
+05:16.600 --> 05:23.440
+If I had zero arguments I would do this and if I had two or more I would do this like so.
+
+05:23.440 --> 05:25.230
+So I still have to include the princes.
+
+05:25.390 --> 05:32.140
+But this is what allows it to be so short is any time you have one argument and just want to return
+
+05:32.140 --> 05:32.690
+something.
+
+05:32.770 --> 05:33.710
+It's very easy.
+
+05:33.730 --> 05:35.710
+It looks very simple very clean.
+
+05:35.710 --> 05:38.110
+But either way that is the basis of airfoil.

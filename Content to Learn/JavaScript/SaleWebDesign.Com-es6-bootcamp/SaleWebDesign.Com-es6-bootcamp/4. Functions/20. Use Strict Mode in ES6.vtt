@@ -1,0 +1,70 @@
+WEBVTT
+
+00:00.490 --> 00:06.230
+All right cool deals and a comment back out this conditional statement right here and I'm going to comment
+
+00:06.240 --> 00:10.800
+back in the first conditional that we wrote with our block level function now.
+
+00:10.920 --> 00:12.500
+So far we've been using.
+
+00:12.500 --> 00:19.110
+Use strict mode inside of six which means that these functions I declare will be restrained to this
+
+00:19.110 --> 00:21.680
+particular code block scope right here.
+
+00:21.690 --> 00:23.250
+Now if I'm not using.
+
+00:23.250 --> 00:26.020
+Use strict mode inside of 6.
+
+00:26.040 --> 00:27.770
+A very interesting thing happened.
+
+00:27.770 --> 00:33.630
+So let me go ahead and take this and I'll bring it back up to where you can see it very clearly like
+
+00:33.630 --> 00:38.730
+so you're going to see that it says function and then function.
+
+00:38.730 --> 00:46.260
+So in other words if you do not have a use strict mode activated inside of six then what's going to
+
+00:46.260 --> 00:51.120
+happen is the function instead of being restrained to this block scope.
+
+00:51.120 --> 00:55.510
+Right here is going to get hoisted up to the closest enclosing scope.
+
+00:55.530 --> 01:00.930
+In this case it would be the global scope and that's why I can see that it's a function outside of this
+
+01:00.930 --> 01:05.380
+code block right here because it's actually being hoisted to the top of the global scope.
+
+01:05.520 --> 01:11.250
+Instead of being hoisted to the top of this block scope right here in this would also be true if I wrapped
+
+01:11.250 --> 01:14.370
+it inside of a function or anything like that.
+
+01:14.370 --> 01:19.890
+So an important difference to keep in mind if you're using use strict inside of us 5 it's going to tell
+
+01:19.890 --> 01:22.410
+you that this syntax is completely invalid.
+
+01:22.410 --> 01:28.370
+If you use use strict inside of 6 it's going to allow this syntax and also restrain your function to
+
+01:28.370 --> 01:29.200
+the block scope.
+
+01:29.340 --> 01:35.490
+And lastly if you do not have use strict mode activated inside of 6 it's going to hoist your function
+
+01:35.550 --> 01:39.360
+instead of to the block scope top to the top of the enclosing scope.

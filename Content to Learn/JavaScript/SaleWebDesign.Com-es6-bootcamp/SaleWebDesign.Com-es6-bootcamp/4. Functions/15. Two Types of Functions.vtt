@@ -1,0 +1,133 @@
+WEBVTT
+
+00:00.530 --> 00:07.590
+Now in this particular video I want to talk about the two different roles of a function inside of javascript's.
+
+00:07.700 --> 00:13.180
+Now essentially these two roles spawned from the fact that you can call a function with or without the
+
+00:13.180 --> 00:14.220
+key word new.
+
+00:14.420 --> 00:21.240
+So in that case I'll write it for you without or with the key word new.
+
+00:21.560 --> 00:30.710
+So for example let's go ahead and make a function and we'll call it capital P person have a name property.
+
+00:30.850 --> 00:32.970
+In this case we'll do this.
+
+00:33.050 --> 00:34.730
+Name equals name.
+
+00:34.730 --> 00:36.070
+Now we've seen this before right.
+
+00:36.080 --> 00:37.470
+So nothing new here.
+
+00:37.730 --> 00:41.790
+And then aside from that we'll do let's say will do.
+
+00:42.450 --> 00:47.090
+Var person or we could do a concert if we're feeling really cool.
+
+00:47.120 --> 00:56.570
+Conc person equals new person and we'll pass something like Janet and then after that we'll do concert's
+
+00:57.530 --> 00:59.160
+not person.
+
+00:59.660 --> 01:05.300
+And in that case will set it equal to just person and we'll try to do the same thing as before.
+
+01:05.330 --> 01:11.270
+So if we actually counseled log these which shouldn't be too hard you'll see that one of them is actually
+
+01:11.270 --> 01:12.320
+an object now.
+
+01:12.350 --> 01:17.450
+And the other one is just a essentially undefined thing.
+
+01:17.450 --> 01:20.140
+So let me go ahead and print that out for you.
+
+01:20.310 --> 01:21.870
+And you can see this one is undefined.
+
+01:21.890 --> 01:24.770
+And this one is actually an object with the name of a person.
+
+01:24.770 --> 01:32.850
+So the reason for this is whenever you call a function there are two internal read only methods.
+
+01:33.380 --> 01:39.200
+The first one is referred to as call and the second one is referred to as constructs.
+
+01:39.190 --> 01:41.330
+So it looks something like this.
+
+01:41.330 --> 01:46.760
+If you ever see people talk about it they'll typically write it out like this call and then construct
+
+01:47.570 --> 01:52.520
+whenever you call a function without the keyword new like we did here.
+
+01:52.550 --> 01:56.600
+All it does is execute whatever is in the body of the function.
+
+01:56.600 --> 02:01.660
+So in this case it will just execute this function that we've written out right here.
+
+02:01.820 --> 02:08.810
+If you call a function with the keyword new it's responsible for creating a new object often referred
+
+02:08.810 --> 02:17.300
+to as the new target and then setting the keyword this equal to the recently created object and implicitly
+
+02:17.300 --> 02:18.420
+returning that object.
+
+02:18.440 --> 02:23.090
+And that is why we receive this object inside of our variable right here.
+
+02:23.090 --> 02:30.530
+So how do we make sure that people use this constructor function the way it's supposed to be used.
+
+02:30.560 --> 02:33.020
+We need to use it with the keyword new.
+
+02:33.170 --> 02:37.880
+But as of right now the only thing that tells someone that they should use the keyword new with this
+
+02:37.880 --> 02:42.090
+function is to capitalize the first letter as is often done in javascript.
+
+02:42.290 --> 02:48.230
+Well the way that people used to do it before was they would make a modification like this so I will
+
+02:48.320 --> 02:52.340
+write out old school checking.
+
+02:53.150 --> 03:04.040
+So what they'll do is they'll do something like If this is an instance of and then person like so then
+
+03:04.040 --> 03:07.320
+you'll do your assignments or make that assignment right there.
+
+03:07.340 --> 03:16.790
+Pop it out pop that in and then else it'll probably throw an error so you throw new error and then we'll
+
+03:16.790 --> 03:28.020
+do something like let's say this function must use the key word new with it like so.
+
+03:28.020 --> 03:33.210
+However this is problematic and we're going to talk about exactly why this is problematic even though
+
+03:33.210 --> 03:38.750
+it does help me out right here when I try and assign this right here without using the keyword new.
+
+03:38.880 --> 03:41.170
+We'll talk about why this is problematic in the next.

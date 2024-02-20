@@ -1,0 +1,64 @@
+WEBVTT
+
+00:00.600 --> 00:07.320
+Now like I said before whenever we use an arrow function we actually don't have access to an arguments
+
+00:07.320 --> 00:11.210
+object like our arrow function doesn't have its own arguments object.
+
+00:11.610 --> 00:17.550
+But we can still access the arguments object of a parent function as long as it's not an arrow function
+
+00:17.550 --> 00:18.240
+as well.
+
+00:18.240 --> 00:22.040
+So for example what I'll do is make a function and it's going to say.
+
+00:22.620 --> 00:29.640
+Make arrow phunk returning are like so.
+
+00:29.970 --> 00:40.050
+And then inside of here all I'm going to do is return an arrow function that will in turn return arguments
+
+00:40.880 --> 00:41.450
+zero.
+
+00:41.460 --> 00:44.570
+So it's going to return the first argument that gets passed in.
+
+00:44.700 --> 00:51.870
+And as I said before when you do an arrow function like let's do an arrow like so if you're just returning
+
+00:51.870 --> 00:56.400
+something you can leave out the parentheses that you would typically bring So this is the equivalent
+
+00:56.400 --> 01:00.510
+to saying arguments and then zero like so.
+
+01:00.510 --> 01:01.970
+So it's the same exact thing.
+
+01:02.010 --> 01:10.180
+Like I said Now with that being said let's go ahead and activate this so we'll do let arrow equals and
+
+01:10.180 --> 01:14.470
+then we'll invoke our previously defined function and pass in a five.
+
+01:14.470 --> 01:22.360
+And now if I cancel or log an arrow like so you'll see that it prints out 5.
+
+01:22.360 --> 01:30.070
+So even though I return it right here to the arrow right here this variable it still has access to this
+
+01:30.070 --> 01:34.360
+arguments object no matter where the arrow function is being called.
+
+01:34.390 --> 01:41.080
+It still has access to this original parent function's object due to a scope chain resolution.
+
+01:41.080 --> 01:48.040
+So in this way you can still access your arguments even if you're outside of the scope of this particular
+
+01:48.040 --> 01:51.020
+function and using a arrow function.

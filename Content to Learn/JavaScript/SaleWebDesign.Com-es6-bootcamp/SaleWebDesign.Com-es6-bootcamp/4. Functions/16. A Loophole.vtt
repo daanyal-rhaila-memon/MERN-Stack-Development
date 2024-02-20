@@ -1,0 +1,88 @@
+WEBVTT
+
+00:00.580 --> 00:05.450
+In the previous video we learn that functions have two different purposes inside of javascript.
+
+00:05.450 --> 00:10.250
+The first one is to just call the function like we did here without the key word new.
+
+00:10.250 --> 00:16.460
+And then a read only method called Call will be invoked which will just execute whatever's in the body
+
+00:16.460 --> 00:17.390
+of the function.
+
+00:17.480 --> 00:23.420
+And that's why this not person right here is set to undefined because the keyword this is never set
+
+00:23.420 --> 00:24.260
+in the first place.
+
+00:24.260 --> 00:29.780
+And so if I reload this now I've set it up to where it'll check because whenever we use the keyword
+
+00:29.780 --> 00:37.670
+new the keyword this is set equal to an instance of the person of the newly created object based on
+
+00:37.670 --> 00:39.940
+this person constructor function right here.
+
+00:40.100 --> 00:44.310
+And that's why when we do this check to see if the keyword this is an instance of person.
+
+00:44.330 --> 00:50.060
+It works because the constructor function sets the key word this equal to the newly created object based
+
+00:50.060 --> 00:53.570
+on the person aka an instance of that object.
+
+00:53.570 --> 00:56.020
+Now with that being said this is not a perfect check.
+
+00:56.030 --> 00:57.440
+There is a way around this.
+
+00:57.440 --> 01:06.020
+What I could do is something like for example new person doc call and then I'll pass in person.
+
+01:06.020 --> 01:10.970
+And then after that I'll pass on a name like Michaux for example.
+
+01:10.970 --> 01:15.300
+And like so or excuse me I forgot to get rid of the key word new.
+
+01:15.530 --> 01:18.280
+And you can see this actually doesn't throw an error.
+
+01:18.290 --> 01:24.110
+I mean don't get me wrong not person is still set to undefined but in this case it doesn't throw an
+
+01:24.110 --> 01:26.150
+error because what I do with the call.
+
+01:26.180 --> 01:31.220
+As we talked about this function before is the first argument I pass in is what I would like to set
+
+01:31.220 --> 01:37.760
+the keyword this equal to which in this case would be person which is indeed an instance of the main
+
+01:37.760 --> 01:39.520
+constructor function right here.
+
+01:39.680 --> 01:43.670
+And then of course the subsequent argument is just the property I would like to set.
+
+01:43.850 --> 01:49.550
+But either way it doesn't throw an error because it technically passes this check even though not person
+
+01:49.910 --> 01:51.440
+is undefined still.
+
+01:51.590 --> 01:55.550
+So this isn't perfect so what can we do to make it better.
+
+01:55.910 --> 02:00.860
+Well there is a new property that we can use to check things and I'll show you that in the very next
+
+02:00.860 --> 02:01.100
+video.

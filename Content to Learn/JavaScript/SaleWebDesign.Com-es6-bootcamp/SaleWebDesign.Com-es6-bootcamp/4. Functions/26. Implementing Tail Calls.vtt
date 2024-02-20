@@ -1,0 +1,100 @@
+WEBVTT
+
+00:00.510 --> 00:06.080
+Know at this point you may be thinking Andrew why are you teaching me about this engine optimization
+
+00:06.090 --> 00:09.990
+it seems like some really nitty gritty stuff that I don't really need to know about.
+
+00:10.160 --> 00:15.330
+And for the most part that is true most of the time tail call optimizations are going to happen behind
+
+00:15.330 --> 00:20.100
+the scenes and it's not something you really need to think about unless you're trying to optimize a
+
+00:20.100 --> 00:25.860
+function unless you're using maybe for example a recursive function.
+
+00:25.860 --> 00:32.650
+In the case of a recursive function tail call optimizations are going to make a huge difference in performance.
+
+00:32.640 --> 00:40.070
+So if you are using recursive functions it is definitely a time to think about tail call optimizations.
+
+00:40.140 --> 00:45.280
+So what I've done here is created a function that makes a factorial essentially.
+
+00:45.340 --> 00:48.180
+Now we've talked about these before recursive functions.
+
+00:48.240 --> 00:55.380
+So in this first case right here you can see all it does is it takes one parameter and or one argument
+
+00:55.390 --> 00:57.080
+I should say it's one parameter.
+
+00:57.180 --> 01:00.500
+It checks to see if it is less than or equal to 1.
+
+01:00.510 --> 01:06.720
+And if it is it'll return which in this case will Hoppus out of the function or else it'll take the
+
+01:06.720 --> 01:12.520
+number that's passed in and multiply it by the number minus one every single time.
+
+01:12.660 --> 01:14.970
+And it'll continue to do this in a loop.
+
+01:14.970 --> 01:19.860
+Now as of right now this is not optimized and it kind of violates Where is it.
+
+01:20.010 --> 01:25.830
+This second rule right here the function making the tail call has no further work to do after the till
+
+01:25.830 --> 01:27.030
+CALL returns.
+
+01:27.030 --> 01:28.920
+Now this is a recursive function.
+
+01:28.920 --> 01:35.340
+So in other words the call stack could get really really big especially if the number right here is
+
+01:35.340 --> 01:39.270
+really big to the point where it might even create stack overflow.
+
+01:39.450 --> 01:46.920
+So what I've done in the second version of the factorial function right here is I created a default
+
+01:46.920 --> 01:54.360
+parameter so in this case what it'll do is it'll take the results of the multiplication and store in
+
+01:54.360 --> 02:02.130
+this result right here this variable and that will get passed in as the argument every single time this
+
+02:02.130 --> 02:06.300
+function is invoked until it finally finishes executing.
+
+02:06.300 --> 02:12.120
+So as you can see instead of doing the multiplication right here we created this default parameter right
+
+02:12.120 --> 02:18.620
+here to keep track of the results so that way it'll store the results of the previous multiplication.
+
+02:18.720 --> 02:20.330
+Store that in a variable.
+
+02:20.400 --> 02:24.270
+And so we've really moved the work outside of the return statement.
+
+02:24.270 --> 02:29.610
+Thus a tail call optimization can take place and with something like a recursive function this will
+
+02:29.610 --> 02:34.000
+make a huge difference in performance and really help make our code a lot faster.
+
+02:34.110 --> 02:36.810
+So with that being said that's pretty much it per function.
+
+02:36.810 --> 02:38.780
+So let's go ahead and move on.
