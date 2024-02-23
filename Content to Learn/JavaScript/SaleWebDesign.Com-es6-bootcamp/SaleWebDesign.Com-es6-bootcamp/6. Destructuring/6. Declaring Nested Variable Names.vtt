@@ -1,0 +1,25 @@
+WEBVTT
+
+00:00.330 --> 00:06.760
+Now of course if I wanted to take this a step further I absolutely could and could give this destructuring
+
+00:07.080 --> 00:09.030
+right here its own name.
+
+00:09.060 --> 00:15.570
+So now temperament will not be a variable locally defined but local temperament will be a variable.
+
+00:15.570 --> 00:18.870
+So now if I switch those out it'll actually work.
+
+00:18.870 --> 00:25.020
+So once again these parentheses indicate destructuring I want to first deconstructing get to Best Friend
+
+00:25.020 --> 00:27.440
+property then on the right.
+
+00:27.480 --> 00:33.780
+I want to pull out a variable here so I wrap it inside of these curly braces and I want to find the
+
+00:33.780 --> 00:40.550
+temperament and then I want to set the local temperament variable equal temperament like so.

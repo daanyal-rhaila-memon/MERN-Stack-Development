@@ -1,0 +1,136 @@
+WEBVTT
+
+00:00.330 --> 00:08.430
+So last thing I'll show you with a raise is you can actually mix destructuring object syntax with destructuring
+
+00:08.430 --> 00:11.480
+a re syntax saw go ahead and show you how that might work.
+
+00:11.490 --> 00:17.610
+Let's say we have a person will do let an end user like so and this guy is going to have a couple of
+
+00:17.610 --> 00:19.010
+things going on.
+
+00:19.020 --> 00:21.180
+So first he's going to have a name.
+
+00:21.210 --> 00:29.190
+Of course everyone has a name just about and will do as usual 37 right there and then we'll have friends
+
+00:29.250 --> 00:31.920
+which will just be a list.
+
+00:31.920 --> 00:35.740
+Matter of fact we'll make this Cullerton since we're already doing that a lot.
+
+00:35.750 --> 00:41.090
+When do colors or favorite colors of favorite colors.
+
+00:41.370 --> 00:44.840
+And then after that we'll do an array might do something like red.
+
+00:45.210 --> 00:47.390
+Honestly that's not my favorite color.
+
+00:47.400 --> 00:51.220
+I'd be lying to you that maybe some purple color right there.
+
+00:51.400 --> 00:53.500
+Maybe good old fashioned blue.
+
+00:53.730 --> 00:57.490
+So after that we'll go ahead and add an object inside of here.
+
+00:57.510 --> 01:06.820
+So the best friend and inside of here will have an object with the name of Malcolm and then it tempera
+
+01:07.460 --> 01:08.080
+tempera.
+
+01:08.100 --> 01:17.370
+How do you spell this temperament of show like so and after that what we can do is we can now with all
+
+01:17.370 --> 01:22.740
+of the syntax that we've learned pull out exactly the bits of information that we want.
+
+01:22.800 --> 01:28.610
+So in this case I'm going to do let a set equal to a user and then we're going to start.
+
+01:28.620 --> 01:39.170
+So first thing I might want is the name or do object literal name then I might set this equal to for
+
+01:39.170 --> 01:49.400
+example local name and then after that I'm going to go ahead and want favorite colors.
+
+01:50.120 --> 01:52.400
+And I'm going to need to go inside of that array.
+
+01:52.400 --> 01:57.360
+So remember this is just to give us the location of the property so we have location.
+
+01:57.380 --> 01:59.650
+Now I need to access this array.
+
+01:59.900 --> 02:05.870
+And then after that I need to give the the particular item of the array name.
+
+02:05.870 --> 02:12.710
+So in this case I'm going to skip the first one and I'm going to give it a new one so will do local
+
+02:12.710 --> 02:13.540
+color.
+
+02:13.760 --> 02:19.610
+So we'll just hit purple like so and like I said you can break this down onto multiple lines to make
+
+02:19.610 --> 02:26.150
+it easier to read and then after that we're going to go inside a best friend and we'll do best friend
+
+02:27.560 --> 02:33.860
+like so I can't get it best friend and then we'll access it.
+
+02:33.980 --> 02:38.620
+We can just call it local temperament if you really want to do.
+
+02:38.630 --> 02:39.160
+Yeah.
+
+02:40.200 --> 02:49.560
+We'll call it temperament and then we'll call this local Tim Praagh meant like so who.
+
+02:49.590 --> 02:50.180
+All right.
+
+02:50.190 --> 02:57.310
+So honestly this would have looked extremely cryptic if you had seen iOS 6 and not known this stuff.
+
+02:57.390 --> 02:58.650
+So it's pretty crazy.
+
+02:58.650 --> 03:00.910
+Now I can just go ahead and cancel that log.
+
+03:01.290 --> 03:05.850
+Any old way I want in this case I'm just going to do a local name.
+
+03:05.940 --> 03:09.730
+We only pulled out three different things but we did it in a very precise way.
+
+03:09.930 --> 03:12.450
+So now it's all available to us.
+
+03:13.140 --> 03:15.920
+Not that local temperament perfect.
+
+03:15.930 --> 03:19.690
+So now if I print this out you can see it says John purple chill.
+
+03:19.790 --> 03:24.930
+Be kind of a cool wrestling name but either way this is a combination of all the different syntax as
+
+03:24.930 --> 03:25.770
+we've learned.
+
+03:25.890 --> 03:30.430
+And you could also apply other things like for example the rest items and so on and so forth.

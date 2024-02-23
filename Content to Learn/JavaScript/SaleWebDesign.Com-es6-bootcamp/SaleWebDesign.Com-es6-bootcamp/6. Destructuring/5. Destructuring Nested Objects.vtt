@@ -1,0 +1,151 @@
+WEBVTT
+
+00:00.600 --> 00:07.050
+So far we've worked with flat objects if you will one dimensional they're not nested or anything like
+
+00:07.050 --> 00:07.370
+that.
+
+00:07.410 --> 00:12.400
+And sometimes we do need to work with nested objects so how might we structure those.
+
+00:12.570 --> 00:15.540
+Well first let's make a new user.
+
+00:16.050 --> 00:17.680
+And inside of that user.
+
+00:17.730 --> 00:19.890
+They will have a couple of things for themselves.
+
+00:19.890 --> 00:22.470
+They'll have a name perhaps Johnny.
+
+00:22.470 --> 00:23.310
+Johnny Boy.
+
+00:23.670 --> 00:24.530
+Like so.
+
+00:24.720 --> 00:28.210
+And then after that an agent will do thirty four.
+
+00:28.260 --> 00:34.600
+And then after that we'll do like a best friend will be a good one best friend.
+
+00:34.780 --> 00:37.330
+And then after that we'll have an object inside of there.
+
+00:37.380 --> 00:40.080
+And his name will be like Malcolm.
+
+00:40.620 --> 00:46.110
+And then after that his age will be 32 and so on and so forth.
+
+00:46.110 --> 00:48.510
+So with that being said we should be good to go.
+
+00:48.510 --> 00:53.520
+I'm going to go ahead and give this another property just so I can differentiate these two properties
+
+00:53.520 --> 00:54.460
+right here.
+
+00:54.540 --> 00:56.270
+So Will do.
+
+00:56.340 --> 01:00.250
+Temperament should have picked an easier word to spell.
+
+01:00.300 --> 01:02.240
+Docile is good though.
+
+01:02.340 --> 01:08.790
+So now that we have that set the way I would access the structure I should say a nested object is to
+
+01:08.790 --> 01:10.770
+do something along these lines.
+
+01:11.040 --> 01:13.020
+So do let.
+
+01:13.020 --> 01:18.420
+And then after that curly braces I'm going to assign user right there.
+
+01:18.420 --> 01:21.830
+Now first I need a location to start at.
+
+01:21.840 --> 01:24.300
+So we're looking inside of this object.
+
+01:24.300 --> 01:28.030
+And as we know before first notify my location.
+
+01:28.050 --> 01:31.180
+So in this case I want to start at best friend.
+
+01:31.620 --> 01:35.670
+So anything inside of these curly braces is going to be the location that I want.
+
+01:35.670 --> 01:37.080
+The property is.
+
+01:37.440 --> 01:45.900
+And then after that going to do a colon do some more curly braces and then we'll do temperament difficult
+
+01:45.900 --> 01:48.660
+word to spell but we get it either way.
+
+01:48.810 --> 01:54.270
+So now that we have that going to space these out just so it's very clear to you what's happening.
+
+01:54.480 --> 02:03.190
+And then what I can do is console log temperament and it will work out just fine or at least it should.
+
+02:03.240 --> 02:05.940
+Now I save it and you can see it prints out DOS syle.
+
+02:05.940 --> 02:07.670
+So what is going on.
+
+02:07.680 --> 02:08.410
+Exactly.
+
+02:08.430 --> 02:10.220
+Know it looks a little confusing.
+
+02:10.530 --> 02:18.180
+Well if you remember from the previous video what we did was essentially we took these different different
+
+02:18.180 --> 02:25.890
+destructuring syntax right here and on the left hand side of the colon that is the property we want
+
+02:25.890 --> 02:35.370
+to start at the location that we defined on the right hand side of the colon is the actual variable
+
+02:35.460 --> 02:37.540
+that we want to define locally.
+
+02:37.770 --> 02:42.480
+Now by wrapping something in parentheses we're saying we want to structure it.
+
+02:42.810 --> 02:49.650
+So what I've done here is I wrap this in the first set of curly braces right here.
+
+02:49.800 --> 02:53.500
+And I say best friend on the left of the colon.
+
+02:53.550 --> 03:00.540
+So this means start at the best friend property inside of the user object on the right hand side.
+
+03:00.660 --> 03:04.240
+I say OK I want to make a variable here.
+
+03:04.320 --> 03:11.610
+This is the name of the variable i want to define locally but I also wrap this inside of curly braces
+
+03:12.120 --> 03:16.650
+which means that I also want to the structure here.
+
+03:16.800 --> 03:23.030
+So this is another location within this location by doing two curly braces.

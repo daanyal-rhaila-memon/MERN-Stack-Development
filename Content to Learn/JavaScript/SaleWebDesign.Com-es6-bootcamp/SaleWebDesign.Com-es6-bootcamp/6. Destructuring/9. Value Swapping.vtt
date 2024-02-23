@@ -1,0 +1,94 @@
+WEBVTT
+
+00:00.360 --> 00:05.960
+In most cases what I've taught you so far about array destructuring is all you're really going to need.
+
+00:06.030 --> 00:09.560
+But there's another cool thing that you can do that I want to show you.
+
+00:09.750 --> 00:15.180
+You can actually swap out values by using this destructuring syntax which is some pretty common with
+
+00:15.180 --> 00:19.920
+things like for example sorting algorithms so what do I mean by swapping values.
+
+00:19.920 --> 00:25.350
+Well let's say we have two variables we'll have a which is equal to 1 and B which is equal to 2.
+
+00:25.350 --> 00:29.680
+Now let's say I want to swap these so that way a equals two equals one.
+
+00:29.760 --> 00:35.450
+Wed typically have to do it if I was inside of E.S. 5 is that have to create a temporary variable and
+
+00:35.460 --> 00:38.110
+I'll just go ahead and Tyrel this yes.
+
+00:38.150 --> 00:48.620
+5 And then what I do is first I'd save a reference to B sides Tim equal to B then after that I could
+
+00:48.620 --> 00:50.290
+override the value.
+
+00:50.300 --> 00:57.730
+So in this case what I want to do now is since I've saved my value I can set be equal to A and then
+
+00:57.730 --> 01:10.110
+after that I can set a equal to temp then if I cancel that log and b it should be 2 and 1.
+
+01:10.300 --> 01:16.570
+And then if I canceled out log before I made the swap it'll show 1 and 2.
+
+01:16.580 --> 01:19.080
+So we swapped them out or we have to do with say B.
+
+01:19.140 --> 01:24.300
+Then we can override it and then we can set a equal to whatever we saved in the temporary variable.
+
+01:24.320 --> 01:26.010
+All of this is very unnecessary.
+
+01:26.010 --> 01:32.700
+Instead of year 6 instead well you can do is I'm going to title this ESX 6.
+
+01:32.760 --> 01:34.450
+I cannot write today.
+
+01:34.450 --> 01:35.000
+There we go.
+
+01:35.000 --> 01:43.450
+So what I can do instead is I'll do let C equals 1 and then d equals 2.
+
+01:43.540 --> 01:46.120
+No temporary variable in this case.
+
+01:46.120 --> 01:55.120
+I'm just going to do DC inside of this array literal syntax and then see the inside of the array.
+
+01:55.120 --> 02:03.370
+Now if I do a concert or log of them both before and after like so pop down you're going to see it prints
+
+02:03.370 --> 02:06.550
+out 1 2 and then 2 1 so we accomplish the exact same thing.
+
+02:06.550 --> 02:07.450
+How do we do it.
+
+02:07.660 --> 02:16.150
+Well what we did is we took these variables and created a temporary array literal then we use the array
+
+02:16.160 --> 02:23.030
+destructuring syntax to pull out these values into variables according to their position.
+
+02:23.050 --> 02:28.890
+So we're pulling out the value of c and assigning it to the value to the variable d..
+
+02:28.900 --> 02:30.640
+Same thing with C and D here.
+
+02:30.730 --> 02:36.580
+We're pulling out the value of D and assigning it to the variable c and the destructuring is happening
+
+02:36.610 --> 02:38.950
+on this temporary array that we created.

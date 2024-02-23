@@ -1,0 +1,46 @@
+WEBVTT
+
+00:00.570 --> 00:05.370
+Just as with objects with a raise you can also do a destructuring assignment.
+
+00:05.370 --> 00:10.300
+So what we'll do is this time we'll make some colors and we'll put those in an array.
+
+00:10.300 --> 00:15.160
+Somebody like red blue and green.
+
+00:15.320 --> 00:19.320
+And then after that we'll make some variables here will do.
+
+00:19.490 --> 00:21.150
+Actually I can just do the short cut.
+
+00:21.160 --> 00:29.900
+So in this case just first color which is going to be like purple and then the second color which will
+
+00:29.900 --> 00:32.940
+be something like Gray.
+
+00:32.960 --> 00:39.920
+Now after I do that the next thing that I can do is assign things so I can do first color and then second
+
+00:39.920 --> 00:43.590
+color and instead of equal to the colors in the array.
+
+00:44.030 --> 00:46.760
+And then I'll do cancel that log.
+
+00:47.390 --> 00:53.360
+First color second color then I'll copy it if I can.
+
+00:53.360 --> 00:54.400
+There we go.
+
+00:54.530 --> 01:00.110
+Copy down below and you can see I assigned these two different variables brand new values.
+
+01:00.250 --> 01:07.670
+And unlike object destructuring with array destructuring assignments you don't have to wrap it in parentheses
+
+01:07.670 --> 01:09.530
+so you can just leave this as is.

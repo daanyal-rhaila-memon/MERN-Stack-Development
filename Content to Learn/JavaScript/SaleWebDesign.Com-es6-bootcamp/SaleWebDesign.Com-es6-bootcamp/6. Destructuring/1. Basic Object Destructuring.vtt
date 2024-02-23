@@ -1,0 +1,139 @@
+WEBVTT
+
+00:00.450 --> 00:06.680
+So since we're talking about objects I figure the time is ripe to go ahead and talk about structuring
+
+00:06.690 --> 00:12.240
+So as per usual we'll comment out the scripts right here and make a brand new file and we'll call it
+
+00:12.240 --> 00:14.290
+destructuring Dodge's.
+
+00:14.430 --> 00:20.750
+Now as why go ahead and make this I'll talk to you about what it is so essentially inside of javascript.
+
+00:20.760 --> 00:23.470
+There are some very common notations.
+
+00:23.490 --> 00:26.490
+One of those is object and array literals.
+
+00:26.490 --> 00:32.070
+These are probably the most common notations that you see which is to use curly braces inside of your
+
+00:32.070 --> 00:32.900
+code.
+
+00:32.940 --> 00:39.090
+Now since it's such a common format you even see things like Jason which is the data format using this
+
+00:39.090 --> 00:41.810
+type of notation to structure data.
+
+00:41.820 --> 00:48.570
+Now another common thing that we do is we like to pull data relevant pieces of information out of these
+
+00:48.570 --> 00:56.250
+structures so for example Konst example or make an object and then I'll do something like save as true
+
+00:56.910 --> 00:59.760
+and reload as true.
+
+00:59.760 --> 01:04.860
+Now if I wanted to pull information out of this structure the way I would typically have to do is maybe
+
+01:04.860 --> 01:11.570
+make a list and set it to say which would be example save.
+
+01:11.970 --> 01:15.070
+And same thing here I would have to do reload.
+
+01:15.170 --> 01:18.170
+Set it to example dot reload.
+
+01:18.210 --> 01:24.630
+Now that's well and good but imagine if I had a more complex structure with many different pieces of
+
+01:24.630 --> 01:29.730
+data that I needed to pull out I would have to repeat this over and over and over again.
+
+01:29.820 --> 01:35.640
+And that's not to say if there's a nested object or a multi dimensional array with a lot of different
+
+01:35.640 --> 01:41.100
+layers to it I'm going to have to sift through this thing to find exactly what I need to figure out
+
+01:41.100 --> 01:46.580
+exactly how I need to access the objects or the array and pull out the relevant information.
+
+01:46.740 --> 01:50.790
+So instead of doing this we can do what's called destructuring.
+
+01:51.020 --> 01:56.730
+The structuring allows us to pull out these different pieces of information in a more elegant way.
+
+01:56.880 --> 02:00.860
+So instead of doing it this way we can do let's.
+
+02:01.010 --> 02:04.160
+And then we'll do curly braces.
+
+02:04.350 --> 02:10.200
+The name of the variables that I want so in this case save and reload.
+
+02:11.190 --> 02:15.440
+And then I'm going to pull it out from this object right here.
+
+02:15.450 --> 02:16.480
+Example.
+
+02:16.620 --> 02:17.080
+OK.
+
+02:17.250 --> 02:23.350
+So now if I cancelled or log in I'm going to go ahead and copy this or I have to do it twice like so
+
+02:24.260 --> 02:31.060
+and then I'll do save and then I'll print out reload if it'll let me like so.
+
+02:31.060 --> 02:32.250
+Reload.
+
+02:32.320 --> 02:33.090
+Perfect.
+
+02:33.100 --> 02:35.460
+Now you can see when I load this out it says.
+
+02:35.500 --> 02:36.430
+True true.
+
+02:36.430 --> 02:39.370
+And then if for some reason that I don't know of.
+
+02:39.370 --> 02:41.950
+Let me see that maybe I typed in an somewhere.
+
+02:42.100 --> 02:45.610
+I'm not sure but either way you can see that it clearly works.
+
+02:45.610 --> 02:52.990
+So all we have to do is specify this curly brace right here in this curly brace and inside of here I
+
+02:52.990 --> 02:55.090
+put a list of the different variables.
+
+02:55.090 --> 03:01.990
+Now the other thing to keep in mind is if the variable name is the same as the property name inside
+
+03:01.990 --> 03:04.540
+of the object that's all I have to do.
+
+03:04.630 --> 03:09.730
+Now the engine is going to see this type of variable declaration with destructuring and it's going to
+
+03:09.730 --> 03:16.060
+look inside of the object that I assigned and see what properties mapped to these variable names and
+
+03:16.060 --> 03:20.400
+it'll assign those values of those properties to these variable names.

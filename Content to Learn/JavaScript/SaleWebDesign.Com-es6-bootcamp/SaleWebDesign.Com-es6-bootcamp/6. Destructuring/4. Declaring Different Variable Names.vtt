@@ -1,0 +1,121 @@
+WEBVTT
+
+00:00.720 --> 00:07.710
+So far in these examples what we've done is we've used the property names as the names of our local
+
+00:07.710 --> 00:09.290
+variables as well.
+
+00:09.330 --> 00:16.440
+So the name here like identifier would also be the name of our local variable that we set up with this
+
+00:16.440 --> 00:18.490
+destructuring syntax.
+
+00:18.510 --> 00:24.030
+However what if we want to use a different variable name would if we don't want to use the same name
+
+00:24.030 --> 00:25.540
+that we have right here.
+
+00:25.590 --> 00:27.780
+Well there is absolutely a way to do that.
+
+00:27.780 --> 00:34.830
+So what we'll do is make a new Konst and we'll call it drink because we're creative and will make a
+
+00:34.830 --> 00:38.320
+temperature of hot.
+
+00:38.480 --> 00:47.590
+And then after that we will do taste bitter and we'll do a name of coffee like so.
+
+00:47.870 --> 00:54.260
+So what we can do now is essentially come down here and we'll define some new variables and we'll do
+
+00:54.260 --> 00:55.950
+our object literal syntax.
+
+00:56.090 --> 01:00.480
+But instead what we'll do is a little different we'll do temperature.
+
+01:00.620 --> 01:06.840
+I can spell that correctly and we'll set that to local temperature.
+
+01:06.860 --> 01:12.970
+Same thing here taste will be set will be assigned to local taste.
+
+01:13.010 --> 01:19.940
+And last but not least name will be assigned to local name like so now obviously is pretty long if you
+
+01:19.940 --> 01:22.970
+want to you can easily break this down onto multiple lines.
+
+01:22.970 --> 01:24.870
+There is no rule against that.
+
+01:24.950 --> 01:32.810
+And then afterwards we can just drink like so and now if I do a concert or log local you can see we
+
+01:32.810 --> 01:41.630
+have all of them now so local and then we'll taste and then local name like so you'll see these are
+
+01:41.630 --> 01:47.120
+actually the variables that we created local temperature local taste and local name.
+
+01:47.150 --> 01:53.350
+So in other words what essentially happens is the reverse of traditional object literal syntax.
+
+01:53.480 --> 01:56.280
+Here we set up the name.
+
+01:56.420 --> 02:01.120
+Now we want to identify a buyer reference it by and then we assign the value.
+
+02:01.280 --> 02:07.490
+But here we define the name on the right and the value we want it to be set.
+
+02:07.580 --> 02:08.940
+On the left.
+
+02:09.080 --> 02:15.410
+But the way that you might think of if this helps you kind of remember it is here we are on the right
+
+02:15.410 --> 02:16.120
+side.
+
+02:16.160 --> 02:19.510
+And so we go from left to right here on the left side.
+
+02:19.520 --> 02:21.630
+So we go from right to left.
+
+02:21.650 --> 02:26.190
+So if that helps you think of it then by all means do so.
+
+02:26.210 --> 02:31.820
+If that just confuses you more and you'd prefer to just memorize it by all means do that as well.
+
+02:31.930 --> 02:38.930
+But either way now we have these custom variable names but we're still structuring it and pulling out
+
+02:38.930 --> 02:40.900
+specific properties that you want.
+
+02:41.030 --> 02:45.200
+And of course if you want to you can still provide a default value.
+
+02:45.200 --> 02:48.830
+So let's say we have another property we want to pull out.
+
+02:48.830 --> 02:53.700
+Like for example a flavor rating.
+
+02:53.810 --> 03:01.500
+And then if there's nothing by that name we'll do local rating equals and then a 9.
+
+03:01.580 --> 03:07.130
+And so now if I pull out local rating you'll see that once again we can still apply that default syntax
+
+03:07.250 --> 03:08.600
+and it'll print out nine.

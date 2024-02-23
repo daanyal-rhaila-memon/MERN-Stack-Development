@@ -1,0 +1,67 @@
+WEBVTT
+
+00:00.390 --> 00:07.640
+We can also do destructuring of nested arrays so in other words is going to be really similar.
+
+00:07.680 --> 00:13.190
+But at the same time simpler than what we did with object literals and object the structuring.
+
+00:13.260 --> 00:23.530
+So let's say I have some colors here will do colors and we'll do like red and we'll do an array of balloons
+
+00:23.850 --> 00:34.710
+blue or let's do sky blue and then Dodger blue and then Navy and after that we'll throw it outside of
+
+00:34.710 --> 00:40.550
+we'll do green like so in order to structure this it'll be pretty simple.
+
+00:40.590 --> 00:45.450
+We'll just do it let destructuring what do first color.
+
+00:45.450 --> 00:51.930
+And then I'm going to assign it to colors like so and then in order to get to the nested part what I'll
+
+00:51.930 --> 00:53.430
+do is a comma.
+
+00:53.430 --> 00:55.100
+It's the second item in the array.
+
+00:55.110 --> 00:57.020
+But now I want to nest into that.
+
+00:57.300 --> 01:06.300
+So I'll do let's say second color here color and then maybe I want to skip this one so I'll skip out
+
+01:06.300 --> 01:11.600
+of that and then I'll do third color like so third color.
+
+01:11.850 --> 01:19.440
+And then outside of this nest right here I'll hop over and I'll do fourth color like so and then obviously
+
+01:19.440 --> 01:20.690
+I can print these out.
+
+01:20.700 --> 01:21.410
+I want to.
+
+01:21.480 --> 01:23.820
+But you'll see that result regardless.
+
+01:23.820 --> 01:28.520
+So in this case I'll just copy this and then delete a couple of things.
+
+01:28.620 --> 01:31.650
+So just copy this into your consulate log.
+
+01:31.800 --> 01:41.100
+And then after that I can just delete delete and then delete like so and you can see it does a great
+
+01:41.130 --> 01:43.410
+job of skipping over Dodger blue.
+
+01:43.410 --> 01:45.080
+So pretty much the same syntax.
+
+01:45.090 --> 01:48.600
+Just to mess down into another array specify another bracket.

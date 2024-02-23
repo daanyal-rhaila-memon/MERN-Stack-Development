@@ -1,0 +1,181 @@
+WEBVTT
+
+00:00.360 --> 00:05.490
+There's one last thing that we can do is structure and that is parameter so to illustrate when this
+
+00:05.490 --> 00:11.370
+might be useful to you we'll go ahead and make a brand new function will go function and then we'll
+
+00:11.370 --> 00:16.830
+call it sick cookie and we're going to set up three parameters here so the first one is going to be
+
+00:16.830 --> 00:20.730
+the name and then the value and then options.
+
+00:20.740 --> 00:21.430
+OK.
+
+00:21.930 --> 00:25.230
+Now we're going to define some code inside of here and then we're going to talk about it.
+
+00:25.230 --> 00:25.570
+OK.
+
+00:25.590 --> 00:30.390
+So first thing we'll do is do a check on the options and see if it's even there.
+
+00:30.390 --> 00:35.040
+So the options for an empty object like so.
+
+00:35.290 --> 00:41.160
+And then after that we're going to do let arrogant define some variables inside of this block scope
+
+00:41.170 --> 00:53.180
+here are the less secure equals options Datsik here and then let domain equals options da domain if
+
+00:53.240 --> 01:06.440
+I can get it and then Path equals options dot path and then expires equals options dot expires and like
+
+01:06.440 --> 01:13.420
+so then the code here will be a code to say cookie like so.
+
+01:13.480 --> 01:17.620
+Now this is a very common pattern that you'll see.
+
+01:17.870 --> 01:23.790
+So the first two parameters right here and name and value would be considered require you need these.
+
+01:23.810 --> 01:24.360
+OK.
+
+01:24.690 --> 01:29.980
+Then this last parameter right here I'm expecting an object can.
+
+01:30.140 --> 01:32.050
+This is a very very common pattern.
+
+01:32.060 --> 01:38.210
+If you have an unspecified or a bunch of different parameters that aren't necessary but might be passed
+
+01:38.210 --> 01:38.660
+in.
+
+01:38.930 --> 01:42.450
+And so sometimes we will call this is an option's bag.
+
+01:42.650 --> 01:49.820
+So essentially since the order in which these options secure domain path and expires the order in which
+
+01:49.820 --> 01:56.300
+they're passed in doesn't really matter and there's no real precedence for the data in that particular
+
+01:56.300 --> 02:02.510
+case we're really efficient thing to do would just to basically create an object if an object is passed
+
+02:02.510 --> 02:03.820
+in and that's good too.
+
+02:04.220 --> 02:09.790
+And then pull out the different properties from that object and use them as we need to.
+
+02:09.950 --> 02:14.800
+So in this particular case if I wanted to set the cookie and misspelled cookie by the way.
+
+02:15.020 --> 02:27.770
+So you said cookie and I will pass in a name of type and a value a value of J.S. do s like so.
+
+02:28.000 --> 02:38.740
+And then after that I can pass on options object and so in this case all secure true and also it expires
+
+02:39.490 --> 02:49.810
+to 5000 milliseconds which would be five seconds very quick cookie and then we'll be slash who.
+
+02:50.290 --> 02:53.110
+So we'll go ahead and put a string there.
+
+02:53.440 --> 02:59.180
+And so now we have our entire invocation right here and I'll go and knock this down to the next line.
+
+02:59.380 --> 03:06.280
+So another way to do this would be to specify each of these parameters individually and use secure domain
+
+03:06.280 --> 03:07.620
+path and expires.
+
+03:07.640 --> 03:12.310
+That's not very efficient especially because we don't know how many of these different parameters will
+
+03:12.310 --> 03:13.730
+actually get passed in.
+
+03:13.900 --> 03:16.510
+So instead we throw it into an object right here.
+
+03:16.660 --> 03:22.480
+And if there's nothing available like for example we didn't pass in the domain in that particular case
+
+03:22.570 --> 03:25.670
+all it's going to be is undefined which is perfectly OK.
+
+03:25.960 --> 03:32.560
+Well this is pretty well it's not apparent to the user or the person who's writing the code exactly
+
+03:32.560 --> 03:36.860
+what parameters are supposed to be used and what parameters are not supposed to be used.
+
+03:37.000 --> 03:42.430
+Even if you look at the function definition right here it's not immediately apparent what this function
+
+03:42.430 --> 03:48.100
+is supposed to take in as far as parameters go in order to find out you would have to actually read
+
+03:48.100 --> 03:49.110
+the function body.
+
+03:49.210 --> 03:54.670
+So we can make this a lot better by using these deconstructing syntax.
+
+03:54.820 --> 04:01.180
+So what we'll do instead is inside of here a common us out just to show you the kind of old way of doing
+
+04:01.180 --> 04:01.640
+it.
+
+04:02.050 --> 04:06.070
+And then after that we'll put this in curly braces.
+
+04:06.070 --> 04:13.170
+Now we're going to do is put all the things we did before secure and then we'll do domain now with the
+
+04:13.190 --> 04:15.130
+path and then we'll do expires.
+
+04:15.160 --> 04:16.060
+OK.
+
+04:16.630 --> 04:23.050
+Now this looks pretty wild but honestly it's the exact same thing as for example receiving an options
+
+04:23.050 --> 04:32.140
+object like if I were to just receive let's say options as an object right here it would be the same
+
+04:32.140 --> 04:40.540
+as taking those options right there and just pulling out variables like so and doing secure domain path
+
+04:40.690 --> 04:46.030
+expires and then setting it equal to options right here.
+
+04:46.030 --> 04:51.610
+But instead of doing all that directly we're taking advantage of this kind of syntactic sugar right
+
+04:51.610 --> 04:51.970
+here.
+
+04:52.090 --> 04:57.700
+But this is what the javascript engine is doing behind the scenes with this parameter deconstructing
+
+04:57.700 --> 04:58.360
+syntax.
+
+04:58.390 --> 05:02.820
+So I'll go ahead and delete this right here and now you know how to structure parameters.

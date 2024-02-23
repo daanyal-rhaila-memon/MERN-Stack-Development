@@ -1,0 +1,19 @@
+WEBVTT
+
+00:00.450 --> 00:07.830
+We can also use default values with the raid structuring so I'll just do let's say let color array one
+
+00:07.830 --> 00:17.760
+item read like so then if I want to I can do that in first color and then after that second color and
+
+00:17.760 --> 00:23.430
+on the off chance that there is no second item in the array I'll set it to a default of green.
+
+00:23.430 --> 00:26.240
+Very similar syntax to what we did before.
+
+00:26.250 --> 00:31.880
+Now if I canceled out log in then I copy and paste these two right here.
+
+00:32.070 --> 00:35.820
+You'll see that the default value is indeed assigned.

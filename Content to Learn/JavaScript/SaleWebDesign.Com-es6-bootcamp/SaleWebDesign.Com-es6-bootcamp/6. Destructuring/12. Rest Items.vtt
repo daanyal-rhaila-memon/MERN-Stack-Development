@@ -1,0 +1,124 @@
+WEBVTT
+
+00:00.540 --> 00:08.700
+So in the previous module or two modules ago if I remember correctly we were talking about rest parameters
+
+00:09.030 --> 00:15.240
+with functions as well as the spread operator which is whenever you pass in an array to a function and
+
+00:15.240 --> 00:20.820
+then it spreads it all out into individual arguments to be treated separately inside of a array.
+
+00:20.820 --> 00:25.290
+There's a very similar syntax with destructuring but it does something kind of different.
+
+00:25.290 --> 00:33.330
+So what we'll do make another array of colors because we love rainbows and Lindi red and blue and green.
+
+00:33.860 --> 00:35.870
+And after that we'll call it good.
+
+00:35.880 --> 00:44.920
+So what I can do now is let erase syntax and we'll do first color and then after that I'm going to do
+
+00:45.250 --> 00:51.700
+da da da rest colors so that he will have colors as before.
+
+00:51.910 --> 00:58.180
+Snel what this is going to do is essentially whenever we out long this you going to see that it's the
+
+00:58.180 --> 01:05.080
+rest or the remaining items in the array and basically put them all into one variable as an array.
+
+01:05.170 --> 01:09.710
+So you could see blue and green are just variables are just an array right here.
+
+01:09.760 --> 01:14.760
+So it'll take the remaining items in this array and just shove it into this variable right here.
+
+01:14.800 --> 01:16.110
+As an array.
+
+01:16.210 --> 01:17.620
+So that's pretty useful.
+
+01:17.650 --> 01:24.460
+And also a side note to keep in mind is that this rest item syntax right here has to be the last item
+
+01:24.550 --> 01:27.820
+in your destructuring so you can't have a comma after this.
+
+01:27.820 --> 01:30.540
+If you do have a comma it will be considered a syntax error.
+
+01:30.550 --> 01:32.680
+Rest element must be the last element.
+
+01:32.710 --> 01:35.400
+So just something to keep in mind right there.
+
+01:35.410 --> 01:40.650
+Another interesting use of this is to actually create a copy of an array.
+
+01:40.660 --> 01:46.350
+It's kind of a known glaring gap in the javascript language that you can't.
+
+01:46.400 --> 01:52.120
+There's not a specific syntax specifically made for making clones of your arrays so if I wanted to do
+
+01:52.900 --> 01:59.950
+colors too and I wanted to make a copy of this traditionally the way I did it was I would do colors
+
+01:59.960 --> 02:05.840
+concat and then concat it with nothing and just return a copy of the array.
+
+02:06.040 --> 02:08.500
+So we'll do E.S. 5 right here.
+
+02:08.500 --> 02:13.540
+And the reason for that is that we know that arrays are essentially immutable meaning they can't be
+
+02:13.540 --> 02:14.850
+changed in place.
+
+02:14.890 --> 02:20.740
+And so what typically happens is it'll take an array and make a copy of it with the changes in modifications
+
+02:20.770 --> 02:23.850
+we specified and then it will return that copy.
+
+02:23.860 --> 02:29.080
+And so that's why a lot of these different array methods actually return arrays it's because they can't
+
+02:29.080 --> 02:30.190
+be changed.
+
+02:30.220 --> 02:32.050
+And you see it makes a copy.
+
+02:32.050 --> 02:41.110
+Another way to do it instead with this new rest item syntax is to basically just put this in square
+
+02:41.110 --> 02:47.600
+braces and then do dot dot dot like so and then just chop off this concat right here.
+
+02:48.100 --> 02:50.600
+And it does the exact same thing as you can see.
+
+02:50.620 --> 02:56.250
+So what it's doing is as before it's saying take the rest of the items and shove them into an array.
+
+02:56.260 --> 03:01.240
+And since I didn't specify any items before to be assigned to individual variables it's going to take
+
+03:01.240 --> 03:04.780
+all of the items and shove it into an array thus making a copy.
+
+03:04.780 --> 03:12.160
+So this is kind of debatable as to whether or not using this syntax versus using dot concat makes the
+
+03:12.160 --> 03:13.880
+developers intent more clear.
+
+03:14.050 --> 03:15.820
+But it's a cool ability to be aware.

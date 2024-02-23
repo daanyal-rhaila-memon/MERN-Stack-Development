@@ -1,0 +1,136 @@
+WEBVTT
+
+00:00.550 --> 00:06.760
+So in this particular case what we've done is we've used structuring to initialize our values.
+
+00:06.760 --> 00:13.510
+Now another thing you can do is actually destructuring assignments so what this means is that I could
+
+00:13.510 --> 00:21.040
+set an initial value for these variables and then after I do that I can use destructuring to set these
+
+00:21.040 --> 00:27.370
+variables to new values after I've already initialized them so what we'll do is of course common themes
+
+00:27.370 --> 00:34.840
+out I'm going to copy this right here and then I'm going to put it down here actually I'll have to copy
+
+00:34.840 --> 00:35.460
+it again.
+
+00:35.470 --> 00:36.550
+I miss that.
+
+00:36.550 --> 00:37.780
+There we go.
+
+00:37.900 --> 00:42.250
+Now that I have that I can throw those in maybe bring them back like so.
+
+00:42.430 --> 00:47.060
+Then after that what I'll do is I'll make some variable's down here.
+
+00:47.290 --> 00:59.040
+So in this case we'll do let's say let's say of equals true and then reload equals true or matter of
+
+00:59.040 --> 01:03.690
+fact we'll set them to false just to really illustrate this to you or set them to false.
+
+01:03.720 --> 01:07.010
+So now by default there are going to be false.
+
+01:07.020 --> 01:10.890
+So now if I say this you'll see it prints out false down here.
+
+01:11.070 --> 01:19.800
+So what I can do now is instead I'll take and put them inside a parentheses and do save comma reload
+
+01:20.010 --> 01:26.420
+inside of the curly braces and then set it equal to what did I need in this example right here.
+
+01:26.540 --> 01:28.650
+So now it's going to automatically change.
+
+01:28.650 --> 01:30.510
+Change them to true.
+
+01:30.510 --> 01:32.040
+So why did I do this.
+
+01:32.040 --> 01:34.470
+Why did I put them inside of parentheses.
+
+01:34.470 --> 01:41.500
+Well this is a little different from what we did before with destructuring initialization.
+
+01:41.520 --> 01:49.710
+See what happens is typically whenever javascript engines read curly braces they expect it to be a block
+
+01:49.710 --> 01:50.300
+statement.
+
+01:50.340 --> 01:50.900
+OK.
+
+01:51.060 --> 01:56.040
+And the problem with that is block statements aren't supposed to appear on the left hand side of an
+
+01:56.040 --> 01:56.750
+assignment.
+
+01:56.760 --> 01:57.360
+Right.
+
+01:57.360 --> 02:01.950
+They're supposed to typically appear on the right hand side of an assignment if you're making like an
+
+02:01.950 --> 02:04.990
+object literal or something like what we've done up here.
+
+02:05.000 --> 02:09.350
+Notice that the curly braces on the right side of the equal sign.
+
+02:09.420 --> 02:15.600
+And so when a javascript engine reads this kid typically it's going to read the Left first right because
+
+02:15.600 --> 02:17.490
+we're doing an initialization.
+
+02:17.610 --> 02:23.160
+So it reads a lot and then it reads curly braces so it automatically knows that we're doing destructuring
+
+02:23.580 --> 02:26.070
+in this particular case it doesn't know that.
+
+02:26.070 --> 02:30.120
+So it's thinking that it might be something wrong and it could throw an error.
+
+02:30.120 --> 02:31.660
+So what do we do.
+
+02:31.830 --> 02:39.360
+We wrap it inside of parentheses and by doing this we make sure that javascript treats this as an expression
+
+02:39.690 --> 02:44.010
+which allows this new assignment right here to finish out.
+
+02:44.010 --> 02:47.960
+Now we can see what happens if we take away the parentheses like.
+
+02:47.970 --> 02:52.540
+So you see we get a syntax error right here and it has this unexpected token.
+
+02:52.550 --> 02:57.540
+Because it's not expecting there to be an assignment after a code block like that.
+
+02:57.540 --> 02:59.210
+So we wrap it in parentheses.
+
+02:59.370 --> 03:06.090
+Javascript treats it like an expression which allows the assignment of these new values to happen.
+
+03:06.090 --> 03:12.150
+It's kind of like whenever we do if he's right we wrap it inside of parentheses so that way it's treated
+
+03:12.150 --> 03:16.590
+as an expression and it's allowed to finish getting set up and executing.

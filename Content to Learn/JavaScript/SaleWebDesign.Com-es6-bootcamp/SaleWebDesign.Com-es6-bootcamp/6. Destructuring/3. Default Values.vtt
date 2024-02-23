@@ -1,0 +1,73 @@
+WEBVTT
+
+00:00.990 --> 00:06.690
+So we're going to go ahead and comment all of this out and then afterwards we're going to set something
+
+00:06.690 --> 00:08.470
+called default values.
+
+00:08.730 --> 00:16.710
+Now what happens whenever we use destructuring with an object literal like so we do contest RBJ and
+
+00:16.710 --> 00:26.200
+then we'll do like name is Fuyu identifier is the best care.
+
+00:26.300 --> 00:28.590
+So nothing too crazy right here.
+
+00:28.610 --> 00:36.410
+Then inside we make that object literal object literal just curly braces as they're called here for
+
+00:36.410 --> 00:38.780
+destructuring identifier.
+
+00:38.780 --> 00:42.650
+Now we specify the object we want to pull all this data out of.
+
+00:42.650 --> 00:44.490
+And then we can just cancel it out.
+
+00:46.530 --> 00:52.860
+Name and identified identifier when we write the identifier.
+
+00:52.980 --> 01:01.910
+We go and if I don't if you're having trouble spell on here Scuse me so you can see it in self who the
+
+01:01.910 --> 01:02.330
+best.
+
+01:02.330 --> 01:09.350
+Now what happens if I specify something else like let's say another variable here and we'll just call
+
+01:09.350 --> 01:12.570
+this cup we can call it whatever.
+
+01:12.680 --> 01:18.470
+Well what's going to happen is the engine is going to look to see if there's any property in here by
+
+01:18.470 --> 01:19.450
+the name of cup.
+
+01:19.460 --> 01:26.270
+And if it doesn't find anything it's going to set this particular variable to undefined though it will
+
+01:26.270 --> 01:27.800
+still technically exist.
+
+01:27.800 --> 01:29.290
+It has been declared.
+
+01:29.300 --> 01:32.440
+It just hasn't been initialized or set to a value.
+
+01:32.450 --> 01:38.600
+So what you can do to handle this is you can set a default value of your own instead of it being a default
+
+01:38.600 --> 01:41.660
+value of undefined you can set a default value of whatever you'd like.
+
+01:41.660 --> 01:49.960
+True or you know coffee cup for example and now it says who the best coffee cup or any other variable
+
+01:49.980 --> 01:52.630
+or any other default value that you might think of.

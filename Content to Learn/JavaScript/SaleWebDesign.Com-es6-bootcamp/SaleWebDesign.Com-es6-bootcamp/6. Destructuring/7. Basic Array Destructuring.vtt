@@ -1,0 +1,64 @@
+WEBVTT
+
+00:00.450 --> 00:08.150
+Now aside from that we also have a Radie structuring so it offers some very cool capabilities as well.
+
+00:08.160 --> 00:10.560
+One of those is going to be shown right now.
+
+00:10.560 --> 00:16.620
+So let's make a ray and we'll call it friends and we'll set it equal to here.
+
+00:16.710 --> 00:21.270
+Now a Radie structuring is very similar to object destructuring.
+
+00:21.420 --> 00:27.390
+The only difference is we use array literal syntax instead of object literal syntax.
+
+00:27.390 --> 00:32.940
+So now that we have these three different people right here the way that I get them out essentially
+
+00:33.390 --> 00:41.220
+is to do let an array literal syntax or square braces and the name of the variable i want to define.
+
+00:41.220 --> 00:46.720
+So in this case I'll do first friend and then second friend said equal to the friends array.
+
+00:46.940 --> 00:54.360
+And now if icons will not log these guys right here the first friend and second friend like so you can
+
+00:54.360 --> 00:55.980
+see a prince out like a chimp.
+
+00:55.980 --> 01:01.460
+So in this case the way these are assigned it operates on the position within the array.
+
+01:01.470 --> 01:08.480
+So the first is assigned and then the second friend is assigned could also do something very similar.
+
+01:08.560 --> 01:13.610
+Let And if I want to get to the third but I don't want to assign the first to the second.
+
+01:13.620 --> 01:15.840
+I can just do commas like so.
+
+01:15.990 --> 01:21.930
+And those will operate as placeholders while I get to the third item in the array.
+
+01:21.970 --> 01:28.170
+Then I about third friend like so you can see a prince out Jimmy just below.
+
+01:28.350 --> 01:33.960
+So with that being said it operates on the position so you don't really specify it the same way you
+
+01:33.960 --> 01:36.000
+would with object literal syntax.
+
+01:36.120 --> 01:41.580
+And by using these placeholders right here you can access exactly which item in the array you want to
+
+01:41.580 --> 01:47.370
+pull out and assign it to a variable very easily according to where it is inside of the array or its
+
+01:47.370 --> 01:47.940
+position.
