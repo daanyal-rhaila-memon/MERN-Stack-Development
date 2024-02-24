@@ -1,0 +1,61 @@
+WEBVTT
+
+00:00.520 --> 00:06.130
+Whenever you initialize a week map you can do it in a very similar way to how you would do a normal
+
+00:06.160 --> 00:07.920
+or a strong map if you will.
+
+00:07.930 --> 00:13.060
+So what we'll do is make a couple of objects so will be key one which isn't.
+
+00:13.260 --> 00:17.190
+B.J. and then key too which will also be an object.
+
+00:17.440 --> 00:25.380
+And then after that we'll go ahead and make our week map said equal to new week map like so.
+
+00:25.530 --> 00:31.990
+And then what we can do is pass in an array and every item in the array must itself be an array where
+
+00:31.990 --> 00:40.150
+the key is a non-null object and the value can be anything you want any kind of data type or anything.
+
+00:40.150 --> 00:45.480
+So then we'll do another one key too and we'll set that equal to.
+
+00:45.490 --> 00:47.390
+Do you like so.
+
+00:47.650 --> 00:53.050
+Now there are some limitations as with weak sets as to what methods you can access.
+
+00:53.050 --> 00:59.310
+So for example you can't use clear because that would require you to iterate or enumerate I should say.
+
+00:59.530 --> 01:05.860
+And you can't do that with weak maps or weak sets but you do have access to haves and also get.
+
+01:05.860 --> 01:15.400
+So we can cancel that log week map has key one and that'll print out true and we'll copy this.
+
+01:15.430 --> 01:21.670
+And you can also do get as well and you can even do delete like so.
+
+01:21.670 --> 01:29.480
+So what do we map delete and then pass in Q1 and then we'll run all of our checks again.
+
+01:29.530 --> 01:30.030
+You can't do.
+
+01:30.030 --> 01:30.650
+Clear.
+
+01:30.730 --> 01:35.000
+And you also can't access the Size property just two things to keep in mind.
+
+01:35.240 --> 01:39.940
+And but aside from that you can initialize them like you normally would and you have some of these basic
+
+01:39.940 --> 01:41.300
+methods still available to.

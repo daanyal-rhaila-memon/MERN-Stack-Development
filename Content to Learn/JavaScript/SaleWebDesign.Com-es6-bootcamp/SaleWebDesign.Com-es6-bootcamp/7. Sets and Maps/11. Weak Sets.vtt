@@ -1,0 +1,142 @@
+WEBVTT
+
+00:00.420 --> 00:06.480
+So in order to solve this sort of memory leakage and properly handle our memory Well we can do is use
+
+00:06.480 --> 00:07.200
+a weak set.
+
+00:07.200 --> 00:11.510
+Now I'm going to make one and then I'll talk to you about what it's actually doing.
+
+00:11.580 --> 00:21.540
+So would you let weeks equals new and in week capitals and in parentheses like so or we can make a object
+
+00:21.540 --> 00:27.240
+while we're here and you have access to almost all of the same methods that are all of the methods that
+
+00:27.240 --> 00:32.810
+you had before so you can use has you can use to Lee you can use what's that other one.
+
+00:32.820 --> 00:34.390
+Add like so.
+
+00:34.590 --> 00:42.030
+So for example now I can take the week set and then add our object to it like so.
+
+00:42.030 --> 00:45.210
+And then if I want to I can check if it's there so I'll do a council.
+
+00:45.650 --> 00:46.370
+Weeks.
+
+00:46.460 --> 00:51.420
+DA has and then key one and this should print out true.
+
+00:51.450 --> 00:57.650
+If all goes well and it does now there's a couple of differences between weak sets and strong sets.
+
+00:57.650 --> 01:03.690
+First weak sets can only store a weak object references they can't store primitive values.
+
+01:03.870 --> 01:11.490
+And lastly if a weak reference to an object is the only reference there if it's the only thing referencing
+
+01:11.490 --> 01:14.350
+the object then it doesn't prevent garbage collection.
+
+01:14.370 --> 01:16.200
+In other words it'll get erased.
+
+01:16.200 --> 01:17.940
+So what does that mean for us.
+
+01:17.940 --> 01:24.690
+Well essentially if we were storing in reference to an object like we are right now and we got rid of
+
+01:24.690 --> 01:32.720
+it and we did key one equals no then it's automatically going to get rid of key one within the set.
+
+01:32.760 --> 01:40.030
+And we can kind of test this out by doing a console that log has key one and you can see now it's false.
+
+01:40.030 --> 01:46.620
+Now originally whenever we did the inside of this strong set right here this strong set still held onto
+
+01:46.680 --> 01:48.170
+a reference to the object.
+
+01:48.180 --> 01:54.360
+And that's why we call it a strong set because it will prevent garbage collection of that particular
+
+01:54.600 --> 01:57.780
+object and thus create memory leakage.
+
+01:57.960 --> 02:02.460
+So by using weak sets we make sure that we are properly handling memory.
+
+02:02.640 --> 02:08.760
+So in the case that you really only need to store objects or keep track of objects a weak set is going
+
+02:08.760 --> 02:10.420
+to be the way to go.
+
+02:10.440 --> 02:15.060
+Now you could also do something like this you could also see that with some data.
+
+02:15.060 --> 02:23.760
+So for example you might do something like this and make let's say a low key one and then equals an
+
+02:23.760 --> 02:29.190
+object and then Keets to equals an object like so.
+
+02:29.270 --> 02:34.340
+And then you can pass in an array of these objects right here.
+
+02:34.560 --> 02:36.500
+And that would also work as well.
+
+02:36.510 --> 02:41.250
+Just remember you can't pass in primitive values and if you try to you will get an error because you're
+
+02:41.250 --> 02:42.110
+not supposed to.
+
+02:42.330 --> 02:43.640
+But either way.
+
+02:43.650 --> 02:46.990
+Now with that being said go ahead and scroll down here.
+
+02:47.220 --> 02:49.600
+And so there's a couple of things to keep in mind first.
+
+02:49.620 --> 02:55.200
+Whenever you use a weak set instance and you use things like the add method that throws an error when
+
+02:55.200 --> 02:58.780
+it's not passed on when it's passed and not object.
+
+02:58.800 --> 03:00.370
+Weak sets are not iterable.
+
+03:00.390 --> 03:07.260
+And so you can't use a for loop on them and weak sets do not expose iterators such as like the keys
+
+03:07.260 --> 03:08.190
+and the value method.
+
+03:08.190 --> 03:13.600
+So there's really no way to programmatically determine the contents of a weak set.
+
+03:13.650 --> 03:18.020
+And we also can't use something like Size property or the for each method.
+
+03:18.040 --> 03:24.630
+So it's really hard to check to see if it truly deleted this reference to the object but you can rest
+
+03:24.630 --> 03:29.400
+assured knowing that the javascript engine did in fact delete this reference even though we can't use
+
+03:29.400 --> 03:32.490
+something like the size property on this particular type of set.

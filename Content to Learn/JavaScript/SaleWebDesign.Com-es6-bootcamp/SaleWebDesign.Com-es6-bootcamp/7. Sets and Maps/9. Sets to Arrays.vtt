@@ -1,0 +1,103 @@
+WEBVTT
+
+00:00.420 --> 00:06.600
+So as you can see sets are very useful for keeping track of your values and you can even use loops to
+
+00:06.600 --> 00:08.110
+work with them sequentially.
+
+00:08.280 --> 00:15.330
+However you can't really access individual values within your set using something like an indices for
+
+00:15.330 --> 00:16.120
+example.
+
+00:16.200 --> 00:20.120
+That's really where you would need to convert your set into an array.
+
+00:20.250 --> 00:21.850
+The way you do that is pretty simple though.
+
+00:21.870 --> 00:28.470
+We'll make a new set just to illustrate it and we'll do a new set and pass in an array.
+
+00:28.470 --> 00:35.400
+So as you can see it's easy to convert an array into a set and it's just as easy to convert a set into
+
+00:35.400 --> 00:43.050
+an array so you are equals and then Curly braid or square brackets dot dot dot set.
+
+00:43.050 --> 00:46.540
+Now if you remember the spread operator from previous sessions.
+
+00:46.680 --> 00:52.890
+Essentially what we would do is call a funk and then if we passed an array as an argument we could just
+
+00:52.890 --> 00:59.610
+do dot dot dot array or whatever the array was and it would break apart that array into individual items
+
+00:59.610 --> 01:02.280
+to be used as separate arguments.
+
+01:02.280 --> 01:08.940
+Whenever you're working with an iterable object like a set like an array like a map you can also use
+
+01:08.940 --> 01:14.990
+this spread operator to break it apart into individual indices to be put into an array.
+
+01:15.150 --> 01:20.700
+So we're going to talk about iterable objects later but for now just know that said array and map are
+
+01:20.700 --> 01:22.500
+all iterable objects.
+
+01:22.500 --> 01:26.790
+And that's actually the reason that we can so easily turn an array into a set.
+
+01:26.790 --> 01:30.670
+Now if I cancel the log set and array.
+
+01:31.080 --> 01:33.300
+You'll see that both of them are still available.
+
+01:33.300 --> 01:36.200
+We have our set right here and then we have our array right here.
+
+01:36.210 --> 01:37.470
+They're both still available.
+
+01:37.470 --> 01:40.570
+I just took the set and made a copy of it.
+
+01:40.830 --> 01:44.640
+But I turned it into an array using this spread OPERATOR Right here.
+
+01:44.820 --> 01:47.580
+So these can be very useful if you want to get rid of duplicate.
+
+01:47.580 --> 01:57.360
+So for example I could do a function to eliminate limen eliminate do lockets like so and it'll take
+
+01:57.360 --> 02:07.500
+items and then all I got to do is return square brackets new or excuse me dot dot dot dot dot dot new
+
+02:07.800 --> 02:15.660
+set and then pass in the items like so and then I could pass in something crazy like for example canceled
+
+02:15.760 --> 02:21.720
+log and I just want to convert or log the result eliminate duplicates and I'll pass in an array of like
+
+02:21.720 --> 02:32.260
+1 1 1 2 2 3 3 4 4 4 4 5 5 and so it will be a very useful way to actually get rid of your duplicates
+
+02:32.260 --> 02:34.590
+as well as kind of a little side trick right there.
+
+02:34.720 --> 02:39.180
+And you can see it just completely wiped it out and returned it again as an array.
+
+02:39.320 --> 02:41.370
+First converting it into a set.
+
+02:41.470 --> 02:46.240
+Then after it was turned into a set it clearly turns into an array that gets returned.

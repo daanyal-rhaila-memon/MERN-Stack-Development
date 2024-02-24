@@ -1,0 +1,115 @@
+WEBVTT
+
+00:00.660 --> 00:07.560
+Now effectively the set time that we've been working with so far here here here in here could be considered
+
+00:07.560 --> 00:09.830
+somewhat of a strong set.
+
+00:09.840 --> 00:15.720
+The reason you might call it a strong is because of the way that it stores object references so I show
+
+00:15.720 --> 00:16.860
+you what I mean here.
+
+00:16.920 --> 00:18.120
+Make a new set.
+
+00:18.210 --> 00:20.760
+You'll be a pro at making sets by the end of this.
+
+00:20.760 --> 00:23.700
+So with a new set like so.
+
+00:23.700 --> 00:27.170
+And then after that we'll just make it key with an object in it.
+
+00:27.360 --> 00:29.580
+And then after that we'll add it to the set.
+
+00:29.580 --> 00:41.250
+So you set dot ad and then we'll add the key like so concert log set has key and you can see that it
+
+00:41.250 --> 00:42.830
+clearly does have the key.
+
+00:42.930 --> 00:44.650
+So that works out pretty well.
+
+00:44.650 --> 00:47.120
+But let's say that I hollow out this key.
+
+00:47.280 --> 00:50.870
+So I'll do key equals no.
+
+00:51.540 --> 00:57.810
+The way that this set stores the object reference it's essentially going I'll hold on to this object
+
+00:57.810 --> 01:05.100
+reference meaning that as long in the instance as long as this instance of the set exist a reference
+
+01:05.100 --> 01:10.800
+to this object will exist even if I hollowed out the reference and essentially eliminate the original
+
+01:10.800 --> 01:17.100
+object and I could easily get that object back and I'll even give it a value or something like.
+
+01:17.100 --> 01:19.230
+For example let's see.
+
+01:19.240 --> 01:20.420
+Present.
+
+01:21.060 --> 01:22.660
+Present is true.
+
+01:22.770 --> 01:24.210
+Just to kind of show you.
+
+01:24.210 --> 01:35.120
+So in this case just for example create a key to do let key to and set that equal to dot dot dot.
+
+01:35.840 --> 01:43.520
+And then and then we'll cancelled all log key to.
+
+01:43.760 --> 01:49.300
+And you can see I still have a reference to that object even though I actually got rid of it.
+
+01:49.310 --> 01:55.510
+It can't be garbage collected from memory because my set my strong say is still holding onto it.
+
+01:55.730 --> 02:01.280
+And by the way in case you're confused by this syntax the way I accessed it was by using a spread operator
+
+02:01.280 --> 02:03.530
+on iterable object like a set.
+
+02:03.710 --> 02:09.560
+I turn it into an array and then as soon as I turn it into an array I access the first indicia of the
+
+02:09.560 --> 02:16.490
+array which in this case would be this object and I store that object inside of key to this can honestly
+
+02:16.490 --> 02:17.550
+be pretty bad.
+
+02:17.720 --> 02:24.170
+Let's say you're keeping track of different d'armes different parts of your dorm inside of a set and
+
+02:24.170 --> 02:29.600
+then maybe another script that you're running deletes that part of the dom that you're keeping track
+
+02:29.630 --> 02:30.240
+of.
+
+02:30.260 --> 02:35.780
+In that case you're still holding on to a reference even after that particular element on the DOM is
+
+02:35.780 --> 02:36.770
+deleted.
+
+02:36.770 --> 02:39.580
+So in other words that's called a memory leak.
+
+02:39.590 --> 02:43.820
+So in order to deal with this type of problem we have something called weak says.

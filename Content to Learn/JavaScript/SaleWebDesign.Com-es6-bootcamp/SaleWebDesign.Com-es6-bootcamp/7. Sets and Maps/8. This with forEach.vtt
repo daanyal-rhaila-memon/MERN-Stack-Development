@@ -1,0 +1,79 @@
+WEBVTT
+
+00:00.390 --> 00:05.930
+As with when you work with a raise whenever you work with sets and use for each You can also pass in
+
+00:05.940 --> 00:11.190
+the key word this as a second argument to that method so go and show you that right now we'll do a new
+
+00:11.190 --> 00:20.050
+set we'll do let's set new set and we'll go ahead and pass this or rates to the constructor like so.
+
+00:20.050 --> 00:25.710
+And then after that I'm gonna go ahead and define an object called processor and it's going to have
+
+00:25.710 --> 00:36.150
+an output and it's going to take value as an argument like so if I can just type it correctly and then
+
+00:36.150 --> 00:39.350
+I'm just going to cancel it out log the value really simple.
+
+00:39.360 --> 00:45.290
+And then after this method I'm going to add another method called process and it's going to take a data
+
+00:45.290 --> 00:50.760
+set and inside of here I'm going to take that data set and I'm just going to loop through it with a
+
+00:50.760 --> 00:59.330
+For Each loop and inside of here when I pass a function and it's going to be like so.
+
+00:59.720 --> 01:11.540
+And inside of here I'm just going to invoke this output I can get this output is Vau like so and then
+
+01:12.230 --> 01:17.630
+right now the way that the word this is it's not going to work it's not going to invoke the correct
+
+01:17.630 --> 01:18.070
+method.
+
+01:18.080 --> 01:24.620
+So what we need to do is set the key word correctly by passing in this as the second argument to this
+
+01:24.620 --> 01:25.720
+method right here.
+
+01:25.910 --> 01:35.760
+So now whenever I call process on processor like so impasse in my set it should work as expected and
+
+01:35.760 --> 01:37.940
+it does it brings out one in two.
+
+01:37.980 --> 01:44.220
+Now another way to do this is just use an arrow function because as we remember an arrow function inherits
+
+01:44.220 --> 01:47.640
+the keyword this from its closest inclosing parent.
+
+01:47.640 --> 01:54.430
+So in this case it would be equal to processor is what this would be equal to inside of an arrow function.
+
+01:54.540 --> 02:03.420
+So I could just get rid of this right here and make an arrow function and then I could just return if
+
+02:03.420 --> 02:04.710
+I wanted to I could just return.
+
+02:04.710 --> 02:06.990
+But in this case will add curly braces.
+
+02:07.300 --> 02:10.600
+Cancel the log or not cancel dot log.
+
+02:10.620 --> 02:15.610
+You can just do this dot output and then Vau like so.
+
+02:15.780 --> 02:20.070
+And that will work just as well and we don't even have to specify the key word this because of how the
+
+02:20.070 --> 02:21.210
+arrow function works.

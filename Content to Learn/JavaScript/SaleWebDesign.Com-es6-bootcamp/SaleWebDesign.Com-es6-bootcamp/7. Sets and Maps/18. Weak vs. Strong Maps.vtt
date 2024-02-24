@@ -1,0 +1,49 @@
+WEBVTT
+
+00:00.300 --> 00:05.370
+Lastly I'll answer the question that I'm sure a lot of you probably have which is whether or not to
+
+00:05.370 --> 00:09.420
+use a week map or a strong map whenever you're working with maps.
+
+00:09.540 --> 00:14.370
+Now if you only essentially want to answer this one question right here.
+
+00:14.640 --> 00:19.800
+All you need to ask yourself is if you only want to work with object keys or not.
+
+00:19.800 --> 00:22.800
+If the answer is yes then by all means use a week map.
+
+00:22.800 --> 00:24.260
+That's a great way to go.
+
+00:24.270 --> 00:29.550
+It'll allow you to optimize your memory get the most out of it and avoid things like memory leaks.
+
+00:29.550 --> 00:32.730
+The downside though is you're not going to have a lot of visibility.
+
+00:32.730 --> 00:37.440
+So you're not going to be able to use things like size or for each to loop through things if you need
+
+00:37.440 --> 00:42.260
+this kind of visibility and you need to be able to look through your maps then probably a strong map
+
+00:42.270 --> 00:43.550
+is a way to go.
+
+00:43.560 --> 00:49.590
+Now most people as of right now know that you can use weak maps for things like objects associated with
+
+00:49.590 --> 00:55.350
+the Dom but I'm sure there's a lot of different use cases that are yet to be discovered and some that
+
+00:55.350 --> 00:58.650
+are popping up now like making data private with an object.
+
+00:58.800 --> 01:00.840
+But with that being said that's pretty much it.
+
+01:00.930 --> 01:02.100
+For maps insets.

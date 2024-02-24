@@ -1,0 +1,121 @@
+WEBVTT
+
+00:00.590 --> 00:04.740
+Weak maps are to maps as weak sets are to set.
+
+00:04.740 --> 00:09.700
+So in other words we can use weak maps to store these weak references to objects.
+
+00:09.810 --> 00:15.540
+That way if we ever decide to get rid of the object and it no longer exists we can get rid of all of
+
+00:15.540 --> 00:21.000
+our references to it thus preventing memory leaks because if we hold onto a reference longer than we're
+
+00:21.000 --> 00:21.890
+supposed to.
+
+00:22.050 --> 00:23.930
+Well that's called a memory leak.
+
+00:24.060 --> 00:29.280
+Probably one of the biggest cases where you'll see this being used along with weak maps is if someone
+
+00:29.280 --> 00:34.920
+is storing a reference to an object that is supposed to sort of represent a dom element.
+
+00:34.920 --> 00:39.720
+In that case you're going to want to hold onto that object reference until you don't need it anymore.
+
+00:39.720 --> 00:45.660
+Like for example if the DOM element is deleted at that point you don't want to hold on to that reference
+
+00:45.660 --> 00:46.860
+to the DOM element.
+
+00:46.860 --> 00:52.020
+So you want to make sure that you have a weak reference to it so you don't interfere with garbage collection
+
+00:52.320 --> 00:53.960
+and it can be deleted.
+
+00:53.970 --> 01:00.990
+So what we'll do is inside of our DML we'll go ahead and make a div called element like so and we'll
+
+01:00.990 --> 01:05.310
+say that then we're going to save a reference to it and also make a weak map.
+
+01:05.310 --> 01:13.850
+So first we'll make a weak map weak map like so and we'll do a new weak map like that.
+
+01:14.080 --> 01:22.110
+And then after that we'll go ahead and make a element's reference so we'll do document doc queries selector
+
+01:22.650 --> 01:24.360
+wherever my queries are like there is.
+
+01:24.360 --> 01:25.600
+There it is.
+
+01:25.600 --> 01:28.680
+And it will just select the element like so.
+
+01:28.800 --> 01:32.520
+Now if I go ahead and put this in here which would be easy.
+
+01:32.610 --> 01:37.520
+One thing to remember is that every key must be an object inside of a week map.
+
+01:37.680 --> 01:43.540
+And the other important thing to keep in mind is that the keys are weak references to the object.
+
+01:43.620 --> 01:50.370
+If you store an object as a value inside of a week map that is still a strong reference only the keys
+
+01:50.370 --> 01:53.380
+are actual weak references to objects.
+
+01:53.400 --> 02:01.840
+So in this case I'll go ahead and do week map dots and I'll use elements as the key and then I'll call
+
+02:01.840 --> 02:03.710
+it something like.
+
+02:03.850 --> 02:12.110
+And all associated with a value like original elements like so.
+
+02:12.540 --> 02:25.020
+Now if I get rid of this element like for example if I do elements dot parent node dot child removed
+
+02:25.020 --> 02:27.660
+child and pass in the element.
+
+02:28.140 --> 02:37.110
+This will remove it from the DOM and then if I try to get the elements like so
+
+02:40.350 --> 02:48.250
+let me go ahead and wrap this inside of a console log right here.
+
+02:48.370 --> 02:50.570
+One moment please.
+
+02:50.600 --> 02:51.790
+There we go.
+
+02:51.820 --> 02:56.910
+You can see it still has that reference right there but if I hollow out this object do you.
+
+02:56.920 --> 03:01.610
+Elements equals no.
+
+03:01.730 --> 03:07.790
+And then I copy my cancelled out log them bring it down here you'll see that the reference is no longer
+
+03:07.790 --> 03:08.490
+held onto.
+
+03:08.510 --> 03:15.560
+So as long as I get rid of the object reference inside of my script it will automatically be removed
+
+03:15.620 --> 03:16.490
+from my map.

@@ -1,0 +1,52 @@
+WEBVTT
+
+00:01.000 --> 00:06.250
+Also very similar to the sets whenever you initialize your maps you can actually start them off with
+
+00:06.250 --> 00:07.660
+some seed data.
+
+00:07.720 --> 00:09.970
+But the way we do it is a little different.
+
+00:09.970 --> 00:13.540
+Whenever we pass in the array so make a new map right here will do.
+
+00:13.540 --> 00:19.150
+Let me make sure to comment out your old map and inside of here like before with sets we're going to
+
+00:19.150 --> 00:20.750
+pass in an array.
+
+00:20.770 --> 00:25.750
+The difference is that every item in the array must itself be an array.
+
+00:26.110 --> 00:33.400
+And inside of that array item right there the first item in this array is going to be the key and the
+
+00:33.400 --> 00:36.220
+second item is going to be the value.
+
+00:36.460 --> 00:42.580
+So you can see right here we pass in an array and then every item inside of the array must itself be
+
+00:42.580 --> 00:47.280
+an array where this item this first into see right here is the key.
+
+00:47.290 --> 00:49.390
+And the second into C is the value.
+
+00:49.390 --> 00:51.550
+So after that I'll add another one.
+
+00:51.580 --> 00:57.940
+We'll do something like age set that equal to what's a good age 39 and then if we go ahead and try and
+
+00:57.940 --> 01:06.640
+get these you'll see counselled or log map doget and we'll just get the name and then we'll copy this
+
+01:06.880 --> 01:13.780
+and go down and then we'll get the age and then if we go ahead and print this out and just see what
+
+01:13.780 --> 01:17.230
+the size is you'll see it works just as you would expect it to.

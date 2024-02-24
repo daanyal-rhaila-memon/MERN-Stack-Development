@@ -1,0 +1,64 @@
+WEBVTT
+
+00:00.760 --> 00:04.300
+So many go in common tell these canceled logs right here.
+
+00:04.330 --> 00:09.040
+Just so everything is really clear when we start to cancel that log a few other things so I'll comment
+
+00:09.040 --> 00:12.200
+out and I'll comment out this now.
+
+00:12.220 --> 00:12.760
+That's great.
+
+00:12.760 --> 00:18.310
+We learn how we can add things to our set and also how we might take things away from our insert.
+
+00:18.430 --> 00:19.830
+But how do we delete things.
+
+00:19.870 --> 00:20.980
+Well pretty simple.
+
+00:20.980 --> 00:27.120
+What I can do is just our set dot delete and then specify whatever value I want to delete.
+
+00:27.200 --> 00:33.600
+Let's say I want to delete five and then I'm going to comment this back in and then get a copy and then
+
+00:33.730 --> 00:40.810
+load it back in like so save it you're going to see first my size for my set is 5 and then after I delete
+
+00:41.170 --> 00:44.070
+one of the members of the set then it's going to be a 4.
+
+00:44.170 --> 00:48.290
+Last thing that you can do is if you want to you can check to see if it has.
+
+00:48.300 --> 00:52.530
+So comment this back in and check to see if 5 is even there now.
+
+00:52.720 --> 00:54.040
+And you're going to see it says false.
+
+00:54.040 --> 00:55.320
+No it's not there.
+
+00:55.330 --> 01:00.260
+Aside from that you can also just completely clear out your set where you do that.
+
+01:00.340 --> 01:02.750
+Just take your access.
+
+01:02.790 --> 01:06.310
+The clear method just invoke it like so.
+
+01:06.310 --> 01:12.460
+And now if I counsel that log my size after I completely clear it out you'll see it's zero.
+
+01:12.460 --> 01:18.100
+So I've completely cleared out the it's completely empty and I'd have to start over adding new values
+
+01:18.100 --> 01:18.670
+to it again.

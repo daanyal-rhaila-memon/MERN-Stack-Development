@@ -1,0 +1,121 @@
+WEBVTT
+
+00:00.510 --> 00:06.630
+Since we went into such detail about sex maps are going to look pretty familiar to you because a lot
+
+00:06.630 --> 00:08.650
+of the syntax is very similar.
+
+00:08.700 --> 00:14.310
+Now a key difference between maps and objects because I know they seem similar is with maps you're using
+
+00:14.310 --> 00:17.710
+key value pairs and with objects you're using essentially.
+
+00:17.730 --> 00:21.640
+Some would argue key value pairs particularly it's a property and a value.
+
+00:21.630 --> 00:28.230
+But either way the key difference for now is that when you use a map the key can be of any type just
+
+00:28.230 --> 00:30.520
+like the value with objects.
+
+00:30.720 --> 00:36.960
+The property name has to be a string or it has to evaluate to a string and so that severely limits what
+
+00:36.960 --> 00:41.630
+we can do whenever we want to store values and keep track of them and access them.
+
+00:41.640 --> 00:44.240
+So for example let's go ahead and make a new map.
+
+00:44.240 --> 00:45.730
+It will be pretty familiar.
+
+00:45.750 --> 00:46.150
+Will do.
+
+00:46.160 --> 00:55.110
+Let mapping equals new and then map like so now that we have that if we ever want to set or add an item
+
+00:55.110 --> 01:00.100
+to our map the way we do it is with a map set method right here.
+
+01:00.300 --> 01:03.530
+And the first argument that we pass in is going to be the key.
+
+01:03.570 --> 01:08.730
+So in this case we'll do something like a string name and will associate that with the value which is
+
+01:08.730 --> 01:13.890
+the second argument which can be Andrew and we'll do one more just for good luck and we'll do something
+
+01:13.890 --> 01:15.300
+like drink.
+
+01:15.660 --> 01:18.660
+And then that can be like water for example.
+
+01:18.660 --> 01:23.780
+Now if we want to retrieve these values the way that we do it is with another method called get.
+
+01:23.770 --> 01:27.800
+So we'll do console log map dot get.
+
+01:27.990 --> 01:34.470
+And then we specify whatever key we would like to use to get the value in this case or do name like
+
+01:34.470 --> 01:35.010
+so.
+
+01:35.110 --> 01:38.090
+And then if I save this you can see that it prints out Andrew.
+
+01:38.250 --> 01:44.520
+Now we can do that also the same thing with objects so we'll make some objects will you Konst and key
+
+01:44.520 --> 01:52.260
+one equals an objects and then we'll do Keets you also equals an object like so.
+
+01:52.290 --> 02:01.460
+Now whenever I set these all do mapped us now with do key one equals five like so and then mapped US
+
+02:02.670 --> 02:08.850
+key to equals or is associated with Hello.
+
+02:09.200 --> 02:11.150
+Now I'm going to copy this cancelled out log.
+
+02:11.150 --> 02:13.940
+That way we don't have to spend too much time typing.
+
+02:13.970 --> 02:19.910
+So I'll just copy this twice down here and down here and I'll just trade out getting the name for getting
+
+02:20.300 --> 02:23.460
+Q1 and Q2.
+
+02:23.540 --> 02:27.620
+And now if I can log these you can see it prints out 5 and then hello.
+
+02:27.760 --> 02:36.710
+So once again like objects with these maps right here we can use these objects as is a central key and
+
+02:36.710 --> 02:39.510
+then associate them with whatever value that we'd like.
+
+02:39.620 --> 02:43.540
+And I could also illustrate this to you with something like for example map dots.
+
+02:44.050 --> 02:56.950
+And then we can do like lets say five and then we'll do as TR or regular gnome like so.
+
+02:57.170 --> 03:02.480
+And then after that map does it and we can do a string five as well.
+
+03:02.560 --> 03:09.390
+You know we'll call this next to your number and these will be considered two different keys in the
+
+03:09.390 --> 03:11.240
+eyes of a javascript map.

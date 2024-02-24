@@ -1,0 +1,106 @@
+WEBVTT
+
+00:00.590 --> 00:06.460
+So there is a much better way to do it instead of year six we can just make a variable called Left in
+
+00:06.580 --> 00:14.720
+and set in in order to make us all we do is type in new and then it's OK now that we have that if we
+
+00:14.720 --> 00:20.060
+want to add something to our set we can just do set and then access a method called ADD and that will
+
+00:20.060 --> 00:21.950
+allow us to add something to our search.
+
+00:22.100 --> 00:25.110
+So in this case we could add a string 5 like so.
+
+00:25.310 --> 00:34.340
+And then if we wanted to afterwards we get a number five like so now sets do not coerce values to determine
+
+00:34.340 --> 00:35.420
+if they're the same.
+
+00:35.420 --> 00:39.250
+So these actually both count as two individual items.
+
+00:39.260 --> 00:45.050
+And if you want to check the size of your set or how many items are inside of it you can do the council
+
+00:45.260 --> 00:48.270
+log and then set size.
+
+00:48.290 --> 00:50.960
+And then after that you're going to see it too.
+
+00:50.960 --> 00:53.940
+So these both are counting as two unique items.
+
+00:53.960 --> 01:02.970
+You could also do this with Chiuso Konst key one equals an object that will do key to another object.
+
+01:03.050 --> 01:11.600
+And then we can add these on as well so when you said add and then he won and then set and key to like
+
+01:12.080 --> 01:13.340
+before.
+
+01:13.770 --> 01:14.490
+Whoops.
+
+01:15.810 --> 01:19.120
+And then we can just cancel the log that says size again.
+
+01:19.470 --> 01:23.280
+So in this case we'll go in concert or log it and you can see it goes to four.
+
+01:23.310 --> 01:26.700
+Once again it's not coercing these objects into strings.
+
+01:26.700 --> 01:32.040
+Remember if these were coerced into strings they would look something like this and then they would
+
+01:32.040 --> 01:34.580
+be considered the same or duplicate.
+
+01:34.620 --> 01:40.560
+But because they're not being coerced they both count as individual items and therefore they are added
+
+01:40.560 --> 01:44.180
+to the set and so on and not counted as duplicates.
+
+01:44.190 --> 01:52.440
+Speaking of duplicate if you did for example add a duplicate like set add and then 5 or something like
+
+01:52.440 --> 01:53.310
+that.
+
+01:54.150 --> 01:55.390
+It's going to be ignored.
+
+01:55.500 --> 01:56.850
+This is what's going to happen.
+
+01:56.850 --> 02:01.160
+So this is considered a duplicate and duplicates are ignored.
+
+02:01.290 --> 02:06.330
+And like I said before you can't have a duplicate inside of a set because you're checking for the existence
+
+02:06.330 --> 02:07.290
+of a value.
+
+02:07.290 --> 02:09.670
+You're not really trying to pull out information.
+
+02:09.720 --> 02:14.720
+So a couple of things to keep in mind none of the data types are going to be coerced to decide if there
+
+02:14.720 --> 02:20.900
+is the same there will remain as they are meaning that you can use numbers and even objects as keys.
+
+02:20.970 --> 02:24.680
+And aside from that remember you can't put duplicates inside of a set.
+
+02:24.720 --> 02:31.740
+The first five will be put into the set and this second string five right here will be completely ignored.

@@ -1,0 +1,82 @@
+WEBVTT
+
+00:00.610 --> 00:07.150
+You can also use for each loop's with the map and it's a little more similar or it maps more closely
+
+00:07.150 --> 00:11.640
+to the pun to the For Each loop on an array.
+
+00:11.650 --> 00:16.370
+So the first argument you pass in is going to be the value of the next position in the array.
+
+00:16.600 --> 00:21.880
+And then the key is going to be the second argument and then the third one is going to be the actual
+
+00:21.880 --> 00:23.230
+map that you're looping through.
+
+00:23.230 --> 00:26.960
+So we make a new rank will do let.
+
+00:27.100 --> 00:36.070
+Map equals new map like so and we might start it off with some values so will pass in an array and then
+
+00:36.070 --> 00:46.880
+another array will be name Andrew and then another array to do age set that equal to 45.
+
+00:47.060 --> 00:49.650
+Then after that we can just loop through it.
+
+00:49.670 --> 00:57.100
+So we'll do a map for each and then we can do an arrow function if we want to.
+
+00:57.530 --> 01:01.760
+And then aside from that we get these three arguments so the first one is going to be the value.
+
+01:01.760 --> 01:05.540
+Second one is going to be the key and the third one is going to be the actual map itself.
+
+01:05.540 --> 01:13.000
+So we'll do map owner and inside of here we can do a canceled log so we'll do a console log.
+
+01:13.010 --> 01:19.960
+You can do a template literal if we want to and we'll do let's say the same thing with the before value
+
+01:20.210 --> 01:22.480
+and then a space in the key.
+
+01:22.880 --> 01:33.380
+And then after that we'll go down a line and we'll do a comparison to see if the map is equal to the
+
+01:33.380 --> 01:35.660
+map over which it will be.
+
+01:35.660 --> 01:41.600
+And then we'll go down a line and we'll do a life's little bar to separate them out.
+
+01:41.660 --> 01:43.390
+After that we should be good to go.
+
+01:43.460 --> 01:50.120
+So now if we run this you'll see that Prince Andrew and the name and then true and then 45 which is
+
+01:50.120 --> 01:55.870
+the key or maps to the key age and it's still true comparison right here.
+
+01:55.880 --> 02:01.130
+So this differs slightly from the way that you would loop through an array in that it loops through
+
+02:01.130 --> 02:04.010
+them in the order in which they were inserted into the map.
+
+02:04.010 --> 02:09.500
+So that's why it shows you name first and then age because first the name key was inserted and then
+
+02:09.500 --> 02:11.230
+after that the age was inserted.
+
+02:11.330 --> 02:17.240
+So that's the order in which it will loop through this map versus an array which is where it maps from
+
+02:17.240 --> 02:20.560
+the zero into see all the way to the last one in the array.

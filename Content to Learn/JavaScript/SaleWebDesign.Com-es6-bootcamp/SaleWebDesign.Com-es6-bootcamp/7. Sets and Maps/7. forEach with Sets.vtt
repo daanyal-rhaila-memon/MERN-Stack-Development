@@ -1,0 +1,169 @@
+WEBVTT
+
+00:00.600 --> 00:06.330
+So far we've learned how we can make a set we can add things to it we can delete it we can absolutely
+
+00:06.330 --> 00:11.940
+clear out everything on the set and we can even check to see if values are available on the set.
+
+00:11.940 --> 00:16.890
+Now you may be thinking what if I want to loop through this and do certain operations with it.
+
+00:17.130 --> 00:20.160
+Well just like with the braes we can use the For Each loop.
+
+00:20.190 --> 00:26.100
+Now there is something to be said about using the For Each loop with an array compared with using it
+
+00:26.100 --> 00:26.750
+with a set.
+
+00:26.790 --> 00:27.310
+OK.
+
+00:27.420 --> 00:32.700
+Whenever you use it with an array or a map for that matter it's going to be pretty cut and dried just
+
+00:32.700 --> 00:38.880
+like you're used to it will do an array real quick and then we'll make one to like so and we'll just
+
+00:38.880 --> 00:45.990
+loop through this bad boy with a for each throw in a arrow function like so now whenever we do a For
+
+00:45.990 --> 00:48.990
+Each loop with an array or a map which we'll talk about later.
+
+00:49.140 --> 00:53.130
+You get three arguments the first one is going to be the value segment is going to be the index and
+
+00:53.130 --> 00:56.000
+you get a third one that most of the time you don't really need.
+
+00:56.010 --> 01:02.390
+With that being said inside of sets the actual There are three arguments technically that get passed
+
+01:02.390 --> 01:06.240
+in when you loop over a set for each of the three arguments.
+
+01:06.270 --> 01:09.780
+The only thing that's weird is that the first two arguments are exactly the same.
+
+01:09.780 --> 01:11.730
+Seriously there's no difference at all.
+
+01:12.000 --> 01:15.880
+And then the third argument is the actual set on which you are looping.
+
+01:16.110 --> 01:18.060
+So what's the deal.
+
+01:18.060 --> 01:24.690
+Well essentially the way it went down was they wanted to add the foreach loop to the sets or make it
+
+01:24.690 --> 01:29.280
+to where you can loop over it with a For Each loop because you know the For Each loop is so popular
+
+01:29.280 --> 01:30.600
+with developers.
+
+01:30.600 --> 01:36.330
+But the thing was they could have set this up with the foreach loops where it would only take two arguments
+
+01:36.330 --> 01:39.930
+so this redundant argument would have been done away with.
+
+01:40.110 --> 01:42.630
+But in that case the For Each loop would be different.
+
+01:42.660 --> 01:45.180
+And so they would have to use a different syntax for it.
+
+01:45.240 --> 01:49.440
+So they found a way to make sure that the For Each loop doesn't change.
+
+01:49.500 --> 01:52.540
+And it always accepts three arguments just like the others.
+
+01:52.560 --> 01:54.270
+So that way they wouldn't have to change it.
+
+01:54.510 --> 02:00.330
+And that was basically because the reason they could do that was because sets are essentially the key
+
+02:00.330 --> 02:02.670
+and the value inside of a set is the same thing.
+
+02:02.670 --> 02:07.780
+So if we go up let's see where where can I show you that here.
+
+02:07.830 --> 02:13.930
+So for example here with this set the key right here and the value are are the same thing.
+
+02:13.980 --> 02:14.620
+OK.
+
+02:14.700 --> 02:20.100
+In the eyes of javascript a key and a value inside of a set are exactly the same thing.
+
+02:20.130 --> 02:23.270
+And so for that reason they were allowed to keep the foreach loop same.
+
+02:23.390 --> 02:26.420
+And for that reason I have to explain this part right here.
+
+02:26.430 --> 02:29.510
+So with that being said we'll go ahead and create a set.
+
+02:29.510 --> 02:38.920
+So with you let ours set and then we'll do a new and then set and we'll just pass in the array right
+
+02:38.980 --> 02:40.060
+there.
+
+02:40.060 --> 02:42.560
+And then after that we can do a loop.
+
+02:42.600 --> 02:50.830
+So we do a For Each loop for each pass in our arrow function and then just to illustrate that they're
+
+02:50.830 --> 02:51.490
+the same.
+
+02:51.490 --> 02:59.620
+I'm going to do the value in the key and then after that I'll do set you know we can do a canceled log
+
+03:01.090 --> 03:03.080
+and you can use template literals if you want.
+
+03:03.100 --> 03:09.610
+I will and will do a comparison so not really a comparison just a substitution and we'll print out the
+
+03:09.610 --> 03:16.060
+value and then we'll do a space and we'll print out the key and then we'll go down to the next line
+
+03:17.080 --> 03:19.810
+and we'll print out a comparison.
+
+03:19.810 --> 03:29.770
+So you do our set equals triple equals set we'll go down to the very last line if it it'll let me.
+
+03:29.770 --> 03:30.460
+There we go.
+
+03:30.560 --> 03:37.550
+And I'll just draw a line to separate it out like so now that we have that if a reload this you can
+
+03:37.550 --> 03:39.040
+see it print out 1 1.
+
+03:39.080 --> 03:40.170
+True 2.
+
+03:40.220 --> 03:40.770
+True.
+
+03:40.790 --> 03:45.680
+So these are exactly the same but this is the way that you can loop through and perform operations with
+
+03:45.680 --> 03:45.990
+your set.

@@ -1,0 +1,64 @@
+WEBVTT
+
+00:00.450 --> 00:07.350
+So one of the ways that people would simulate sets is to essentially create an hollowed out object essentially
+
+00:07.350 --> 00:17.050
+So you said and we'll do objects create and then we'll pass and no reason we're passing and no it's
+
+00:17.050 --> 00:17.740
+so that way.
+
+00:17.740 --> 00:24.060
+It's prototype it is set to no meaning that it won't accidentally inherit any properties or things like
+
+00:24.060 --> 00:24.730
+that.
+
+00:24.750 --> 00:31.970
+Then afterwards you would do something like set a property on the object so you said foo equals true.
+
+00:32.000 --> 00:37.260
+And like I said sets aren't really used to retrieve information they're really just use to check for
+
+00:37.260 --> 00:40.490
+the existence of that information of that value.
+
+00:40.770 --> 00:46.280
+And the reason that said it's true is that way if I did like if said foo it would return true.
+
+00:46.280 --> 00:48.240
+So it's a great way to check for the value.
+
+00:48.330 --> 00:53.840
+That's really the only difference between simulating a map and simulating a set is whenever you would
+
+00:53.850 --> 00:57.630
+simulate a map you would actually store of value inside of it.
+
+00:57.630 --> 01:05.790
+So the only difference is the information that's being stored so that map equals object does create
+
+01:06.270 --> 01:07.320
+or create.
+
+01:07.320 --> 01:11.800
+There we go you know Iligan that way it doesn't accidentally inherit anything.
+
+01:11.910 --> 01:13.260
+And we do map.
+
+01:13.370 --> 01:18.270
+Foo equals actual information.
+
+01:18.270 --> 01:20.520
+And then later on it would be used to retrieve value.
+
+01:20.520 --> 01:22.260
+So that's the way they would do it.
+
+01:22.260 --> 01:26.700
+They would use sets but they would use hollowed out objects to kind of simulate a set.
+
+01:26.910 --> 01:32.400
+And now I would just check for the existence of value and maps would be used to actually retrieve information.

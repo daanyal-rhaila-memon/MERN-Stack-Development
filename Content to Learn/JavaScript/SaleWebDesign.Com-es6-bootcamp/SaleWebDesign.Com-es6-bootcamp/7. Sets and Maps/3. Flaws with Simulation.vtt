@@ -1,0 +1,127 @@
+WEBVTT
+
+00:00.450 --> 00:08.230
+So this sort of simulated hack map right here in this simulated set work pretty well in simple situations.
+
+00:08.230 --> 00:15.450
+But things become problematic especially given the fact that all object properties must be strings.
+
+00:15.450 --> 00:26.700
+So whenever you do something like for example map and then let's do a string five like so sort of equal
+
+00:26.700 --> 00:27.750
+to foo.
+
+00:28.360 --> 00:36.390
+And then after that you map well defined right there set that equal to bar like so whenever I cancelled
+
+00:36.390 --> 00:44.490
+or log this do a concert or log map 5 the number right there you see that it actually prints out bar
+
+00:44.520 --> 00:49.380
+because behind the scenes since all object properties must be strings.
+
+00:49.500 --> 00:52.770
+This is implicitly coerced into a string.
+
+00:52.770 --> 00:54.540
+So in other words it does work.
+
+00:54.540 --> 01:01.520
+Now that being said there is another problem and that is using objects as keys so for example if I did.
+
+01:01.520 --> 01:12.400
+Like let's say Konst key one set it equal to an object an empty object Konski to set equal to an object.
+
+01:12.450 --> 01:23.330
+And then I try to save values for these sort and map and then let's a key one cause key one.
+
+01:23.550 --> 01:37.350
+And then let's say I did map key to equals key to like so then I go ahead and cancel the log map key
+
+01:37.350 --> 01:44.580
+one like so you're going to see that this clearly doesn't work and instead it looks like I just overrode
+
+01:44.580 --> 01:46.080
+key one with key two.
+
+01:46.290 --> 01:51.930
+And that's because the string representation of an object looks something like this looks like an Object
+
+01:52.290 --> 01:52.740
+object.
+
+01:52.740 --> 01:59.310
+So in other words behind the scenes since we can't use an object as a key this is coerced into the string
+
+01:59.310 --> 02:03.350
+representation of an object in the string representation of an object.
+
+02:03.390 --> 02:05.100
+Always looks like this.
+
+02:05.100 --> 02:11.550
+So in other words whenever I try to do this they both reference the same exact thing and because they
+
+02:11.550 --> 02:17.280
+both reference the same exact thing it's practically like I'm overwriting one with the other because
+
+02:17.280 --> 02:22.230
+in the eyes of javascript Q1 and Q2 are the same thing because they're just string representations of
+
+02:22.230 --> 02:23.030
+objects.
+
+02:23.040 --> 02:27.720
+Intuitively you would think like hey you know they're referencing different objects so there should
+
+02:27.720 --> 02:32.820
+be different keys but unfortunately that's not how it works because it's coerced into the string version
+
+02:32.940 --> 02:33.570
+of an object.
+
+02:33.570 --> 02:36.000
+So once again that doesn't really work.
+
+02:36.000 --> 02:42.390
+And of course using numbers in general and storing values inside of numbers can also be problematic
+
+02:42.390 --> 02:51.240
+if I did something like For example let's do a map and then we store a map let's say inside of here
+
+02:51.750 --> 02:59.610
+and we set it equal to we'll do one in this particular case if I check for the existence of this number
+
+02:59.700 --> 03:00.650
+right here.
+
+03:01.810 --> 03:03.560
+It's going to work out pretty well.
+
+03:03.700 --> 03:07.400
+And the reason it's going to work is because we know one is a truthy value.
+
+03:07.420 --> 03:10.210
+So it's kind of unclear what I'm trying to do here.
+
+03:10.210 --> 03:15.540
+Am I checking for the existence of a non-zero value in that case.
+
+03:15.550 --> 03:20.830
+This would make sense but overall it's still kind of confusing as to whether I'm checking if there is
+
+03:20.830 --> 03:27.540
+a value assigned to this key at all or if I'm just checking for the existence of a non-zero value.
+
+03:27.550 --> 03:32.590
+So a lot of problems associated with it especially when things get more complicated you start to see
+
+03:32.590 --> 03:38.560
+the shortcomings of trying to use these objects as sets and maps and all the problems I just discussed
+
+03:38.560 --> 03:41.070
+with maps also apply to sets as well.
+
+03:41.080 --> 03:43.180
+So we'll look at a new way to do it in the next few.
