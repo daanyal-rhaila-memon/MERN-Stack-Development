@@ -1,0 +1,85 @@
+WEBVTT
+
+00:00.450 --> 00:07.230
+One of the things that kind of makes working with for loops easier is if I don't specify a particular
+
+00:07.230 --> 00:14.370
+builtin iterator like I do here with keys or it could be values or it could be entry's if I don't specify
+
+00:14.370 --> 00:15.760
+one of those iterators.
+
+00:15.930 --> 00:22.150
+The for loop will use a default iterator for these different collection types.
+
+00:22.170 --> 00:29.040
+So if you're working with an array or if you're working with a set the default entry or Scuse me the
+
+00:29.040 --> 00:36.060
+default iterator is going to be values so you can see I saved it here and if I change this to values
+
+00:36.330 --> 00:43.380
+it has the same exact result for colors the array and for tracking the values right here you could see
+
+00:43.380 --> 00:44.750
+it has the same exact result.
+
+00:44.910 --> 00:52.530
+So the default iterator if you don't specify one for sets and for arrays is to use the builtin values
+
+00:52.530 --> 00:53.460
+iterator.
+
+00:53.460 --> 00:59.460
+On the other hand if you're working with maps as you can see here the default iterator to be used if
+
+00:59.460 --> 01:06.300
+you don't specify an iterator when you use a for loop with a map is actually the entries iterator right
+
+01:06.300 --> 01:07.000
+here.
+
+01:07.020 --> 01:12.960
+So essentially it's the same format that we might use to initialize a map if I just do an example map
+
+01:12.960 --> 01:13.790
+right here.
+
+01:14.010 --> 01:17.420
+We'll just call it a map like so you don't have to copy this.
+
+01:17.550 --> 01:19.520
+And then I did new map.
+
+01:20.130 --> 01:25.200
+You can see if you remember correctly we pass in an array and then every item in the array is an array
+
+01:25.200 --> 01:28.770
+itself where it has a name and then a value.
+
+01:28.770 --> 01:29.810
+So like so.
+
+01:29.850 --> 01:34.100
+So it's the same exact format right here as the default iterator.
+
+01:34.140 --> 01:40.430
+What it will actually return with that being said as you already noticed from our previous lesson whenever
+
+01:40.440 --> 01:46.980
+we check to see if weak maps and weak sets were iterable they're not iterable because they don't have
+
+01:46.980 --> 01:48.540
+a built in iterator.
+
+01:48.540 --> 01:53.550
+And the reason for that is whenever you work with a weak sets or weak maps it's almost impossible to
+
+01:53.550 --> 01:57.860
+know exactly how many values are inside of that data collection.
+
+01:57.990 --> 02:03.210
+And for that reason you can't use it with an iterator because in order to use an iterator you have to
+
+02:03.210 --> 02:05.940
+know how many values are inside of that collection.

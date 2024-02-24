@@ -1,0 +1,130 @@
+WEBVTT
+
+00:00.690 --> 00:06.780
+This obviously looks like some pretty confusing syntax so I wanted to use an entire video and kind of
+
+00:06.810 --> 00:10.400
+dedicated to this to talk about what's really happening.
+
+00:10.410 --> 00:17.340
+So essentially like I said before symbol iterator is a way to access the default iterators of these
+
+00:17.340 --> 00:18.740
+collections right here.
+
+00:18.810 --> 00:24.750
+And these are already iterable but we can also use symbol iterator to create our own iterable as that
+
+00:24.750 --> 00:28.130
+is objects with which we could use things like a for loop.
+
+00:28.140 --> 00:35.340
+So by default a person or a customer the defined object doesn't have an iterator on it.
+
+00:35.370 --> 00:37.450
+And for that reason it's not iterable.
+
+00:37.540 --> 00:43.890
+And so the first thing that we need to do is make sure that this object has an iterator on it otherwise
+
+00:43.890 --> 00:45.530
+it will not be iterable.
+
+00:45.720 --> 00:52.910
+So that is why I did symbol dot iterator right here by using symbol dot iterator.
+
+00:53.040 --> 00:55.670
+I'm defining a custom or a.
+
+00:55.680 --> 00:59.300
+Scuse me default iterator for this custom object.
+
+00:59.300 --> 01:04.650
+So this is me defining a custom iterator for my default object.
+
+01:04.710 --> 01:11.820
+Now also you notice I added a star right here which is something typically reserved for generator functions.
+
+01:11.860 --> 01:18.000
+Now generator functions are also responsible for returning an iterator whenever they're invoked.
+
+01:18.000 --> 01:26.370
+So in this case whenever I actually loop through the four of and I run for on this collection behind
+
+01:26.370 --> 01:33.700
+the seams it needs to invoke symbol da iterator which will return an iterator function.
+
+01:33.730 --> 01:37.750
+Now whenever this happens we need to call dot next.
+
+01:37.770 --> 01:45.510
+So inside of here what I could have done was manually iterate through the values of collection but instead
+
+01:45.510 --> 01:48.500
+of doing that I use another form of loop.
+
+01:48.690 --> 01:55.680
+And the reason I'm doing that is to take advantage of the built in iterator that's on the items array
+
+01:55.800 --> 01:58.190
+right here because this is already iterable.
+
+01:58.330 --> 02:04.620
+And so I can take advantage of the built in iterator inside of it and just loop through it like so and
+
+02:04.620 --> 02:06.000
+then yield the results.
+
+02:06.030 --> 02:08.340
+Which is why this is a generator function.
+
+02:08.400 --> 02:16.140
+Now as we remember from before the yield keyword is used to specify what the value will be of the return
+
+02:16.140 --> 02:20.160
+object that is returned whenever we call dot next.
+
+02:20.160 --> 02:23.450
+So just to review and just to kind of illustrate this to you.
+
+02:23.640 --> 02:34.800
+I'm going to go ahead and we'll try and let's say a counseled log collection in symbol if I can do it
+
+02:34.800 --> 02:42.750
+symbol dot iterator like so and access the symbol dot iterator of this object and you can see it's actually
+
+02:42.750 --> 02:47.030
+equal to this function that I custom defined right here.
+
+02:47.040 --> 02:49.110
+So just to review real quick.
+
+02:49.320 --> 02:54.120
+All we did was specify what we want the default iterator to be.
+
+02:54.330 --> 02:59.400
+And we also made it into a generator function because that's all an iterator is right.
+
+02:59.400 --> 03:07.710
+It is a object that are excuse me a symbol iterator is just a function that returns an iterator object.
+
+03:07.710 --> 03:14.820
+So in this case what we do inside of it is instead of creating our own custom iteration we rely on the
+
+03:14.820 --> 03:21.870
+builtin iterator on the array inside of our object and loop through it and then yield the result that
+
+03:21.870 --> 03:27.970
+is returned right here and that is then the value that is returned in this for a loop.
+
+03:27.990 --> 03:31.130
+Right here the value that is yielded I should say.
+
+03:31.350 --> 03:34.290
+So I understand this seems a little crazy at first.
+
+03:34.290 --> 03:39.120
+It takes a little bit of time to get used to it but if you have any questions please feel free to leave
+
+03:39.120 --> 03:41.780
+me a comment but otherwise we're going to go ahead and move on.

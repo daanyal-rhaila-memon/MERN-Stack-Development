@@ -1,0 +1,97 @@
+WEBVTT
+
+00:00.570 --> 00:07.590
+So far we've been using Simbel da iterator to work with built in iterable but you can actually use the
+
+00:07.590 --> 00:11.760
+symbol iterator to create your own iterable.
+
+00:11.880 --> 00:18.690
+So for example objects by default are not iterable but we can make them iterable by taking advantage
+
+00:18.690 --> 00:19.410
+of symbol.
+
+00:19.470 --> 00:24.720
+Iterator Zwolle will do is first we're going to write out some code and then in the next video I'm going
+
+00:24.720 --> 00:30.300
+to try and explain in as much detail and as clearly as I can what I actually did.
+
+00:30.300 --> 00:36.170
+So we'll do a collection and this is going to be an object that we're going to make iterable now inside
+
+00:36.180 --> 00:40.030
+of here I'm going to have a property called items that will be an array.
+
+00:40.290 --> 00:43.670
+And then after that I going to make collection singular.
+
+00:43.680 --> 00:45.960
+It doesn't make sense for it to be plural.
+
+00:46.020 --> 00:53.620
+Then after that I'm going to make my own default iterator by creating a generator function then I'm
+
+00:53.630 --> 00:58.340
+going to use a computed value and I'm going to say symbol.
+
+00:58.980 --> 01:02.860
+Whoops dot iterator like.
+
+01:02.890 --> 01:06.970
+So outside of that still defining this.
+
+01:06.970 --> 01:07.340
+OK.
+
+01:07.360 --> 01:21.670
+So inside of here I want to do for let item of items or items I should say this items were inside of
+
+01:21.670 --> 01:32.290
+the object and then after that inside of here I'm going to go ahead and put yield item like so and then
+
+01:32.290 --> 01:34.720
+we can clean this up if we want to which I do.
+
+01:34.720 --> 01:39.430
+So when I go ahead and do that real quick there we go.
+
+01:39.490 --> 01:42.210
+And then after that we need to pop this over a little bit.
+
+01:42.230 --> 01:47.520
+So I will make this just a little nicer looking like so perfect.
+
+01:47.620 --> 01:49.120
+So now it looks a little cleaner.
+
+01:49.390 --> 01:54.070
+So next thing we need to do is go ahead and add a couple of things to our items array.
+
+01:54.090 --> 02:01.240
+So I'm just going to push on a couple of values so we'll do one and then after that we'll copy this
+
+02:01.240 --> 02:08.250
+so we'll do two and then three loops and then three like so.
+
+02:08.280 --> 02:14.540
+Then after that if we try to use a for loop with her object before this would not have worked.
+
+02:14.550 --> 02:27.100
+But now if I try I'll do for then I'll do less and vow of collection like so and then just cancel the
+
+02:27.100 --> 02:29.760
+log the value.
+
+02:30.120 --> 02:32.340
+You'll see that it prints out one to three.
+
+02:32.340 --> 02:36.060
+So what once was an iterable is now an iterable.
+
+02:36.060 --> 02:41.940
+Now obviously the syntax looks pretty wild pretty confusing so in the next video I'm going to go into
+
+02:41.940 --> 02:44.120
+detail about what's actually going on.

@@ -1,0 +1,127 @@
+WEBVTT
+
+00:00.390 --> 00:06.650
+So we've seen the built in array iterator and also how we can use it to create our own custom iterable.
+
+00:06.660 --> 00:10.770
+And also we've learned how we can create our own custom iterators.
+
+00:10.770 --> 00:16.080
+Now there are a lot of built in iterators other than the builtin array iterator.
+
+00:16.200 --> 00:20.850
+And for the most part you won't be needing to make your own custom iterators unless you're working with
+
+00:20.850 --> 00:23.380
+something like a class or an object.
+
+00:23.400 --> 00:29.330
+Instead we have these three different builtin iterators right here that make working with iterable.
+
+00:29.490 --> 00:32.490
+And these other built in data types much easier.
+
+00:32.490 --> 00:37.500
+So what we'll do is we'll make a couple of collections right here we're going to do an array a map and
+
+00:37.500 --> 00:38.010
+a set.
+
+00:38.010 --> 00:45.240
+So we'll do it colors and then we'll do like red and blue and green if I can get it.
+
+00:45.330 --> 00:47.720
+There we go green like so.
+
+00:48.120 --> 00:55.710
+And then after that we'll make a set so we'll do and tracking and we'll do new set and we'll initialize
+
+00:55.710 --> 01:00.010
+it with some values so we'll pass in an array and it'll just be some numbers.
+
+01:00.010 --> 01:05.160
+Here's what he 45 56 80 to 23.
+
+01:05.340 --> 01:09.620
+Like so then after that we'll make a map so do.
+
+01:10.110 --> 01:18.900
+And then we'll do data we'll do new map like so now I could initialize this with rays but in this case
+
+01:18.900 --> 01:20.670
+I'm just going to set some values on it.
+
+01:20.670 --> 01:26.360
+So in this case I'll do a data set and then I'll pass and name which will just be Andrew.
+
+01:26.670 --> 01:29.460
+And then after that I'll do it again.
+
+01:29.460 --> 01:30.720
+Copy this.
+
+01:30.720 --> 01:36.910
+And then in this case I'll put age and then I'll set that to be a number like 90 solid.
+
+01:36.930 --> 01:37.300
+OK.
+
+01:37.320 --> 01:43.760
+So now the first built in iterator that we're going to use is called entries and essentially what entries
+
+01:43.770 --> 01:51.470
+does is it returns a two item array where the two items represent the key and the value in the case
+
+01:51.470 --> 01:57.720
+of the array it's going to return the Indus C and the value associated with that index right there.
+
+01:57.720 --> 02:02.250
+And then for sets since the key and the value are the same thing in sets.
+
+02:02.280 --> 02:06.630
+It's going to return the same thing twice in the array and then for maps it will return the actual key
+
+02:06.630 --> 02:07.650
+value pair.
+
+02:07.650 --> 02:10.410
+So what we'll do is we'll loop through with a of.
+
+02:10.560 --> 02:13.460
+Since these are iterable So we'll do.
+
+02:13.920 --> 02:19.370
+And then we'll do entry of colors in Sri.
+
+02:19.560 --> 02:20.410
+If I can.
+
+02:20.640 --> 02:22.820
+There we go like so.
+
+02:23.010 --> 02:29.720
+And if we just canceled out log the entry you'll see that it returns these two arrays right.
+
+02:29.730 --> 02:36.870
+Here these two item arrays 0 red one blue to green like so and we can just copy and paste this twice.
+
+02:36.880 --> 02:43.450
+So we'll do twice like so and then we'll just change out colors with tracking and we'll change all colors
+
+02:43.450 --> 02:45.190
+here with data like so.
+
+02:45.190 --> 02:47.140
+And it's going to do the exact same thing.
+
+02:47.200 --> 02:52.030
+You'll see after colors if I can click on this you can see it does the key and the value.
+
+02:52.120 --> 02:54.460
+But this is set in the key and the values are the same thing.
+
+02:54.460 --> 02:57.490
+So it just returns a two item array with the same thing.
+
+02:57.520 --> 03:02.260
+But then for the map right here you see we actually get a two item array with the key and the value.

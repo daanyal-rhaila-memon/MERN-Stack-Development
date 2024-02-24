@@ -1,0 +1,49 @@
+WEBVTT
+
+00:00.420 --> 00:06.380
+Now I want to show you how sets and maps play into something else referred to as an iterator.
+
+00:06.390 --> 00:11.730
+So let's go ahead and comment out this script tag right here and then we'll go ahead and make a new
+
+00:11.730 --> 00:13.590
+file called iterators dodge.
+
+00:13.630 --> 00:14.540
+Yes.
+
+00:14.670 --> 00:19.070
+Now while I'm making this I'll go ahead and talk to you a little bit about what iterators are.
+
+00:19.200 --> 00:23.720
+So whenever we use arrays essentially typically we loop through them.
+
+00:23.730 --> 00:30.190
+But a lot of programming languages have decided to go from using loops to using iterators.
+
+00:30.210 --> 00:35.400
+And the reason being first whenever you use a loop you have to keep track of where you are in the loop
+
+00:35.640 --> 00:42.070
+by initializing a variable on the other hand whenever you're using an iterator to loop through something.
+
+00:42.090 --> 00:43.770
+Essentially that's what you're doing.
+
+00:43.770 --> 00:50.160
+You're basically using an iterator object to programmatically return whatever is the next thing in the
+
+00:50.160 --> 00:51.060
+collection.
+
+00:51.060 --> 00:58.440
+So this combined with the new Array methods inside of ESX in conjunction or coupled with things like
+
+00:58.440 --> 01:04.460
+sets and maps make E6 data processing so much easier.
+
+01:04.530 --> 01:09.680
+And on top of that it makes things like even working with asynchronicity much much easier.
+
+01:09.720 --> 01:10.980
+Inside of javascript.

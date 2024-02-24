@@ -1,0 +1,88 @@
+WEBVTT
+
+00:00.510 --> 00:06.470
+Another thing that is closely associated with iterators is something called an iterable.
+
+00:06.480 --> 00:12.630
+Now what an iterable is is an object with a symbol da iterator property on it.
+
+00:12.630 --> 00:18.450
+And I know we haven't talked really in detail about the symbol data type but for now just know that
+
+00:18.450 --> 00:26.010
+this property this symbol iterator property specifies this function that returns an iterator for this
+
+00:26.010 --> 00:27.300
+given object.
+
+00:27.300 --> 00:34.770
+So in other words arrays sets and maps as well as strings and even the iterators that are generator
+
+00:34.770 --> 00:36.120
+functions return.
+
+00:36.120 --> 00:42.150
+These are all considered to be iterable is because if you think about it they have these built in iterators
+
+00:42.240 --> 00:43.770
+specified on them.
+
+00:43.890 --> 00:46.140
+So that is why they're referred to as iterable.
+
+00:46.320 --> 00:50.650
+And they are designed to work with something called a for loop.
+
+00:50.820 --> 00:56.910
+So the first part of the problem that I mentioned was that whenever we use a traditional for loop we
+
+00:56.910 --> 01:02.340
+have to keep track of different values by defining these indexes to keep track of where we are in the
+
+01:02.340 --> 01:03.180
+loop.
+
+01:03.180 --> 01:08.880
+The first part of the solution to that problem is iterators and the second part of the solution is the
+
+01:08.880 --> 01:10.040
+for loop.
+
+01:10.050 --> 01:16.440
+So to illustrate that he will go ahead and make a new array will do let and we'll call it names you
+
+01:16.530 --> 01:25.680
+know set it equal to you Andrew and then Jessica and then Victoria like so and then after that we can
+
+01:25.680 --> 01:29.410
+loop through it like so will do for parentheses.
+
+01:29.420 --> 01:39.490
+Let name of names like so and then inside of here we can just cancel it out log the individual name.
+
+01:39.510 --> 01:46.710
+Now as you can see here it completely eliminates the need to specifically declare like an industry or
+
+01:46.710 --> 01:50.050
+an initial value to keep track of where we are in the array.
+
+01:50.280 --> 01:57.750
+So what the for loop is doing behind the scenes is calling the next method on these on this iterator
+
+01:57.800 --> 01:58.880
+on this iterable.
+
+01:58.920 --> 02:05.670
+It's technically calling the next method on the iterator inside of the iterable and it's taking the
+
+02:05.970 --> 02:14.370
+value property of the results object that is returned and storing it in this variable until the results
+
+02:14.370 --> 02:19.020
+objects property done returns a value of true.
+
+02:19.080 --> 02:23.680
+Once the done property of the results object is set to true.
+
+02:23.820 --> 02:27.650
+It stops executing this loop and it moves on with the program.

@@ -1,0 +1,46 @@
+WEBVTT
+
+00:00.480 --> 00:03.810
+You can also have generator methods if you really wanted to.
+
+00:03.810 --> 00:09.360
+So for example we'll just do the same thing except we'll make an object this time so we'll do let RBJ
+
+00:09.900 --> 00:18.390
+object literal syntax and we'll just do let's say make it a Raider and we'll set it equal to this function
+
+00:18.390 --> 00:19.220
+right here.
+
+00:19.380 --> 00:20.450
+So just copy this.
+
+00:20.460 --> 00:23.150
+It's going to be the exact same thing like so.
+
+00:24.390 --> 00:26.640
+And in this case you can do that.
+
+00:26.640 --> 00:27.310
+There we go.
+
+00:27.390 --> 00:28.920
+And that works just as well.
+
+00:29.040 --> 00:36.650
+Or you could also do a concise method syntax so the way you do that is you just cut this out and instead
+
+00:36.890 --> 00:43.650
+all we have to do is put this in and get rid of the star and just do star.
+
+00:43.650 --> 00:46.370
+Make it a Raider like so.
+
+00:46.650 --> 00:51.940
+And that works just as well since we're not using the function keyword with this concise method syntax.
+
+00:51.990 --> 00:55.980
+We'll go ahead and put the star next to the name of the method instead.
+
+00:56.010 --> 01:00.300
+But other than that it works just the same and it is still a generator function.

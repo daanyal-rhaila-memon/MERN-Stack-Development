@@ -1,0 +1,190 @@
+WEBVTT
+
+00:00.530 --> 00:07.100
+So we talked about how iterators are becoming more and more popular as a replacement for loops especially
+
+00:07.100 --> 00:12.440
+when you just need to simply loop through an array or another type of collection like a set or a map.
+
+00:12.560 --> 00:17.930
+But what is an iterator really well essentially it's just an object that's all it really is and it's
+
+00:17.930 --> 00:20.650
+designed for us to do iterations with.
+
+00:20.660 --> 00:28.070
+Now this iterator object that we are going to create has a next method on it and the next method returns
+
+00:28.130 --> 00:33.140
+a result object and this result object has two different properties the value which is going to be the
+
+00:33.140 --> 00:39.230
+next value in the iteration and a done property which is going to be false as long as there's something
+
+00:39.230 --> 00:44.710
+else to be iterated through and it's going to be true whenever you're done iterating through your collection.
+
+00:44.960 --> 00:47.090
+And there's no more values to return.
+
+00:47.300 --> 00:49.720
+So how do we make an iterator object.
+
+00:49.910 --> 00:55.340
+Well we could do it ourselves and write it by hand but honestly that's not the way to go.
+
+00:55.340 --> 01:01.400
+We have another thing available to us inside of ESX and it's called a generator function or a generator
+
+01:01.400 --> 01:05.240
+function is just a function that returns an iterator.
+
+01:05.240 --> 01:10.670
+So we'll go ahead and make our generator function the way we do it is we just write function and then
+
+01:10.670 --> 01:15.380
+to make this a generator function we just put an asterisk or a star in the name of our function.
+
+01:15.380 --> 01:18.550
+So what do you make iterator.
+
+01:18.980 --> 01:24.320
+OK like so normal function aside from that inside of here I'm going to do something a little weird but
+
+01:24.320 --> 01:25.940
+I'm going to talk about it here in a second.
+
+01:25.940 --> 01:32.900
+So going to do yield which is a keyword and then one another yield statement and another yield statement.
+
+01:32.910 --> 01:34.730
+So going to yield one to three.
+
+01:34.760 --> 01:37.890
+We're going to talk about what that means exactly here in a second.
+
+01:38.210 --> 01:45.890
+But now we can create an iterator object so I'll let it a rate more and then I'm just going to call
+
+01:46.250 --> 01:51.320
+my generator function like I said before generator function returns an iterator.
+
+01:51.320 --> 01:54.620
+So now this variable is an iterator.
+
+01:54.620 --> 01:57.970
+So what I can do with it is counsel dialogue.
+
+01:58.070 --> 02:06.140
+Iterator Doughton next door value like so now I'm just going to copy and paste this three times and
+
+02:06.140 --> 02:11.290
+then for the fourth time that I pass it I'm going to change it from value to done.
+
+02:11.300 --> 02:15.260
+Now if I save this you can see it goes one to three and then true.
+
+02:15.470 --> 02:16.880
+So what's going on here.
+
+02:17.150 --> 02:22.670
+Well like I said before we created this iterator object because that's what a generator function returns
+
+02:22.670 --> 02:24.260
+an iterator object.
+
+02:24.260 --> 02:28.750
+Now every iterator object has a method built into it called next.
+
+02:28.760 --> 02:35.090
+Now next is going to return an object itself a result object and you can see this if I get rid of dot
+
+02:35.110 --> 02:37.650
+value and just call dot next.
+
+02:37.820 --> 02:44.150
+You can see it just returns this object right here with a property of value and a property of done.
+
+02:44.240 --> 02:51.590
+And that's why I say value because what I want to do is access the object that gets returned with dot
+
+02:51.590 --> 02:55.410
+notation using either value or dot done.
+
+02:55.430 --> 02:58.550
+Now aside from that we saw something else that's pretty weird.
+
+02:58.670 --> 03:01.400
+We saw this yield keyword right here.
+
+03:01.400 --> 03:04.160
+Now this is a new keyword inside of six.
+
+03:04.220 --> 03:11.690
+And what it allows me to do is specify what value should be returned when I call the next method right
+
+03:11.690 --> 03:12.410
+here.
+
+03:12.410 --> 03:15.630
+So in this case I said yield to be 1.
+
+03:15.650 --> 03:20.400
+So that is the value that will be returned inside of this results object.
+
+03:20.400 --> 03:22.230
+Thanks to the next method right here.
+
+03:22.400 --> 03:27.980
+And it also specifies in what order the value should be returned which is important for iteration.
+
+03:28.190 --> 03:34.580
+Now the coolest thing I would say about the yield keyword is after you get to your first yield statement
+
+03:34.610 --> 03:41.080
+and you run through it the function stops executing until you call the next method again.
+
+03:41.090 --> 03:46.220
+So what will happen is I'm going to call this next method right here and it's going to run through the
+
+03:46.220 --> 03:49.420
+first yield statement and then it's going to stop execution.
+
+03:49.530 --> 03:52.060
+And until I get to my next.
+
+03:52.640 --> 03:57.410
+My sequential or my following I should say another synonym for next my following.
+
+03:57.470 --> 03:58.520
+Next method.
+
+03:58.700 --> 04:02.360
+And then it'll call the second yield statement and then the third.
+
+04:02.360 --> 04:05.550
+And then for the fourth one the value will be set to undefined.
+
+04:05.570 --> 04:10.760
+You can see this if you change the fourth statement to undefined right here because there is no fourth
+
+04:10.760 --> 04:11.180
+yield.
+
+04:11.180 --> 04:12.620
+We didn't specify anything.
+
+04:12.860 --> 04:20.450
+But like I said before whenever there is no more values to return the done property is set to a boolean
+
+04:20.480 --> 04:22.670
+of true telling us that we are.
+
+04:22.850 --> 04:25.180
+We have completed our iteration.
+
+04:25.220 --> 04:32.350
+So this idea of being able to stop execution in the middle of a function is very very powerful.
+
+04:32.480 --> 04:36.420
+And you're going to see how it applies to many different things in the sequential videos.

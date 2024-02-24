@@ -1,0 +1,34 @@
+WEBVTT
+
+00:00.540 --> 00:05.970
+The less builds an iterator on our list is actually going to be keys and as its name implies it's an
+
+00:05.970 --> 00:08.160
+iterator that just returns the keys.
+
+00:08.160 --> 00:13.440
+So in the case of the array it's going to just return the index numbers right here and it's not actually
+
+00:13.440 --> 00:19.720
+going to return any potential own properties that might be on this array as well only the numbered indexes.
+
+00:19.800 --> 00:26.910
+And then for sets it's key and values are the same thing so doing for example asset tracking dot values
+
+00:27.270 --> 00:30.740
+and then doing tracking down keys has the same exact result.
+
+00:30.870 --> 00:35.640
+And then of course for our map it's going to just return the keys and instead of what it did here and
+
+00:35.640 --> 00:41.670
+just returning the value so we can see in the action by typing keys and then we can just paste that.
+
+00:41.700 --> 00:47.700
+So we'll copy it bring it down and then bring it down one more time and then say that you can see it
+
+00:47.700 --> 00:52.210
+just returns the indexes and then the key is slash values for the search.
+
+00:52.290 --> 00:54.300
+And lastly the keys for the map.

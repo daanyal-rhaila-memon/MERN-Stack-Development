@@ -1,0 +1,37 @@
+WEBVTT
+
+00:00.580 --> 00:07.920
+So generator functions are a very powerful feature of the specification because since there are functions
+
+00:07.920 --> 00:13.920
+they can be used anywhere your everyday function would be used because a generator function is a function.
+
+00:13.920 --> 00:16.740
+So you can put it inside of an object or an expression.
+
+00:16.740 --> 00:20.160
+However there's one thing to be said about the yield keyword.
+
+00:20.160 --> 00:26.160
+The yield keyword can only be used inside of a generator function directly inside of it.
+
+00:26.160 --> 00:32.220
+So if I put the yield keyword anywhere outside of this generator function it would throw an error.
+
+00:32.220 --> 00:39.540
+So for example if I comment this out right here and I decide to do items for each and then I'll throw
+
+00:39.540 --> 00:49.230
+in a arrow function like so and then I yield every individual item is going to throw an error or 90
+
+00:49.230 --> 00:49.890
+percent sure.
+
+00:49.920 --> 00:53.870
+Well uncaught Senate syntax error unexpected identifier.
+
+00:54.030 --> 00:59.580
+So the whole reason this is throwing an error is because it's a function that is not a generator function
+
+00:59.880 --> 01:02.670
+and is trying to take advantage of the yield keyword.

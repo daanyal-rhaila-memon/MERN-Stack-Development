@@ -1,0 +1,187 @@
+WEBVTT
+
+00:00.830 --> 00:05.710
+So if you're ever deciding if you should use a for loop or a for loop.
+
+00:05.720 --> 00:10.910
+Just remember if you don't need to keep track of values or anything like that for a loop is a great
+
+00:10.910 --> 00:16.100
+way to go it's a lot simpler for just simple looping through collections like arrays.
+
+00:16.130 --> 00:20.960
+Now obviously if you want to have more fine grained control over the loop you might need a traditional
+
+00:20.960 --> 00:26.150
+for a loop but in general for a simple iteration the for loop is the way to go.
+
+00:26.150 --> 00:32.150
+Now what's happening behind the scenes is whenever I pass in this collection right here the for loop
+
+00:32.210 --> 00:37.370
+invokes symbol dot iterator as a function.
+
+00:37.370 --> 00:44.030
+Now remember what I said appear is that symbol dot iterator is going to return an iterator for this
+
+00:44.030 --> 00:46.090
+particular object right here.
+
+00:46.100 --> 00:54.290
+So then the for loop takes the iterator the object that's returned and it calls the dot next method
+
+00:54.650 --> 00:57.340
+on that iterator whenever it does.
+
+00:57.350 --> 01:02.860
+As we know it returns a result object with two properties value in done.
+
+01:02.930 --> 01:09.440
+It takes the value property of that result object and stores it in this variable temporarily and then
+
+01:09.440 --> 01:10.850
+it does the whole thing over again.
+
+01:10.850 --> 01:12.950
+It calls dot next again.
+
+01:13.280 --> 01:14.890
+Stores the result value.
+
+01:14.900 --> 01:15.460
+OK.
+
+01:15.620 --> 01:22.880
+And then it does that again and again until the done property of the results object is true whenever
+
+01:22.880 --> 01:27.620
+it returns a result object where the done property is set to true the loop exits.
+
+01:27.650 --> 01:32.300
+And so the variable name is never set equal to undefined.
+
+01:32.300 --> 01:38.000
+So I can prove this to you because what we can do is we can actually access these defaults or these
+
+01:38.000 --> 01:40.300
+built in iterators on these iterable.
+
+01:40.460 --> 01:47.720
+So we'll make a new variable and we'll just call it something like drinks and we'll do like coffee because
+
+01:47.720 --> 01:49.290
+coffee is good.
+
+01:49.370 --> 01:56.270
+I mean if you like coffee I guess and then milk and then tea and then I can prove that I can actually
+
+01:56.330 --> 01:59.620
+access these built in iterators and this is exactly what's happening.
+
+01:59.620 --> 02:00.010
+OK.
+
+02:00.050 --> 02:08.420
+So what you might do is do iterator right here and then we'll do drinks.
+
+02:08.420 --> 02:11.660
+Now I need to access symbol da iterator.
+
+02:11.810 --> 02:18.010
+So in order to do that I need to use brackets syntax or do symbol dot iterator.
+
+02:18.440 --> 02:20.240
+And if I just leave it like this.
+
+02:20.240 --> 02:24.860
+Like I said before symbol dot iterator is a function or a method really.
+
+02:24.860 --> 02:29.350
+So in this case it's going to be returning a reference to that function.
+
+02:29.540 --> 02:32.920
+Instead I want to get what the function returns.
+
+02:32.930 --> 02:37.580
+So I need to actually invoke the function so it will return an iterator.
+
+02:37.730 --> 02:41.300
+The default iterator of this iterable in this case.
+
+02:41.540 --> 02:50.960
+And so now that I have that if I cancelled log I show you the log iterator dot next you'll see that
+
+02:50.960 --> 02:57.110
+this is actually the iterator of this particular collection right here and it's returning value coffee
+
+02:57.190 --> 02:58.760
+and done is false.
+
+02:58.860 --> 03:06.080
+And we can do this over and over again since we can access the symbol da iterator the builtin iterators
+
+03:06.170 --> 03:07.760
+of a given collection.
+
+03:07.760 --> 03:10.220
+We can actually check if something is an iterable.
+
+03:10.220 --> 03:17.510
+So the way we might do that is to make a function called is it to rubble like so might take an object
+
+03:17.510 --> 03:18.760
+that would be J.
+
+03:18.950 --> 03:24.840
+And then inside of here we'll have it return true or false if return type of O B J.
+
+03:25.070 --> 03:34.230
+And then we access the builtin or supposed to be builtin iterator proper or a method right here and
+
+03:34.230 --> 03:37.860
+see if the type of this is equal to a function.
+
+03:37.860 --> 03:43.770
+Now if it is an iterable this will be available inside of it and it will be a function.
+
+03:43.770 --> 03:50.160
+So by checking this we can see a lot of things so we can you cancel the log and then iterable and I
+
+03:50.160 --> 03:53.150
+might pass and just a good old fashioned array.
+
+03:53.430 --> 03:56.110
+Save that and you can see it equals true.
+
+03:56.190 --> 04:03.480
+Do the same thing copy this a few times check if it's new map.
+
+04:03.570 --> 04:06.440
+So we'll see if maps are iterable as well.
+
+04:06.570 --> 04:17.010
+If it'll let me know map true again and then after that we'll see if we can get let's say a new set
+
+04:17.110 --> 04:19.270
+I'm trying to get the parentheses right.
+
+04:19.350 --> 04:27.010
+So do new set like so you can see that equals true as well.
+
+04:27.100 --> 04:35.060
+And then if we do new we can map like so that's going to be false.
+
+04:35.210 --> 04:41.850
+And then if we also do new week set that's going to be false as well.
+
+04:41.850 --> 04:49.160
+And last but not least objects are also not iterable So if I did like D and I took this and I passed
+
+04:49.190 --> 04:52.640
+an Object object by default are not iterable.
+
+04:52.670 --> 04:57.520
+Let me go ahead and show you that it's just going to throw an error because I didn't get the print.
+
+04:57.530 --> 04:58.940
+You'll see that's also false.

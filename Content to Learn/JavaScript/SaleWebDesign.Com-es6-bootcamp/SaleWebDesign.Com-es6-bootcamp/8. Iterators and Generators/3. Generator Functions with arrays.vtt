@@ -1,0 +1,85 @@
+WEBVTT
+
+00:00.720 --> 00:05.640
+Now this yield key word can be used with any type of value or expression.
+
+00:05.730 --> 00:09.970
+So you're not just limited to these little simple primitive types right here.
+
+00:10.200 --> 00:14.400
+What else you could do is something that evaluates to a value like an expression.
+
+00:14.400 --> 00:23.430
+So for example we'll do another generator function will do function asterisk create it or re or.
+
+00:23.820 --> 00:31.080
+And then inside of here I'm going to do a loop and this function is going to take an array as an argument.
+
+00:31.080 --> 00:35.430
+So in this case we'll just loop through will do for a.
+
+00:36.030 --> 00:37.280
+Equals zero.
+
+00:37.290 --> 00:48.240
+That way I don't contaminate my scope semi-colon as less than items length so it let me write a semi-colon
+
+00:48.660 --> 00:52.180
+then we'll increment like so.
+
+00:52.620 --> 01:00.150
+And inside of here I can yield and then items and then into see right there.
+
+01:00.150 --> 01:05.530
+Perfect So now we'll make our array or our iterator I should say will do.
+
+01:05.540 --> 01:16.750
+Let rates for two and then create iterator and I'm going to pass in some values so the 1 to 3 like before.
+
+01:17.090 --> 01:18.930
+Now we'll do the same thing as before.
+
+01:18.930 --> 01:20.190
+Cancel it out log.
+
+01:20.390 --> 01:26.540
+And matter of fact we can just copy and paste so we'll go back up to our previous cancelled logs and
+
+01:26.540 --> 01:35.850
+just copy this bring it down to here and then we'll paste it in and then we just need to add two.
+
+01:35.850 --> 01:43.020
+So we'll do Allt shift down down down add it to an unsafe and you can see it does the exact same thing
+
+01:43.020 --> 01:43.560
+as before.
+
+01:43.560 --> 01:45.380
+It prints 1 to 3.
+
+01:45.450 --> 01:50.970
+So you can use just about any value or expression with a yield statement right here.
+
+01:50.970 --> 01:57.240
+The cool thing about this is whenever we actually create our iterator and pass in this array right here
+
+01:57.240 --> 02:03.150
+to fill up our iterator with items to loop through the cool thing is whenever we invoke Next it goes
+
+02:03.150 --> 02:08.100
+through this function and it loops through and once it gets to the yield statement it yields the value
+
+02:08.190 --> 02:11.290
+and then it stops in the middle of the loop.
+
+02:11.370 --> 02:14.400
+And I know it doesn't seem like a big deal but that's a that's a big deal.
+
+02:14.440 --> 02:21.360
+Good school and it completely stops until I call the next method again and then go through another iteration
+
+02:21.360 --> 02:27.870
+of the loop and it'll stop again and again until I get to the very end of the array right here.
+
+02:27.870 --> 02:29.790
+And then it returns done as true.

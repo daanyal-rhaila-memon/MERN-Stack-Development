@@ -1,0 +1,76 @@
+WEBVTT
+
+00:00.480 --> 00:05.610
+Like I said before generator functions are just functions so you can put them just about anywhere that
+
+00:05.610 --> 00:07.410
+you would put a typical function.
+
+00:07.410 --> 00:12.600
+So for example we can do the same thing we did before by making a generator function but this time we'll
+
+00:12.600 --> 00:20.290
+do let make it a re tour and then we'll do an anonymous function.
+
+00:20.490 --> 00:26.160
+And since we're doing an anonymous function before when we made our function we put the star right before
+
+00:26.160 --> 00:27.130
+the function name.
+
+00:27.390 --> 00:31.860
+But in this case since we don't have a function name we'll just do a star and then parentheses like
+
+00:31.860 --> 00:34.730
+so and we'll pass on some items.
+
+00:34.770 --> 00:37.210
+In this case we'll do the same thing we did before.
+
+00:37.350 --> 00:39.870
+And in this case we'll just loop through it with you.
+
+00:39.890 --> 00:41.850
+I was zero.
+
+00:42.040 --> 00:48.580
+Then while it is less than item's length then we'll increment I like soooo.
+
+00:48.750 --> 00:57.100
+And then we'll just yield the individual item inside of I are inside of items I should say.
+
+00:57.420 --> 00:59.000
+Perfect Now that we have that set up.
+
+00:59.040 --> 01:07.290
+Next thing we can do is make our iterator so what you let it to a tour equals make iterator like so
+
+01:07.890 --> 01:08.710
+and we're good to go.
+
+01:08.710 --> 01:13.290
+So now we could do the same exact thing we did before which was to basically just cancel that log this
+
+01:13.740 --> 01:18.060
+and you can see it should work like a charm cannot read property of length.
+
+01:18.260 --> 01:20.010
+Ah I forgot to pass in my array.
+
+01:20.070 --> 01:20.890
+That's why.
+
+01:21.090 --> 01:24.420
+So we just have to pass in an array to fix this one two three.
+
+01:24.780 --> 01:27.500
+And now if you say that you see it works just like normal.
+
+01:27.570 --> 01:33.710
+As a side note even though you can use a generator function expression you cannot use or you cannot
+
+01:33.720 --> 01:41.510
+create a generator function by using Aeros syntax so you can't do something like for example Star parentheses
+
+01:42.030 --> 01:45.510
+arrow function that unfortunately will not work.

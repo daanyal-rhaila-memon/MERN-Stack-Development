@@ -1,0 +1,28 @@
+WEBVTT
+
+00:00.520 --> 00:06.640
+Now aside from this we also have another iterator and it's called values right here and as its name
+
+00:06.640 --> 00:09.160
+implies it's really just going to return the values.
+
+00:09.160 --> 00:14.350
+So what we can do is just switch out what we've already done here and just put values and then I'm going
+
+00:14.350 --> 00:20.260
+to copy this and then I'll paste it in for all these other spots right here with some control the command
+
+00:20.260 --> 00:21.350
+VI on the Mac.
+
+00:21.490 --> 00:25.330
+Then you can see it just returns the values as they're stored in the collection.
+
+00:25.330 --> 00:29.910
+So in the case of colors it just returns the values in the case of the cell.
+
+00:29.920 --> 00:35.920
+It just returns the values and in the case of the map it just returns the values and not the keys or
+
+00:35.920 --> 00:38.000
+the indexes associated with them.
