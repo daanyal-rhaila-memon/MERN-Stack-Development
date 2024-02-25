@@ -1,0 +1,91 @@
+WEBVTT
+
+00:00.340 --> 00:07.080
+The last video we learn how we can pass in values to our iterators using the next method.
+
+00:07.230 --> 00:14.310
+And whenever we pass in an argument to the next method that is basically setting the value of our yield
+
+00:14.310 --> 00:20.850
+statements so here I yield 1 which is just the value that's return and the result object.
+
+00:20.850 --> 00:25.410
+But then I'm setting the value of this yield statement to be of 4.
+
+00:25.440 --> 00:32.160
+So that way whenever it's assigned and then I get to this next yield statement right here the the variable
+
+00:32.160 --> 00:36.190
+first is equal to 4 because that's where I set the value of yield 2.
+
+00:36.330 --> 00:41.650
+And that's also why when I add together second plus three it's equal to eight.
+
+00:41.790 --> 00:44.760
+It's not equal to whatever I yield right here when I yield.
+
+00:44.760 --> 00:51.140
+I'm just specifying what I want to return in the results object right here instead of doing that.
+
+00:51.150 --> 00:54.530
+I set the value of this yield statement equal to 5.
+
+00:54.540 --> 01:00.150
+And that's why we do five plus three is equal to eight instead of whatever this yield is going to return
+
+01:00.150 --> 01:01.980
+which in this case would be six.
+
+01:01.980 --> 01:04.780
+So it gives me an a instead of a nine.
+
+01:04.800 --> 01:08.750
+With that being said we don't just have to pass in values to be returned.
+
+01:08.760 --> 01:11.350
+We can also pass in error conditions.
+
+01:11.490 --> 01:11.840
+OK.
+
+01:11.850 --> 01:18.330
+So what we can do is implement something on the iterator object directly so well do is I'll just copy
+
+01:18.330 --> 01:26.780
+what I have right here so I can copy comments at our legs so go up a little bit and throw that in here.
+
+01:26.850 --> 01:32.040
+So I'm going to get rid of these first couple invocations right here and then I'm just going to cancel
+
+01:32.040 --> 01:45.020
+the log iterator and then throw in new error parentheses and then stop like so.
+
+01:45.470 --> 01:51.650
+Now this is very useful not just for asynchronous programming but also for flexibility inside of my
+
+01:51.650 --> 01:58.400
+generator functions where I want to be able to mimic the ability to not just return values but also
+
+01:58.400 --> 02:01.190
+to stop the flow and throw an error as well.
+
+02:01.190 --> 02:03.850
+The two different ways that we can exit a function.
+
+02:03.980 --> 02:09.740
+So you can see essentially what happens right here is we call our first two next methods right here
+
+02:10.130 --> 02:16.250
+and we get the yield and then we get the assignment in the second yield and then after we get to the
+
+02:16.250 --> 02:21.710
+second yield raise here we throw a new error which essentially stops execution.
+
+02:21.710 --> 02:26.360
+Similar to what would happen if we just throw a new air in a traditional sense.
+
+02:26.540 --> 02:32.930
+And after that the flow completely stops very great for flexibility and you can also include something
+
+02:32.930 --> 02:35.900
+like a try catch statement inside of your generator.

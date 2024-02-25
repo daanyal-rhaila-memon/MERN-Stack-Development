@@ -1,0 +1,79 @@
+WEBVTT
+
+00:00.300 --> 00:06.150
+So if you recall from one of the videos way back when we can actually use the spread operator to turn
+
+00:06.150 --> 00:07.470
+a set into an array.
+
+00:07.470 --> 00:14.950
+So if we did something like Let say set equals new set then we can initialize that with some values
+
+00:14.950 --> 00:23.220
+you might be one to three legs so that we can make an array and we'll just call it our in and set it
+
+00:23.220 --> 00:27.790
+equal to a spread operator with our set in here.
+
+00:27.790 --> 00:34.220
+So now if I console log the array you'll see and it's just an array with 1 2 3.
+
+00:34.310 --> 00:40.500
+What we did was we took this array literal and then use the spread operator to take this set and take
+
+00:40.500 --> 00:44.970
+the values from that set and put it in as individual items in the array.
+
+00:44.970 --> 00:49.680
+The cool thing is the spread operator can be used with all types of iterable.
+
+00:49.800 --> 00:53.340
+So it can also be used with something like for example the map.
+
+00:53.370 --> 01:00.030
+And whenever you use a spread operator with an iterable what it's going to do is read from the iterator
+
+01:00.030 --> 01:06.360
+object and then it's going to place these items inside the array with the default iterator.
+
+01:06.360 --> 01:14.010
+So for example if we did a map like so let's map because new map and then we initialize it.
+
+01:14.540 --> 01:26.460
+And will you name Andrew and then we'll do say a page which should be a string equal to 23 like so.
+
+01:26.480 --> 01:31.310
+And then we make another race so we'll do our two and we'll just do the same thing as before spread
+
+01:31.310 --> 01:38.930
+operator inside of an array literal with the map and just canceled all log that array right here.
+
+01:39.080 --> 01:45.890
+So you can see in this particular case it has two arrays inside of this one array right here and inside
+
+01:45.890 --> 01:47.780
+of there we have these two arrays.
+
+01:47.780 --> 01:52.080
+I mean this two item array right here in this two item array right here.
+
+01:52.070 --> 01:58.940
+So whenever you use a spread operator with an iterable it's going to use the default iterator of that
+
+01:58.940 --> 02:00.500
+particular collection type.
+
+02:00.500 --> 02:07.370
+So in the case of map it's going to be using entries and whenever we use entries it returns a two item
+
+02:07.370 --> 02:14.030
+array and it will put that in as an individual item similar to how we originally seeded the map with
+
+02:14.030 --> 02:16.420
+its original key value pairs right there.
+
+02:16.460 --> 02:22.040
+So it will take whatever is returned from that object from that iterator and then place it inside of
+
+02:22.040 --> 02:26.040
+the array in the order in which the iterator returns the values.

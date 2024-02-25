@@ -1,0 +1,121 @@
+WEBVTT
+
+00:00.830 --> 00:03.380
+So what we have right now is pretty good.
+
+00:03.380 --> 00:09.580
+It's not too bad but if all we're going to do is yield values it's not really that impressive.
+
+00:09.650 --> 00:14.250
+It would be a lot better if we could pass values in and out of the iterator.
+
+00:14.300 --> 00:20.750
+Now the easiest way to do this is essentially going to be to take the current results object and take
+
+00:20.750 --> 00:24.040
+the value and pass that into next like we did before.
+
+00:24.200 --> 00:29.060
+Well we didn't really use previous results in past those in the next typically we just passed in straight
+
+00:29.060 --> 00:29.680
+numbers.
+
+00:29.840 --> 00:33.200
+But in this case it'll be more dynamic quote unquote.
+
+00:33.410 --> 00:45.680
+So it will be a result value like so then what we can do is we can take and value so that equal to yield
+
+00:46.580 --> 00:53.600
+one like so that I'm going to delete the other yield and then after that a minute take value and then
+
+00:53.600 --> 00:58.130
+I'm going to set it equal to value or yield plus value.
+
+01:01.100 --> 01:03.190
+Too like so now.
+
+01:03.210 --> 01:07.590
+Delete this and I might as well go ahead and yield 3 like so.
+
+01:07.640 --> 01:10.350
+And now you can see what we return is a little different.
+
+01:10.350 --> 01:16.300
+So this is a way that we can pass data in and out of our iterator by using the next method.
+
+01:16.320 --> 01:20.610
+So I'll walk you through this one more time because I want this to be really clear for you before we
+
+01:20.610 --> 01:22.930
+move on to something more advanced.
+
+01:22.950 --> 01:28.560
+So what we're doing is we're making a task runner so what someone is going to do is pass in a task that
+
+01:28.560 --> 01:30.290
+they want to be completed.
+
+01:30.330 --> 01:36.230
+In this case we're passing in a generator function which we have to and it's going to be called.
+
+01:36.240 --> 01:37.590
+So we're going to copy it.
+
+01:37.590 --> 01:39.050
+We're going to copy the iterator.
+
+01:39.050 --> 01:44.670
+We're going to take what's returned and then after that we're going to go ahead and use dot next on
+
+01:44.670 --> 01:50.460
+the iterator which will return this results object right here and that will yield one.
+
+01:50.460 --> 01:52.150
+Whenever we call next.
+
+01:52.350 --> 01:58.930
+And then after that what we do is we go down here and we call step whenever we call step.
+
+01:59.010 --> 02:02.500
+We check to see if Dunn is equal to true.
+
+02:02.790 --> 02:06.630
+And if it's not then we go ahead and do task next.
+
+02:06.660 --> 02:11.700
+Again and this time we pass in the previous result value right here.
+
+02:11.730 --> 02:18.240
+So in this case we're passing in one and then that is what is set equal to this value right here because
+
+02:18.240 --> 02:24.130
+remember whenever we pass in an argument next we're basically setting the value of our yield statement
+
+02:24.300 --> 02:25.890
+and we stopped right here.
+
+02:25.890 --> 02:27.550
+So now whenever we call a task.
+
+02:27.570 --> 02:34.650
+Next we're going to assign value of number one and then we're going to hit this next yield right here
+
+02:34.830 --> 02:39.310
+which is going to take the value one and add it to two and then yield that.
+
+02:39.330 --> 02:41.560
+So that's going to be restored and the results object.
+
+02:41.580 --> 02:44.560
+And so we cancelled out log three and done as follows.
+
+02:44.670 --> 02:46.110
+And then we call it one more time.
+
+02:46.110 --> 02:49.390
+And in this case we're completely done we have nothing else to do.
+
+02:49.470 --> 02:51.840
+And so we don't keep iterating.

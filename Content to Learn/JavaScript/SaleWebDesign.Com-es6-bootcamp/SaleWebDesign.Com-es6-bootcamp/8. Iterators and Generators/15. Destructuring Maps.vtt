@@ -1,0 +1,64 @@
+WEBVTT
+
+00:00.390 --> 00:06.900
+As a quick side know on iterating through maps you could also use the destructuring syntax were used
+
+00:06.900 --> 00:07.760
+before.
+
+00:07.770 --> 00:14.370
+Since by default this thing is going to use entries as the iterator it's going to return these two item
+
+00:14.370 --> 00:15.710
+arrays right here.
+
+00:15.720 --> 00:21.060
+So what I could do is as we know whenever we loop through rush to iterate through these things we know
+
+00:21.060 --> 00:26.610
+that it's going to put these different values inside of this variable right here.
+
+00:26.610 --> 00:32.250
+So essentially I'm assigning an array to this variable right here.
+
+00:32.250 --> 00:39.630
+Now before whenever we mean array like we do like array and then we do like one to like so we know that
+
+00:39.630 --> 00:42.850
+we can actually structure this so we can do.
+
+00:42.850 --> 00:48.180
+First comma second like so.
+
+00:48.390 --> 00:51.380
+And then just said equal to array and that'll do the structure.
+
+00:51.390 --> 00:56.700
+That's essentially what we're doing here with the data map right here so we can actually structure the
+
+00:56.700 --> 00:58.110
+map if we wanted to.
+
+00:58.140 --> 01:02.010
+And same thing with the colors as well we could structure colors if we wanted to.
+
+01:02.010 --> 01:08.040
+So the way that might look is we might do our square braces as before and then we'll just do he comma
+
+01:08.070 --> 01:13.560
+value and then inside of here we'll do a template literal instead and we'll do a substitution where
+
+01:13.560 --> 01:18.900
+we put the key in here and then a space and then another substitution and then we put the value and
+
+01:18.900 --> 01:21.190
+you're going to see that's going to print out very nicely.
+
+01:21.210 --> 01:28.320
+So it's very easy to work with key value pairs without having to directly access these arrays or these
+
+01:28.320 --> 01:29.280
+maps right here.
+
+01:29.280 --> 01:35.460
+So it's actually a very elegant way to combine two different really cool parts of a six.

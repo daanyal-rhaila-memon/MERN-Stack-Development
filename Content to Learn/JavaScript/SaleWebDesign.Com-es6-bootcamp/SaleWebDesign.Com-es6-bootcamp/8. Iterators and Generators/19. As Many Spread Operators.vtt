@@ -1,0 +1,82 @@
+WEBVTT
+
+00:00.660 --> 00:05.400
+Now another thing to keep in mind when you're working with the spread operator is you can use it as
+
+00:05.400 --> 00:06.880
+many times you want.
+
+00:06.880 --> 00:11.460
+So to illustrate that you I'm going to go ahead and comment out these council logs so that way it's
+
+00:11.460 --> 00:13.880
+not distracting when we log onto thing.
+
+00:13.890 --> 00:20.520
+So in this case I'm going to make let's say another ray and we'll call those big numbers right here
+
+00:20.520 --> 00:25.050
+and this will just be an array itself and this we'll have like crazy big numbers like eight hundred
+
+00:25.050 --> 00:26.150
+ninety nine.
+
+00:26.160 --> 00:29.420
+I mean obviously it's not that huge of a number but it's pretty big.
+
+00:29.460 --> 00:33.890
+And then we'll do small numbers which will also be an array.
+
+00:33.990 --> 00:40.160
+We'll do 3:33 try to put in an array of 33 44 55 like so.
+
+00:40.230 --> 00:46.150
+Then after that what we could do is we can make a new array and we'll call this one.
+
+00:47.730 --> 00:55.230
+Big array like so and all we have to do here is we could do for example a 0 and then for the next item
+
+00:55.230 --> 01:05.100
+we could do a spread operator and big numbers like so and then counseled out log and big array.
+
+01:05.640 --> 01:10.530
+And you can see it just adds it in order So first it starts at zero and then it adds the big numbers.
+
+01:10.560 --> 01:18.540
+And if I wanted to then I could add in my map like so then I could add in another number right here
+
+01:18.540 --> 01:25.290
+like 33 and then I could add small numbers like so and I'm just trying to illustrate to you that you
+
+01:25.290 --> 01:31.420
+can really use this as many times you want and then maybe you set right here like so.
+
+01:31.500 --> 01:36.720
+And this is going to be a crazy big array I'll have to move it up so you can see well there we go.
+
+01:36.720 --> 01:38.970
+So you could see right here we have our zero.
+
+01:38.970 --> 01:43.950
+Then all of our big numbers up to 33 then it has two different arrays inside of it.
+
+01:43.950 --> 01:46.830
+And then 33 again and the small numbers.
+
+01:46.890 --> 01:50.520
+And then after that we have our set which consist of 1 2 3.
+
+01:50.520 --> 01:57.690
+So since you can use a spread operator on any iterable it is by far the easiest way to convert one collection
+
+01:57.690 --> 01:59.220
+type into an array.
+
+01:59.220 --> 02:04.980
+You could also do things like for example take a string and convert it into an array of characters or
+
+02:04.980 --> 02:08.890
+take a node list object and just convert that into an array of nodes.
+
+02:08.910 --> 02:10.380
+Definitely very useful.

@@ -1,0 +1,55 @@
+WEBVTT
+
+00:00.660 --> 00:05.700
+Now as you know if you work with javascript inside of the browser you've probably had to work with the
+
+00:05.700 --> 00:06.470
+node list.
+
+00:06.480 --> 00:12.540
+Now understanding the difference between a node list object and an array is kind of confusing because
+
+00:12.540 --> 00:18.810
+they look very similar and you access both of them with brackets notation but internally they behave
+
+00:18.810 --> 00:20.130
+very differently.
+
+00:20.160 --> 00:26.550
+But luckily with the advent of iOS 6 we now have no list iterators so what we can do is just make a
+
+00:26.550 --> 00:33.250
+bunch of divs here so we'll just do div times 5 like so and then after that we'll get access to it.
+
+00:33.260 --> 00:44.180
+So we'll do let's say let div list equals document queery selector.
+
+00:44.180 --> 00:50.030
+All like so now we're just going to select all the divs like so cancel not log this.
+
+00:50.190 --> 00:53.730
+You can see we get our node list right here.
+
+00:53.750 --> 01:01.220
+So since E.S. 6 came out now we have a way to loop through this node list with an iterator similar to
+
+01:01.220 --> 01:09.770
+the way we would loop through an array with a default array iterator so we can just do 4 let div of
+
+01:10.970 --> 01:18.290
+div list like so then inside of here we can just called Soldat log individual divs like so.
+
+01:18.290 --> 01:23.780
+So as you can see we have a much easier way of looping through an entire new idlis with this built in
+
+01:23.780 --> 01:24.350
+iterator.
+
+01:24.350 --> 01:30.620
+Interesting thing about this is inside of the Noseless definition which is actually the age TMLC specification
+
+01:30.650 --> 01:33.830
+instead of the 6 or the javascript specification.
+
+01:33.920 --> 01:36.920
+That's where you'll find the definition for this builtin iterator.

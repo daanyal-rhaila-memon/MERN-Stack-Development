@@ -1,0 +1,112 @@
+WEBVTT
+
+00:00.720 --> 00:10.530
+So what we might do to add a try catch statements to this generator is and try and study here and then
+
+00:10.530 --> 00:13.530
+we'll add a catch just like that.
+
+00:13.980 --> 00:24.310
+And then after that I basically take my yield and then put it inside here and we'll do second equals
+
+00:24.490 --> 00:33.440
+and then whatever I said it to and then after that we'll just do let second like so.
+
+00:33.760 --> 00:41.590
+And then inside of here I'm going to sit second to six and then fix this.
+
+00:41.590 --> 00:49.180
+So it kind of looks nicer and last but not least after I throw this error I'm going to do a con. log
+
+00:49.380 --> 00:54.360
+it or Raider dot next and I'll do five.
+
+00:54.730 --> 01:00.580
+Like so now whenever I say there's some pretty interesting happens so we call our first.
+
+01:00.580 --> 01:07.180
+Next which means we get this yield statement and so we return a 1 value and then we get to the assignment.
+
+01:07.180 --> 01:13.330
+Whenever I call the next again in this case we set the value of our yield statements of 4.
+
+01:13.420 --> 01:18.640
+And remember we stopped before the assignment the execution completely stopped.
+
+01:18.640 --> 01:25.450
+So we're assigning 4 to first and then after that there's no yield statement so we managed to initialize
+
+01:25.470 --> 01:33.790
+our variable and then we get to this try statement right here and we hit this yield right here.
+
+01:33.790 --> 01:37.170
+Now this yield successfully executes.
+
+01:37.240 --> 01:44.350
+So we get to actually yield the first variable which was four plus two which gives a 6.
+
+01:44.440 --> 01:50.560
+After that however the execution stops we don't get to this assignment right here we never get to assign
+
+01:50.560 --> 01:51.320
+anything.
+
+01:51.580 --> 01:56.460
+And the next time we invoke the iterator we invoke it with the throw method right here.
+
+01:56.710 --> 02:04.500
+And so in other words we stop at the assignment right here and before we get a chance to assign anything
+
+02:04.510 --> 02:05.860
+we throw this error.
+
+02:05.860 --> 02:10.350
+So in other words we immediately hopped to this catch statement right here.
+
+02:10.480 --> 02:12.230
+Before we assign anything.
+
+02:12.250 --> 02:15.470
+So now the variable second is equal to six.
+
+02:15.580 --> 02:21.380
+And then of course the next time we execute we throw we throw in a five right here.
+
+02:21.670 --> 02:26.460
+And so we get yield second plus three which in this case would do nothing.
+
+02:26.470 --> 02:28.550
+We just said it equal to 9.
+
+02:28.780 --> 02:35.500
+So this is something pretty interesting right here because it allows us to control the flow of execution
+
+02:35.860 --> 02:37.810
+inside of our generator functions.
+
+02:37.810 --> 02:44.350
+Now we can use next and potentially pass in an argument or we can use throw.
+
+02:44.350 --> 02:47.680
+You can kind of think of them both as instructions.
+
+02:47.680 --> 02:54.820
+Next tells our generator to continue executing until you hit another yield potentially with a value
+
+02:54.820 --> 02:59.750
+being passed to it and then throw tells your code to execute.
+
+03:00.010 --> 03:05.980
+Up until it throws an error and then anything after that point depends on what you have inside of your
+
+03:05.980 --> 03:06.650
+code.
+
+03:06.700 --> 03:13.000
+So the throw is just telling your generator function to continue executing by producing an error and
+
+03:13.000 --> 03:15.600
+then whatever happens after you produce that error.
+
+03:15.730 --> 03:21.340
+Depends on the code that you have inside of your generator function both of which are useful.

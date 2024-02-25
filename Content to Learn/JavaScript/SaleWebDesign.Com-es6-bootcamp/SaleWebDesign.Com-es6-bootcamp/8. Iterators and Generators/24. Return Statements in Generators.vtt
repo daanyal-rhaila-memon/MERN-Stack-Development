@@ -1,0 +1,100 @@
+WEBVTT
+
+00:00.550 --> 00:07.210
+So we've learned how we can use both the next method and the throw method on our iterators to kind of
+
+00:07.210 --> 00:13.430
+control the execution flow inside of our iterators when we're working with the yield keyword.
+
+00:13.510 --> 00:18.190
+But since a generator is just a function we can also use the return keyword.
+
+00:18.190 --> 00:24.760
+Now we can use the return keyword to exit the function or we can use it to specify a value that we want
+
+00:24.760 --> 00:25.730
+to be return.
+
+00:25.930 --> 00:31.270
+So for example we'll make an iterator like so when do function or we'll do a generator function.
+
+00:31.270 --> 00:40.870
+So we do make iterator and then inside of here I'm going to do yield 1 and I'm just going to do a return
+
+00:40.870 --> 00:44.430
+statement and then I'll just yield to like so.
+
+00:44.860 --> 00:47.300
+And then after that we'll make it so we'll do it.
+
+00:47.320 --> 00:53.140
+Iterator equals make iterator so we'll return our iterator there.
+
+00:53.150 --> 01:03.340
+And if I do a canceled log iterator dot next like so and then I try to do this again so I'll copy and
+
+01:03.340 --> 01:07.270
+paste it like so and we'll try to do it three times.
+
+01:07.570 --> 01:09.740
+You can see the first time we yield one.
+
+01:09.790 --> 01:12.300
+And so we get a return value of 1.
+
+01:12.460 --> 01:16.180
+But then after my return statement it exits the function.
+
+01:16.180 --> 01:21.760
+So in other words we stop iterating and so every time that we try to yield something after this we're
+
+01:21.760 --> 01:22.980
+not going to yield anything.
+
+01:22.980 --> 01:26.040
+So we're not going to get to this next yield statement.
+
+01:26.200 --> 01:28.750
+It's going to tell the iterator and we're done.
+
+01:28.750 --> 01:33.190
+So now you're going to return undefined and done is equal to true.
+
+01:33.190 --> 01:38.830
+Aside from that you could also do something pretty interesting so we could say for example you notice
+
+01:38.830 --> 01:43.980
+how whenever we finish this iteration right here the value is set to undefined.
+
+01:43.990 --> 01:50.710
+We can also use the return statement to specify a value that we want to be returned whenever we're done
+
+01:50.710 --> 01:51.760
+with the iteration.
+
+01:51.760 --> 02:00.390
+So for example a move yield to up and then I'll make a yield 3 like so yield 3.
+
+02:00.440 --> 02:02.290
+Then after that I'm going to return
+
+02:04.970 --> 02:08.190
+final value like so.
+
+02:08.260 --> 02:15.610
+So now if I paste in another counselor or log in his Save You can see we yield our first three values
+
+02:15.610 --> 02:20.620
+in our iteration and then once we finish our iteration because done is true.
+
+02:20.770 --> 02:22.750
+You can see I specified a value.
+
+02:22.750 --> 02:28.990
+Typically if I don't have a return statement inside of here whenever the iteration is done then the
+
+02:28.990 --> 02:35.890
+value is going to be set to undefine but return is a way for us to pass in some final data or pass out
+
+02:35.890 --> 02:36.680
+some final data.

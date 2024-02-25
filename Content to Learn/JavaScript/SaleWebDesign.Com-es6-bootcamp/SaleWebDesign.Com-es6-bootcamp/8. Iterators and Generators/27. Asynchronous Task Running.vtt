@@ -1,0 +1,172 @@
+WEBVTT
+
+00:00.330 --> 00:05.820
+So now I'd like to take what we've learned so far with generators and iterators and kind of apply it
+
+00:05.820 --> 00:09.840
+to something that's more practical now we're going to start simple and then we're going to grow from
+
+00:09.840 --> 00:10.450
+there.
+
+00:10.500 --> 00:16.950
+But essentially the source of a lot of the excitement with generator functions is asynchronous programming
+
+00:16.950 --> 00:23.040
+now as we all know asynchronous program is kind of a double edged sword in javascript when you're using
+
+00:23.040 --> 00:24.260
+something like callbacks.
+
+00:24.270 --> 00:29.160
+It can be pretty straightforward if it's something simple you have a set number of things you need to
+
+00:29.160 --> 00:29.650
+do.
+
+00:29.820 --> 00:34.860
+But as your task grow more and more complex it becomes harder to organize your code.
+
+00:34.860 --> 00:41.160
+I've talked to you about the problems with callbacks the trust issues the different things like it's
+
+00:41.160 --> 00:47.870
+hard to think about them it's hard to even reason about them because they operate of counter-intuitively.
+
+00:48.090 --> 00:53.760
+But with that being said we can use generator functions because they have a yield statement which means
+
+00:53.760 --> 00:58.500
+that execution will stop until the next method is called again.
+
+00:58.500 --> 01:04.320
+So in other words we can use a sequence of asynchronous tasks without having to work with callbacks
+
+01:04.320 --> 01:05.250
+which is cool.
+
+01:05.250 --> 01:08.410
+So what I'm going to do is write out some code and then we're going to talk about it.
+
+01:08.520 --> 01:11.550
+I'm going to do function and I'm going to run.
+
+01:11.580 --> 01:20.100
+It's going to be a task runner and then I'll do a task Def an inside of here what I'll do is I'll store
+
+01:20.640 --> 01:36.900
+let task equals task def like so then after that Minah store the results task if I can get it task next.
+
+01:37.660 --> 01:43.330
+Then after that I'm going to do something a little different something to do function.
+
+01:43.480 --> 01:54.950
+Step inside of here I'm going to do a check if not result daat done.
+
+01:55.440 --> 01:57.790
+In that case we're going to do.
+
+01:57.850 --> 02:01.830
+Result equals task.
+
+02:01.920 --> 02:14.170
+Next And then next then almoner recursively call the step function and outside of there I'm going to
+
+02:14.170 --> 02:16.730
+recall it for the first time.
+
+02:17.200 --> 02:24.940
+Then outside of this function I go ahead and do run and I'm going to pass in a generator function so
+
+02:24.940 --> 02:31.390
+all the function it'll be anonymous so No-Name here just a star inside of here I'm just going to yield
+
+02:32.320 --> 02:36.410
+one yield to yield three.
+
+02:36.410 --> 02:40.980
+Like I said we're going to keep it simple at first just to kind of illustrate the concept.
+
+02:41.290 --> 02:43.320
+And just to keep track of everything.
+
+02:43.360 --> 02:45.860
+I'm going to do a consulate log here.
+
+02:46.050 --> 02:55.630
+Results da value of my copy and I'm going to throw it right down here just below the result that we
+
+02:55.630 --> 02:56.930
+change there.
+
+02:57.000 --> 03:01.300
+So now if I save this you'll see it prints out 1 2 3 like so.
+
+03:01.540 --> 03:07.660
+And if I remove the value notation and actually print out the result object like so.
+
+03:07.660 --> 03:08.730
+So what did I do.
+
+03:08.860 --> 03:15.010
+Well I made a task runner which the idea is that will get passed in a generator function right here
+
+03:15.400 --> 03:17.730
+and it's going to have some yield statements.
+
+03:17.740 --> 03:23.340
+Now obviously we're just yielding 1 to 3 but we could definitely pass on something a little more complex.
+
+03:23.410 --> 03:26.150
+But for now we're just passing in a simple generator.
+
+03:26.440 --> 03:32.440
+And then what I do once it's passed in is I call the generator and that's going to return the iterator.
+
+03:32.440 --> 03:34.770
+And then what I do is I call a task.
+
+03:34.820 --> 03:38.160
+Next on the variable right here.
+
+03:38.380 --> 03:44.940
+And so as we know whenever we call a task done next it's going to return this results object right here.
+
+03:44.980 --> 03:52.660
+So I store the results object and then after that I create a function that I later call care whenever
+
+03:52.660 --> 03:57.050
+I call this function what happens is we check if result.
+
+03:57.100 --> 03:59.410
+Da done is equal to true.
+
+03:59.560 --> 04:01.430
+And if it's not equal to true.
+
+04:01.600 --> 04:05.060
+In other words if it's false that means we're not done iterating.
+
+04:05.080 --> 04:07.300
+So in that case I call task.
+
+04:07.360 --> 04:14.380
+Next again and I update the results so that way we always have the most up to date results inside of
+
+04:14.380 --> 04:16.960
+our results variable right here.
+
+04:16.960 --> 04:21.760
+And I of course canceled all logging and then I called Step again recursively.
+
+04:21.850 --> 04:26.900
+So it does this check again and again and again until done is equal to true.
+
+04:27.000 --> 04:33.550
+And whenever done is equal to true or false in this case then it's going to basically not use this conditional
+
+04:33.550 --> 04:34.170
+again.
+
+04:34.240 --> 04:38.920
+So the function will not be called recursively and then we are done with our task.

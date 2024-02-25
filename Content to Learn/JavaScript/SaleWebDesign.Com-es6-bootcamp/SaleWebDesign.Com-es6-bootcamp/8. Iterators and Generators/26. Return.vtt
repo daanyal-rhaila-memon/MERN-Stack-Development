@@ -1,0 +1,133 @@
+WEBVTT
+
+00:00.450 --> 00:06.450
+You can also use return statements with generator delegation which can pretty much allow you to do some
+
+00:06.450 --> 00:14.440
+really complex tasks with all this flexibility so to illustrate that you all do a function make no iterator
+
+00:15.120 --> 00:23.550
+and all this is going to do is yield one yield two and then return 3 and that'll exodus out.
+
+00:23.880 --> 00:34.150
+Then we'll do a function make repeating iterator and it's going to receive a counter and inside of here
+
+00:34.140 --> 00:38.470
+I'm in a loop through them and I do as zero.
+
+00:38.610 --> 00:47.450
+And then while I is less then counter if I can spell counter correctly Perfect's then we'll do incrementation
+
+00:47.550 --> 00:48.280
+of.
+
+00:48.310 --> 00:56.120
+And then inside of here we're just going to yield repeat like so and then we'll make one final generator
+
+00:56.560 --> 00:58.660
+needs to add Starrs to all of these.
+
+00:58.660 --> 01:01.110
+By the way it's on Stars.
+
+01:01.240 --> 01:10.250
+And after that we'll make one last generator function so we'll use star make combined iterator like
+
+01:10.250 --> 01:17.000
+so and inside of here all I'm going to do is make a variable.
+
+01:17.350 --> 01:30.040
+Let result in MENADUE a yield and I'm going to do that same star syntax because I want to delegate perfect.
+
+01:30.110 --> 01:39.200
+Then after that all I have to do is yield and then we'll do that star syntax again make repeating iterator
+
+01:39.650 --> 01:44.210
+like so and then we'll pass in the result.
+
+01:44.210 --> 01:46.340
+So that way we have a counter.
+
+01:46.910 --> 01:51.560
+And then after that we're going to just yield true.
+
+01:51.920 --> 01:57.000
+And then we can make our iterator so do you let iterator equal.
+
+01:57.080 --> 02:04.250
+And then we'll invoke make combined iterator like so and then it's just all about the next sort cancelled
+
+02:04.310 --> 02:13.340
+out log iterator dot next and let's see how many times we need to invoke this will do.
+
+02:13.340 --> 02:22.600
+Let's see one two three four five six seven.
+
+02:22.630 --> 02:23.090
+OK.
+
+02:23.220 --> 02:29.440
+So we'll do this seven times so do one two three four five six seven like so.
+
+02:29.440 --> 02:33.070
+Now if we say that I didn't count the first one again.
+
+02:33.090 --> 02:39.240
+So in that case you can see first what happens inside of this combined iterator right here which is
+
+02:39.240 --> 02:41.340
+the one that we assigned or returned.
+
+02:41.340 --> 02:43.120
+I should say we call next.
+
+02:43.120 --> 02:48.570
+And so what happens is remember whenever a yield is on the right hand side of an assignment that's where
+
+02:48.570 --> 02:50.490
+the execution flow starts.
+
+02:50.520 --> 02:51.430
+So we yield.
+
+02:51.450 --> 02:56.160
+But in that case it means we delegate to our Make number iterator.
+
+02:56.160 --> 02:59.400
+And so it's going to yield one and then we're going to call next.
+
+02:59.400 --> 03:01.300
+Again it's going to yield two.
+
+03:01.710 --> 03:05.790
+And after that we call it again so it returns 3.
+
+03:05.830 --> 03:11.820
+And so that's what gets assigned to result and then we yield in delegate to the make repeating iterator
+
+03:12.180 --> 03:17.230
+whenever we do that we pass in an argument because remember generator functions are still functions
+
+03:17.240 --> 03:18.470
+so we can do that.
+
+03:18.540 --> 03:21.630
+So we pass in this number right here to loop through.
+
+03:21.750 --> 03:24.540
+We get to the first set in the loop and we hit repeat.
+
+03:24.540 --> 03:30.100
+And then we stop and then next time we call Next we call you again repeat.
+
+03:30.360 --> 03:32.860
+And then we call it one more time when we hit next.
+
+03:32.910 --> 03:39.620
+And then after that we go to our original iterator right here and hit yield is true.
+
+03:39.630 --> 03:47.520
+So as you can see return is a great way to take values store values and even in the execution of a particular
+
+03:47.520 --> 03:48.030
+function.

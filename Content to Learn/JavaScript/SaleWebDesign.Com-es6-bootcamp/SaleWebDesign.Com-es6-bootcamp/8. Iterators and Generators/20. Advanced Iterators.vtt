@@ -1,0 +1,46 @@
+WEBVTT
+
+00:00.360 --> 00:06.510
+Now that you understand the basics of how to use things like iterators and spread operators and also
+
+00:06.510 --> 00:12.570
+a for loop Let's go ahead and make a new file and I'm going to call this advanced underscore iterators
+
+00:12.690 --> 00:14.090
+dot G-S.
+
+00:14.280 --> 00:19.560
+And then after that we'll go down here comment out the script tag and then we'll add in a new script
+
+00:19.560 --> 00:24.480
+tag like so with a nice sole source attribute advanced iterators perfect.
+
+00:24.620 --> 00:27.300
+And then we can do a concert or log this to see if it works.
+
+00:27.330 --> 00:28.600
+And it does work.
+
+00:28.620 --> 00:35.310
+So essentially So far we've learned how we can use basic iterator functionality and also how convenient
+
+00:35.310 --> 00:40.860
+it is to make them with generator functions and up to this far they are pretty useful but they can be
+
+00:40.950 --> 00:46.050
+even more useful when they're applied to something that's more advanced than just iterating through
+
+00:46.050 --> 00:47.050
+a collection.
+
+00:47.070 --> 00:53.670
+With the advent of iOS 6 we're able to use iterators in generators to accomplish some pretty interesting
+
+00:53.670 --> 00:54.390
+tasks.
+
+00:54.390 --> 01:00.450
+So what we're going to do now is Diven some of the more advanced use cases of these new features of
+
+01:00.480 --> 01:01.110
+javascript.

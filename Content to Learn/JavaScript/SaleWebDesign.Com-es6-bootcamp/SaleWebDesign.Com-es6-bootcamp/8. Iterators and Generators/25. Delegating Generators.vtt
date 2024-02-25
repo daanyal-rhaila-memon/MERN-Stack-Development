@@ -1,0 +1,121 @@
+WEBVTT
+
+00:00.270 --> 00:06.270
+Iterator return values are especially useful if you want to delegate your generator.
+
+00:06.270 --> 00:13.830
+So essentially what you can do is use a generator function and delegate to other iterators inside of
+
+00:13.830 --> 00:15.140
+that generator function.
+
+00:15.150 --> 00:20.250
+So to really show you what I mean by this and make three generators in this case I'm going to do function
+
+00:20.970 --> 00:33.960
+star make color iterator like so and I'm just going to yield ROW and then yield Baloo and then I'll
+
+00:33.960 --> 00:44.890
+make another generator so the function then start make number iterator like so and I'm just going to
+
+00:44.890 --> 00:47.820
+yield one and then I'm going to yield two.
+
+00:48.250 --> 00:55.790
+And after that I'm going to do a function and we'll call it make combined iterator.
+
+00:56.320 --> 01:03.040
+Then I'm just going to yield and the way that we delegate is with the syntax of using yield and then
+
+01:03.040 --> 01:03.790
+a star.
+
+01:03.820 --> 01:07.390
+And this will allow us to delegate to other iterators.
+
+01:07.390 --> 01:15.850
+So in this case I'm going a delegate first to the make number iterator so you make number iterator and
+
+01:15.880 --> 01:28.290
+then after that and into yield star make Kolar iterator and then after that I'm to skinny yield true.
+
+01:28.440 --> 01:39.720
+And after that we can make our iterator Sodhi let iterator equals make combined iterator combined iterator
+
+01:39.900 --> 01:50.550
+like so then we can just do a bunch and next we'll do counselled a log iterator dot next like so you
+
+01:50.610 --> 01:56.090
+know I'm going to copy this would be 1 to 1 to 1 1.
+
+01:56.130 --> 02:03.240
+Now as you can see what happens whenever we call next is a yield but in this case we're using yield
+
+02:03.240 --> 02:04.180
+the mystar.
+
+02:04.230 --> 02:10.660
+So it's going to delegate to the iterator over here the make number iterator first.
+
+02:10.680 --> 02:13.440
+So it's going to yield and continue to yield.
+
+02:13.440 --> 02:18.150
+Using this iterator until it runs out of values until it's done.
+
+02:18.180 --> 02:23.970
+And so after we yield 1 in 2 then it's going to go from here the next time we call next and it's going
+
+02:23.970 --> 02:25.810
+to yield from the make.
+
+02:25.820 --> 02:31.010
+Color iterator so it's going to delegate to the iterator inside of this generator function.
+
+02:31.020 --> 02:32.640
+It's going to yield red and blue.
+
+02:32.640 --> 02:38.530
+Once this is done then it's going to go ahead and go inside of our make combined iterator and yield
+
+02:38.580 --> 02:39.290
+true.
+
+02:39.360 --> 02:41.790
+And then after that we are done iterating.
+
+02:41.790 --> 02:47.520
+So this is pretty interesting it allows us to delegate to other iterators until they're done yielding
+
+02:47.820 --> 02:51.180
+or until we decide to put something like a return statement.
+
+02:51.180 --> 02:54.420
+So for example if I threw in a return statement right here.
+
+02:54.810 --> 02:59.640
+Whoops if I spell return correctly you'll see that this finishes out early.
+
+02:59.640 --> 03:05.010
+So in this case we only yield 1 and then we exit the function so we never get to yield 2.
+
+03:05.040 --> 03:09.690
+And then we make color iterator and the same thing would apply if we did something like for example
+
+03:09.690 --> 03:12.260
+throw errors or anything like that.
+
+03:12.360 --> 03:17.010
+So a great way to add some more flexibility to your generator functions.
+
+03:17.010 --> 03:23.010
+And on top of that from the outside this appears to be this generator function right here that returns
+
+03:23.010 --> 03:29.490
+an iterator appears to be returning all of these values itself it appears to be yielding all of these
+
+03:29.490 --> 03:30.470
+values itself.
+
+03:30.600 --> 03:36.320
+But once you link in the function body you see that it's actually delegating to other iterators.

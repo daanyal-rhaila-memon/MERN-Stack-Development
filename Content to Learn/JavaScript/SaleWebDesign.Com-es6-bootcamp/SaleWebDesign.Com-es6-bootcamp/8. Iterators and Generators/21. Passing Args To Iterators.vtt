@@ -1,0 +1,205 @@
+WEBVTT
+
+00:00.930 --> 00:07.320
+So far we've seen that whenever we work with something like an iterator and a generator function we
+
+00:07.320 --> 00:11.840
+can actually pass values out of that iterator via the next method.
+
+00:11.910 --> 00:18.240
+What we can also do though is actually pass values to our iterator via the next method.
+
+00:18.240 --> 00:24.900
+So instead of passing values out we can pass values into the next method and those will be sent to our
+
+00:24.900 --> 00:30.480
+iterator which will then be used inside of our yield statements in our generator functions.
+
+00:30.480 --> 00:36.000
+Now a lot of the features are going to be introducing to you maybe seeming small separately but whenever
+
+00:36.000 --> 00:40.110
+you put them all together they're going to be very useful and allow you to do some pretty interesting
+
+00:40.110 --> 00:40.670
+things.
+
+00:40.860 --> 00:52.360
+So go ahead and make a generator function and I'll just use star like so make it her rate or I'm going
+
+00:52.360 --> 00:54.340
+to write this out and then I'm going to explain it.
+
+00:54.340 --> 01:07.300
+So we'll do a variable first and we'll do yield one then we'll do a variable second and we'll call it
+
+01:07.870 --> 01:21.440
+yield first class to and then we'll do a variable third actually we won't just do yield second plus
+
+01:21.470 --> 01:26.530
+three like so then we need to make our iterators so we'll do.
+
+01:26.750 --> 01:32.140
+Iterator equal and just call our generator function.
+
+01:32.360 --> 01:35.780
+And then after that we can do a couple of cons. dialogues so I'm just going to do.
+
+01:35.810 --> 01:48.240
+Iterator dot next like so and then we can copy this will go down and then after that all we have to
+
+01:48.240 --> 01:55.950
+do is I'm going to pass and let's say for right here and then I'm going to pass it a a five right here
+
+01:56.700 --> 02:02.200
+and then if I say this you can see it returns all these values so what's going on.
+
+02:02.370 --> 02:09.510
+Well like I said before Typically we use the next method to pass out values right to receive these value
+
+02:09.510 --> 02:11.790
+properties from the results object.
+
+02:11.820 --> 02:19.140
+In this case though we're kennen doing the inverse we're passing in arguments to our next method and
+
+02:19.140 --> 02:23.680
+those arguments are going to be used within my yield statements.
+
+02:23.690 --> 02:24.300
+OK.
+
+02:24.640 --> 02:27.710
+Now inside of here it's going to be a little different.
+
+02:27.710 --> 02:29.430
+We're going to talk about this in a second.
+
+02:29.610 --> 02:36.120
+But first just know that this first invocation of the next method is kind of a special case where I
+
+02:36.120 --> 02:40.300
+can't pass in any arguments because all of the arguments will be lost.
+
+02:40.860 --> 02:47.730
+But in that case what happens is we call our generator function for the first time and we get to this
+
+02:47.730 --> 02:50.520
+first yield statement right here.
+
+02:50.520 --> 02:56.640
+Now the interesting thing is I have all of my yield statements on the right hand side of the assignment
+
+02:56.910 --> 02:57.600
+operation.
+
+02:57.600 --> 03:04.020
+So in this case whenever you put your yield statements on the right hand side the execution flow is
+
+03:04.020 --> 03:09.210
+going to be a little different and it's kind of kind to go from right to left instead of from left to
+
+03:09.210 --> 03:10.840
+right as you might expect.
+
+03:11.070 --> 03:16.170
+So we call next for the first time and we hit this first yield statement.
+
+03:16.230 --> 03:22.660
+Now as before once we had our first yield statement it's going to get this value 1 and done false.
+
+03:22.830 --> 03:28.910
+And then the execution is going to stop ok until we call the next method again.
+
+03:29.130 --> 03:33.830
+Whenever I do the second time now I can pass in arguments and it won't be lost.
+
+03:33.900 --> 03:36.410
+Like I said the first time I called it an ax.
+
+03:36.430 --> 03:39.690
+It's a special case where all of my arguments will be lost.
+
+03:39.690 --> 03:41.370
+So I pass in a four.
+
+03:41.430 --> 03:42.280
+OK.
+
+03:42.540 --> 03:48.180
+Once I pass in a four Remember this is where we stopped originally when we called next.
+
+03:48.210 --> 03:50.010
+The very first time.
+
+03:50.130 --> 03:57.570
+Now this time when I call next we're going from here to the second yield statement.
+
+03:57.570 --> 04:03.390
+So the execution flow is going to hit this variable assignment right here now.
+
+04:03.630 --> 04:12.180
+And so I'm going to sign for this variable right here and then I'm going to hit this second yield statement.
+
+04:12.180 --> 04:14.280
+So in this case it's going to be four plus two.
+
+04:14.310 --> 04:18.970
+And so it's going to yield 6 and that's why we get this value right here.
+
+04:19.170 --> 04:21.420
+And then it's going to stop again right here.
+
+04:21.420 --> 04:24.090
+So once again we're not getting to the assignment.
+
+04:24.240 --> 04:28.200
+Then we get to our next our next.
+
+04:28.200 --> 04:31.230
+Next a method if you will only pass five.
+
+04:31.230 --> 04:36.240
+So in this case we were stopped right here so now we're going to flow over this variable right here
+
+04:36.660 --> 04:42.210
+and we're going to assign it a 5 and then we're going to hit this last a yield statement right here
+
+04:42.360 --> 04:43.310
+and we're done.
+
+04:43.320 --> 04:46.280
+So in this case it's going to be five plus three which is eight.
+
+04:46.500 --> 04:48.810
+And then of course we're done so the next time we call.
+
+04:48.810 --> 04:52.850
+Next it's going to return this result object with done equal to true.
+
+04:52.860 --> 04:57.910
+So it kind of seems backwards it's a little counterintuitive to what we've learned so far.
+
+04:58.080 --> 05:03.130
+But just remember first we get to the yield statement in a generator function and then we stop.
+
+05:03.210 --> 05:03.450
+OK.
+
+05:03.450 --> 05:04.970
+It just completely stops.
+
+05:05.070 --> 05:06.920
+Even if you're in the middle of an assignment.
+
+05:06.990 --> 05:07.570
+OK.
+
+05:07.860 --> 05:11.940
+And then after that we assign our first value that we pass in.
+
+05:12.180 --> 05:18.750
+Then we flow to this next yield statement and then we stop again and then we follow to this assignment
+
+05:18.840 --> 05:21.630
+and we get to our next yield statement and we stop again.
