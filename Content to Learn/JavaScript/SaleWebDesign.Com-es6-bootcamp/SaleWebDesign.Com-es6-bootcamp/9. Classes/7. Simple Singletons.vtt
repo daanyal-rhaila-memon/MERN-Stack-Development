@@ -1,0 +1,52 @@
+WEBVTT
+
+00:00.330 --> 00:06.480
+Another interesting thing that you can do with class expressions is you can create very simple singletons.
+
+00:06.480 --> 00:11.540
+Now there's more sophisticated singletons that you could create in six or in typescript.
+
+00:11.700 --> 00:18.610
+But essentially what a singleton is is a class that can only instantiate an object once and if you try
+
+00:18.610 --> 00:24.330
+and instantiate the object again or instantiate the class again it's going to return the same object.
+
+00:24.330 --> 00:30.610
+So the way you would do that is you would do something like for example Konst person equals.
+
+00:30.720 --> 00:37.040
+And now we're going to do new right after the keyword class and we'll leave it anonymous and it's sort
+
+00:37.040 --> 00:44.140
+of here we can have our constructor constructor which takes a name argument and then we'll just set
+
+00:44.140 --> 00:48.590
+it equal to the owned property of the instance right here.
+
+00:48.760 --> 00:56.590
+And after that we'll do say a name like we did before where we just Concordat log this dot name like
+
+00:56.590 --> 01:03.460
+so and then right after these curly braces we're going to do parentheses and we'll pass and some of
+
+01:03.470 --> 01:06.670
+them like Neco for example.
+
+01:06.710 --> 01:13.790
+Now we can do person da same name like so and you're going to see that it prints out neco.
+
+01:13.810 --> 01:20.050
+So by using the class keyword with the new key word we're saying that we immediately want to instantiate
+
+01:20.050 --> 01:26.590
+this class and then you see we use the parentheses here first to allow us to actually pass in arguments
+
+01:26.590 --> 01:27.690
+to our constructor.
+
+01:27.790 --> 01:33.620
+But secondly to actually tell javascript that we are immediately invoking this as a function.
+
+01:33.760 --> 01:40.570
+And in doing so this class can only be created one time and can only be instantiated one time.

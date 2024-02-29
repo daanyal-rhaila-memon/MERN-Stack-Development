@@ -1,0 +1,184 @@
+WEBVTT
+
+00:00.450 --> 00:04.450
+You can also create access or properties to illustrate that to you.
+
+00:04.450 --> 00:06.640
+We're going to do something a little different.
+
+00:06.720 --> 00:12.440
+We'll add some content to our element of right here and then we'll go back and we'll do something.
+
+00:12.540 --> 00:18.300
+Now you can see we have some text on the screen what we might do is create a class that's meant to wrap
+
+00:18.300 --> 00:26.410
+a custom element so the way we do this is class custom HMO elements like so.
+
+00:26.640 --> 00:33.150
+And then inside of here we can do our constructor constructor tour and we'll define our own properties
+
+00:33.150 --> 00:35.560
+for the instance of this class right here.
+
+00:35.910 --> 00:41.170
+And it's just going to be this element equals element like so.
+
+00:41.220 --> 00:47.820
+Now originally the way that we define getters and setters is we would do like objects and then define
+
+00:47.820 --> 00:49.100
+property.
+
+00:49.390 --> 00:55.180
+And we pass in the prototype chain like so and then we pass in the name that we want to give it.
+
+00:55.200 --> 00:59.850
+And then we give our configurable object or object configuration.
+
+00:59.850 --> 01:02.820
+Here we have this nice syntactic sugar on top.
+
+01:02.820 --> 01:04.330
+So instead all we have to do is write.
+
+01:04.410 --> 01:08.210
+Get it right there and I'll call this h m l.
+
+01:08.730 --> 01:11.700
+And the goal of this is just to return the inner AGM.
+
+01:11.700 --> 01:22.020
+So I'm just going to return this dot element dot inner h t m l like so and for the center it's going
+
+01:22.020 --> 01:25.800
+to be the same name and it's going to get a value passed in.
+
+01:26.070 --> 01:35.300
+And in this case we're going to see the inner edge symbol of the elements equal to whatever gets passed
+
+01:35.300 --> 01:35.970
+in.
+
+01:35.970 --> 01:41.010
+Now obviously there's trust issues that are to be associated with this especially if this is data that
+
+01:41.010 --> 01:42.420
+your users are passing in.
+
+01:42.570 --> 01:45.510
+But for pure example purposes this works OK.
+
+01:45.600 --> 01:50.670
+Now with that being said what I'll need to do is get a reference to my element in the dorm so I'm going
+
+01:50.670 --> 01:59.010
+to do let's say left and we'll just call this div equals document doc queries selector.
+
+01:59.270 --> 02:04.820
+Well targeted by its class name da element and you can see that we have a reference to it now.
+
+02:04.860 --> 02:09.120
+Might as well go ahead and double check to make sure and you could see we do have a reference to the
+
+02:09.120 --> 02:16.110
+div and get rid of that called Serat log and now I'm just going to make a new variable called a custom
+
+02:16.170 --> 02:26.660
+l l and set the equal to new custom HMO element pass in the div like so.
+
+02:26.820 --> 02:34.950
+And now we can look inside of it if we want to so that you can sort out log custom as well.
+
+02:35.740 --> 02:37.320
+H.T. and now.
+
+02:37.690 --> 02:44.080
+So and you see we get access to the enraged him right here and if we want to we can set it to something
+
+02:44.080 --> 02:52.960
+else so what I might do is right Konst list and then do a template literal and then inside of here I'm
+
+02:52.960 --> 02:57.910
+just going to do an ordered list like so.
+
+02:58.720 --> 03:07.950
+And then after that I'm going to make some lies so you lie in an opening and closing tags like so.
+
+03:08.180 --> 03:11.270
+And then after that I can just copy this and then paste it.
+
+03:11.280 --> 03:13.280
+So I'll do one two three.
+
+03:13.350 --> 03:15.570
+Now we can add an alt shift one to three.
+
+03:15.600 --> 03:21.120
+So do a multi cursor and we'll do hello like so now that we have that set up.
+
+03:21.120 --> 03:24.240
+Don't forget your semi-colon like you.
+
+03:24.270 --> 03:34.080
+And then after that I can just do let's say custom l da HMO said equal to the list and then print out
+
+03:34.080 --> 03:40.560
+or get the same thing that we got before and as soon as I say this you're going to see it should instantly
+
+03:40.560 --> 03:44.770
+change cannot set property enter h T.M. undefined.
+
+03:44.850 --> 03:46.850
+Let's see what went wrong here.
+
+03:46.980 --> 03:50.490
+This element dot enraged him down.
+
+03:50.580 --> 03:52.490
+That should have worked ok.
+
+03:52.890 --> 03:59.370
+Custom l die each CMO equals list which should have passed in the list as a value and then assigned
+
+03:59.370 --> 04:02.590
+it to the inner HMO property.
+
+04:02.700 --> 04:04.330
+And in that case it didn't work.
+
+04:04.330 --> 04:05.820
+Let me see what went wrong.
+
+04:06.000 --> 04:08.340
+Line 124.
+
+04:08.450 --> 04:08.810
+OK.
+
+04:08.820 --> 04:11.750
+So we'll go back up.
+
+04:11.840 --> 04:13.940
+Oh I see I spelled element wrong.
+
+04:14.000 --> 04:14.410
+OK.
+
+04:14.510 --> 04:15.710
+There we go.
+
+04:15.710 --> 04:19.460
+Now you can see things instantly change to what they were before.
+
+04:19.490 --> 04:24.120
+First it prints it out as it is and then it instantly changes it to an unordered list.
+
+04:24.320 --> 04:26.510
+And this is how you would use getters and setters.
+
+04:26.690 --> 04:28.850
+All you have to do is write get in and.
+
+04:28.900 --> 04:31.220
+And you don't have to even separate them with commas.

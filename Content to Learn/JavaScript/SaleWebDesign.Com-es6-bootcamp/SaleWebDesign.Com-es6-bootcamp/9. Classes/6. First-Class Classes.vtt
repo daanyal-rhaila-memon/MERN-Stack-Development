@@ -1,0 +1,58 @@
+WEBVTT
+
+00:00.480 --> 00:05.360
+Now in programming something is considered to be a first class citizen.
+
+00:05.400 --> 00:07.860
+If it can be treated as a value.
+
+00:08.040 --> 00:13.230
+So for example functions inside of javascript are considered first class functions.
+
+00:13.410 --> 00:20.160
+And so what that means is that you can pass functions as arguments you can return functions from other
+
+00:20.160 --> 00:21.030
+functions.
+
+00:21.060 --> 00:23.640
+You can even assign them to variables.
+
+00:23.640 --> 00:28.280
+Now inside of 6 they continue this sort of tradition with classes.
+
+00:28.380 --> 00:34.170
+And so as you saw with our class expressions we can assign them as variables and we can also even pass
+
+00:34.170 --> 00:42.170
+them in his arguments so for example if I do a function here and we'll call it make object and it'll
+
+00:42.180 --> 00:53.180
+take an object definition like so and then inside of here all it's going to do is return new def like
+
+00:53.180 --> 00:54.240
+so.
+
+00:54.620 --> 01:00.740
+And after that we can invoke the function and take what's returned and assign it to an object or to
+
+01:00.740 --> 01:01.930
+a variable I should say.
+
+01:01.970 --> 01:04.180
+So we can do make object.
+
+01:04.220 --> 01:12.440
+And here I'll pass in a class as the argument right here and all it's going to do is say hi inside of
+
+01:12.440 --> 01:14.720
+here soda's concert.
+
+01:16.340 --> 01:24.680
+Like so now whoops if I go ahead and actually access this method you'll see it's a job.
+
+01:24.700 --> 01:31.010
+They say hi and all it does is print out Hello right there so you could pass them in as arguments if
+
+01:31.010 --> 01:31.680
+you wanted to.

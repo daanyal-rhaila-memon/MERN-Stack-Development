@@ -1,0 +1,52 @@
+WEBVTT
+
+00:00.360 --> 00:05.070
+So we're not quite done with the similarities between objects and classes.
+
+00:05.070 --> 00:13.250
+We can also use computed names for our methods and also our properties so for example let's say we have
+
+00:13.290 --> 00:17.940
+let's pick out the singleton right here and common this back in.
+
+00:18.240 --> 00:24.750
+Instead of using this method name right here what I could do is make a variable and we'll just call
+
+00:24.750 --> 00:33.450
+it a name and we'll set it equal to say name like so and then just like with using computed property
+
+00:33.450 --> 00:39.390
+names with objects we can do the same syntax so we put this inside of brackets and then we just call
+
+00:39.390 --> 00:40.350
+it a name.
+
+00:40.470 --> 00:45.450
+And this is going to evaluate to the string which is say name we can put any expression inside of here.
+
+00:45.480 --> 00:51.090
+So now whenever I call say a name it still works like it did before and you could do the same exact
+
+00:51.090 --> 00:53.130
+thing with getters and setters as well.
+
+00:53.130 --> 01:00.690
+So if I wanted to I could do it and then name two and set this equal to HMO or even a function that
+
+01:00.690 --> 01:02.000
+returns HMO.
+
+01:02.280 --> 01:06.750
+And set this to name two and set this to name two.
+
+01:07.470 --> 01:12.360
+And you're going to see that just computes whatever this is supposed to be is the property or the method
+
+01:12.360 --> 01:12.770
+name.
+
+01:12.930 --> 01:18.480
+And it works out just fine so same exact syntax as you would use for a computed property names of your
+
+01:18.480 --> 01:19.070
+objects.

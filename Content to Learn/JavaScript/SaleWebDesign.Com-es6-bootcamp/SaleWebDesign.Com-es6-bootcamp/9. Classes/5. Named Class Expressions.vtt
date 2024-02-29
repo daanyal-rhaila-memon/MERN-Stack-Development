@@ -1,0 +1,31 @@
+WEBVTT
+
+00:00.690 --> 00:06.900
+Also as with function expressions with class expressions you can choose to do an anonymous class expression
+
+00:06.930 --> 00:15.510
+as we've done here or you can choose to give it a name like so you could call this person class to like
+
+00:15.510 --> 00:16.160
+so.
+
+00:16.380 --> 00:24.030
+And then after that if we go down here and we do let's say a Type Of Person class 2 you're going to
+
+00:24.030 --> 00:25.680
+see that it says undefined.
+
+00:25.680 --> 00:32.190
+So in other words this identifier that we gave our class expression only exists inside of the class
+
+00:32.190 --> 00:33.050
+definition.
+
+00:33.120 --> 00:40.560
+So that way our class methods can access it outside of this body right here outside of this class definition.
+
+00:40.560 --> 00:48.210
+This binding doesn't exist so that way you can't access it but you can access it from within this class
+
+00:48.210 --> 00:48.830
+right here.

@@ -1,0 +1,79 @@
+WEBVTT
+
+00:00.300 --> 00:06.840
+While it is useful to define a generator method on your class it is much more helpful to define a default
+
+00:06.900 --> 00:08.270
+iterator on your class.
+
+00:08.280 --> 00:15.060
+And we can define default iterators as we talked about before by using symbol da iterator as a generator
+
+00:15.060 --> 00:15.540
+function.
+
+00:15.540 --> 00:21.330
+So what we'll do is make a new class and call it collection and inside of here we're just going to do
+
+00:21.330 --> 00:24.260
+a constructor like so.
+
+00:24.510 --> 00:30.980
+And inside of here we're just going to set this values equal to an empty array right here.
+
+00:31.200 --> 00:36.390
+And then after that we're going to do a generator function and will do symbol.
+
+00:36.630 --> 00:40.130
+Iterator we're doing a computed property right here.
+
+00:40.220 --> 00:43.740
+After that we're going to basically yield.
+
+00:43.950 --> 00:49.210
+And now what I want to do is delegate to the builtin iterator inside of an array.
+
+00:49.260 --> 00:51.380
+So what I'll do as a star again.
+
+00:51.510 --> 00:58.350
+And then do this values so now whenever I use this yield statement right here by calling this default
+
+00:58.380 --> 01:02.840
+iterator it's going to delegate to the iterator that's built into the array.
+
+01:02.850 --> 01:12.720
+So now whenever I go ahead and instantiate this concert collection equals new collection like so and
+
+01:12.720 --> 01:18.780
+then I'm going to push on some values collection push and I'm going to push this on to the items so
+
+01:18.780 --> 01:25.430
+I should do items a push then I can do one and will do the same thing again.
+
+01:25.450 --> 01:27.540
+It's a pull due to this time.
+
+01:27.990 --> 01:34.630
+And so now by default this generator method right here works with things like four of loops.
+
+01:34.650 --> 01:47.370
+So if I did something like For let item of collection rate here and then I'd just cancel it out log
+
+01:48.220 --> 01:53.510
+individual items like so let's say you cannot read property.
+
+01:53.510 --> 01:55.610
+Push of undefined.
+
+01:55.610 --> 02:03.460
+So collection of values I named it values that's why so values and then values.
+
+02:03.470 --> 02:05.540
+Now if I run through it you'll see that it works.
+
+02:05.550 --> 02:10.910
+Now whenever I try to use the for loop it's going to use the default iterator that I defined which then
+
+02:10.910 --> 02:15.290
+delegates to the default iterator that's built into arrays.

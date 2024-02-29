@@ -1,0 +1,127 @@
+WEBVTT
+
+00:00.480 --> 00:04.970
+Now I'll show you how you might go about doing this inside of six.
+
+00:05.080 --> 00:11.800
+So what we'll do is instead of doing a constructor function we're going to use the keyword class and
+
+00:11.800 --> 00:14.170
+it's going to be lower case for the class.
+
+00:14.290 --> 00:22.960
+And then after that we'll do Person class like so capitalized and then inside of here the first thing
+
+00:22.960 --> 00:25.700
+we can do is provide a constructor function.
+
+00:25.720 --> 00:28.100
+So we'll do constructor.
+
+00:28.690 --> 00:33.940
+And you can pretty much use concise method syntax so you don't need the function keyword and then inside
+
+00:33.940 --> 00:34.820
+of here will do this.
+
+00:34.830 --> 00:41.860
+But name equals name matter of fact we'll make this first name just to make it very clear what's happening
+
+00:41.870 --> 00:49.180
+first name and then we'll give our constructor function a parameter of first name and then after that
+
+00:49.450 --> 00:56.560
+we'll add a method called say a name like so say a name and you don't have to add commas.
+
+00:56.560 --> 00:58.780
+That's another important thing to keep in mind.
+
+00:58.870 --> 01:04.220
+So we can just do this name right here and then after that we'll create another person.
+
+01:04.240 --> 01:15.560
+So to Konst another person and then we'll do New Person class set it equal to Jim and then if we do
+
+01:15.590 --> 01:20.680
+another person say name it's just going to printout.
+
+01:20.690 --> 01:22.620
+Jim as you can see right here.
+
+01:22.640 --> 01:29.150
+So basically this is just syntactic sugar what's happening behind the scenes is very very similar to
+
+01:29.150 --> 01:31.560
+what we actually did right here.
+
+01:31.580 --> 01:38.120
+So whenever we use our constructor function it's the same as using you know the person type constructor
+
+01:38.120 --> 01:39.590
+function right here.
+
+01:39.590 --> 01:46.220
+So all that's going to happen behind the scenes is javascript is going to create this constructor function
+
+01:46.520 --> 01:50.710
+that is going to do the exact same thing as what we did appear.
+
+01:50.840 --> 01:57.080
+And then what happens whenever you instantiate your class whenever you create an object based on this
+
+01:57.080 --> 01:58.400
+class right here.
+
+01:58.460 --> 02:05.060
+It's going to be passed in an argument the first name in this case and we're going to set an own property
+
+02:05.060 --> 02:11.630
+of the instance equal to whatever argument is passed in an own property as I've said before is just
+
+02:11.630 --> 02:16.510
+a property that exist on the instance rather than on the class itself.
+
+02:16.670 --> 02:22.160
+I recommend that you define all of your own properties inside of the constructor function.
+
+02:22.280 --> 02:28.700
+That way whenever you instantiate your class you have all of the properties and all of the things responsible
+
+02:28.700 --> 02:32.330
+for creating your own properties inside of one space.
+
+02:32.330 --> 02:35.630
+Then right here we have the same name method right here.
+
+02:35.630 --> 02:44.510
+This is very similar to doing something like Person class dot prototype da say name equals function
+
+02:44.630 --> 02:45.470
+like so.
+
+02:45.800 --> 02:51.440
+And you can see that what's happening behind the scenes iOS is turning person class into a constructor
+
+02:51.440 --> 02:57.450
+function similar to what we did here by doing a simple check and doing something like for example cancelled
+
+02:57.490 --> 03:07.900
+out log type of person class equals and then function thing cancel out log.
+
+03:07.910 --> 03:09.830
+You'll see it actually comes out to true.
+
+03:09.860 --> 03:14.090
+And if I just leave the check you can see it prints out that the type is function.
+
+03:14.090 --> 03:19.760
+So really it accomplishes the same exact thing so in other words you don't really have to worry about
+
+03:19.760 --> 03:24.810
+whether or not you're using prototypes or if you're using you know the class syntax.
+
+03:24.890 --> 03:29.670
+You can kind of use either one and it's going to have more or less the same effect on your program.
+
+03:29.690 --> 03:33.910
+This is just by some people's estimation a nicer way to write it.

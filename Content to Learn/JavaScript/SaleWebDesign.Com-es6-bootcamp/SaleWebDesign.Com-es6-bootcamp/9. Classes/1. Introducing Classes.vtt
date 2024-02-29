@@ -1,0 +1,73 @@
+WEBVTT
+
+00:00.720 --> 00:04.860
+As you can see here I'm working inside of a new file called classes dodgier.
+
+00:04.890 --> 00:09.620
+So if you want to go ahead and pausa and get this file set up and linked up to your index start aged
+
+00:09.630 --> 00:11.450
+you know feel free to do so.
+
+00:11.600 --> 00:16.110
+But that being said we're going to be talking about a new iOS 6 feature referred to as you guessed it
+
+00:16.500 --> 00:17.250
+classes.
+
+00:17.250 --> 00:22.700
+Now originally javascript didn't really have classes from E.S. one to S-5.
+
+00:22.830 --> 00:29.460
+Well not classes as you would typically find them in other languages like for example C-Sharp or something
+
+00:29.460 --> 00:30.330
+like that.
+
+00:30.360 --> 00:36.020
+Instead what you would often do is you would create a constructor function like this to function maybe
+
+00:36.030 --> 00:46.140
+person type and then give it a parameter of name like so and then we'll do this dot name equals name.
+
+00:46.410 --> 00:52.980
+And then after that you would assign things like methods to the prototype of this particular constructor.
+
+00:52.980 --> 01:01.200
+So do person prototype and then we can add something like say name and just said equal to an anonymous
+
+01:01.200 --> 01:05.780
+function and we'll just canceled or log this name.
+
+01:05.910 --> 01:11.940
+Now whenever we create an instance or we create an object using this constructor will do let's say Konst
+
+01:11.940 --> 01:19.240
+person equals new person type like so pass in a name like Ricky.
+
+01:19.410 --> 01:25.170
+You'll see that this method is actually available on all of the objects that we create with our custom
+
+01:25.170 --> 01:25.500
+type.
+
+01:25.500 --> 01:30.290
+So if I do say a name like so should print out Ricky as you can see right here.
+
+01:30.510 --> 01:37.050
+And a lot of people have created libraries over the years that kind of mimic how classes would look
+
+01:37.350 --> 01:39.450
+inside of other programming languages.
+
+01:39.600 --> 01:45.210
+Now a lot of javascript developers argue that you really don't need classes inside of javascript but
+
+01:45.210 --> 01:48.190
+whether you think that it should have them or should not have them.
+
+01:48.220 --> 01:50.190
+They are now available inside of iOS 6.
+
+01:50.250 --> 01:52.280
+So we're going to go ahead and look at how that works.

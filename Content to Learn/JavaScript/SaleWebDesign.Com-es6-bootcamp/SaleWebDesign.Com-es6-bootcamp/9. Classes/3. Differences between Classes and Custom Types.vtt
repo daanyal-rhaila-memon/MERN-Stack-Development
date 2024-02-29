@@ -1,0 +1,61 @@
+WEBVTT
+
+00:00.300 --> 00:07.830
+Now despite the similarities between using custom types like here and using classes in ESX like here
+
+00:08.160 --> 00:09.750
+there are some differences.
+
+00:09.750 --> 00:14.350
+So first the big difference is with class sticker declarations.
+
+00:14.520 --> 00:20.790
+They're not treated like functions so here this function is actually hoisted to the top of my program
+
+00:21.120 --> 00:26.040
+book class declarations are treated like less variables essentially.
+
+00:26.040 --> 00:31.530
+So instead of being hoisted they're put in the temporal dead zone which means you can't access them
+
+00:31.530 --> 00:36.410
+or use them until execution flows over this part of your script right here.
+
+00:36.420 --> 00:43.400
+Another big difference is that all of the code inside of class declarations runs in strict mode automatically.
+
+00:43.530 --> 00:46.210
+So there's really no way to opt out of it.
+
+00:46.260 --> 00:52.200
+Besides that all of the methods are non enumerable which is a big difference from working with custom
+
+00:52.200 --> 00:58.080
+types where in order to create a non Enumerable method you has the you had to use something like object
+
+00:58.430 --> 01:04.200
+defined property and specifically set that configuration on your method.
+
+01:04.260 --> 01:07.720
+Also methods don't have an internal construct method.
+
+01:07.860 --> 01:13.040
+We talked about how different functions will have a construct and a call method on them.
+
+01:13.140 --> 01:18.210
+All these methods similar to aero functions don't have a constructor method on them.
+
+01:18.210 --> 01:22.810
+So in other words if you try to call them with the keyword new you'll get an error which is really nice.
+
+01:22.950 --> 01:28.390
+And if you also try to call the class constructor itself which is called whenever we use new.
+
+01:28.410 --> 01:34.370
+So if you try to use this class without using the keyword new it's also going to throw an error.
+
+01:34.410 --> 01:40.650
+And last but not least if you attempt to overwrite the class name within a class method it throws an
+
+01:40.650 --> 01:41.090
+error.

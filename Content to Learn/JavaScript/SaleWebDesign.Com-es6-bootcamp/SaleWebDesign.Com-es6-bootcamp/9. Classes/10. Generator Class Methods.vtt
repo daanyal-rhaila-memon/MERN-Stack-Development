@@ -1,0 +1,61 @@
+WEBVTT
+
+00:00.520 --> 00:04.180
+Now you can also create generator methods on your class.
+
+00:04.180 --> 00:11.200
+Very similar to what you would do with objects so for example what do class and will just do we'll just
+
+00:11.200 --> 00:13.130
+call it let's say.
+
+00:14.260 --> 00:14.980
+GEN.
+
+00:15.010 --> 00:16.140
+Yes.
+
+00:16.270 --> 00:21.520
+And then inside of here in order to make a generator method all we have to do is a star in the name.
+
+00:21.520 --> 00:26.560
+So in this case what does call it make iterator and then inside of here we can yield.
+
+00:26.560 --> 00:32.060
+So we'll do yield one yield two and then yield three like so.
+
+00:32.200 --> 00:41.620
+And then after that we have to first instantiate this class SOTY Konst instance equals nine new Djin
+
+00:41.620 --> 00:43.560
+class like so.
+
+00:43.880 --> 00:53.320
+And then we can take that instance and access the generator function on it which will then return this
+
+00:53.320 --> 01:00.950
+iterator right here and then we can cancel dialog iterator dot next like so.
+
+01:01.010 --> 01:04.020
+And as you can see it'll return our first result object.
+
+01:04.030 --> 01:11.410
+So what we did here was define a generator class method and then we hardcoded the results inside of
+
+01:11.410 --> 01:12.520
+that generator.
+
+01:12.520 --> 01:18.910
+Now generator class methods are useful if you have a collection like an object for example an object
+
+01:18.910 --> 01:20.010
+is a good example.
+
+01:20.140 --> 01:24.040
+And you're using that object has a collection to represent values.
+
+01:24.100 --> 01:28.930
+And of course different collection types like sets maps and arrays have a lot of builtin generators
+
+01:28.930 --> 01:31.390
+that you can use to iterate through them.

@@ -1,0 +1,55 @@
+WEBVTT
+
+00:00.630 --> 00:06.660
+Similar to how you can make a function declaration either traditionally like we did here or with a function
+
+00:06.660 --> 00:09.960
+expression you can also make a class expression.
+
+00:09.960 --> 00:15.180
+So what I'm going to do here is I'm going to go ahead and just copy this right here.
+
+00:15.180 --> 00:20.590
+And after I copy it I'm going to come out and pop down to the bottom right here and pasted in.
+
+00:20.730 --> 00:26.670
+Now instead of doing my traditional class declaration what I'm going to do is ominous sign my class
+
+00:26.670 --> 00:29.050
+declaration to a variable like so.
+
+00:29.050 --> 00:33.770
+So I'm just going to do a Person class equals a class right here.
+
+00:33.810 --> 00:39.080
+And as with the function expression I don't need to give it an identifier or a name right here.
+
+00:39.180 --> 00:43.930
+And so it has the same exact effect you can see it still prints out the same exact thing.
+
+00:44.130 --> 00:49.680
+And we can check to make sure that another person is of this is an instance of the Person class so we
+
+00:49.680 --> 01:01.890
+can do canceled or log another person instance of Person class like so and then we can do another check
+
+01:01.890 --> 01:05.650
+here to see if it's an instance of the object.
+
+01:05.670 --> 01:10.460
+So like so you could see it true twice and it's still of type function.
+
+01:10.470 --> 01:16.290
+So essentially it has the same exact functionality unlike function expressions versus traditionally
+
+01:16.290 --> 01:23.160
+declared expressions both class expressions and traditional class declarations are not hoisted.
+
+01:23.310 --> 01:30.020
+And so the functionality between these two is basically identical it does the same exact thing.
+
+01:30.060 --> 01:31.970
+It's really a matter of preference.
+
+01:31.980 --> 01:38.220
+The only time you would really use a class expression instead is if you were maybe passing into a function.

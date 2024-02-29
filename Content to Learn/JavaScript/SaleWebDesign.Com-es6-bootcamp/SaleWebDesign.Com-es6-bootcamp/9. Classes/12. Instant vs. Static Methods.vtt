@@ -1,0 +1,115 @@
+WEBVTT
+
+00:00.620 --> 00:05.930
+When you hear people talk about methods and properties when it comes to objects or classes you're going
+
+00:05.930 --> 00:11.180
+to hear him use two words a lot you'll hear him use instance methods and properties or static methods
+
+00:11.180 --> 00:12.110
+and properties.
+
+00:12.140 --> 00:19.040
+So far what we've been working with is instance methods or properties so for example here the idea behind
+
+00:19.040 --> 00:25.460
+an instance method or a property is you're defining this functionality on the class that you want to
+
+00:25.460 --> 00:30.170
+have an instance of with your object that you instantiate from this class.
+
+00:30.170 --> 00:34.760
+So this method isn't meant to be accessed directly from this class.
+
+00:34.760 --> 00:39.600
+Rather you want it to be included in instantiations of your class.
+
+00:39.650 --> 00:45.230
+So you want it to be available on objects created from this class static methods and properties on the
+
+00:45.230 --> 00:51.350
+other hand are methods and properties that are meant to be directly accessed on that class and they're
+
+00:51.350 --> 00:56.780
+really useful for doing things like defining utility functions especially if you're writing the same
+
+00:56.780 --> 00:58.490
+functions over and over again.
+
+00:58.580 --> 01:01.790
+You might use a class to group together a bunch of static methods.
+
+01:01.790 --> 01:07.220
+That way you don't have to repeat yourself a lot and you can just access these methods without having
+
+01:07.220 --> 01:09.980
+to instantiate the class every time you need them.
+
+01:09.980 --> 01:17.320
+So if we wanted to do this inside of yes file we would do like a function might do calculate like so
+
+01:17.600 --> 01:19.290
+and just leave it like this.
+
+01:19.440 --> 01:25.520
+And then after that instead of adding it on the prototype chain which would make it an instance method
+
+01:25.790 --> 01:29.000
+we added directly to this constructor function right here.
+
+01:29.090 --> 01:37.520
+So we might do something like add and just set this equal to a function that takes two values so we'll
+
+01:37.520 --> 01:44.240
+do 1 and 2 and then after that we just canceled or log the result.
+
+01:44.240 --> 01:52.760
+So it's just about one plus the two and that should be Course into a string so now I can access calculate
+
+01:53.330 --> 02:00.410
+add and you'll see one and two definitely equals three inside of six.
+
+02:00.410 --> 02:02.610
+However it's a little bit easier than that.
+
+02:02.730 --> 02:10.550
+What we can do instead if I comment this out and go down a little bit is I can create a class and I'll
+
+02:10.550 --> 02:17.960
+call it calculate calculate like so curly braces and inside of here.
+
+02:18.050 --> 02:19.710
+I'll do my constructor.
+
+02:20.540 --> 02:23.990
+Even though there's nothing that I really need to put inside of it and then I can just use the keyword
+
+02:23.990 --> 02:32.870
+static and then maybe area and this is going to be a concise method syntax so it would be the length
+
+02:34.030 --> 02:42.800
+and the width and inside of here we'll just cancel that log length times with.
+
+02:43.020 --> 02:45.630
+And we can spell with correctly.
+
+02:45.630 --> 02:49.030
+Like so there we go.
+
+02:50.480 --> 02:51.310
+Now we got it.
+
+02:51.410 --> 02:55.490
+And so once I do this then we can just access it directly.
+
+02:55.490 --> 03:03.480
+So we'll do calculate da area pass in two by four and you'll see that it actually just prints out.
+
+03:03.620 --> 03:08.780
+So a nice way like I said to group together some utility functions that you find yourself using over
+
+03:08.780 --> 03:09.630
+and over again.
+
+03:09.680 --> 03:14.450
+And now you don't even have to instantiate the class to get access to them since it's static.
