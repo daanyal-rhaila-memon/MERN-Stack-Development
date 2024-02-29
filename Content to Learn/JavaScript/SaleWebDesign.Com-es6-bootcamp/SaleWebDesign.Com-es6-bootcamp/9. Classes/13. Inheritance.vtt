@@ -1,0 +1,220 @@
+WEBVTT
+
+00:00.390 --> 00:06.570
+One of the big fundamental concepts when working with classes is the idea of inheritance.
+
+00:06.570 --> 00:12.780
+So for example let's say we're building out a program like a video game or something and we know all
+
+00:12.780 --> 00:17.400
+of our it's going to be like a fighting video game so we know all of our fighters are going to be people
+
+00:17.490 --> 00:19.460
+in this particular videogame right.
+
+00:19.800 --> 00:27.000
+Well the idea is we might represent these people with a class of person like so so we might be a class
+
+00:27.540 --> 00:29.220
+person like so.
+
+00:29.430 --> 00:35.220
+And we know that all people are going to have certain attributes most people have things like arms and
+
+00:35.220 --> 00:37.590
+legs and eyes and so on and so forth.
+
+00:37.620 --> 00:43.860
+But then after that we may want to create a more specific class based on different types of fighters
+
+00:43.860 --> 00:44.120
+right.
+
+00:44.120 --> 00:50.580
+Some will be wrestlers some will be judo experts others may be like masters of points high or what have
+
+00:50.580 --> 00:51.110
+you.
+
+00:51.130 --> 00:57.020
+And so we're going to need to create very specific classes for individual categories of people.
+
+00:57.030 --> 00:59.480
+So this is where inheritance can come in.
+
+00:59.490 --> 01:05.250
+Basically what we do with inheritance is we define kind of a general class like right here where we
+
+01:05.250 --> 01:09.260
+know all of our classes are going to have these kind of overlapping things.
+
+01:09.360 --> 01:17.040
+And then after that we specify a more specific class that inherits all of these base properties right
+
+01:17.040 --> 01:23.430
+here and then we add on some more specific properties that are unique to that particular type of person
+
+01:23.430 --> 01:24.660
+or type of fighter.
+
+01:24.660 --> 01:31.320
+So in this case we might do a class of person and we'll do a constructor and since it'll be a video
+
+01:31.320 --> 01:38.040
+game we'll do something like strength and then speed and then intelligence.
+
+01:38.040 --> 01:48.690
+And then after that we'll just set this strength the strength and then this speed equals speed and then
+
+01:48.690 --> 01:57.540
+this intelligence equals intelligence like so with that being said instead of instantiating this what
+
+01:57.540 --> 02:02.310
+I might want to do is create another class called wrestler.
+
+02:02.700 --> 02:10.430
+And now in order to inherit from this person right here I need to use the key word extends person.
+
+02:10.460 --> 02:11.010
+OK.
+
+02:11.280 --> 02:17.190
+Now I'm going to leave this as is for now and I'm going to show you something so I'll do Konst wrestler
+
+02:17.370 --> 02:26.820
+equals new wrestler like so and I'll pass and just 23:45 76 like so and then I'm just going to cancel
+
+02:26.820 --> 02:29.320
+that log wrestler.
+
+02:29.730 --> 02:34.300
+So now let's see Konsole misspelled console.
+
+02:34.510 --> 02:35.410
+It Go.
+
+02:35.790 --> 02:41.580
+So now you can see whenever I print out the wrestler It has all of the attributes that I specified in
+
+02:41.580 --> 02:43.550
+my person class.
+
+02:43.560 --> 02:50.240
+So essentially what happens whenever we extend a class is we inherit from it.
+
+02:50.250 --> 02:57.960
+So now whenever I call the wrestler class the constructor function of my parent is going to automatically
+
+02:57.960 --> 02:58.850
+get called.
+
+02:59.100 --> 03:04.500
+And all of the arguments that I pass in are automatically going to get passed through to this parent
+
+03:04.500 --> 03:05.760
+constructor function.
+
+03:06.030 --> 03:12.960
+Whenever we create a class and we inherit from a parent class we call this a derived class in javascript.
+
+03:12.960 --> 03:13.580
+OK.
+
+03:14.070 --> 03:20.520
+Now we could also do is we can define our own custom properties that we want to have on instances of
+
+03:20.520 --> 03:21.520
+wrestlers.
+
+03:21.540 --> 03:28.410
+So what we'll do is we'll define a constructor and inside of here we might want the same things as before
+
+03:28.410 --> 03:31.080
+Strength speed and intelligence passed in.
+
+03:31.080 --> 03:34.180
+So in this case we're go ahead and copy that down.
+
+03:34.950 --> 03:41.880
+And then after that we may want some unique properties like for example grappling and then maybe takedowns
+
+03:42.960 --> 03:48.710
+like so and then inside of the constructor function you need to do something very important now.
+
+03:48.960 --> 03:54.700
+You need to use the keyword super and then pass in all of these arguments right here.
+
+03:54.780 --> 04:01.530
+So in this case will pass in strength speed and intelligence and then we'll set this dog grappling equal
+
+04:01.530 --> 04:13.910
+to like the grappling and this dot takedowns equal to takedowns like so so what's happening.
+
+04:13.920 --> 04:22.760
+Well essentially whenever we define our own constructor on a defined class we need to use the key words
+
+04:22.760 --> 04:30.320
+Super all the keywords super is going to do is call the parent constructor function right here.
+
+04:30.320 --> 04:37.700
+Whenever we don't have a constructor function specified on our child class on our derived class the
+
+04:37.700 --> 04:45.930
+parent constructor function automatically gets called whenever we do specify our own constructor function.
+
+04:45.980 --> 04:52.820
+In that case we need to use the super keyword to make sure that we're still calling the constructor
+
+04:52.820 --> 04:59.780
+function of our parent class and whenever we do that we need to pass in the arguments that are constructor
+
+04:59.780 --> 05:02.690
+function appear actually requires.
+
+05:02.840 --> 05:08.790
+And then after that we can take all of these extra parameters right here and assign them to our properties.
+
+05:08.840 --> 05:13.240
+In this case I'll do 32 and then 32 again.
+
+05:13.250 --> 05:19.310
+Now if you save it you see that this wrestler has all of the properties that a person would have but
+
+05:19.310 --> 05:25.010
+then it has also some special properties that are unique to someone like for example a wrestler.
+
+05:25.010 --> 05:31.400
+So just something to keep in mind whenever you don't specify a constructor function for your derived
+
+05:31.400 --> 05:38.600
+class then you don't need to do anything because the constructor function here is going to automatically
+
+05:38.600 --> 05:39.680
+get called.
+
+05:39.800 --> 05:46.730
+But if you do create your own custom constructor function inside of a derived class you need to use
+
+05:46.730 --> 05:53.430
+the keyword super to make sure you're still activating this constructor function inside of the parent.
+
+05:53.450 --> 05:59.510
+Last thing to keep in mind if you try to use the keyword this before you call super.
+
+05:59.510 --> 06:04.340
+You're actually going to get an error right here and it'll tell you most call super constructor in derived
+
+06:04.340 --> 06:08.110
+class before accessing this or returning from a derived.
+
+06:08.120 --> 06:14.290
+So in this case we're going to go ahead and move that back above our assignments right here.
+
+06:14.510 --> 06:16.510
+And so now everything should work correctly.
+
+06:16.580 --> 06:19.510
+So just something else to keep in mind you can't access this.
+
+06:19.550 --> 06:22.130
+The keyword this before you call a super.

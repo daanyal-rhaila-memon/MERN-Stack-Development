@@ -1,0 +1,142 @@
+WEBVTT
+
+00:00.360 --> 00:06.570
+So we've had a talk about the new dó target metal property before and how its values actually change
+
+00:06.570 --> 00:09.060
+depending on how a function is invoked.
+
+00:09.060 --> 00:13.980
+The cool thing about it is we can also use it with constructor functions not just typical functions
+
+00:13.980 --> 00:14.940
+right here.
+
+00:14.940 --> 00:22.680
+So for example we might have a class and we'll call it rectangle because we like rectangles and then
+
+00:22.680 --> 00:30.540
+we'll do let's say inside of here a constructor and I'm just going to set up the length length and the
+
+00:30.540 --> 00:32.130
+width like so.
+
+00:32.190 --> 00:38.130
+So you hear this length equal length this with equals with.
+
+00:38.700 --> 00:44.790
+And before all of that takes place I want to do a comparison to see a canceled or log Neudorf target
+
+00:46.430 --> 00:52.790
+equals triple equals rectangle like so then we can instantiate it.
+
+00:52.790 --> 00:57.690
+We'll do Konst wrecked equals a new rectangle.
+
+00:57.700 --> 01:03.710
+I'm going a little fast because you should have seen this a couple of times but now if I go ahead and
+
+01:03.780 --> 01:11.060
+cancel it a log you'll see OK rectangle is not defined so I'll try that with an L see if that works.
+
+01:11.060 --> 01:12.200
+And you can see it prints out.
+
+01:12.200 --> 01:12.950
+True.
+
+01:13.100 --> 01:14.800
+So this works pretty well.
+
+01:14.810 --> 01:17.570
+But now what happens if I do something like this.
+
+01:17.570 --> 01:24.610
+Class square extends rectangle inside of here.
+
+01:24.640 --> 01:33.350
+I did find my own constructor with a length property and then I call super and just pass him the length
+
+01:33.350 --> 01:37.060
+twice like so.
+
+01:37.660 --> 01:46.800
+And then I do Konst Eskew are equals New Square news if it'll let me know Square.
+
+01:46.820 --> 01:49.350
+And we go pass it to.
+
+01:49.620 --> 01:56.490
+You can see in this case whenever we invoke the constructor of our parent using the super keyword new
+
+01:56.500 --> 02:03.990
+dot target does not equal rectangle because in the first case yes constructor function was being invoked
+
+02:04.230 --> 02:07.220
+with the rectangle so that target was equal to a rectangle.
+
+02:07.220 --> 02:13.860
+But in this case we are invoking this parent constructor function via the square class so in that case
+
+02:13.860 --> 02:19.230
+and knew dot target would actually be equal to square.
+
+02:19.230 --> 02:25.050
+So we can actually use this for something like for example throwing an error if we wanted to create
+
+02:25.080 --> 02:26.980
+an abstract class.
+
+02:27.000 --> 02:32.720
+Now it's easier to do in typescript because they actually have syntax for this but essentially what
+
+02:32.730 --> 02:37.880
+an abstract class is is a class that is never meant to be instantiated.
+
+02:37.890 --> 02:41.820
+Rather it is meant to be used to create extensions from.
+
+02:41.820 --> 02:47.010
+It's meant to be used as a base class so a good example of this would be like with the person example
+
+02:47.010 --> 02:51.570
+and we had a bunch of different types of fires but they were all people we know that were never going
+
+02:51.570 --> 02:54.980
+to have a type of fighter in our videogame just called Person.
+
+02:54.990 --> 03:01.500
+So what we'll do is we'll use person as like an abstract class meaning that it's never meant to be instantiated
+
+03:01.500 --> 03:02.540
+directly.
+
+03:02.580 --> 03:08.130
+So in order to check this out what we could do is we could do something like inside of here.
+
+03:08.640 --> 03:25.160
+We'll just do let's say inside of here will do if new dot target equals rectangle and just throw new
+
+03:25.790 --> 03:26.760
+error.
+
+03:26.800 --> 03:35.540
+And inside of here we'll specify rectangle can not be instantiated directly.
+
+03:35.540 --> 03:39.800
+So now and then I set rectangle correctly.
+
+03:39.830 --> 03:43.200
+Now if I go ahead and load this out you'll see it throws an error.
+
+03:43.220 --> 03:45.910
+Rectangle cannot be instantiated directly.
+
+03:46.010 --> 03:49.800
+But then if I go ahead and actually comment this out.
+
+03:49.940 --> 03:55.070
+Let's say I comment out this instantiation right here you'll see everything works like a charm.
+
+03:55.070 --> 04:00.520
+So this is a great way to make sure that your classes are being used the way you intend them to be.

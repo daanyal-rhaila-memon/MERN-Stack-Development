@@ -1,0 +1,172 @@
+WEBVTT
+
+00:00.240 --> 00:06.150
+So let's look at another example of inheritance what we'll do is we'll make a class here and we'll call
+
+00:06.150 --> 00:08.460
+it rectangle like so.
+
+00:08.640 --> 00:13.950
+And inside of your will define our constructor function struct or if I can get it and then we'll do
+
+00:13.950 --> 00:22.040
+length and then with with like so then inside of here we'll just set our instance properties so it will
+
+00:22.040 --> 00:28.320
+be this length equals length as usual and this start with equals width like so.
+
+00:28.330 --> 00:33.810
+And then after that I'll define a method on my class called Get area and all it's going to do is just
+
+00:33.810 --> 00:40.870
+cancel out log the length times the width length times with like so.
+
+00:40.890 --> 00:49.860
+Then after that I want to extend this class so what I'll do as class square extends rectangle like so
+
+00:50.880 --> 00:52.620
+and then we'll leave it as is.
+
+00:52.620 --> 00:56.210
+So this will be basically the same as using the parent class directly.
+
+00:56.370 --> 00:59.330
+But what I really want to do is show you something so you'll see in a second.
+
+00:59.370 --> 01:05.220
+We're going to go ahead and instantiate Our Square class with the new square and I'll pass in a four
+
+01:05.220 --> 01:06.370
+by four.
+
+01:06.730 --> 01:15.470
+And after that we'll do square Dogget area like so and you can see it works perfectly not fine with
+
+01:15.470 --> 01:16.380
+is not defined.
+
+01:16.410 --> 01:21.290
+Let's see length times with with with care.
+
+01:21.300 --> 01:27.540
+Yes I forgot the key word this because we're working inside of the class so we do this and now everything
+
+01:27.540 --> 01:28.340
+should work fine.
+
+01:28.350 --> 01:31.080
+And it does counseled out log 16.
+
+01:31.080 --> 01:37.110
+Now if I print out the object square I'm going to see something pretty interesting.
+
+01:37.140 --> 01:43.020
+So when I write that log this you'll see that we have a square object but it only has two properties
+
+01:43.020 --> 01:46.290
+it doesn't have any method on it.
+
+01:46.290 --> 01:52.070
+And that's because what we're doing is actually very similar to what we were doing up here in the beginning.
+
+01:52.200 --> 01:57.720
+What we're doing behind the scenes is essentially adding this method on the prototype chain.
+
+01:57.870 --> 02:05.640
+So whenever we look for this get area method on our object and we don't find it javascript just goes
+
+02:05.640 --> 02:12.450
+up the prototype chain until it actually finds where this method is and it finds it on our parent class
+
+02:12.690 --> 02:14.670
+where we defined it originally.
+
+02:14.670 --> 02:21.180
+So with that being said we can still define methods on our derived class or what I might do here is
+
+02:21.180 --> 02:26.220
+define a class of the same name called Get area and inside of here I'm going to cancel that log but
+
+02:26.220 --> 02:27.770
+I'm going to do something a little different.
+
+02:27.780 --> 02:32.030
+I'll do a template literal where it says the area is.
+
+02:32.580 --> 02:42.210
+And then after that we'll do substitution and we'll just do this at length times this dot with like
+
+02:42.210 --> 02:48.170
+so and then semi colons at the end of course and we say that you can see now it actually cancelled out
+
+02:48.170 --> 02:48.540
+logs.
+
+02:48.540 --> 02:50.350
+The area is 16.
+
+02:50.550 --> 02:57.210
+So in other words this is referred to as a shadow method because what it's doing is shadowing the parent
+
+02:57.210 --> 03:00.430
+method right here the parent class method.
+
+03:00.450 --> 03:06.780
+So whenever we call get area javascript's going to go up and it's going to see that we have gate area
+
+03:06.870 --> 03:08.840
+on our parent class right here.
+
+03:08.880 --> 03:16.530
+So it's the closest one and it's not going to invoke the get area method on our parent class right here
+
+03:16.830 --> 03:18.480
+only on our derived class.
+
+03:18.720 --> 03:26.490
+With that being said you could also still access the method of your parent class even though you overwrote
+
+03:26.490 --> 03:28.520
+it with your shadow method right here.
+
+03:28.530 --> 03:32.790
+Pretty cool name shadow method I know but what you could do is something like this you could use the
+
+03:32.790 --> 03:38.150
+super keyword and then dot and then get area just like before.
+
+03:38.160 --> 03:44.820
+So even though right here I defined my own method on this derived class I'm accessing the method of
+
+03:44.820 --> 03:47.040
+the parent class by using the keywords super.
+
+03:47.040 --> 03:50.310
+So now if I save this you'll see it prints out 16 again.
+
+03:50.310 --> 03:56.920
+This is very similar to what we originally did with objects to get easy access to the prototype.
+
+03:57.030 --> 04:01.380
+As you can see right here and I'll try to put this on the big screen if I can.
+
+04:01.380 --> 04:02.510
+There we go.
+
+04:02.550 --> 04:07.410
+You can see originally inside of our objects what we did was we would set the prototype.
+
+04:07.590 --> 04:14.130
+And whenever we set the prototype in order to make sure that we were calling the correct parent class
+
+04:14.480 --> 04:18.720
+the correct prototype we used to use get prototype of this.
+
+04:18.720 --> 04:19.200
+Right.
+
+04:19.380 --> 04:25.050
+But instead we can use super because it always points in the right direction and it always points to
+
+04:25.050 --> 04:26.490
+the parent class.

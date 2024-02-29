@@ -1,0 +1,28 @@
+WEBVTT
+
+00:00.450 --> 00:04.880
+You can also inherent static methods whenever you're working with derived classes.
+
+00:04.880 --> 00:12.000
+So what I'll go ahead and do is make a new static method that I'll call create and it's going to have
+
+00:12.000 --> 00:19.050
+two parameters a length and width as before and all it's going to do is return an instance of the rectangle
+
+00:19.050 --> 00:24.920
+class years so that the rectangle will just pass and the length and the width like so.
+
+00:25.110 --> 00:28.290
+Then after that this should be available on Square.
+
+00:28.290 --> 00:40.070
+So what I'll do is down here do Konst rectangle equals square da create like so and then we'll do it
+
+00:40.070 --> 00:47.850
+two by two and then I can just sort out log the rectangle like so you'll see that.
+
+00:47.850 --> 00:51.780
+Now I have this class or this object that has been created.
+
+00:51.900 --> 00:58.920
+And even though it's a static method we can still have access to it on this derived class due to inheritance.

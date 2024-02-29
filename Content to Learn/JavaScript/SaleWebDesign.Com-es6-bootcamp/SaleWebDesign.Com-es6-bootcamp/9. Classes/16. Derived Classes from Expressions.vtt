@@ -1,0 +1,94 @@
+WEBVTT
+
+00:00.480 --> 00:07.380
+Perhaps one of the coolest things about working with derived classes in javascript is that you can derive
+
+00:07.380 --> 00:09.890
+a class from any kind of expression.
+
+00:09.900 --> 00:16.410
+The only thing is whenever you derive from any kind of expression it has to evaluate to a function with
+
+00:16.410 --> 00:18.330
+a builtin constructor method.
+
+00:18.330 --> 00:20.230
+So for example what.
+
+00:20.280 --> 00:22.380
+Oh and also it has to have a prototype.
+
+00:22.380 --> 00:28.090
+So for example let's say I do a function here and we'll call it rectangle.
+
+00:28.140 --> 00:34.020
+And we're going to do the good old fashioned custom type syntax so will do length in a whit inside of
+
+00:34.020 --> 00:41.700
+here we'll set this length equal to the length like so and then we'll do this with and set it equal
+
+00:41.700 --> 00:43.440
+to the with business as usual.
+
+00:43.440 --> 00:44.060
+Right.
+
+00:44.340 --> 00:49.310
+And then on the prototype we're going to add methods so we'll do.
+
+00:49.430 --> 00:50.360
+Area.
+
+00:50.670 --> 00:55.250
+Now we're just going to set that equal to a function and inside of here we're just going to return this
+
+00:55.530 --> 00:59.830
+with times this length like so.
+
+01:00.080 --> 01:06.990
+And now what I can do is I can actually extend this expression right here so I can do let's say class
+
+01:07.440 --> 01:17.130
+square extends rectangle like so and then inside of here I might define my own constructor and pass
+
+01:17.130 --> 01:18.780
+in a length.
+
+01:18.780 --> 01:24.780
+Now remember here that whenever you're using your constructor inside of a derived class you need to
+
+01:24.780 --> 01:29.410
+call super So that way you're still invoking the constructor function of your parents.
+
+01:29.410 --> 01:37.770
+So in this case I'll just pass on length twice Lang like so and then after that I can come down here
+
+01:37.920 --> 01:45.150
+and we'll just instantiate it and make a new square and all we're going to do is pass in four whoops
+
+01:45.210 --> 01:48.310
+like so and then we can open up our con..
+
+01:48.570 --> 01:52.990
+Open that up and last but not least we will cancel the log.
+
+01:54.290 --> 01:59.180
+The square like so then it will reload.
+
+01:59.190 --> 02:00.100
+Take a second.
+
+02:00.180 --> 02:00.980
+And there you go.
+
+02:00.990 --> 02:06.620
+As you can see we did make a perfectly new object right here an instance of this class.
+
+02:06.750 --> 02:12.480
+And the reason I could extend this constructor function right here is because it evaluates to a function
+
+02:12.480 --> 02:19.050
+with a built in construct method and a prototype which is the requirement for extending any kind of
+
+02:19.050 --> 02:19.610
+expression.

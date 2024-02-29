@@ -1,0 +1,103 @@
+WEBVTT
+
+00:00.450 --> 00:05.990
+Now each of these built ins has a symbol that species access or property on it.
+
+00:06.090 --> 00:09.450
+And basically what it does is it returns the keyword this.
+
+00:09.450 --> 00:12.550
+So in other words it always returns the constructor function.
+
+00:12.570 --> 00:18.150
+To illustrate this you were going to implement a very similar functionality on our own class so monologist
+
+00:18.180 --> 00:22.950
+commonalties cancelled out logs right here just so you can kind of see it more clearly.
+
+00:23.250 --> 00:29.100
+When we start logging things saw a new class and will call at my class and inside of here I'm going
+
+00:29.100 --> 00:39.120
+to do a static accessor property that will be called symbol symbol dot species like so and then inside
+
+00:39.120 --> 00:44.430
+of here I'm just going to return the keyword this which is the same as returning the constructor function.
+
+00:44.430 --> 00:50.850
+Then I'm going to define the constructor function with a parameter of value and set this value equal
+
+00:50.850 --> 00:52.170
+to value.
+
+00:52.170 --> 00:55.680
+And then after that I'm going to do a clone method.
+
+00:55.680 --> 01:00.150
+Now I'm going to explain the rhyme and the reason behind this in a second but just kind of type along
+
+01:00.150 --> 01:01.110
+with me for now.
+
+01:01.380 --> 01:06.060
+So what I'll do is inside of here going to do return.
+
+01:06.380 --> 01:10.310
+New this constructor
+
+01:12.600 --> 01:21.760
+brackets symbol dot species invocation pass in this stock value like so.
+
+01:22.200 --> 01:22.720
+OK.
+
+01:22.830 --> 01:30.730
+So essentially what this means right here is this dot constructor symbol.
+
+01:30.750 --> 01:36.320
+And I'm going to comment this symbol symbol dot species like so.
+
+01:36.630 --> 01:40.270
+This returns the class returns class.
+
+01:40.330 --> 01:40.900
+OK.
+
+01:41.160 --> 01:50.790
+So the reason that we do this is to basically be able to create an instance of our class inside of an
+
+01:50.850 --> 01:56.670
+instance method right here so this is a way for us to return an instance of the class and that's why
+
+01:56.670 --> 01:58.800
+we use the new keyword right here.
+
+01:58.800 --> 02:01.310
+Notice I didn't include the new keyword in this definition.
+
+02:01.310 --> 02:03.320
+This just returns the class in this case.
+
+02:03.420 --> 02:07.660
+We want to return an instance of the class so we add the new keyword right here.
+
+02:07.710 --> 02:13.680
+But the reason you would want to do this instead of using the constructor function directly is first
+
+02:13.680 --> 02:20.440
+it gives us the ability to create instances of this class from within an instance of that class.
+
+02:20.580 --> 02:26.410
+And on top of that it's very easy to override what class this returns.
+
+02:26.550 --> 02:33.630
+So in other words it allows us to do what we did up here which is to essentially override what class
+
+02:33.630 --> 02:39.150
+gets returned or what instance gets returned in this case and instead of returning the built in right
+
+02:39.150 --> 02:45.960
+here an instance of the builtin we return an instance of our own class whenever we invoke this instance
+
+02:45.960 --> 02:46.350
+method.

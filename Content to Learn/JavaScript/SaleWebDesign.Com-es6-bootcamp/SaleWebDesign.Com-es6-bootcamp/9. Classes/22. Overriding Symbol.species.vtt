@@ -1,0 +1,127 @@
+WEBVTT
+
+00:00.640 --> 00:06.130
+So we learn that whenever we make this clone function right here we can take advantage of the fact that
+
+00:06.130 --> 00:12.820
+whenever we call this a constructor bracket's symbol species it will return this particular class right
+
+00:12.820 --> 00:14.710
+here whatever class we're in.
+
+00:14.750 --> 00:20.890
+And so we use that to create a new instance of that class from within a class method or with an instance
+
+00:20.890 --> 00:27.130
+method I should say so now to illustrate this to you and how easy it is to override it which can be
+
+00:27.130 --> 00:28.090
+useful.
+
+00:28.180 --> 00:30.910
+We're going to make a couple new classes we're going to do.
+
+00:30.910 --> 00:40.090
+Class derived class one extends my class and then inside of here I'm going to leave this blank and then
+
+00:40.090 --> 00:46.720
+I'm going to copy this and inside of here I'm actually going to override the symbol dot species right
+
+00:46.720 --> 00:55.190
+here so MENADUE static get brackets symbol species like so don't forget your parentheses.
+
+00:55.210 --> 01:00.220
+And inside of here I'm going to return my class like so.
+
+01:00.370 --> 01:02.720
+And that's the original one that we defined up here.
+
+01:02.860 --> 01:08.390
+So with that being said now that we have that next thing we'll do is we'll make a couple of instances.
+
+01:08.410 --> 01:19.180
+So the Konst instance one equals new Derived class and will place in a value of 1.
+
+01:19.270 --> 01:26.350
+Then we'll make a clone symbol to clone one equals instance one doc clone and we'll just pass in a value
+
+01:26.350 --> 01:34.090
+of clone 1 and then we'll do another instance of we'll call instance two equals new Derived class to
+
+01:35.520 --> 01:39.500
+2 and I need to change this name to two as well.
+
+01:40.350 --> 01:45.170
+Then inside of here we'll just pass it into and we'll make a clone from that as well so would you clone
+
+01:45.180 --> 01:54.080
+two equals instance to Doc clone and pass and clone to is the value like so now down here we're going
+
+01:54.080 --> 01:59.570
+to run some checks so you canceled all logging and we're going to do this about three more times I'll
+
+01:59.570 --> 02:02.210
+do one two three like so.
+
+02:02.210 --> 02:09.410
+Then after that we can just run some checks so we'll do clone one instance.
+
+02:10.360 --> 02:18.920
+And then after that the check will be instance of my class an instance of derived class 1.
+
+02:19.250 --> 02:26.810
+Now we're going to do the same thing down here so we're going to do clone two instance of.
+
+02:26.930 --> 02:37.580
+And then after that we'll do my class and after that we'll do derived class to do we save this you can
+
+02:37.580 --> 02:38.060
+see we get.
+
+02:38.060 --> 02:40.940
+True true true and then false.
+
+02:40.970 --> 02:45.470
+So we'll start with clone one whenever we call the clone function right here.
+
+02:45.480 --> 02:48.520
+You notice I didn't override symbol Dadds species.
+
+02:48.590 --> 02:55.340
+So whenever this thing returns this dot constructor symbol that species it's going to return an instance
+
+02:55.430 --> 03:02.510
+of the derived class right here because like I said before we're inheriting directly from my class so
+
+03:02.510 --> 03:07.700
+this clone function is exactly the same inside of our class function right here.
+
+03:07.740 --> 03:14.510
+And so it's going to return an instance of this class ok and an instance of this class is also technically
+
+03:14.510 --> 03:16.760
+an instance of my class right here.
+
+03:16.820 --> 03:21.440
+And so both of these will be true on the other hand with clone too.
+
+03:21.500 --> 03:29.360
+I actually overrode the symbol Dudd species property right here to where it will only return my original
+
+03:29.360 --> 03:32.320
+parent class my original base class appear.
+
+03:32.390 --> 03:38.000
+So in that case what's going to happen is it's always going to be an instance of my class but it will
+
+03:38.000 --> 03:41.430
+never be an instance of the derived class 2.
+
+03:41.450 --> 03:47.360
+So it's very easy to override this functionality that we defined in our base class and make sure that
+
+03:47.360 --> 03:52.880
+whenever we create an instance of a class inside of an instance method it is an instance of whatever
+
+03:52.880 --> 03:54.680
+we need it to be or want it to be.

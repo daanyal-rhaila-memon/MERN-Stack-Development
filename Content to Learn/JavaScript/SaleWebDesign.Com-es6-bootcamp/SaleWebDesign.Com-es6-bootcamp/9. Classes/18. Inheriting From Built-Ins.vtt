@@ -1,0 +1,70 @@
+WEBVTT
+
+00:00.580 --> 00:07.030
+For a long time inside of javascript people have wanted to be able to create their own custom array
+
+00:07.030 --> 00:07.750
+types.
+
+00:07.880 --> 00:14.050
+And unfortunately due to the way that E.S. 5 and before that kind of classical inheritance works it's
+
+00:14.050 --> 00:18.380
+very difficult to accomplish that goal with classical inheritance.
+
+00:18.490 --> 00:25.680
+But one of the goals of iOS 6 was to make it to where we can inherit from all basic types or all built
+
+00:25.680 --> 00:29.770
+in types I should say so that we can make our own custom types.
+
+00:29.800 --> 00:31.570
+So I'll give you an example of this.
+
+00:31.570 --> 00:39.880
+For example I could do class my array and then I could extend a built in type like array and we'll just
+
+00:39.880 --> 00:41.990
+leave this empty inside of here.
+
+00:42.280 --> 00:50.410
+But then what I can do is to instantiate it all do Konst are equals new my array like so and this is
+
+00:50.410 --> 00:55.390
+just a simple example to illustrate the concept and then I could treat it just like an array.
+
+00:55.390 --> 01:06.090
+So for the zero index I'll add a 1 and then I'll just cancel it out log the first index like so if I
+
+01:06.090 --> 01:12.030
+can get it right there we go in see cancelled out logs that then I can check out the array lengths I'll
+
+01:12.060 --> 01:21.420
+do counsel that log read at length and it should be 1 and then I'll take a read out length instead of
+
+01:21.420 --> 01:23.480
+equal to zero.
+
+01:23.970 --> 01:25.960
+So go down here.
+
+01:26.030 --> 01:30.750
+We'll set this equal to zero and then we'll try to cancelbot log the array again.
+
+01:30.750 --> 01:35.460
+So we'll go down here and try to cancel that log again and you can see it's undefined.
+
+01:35.460 --> 01:41.130
+So in other words I can work with the indices to affect the length or I can work with the length to
+
+01:41.130 --> 01:44.300
+affect the numeric values that are inside of the array.
+
+01:44.340 --> 01:50.160
+So this is really powerful and allows us to create our own built in types and it can be based on just
+
+01:50.160 --> 01:56.850
+an array or I could create my own custom type that's based on an array and another builtin type.
+
+01:56.850 --> 02:03.930
+So this offers us a lot of flexibility in how we define our programs and how we create our paradigms.

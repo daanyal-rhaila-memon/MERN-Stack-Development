@@ -1,0 +1,55 @@
+WEBVTT
+
+00:00.830 --> 00:06.900
+So armed with this new knowledge what we can do is I'm going to comment out all of this right here.
+
+00:07.130 --> 00:14.030
+And then after that I'm actually going to take the exact code that we wrote before comments it out go
+
+00:14.030 --> 00:20.240
+down to the bottom right here and we can actually override this default behavior which is right now
+
+00:20.240 --> 00:25.820
+whenever we use this instance method that's inherited from this built in it's going to return an instance
+
+00:25.820 --> 00:27.350
+of the derived class.
+
+00:27.350 --> 00:30.750
+Now we know that we can override that and use something like.
+
+00:30.830 --> 00:42.200
+I don't know static get symbol species then inside of here we can just return array like so.
+
+00:42.290 --> 00:46.760
+Now if I go down here if I can find my checks I know I added some checks in here.
+
+00:46.790 --> 00:48.940
+Yes right here.
+
+00:48.950 --> 00:51.820
+Like so pop down.
+
+00:51.830 --> 00:53.630
+Add that in.
+
+00:53.630 --> 00:56.680
+So uncomment those back in.
+
+00:57.080 --> 01:00.980
+You'll see that it is an instance of my array right here.
+
+01:00.980 --> 01:07.040
+This is an instance of Mirei but array 2 is not an instance of my array.
+
+01:07.040 --> 01:13.960
+So in other words I was able to override the actual instance of the class that gets returned instead
+
+01:13.970 --> 01:16.340
+of returning an instance of my derived class.
+
+01:16.340 --> 01:22.260
+I can now override it with symbol species and make sure that all of these inherited methods right here
+
+01:22.520 --> 01:25.340
+return an instance of the original built in.

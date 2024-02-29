@@ -1,0 +1,49 @@
+WEBVTT
+
+00:00.480 --> 00:07.950
+So what is this symbol dot species that basically overrides the default behavior of this built in method
+
+00:07.950 --> 00:14.010
+right here and instead of returning an instance of the built in method returns an instance of this derived
+
+00:14.010 --> 00:15.310
+class right here.
+
+00:15.390 --> 00:21.760
+So what it does is essentially it's a static accessor property and it returns a function.
+
+00:21.900 --> 00:28.170
+It actually returns a constructor function and this constructor function is to be used whenever you
+
+00:28.170 --> 00:33.470
+need to create an instance of a class inside of an instance method.
+
+00:33.480 --> 00:39.420
+So right here this is an instance method and instead of using a constructor function which is what we
+
+00:39.420 --> 00:45.210
+would typically do we need to use symbol dot species in the function that it returns because we can't
+
+00:45.210 --> 00:47.240
+use a constructor function here.
+
+00:47.290 --> 00:52.400
+Now a number of different types have this built into it have the symbol that species on it.
+
+00:52.450 --> 00:55.250
+Ray Ray buffer which we haven't talked about.
+
+00:55.440 --> 00:59.180
+Matt promis regular expressions sets and typed arrays.
+
+00:59.250 --> 01:04.080
+We're going to be talking about a few of these in more detail later but for now just know that it's
+
+01:04.080 --> 01:09.600
+going to return a constructor function that we can use to create an instance of a class even though
+
+01:09.600 --> 01:16.290
+we are inside of an instance method that is a method that is on an instance of our class or on an object
+
+01:16.290 --> 01:21.020
+so we can still create another instance of our class from within the object.

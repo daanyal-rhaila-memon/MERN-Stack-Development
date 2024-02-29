@@ -1,0 +1,25 @@
+WEBVTT
+
+00:00.530 --> 00:08.090
+Being able to accept any expression after the extends keyword actually opens up a lot of powerful possibilities.
+
+00:08.090 --> 00:14.150
+For example what we could do is make another function called Get base right here and all that's going
+
+00:14.150 --> 00:23.090
+to do is return the rectangle function right here and then after that I can replace rectangle with get
+
+00:23.090 --> 00:29.210
+base and just call it and it's going to do is return and you can see it works exactly the same as our
+
+00:29.210 --> 00:30.820
+previous example did.
+
+00:30.910 --> 00:37.370
+Except now I can't actually programmatically determine the base function which opens up a lot of new
+
+00:37.370 --> 00:38.700
+possibilities for me.
+
+00:38.720 --> 00:44.960
+As far as inheritance goes by being able to dynamically determine what I want to derive from.

@@ -1,0 +1,85 @@
+WEBVTT
+
+00:00.570 --> 00:05.700
+So I want to talk to you about something else that's very interesting when you're working with built
+
+00:05.700 --> 00:07.590
+ins and inheritance.
+
+00:07.590 --> 00:13.500
+So as you can see I have the same exact class right here and it's inheriting from the built in array
+
+00:13.680 --> 00:14.500
+right here.
+
+00:14.670 --> 00:17.210
+So something interesting happens involved.
+
+00:17.220 --> 00:20.770
+This symbol does species property that we're going to talk about later.
+
+00:21.000 --> 00:29.490
+But essentially if you use a method on your derived class that returns an instance it's going to return
+
+00:29.490 --> 00:34.350
+an instance of this derived class instead of an instance of the built in.
+
+00:34.350 --> 00:36.840
+So for example we'll go ahead and instantiate.
+
+00:36.840 --> 00:37.770
+So we'll do.
+
+00:37.860 --> 00:38.540
+Let's do a lead.
+
+00:38.580 --> 00:44.570
+This time we'll do let And we'll do re equals new my array.
+
+00:45.240 --> 00:47.850
+And we'll just pass in a couple of values like so.
+
+00:48.090 --> 00:54.750
+And then after that we'll just do a rate 2 and we're going to set that equal to a array splice and then
+
+00:54.750 --> 01:03.860
+1 through three like so and then we're going to do some checks so with you cancel or log array instance.
+
+01:04.080 --> 01:04.870
+There we go.
+
+01:06.170 --> 01:08.420
+My RE.
+
+01:08.550 --> 01:11.440
+And then we're going to copy this and do the same thing.
+
+01:11.450 --> 01:14.060
+So we're going to run this check against the second array.
+
+01:14.070 --> 01:18.660
+Now you can see that both of these are considered to be instances of my array.
+
+01:18.720 --> 01:24.960
+The reason that this is interesting is because we inherited this method from the array right here this
+
+01:24.960 --> 01:26.250
+built in.
+
+01:26.250 --> 01:32.850
+So whenever we call it typically it would return an instance of this built in right here.
+
+01:33.030 --> 01:38.730
+But since we're working with a class that is derived from it what it's going to do instead is return
+
+01:38.730 --> 01:45.330
+an instance of this derived class instead of Typically what it would do which is to return an instance
+
+01:45.330 --> 01:47.190
+of the built in right here.
+
+01:47.190 --> 01:53.940
+Now the reason that this is happening behind the scenes is because of this symbol dot species property
+
+01:53.940 --> 01:57.510
+right here and we're going to go ahead and talk about that in the next video.
