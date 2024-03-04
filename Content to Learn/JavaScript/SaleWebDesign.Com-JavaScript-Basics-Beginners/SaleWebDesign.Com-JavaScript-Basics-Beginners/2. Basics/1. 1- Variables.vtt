@@ -1,0 +1,338 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+Let's start this section by a discussion
+
+2
+00:00:04.000 --> 00:00:08.000
+of variables, which are one of the most fundamental concepts in JavaScript
+
+3
+00:00:08.000 --> 00:00:12.000
+and any other programming languages. In programming,
+
+4
+00:00:12.000 --> 00:00:16.000
+use a variable to store data temporarily in the computers
+
+5
+00:00:16.000 --> 00:00:20.000
+memory. So we store our data somewhere, and give that memory
+
+6
+00:00:20.000 --> 00:00:24.000
+location a name. And with this name, we can read the data at the
+
+7
+00:00:24.000 --> 00:00:28.000
+given location in the future. Here's a metaphor. Think
+
+8
+00:00:28.000 --> 00:00:32.000
+of the boxes you use to organize your stuff. You put your stuff in various
+
+9
+00:00:32.000 --> 00:00:36.000
+boxes, and put a label on each box. With this, you can
+
+10
+00:00:36.000 --> 00:00:40.000
+easily find your stuff. A variable is like a box.
+
+11
+00:00:40.000 --> 00:00:44.000
+What we put inside the box, is the value that we assign to
+
+12
+00:00:44.000 --> 00:00:48.000
+a variable, that's the data, and the label that we put on the box
+
+13
+00:00:48.000 --> 00:00:52.000
+is the name of our variable. Now let's see this in code.
+
+14
+00:00:52.000 --> 00:00:56.000
+So here in index.js, I'm going to declare a variable. Now,
+
+15
+00:00:56.000 --> 00:01:00.000
+previously in the old days, before ES6, we used the
+
+16
+00:01:00.000 --> 00:01:04.000
+var keyword to declare a variable. But there are issues with
+
+17
+00:01:04.000 --> 00:01:08.000
+var as you will find out later in the course. So, going forward
+
+18
+00:01:08.000 --> 00:01:12.000
+from ES6, the best practice is to use the
+
+19
+00:01:12.000 --> 00:01:16.000
+let keyword to declare a variable. Now, we need to give this variable
+
+20
+00:01:16.000 --> 00:01:20.000
+a name, or an identifier, and this is like the label we put
+
+21
+00:01:20.000 --> 00:01:24.000
+on a box. So I'm going to call this name, and finally we need to
+
+22
+00:01:24.000 --> 00:01:28.000
+terminate this declaration with a semi colon. Now let's log this
+
+23
+00:01:28.000 --> 00:01:32.000
+on the console and see what we get. So console.log
+
+24
+00:01:32.000 --> 00:01:36.000
+name, once again we need to terminate this statement
+
+25
+00:01:36.000 --> 00:01:40.000
+with a semi colon. Save the changes, and here in the console
+
+26
+00:01:40.000 --> 00:01:44.000
+we see undefined. So by default variables
+
+27
+00:01:44.000 --> 00:01:48.000
+that we defined in JavaScript, their value is undefined. Now we can optionally
+
+28
+00:01:48.000 --> 00:01:52.000
+initialize this variable. So I'm going to set this
+
+29
+00:01:52.000 --> 00:01:56.000
+to be a string, which is a sequence of characters,
+
+30
+00:01:56.000 --> 00:02:00.000
+like Mosh. Note that I'm using single quotes,
+
+31
+00:02:00.000 --> 00:02:04.000
+we can also use double quotes, different developers have different
+
+32
+00:02:04.000 --> 00:02:08.000
+purposes, but it's more common to use single quotes for declaring strings,
+
+33
+00:02:08.000 --> 00:02:12.000
+in JavaScript. Now when you save the changes,
+
+34
+00:02:12.000 --> 00:02:16.000
+instead of undefined, we see Mosh on the console. So,
+
+35
+00:02:16.000 --> 00:02:20.000
+here in this example we have declared a variable called name, and we have set that to
+
+36
+00:02:20.000 --> 00:02:24.000
+this value, to this string. Now, we have a few rules
+
+37
+00:02:24.000 --> 00:02:28.000
+for naming these variables. Here are the rules,
+
+38
+00:02:28.000 --> 00:02:32.000
+first is that they cannot be a reserved
+
+39
+00:02:32.000 --> 00:02:36.000
+keyword. So in JavaScript we have reserved keywords,
+
+40
+00:02:36.000 --> 00:02:40.000
+let is one of them. We also have if, l's
+
+41
+00:02:40.000 --> 00:02:44.000
+var and so on. Now you don't have to memorize this list, if you try
+
+42
+00:02:44.000 --> 00:02:48.000
+to use one of these names, you're going to get an error. For example, if I change this
+
+43
+00:02:48.000 --> 00:02:52.000
+to if note this red underline.
+
+44
+00:02:52.000 --> 00:02:56.000
+This is indicating that this is not a valid identifier, okay?
+
+45
+00:02:56.000 --> 00:03:00.000
+So, we wrote it back, now, the second rule
+
+46
+00:03:00.000 --> 00:03:04.000
+is that they should be meaningful. We want to have meaningful
+
+47
+00:03:04.000 --> 00:03:08.000
+names, like meaningful labels. I've seen developers using
+
+48
+00:03:08.000 --> 00:03:12.000
+names like a or b or a1 or
+
+49
+00:03:12.000 --> 00:03:16.000
+I don't know, x. These variable names don't give us any clue what is
+
+50
+00:03:16.000 --> 00:03:20.000
+the purpose of these variables. What kind of data are we
+
+51
+00:03:20.000 --> 00:03:24.000
+storing in that memory location? So always use meaningful and descriptive
+
+52
+00:03:24.000 --> 00:03:28.000
+names. Okay? Now, back to name
+
+53
+00:03:28.000 --> 00:03:32.000
+the third rule is that they
+
+54
+00:03:32.000 --> 00:03:36.000
+cannot start on a number. So we cannot have a variable like 1
+
+55
+00:03:36.000 --> 00:03:40.000
+name. But again, going back to the same rule, why would you want to call
+
+56
+00:03:40.000 --> 00:03:44.000
+a variable 1name? It's meaningless, right?
+
+57
+00:03:44.000 --> 00:03:48.000
+So, always use meaningful names. The fourth rule
+
+58
+00:03:48.000 --> 00:03:52.000
+is that they cannot contain a space or hyphen.
+
+59
+00:03:52.000 --> 00:03:56.000
+So if you have multiple
+
+60
+00:03:56.000 --> 00:04:00.000
+words we need to put them together. Here is an example, let's imagine we want to declare a
+
+61
+00:04:00.000 --> 00:04:04.000
+variable called first name. So firstName
+
+62
+00:04:04.000 --> 00:04:08.000
+and note that here I'm using camel notation, so the first
+
+63
+00:04:08.000 --> 00:04:12.000
+letter of the first word should be lowercase, and
+
+64
+00:04:12.000 --> 00:04:16.000
+the first letter of every word after should be upper case. This
+
+65
+00:04:16.000 --> 00:04:20.000
+is what we call camel notation, which is the convention we use in
+
+66
+00:04:20.000 --> 00:04:24.000
+JavaScript to name our variables. Another thing you need to know about
+
+67
+00:04:24.000 --> 00:04:28.000
+these variable names, is that they are
+
+68
+00:04:28.000 --> 00:04:32.000
+case-sensitive, so if I declare another variable,
+
+69
+00:04:32.000 --> 00:04:36.000
+call it first name, but make the f upper case,
+
+70
+00:04:36.000 --> 00:04:40.000
+these two variables are different. But as I told you
+
+71
+00:04:40.000 --> 00:04:44.000
+before, if you stick to camel (?) notation, you will end up with a variable
+
+72
+00:04:44.000 --> 00:04:48.000
+name like this. And finally the last thing you need to know about these
+
+73
+00:04:48.000 --> 00:04:52.000
+variables, is that if you want to declare multiple variables, there are
+
+74
+00:04:52.000 --> 00:04:56.000
+two ways to do this. You can declare them on one line
+
+75
+00:04:56.000 --> 00:05:00.000
+and separate them using a comma, so first name, then last
+
+76
+00:05:00.000 --> 00:05:04.000
+name. Now in this case, I have not initialized either of these
+
+77
+00:05:04.000 --> 00:05:08.000
+variables, they're both undefined, I can optionally initialize
+
+78
+00:05:08.000 --> 00:05:12.000
+1 or both of them, so I can set this to Mosh, and I can
+
+79
+00:05:12.000 --> 00:05:16.000
+leave lastName undefined or set it to my last name, Hamedani,
+
+80
+00:05:16.000 --> 00:05:20.000
+but the modern best practice is to declare each variable
+
+81
+00:05:20.000 --> 00:05:24.000
+on a single line. So we terminate
+
+82
+00:05:24.000 --> 00:05:28.000
+this first declaration with a semi-colon, and I declare the second variable on a new line.
+
+83
+00:05:28.000 --> 00:05:32.000
+That's the modern best practice.
+
+84
+00:05:32.000 --> 00:05:36.000
+Next we're going to look at constants.
+

@@ -1,0 +1,282 @@
+﻿WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+In the category
+
+2
+00:00:04.000 --> 00:00:08.000
+of reference types, you have learned about objects and arrays. Now,
+
+3
+00:00:08.000 --> 00:00:12.000
+let's take a look at functions. Functions are one of the fundamental
+
+4
+00:00:12.000 --> 00:00:16.000
+building blocks in JavaScript. A function is basically
+
+5
+00:00:16.000 --> 00:00:20.000
+a set of statements that performs a task or calculates
+
+6
+00:00:20.000 --> 00:00:24.000
+a value. Let show you a couple examples. So I'm going to
+
+7
+00:00:24.000 --> 00:00:28.000
+declare a function using the function keyword. Now we need to give it
+
+8
+00:00:28.000 --> 00:00:32.000
+a name, let's call that greet. After that we need to add
+
+9
+00:00:32.000 --> 00:00:36.000
+parenthesis, that's part of the syntax for declaring functions.
+
+10
+00:00:36.000 --> 00:00:40.000
+And then curly braces. Now what we have here,
+
+11
+00:00:40.000 --> 00:00:44.000
+inside the curly braces is what we refer to as the body of
+
+12
+00:00:44.000 --> 00:00:48.000
+this function. And this is where we add all the statements to define
+
+13
+00:00:48.000 --> 00:00:52.000
+some kind of logic in our application. For example,
+
+14
+00:00:52.000 --> 00:00:56.000
+The logic for this function should be to display a message
+
+15
+00:00:56.000 --> 00:01:00.000
+on the console. So here we can add console.log
+
+16
+00:01:00.000 --> 00:01:04.000
+Hello World.
+
+17
+00:01:04.000 --> 00:01:08.000
+Now note that here we have a statement, so we terminate it with a
+
+18
+00:01:08.000 --> 00:01:12.000
+semi colon, but when we are declaring a function, we don't need to add
+
+19
+00:01:12.000 --> 00:01:16.000
+semi colon at the end, because we are not declaring it like a
+
+20
+00:01:16.000 --> 00:01:20.000
+variable like this. Okay? This is a function
+
+21
+00:01:20.000 --> 00:01:24.000
+declaration, right? So, now we have a function
+
+22
+00:01:24.000 --> 00:01:28.000
+we can call this function like this. So we add the
+
+23
+00:01:28.000 --> 00:01:32.000
+name of the function, and parenthesis again, and then
+
+24
+00:01:32.000 --> 00:01:36.000
+semi colon to indicate that this is a statement. Save the
+
+25
+00:01:36.000 --> 00:01:40.000
+changes, now we have Hello World on the console. But that's pretty boring,
+
+26
+00:01:40.000 --> 00:01:44.000
+what would we do with this? Let me show you how to make this more interesting.
+
+27
+00:01:44.000 --> 00:01:48.000
+Our functions can have inputs, and these inputs can change
+
+28
+00:01:48.000 --> 00:01:52.000
+how the function behaves. So, let's say
+
+29
+00:01:52.000 --> 00:01:56.000
+instead of displaying Hello World we want to display the name of the person
+
+30
+00:01:56.000 --> 00:02:00.000
+here. Like Hello Jon. So we can add
+
+31
+00:02:00.000 --> 00:02:04.000
+a variable here in between parenthesis,
+
+32
+00:02:04.000 --> 00:02:08.000
+we refer to tis variable as a parameter. So,
+
+33
+00:02:08.000 --> 00:02:12.000
+this greet function has one parameter called name, and essentially
+
+34
+00:02:12.000 --> 00:02:16.000
+name is like a variable that is only meaningful
+
+35
+00:02:16.000 --> 00:02:20.000
+inside of this function. So inside of this function we can work with this name variable
+
+36
+00:02:20.000 --> 00:02:24.000
+but it will not be accessible outside of this function.
+
+37
+00:02:24.000 --> 00:02:28.000
+Now name is an input to this function. So instead of
+
+38
+00:02:28.000 --> 00:02:32.000
+displaying Hello World you can display Hello then add
+
+39
+00:02:32.000 --> 00:02:36.000
+a plus here to concatenate two strings.
+
+40
+00:02:36.000 --> 00:02:40.000
+So, we can add name after. Now,
+
+41
+00:02:40.000 --> 00:02:44.000
+when calling the greet function, we need to pass a value for the
+
+42
+00:02:44.000 --> 00:02:48.000
+name variable, or name parameter more accurately. So,
+
+43
+00:02:48.000 --> 00:02:52.000
+we can pass John here, now we refer to this
+
+44
+00:02:52.000 --> 00:02:56.000
+as an argument. So John is an argument
+
+45
+00:02:56.000 --> 00:03:00.000
+to the greet function and name is a
+
+46
+00:03:00.000 --> 00:03:04.000
+parameter of the greet function it's one of the things that a lot of programmers
+
+47
+00:03:04.000 --> 00:03:08.000
+know. They don't know the difference between a parameter and an argument.
+
+48
+00:03:08.000 --> 00:03:12.000
+So a parameter is what we have here at the time of declaration,
+
+49
+00:03:12.000 --> 00:03:16.000
+but the argument is the actual value of supply for that
+
+50
+00:03:16.000 --> 00:03:20.000
+parameter. Okay? Now, I save the changes,
+
+51
+00:03:20.000 --> 00:03:24.000
+so we have Hello John. Now we can reuse this function
+
+52
+00:03:24.000 --> 00:03:28.000
+but with a different input. So, we can
+
+53
+00:03:28.000 --> 00:03:32.000
+change this line here and change John to Mary. Save the changes
+
+54
+00:03:32.000 --> 00:03:36.000
+now we have two different messages on the console.
+
+55
+00:03:36.000 --> 00:03:40.000
+Now a function can have multiple parameters. So here we can have
+
+56
+00:03:40.000 --> 00:03:44.000
+separate parameters using a comma, so let's add another
+
+57
+00:03:44.000 --> 00:03:48.000
+parameter like lastName, now
+
+58
+00:03:48.000 --> 00:03:52.000
+we can change our console.log add a space here,
+
+59
+00:03:52.000 --> 00:03:56.000
+and then display the lastName.
+
+60
+00:03:56.000 --> 00:04:00.000
+Now, when calling this greet function, we should pass
+
+61
+00:04:00.000 --> 00:04:04.000
+another argument for the last name. Well let's see what happens if we don't
+
+62
+00:04:04.000 --> 00:04:08.000
+do this. So I'm going to save the changes, see what we got
+
+63
+00:04:08.000 --> 00:04:12.000
+Hello John undefined. Because as I told you before
+
+64
+00:04:12.000 --> 00:04:16.000
+that the fault value of variables in JavaScript is undefined.
+
+65
+00:04:16.000 --> 00:04:20.000
+So because we did not pass a value for the last name,
+
+66
+00:04:20.000 --> 00:04:24.000
+by default it's undefined. So I'm going to pass
+
+67
+00:04:24.000 --> 00:04:28.000
+another argument here, we separate them using comma
+
+68
+00:04:28.000 --> 00:04:32.000
+John Smith and we don't need this second call to the
+
+69
+00:04:32.000 --> 00:04:36.000
+greet function. Save the changes, now we have Hello
+
+70
+00:04:36.000 --> 00:04:39.566
+John Smith.
+

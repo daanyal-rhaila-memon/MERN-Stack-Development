@@ -1,0 +1,198 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+Now there is a
+
+2
+00:00:04.000 --> 00:00:08.000
+cleaner way to write this code on line 3, all this concatenations
+
+3
+00:00:08.000 --> 00:00:12.000
+are kind of ugly, they're getting in the way, later in the course I will show you
+
+4
+00:00:12.000 --> 00:00:16.000
+how to use template literals to clean up this code. For now,
+
+5
+00:00:16.000 --> 00:00:20.000
+don't worry about it, let's look at another example of a function.
+
+6
+00:00:20.000 --> 00:00:24.000
+This function we have here is performing a task. So,
+
+7
+00:00:24.000 --> 00:00:28.000
+Performing a task. This task is to display something on the
+
+8
+00:00:28.000 --> 00:00:32.000
+console. But sometimes our functions might calculate something,
+
+9
+00:00:32.000 --> 00:00:36.000
+so, here is an example of a function that calculates
+
+10
+00:00:36.000 --> 00:00:40.000
+a value. So again, function, let's call
+
+11
+00:00:40.000 --> 00:00:44.000
+this function square, this function should take a parameter, let's call
+
+12
+00:00:44.000 --> 00:00:48.000
+that number, now we need to calculate the square
+
+13
+00:00:48.000 --> 00:00:52.000
+of that number, that is number times number.
+
+14
+00:00:52.000 --> 00:00:56.000
+Just basic math. Right? Now we need to return this value
+
+15
+00:00:56.000 --> 00:01:00.000
+to whoever is calling this function. For that we use
+
+16
+00:01:00.000 --> 00:01:04.000
+the return keyword. That's another reserve keyword
+
+17
+00:01:04.000 --> 00:01:08.000
+so we cannot have a variable called return, okay? Now instead of
+
+18
+00:01:08.000 --> 00:01:12.000
+calling the greet function, let's call the square function. So,
+
+19
+00:01:12.000 --> 00:01:16.000
+square, we pass 2, now this returns a value
+
+20
+00:01:16.000 --> 00:01:20.000
+so we can use that value to initialize a variable.
+
+21
+00:01:20.000 --> 00:01:24.000
+For example, you can declare another
+
+22
+00:01:24.000 --> 00:01:28.000
+variable called number, and set it to a square of 2.
+
+23
+00:01:28.000 --> 00:01:32.000
+And then we can display that on the console.
+
+24
+00:01:32.000 --> 00:01:36.000
+Save the changes, so we get 4. Now,
+
+25
+00:01:36.000 --> 00:01:40.000
+in this particular example, we don't necessarily have to declare a separate
+
+26
+00:01:40.000 --> 00:01:44.000
+variable if all we want to do is display the square of 2
+
+27
+00:01:44.000 --> 00:01:48.000
+on the console. We can exclude this variable declaration,
+
+28
+00:01:48.000 --> 00:01:52.000
+and simply pass square of 2,
+
+29
+00:01:52.000 --> 00:01:56.000
+to console.log.
+
+30
+00:01:56.000 --> 00:02:00.000
+So, when the JavaScript engine executes
+
+31
+00:02:00.000 --> 00:02:04.000
+this code, first it's going to call this function, it will get a value
+
+32
+00:02:04.000 --> 00:02:08.000
+and then pass that value to console.log.
+
+33
+00:02:08.000 --> 00:02:12.000
+Save the changes and look we still get 4.
+
+34
+00:02:12.000 --> 00:02:16.000
+Now, I have a question for you. How many function calls do you think we
+
+35
+00:02:16.000 --> 00:02:20.000
+have in this code? We have 2 function calls.
+
+36
+00:02:20.000 --> 00:02:24.000
+Square of 2, is one function call, let me
+
+37
+00:02:24.000 --> 00:02:28.000
+delete this temporarily, but console.log is also
+
+38
+00:02:28.000 --> 00:02:32.000
+another function call, right? Because here we have parenthesis,
+
+39
+00:02:32.000 --> 00:02:36.000
+so, we're calling the log function, which is defined somewhere,
+
+40
+00:02:36.000 --> 00:02:40.000
+and passing an argument, we can pass a simple string,
+
+41
+00:02:40.000 --> 00:02:44.000
+like Hello, or we can pass an expression, that expression can be
+
+42
+00:02:44.000 --> 00:02:48.000
+a call to another function, like square of 2.
+
+43
+00:02:48.000 --> 00:02:52.000
+Okay? So this is the basics of functions. Again, later,
+
+44
+00:02:52.000 --> 00:02:56.000
+in the course we have a comprehensive section about functions, for now, all I want
+
+45
+00:02:56.000 --> 00:03:00.000
+you to take away, is that a function is a set of statements
+
+46
+00:03:00.000 --> 00:03:04.000
+that either performs a task, or calculates
+
+47
+00:03:04.000 --> 00:03:08.000
+and returns a value. A real world application is essentially
+
+48
+00:03:08.000 --> 00:03:12.000
+a collection of hundreds or thousands of functions working together
+
+49
+00:03:12.000 --> 00:03:16.000
+to provide the functionality of that application.
+

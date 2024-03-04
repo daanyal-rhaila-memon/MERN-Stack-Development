@@ -1,0 +1,316 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+So you have seen all the primitive types
+
+2
+00:00:04,000 --> 00:00:08,000
+in JavaScript. Now let's look at the reference types.
+
+3
+00:00:08,000 --> 00:00:12,000
+In the reference types category, we have objects, arrays, and
+
+4
+00:00:12,000 --> 00:00:16,000
+functions. In this lecture we're going to explore objects, and you will
+
+5
+00:00:16,000 --> 00:00:20,000
+learn about arrays and functions later in this section. So,
+
+6
+00:00:20,000 --> 00:00:24,000
+what is an object. An object in JavaScript and other
+
+7
+00:00:24,000 --> 00:00:28,000
+programming languages is like an object in real life. Think of a
+
+8
+00:00:28,000 --> 00:00:32,000
+person. A person has name, age, address
+
+9
+00:00:32,000 --> 00:00:36,000
+and so on. These are the properties of a person.
+
+10
+00:00:36,000 --> 00:00:40,000
+You have the same concept in JavaScript. So when we're dealing
+
+11
+00:00:40,000 --> 00:00:44,000
+with multiple related variables, we can put these
+
+12
+00:00:44,000 --> 00:00:48,000
+variables inside of an object. For example, here we
+
+13
+00:00:48,000 --> 00:00:52,000
+have two variables name and age, they're highly
+
+14
+00:00:52,000 --> 00:00:56,000
+related, they are part of the representation of a person, so instead of
+
+15
+00:00:56,000 --> 00:01:00,000
+declaring two variables, we can declare the person object.
+
+16
+00:01:00,000 --> 00:01:04,000
+And then instead of referencing these two variables we can
+
+17
+00:01:04,000 --> 00:01:08,000
+just reference the person object, it makes our code cleaner.
+
+18
+00:01:08,000 --> 00:01:12,000
+So, let's see how we can declare a person object. We start with let.
+
+19
+00:01:12,000 --> 00:01:16,000
+Or const if we don't want to reassign the person
+
+20
+00:01:16,000 --> 00:01:20,000
+object, and set it to an object
+
+21
+00:01:20,000 --> 00:01:24,000
+literal. So the syntax we have here use curly braces is what we call
+
+22
+00:01:24,000 --> 00:01:28,000
+an object literal. Now
+
+23
+00:01:28,000 --> 00:01:32,000
+between these curly braces we add one or more key value
+
+24
+00:01:32,000 --> 00:01:36,000
+pairs. So, the keys are what we call the
+
+25
+00:01:36,000 --> 00:01:40,000
+properties of this object. In this case we want this person
+
+26
+00:01:40,000 --> 00:01:44,000
+object to have two properties or keys, name and age,
+
+27
+00:01:44,000 --> 00:01:48,000
+so, we add name here, that's the key, then we add
+
+28
+00:01:48,000 --> 00:01:52,000
+a colon, and after that we set the value
+
+29
+00:01:52,000 --> 00:01:56,000
+so Mosh. Now, we add a comma, and
+
+30
+00:01:56,000 --> 00:02:00,000
+add another key value pair. Age 30
+
+31
+00:02:00,000 --> 00:02:04,000
+so now we have this person object with two properties or two
+
+32
+00:02:04,000 --> 00:02:08,000
+key value pairs name and age. And with that we
+
+33
+00:02:08,000 --> 00:02:12,000
+don't need these two variables. Now let's
+
+34
+00:02:12,000 --> 00:02:16,000
+log person on the console.log,
+
+35
+00:02:16,000 --> 00:02:20,000
+person. Save the changes.
+
+36
+00:02:20,000 --> 00:02:24,000
+So here's our person object, again note the object literal syntax
+
+37
+00:02:24,000 --> 00:02:28,000
+so we have curly braces, and in between them we have
+
+38
+00:02:28,000 --> 00:02:32,000
+one or more key value pairs, and these are the properties of the person object.
+
+39
+00:02:32,000 --> 00:02:36,000
+Now, there are two ways to work with these
+
+40
+00:02:36,000 --> 00:02:40,000
+properties. Let's say we want to change the name of this person,
+
+41
+00:02:40,000 --> 00:02:44,000
+so we need to access the name property. There are two ways,
+
+42
+00:02:44,000 --> 00:02:48,000
+the first way is what we call the .notation.
+
+43
+00:02:48,000 --> 00:02:52,000
+So, we add the name of our object in the name of this person,
+
+44
+00:02:52,000 --> 00:02:56,000
+.now you can see it's properties, age, and
+
+45
+00:02:56,000 --> 00:03:00,000
+name. So you can change the name of to
+
+46
+00:03:00,000 --> 00:03:04,000
+John. Now we can choose the .notation
+
+47
+00:03:04,000 --> 00:03:08,000
+to also read the value of a property, so here
+
+48
+00:03:08,000 --> 00:03:12,000
+on line 10, instead of logging the person object we can log
+
+49
+00:03:12,000 --> 00:03:16,000
+it's name property. Save the changes, and
+
+50
+00:03:16,000 --> 00:03:20,000
+in the console we get John. The other way to
+
+51
+00:03:20,000 --> 00:03:24,000
+access a property is using bracket notation.
+
+52
+00:03:24,000 --> 00:03:28,000
+So, bracket notation.
+
+53
+00:03:28,000 --> 00:03:32,000
+So instead of . we use square brackets, and
+
+54
+00:03:32,000 --> 00:03:36,000
+we pass a string that determined the name of the target property
+
+55
+00:03:36,000 --> 00:03:40,000
+so single or double quotes, but single quotes are more
+
+56
+00:03:40,000 --> 00:03:44,000
+common. The name of the target property is name.
+
+57
+00:03:44,000 --> 00:03:48,000
+So, we can change that to let's say mary. Again
+
+58
+00:03:48,000 --> 00:03:52,000
+when reading that we can use the dot notation or the bracket notation.
+
+59
+00:03:52,000 --> 00:03:56,000
+If you save the changes, now we get mary on the console.
+
+60
+00:03:56,000 --> 00:04:00,000
+Now you might be asking, which approach is better?
+
+61
+00:04:00,000 --> 00:04:04,000
+Dot notation or bracket notation? Well as you can see,
+
+62
+00:04:04,000 --> 00:04:08,000
+dot notation is a bit more concise. It's shorter,
+
+63
+00:04:08,000 --> 00:04:12,000
+so that should be your default choice. However, bracket notation
+
+64
+00:04:12,000 --> 00:04:16,000
+has it's own uses, sometimes, you don't know the name of the
+
+65
+00:04:16,000 --> 00:04:20,000
+target property until the run time. For example, in our
+
+66
+00:04:20,000 --> 00:04:24,000
+user interface, the user might be selecting the name of the target property.
+
+67
+00:04:24,000 --> 00:04:28,000
+In that case, in the time of writing code, we don't
+
+68
+00:04:28,000 --> 00:04:32,000
+know what property we're going to access. That is going to be selected
+
+69
+00:04:32,000 --> 00:04:36,000
+at run time by the user. So we might have another variable somewhere else
+
+70
+00:04:36,000 --> 00:04:40,000
+like selection, that determines the name of
+
+71
+00:04:40,000 --> 00:04:44,000
+the target property that the user is selecting, and that
+
+72
+00:04:44,000 --> 00:04:48,000
+can change at run time. With this,
+
+73
+00:04:48,000 --> 00:04:52,000
+we can access that property using the bracket notation
+
+74
+00:04:52,000 --> 00:04:56,000
+in a dynamic way. So, we pass
+
+75
+00:04:56,000 --> 00:05:00,000
+selection here, and we get the same result. Now, if this
+
+76
+00:05:00,000 --> 00:05:04,000
+is confusing, don't worry, we're going to see this again in the future, as you gain more
+
+77
+00:05:04,000 --> 00:05:08,000
+experience with JavaScript. For now, just stick to the
+
+78
+00:05:08,000 --> 00:05:12,000
+dot notation, because that's cleaner and easier. Next we're going to look at
+
+79
+00:05:12,000 --> 00:05:14,533
+arrays.
+

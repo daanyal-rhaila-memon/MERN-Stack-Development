@@ -1,0 +1,256 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+Sometimes in your
+
+2
+00:00:04,000 --> 00:00:08,000
+applications, you might be dealing with a list of objects. For example,
+
+3
+00:00:08,000 --> 00:00:12,000
+the list of products in a shopping cart, or the
+
+4
+00:00:12,000 --> 00:00:16,000
+list of colors the user has selected, in situations like that,
+
+5
+00:00:16,000 --> 00:00:20,000
+you use an array to store that list. Let me show you how.
+
+6
+00:00:20,000 --> 00:00:24,000
+So here I'm going to declare another variable called
+
+7
+00:00:24,000 --> 00:00:28,000
+selected colors. Note that I'm using a meaningful
+
+8
+00:00:28,000 --> 00:00:32,000
+name, I don't have sc or some other weird name.
+
+9
+00:00:32,000 --> 00:00:36,000
+Selected colors. Now we can initialize this, and set
+
+10
+00:00:36,000 --> 00:00:40,000
+it to an empty array. So these square brackets
+
+11
+00:00:40,000 --> 00:00:44,000
+are what we call array literal, and they indicate an
+
+12
+00:00:44,000 --> 00:00:48,000
+empty array. Now we can initialize this array and add
+
+13
+00:00:48,000 --> 00:00:52,000
+a couple of items, like
+
+14
+00:00:52,000 --> 00:00:56,000
+red and blue. Let's log this on the console, so
+
+15
+00:00:56,000 --> 00:01:00,000
+console.log selected colors. Save the changes
+
+16
+00:01:00,000 --> 00:01:04,000
+so here's our array with two elements.
+
+17
+00:01:04,000 --> 00:01:08,000
+We can expand that, note that each element has an index,
+
+18
+00:01:08,000 --> 00:01:12,000
+and that determines that position of the element in that array. So,
+
+19
+00:01:12,000 --> 00:01:16,000
+the index of the first element is 0, and the index of the second
+
+20
+00:01:16,000 --> 00:01:20,000
+element is one. So if you want to access an element in the
+
+21
+00:01:20,000 --> 00:01:24,000
+array, we use this index. Here's how. For example, let's say
+
+22
+00:01:24,000 --> 00:01:28,000
+you want to display the first element in this array, we use these square
+
+23
+00:01:28,000 --> 00:01:32,000
+brackets, and then specify the index.
+
+24
+00:01:32,000 --> 00:01:36,000
+Save the changes, and now we have red. Now earlier, I told
+
+25
+00:01:36,000 --> 00:01:40,000
+you that JavaScript is a dynamic language. So the type of
+
+26
+00:01:40,000 --> 00:01:44,000
+variables can change at run time. The same principle applies
+
+27
+00:01:44,000 --> 00:01:48,000
+to our arrays. So the length of arrays as well as the type
+
+28
+00:01:48,000 --> 00:01:52,000
+of objects we have in an array are dynamic, they can change.
+
+29
+00:01:52,000 --> 00:01:56,000
+So, on line 2, we initialize this array with 2
+
+30
+00:01:56,000 --> 00:02:00,000
+elements, right? Now, on line 3 we can add
+
+31
+00:02:00,000 --> 00:02:04,000
+another element to this array, so the array will expand.
+
+32
+00:02:04,000 --> 00:02:08,000
+So, let's say selectedColorsof 2, that means
+
+33
+00:02:08,000 --> 00:02:12,000
+the third item in this array will also be green.
+
+34
+00:02:12,000 --> 00:02:16,000
+Now, let's display this array on
+
+35
+00:02:16,000 --> 00:02:20,000
+the console, so, we have an array with 3,
+
+36
+00:02:20,000 --> 00:02:24,000
+elements. So the length is dynamic, it can change, also
+
+37
+00:02:24,000 --> 00:02:28,000
+the type of objects we have in this array is dynamic,
+
+38
+00:02:28,000 --> 00:02:32,000
+so unlike other programming languages, where every item or
+
+39
+00:02:32,000 --> 00:02:36,000
+every object in the array, should have the same type, in JavaScript we can
+
+40
+00:02:36,000 --> 00:02:40,000
+store different types in an array. So, we can make the last
+
+41
+00:02:40,000 --> 00:02:44,000
+element a number. Save the changes, now we have
+
+42
+00:02:44,000 --> 00:02:48,000
+2 strings and a number. So the objects in the array as well as
+
+43
+00:02:48,000 --> 00:02:52,000
+the size of the array are dynamic. Now technically an array
+
+44
+00:02:52,000 --> 00:02:56,000
+is an object, so just like the person object we defined in the last lecture
+
+45
+00:02:56,000 --> 00:03:00,000
+it has a bunch of key value pairs, or properties that we can
+
+46
+00:03:00,000 --> 00:03:04,000
+access using the dot notation. Let me prove that to you. So here
+
+47
+00:03:04,000 --> 00:03:08,000
+on the console, let's look at the type of selected
+
+48
+00:03:08,000 --> 00:03:12,000
+Colors. So the type of this array is an
+
+49
+00:03:12,000 --> 00:03:16,000
+object. So an array is an object in JavaScript. So here on line
+
+50
+00:03:16,000 --> 00:03:20,000
+4, we can look at the properties of this array, or this
+
+51
+00:03:20,000 --> 00:03:24,000
+object, using the dot notation, look these are
+
+52
+00:03:24,000 --> 00:03:28,000
+all the properties defined in arrays in JavaScript, so,
+
+53
+00:03:28,000 --> 00:03:32,000
+every time we declare an array using square brackets, that array
+
+54
+00:03:32,000 --> 00:03:36,000
+will automatically receive these properties, we didn't explicitly
+
+55
+00:03:36,000 --> 00:03:40,000
+define them, they are just somehow magically inherited
+
+56
+00:03:40,000 --> 00:03:44,000
+from somewhere else. We're going to learn about that later when we talk about
+
+57
+00:03:44,000 --> 00:03:48,000
+prototypes. Now in this lecture, we're going to look at one of these properties.
+
+58
+00:03:48,000 --> 00:03:52,000
+That is the length property. This property returns
+
+59
+00:03:52,000 --> 00:03:56,000
+a number of items or elements in an array. So,
+
+60
+00:03:56,000 --> 00:04:00,000
+save the changes, you can see we have three elements in this array.
+
+61
+00:04:00,000 --> 00:04:04,000
+Now later in the course, we have a comprehensive section about arrays, you will
+
+62
+00:04:04,000 --> 00:04:08,000
+learn about all kinds of operations you can perform on arrays,
+
+63
+00:04:08,000 --> 00:04:12,000
+for now, all I want you to take away, is array, is a
+
+64
+00:04:12,000 --> 00:04:16,000
+data structure, that we use to represent a list of items.
+

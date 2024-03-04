@@ -1,0 +1,190 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+So you have learned
+
+2
+00:00:04.000 --> 00:00:08.000
+how to declare and initialize a variable. Now you might be wondering
+
+3
+00:00:08.000 --> 00:00:12.000
+what are the kind of values that we can assign
+
+4
+00:00:12.000 --> 00:00:16.000
+to a variable? Well you seen strings, but we have more types.
+
+5
+00:00:16.000 --> 00:00:20.000
+Basically, in JavaScript we have two categories of types.
+
+6
+00:00:20.000 --> 00:00:24.000
+On one side, we have primitives, also called
+
+7
+00:00:24.000 --> 00:00:28.000
+value types. And the other types we have reference types.
+
+8
+00:00:28.000 --> 00:00:32.000
+In this lecture, we're going to focus on primitives, and you're going to learn about
+
+9
+00:00:32.000 --> 00:00:36.000
+reference types later in the course. Now in the category of
+
+10
+00:00:36.000 --> 00:00:40.000
+primitives, we have strings, numbers,
+
+11
+00:00:40.000 --> 00:00:44.000
+booleans, undefined, and null. Let's look at
+
+12
+00:00:44.000 --> 00:00:48.000
+each of these in action. So here we have a variable called
+
+13
+00:00:48.000 --> 00:00:52.000
+name which is set to a string, what we have here is
+
+14
+00:00:52.000 --> 00:00:56.000
+called a string literal.
+
+15
+00:00:56.000 --> 00:01:00.000
+That's just a fancy name for a string. Now let's declare a variable
+
+16
+00:01:00.000 --> 00:01:04.000
+and set it to a number. So let Age and set that to 30
+
+17
+00:01:04.000 --> 00:01:08.000
+and by the way I'm not 30 years old, but don't tell anyone, okay?
+
+18
+00:01:08.000 --> 00:01:12.000
+So this is what we call a number literal.
+
+19
+00:01:12.000 --> 00:01:16.000
+Now let's declare a boolean. A boolean can either be true
+
+20
+00:01:16.000 --> 00:01:20.000
+or false. So, let isApproved
+
+21
+00:01:20.000 --> 00:01:24.000
+to be true. This is what we call a
+
+22
+00:01:24.000 --> 00:01:28.000
+boolean Literal. And we use this in situations where we want to have
+
+23
+00:01:28.000 --> 00:01:32.000
+some logic. For example, if the order is approved,
+
+24
+00:01:32.000 --> 00:01:36.000
+then, it needs to be shipped. So the value of a boolean
+
+25
+00:01:36.000 --> 00:01:40.000
+variable can be true or false.
+
+26
+00:01:40.000 --> 00:01:44.000
+And by the way note that both true and false are reserved keywords,
+
+27
+00:01:44.000 --> 00:01:48.000
+so they cannot be variable names. Okay?
+
+28
+00:01:48.000 --> 00:01:52.000
+Now you have seen undefined before, so I can declare another
+
+29
+00:01:52.000 --> 00:01:56.000
+variable, firstName, if we don't initialize it, by default
+
+30
+00:01:56.000 --> 00:02:00.000
+it's value is undefined, but we can also explicitly
+
+31
+00:02:00.000 --> 00:02:04.000
+set this to undefined. But that's not very common,
+
+32
+00:02:04.000 --> 00:02:08.000
+in contrast, we have another keyword that is null.
+
+33
+00:02:08.000 --> 00:02:12.000
+So let me declare another variable, let's set this
+
+34
+00:02:12.000 --> 00:02:16.000
+to null. We use null in situations where we want
+
+35
+00:02:16.000 --> 00:02:20.000
+to explicitly clear the value of a variable.
+
+36
+00:02:20.000 --> 00:02:24.000
+For example, we may want to present the user with a list of colors.
+
+37
+00:02:24.000 --> 00:02:28.000
+If the user has no selection, you want to set
+
+38
+00:02:28.000 --> 00:02:32.000
+the selectedColor variable to null.
+
+39
+00:02:32.000 --> 00:02:36.000
+In the future, if user selects a color, then we are going to
+
+40
+00:02:36.000 --> 00:02:40.000
+reassign this variable to a color like red.
+
+41
+00:02:40.000 --> 00:02:44.000
+And then if they click red again, perhaps we want to remove the selection,
+
+42
+00:02:44.000 --> 00:02:48.000
+so we set this back to null. So we use
+
+43
+00:02:48.000 --> 00:02:52.000
+null in situations where we want to clear the value of a variable.
+
+44
+00:02:52.000 --> 00:02:56.000
+So these are the examples of primitives and value
+
+45
+00:02:56.000 --> 00:03:00.000
+types. We have strings, numbers, booleans,
+
+46
+00:03:00.000 --> 00:03:04.000
+undefined and null. Now in ES6 we have
+
+47
+00:03:04.000 --> 00:03:08.000
+another primitive that is symbol, and you're going to learn that later in the course.
+
