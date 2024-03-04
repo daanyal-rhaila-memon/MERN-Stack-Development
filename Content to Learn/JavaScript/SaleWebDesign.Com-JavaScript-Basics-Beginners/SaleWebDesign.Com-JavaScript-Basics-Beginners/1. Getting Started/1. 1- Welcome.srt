@@ -1,0 +1,28 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+Hello! And welcome to the JavaScript
+
+2
+00:00:04,000 --> 00:00:08,000
+for Beginners course. My name is Mosh Hamedani, and I'm super excited to take
+
+3
+00:00:08,000 --> 00:00:12,000
+you through the ins and outs of learning JavaScript for the first time.
+
+4
+00:00:12,000 --> 00:00:16,000
+This course will teach you the fundamentals of programming in JavaScript.
+
+5
+00:00:16,000 --> 00:00:20,000
+Once you've finished this course, you'll have taken the first steps towards becoming
+
+6
+00:00:20,000 --> 00:00:24,000
+a skilled frontend developer. Are you ready to dive
+
+7
+00:00:24,000 --> 00:00:28,000
+into JavaScript? Then let's get started!
+

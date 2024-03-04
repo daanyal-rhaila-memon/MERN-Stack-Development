@@ -1,0 +1,188 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+In order to write JavaScript code you need
+
+2
+00:00:04,000 --> 00:00:08,000
+a code editor. There are various code editors out there including
+
+3
+00:00:08,000 --> 00:00:12,000
+Visual Studio Code or VSCode, Sublime Text,
+
+4
+00:00:12,000 --> 00:00:16,000
+Atom, and so on. Out of these, my favorite is visual studio.
+
+5
+00:00:16,000 --> 00:00:20,000
+Code that we can download from code.visualstudio.com.
+
+6
+00:00:20,000 --> 00:00:24,000
+It's a very simple, lightweight, cross platform and
+
+7
+00:00:24,000 --> 00:00:28,000
+powerful editor. So if you don't have visual studio code on your machine, go
+
+8
+00:00:28,000 --> 00:00:32,000
+ahead and download it, the other thing I want you to install is Node.
+
+9
+00:00:32,000 --> 00:00:36,000
+You can download node from nod.js.org.
+
+10
+00:00:36,000 --> 00:00:40,000
+Now technically you don't necessarily need Node to execute JavaScript.
+
+11
+00:00:40,000 --> 00:00:44,000
+Because as I explained before, you can execute JavaScript code inside
+
+12
+00:00:44,000 --> 00:00:48,000
+of a browser or in Node. But it's good to have Node on your machine
+
+13
+00:00:48,000 --> 00:00:52,000
+because we use that to install third party libraries and also
+
+14
+00:00:52,000 --> 00:00:56,000
+later in this section I'm going to show you a preview of Node. So,
+
+15
+00:00:56,000 --> 00:01:00,000
+pause the video now, and download Visual Studio Code as well as Node.
+
+16
+00:01:00,000 --> 00:01:04,000
+Once you're done, come back and continue watching.
+
+17
+00:01:04,000 --> 00:01:08,000
+Alright, now I want you to create a new folder,
+
+18
+00:01:08,000 --> 00:01:12,000
+call that js-
+
+19
+00:01:12,000 --> 00:01:16,000
+basics, the name doesn't really matter, we just want to have a folder
+
+20
+00:01:16,000 --> 00:01:20,000
+for writing all the code in this course. Now, drag and drop
+
+21
+00:01:20,000 --> 00:01:24,000
+this folder into Visual Studio Code.
+
+22
+00:01:24,000 --> 00:01:28,000
+Okay? We've got this folder open, let's add a new file here,
+
+23
+00:01:28,000 --> 00:01:32,000
+index.html.
+
+24
+00:01:32,000 --> 00:01:36,000
+Now you don't really need to know Html in order to take this course. But if you want to
+
+25
+00:01:36,000 --> 00:01:40,000
+be a front-end developer you should know your html well. Now in this
+
+26
+00:01:40,000 --> 00:01:44,000
+file, I want you to type an exclamation mark and then press
+
+27
+00:01:44,000 --> 00:01:48,000
+tab. This generates some basic html boiler plate,
+
+28
+00:01:48,000 --> 00:01:52,000
+we don't really care about any of this code here, we're going to use this as a
+
+29
+00:01:52,000 --> 00:01:56,000
+host for our JavaScript code. You're going to see that in the next lecture, so,
+
+30
+00:01:56,000 --> 00:02:00,000
+save the changes, now, open the
+
+31
+00:02:00,000 --> 00:02:04,000
+extensions tab here. Here in this box,
+
+32
+00:02:04,000 --> 00:02:08,000
+search for live server.
+
+33
+00:02:08,000 --> 00:02:12,000
+So live server is a very light weight web server
+
+34
+00:02:12,000 --> 00:02:16,000
+that we're going to use to serve our web application.
+
+35
+00:02:16,000 --> 00:02:20,000
+So install this, then you will have to restart visual studio code,
+
+36
+00:02:20,000 --> 00:02:24,000
+when you're done, go to the explorer tab,
+
+37
+00:02:24,000 --> 00:02:28,000
+write click index.html and select
+
+38
+00:02:28,000 --> 00:02:32,000
+open with live server.
+
+39
+00:02:32,000 --> 00:02:36,000
+This will open up Chrome, or your default browser, and point it
+
+40
+00:02:36,000 --> 00:02:40,000
+to this address. That's where our web application is served from.
+
+41
+00:02:40,000 --> 00:02:44,000
+Now currently we have an empty page, to make sure everything is working
+
+42
+00:02:44,000 --> 00:02:48,000
+properly, let's go back to visual studio code,
+
+43
+00:02:48,000 --> 00:02:52,000
+here in the body section, let's add an h1,
+
+44
+00:02:52,000 --> 00:02:56,000
+press tab and type hello world. Now
+
+45
+00:02:56,000 --> 00:03:00,000
+save the changes, back in the browser, you can see this page
+
+46
+00:03:00,000 --> 00:03:04,000
+is refreshed automatically and we've got the Hello World heading here.
+
+47
+00:03:04,000 --> 00:03:08,000
+In the next lecture, you're going to write your first JavaScript code.
+

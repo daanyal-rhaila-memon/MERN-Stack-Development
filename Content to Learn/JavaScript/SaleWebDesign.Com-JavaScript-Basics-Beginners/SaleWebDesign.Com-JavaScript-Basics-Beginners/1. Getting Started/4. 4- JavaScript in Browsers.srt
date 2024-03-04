@@ -1,0 +1,228 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+Alright now we're
+
+2
+00:00:04,000 --> 00:00:08,000
+ready to write our first JavaScript code. In order to write JavaScript code
+
+3
+00:00:08,000 --> 00:00:12,000
+here, we need a script element. There are two places
+
+4
+00:00:12,000 --> 00:00:16,000
+where we can add a script element. We can add that here
+
+5
+00:00:16,000 --> 00:00:20,000
+in a head section, or in the body section.
+
+6
+00:00:20,000 --> 00:00:24,000
+The best practice is to put the script element at the end
+
+7
+00:00:24,000 --> 00:00:28,000
+of the body section after all the existing elements.
+
+8
+00:00:28,000 --> 00:00:32,000
+So here after h1 I'm going to type script
+
+9
+00:00:32,000 --> 00:00:36,000
+and press tab. This is our script element. Now why did I
+
+10
+00:00:36,000 --> 00:00:40,000
+say that as a best practice we should put the script element here?
+
+11
+00:00:40,000 --> 00:00:44,000
+Well, there are two reasons for that. One reason is
+
+12
+00:00:44,000 --> 00:00:48,000
+that the browser parses this file from top to bottom. So,
+
+13
+00:00:48,000 --> 00:00:52,000
+if you put the script element here in the head section.
+
+14
+00:00:52,000 --> 00:00:56,000
+You might have a lot of JavaScript code there, so your browser might
+
+15
+00:00:56,000 --> 00:01:00,000
+get busy parsing and executing that JavaScript code, and it's one
+
+16
+00:01:00,000 --> 00:01:04,000
+thing to be able to render the content of the page.
+
+17
+00:01:04,000 --> 00:01:08,000
+So this will create a bad user experience. Your user looks at your web page
+
+18
+00:01:08,000 --> 00:01:12,000
+it's white or blank, while your browser is busy parsing
+
+19
+00:01:12,000 --> 00:01:16,000
+and executing your JavaScript code. So that's reason 1.
+
+20
+00:01:16,000 --> 00:01:20,000
+The second reason is that almost always the code that we have
+
+21
+00:01:20,000 --> 00:01:24,000
+in between script elements needs to talk to the
+
+22
+00:01:24,000 --> 00:01:28,000
+elements on this web page. For example, we may want to show or hide
+
+23
+00:01:28,000 --> 00:01:32,000
+some elements. So by adding the code here, at the end
+
+24
+00:01:32,000 --> 00:01:36,000
+of the body section, we'll be confident that all these elements
+
+25
+00:01:36,000 --> 00:01:40,000
+are rendered by the browser. Now there are exceptions to this rule,
+
+26
+00:01:40,000 --> 00:01:44,000
+sometimes you're using third part code that has to be placed
+
+27
+00:01:44,000 --> 00:01:48,000
+in the head section. But these are exceptions, as I told you before
+
+28
+00:01:48,000 --> 00:01:52,000
+as a best practice, you should add your JavaScript code at the end of the body section.
+
+29
+00:01:52,000 --> 00:01:56,000
+Now here, you're going to write the same code that
+
+30
+00:01:56,000 --> 00:02:00,000
+you wrote in the last lecture, console.log,
+
+31
+00:02:00,000 --> 00:02:04,000
+Hello World. But we're
+
+32
+00:02:04,000 --> 00:02:08,000
+going to talk about this in a little bit more detail, what we have here is a
+
+33
+00:02:08,000 --> 00:02:12,000
+statement. A statement is a piece of code that expresses
+
+34
+00:02:12,000 --> 00:02:16,000
+an action to be carried out. In this case, we want to log
+
+35
+00:02:16,000 --> 00:02:20,000
+a message on the console. All statements
+
+36
+00:02:20,000 --> 00:02:24,000
+in Javascript should be terminated by a semi colon.
+
+37
+00:02:24,000 --> 00:02:28,000
+What we have here in between single codes is called
+
+38
+00:02:28,000 --> 00:02:32,000
+a string. A string is a sequence of characters
+
+39
+00:02:32,000 --> 00:02:36,000
+Now in JavaScript we also have this notation, we can add
+
+40
+00:02:36,000 --> 00:02:40,000
+two slashes, and this represents a comment.
+
+41
+00:02:40,000 --> 00:02:44,000
+So here we can add some description to our code and this description
+
+42
+00:02:44,000 --> 00:02:48,000
+is ignored by the JavaScript engine, it's not executed.
+
+43
+00:02:48,000 --> 00:02:52,000
+It's purely for documenting the code, when you want to explain to other
+
+44
+00:02:52,000 --> 00:02:56,000
+developers why you have written this code this way.
+
+45
+00:02:56,000 --> 00:03:00,000
+You don't want to explain what the code does, because that should be clear in
+
+46
+00:03:00,000 --> 00:03:04,000
+itself. So here I don't want to write something like logging something
+
+47
+00:03:04,000 --> 00:03:08,000
+on the console. That's so obvious in the code, right? Instead we want to
+
+48
+00:03:08,000 --> 00:03:12,000
+explain why's and how's. So for this demo, I'm just going to add
+
+49
+00:03:12,000 --> 00:03:16,000
+a simple comment, this is my first JavaScript
+
+50
+00:03:16,000 --> 00:03:20,000
+code. Now save the changes,
+
+51
+00:03:20,000 --> 00:03:24,000
+back in the browser, we need to bring the console back
+
+52
+00:03:24,000 --> 00:03:28,000
+up, so right click somewhere, and click inspect, or
+
+53
+00:03:28,000 --> 00:03:32,000
+alternatively, you can use a short cut, that is alt, command,
+
+54
+00:03:32,000 --> 00:03:36,000
+and i, on Mac, or alt control I on Windows.
+
+55
+00:03:36,000 --> 00:03:40,000
+That brings up the console tab, if the console tab is not
+
+56
+00:03:40,000 --> 00:03:44,000
+immediately visible, make sure to select it here, and here you can see the Hello
+
+57
+00:03:44,000 --> 00:03:47,066
+World message.
+

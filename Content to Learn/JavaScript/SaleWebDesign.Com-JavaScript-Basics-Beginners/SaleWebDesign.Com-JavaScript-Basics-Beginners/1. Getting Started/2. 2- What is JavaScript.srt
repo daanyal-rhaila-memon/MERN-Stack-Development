@@ -1,0 +1,280 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+In this three minute introduction, I'm
+
+2
+00:00:04,000 --> 00:00:08,000
+going to answer four frequently asked questions about JavaScript.
+
+3
+00:00:08,000 --> 00:00:12,000
+What is JavaScript? What can you do with it?
+
+4
+00:00:12,000 --> 00:00:16,000
+Where does JavaScript code run? And what is the difference between JavaScript and
+
+5
+00:00:16,000 --> 00:00:20,000
+ECMA Script? So let's start with the first question. What is JavaScript?
+
+6
+00:00:20,000 --> 00:00:24,000
+JavaScript is one of the most popular and widely
+
+7
+00:00:24,000 --> 00:00:28,000
+used programming languages in the world right now. It's growing
+
+8
+00:00:28,000 --> 00:00:32,000
+faster than any other programming languages, and big companies like Netflix
+
+9
+00:00:32,000 --> 00:00:36,000
+Walmart, and PayPal, build entire applications around
+
+10
+00:00:36,000 --> 00:00:40,000
+JavaScript. And here's the average salary of a JavaScript developer,
+
+11
+00:00:40,000 --> 00:00:44,000
+in the united states. That is $72,000 a year.
+
+12
+00:00:44,000 --> 00:00:48,000
+So it's a great opportunity to get a great job learning JavaScript.
+
+13
+00:00:48,000 --> 00:00:52,000
+You can work as a front-end developer, or back-end developer,
+
+14
+00:00:52,000 --> 00:00:56,000
+or a full-stack developer, or who knows, both the front-end and the back-end.
+
+15
+00:00:56,000 --> 00:01:00,000
+Now the second question, what can you do with JavaScript?
+
+16
+00:01:00,000 --> 00:01:04,000
+For a long time, JavaScript was only used in browsers to build
+
+17
+00:01:04,000 --> 00:01:08,000
+interactive web pages. Some developers referred to Javascript
+
+18
+00:01:08,000 --> 00:01:12,000
+as a toy language. But those days are gone because of huge
+
+19
+00:01:12,000 --> 00:01:16,000
+community support and investments like large companies like Facebook
+
+20
+00:01:16,000 --> 00:01:20,000
+and Google. These days you can build full blown web or mobile
+
+21
+00:01:20,000 --> 00:01:24,000
+apps as well as real-time networking apps like
+
+22
+00:01:24,000 --> 00:01:28,000
+chats and video streaming services, command-line tools, or even games.
+
+23
+00:01:28,000 --> 00:01:32,000
+Here's an example, the third question,
+
+24
+00:01:32,000 --> 00:01:36,000
+where does JavaScript code run? JavaScript was originally
+
+25
+00:01:36,000 --> 00:01:40,000
+designed to run only in browsers. So every browser has
+
+26
+00:01:40,000 --> 00:01:44,000
+what we call a JavaScript Engine that can execute JavaScript code.
+
+27
+00:01:44,000 --> 00:01:48,000
+For example, the JavaScript engines in Firefox and Chrome
+
+28
+00:01:48,000 --> 00:01:52,000
+are SpiderMonkey and V8. In 2009,
+
+29
+00:01:52,000 --> 00:01:56,000
+a very clever engineer called Brian Doll took the
+
+30
+00:01:56,000 --> 00:02:00,000
+open source JavaScript engine in Chrome, and embedded it inside
+
+31
+00:02:00,000 --> 00:02:04,000
+a C++ program. He called that program Node.
+
+32
+00:02:04,000 --> 00:02:08,000
+So Node is a C++ program, that includes Google's V8 JavaScript
+
+33
+00:02:08,000 --> 00:02:12,000
+engine. Now with this we can
+
+34
+00:02:12,000 --> 00:02:16,000
+run JavaScript code outside of a browser, so we can pass our
+
+35
+00:02:16,000 --> 00:02:20,000
+JavaScript code to Node for execution. And this means the
+
+36
+00:02:20,000 --> 00:02:24,000
+with JavaScript we can build the back-end for our web and mobile applications.
+
+37
+00:02:24,000 --> 00:02:28,000
+So, in a nut shell, JavaScript code can be run inside of
+
+38
+00:02:28,000 --> 00:02:32,000
+a browser, or in Node. Browsers and Node provide a
+
+39
+00:02:32,000 --> 00:02:36,000
+runtime environment for our JavaScript code. And finally the last question,
+
+40
+00:02:36,000 --> 00:02:40,000
+what is the difference between JavaScript and ECMA Script?
+
+41
+00:02:40,000 --> 00:02:44,000
+Well, ECMA Script is just a specification, Java
+
+42
+00:02:44,000 --> 00:02:48,000
+Script is a programming language that confirms to this specification.
+
+43
+00:02:48,000 --> 00:02:52,000
+So, we have this organization called ECMA, which is responsible
+
+44
+00:02:52,000 --> 00:02:56,000
+for defining standards, they take care of this ECMA Script
+
+45
+00:02:56,000 --> 00:03:00,000
+specification. The first version of ECMA Script was released in
+
+46
+00:03:00,000 --> 00:03:04,000
+1997. Then, starting in 2015, ECMA
+
+47
+00:03:04,000 --> 00:03:08,000
+has been working on annual releases of a new specification.
+
+48
+00:03:08,000 --> 00:03:12,000
+So in 2015. ECMA Script 2015 which is also
+
+49
+00:03:12,000 --> 00:03:16,000
+called ECMA Script version 6, or ES6
+
+50
+00:03:16,000 --> 00:03:20,000
+for short. This specification defined many new features for
+
+51
+00:03:20,000 --> 00:03:24,000
+JavaScript. Alright, enough theory, let's see JavaScript in action.
+
+52
+00:03:24,000 --> 00:03:28,000
+So every browser has a JavaScript engine, and we can easily
+
+53
+00:03:28,000 --> 00:03:32,000
+write JavaScript code here without any additional tools. Of course,
+
+54
+00:03:32,000 --> 00:03:36,000
+this is not how we build real world applications, but this is just for a quick demo.
+
+55
+00:03:36,000 --> 00:03:40,000
+So open up Chrome, right click on an empty area and go
+
+56
+00:03:40,000 --> 00:03:44,000
+to inspect. Now this opens up Chrome
+
+57
+00:03:44,000 --> 00:03:48,000
+developer tools. Here, select the console tab, this is our JavaScript
+
+58
+00:03:48,000 --> 00:03:52,000
+console, and we can write any valid JavaScript code here. So,
+
+59
+00:03:52,000 --> 00:03:56,000
+type this, console.log
+
+60
+00:03:56,000 --> 00:04:00,000
+put a single code here, and then Hello World
+
+61
+00:04:00,000 --> 00:04:04,000
+Another single code to terminate,
+
+62
+00:04:04,000 --> 00:04:08,000
+close the parenthesis, and add a semi colon at the end. Now as you
+
+63
+00:04:08,000 --> 00:04:12,000
+go through the course, you're going to understand exactly what all this means, for now, don't
+
+64
+00:04:12,000 --> 00:04:16,000
+worry about it. So now, press enter, and you can see the Hello World
+
+65
+00:04:16,000 --> 00:04:20,000
+message on the console. You can also write mathematical expressions
+
+66
+00:04:20,000 --> 00:04:24,000
+here. For example 2+2 you get 4. Or
+
+67
+00:04:24,000 --> 00:04:28,000
+we can do something like this. Alert, parenthesis single code
+
+68
+00:04:28,000 --> 00:04:32,000
+yo. Enter and here's an alert.
+
+69
+00:04:32,000 --> 00:04:36,000
+In the next lecture, I'm going to talk about setting up your
+
+70
+00:04:36,000 --> 00:04:40,000
+development environment for writing JavaScript code.
+

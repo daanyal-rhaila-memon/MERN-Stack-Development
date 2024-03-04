@@ -1,0 +1,126 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+Now while we can
+
+2
+00:00:04.000 --> 00:00:08.000
+easily write JavaScript code in between the script element, in a real
+
+3
+00:00:08.000 --> 00:00:12.000
+world application, you have 1000 maybe even a million lines of code, we don't want to
+
+4
+00:00:12.000 --> 00:00:16.000
+write all that code in line here. We want to extract and
+
+5
+00:00:16.000 --> 00:00:20.000
+separate our JavaScript code from our html code. Let me give you a
+
+6
+00:00:20.000 --> 00:00:24.000
+metaphor. Think of your house. In your bedroom you have your
+
+7
+00:00:24.000 --> 00:00:28.000
+bed, and your clothes, you don't store your clothes in the kitchen. This is
+
+8
+00:00:28.000 --> 00:00:32.000
+what we call separation of concerns. You have the same principle
+
+9
+00:00:32.000 --> 00:00:36.000
+in programming so we want to separate html which is all about content,
+
+10
+00:00:36.000 --> 00:00:40.000
+from JavaScript which is all about behavior. How should
+
+11
+00:00:40.000 --> 00:00:44.000
+your web page behave, what should happen when we hover our mouse
+
+12
+00:00:44.000 --> 00:00:48.000
+over a given element? Maybe something should pop up maybe something should be hidden,
+
+13
+00:00:48.000 --> 00:00:52.000
+so we use JavaScript to implement behavior. So,
+
+14
+00:00:52.000 --> 00:00:56.000
+open up the explorer window, add the new file,
+
+15
+00:00:56.000 --> 00:01:00.000
+call it index.js.
+
+16
+00:01:00.000 --> 00:01:04.000
+Now, back in index.html, cut all this
+
+17
+00:01:04.000 --> 00:01:08.000
+JavaScript code here, and then paste it in index.js,
+
+18
+00:01:08.000 --> 00:01:12.000
+now in this simple application we have a single
+
+19
+00:01:12.000 --> 00:01:16.000
+file, a single JavaScript file, in a real world application we have hundreds or even
+
+20
+00:01:16.000 --> 00:01:20.000
+thousands of JavaScript files. Later in the course you will learn how to
+
+21
+00:01:20.000 --> 00:01:24.000
+combine these files into a bundle, and serve that bundle into the client.
+
+22
+00:01:24.000 --> 00:01:28.000
+Now, save the changes, back in index.
+
+23
+00:01:28.000 --> 00:01:32.000
+html, now that all our JavaScript code is in a separate file
+
+24
+00:01:32.000 --> 00:01:36.000
+we need to reference that file here. So,
+
+25
+00:01:36.000 --> 00:01:40.000
+let's add an attribute here, src, which is short for src,
+
+26
+00:01:40.000 --> 00:01:44.000
+and set it to index.js.
+
+27
+00:01:44.000 --> 00:01:48.000
+So this tells the browsers that our JavaScript code
+
+28
+00:01:48.000 --> 00:01:52.000
+is now in index.js save the changes
+
+29
+00:01:52.000 --> 00:01:56.000
+back in the browser, you can still see the Hello World message
+
+30
+00:01:56.000 --> 00:02:00.000
+and that confirms that our code is still working. In the next lecture,
+
+31
+00:02:00.000 --> 00:02:04.000
+we're going to execute this code in Node.
+
