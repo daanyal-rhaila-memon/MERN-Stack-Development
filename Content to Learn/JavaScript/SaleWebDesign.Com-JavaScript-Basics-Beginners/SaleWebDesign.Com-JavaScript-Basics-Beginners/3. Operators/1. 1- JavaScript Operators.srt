@@ -1,0 +1,40 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+So you have learned how to declare
+
+2
+00:00:04,000 --> 00:00:08,000
+variables and constants, now let's take a look at operators.
+
+3
+00:00:08,000 --> 00:00:12,000
+In JavaScript we have different kinds of operators. We
+
+4
+00:00:12,000 --> 00:00:16,000
+use these operators along with our variables and constants to create
+
+5
+00:00:16,000 --> 00:00:20,000
+expressions. And with these expressions we can implement
+
+6
+00:00:20,000 --> 00:00:24,000
+logic and algorithms. So here are the different kinds of
+
+7
+00:00:24,000 --> 00:00:28,000
+operators in JavaScript. We have arithmetic
+
+8
+00:00:28,000 --> 00:00:32,000
+operators, assignment operators, comparison operators
+
+9
+00:00:32,000 --> 00:00:36,000
+logical operators, and bitwise operators. Over the next few
+
+10
+00:00:36,000 --> 00:00:40,000
+lectures, you're going to learn each of these in detail.
+

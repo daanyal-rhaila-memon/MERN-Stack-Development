@@ -1,0 +1,330 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+Alright now
+
+2
+00:00:04.000 --> 00:00:08.000
+let's take a look at the logical operators. We use these operators
+
+3
+00:00:08.000 --> 00:00:12.000
+to make decisions based on multiple conditions.
+
+4
+00:00:12.000 --> 00:00:16.000
+In JavaScript we have three types of logical operators,
+
+5
+00:00:16.000 --> 00:00:20.000
+logical and logical or and logical not. Let's see
+
+6
+00:00:20.000 --> 00:00:24.000
+each of these operators in action. So I'm going to start
+
+7
+00:00:24.000 --> 00:00:28.000
+with the logical and which indicated by
+
+8
+00:00:28.000 --> 00:00:32.000
+2 ampersands. So here's the basic rule of thumb.
+
+9
+00:00:32.000 --> 00:00:36.000
+This logical and returns true if both
+
+10
+00:00:36.000 --> 00:00:40.000
+operands are TRUE. What do I mean by that?
+
+11
+00:00:40.000 --> 00:00:44.000
+Well, let's do a console.log,
+
+12
+00:00:44.000 --> 00:00:48.000
+true and true. So we have two operands,
+
+13
+00:00:48.000 --> 00:00:52.000
+they are both true, so the result of evaluating,
+
+14
+00:00:52.000 --> 00:00:56.000
+this expression will be true. Let's have a look on the console.
+
+15
+00:00:56.000 --> 00:01:00.000
+Look, here we get true. Now if either
+
+16
+00:01:00.000 --> 00:01:04.000
+of these is false, the result will be false, so I'm going to change
+
+17
+00:01:04.000 --> 00:01:08.000
+this to false, save the changes,
+
+18
+00:01:08.000 --> 00:01:12.000
+note that we get false on the console, it doesn't matter which one is
+
+19
+00:01:12.000 --> 00:01:16.000
+false, if I make the other one false, or both of them false, I
+
+20
+00:01:16.000 --> 00:01:20.000
+still get false. So logical and returns
+
+21
+00:01:20.000 --> 00:01:24.000
+true if both operands are true. Now you might be asking
+
+22
+00:01:24.000 --> 00:01:28.000
+what is a real world use case for this operator? Well, let's
+
+23
+00:01:28.000 --> 00:01:32.000
+imagine we want to build an application for approving loans.
+
+24
+00:01:32.000 --> 00:01:36.000
+So we want to see if the applicant has high income and
+
+25
+00:01:36.000 --> 00:01:40.000
+a good credit score, then they will be eligible for loans.
+
+26
+00:01:40.000 --> 00:01:44.000
+So, I'm going to delete all this,
+
+27
+00:01:44.000 --> 00:01:48.000
+and declare a couple variables, high income, we're going to
+
+28
+00:01:48.000 --> 00:01:52.000
+set that to true, and good credit
+
+29
+00:01:52.000 --> 00:01:56.000
+Score, we're going to send that to true as well.
+
+30
+00:01:56.000 --> 00:02:00.000
+So here we're dealing with two conditions, we want to make sure that
+
+31
+00:02:00.000 --> 00:02:04.000
+the applicant has high income, and good credit score.
+
+32
+00:02:04.000 --> 00:02:08.000
+That's where we use the logical and. So we can declare another
+
+33
+00:02:08.000 --> 00:02:12.000
+variable, eligibleForLoan
+
+34
+00:02:12.000 --> 00:02:16.000
+and this is where we use the logical and operator.
+
+35
+00:02:16.000 --> 00:02:20.000
+So high income and goodCreditScore.
+
+36
+00:02:20.000 --> 00:02:24.000
+Now, if we log this on the console,
+
+37
+00:02:24.000 --> 00:02:28.000
+eligible for loan, we should get true, and
+
+38
+00:02:28.000 --> 00:02:32.000
+here's the result, now let's take a look at the logical or.
+
+39
+00:02:32.000 --> 00:02:36.000
+So, logical or is indicated by
+
+40
+00:02:36.000 --> 00:02:40.000
+two vertical lines, and this returns true
+
+41
+00:02:40.000 --> 00:02:44.000
+if one of the operands
+
+42
+00:02:44.000 --> 00:02:48.000
+is True. It doesn't matter which one, whether the one on the left,
+
+43
+00:02:48.000 --> 00:02:52.000
+or the one on the right or both of them, as long as we have one true
+
+44
+00:02:52.000 --> 00:02:56.000
+operand, the result of this expression will be true. So here's
+
+45
+00:02:56.000 --> 00:03:00.000
+an example. I'm going to replace this logical and with
+
+46
+00:03:00.000 --> 00:03:04.000
+logical or, now in this case both operands are true, so the
+
+47
+00:03:04.000 --> 00:03:08.000
+result of this expression will also be true. Let's have a look. So I'm going to
+
+48
+00:03:08.000 --> 00:03:12.000
+save the changes to get true, now if I save one of these to
+
+49
+00:03:12.000 --> 00:03:16.000
+false, we still get true.
+
+50
+00:03:16.000 --> 00:03:20.000
+It doesn't matter which one is true. As long as we have one operand
+
+51
+00:03:20.000 --> 00:03:24.000
+in this expression that evalues to true the
+
+52
+00:03:24.000 --> 00:03:28.000
+result of this expression will also be true. So this is how we use
+
+53
+00:03:28.000 --> 00:03:32.000
+the logical or. And finally, let's look at
+
+54
+00:03:32.000 --> 00:03:36.000
+the not operator. That is indicated by
+
+55
+00:03:36.000 --> 00:03:40.000
+an exclamation mark. So let's imagine that the
+
+56
+00:03:40.000 --> 00:03:44.000
+applicant is not eligible for loan, you want to consider the
+
+57
+00:03:44.000 --> 00:03:48.000
+application as refused. So we can declare
+
+58
+00:03:48.000 --> 00:03:52.000
+another variable applicationRefused
+
+59
+00:03:52.000 --> 00:03:56.000
+here we use the not operator, we apply
+
+60
+00:03:56.000 --> 00:04:00.000
+it on eligibleForLoan, so this is
+
+61
+00:04:00.000 --> 00:04:04.000
+what happens here. If eligible for loan is true, this
+
+62
+00:04:04.000 --> 00:04:08.000
+not operator will convert that to false. So whatever
+
+63
+00:04:08.000 --> 00:04:12.000
+we give it, it will give us the opposite, in this case
+
+64
+00:04:12.000 --> 00:04:16.000
+eligible for loan is true, this will convert that to false,
+
+65
+00:04:16.000 --> 00:04:20.000
+and applicationRefused will be false. Because if
+
+66
+00:04:20.000 --> 00:04:24.000
+someone is eligible for a loan, we don't want to refuse their application, right?
+
+67
+00:04:24.000 --> 00:04:28.000
+So application refused, is always the opposite of
+
+68
+00:04:28.000 --> 00:04:32.000
+eligibleForLoan, and that's where we used the not operator.
+
+69
+00:04:32.000 --> 00:04:36.000
+So let's see this in action. I'm going to change both these conditions
+
+70
+00:04:36.000 --> 00:04:40.000
+to false. So we're dealing with someone who
+
+71
+00:04:40.000 --> 00:04:44.000
+has low income and a bad credit score, obviously they are not eligible for
+
+72
+00:04:44.000 --> 00:04:48.000
+a loan, so let's log this on the console,
+
+73
+00:04:48.000 --> 00:04:52.000
+eligible for loan, and we can also add a label so
+
+74
+00:04:52.000 --> 00:04:56.000
+I'm going to add a string, eligible, and here we add
+
+75
+00:04:56.000 --> 00:05:00.000
+comma, then we apply the not operator,
+
+76
+00:05:00.000 --> 00:05:04.000
+to set the application refused variable, let's do another console
+
+77
+00:05:04.000 --> 00:05:08.000
+.log, application refused,
+
+78
+00:05:08.000 --> 00:05:12.000
+and here we log application refused variable.
+
+79
+00:05:12.000 --> 00:05:16.000
+Now let's see what we get on the console to save the changes
+
+80
+00:05:16.000 --> 00:05:20.000
+you can see if this applicant is not eligible
+
+81
+00:05:20.000 --> 00:05:24.000
+because eligible is false, and application refused is
+
+82
+00:05:24.000 --> 00:05:28.000
+true because it's always the opposite of eligible for loan.
+

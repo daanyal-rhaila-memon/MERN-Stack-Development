@@ -1,0 +1,194 @@
+﻿WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+In
+
+2
+00:00:04.000 --> 00:00:08.000
+the last lecture you learned about the equality operator.
+
+3
+00:00:08.000 --> 00:00:12.000
+Now technically in JavaScript we have another equality operator,
+
+4
+00:00:12.000 --> 00:00:16.000
+that is indicated by 2 equal signs instead of
+
+5
+00:00:16.000 --> 00:00:20.000
+3 equal signs. So you might be wondering what the difference is.
+
+6
+00:00:20.000 --> 00:00:24.000
+Well, first of all what we have on the top is what we
+
+7
+00:00:24.000 --> 00:00:28.000
+refer to as strict equality operator.
+
+8
+00:00:28.000 --> 00:00:32.000
+What we have on the bottom is what we call lose equality
+
+9
+00:00:32.000 --> 00:00:36.000
+operator. Now this strict equality operator
+
+10
+00:00:36.000 --> 00:00:40.000
+ensures that both these values we have
+
+11
+00:00:40.000 --> 00:00:44.000
+on the sides of this operator have the same type and same
+
+12
+00:00:44.000 --> 00:00:48.000
+value. What do I mean by that? Well, in this
+
+13
+00:00:48.000 --> 00:00:52.000
+example, on both sides of this operator we have two
+
+14
+00:00:52.000 --> 00:00:56.000
+numbers. So their type as well as their value are equal. So
+
+15
+00:00:56.000 --> 00:01:00.000
+if you save the changes, we get true and true.
+
+16
+00:01:00.000 --> 00:01:04.000
+Now, let's take a look at another example, this time,
+
+17
+00:01:04.000 --> 00:01:08.000
+I'm going to change one of these numbers to a string. Now if I
+
+18
+00:01:08.000 --> 00:01:12.000
+save the changes, this expression is going to evaluate to false
+
+19
+00:01:12.000 --> 00:01:16.000
+because here we're comparing a string to a number.
+
+20
+00:01:16.000 --> 00:01:20.000
+So the types here do not match, that's why we'll get false.
+
+21
+00:01:20.000 --> 00:01:24.000
+Let's have a look. Save, and here's false, right? So
+
+22
+00:01:24.000 --> 00:01:28.000
+the strict equality operator ensures that both uprand
+
+23
+00:01:28.000 --> 00:01:32.000
+are of the same type and of the same
+
+24
+00:01:32.000 --> 00:01:36.000
+value. Now loose equality operator behaves differently.
+
+25
+00:01:36.000 --> 00:01:40.000
+So, to focus on this operator, I'm going to comment
+
+26
+00:01:40.000 --> 00:01:44.000
+out these two lines, so here we're comparing one with
+
+27
+00:01:44.000 --> 00:01:48.000
+one, and we get true. Now, what if
+
+28
+00:01:48.000 --> 00:01:52.000
+we compare 1 as a string with 1.
+
+29
+00:01:52.000 --> 00:01:56.000
+We still get true. In contrast,
+
+30
+00:01:56.000 --> 00:02:00.000
+in a previous example, we got false. So let's see what's happening here.
+
+31
+00:02:00.000 --> 00:02:04.000
+In this case, this operator looks at the value on the left side.
+
+32
+00:02:04.000 --> 00:02:08.000
+Here we have a string, so it will automatically convert
+
+33
+00:02:08.000 --> 00:02:12.000
+what we have on the right side, to a string, so it will
+
+34
+00:02:12.000 --> 00:02:16.000
+look like this, and now because these values are exactly the same,
+
+35
+00:02:16.000 --> 00:02:20.000
+we get true on the console. Now what if on the
+
+36
+00:02:20.000 --> 00:02:24.000
+left side we have a boolean, well, this operator,
+
+37
+00:02:24.000 --> 00:02:28.000
+looks at what we have on the left side, because it's a boolean, it will automatically
+
+38
+00:02:28.000 --> 00:02:32.000
+convert the value on the right side to a boolean. So, it's like
+
+39
+00:02:32.000 --> 00:02:36.000
+comparing true with true. And if you save the changes,
+
+40
+00:02:36.000 --> 00:02:40.000
+again we get true. So here's what you need to take away.
+
+41
+00:02:40.000 --> 00:02:44.000
+The strict equality operator ensures that both
+
+42
+00:02:44.000 --> 00:02:48.000
+values have the same type and the same value. The loose
+
+43
+00:02:48.000 --> 00:02:52.000
+equality operator doesn't care about the types matching, if the types
+
+44
+00:02:52.000 --> 00:02:56.000
+don't match, it will convert the type of what we have on the right side
+
+45
+00:02:56.000 --> 00:03:00.000
+to match what we have on the left side. And then it will only check
+
+46
+00:03:00.000 --> 00:03:04.000
+if the values are equal. Now most of the time,
+
+47
+00:03:04.000 --> 00:03:08.000
+we should be using the strict equality operator, because it's more
+
+48
+00:03:08.000 --> 00:03:11.366
+precise and accurate.
+

@@ -1,0 +1,128 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+Now let's take a look at the ternary
+
+2
+00:00:04,000 --> 00:00:08,000
+or conditional operator, which is one of my favorite operators in JavaScript.
+
+3
+00:00:08,000 --> 00:00:12,000
+Let's imagine we want to implement a rule like this.
+
+4
+00:00:12,000 --> 00:00:16,000
+If a customer has more than 100 points,
+
+5
+00:00:16,000 --> 00:00:20,000
+they are a gold customer
+
+6
+00:00:20,000 --> 00:00:24,000
+otherwise, they are a
+
+7
+00:00:24,000 --> 00:00:28,000
+silver customer, how do we implement this?
+
+8
+00:00:28,000 --> 00:00:32,000
+Well, first I want to start by declaring a variable
+
+9
+00:00:32,000 --> 00:00:36,000
+to keep track of the number of points. So, let points
+
+10
+00:00:36,000 --> 00:00:40,000
+we send that to let's say 110, now we want to
+
+11
+00:00:40,000 --> 00:00:44,000
+declare another variable called type that represents the
+
+12
+00:00:44,000 --> 00:00:48,000
+type of customer, and here is where we use the ternary or
+
+13
+00:00:48,000 --> 00:00:52,000
+conditional operator. So this is how it works, first
+
+14
+00:00:52,000 --> 00:00:56,000
+we start with a condition. We want to compare the number of points
+
+15
+00:00:56,000 --> 00:01:00,000
+with hundred, so we use the comparison operator here,
+
+16
+00:01:00,000 --> 00:01:04,000
+points greater than 100. Now as you
+
+17
+00:01:04,000 --> 00:01:08,000
+learned earlier, this expression produces a boolean.
+
+18
+00:01:08,000 --> 00:01:12,000
+So the result of this expression is either true or false.
+
+19
+00:01:12,000 --> 00:01:16,000
+Now depending on the result, we're going to set this
+
+20
+00:01:16,000 --> 00:01:20,000
+type variable to a different value. So here we
+
+21
+00:01:20,000 --> 00:01:24,000
+add a question mark, now if this expression
+
+22
+00:01:24,000 --> 00:01:28,000
+value is to true, that means this is a gold customer, so
+
+23
+00:01:28,000 --> 00:01:32,000
+we want to set type to gold.
+
+24
+00:01:32,000 --> 00:01:36,000
+Otherwise, if this expression devalues to false, we want
+
+25
+00:01:36,000 --> 00:01:40,000
+to set the type to silver.
+
+26
+00:01:40,000 --> 00:01:44,000
+So this is the ternary or conditional operator, to start
+
+27
+00:01:44,000 --> 00:01:48,000
+with a condition, if that condition evalues to true, we use
+
+28
+00:01:48,000 --> 00:01:52,000
+this value, otherwise we use this other value.
+
+29
+00:01:52,000 --> 00:01:56,000
+Now, let's log type on the console,
+
+30
+00:01:56,000 --> 00:02:00,000
+save the changes, so we have a gold customer,
+
+31
+00:02:00,000 --> 00:02:04,000
+in contrast, if I change the number of points to
+
+32
+00:02:04,000 --> 00:02:08,000
+90, and save the changes, we get a silver customer.
+

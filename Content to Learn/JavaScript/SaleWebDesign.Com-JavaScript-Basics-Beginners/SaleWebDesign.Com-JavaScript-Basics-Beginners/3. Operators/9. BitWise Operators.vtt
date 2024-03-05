@@ -1,0 +1,510 @@
+﻿WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+Finally, the
+
+2
+00:00:04.000 --> 00:00:08.000
+last group of operators we're going to look at is bitwise operators.
+
+3
+00:00:08.000 --> 00:00:12.000
+Now, this really requires me to go beyond the
+
+4
+00:00:12.000 --> 00:00:16.000
+scope of this course, I have to talk about some computer science stuff, and honestly
+
+5
+00:00:16.000 --> 00:00:20.000
+I don't really want to bore you, because this stuff doesn't really have that much
+
+6
+00:00:20.000 --> 00:00:24.000
+practical usage in the real world, I'm not saying their useless,
+
+7
+00:00:24.000 --> 00:00:28.000
+they definitely have their own use, but they are more on the theoretical
+
+8
+00:00:28.000 --> 00:00:32.000
+side and it's not something that you will use on a daily basis. However,
+
+9
+00:00:32.000 --> 00:00:36.000
+if you're really enthusiastic, I'm going to explain what
+
+10
+00:00:36.000 --> 00:00:40.000
+bitwise operators are, and how they work, but feel free to skip this lecture if you just want
+
+11
+00:00:40.000 --> 00:00:44.000
+to focus on the practicality. So you know that we
+
+12
+00:00:44.000 --> 00:00:48.000
+humans use the decimal system to represent numbers. So 1
+
+13
+00:00:48.000 --> 00:00:52.000
+2345. But in computers, these numbers are stored
+
+14
+00:00:52.000 --> 00:00:56.000
+in the binary format, which is a combination of 0's
+
+15
+00:00:56.000 --> 00:01:00.000
+and 1's. So let's take a look at a few examples. The
+
+16
+00:01:00.000 --> 00:01:04.000
+number 1 in the decimal system, is represented as 7
+
+17
+00:01:04.000 --> 00:01:08.000
+0's, 1234567, and 1.
+
+18
+00:01:08.000 --> 00:01:12.000
+So we have 8 digits, each digit is what we call
+
+19
+00:01:12.000 --> 00:01:16.000
+a bit, so here we have 8 bits, which represents
+
+20
+00:01:16.000 --> 00:01:20.000
+1 byte of information in a computer. Here's another
+
+21
+00:01:20.000 --> 00:01:24.000
+example. Number 2 in the decimal system equals to
+
+22
+00:01:24.000 --> 00:01:28.000
+there are six 0's and then 1, 0.
+
+23
+00:01:28.000 --> 00:01:32.000
+There are mathematical formulas behind this, for converting numbers between decimal
+
+24
+00:01:32.000 --> 00:01:36.000
+and binary systems, if you don't want to learn the mathematics, you can simply
+
+25
+00:01:36.000 --> 00:01:40.000
+Google decimal to binary converter. Now,
+
+26
+00:01:40.000 --> 00:01:44.000
+bitwise operators in JavaScript or any other programming languages, are
+
+27
+00:01:44.000 --> 00:01:48.000
+similar to logical operators, but they work in the individual
+
+28
+00:01:48.000 --> 00:01:52.000
+bits of a number. Let me show you what I mean by this.
+
+29
+00:01:52.000 --> 00:01:56.000
+So, I'm going to do a console.log, 1
+
+30
+00:01:56.000 --> 00:02:00.000
+or 2. Note that here we have a single
+
+31
+00:02:00.000 --> 00:02:04.000
+vertical line, that represents a bit wise or,
+
+32
+00:02:04.000 --> 00:02:08.000
+bitwise OR, logical or's
+
+33
+00:02:08.000 --> 00:02:12.000
+have double vertical lines. So when we apply the bitwise or
+
+34
+00:02:12.000 --> 00:02:16.000
+between 1 and 2, this is what's going to happen. So,
+
+35
+00:02:16.000 --> 00:02:20.000
+I add r as the result here. Now,
+
+36
+00:02:20.000 --> 00:02:24.000
+this operators is going to look at each of these beats like this,
+
+37
+00:02:24.000 --> 00:02:28.000
+in a vertical way, if either of these bits is one, the result
+
+38
+00:02:28.000 --> 00:02:32.000
+will be 1, otherwise it will be 0. So here, in both
+
+39
+00:02:32.000 --> 00:02:36.000
+these numbers, the first 6 bits are 0, so,
+
+40
+00:02:36.000 --> 00:02:40.000
+in the result you also have 6 0's. Now
+
+41
+00:02:40.000 --> 00:02:44.000
+the 7 bit will be 1, because here we have
+
+42
+00:02:44.000 --> 00:02:48.000
+1 at this position, right? And similarly, the 8 bit
+
+43
+00:02:48.000 --> 00:02:52.000
+will be 1, because here we have a 1. Now if we
+
+44
+00:02:52.000 --> 00:02:56.000
+convert this binary number to a decimal number the result will be
+
+45
+00:02:56.000 --> 00:03:00.000
+3. So let's save the changes
+
+46
+00:03:00.000 --> 00:03:04.000
+and you can see on the console we have 3.
+
+47
+00:03:04.000 --> 00:03:08.000
+Bitwise and a similar. So let's duplicate this, bitwise, and
+
+48
+00:03:08.000 --> 00:03:12.000
+will use a single ampersand for that.
+
+49
+00:03:12.000 --> 00:03:16.000
+ing 0, now the result is going to be something like this. So, if
+
+50
+00:03:16.000 --> 00:03:20.000
+both numbers are 1, 1 will be returned otherwise
+
+51
+00:03:20.000 --> 00:03:24.000
+will be 0. So in this case all the bits will end up
+
+52
+00:03:24.000 --> 00:03:28.000
+being 0, because if you look if you look at these two first numbers, 1 and 2,
+
+53
+00:03:28.000 --> 00:03:32.000
+their first 6 bits are 0,
+
+54
+00:03:32.000 --> 00:03:36.000
+and here in the second number we have this bit that is 1,
+
+55
+00:03:36.000 --> 00:03:40.000
+but the bit at the equivalent position here is 0. So if we apply
+
+56
+00:03:40.000 --> 00:03:44.000
+it with and between these two bits the results will be 0, okay?
+
+57
+00:03:44.000 --> 00:03:48.000
+So, this binary number equals 0 in the
+
+58
+00:03:48.000 --> 00:03:52.000
+decimal system. But save the changes, and see this on the console.
+
+59
+00:03:52.000 --> 00:03:56.000
+Save, here it is. So this is the fundamental
+
+60
+00:03:56.000 --> 00:04:00.000
+of bitwise operators. Now in JavaScript we have a few more bitwise operators,
+
+61
+00:04:00.000 --> 00:04:04.000
+but in the real world they are not that common. Now let me give you
+
+62
+00:04:04.000 --> 00:04:08.000
+a real world example of when we can use these bitwise operators so
+
+63
+00:04:08.000 --> 00:04:12.000
+at least they make sense to you. Imagine we want to implement
+
+64
+00:04:12.000 --> 00:04:16.000
+an access control system. So the user can have
+
+65
+00:04:16.000 --> 00:04:20.000
+these permissions, read, write or
+
+66
+00:04:20.000 --> 00:04:24.000
+execute. Now we can use one
+
+67
+00:04:24.000 --> 00:04:28.000
+byte of information, or 8 bits, to determine the kind of information
+
+68
+00:04:28.000 --> 00:04:32.000
+a user can have. For example, we can use
+
+69
+00:04:32.000 --> 00:04:36.000
+5 0's 12345, we don't care about
+
+70
+00:04:36.000 --> 00:04:40.000
+the first 5 bits, but for the other 3 bits,
+
+71
+00:04:40.000 --> 00:04:44.000
+if the user has a permission we will use 1, otherwise we will
+
+72
+00:04:44.000 --> 00:04:48.000
+use 0. So if the user has only the read permission, you will use
+
+73
+00:04:48.000 --> 00:04:52.000
+1 for the read, and for write and execute you will
+
+74
+00:04:52.000 --> 00:04:56.000
+use 0. Similarly if the user has read and
+
+75
+00:04:56.000 --> 00:05:00.000
+write permissions. We can represent this permission
+
+76
+00:05:00.000 --> 00:05:04.000
+using this binary number. And finally if the user
+
+77
+00:05:04.000 --> 00:05:08.000
+has all these positions. We can represent that
+
+78
+00:05:08.000 --> 00:05:12.000
+like this. Now, this is where we use bitwise operators.
+
+79
+00:05:12.000 --> 00:05:16.000
+So, I'm going to delete these two lines, as well as
+
+80
+00:05:16.000 --> 00:05:20.000
+these few lines on the top, let's see how we can implement
+
+81
+00:05:20.000 --> 00:05:24.000
+these access control system, using bitwise operators. So,
+
+82
+00:05:24.000 --> 00:05:28.000
+I'm going to define a constant called readPermission,
+
+83
+00:05:28.000 --> 00:05:32.000
+now I need to set this to a decimal number that is
+
+84
+00:05:32.000 --> 00:05:36.000
+equivalent to this binary number. That decimal number is
+
+85
+00:05:36.000 --> 00:05:40.000
+4. Again, you can use an online converter to get this. Similarly
+
+86
+00:05:40.000 --> 00:05:44.000
+I'm going to define another constant, writePermission
+
+87
+00:05:44.000 --> 00:05:48.000
+now what I want now is the decimal representation
+
+88
+00:05:48.000 --> 00:05:52.000
+of this binary number. So all these bits
+
+89
+00:05:52.000 --> 00:05:56.000
+or flags are off, only the right flag is
+
+90
+00:05:56.000 --> 00:06:00.000
+on it, okay? So this binary number 10, is equivalent to
+
+91
+00:06:00.000 --> 00:06:04.000
+2 in the decimal system. And finally,
+
+92
+00:06:04.000 --> 00:06:08.000
+executePermission. So what we want is the
+
+93
+00:06:08.000 --> 00:06:12.000
+decimal representation of this binary number. All these flags
+
+94
+00:06:12.000 --> 00:06:16.000
+are 0, oney the execute flag or execute bit is
+
+95
+00:06:16.000 --> 00:06:20.000
+1. And that number is 1.
+
+96
+00:06:20.000 --> 00:06:24.000
+Now, I can declare a variable like myPermission
+
+97
+00:06:24.000 --> 00:06:28.000
+inititally set that to 0, now I can give myself extra
+
+98
+00:06:28.000 --> 00:06:32.000
+permissions. So, I can update my permission like
+
+99
+00:06:32.000 --> 00:06:36.000
+this, myPermission, here we apply the bit
+
+100
+00:06:36.000 --> 00:06:40.000
+wise or to add a permission like read
+
+101
+00:06:40.000 --> 00:06:44.000
+Permission, as well as the write
+
+102
+00:06:44.000 --> 00:06:48.000
+permission. Now let's take a look at the
+
+103
+00:06:48.000 --> 00:06:52.000
+value of my permission on the console.
+
+104
+00:06:52.000 --> 00:06:56.000
+So, we get 6. Now technically, we don't care about this decimal
+
+105
+00:06:56.000 --> 00:07:00.000
+number, we can use the bitwise and operator to see
+
+106
+00:07:00.000 --> 00:07:04.000
+if I have a given permission. So here's an example,
+
+107
+00:07:04.000 --> 00:07:08.000
+I'm going to declare a variable, let's call that message,
+
+108
+00:07:08.000 --> 00:07:12.000
+now here I'm going to use the ternary operator, the conditional
+
+109
+00:07:12.000 --> 00:07:16.000
+operator, remember? So we start with a. condition, we take
+
+110
+00:07:16.000 --> 00:07:20.000
+myPermission, and use the bitwise and operator along
+
+111
+00:07:20.000 --> 00:07:24.000
+with readPermission. Now,
+
+112
+00:07:24.000 --> 00:07:28.000
+if this evalues to true, that means I have the readPermission.
+
+113
+00:07:28.000 --> 00:07:32.000
+So, let's say you want to display a message like
+
+114
+00:07:32.000 --> 00:07:36.000
+yes, otherwise we want to display no.
+
+115
+00:07:36.000 --> 00:07:40.000
+Let me break this up into multiple lines so you can see clearly. So here's our
+
+116
+00:07:40.000 --> 00:07:44.000
+ternary operator. You have a condition, if that evalues to true, this
+
+117
+00:07:44.000 --> 00:07:48.000
+value will be used, otherwise this value will be used. Finally,
+
+118
+00:07:48.000 --> 00:07:52.000
+let's log this message on the console. So I
+
+119
+00:07:52.000 --> 00:07:56.000
+have the readPermission. But if I move this readPermission here,
+
+120
+00:07:56.000 --> 00:08:00.000
+and save the changes. Now, you can see
+
+121
+00:08:00.000 --> 00:08:04.000
+our readPermission is gone. So here's what I want you to take away.
+
+122
+00:08:04.000 --> 00:08:08.000
+With the bitwise or operator, we can add
+
+123
+00:08:08.000 --> 00:08:12.000
+permissions, and with the bitwise and operator, we can
+
+124
+00:08:12.000 --> 00:08:16.000
+check to see if we have a given permission. Of course this is just 1
+
+125
+00:08:16.000 --> 00:08:20.000
+real world use case for using the bitwise operators, there are other use cases
+
+126
+00:08:20.000 --> 00:08:24.000
+but as I told you before, they are really not that common, so if this
+
+127
+00:08:24.000 --> 00:08:28.000
+lecture was confusing, don't worry about it.
+

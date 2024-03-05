@@ -1,0 +1,120 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+Alright now
+
+2
+00:00:04,000 --> 00:00:08,000
+let's take a look at comparison operators. As the name implies
+
+3
+00:00:08,000 --> 00:00:12,000
+we use these operators to compare the value of a variable with some
+
+4
+00:00:12,000 --> 00:00:16,000
+thing else. So here we have x set to 1,
+
+5
+00:00:16,000 --> 00:00:20,000
+let's look at the first comparison operator, that is greater
+
+6
+00:00:20,000 --> 00:00:24,000
+than. So we want to check if x is greater
+
+7
+00:00:24,000 --> 00:00:28,000
+than 0. I'm going to save the changes, look what we get,
+
+8
+00:00:28,000 --> 00:00:32,000
+true. So the result of an expression, that includes a
+
+9
+00:00:32,000 --> 00:00:36,000
+comparison operator is a boolean, it's true or false.
+
+10
+00:00:36,000 --> 00:00:40,000
+Now, let's look at another example,
+
+11
+00:00:40,000 --> 00:00:44,000
+this second operator is greater than or equal to
+
+12
+00:00:44,000 --> 00:00:48,000
+so we can change 0 to 1 to see if x is
+
+13
+00:00:48,000 --> 00:00:52,000
+greater than or equal to 1. Obviously it is, so
+
+14
+00:00:52,000 --> 00:00:56,000
+save the changes to get true again. The other operators are
+
+15
+00:00:56,000 --> 00:01:00,000
+very similar. So we have less
+
+16
+00:01:00,000 --> 00:01:04,000
+than as well as less than or equal to.
+
+17
+00:01:04,000 --> 00:01:08,000
+Now let's save the changes. Look at what we get on the console.
+
+18
+00:01:08,000 --> 00:01:12,000
+So the third item is false, because x is not less
+
+19
+00:01:12,000 --> 00:01:16,000
+than 1. It's less than or equal to 1, that's why we got
+
+20
+00:01:16,000 --> 00:01:20,000
+a false here. So these 4 operators we have here,
+
+21
+00:01:20,000 --> 00:01:24,000
+you refer to them as relational operators.
+
+22
+00:01:24,000 --> 00:01:28,000
+We also have Equality operators,
+
+23
+00:01:28,000 --> 00:01:32,000
+so we can check to see if x is equal
+
+24
+00:01:32,000 --> 00:01:36,000
+to 1. So we have triple equal signs.
+
+25
+00:01:36,000 --> 00:01:40,000
+Save the changes, obviously x is 1, that's why we get true.
+
+26
+00:01:40,000 --> 00:01:44,000
+Now if you want to check if x is not equal to a given value,
+
+27
+00:01:44,000 --> 00:01:48,000
+you replace the first equal sign with an exclamation mark.
+
+28
+00:01:48,000 --> 00:01:52,000
+So, let's save the changes, the result of the last
+
+29
+00:01:52,000 --> 00:01:56,000
+expression is false, because x is equal to 1.
+
+30
+00:01:56,000 --> 00:02:00,000
+So these are all the comparison operators in JavaScript.
+
