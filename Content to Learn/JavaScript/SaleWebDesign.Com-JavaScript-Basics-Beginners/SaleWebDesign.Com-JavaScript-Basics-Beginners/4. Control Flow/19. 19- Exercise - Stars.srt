@@ -1,0 +1,152 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+This exercise
+
+2
+00:00:04,000 --> 00:00:08,000
+is a very popular exercise for junior programmers. So,
+
+3
+00:00:08,000 --> 00:00:12,000
+we have this function, show stars, with a parameter called
+
+4
+00:00:12,000 --> 00:00:16,000
+rows. So when we call this function and pass 5, see
+
+5
+00:00:16,000 --> 00:00:20,000
+what we get on the console. We get 5 rows,
+
+6
+00:00:20,000 --> 00:00:24,000
+in each row we have a star, and the number of
+
+7
+00:00:24,000 --> 00:00:28,000
+stars in that row, depends on the row we are in. So in the first row we
+
+8
+00:00:28,000 --> 00:00:32,000
+have one star, in the second row we have 2 stars, and so on.
+
+9
+00:00:32,000 --> 00:00:36,000
+If you call this function pass 1, get only a single star,
+
+10
+00:00:36,000 --> 00:00:40,000
+if we pass 2, we get 2 rows, if we pass 10,
+
+11
+00:00:40,000 --> 00:00:44,000
+you got the point. So go ahead and spend 5-10
+
+12
+00:00:44,000 --> 00:00:48,000
+minutes on this exercise, when you're done, come back and continue watching.
+
+13
+00:00:48,000 --> 00:00:52,000
+Alright, here we need to start
+
+14
+00:00:52,000 --> 00:00:56,000
+with a for loop, so for let row
+
+15
+00:00:56,000 --> 00:01:00,000
+we set this to 1, as long as row is less than or
+
+16
+00:01:00,000 --> 00:01:04,000
+equal to the number of rows, we want to increment row.
+
+17
+00:01:04,000 --> 00:01:08,000
+Now in each row, depending on the number of
+
+18
+00:01:08,000 --> 00:01:12,000
+row, we need to display one or more stars.
+
+19
+00:01:12,000 --> 00:01:16,000
+So here I'm going to declare a variable, it's called a pattern,
+
+20
+00:01:16,000 --> 00:01:20,000
+we set it to an empty string. Now depending on the value
+
+21
+00:01:20,000 --> 00:01:24,000
+of the row, we need to add one or more stars to this
+
+22
+00:01:24,000 --> 00:01:28,000
+pattern. So here we need another for loop, or
+
+23
+00:01:28,000 --> 00:01:32,000
+let, let's call this i, set it to 0,
+
+24
+00:01:32,000 --> 00:01:36,000
+as long as i is less than row, increment i
+
+25
+00:01:36,000 --> 00:01:40,000
+and here we add a star to the
+
+26
+00:01:40,000 --> 00:01:44,000
+pattern, so plus equals star. So if you're
+
+27
+00:01:44,000 --> 00:01:48,000
+on row 5, this loop will execute 5 times, because
+
+28
+00:01:48,000 --> 00:01:52,000
+we've started from 0, and we run this while i is
+
+29
+00:01:52,000 --> 00:01:56,000
+less than row, so this will execute 5 times,
+
+30
+00:01:56,000 --> 00:02:00,000
+and each time we'll append one star to our empty string.
+
+31
+00:02:00,000 --> 00:02:04,000
+So we'll end up with 5 stars. And finally, when we are done,
+
+32
+00:02:04,000 --> 00:02:08,000
+with this loop, we do a console.log of pattern,
+
+33
+00:02:08,000 --> 00:02:12,000
+that's all we have to do. Now on the top I'm going to
+
+34
+00:02:12,000 --> 00:02:16,000
+change this to 5, save the changes, the algorithm works
+
+35
+00:02:16,000 --> 00:02:20,000
+beautiful if you pass 1, if we pass 2 stars, you get
+
+36
+00:02:20,000 --> 00:02:24,000
+2, we get 2 stars. So what we have here is what we call
+
+37
+00:02:24,000 --> 00:02:28,000
+a nest.loop. So we have a loop inside of
+
+38
+00:02:28,000 --> 00:02:32,000
+another loop. And you may see this pattern inside a lot of algorithms.
+

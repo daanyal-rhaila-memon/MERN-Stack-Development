@@ -1,0 +1,544 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+Alright here's
+
+2
+00:00:04,000 --> 00:00:08,000
+another exercise, but this exercise is a little more complicated than the earlier
+
+3
+00:00:08,000 --> 00:00:12,000
+exercises. So I want you to implement this function, check
+
+4
+00:00:12,000 --> 00:00:16,000
+Speed, this function takes a parameter that's the speed of a car.
+
+5
+00:00:16,000 --> 00:00:20,000
+Now in this program, I'm assuming that speed limit
+
+6
+00:00:20,000 --> 00:00:24,000
+is 70 km an hour. So if a
+
+7
+00:00:24,000 --> 00:00:28,000
+car is driving under the speed limit, we get this Ok
+
+8
+00:00:28,000 --> 00:00:32,000
+message on the console. Similarly if we pass 70
+
+9
+00:00:32,000 --> 00:00:36,000
+here, so if somebody is driving exactly at the speed limit, we're still good.
+
+10
+00:00:36,000 --> 00:00:40,000
+We still get the Ok message. Now for every
+
+11
+00:00:40,000 --> 00:00:44,000
+five kilometers above the speed limit,
+
+12
+00:00:44,000 --> 00:00:48,000
+they're going to get 1 point. So if I drive at
+
+13
+00:00:48,000 --> 00:00:52,000
+75 km an hour, I get 1 point here.
+
+14
+00:00:52,000 --> 00:00:56,000
+But what if I drive at 72 km an hour?
+
+15
+00:00:56,000 --> 00:01:00,000
+I'm still good. So for every 5 km,
+
+16
+00:01:00,000 --> 00:01:04,000
+above the speed limit, we should give the driver 1 point. Now as
+
+17
+00:01:04,000 --> 00:01:08,000
+part of calculating the point here, you will have to use one of the built in
+
+18
+00:01:08,000 --> 00:01:12,000
+functions in JavaScript that is Math.
+
+19
+00:01:12,000 --> 00:01:16,000
+floor. We can give this function a floating point number,
+
+20
+00:01:16,000 --> 00:01:20,000
+like 1.3, let's say 1.3 points, and this will
+
+21
+00:01:20,000 --> 00:01:24,000
+convert that to the greatest integer, for example if we go to the
+
+22
+00:01:24,000 --> 00:01:28,000
+console here, and type math.floor of
+
+23
+00:01:28,000 --> 00:01:32,000
+1.3, we get 1. So you will have to use this function
+
+24
+00:01:32,000 --> 00:01:36,000
+as part of your calculations okay, now here is a tip for you.
+
+25
+00:01:36,000 --> 00:01:40,000
+Back to our checkSpeed function, what if you passed 80 here?
+
+26
+00:01:40,000 --> 00:01:44,000
+We should get 2 points right? So we get 2 points, beautiful.
+
+27
+00:01:44,000 --> 00:01:48,000
+Now what if we drive at 180 km an hour? Our
+
+28
+00:01:48,000 --> 00:01:52,000
+license is suspended. So if a driver gets more
+
+29
+00:01:52,000 --> 00:01:56,000
+than 12 points, then their license should be
+
+30
+00:01:56,000 --> 00:02:00,000
+suspended. So here's the logic for this function.
+
+31
+00:02:00,000 --> 00:02:04,000
+I want you to spend 15-20 minutes to do this exercise,
+
+32
+00:02:04,000 --> 00:02:08,000
+once you're done, come back and continue watching.
+
+33
+00:02:08,000 --> 00:02:12,000
+Alright now let's see
+
+34
+00:02:12,000 --> 00:02:16,000
+how I solved this problem. So let's define a function called
+
+35
+00:02:16,000 --> 00:02:20,000
+checkSpeed, it takes the speed parameter
+
+36
+00:02:20,000 --> 00:02:24,000
+now first we want to see if the speed is less than the
+
+37
+00:02:24,000 --> 00:02:28,000
+speed limit. So here's a simple if condition,
+
+38
+00:02:28,000 --> 00:02:32,000
+if speed is less than 70 km an hour,
+
+39
+00:02:32,000 --> 00:02:36,000
+you want to display console.log, okay,
+
+40
+00:02:36,000 --> 00:02:40,000
+now the first thing I want to improve here is to turn
+
+41
+00:02:40,000 --> 00:02:44,000
+the magic number into a constant. Because someone else looking at this
+
+42
+00:02:44,000 --> 00:02:48,000
+code may not know what 70 represents here.
+
+43
+00:02:48,000 --> 00:02:52,000
+So you should avoid using magic numbers in your code, always use constants
+
+44
+00:02:52,000 --> 00:02:56,000
+to describe them. So here we can define a constant,
+
+45
+00:02:56,000 --> 00:03:00,000
+speedLimit. We set it to 70,
+
+46
+00:03:00,000 --> 00:03:04,000
+and then replace this magic number with
+
+47
+00:03:04,000 --> 00:03:08,000
+speedLimit. With this change now our code is more
+
+48
+00:03:08,000 --> 00:03:12,000
+expressive, and also, if you want to use this number somewhere else
+
+49
+00:03:12,000 --> 00:03:16,000
+in this function, we don't have to repeat it multiple times, we have defined
+
+50
+00:03:16,000 --> 00:03:20,000
+it here once and we can reuse it in multiple places, if
+
+51
+00:03:20,000 --> 00:03:24,000
+tomorrow the speed limit changes to 75 or 65,
+
+52
+00:03:24,000 --> 00:03:28,000
+there is only a single place that we have to change.
+
+53
+00:03:28,000 --> 00:03:32,000
+Okay? So, if the speed is less than the speed limit,
+
+54
+00:03:32,000 --> 00:03:36,000
+we display okay. Otherwise,
+
+55
+00:03:36,000 --> 00:03:40,000
+we should calculate the points. So here we need
+
+56
+00:03:40,000 --> 00:03:44,000
+a simple calculation. We want to get the speed
+
+57
+00:03:44,000 --> 00:03:48,000
+subtract it from the speed limit,
+
+58
+00:03:48,000 --> 00:03:52,000
+and then divide the result by 5.
+
+59
+00:03:52,000 --> 00:03:56,000
+Because for every 5 km above the speed limit
+
+60
+00:03:56,000 --> 00:04:00,000
+we should give them 1 point. Now once again we don't want to use this
+
+61
+00:04:00,000 --> 00:04:04,000
+magic number here, it's not descriptive. So we want to turn this into a
+
+62
+00:04:04,000 --> 00:04:08,000
+constant. So, let's define another constant.
+
+63
+00:04:08,000 --> 00:04:12,000
+We can call this kmPerPoint.
+
+64
+00:04:12,000 --> 00:04:16,000
+And set it to 5. And then
+
+65
+00:04:16,000 --> 00:04:20,000
+replace this magic number with kmPerPoint.
+
+66
+00:04:20,000 --> 00:04:24,000
+So with this we get the number of points.
+
+67
+00:04:24,000 --> 00:04:28,000
+That we should give to this driver. Now the result of this expression
+
+68
+00:04:28,000 --> 00:04:32,000
+can be a floating point number. So earlier I told you that math of
+
+69
+00:04:32,000 --> 00:04:36,000
+floor, to convert that floating point number to the greatest integer.
+
+70
+00:04:36,000 --> 00:04:40,000
+So here, we can call
+
+71
+00:04:40,000 --> 00:04:44,000
+math.floor and
+
+72
+00:04:44,000 --> 00:04:48,000
+as an argument, we pass this expression
+
+73
+00:04:48,000 --> 00:04:52,000
+here. So this is how we calculate the points.
+
+74
+00:04:52,000 --> 00:04:56,000
+Now we should check to see if the driver gets more than 12 points.
+
+75
+00:04:56,000 --> 00:05:00,000
+So we need another if statement if points
+
+76
+00:05:00,000 --> 00:05:04,000
+is greater than or equal to 12.
+
+77
+00:05:04,000 --> 00:05:08,000
+We want to suspend their license so console.log
+
+78
+00:05:08,000 --> 00:05:12,000
+license suspended.
+
+79
+00:05:12,000 --> 00:05:16,000
+Otherwise, we want to display a number of points
+
+80
+00:05:16,000 --> 00:05:20,000
+on the console, so console.log
+
+81
+00:05:20,000 --> 00:05:24,000
+points, and as a second argument pass
+
+82
+00:05:24,000 --> 00:05:28,000
+this points variable. Now technically I could
+
+83
+00:05:28,000 --> 00:05:32,000
+also use a constant, and that's a better practice, to make sure
+
+84
+00:05:32,000 --> 00:05:36,000
+I don't accidentally modify these points here. So,
+
+85
+00:05:36,000 --> 00:05:40,000
+the change is to a constant, and if you accidentally try to modify
+
+86
+00:05:40,000 --> 00:05:44,000
+points like this, we're going to get an error.
+
+87
+00:05:44,000 --> 00:05:48,000
+So as I told you before, const, or constant should be your
+
+88
+00:05:48,000 --> 00:05:52,000
+default choice. If you want to reassign a variable, that's when you use the
+
+89
+00:05:52,000 --> 00:05:56,000
+let keyword. Now let's test this program up to this point. So,
+
+90
+00:05:56,000 --> 00:06:00,000
+on the top, I'm going to call this function
+
+91
+00:06:00,000 --> 00:06:04,000
+checkSpeed and pass 50.
+
+92
+00:06:04,000 --> 00:06:08,000
+Save the changes,
+
+93
+00:06:08,000 --> 00:06:12,000
+we get okay, so far so good, what if we drive,
+
+94
+00:06:12,000 --> 00:06:16,000
+exactly at the speed limit? Hm, that's
+
+95
+00:06:16,000 --> 00:06:20,000
+weird. Instead of getting 0 points we should get the okay message.
+
+96
+00:06:20,000 --> 00:06:24,000
+So there is a bug in our condition here, so if speed
+
+97
+00:06:24,000 --> 00:06:28,000
+is less than or equal to speedLimit, we should get the ok message.
+
+98
+00:06:28,000 --> 00:06:32,000
+Save the changes, now the bug is solved.
+
+99
+00:06:32,000 --> 00:06:36,000
+What if we drive one km above the speed
+
+100
+00:06:36,000 --> 00:06:40,000
+limit. Notice all the test cases I'm going through for this
+
+101
+00:06:40,000 --> 00:06:44,000
+exercise. It's very important for when we write the function to test it with
+
+102
+00:06:44,000 --> 00:06:48,000
+different values. So when we call this function for 71.
+
+103
+00:06:48,000 --> 00:06:52,000
+What should we get here? We should still get the ok message instead of
+
+104
+00:06:52,000 --> 00:06:56,000
+0 points. Because starting from 75 we should get
+
+105
+00:06:56,000 --> 00:07:00,000
+the first point. So let's save the changes and see what we get.
+
+106
+00:07:00,000 --> 00:07:04,000
+We got 0 points, so we still have a bug in this function. Well,
+
+107
+00:07:04,000 --> 00:07:08,000
+we should actually change this condition to something like this.
+
+108
+00:07:08,000 --> 00:07:12,000
+So we want to get the speed limit, in this case 17 at
+
+109
+00:07:12,000 --> 00:07:16,000
+kmPerPoint, so that would give us
+
+110
+00:07:16,000 --> 00:07:20,000
+75. If we drive less than 75
+
+111
+00:07:20,000 --> 00:07:24,000
+we are still good. But from 75 km an hour
+
+112
+00:07:24,000 --> 00:07:28,000
+or faster, we should get a point. So, let's
+
+113
+00:07:28,000 --> 00:07:32,000
+save the changes. At 71 miles an hour we get the ok
+
+114
+00:07:32,000 --> 00:07:36,000
+message, beautiful. What if we drive at 75, we should get
+
+115
+00:07:36,000 --> 00:07:40,000
+1 point. So, here's one point, what if we drive at
+
+116
+00:07:40,000 --> 00:07:44,000
+75, let's say 70 km an hour. We should
+
+117
+00:07:44,000 --> 00:07:48,000
+still get 1 point. So, save the changes, 1 point
+
+118
+00:07:48,000 --> 00:07:52,000
+beautiful, we should pass 80 here, we should get 2 points.
+
+119
+00:07:52,000 --> 00:07:56,000
+There you go. Now to get 12 points,
+
+120
+00:07:56,000 --> 00:08:00,000
+we have to drive 12 x 5, which is 60 km,
+
+121
+00:08:00,000 --> 00:08:04,000
+above the speed limit, so if we pass 130
+
+122
+00:08:04,000 --> 00:08:08,000
+here, we should get 12 points and our license should be suspended.
+
+123
+00:08:08,000 --> 00:08:12,000
+Save. License suspended, beautiful. So our
+
+124
+00:08:12,000 --> 00:08:16,000
+function is working, I just want to show you one more tip to make this code
+
+125
+00:08:16,000 --> 00:08:20,000
+cleaner. So here, we have this else block, and this has caused
+
+126
+00:08:20,000 --> 00:08:24,000
+indentation here. Now this is not a terribly bad
+
+127
+00:08:24,000 --> 00:08:28,000
+thing. But it's better to avoid indentation if we can. Because otherwise
+
+128
+00:08:28,000 --> 00:08:32,000
+we have to scroll to the left and right to see what's happening here.
+
+129
+00:08:32,000 --> 00:08:36,000
+So, if this condition is true we want to display
+
+130
+00:08:36,000 --> 00:08:40,000
+ok on the console. Now to get rid of this else block and
+
+131
+00:08:40,000 --> 00:08:44,000
+the indentation, you can add a block
+
+132
+00:08:44,000 --> 00:08:48,000
+here, display ok on the console, and then return.
+
+133
+00:08:48,000 --> 00:08:52,000
+So with this we'll jump out of this function, and none of the
+
+134
+00:08:52,000 --> 00:08:56,000
+code here will be executed. So with this we can delete,
+
+135
+00:08:56,000 --> 00:09:00,000
+this else statement as well as the code block,
+
+136
+00:09:00,000 --> 00:09:04,000
+and remove the indentation.
+

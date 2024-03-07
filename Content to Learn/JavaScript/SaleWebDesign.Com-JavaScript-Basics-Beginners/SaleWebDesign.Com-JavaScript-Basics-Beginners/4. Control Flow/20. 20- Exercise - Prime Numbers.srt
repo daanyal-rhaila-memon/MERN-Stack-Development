@@ -1,0 +1,500 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+And finally
+
+2
+00:00:04,000 --> 00:00:08,000
+your last exercise for this section. I want you to create this function,
+
+3
+00:00:08,000 --> 00:00:12,000
+showPrimes, that takes a limit, and shows
+
+4
+00:00:12,000 --> 00:00:16,000
+all the prime numbers up to this limit. So here are the prime numbers
+
+5
+00:00:16,000 --> 00:00:20,000
+that we have, up to 20, we got 2, 3, 5,
+
+6
+00:00:20,000 --> 00:00:24,000
+7 and so on. In case you don't know what's a prime number, let me give you a brief
+
+7
+00:00:24,000 --> 00:00:28,000
+explanation. So in mathematics, numbers can be prime,
+
+8
+00:00:28,000 --> 00:00:32,000
+or composite. A prime number is 1
+
+9
+00:00:32,000 --> 00:00:36,000
+whose factors are only 1 and itself.
+
+10
+00:00:36,000 --> 00:00:40,000
+So it cannot be divided evenly into another
+
+11
+00:00:40,000 --> 00:00:44,000
+number. Let me give you another example, think of 12.
+
+12
+00:00:44,000 --> 00:00:48,000
+What are the factors of 12? Well 1, 2,
+
+13
+00:00:48,000 --> 00:00:52,000
+3, 4, 6, and 12. These are
+
+14
+00:00:52,000 --> 00:00:56,000
+the factors of 12. So when we divided 12 by these numbers,
+
+15
+00:00:56,000 --> 00:01:00,000
+we won't get any remainder. The remainder will be 0, so
+
+16
+00:01:00,000 --> 00:01:04,000
+we say 12, can be divided evenly
+
+17
+00:01:04,000 --> 00:01:08,000
+by its factors. Now 12 is a composite number,
+
+18
+00:01:08,000 --> 00:01:12,000
+because it has many factors, a prime
+
+19
+00:01:12,000 --> 00:01:16,000
+number in contrast has only 2 factors, it's 1
+
+20
+00:01:16,000 --> 00:01:20,000
+and itself. Here's an example. So we've got 11 here
+
+21
+00:01:20,000 --> 00:01:24,000
+the factors of 11 are 1 and 11 itself.
+
+22
+00:01:24,000 --> 00:01:28,000
+The same is true for 13. It can only be divided
+
+23
+00:01:28,000 --> 00:01:32,000
+evenly by 1 and 13. So go ahead and create this
+
+24
+00:01:32,000 --> 00:01:36,000
+function. You will see my solution next.
+
+25
+00:01:36,000 --> 00:01:40,000
+To implement this function,
+
+26
+00:01:40,000 --> 00:01:44,000
+we need a for loop that starts from 2 up to this
+
+27
+00:01:44,000 --> 00:01:48,000
+limit. Because the first prime number is 2. So,
+
+28
+00:01:48,000 --> 00:01:52,000
+4, let i, we set it to 2, as long as
+
+29
+00:01:52,000 --> 00:01:56,000
+i is less than or equal to limit, i++,
+
+30
+00:01:56,000 --> 00:02:00,000
+now for each number, we need to check to see
+
+31
+00:02:00,000 --> 00:02:04,000
+if this number is prime or not. So we need another loop here,
+
+32
+00:02:04,000 --> 00:02:08,000
+that starts from 2 all the way to the current number.
+
+33
+00:02:08,000 --> 00:02:12,000
+That is i. With this nested loop, we can see if
+
+34
+00:02:12,000 --> 00:02:16,000
+i has a factor other than 1 and itself.
+
+35
+00:02:16,000 --> 00:02:20,000
+So, let's define another for loop.
+
+36
+00:02:20,000 --> 00:02:24,000
+Now what should we call this other loop variable? We cannot call this i, because
+
+37
+00:02:24,000 --> 00:02:28,000
+we have already defined i here. So one way is to
+
+38
+00:02:28,000 --> 00:02:32,000
+call this j, but someone reading this code, they don't know what is i, what is j,
+
+39
+00:02:32,000 --> 00:02:36,000
+it's confusing! So always pay great attention
+
+40
+00:02:36,000 --> 00:02:40,000
+to the name of your variables. What i is essentially
+
+41
+00:02:40,000 --> 00:02:44,000
+representing here is a number. So the outer loop
+
+42
+00:02:44,000 --> 00:02:48,000
+is for iterating number for 2, up to this limit.
+
+43
+00:02:48,000 --> 00:02:52,000
+So let's call i number. We press f to here,
+
+44
+00:02:52,000 --> 00:02:56,000
+and rename it to number. Now what is this inner loop for?
+
+45
+00:02:56,000 --> 00:03:00,000
+That is for finding the factors of that number, so
+
+46
+00:03:00,000 --> 00:03:04,000
+instead of calling the loop variable j, we can call it factor. So
+
+47
+00:03:04,000 --> 00:03:08,000
+factor, we set it to 2, as long as factor is
+
+48
+00:03:08,000 --> 00:03:12,000
+less than this number. We want to do factor plus
+
+49
+00:03:12,000 --> 00:03:16,000
+plus.
+
+50
+00:03:16,000 --> 00:03:20,000
+Let me expand this a little bit so you can see.
+
+51
+00:03:20,000 --> 00:03:24,000
+Alright, now if this number can be evenly
+
+52
+00:03:24,000 --> 00:03:28,000
+divided by it's factor. So if number module is
+
+53
+00:03:28,000 --> 00:03:32,000
+factor equals 0, that means
+
+54
+00:03:32,000 --> 00:03:36,000
+this number has a factor other than 1 and itself. That's why
+
+55
+00:03:36,000 --> 00:03:40,000
+I have not included 1 in this loop, because of course every
+
+56
+00:03:40,000 --> 00:03:44,000
+number can be divided by 1, for the same reason I have not included
+
+57
+00:03:44,000 --> 00:03:48,000
+the number itself in this loop because again we know
+
+58
+00:03:48,000 --> 00:03:52,000
+that each number can be divided by itself evenly. So in this
+
+59
+00:03:52,000 --> 00:03:56,000
+inner loop, we want to see if we have a factor other than
+
+60
+00:03:56,000 --> 00:04:00,000
+1 and the number itself. So if we do, that means this
+
+61
+00:04:00,000 --> 00:04:04,000
+number is not a prime number. So basically what we can do here
+
+62
+00:04:04,000 --> 00:04:08,000
+is declare a variable, call it isPrime,
+
+63
+00:04:08,000 --> 00:04:12,000
+we can assume that this number is a prime number, but
+
+64
+00:04:12,000 --> 00:04:16,000
+if this condition is true, than we need to set isPrime to
+
+65
+00:04:16,000 --> 00:04:20,000
+false. Also, if we get to this point, there is really no
+
+66
+00:04:20,000 --> 00:04:24,000
+need to continue this loop, because let's imagine you want to display
+
+67
+00:04:24,000 --> 00:04:28,000
+all the prime numbers from 1 to billion. Now in this
+
+68
+00:04:28,000 --> 00:04:32,000
+inner loop, as long as we find a factor for this number, that means
+
+69
+00:04:32,000 --> 00:04:36,000
+this number is not a prime number, so there's really no need
+
+70
+00:04:36,000 --> 00:04:40,000
+to continue running this loop. Because this is just wasting our computers
+
+71
+00:04:40,000 --> 00:04:44,000
+processing power. So, here we can add a code block
+
+72
+00:04:44,000 --> 00:04:48,000
+for this prime here, if
+
+73
+00:04:48,000 --> 00:04:52,000
+we get to this point, we can use the break keyword to jump
+
+74
+00:04:52,000 --> 00:04:56,000
+out of this loop. Okay? Now,
+
+75
+00:04:56,000 --> 00:05:00,000
+when we get to this point, isPrime is either true or false.
+
+76
+00:05:00,000 --> 00:05:04,000
+If it is true, we log
+
+77
+00:05:04,000 --> 00:05:08,000
+this number on the console.
+
+78
+00:05:08,000 --> 00:05:12,000
+Save the changes we get this result, beautiful,
+
+79
+00:05:12,000 --> 00:05:16,000
+if we pass 10 here, we get all the prime numbers from
+
+80
+00:05:16,000 --> 00:05:20,000
+2 to 10. Now here's another challenge for you. Earlier I
+
+81
+00:05:20,000 --> 00:05:24,000
+told you about the single responsibility principle. We want to have small
+
+82
+00:05:24,000 --> 00:05:28,000
+functions, each function responsible for a single task.
+
+83
+00:05:28,000 --> 00:05:32,000
+So I want you to modify this code, extract a new function,
+
+84
+00:05:32,000 --> 00:05:36,000
+make sure each function is small, and responsible for
+
+85
+00:05:36,000 --> 00:05:40,000
+a single task. So pause the video, when you're done, come back and continue watching.
+
+86
+00:05:44,000 --> 00:05:48,000
+So if you look at the lines 7-11,
+
+87
+00:05:48,000 --> 00:05:52,000
+all we are doing here is checking to see if a number is prime
+
+88
+00:05:52,000 --> 00:05:56,000
+or not. This logic does not necessarily have to be
+
+89
+00:05:56,000 --> 00:06:00,000
+part of our show primes function. We can have a separate
+
+90
+00:06:00,000 --> 00:06:04,000
+function, function, called
+
+91
+00:06:04,000 --> 00:06:08,000
+isPrime, that takes a number, and simply tells us
+
+92
+00:06:08,000 --> 00:06:12,000
+if this number is prime or not. Then we can use this function
+
+93
+00:06:12,000 --> 00:06:16,000
+inside of show prime's function, or somewhere else.
+
+94
+00:06:16,000 --> 00:06:20,000
+So it's a reusable function, it's a reusable piece of code.
+
+95
+00:06:20,000 --> 00:06:24,000
+So, I'm going to extract all these lines, pull them,
+
+96
+00:06:24,000 --> 00:06:28,000
+to our new function. Now we can make this code
+
+97
+00:06:28,000 --> 00:06:32,000
+cleaner and more elegant. So if we get to this point.
+
+98
+00:06:32,000 --> 00:06:36,000
+Instead of breaking the loop, you can simply return
+
+99
+00:06:36,000 --> 00:06:40,000
+false. In other words, there is no need to break
+
+100
+00:06:40,000 --> 00:06:44,000
+and then return isPrime. You can do a short cut here,
+
+101
+00:06:44,000 --> 00:06:48,000
+so, if we get to this point, we simply return
+
+102
+00:06:48,000 --> 00:06:52,000
+false, that means we don't need to set isPrime to false,
+
+103
+00:06:52,000 --> 00:06:56,000
+we don't even need to declare isPrime. So,
+
+104
+00:06:56,000 --> 00:07:00,000
+we run this loop, we try to find a factor for this number, if we find a
+
+105
+00:07:00,000 --> 00:07:04,000
+factor we immediately return false. Otherwise, we get to this point
+
+106
+00:07:04,000 --> 00:07:08,000
+that means we didn't find any factors for this number so we return
+
+107
+00:07:08,000 --> 00:07:12,000
+true. Also, we can get rid of all these curly braces.
+
+108
+00:07:12,000 --> 00:07:16,000
+Because our for statement, our for loop has a single statement
+
+109
+00:07:16,000 --> 00:07:20,000
+and our if statement also has a single statement.
+
+110
+00:07:20,000 --> 00:07:24,000
+So let's get rid of all these extra curly braces,
+
+111
+00:07:24,000 --> 00:07:28,000
+getting in the way, annoying me, okay,
+
+112
+00:07:28,000 --> 00:07:32,000
+that is better. Now finally, in show Primes
+
+113
+00:07:32,000 --> 00:07:36,000
+so, here we have only a single loop, we are iterating the numbers
+
+114
+00:07:36,000 --> 00:07:40,000
+from 2 to this limit, we simply call
+
+115
+00:07:40,000 --> 00:07:44,000
+isPrime function and pass our number,
+
+116
+00:07:44,000 --> 00:07:48,000
+if the number is prime we log it on the console. This
+
+117
+00:07:48,000 --> 00:07:52,000
+also means we don't need these curly braces. And
+
+118
+00:07:52,000 --> 00:07:56,000
+here's the end result. With these changes, now we
+
+119
+00:07:56,000 --> 00:08:00,000
+have two very simple functions. If you give this function to the
+
+120
+00:08:00,000 --> 00:08:04,000
+dumbest person in the world they will understand it. Also we don't have
+
+121
+00:08:04,000 --> 00:08:08,000
+nested loops, generally speaking nested loops are a bit hard to understand.
+
+122
+00:08:08,000 --> 00:08:12,000
+So whenever you have a nested loop, that's probably an indication
+
+123
+00:08:12,000 --> 00:08:16,000
+that you can extract the logic in the inner loop and put it
+
+124
+00:08:16,000 --> 00:08:20,000
+somewhere else in a different function. So that brings us to the end of this function,
+
+125
+00:08:20,000 --> 00:08:24,000
+I hope you enjoyed the materials and thank you for watching.
+

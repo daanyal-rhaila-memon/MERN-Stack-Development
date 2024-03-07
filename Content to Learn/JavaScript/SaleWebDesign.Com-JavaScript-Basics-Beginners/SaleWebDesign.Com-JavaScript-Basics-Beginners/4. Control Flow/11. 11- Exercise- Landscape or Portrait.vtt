@@ -1,0 +1,146 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+Here is another
+
+2
+00:00:04.000 --> 00:00:08.000
+exercise. I want you to implement this function.
+
+3
+00:00:08.000 --> 00:00:12.000
+Function isLandscape, it takes two parameters,
+
+4
+00:00:12.000 --> 00:00:16.000
+width, and height of an image, and returns true
+
+5
+00:00:16.000 --> 00:00:20.000
+if the image is landscape, which means width is greater than
+
+6
+00:00:20.000 --> 00:00:24.000
+height, otherwise it returns false. Now you may think this
+
+7
+00:00:24.000 --> 00:00:28.000
+is similar to the exercise in the last lecture, in fact it is, but I want you to
+
+8
+00:00:28.000 --> 00:00:32.000
+do this exercise because I'm going to give you a simple and affective tip to
+
+9
+00:00:32.000 --> 00:00:36.000
+write better code. So pause the video, do the exercise, and then come back
+
+10
+00:00:36.000 --> 00:00:40.000
+and continue watching.
+
+11
+00:00:40.000 --> 00:00:44.000
+Alright, so similar to the last lecture, we can start
+
+12
+00:00:44.000 --> 00:00:48.000
+with a simple if and else. So if width is greater than
+
+13
+00:00:48.000 --> 00:00:52.000
+height, you want to return true, otherwise we want to return
+
+14
+00:00:52.000 --> 00:00:56.000
+false. But I told you that in this case we
+
+15
+00:00:56.000 --> 00:01:00.000
+can use the conditional operator, so,
+
+16
+00:01:00.000 --> 00:01:04.000
+we add the condition if width is greater than height,
+
+17
+00:01:04.000 --> 00:01:08.000
+we can return true, otherwise we'll return false.
+
+18
+00:01:08.000 --> 00:01:12.000
+And here's our return statement, right? So here's the implementation
+
+19
+00:01:12.000 --> 00:01:16.000
+of this function, however code like this looks very
+
+20
+00:01:16.000 --> 00:01:20.000
+amateurish. You don't want to return true or false
+
+21
+00:01:20.000 --> 00:01:24.000
+explicitly. This is very ugly. Why? Well, let me show you.
+
+22
+00:01:24.000 --> 00:01:28.000
+We can completely delete this part here
+
+23
+00:01:28.000 --> 00:01:32.000
+and simply return the value
+
+24
+00:01:32.000 --> 00:01:36.000
+of this expression. So if width is greater than
+
+25
+00:01:36.000 --> 00:01:40.000
+height, this expression will be evaluated to true. So,
+
+26
+00:01:40.000 --> 00:01:44.000
+you will simply return true. Otherwise, if width
+
+27
+00:01:44.000 --> 00:01:48.000
+is less than height, this expression will evaluate to false, sun will
+
+28
+00:01:48.000 --> 00:01:52.000
+return false. So there is really no need to explicitly return
+
+29
+00:01:52.000 --> 00:01:56.000
+true and false here, that's a pour way of writing code.
+
+30
+00:01:56.000 --> 00:02:00.000
+So, now we have this function, let's test
+
+31
+00:02:00.000 --> 00:02:04.000
+it. We can do a console.log, simply call this
+
+32
+00:02:04.000 --> 00:02:08.000
+function here isLandscape, I'm going to pass these dimensions
+
+33
+00:02:08.000 --> 00:02:12.000
+800 by 600. So we expect true on the
+
+34
+00:02:12.000 --> 00:02:16.000
+console. Save the changes, here's true, beautiful,
+
+35
+00:02:16.000 --> 00:02:20.000
+now let's change the width to let's say 300. Now we have
+
+36
+00:02:20.000 --> 00:02:24.000
+a vertical image. Save. So we get false.
+

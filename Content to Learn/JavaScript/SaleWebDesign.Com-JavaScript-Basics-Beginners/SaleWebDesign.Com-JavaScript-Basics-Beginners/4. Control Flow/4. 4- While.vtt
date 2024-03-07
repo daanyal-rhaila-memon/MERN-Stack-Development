@@ -1,0 +1,134 @@
+﻿WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+In the last lecture,
+
+2
+00:00:04.000 --> 00:00:08.000
+we wrote this for loop to display all the odd numbers
+
+3
+00:00:08.000 --> 00:00:12.000
+between 0 and 5. And in this lecture, I'm going to show you how to
+
+4
+00:00:12.000 --> 00:00:16.000
+implement the same logic by using a while loop. Now one
+
+5
+00:00:16.000 --> 00:00:20.000
+key difference between a y loop and a for loop is that in for loops
+
+6
+00:00:20.000 --> 00:00:24.000
+the loop variable is part of the loop variable itself.
+
+7
+00:00:24.000 --> 00:00:28.000
+But in y loops, you have to declare this y variable externally. Let me show
+
+8
+00:00:28.000 --> 00:00:32.000
+you what I mean. So we start with declaring
+
+9
+00:00:32.000 --> 00:00:36.000
+a variable like i and set it to 0. Note that this
+
+10
+00:00:36.000 --> 00:00:40.000
+i we have here is different from the i we have in this for loop,
+
+11
+00:00:40.000 --> 00:00:44.000
+because this variable is only meaningful and accessible
+
+12
+00:00:44.000 --> 00:00:48.000
+inside of this for loop. This is called scope, and I'm going to talk about
+
+13
+00:00:48.000 --> 00:00:52.000
+it later in the course, all I want you to know is that these two
+
+14
+00:00:52.000 --> 00:00:56.000
+variables are completely different, even though their names are the same.
+
+15
+00:00:56.000 --> 00:01:00.000
+Now, we have our loop variable initialized to 0.
+
+16
+00:01:00.000 --> 00:01:04.000
+Next we add a while statement,
+
+17
+00:01:04.000 --> 00:01:08.000
+in parenthesis we need to add our condition. What is the condition
+
+18
+00:01:08.000 --> 00:01:12.000
+here? That is i less than or equal
+
+19
+00:01:12.000 --> 00:01:16.000
+to 5. So I'm going to add that here. Next,
+
+20
+00:01:16.000 --> 00:01:20.000
+we need to add our statements. So what is the statement that
+
+21
+00:01:20.000 --> 00:01:24.000
+we want to repeat, here's the statement, we want to display
+
+22
+00:01:24.000 --> 00:01:28.000
+the odd numbers, so we add that here as well,
+
+23
+00:01:28.000 --> 00:01:32.000
+and finally, at the end of this while block we need
+
+24
+00:01:32.000 --> 00:01:36.000
+to increment i. So this is a direct translation
+
+25
+00:01:36.000 --> 00:01:40.000
+of this for loop into a y loop.
+
+26
+00:01:40.000 --> 00:01:44.000
+So this is what happens when we execute this code. Initially I
+
+27
+00:01:44.000 --> 00:01:48.000
+is 0, now in the y loop, first this condition
+
+28
+00:01:48.000 --> 00:01:52.000
+is evaluated, if this condition is true, then the
+
+29
+00:01:52.000 --> 00:01:56.000
+body of the y loop will be executed. Again, in the next iteration
+
+30
+00:01:56.000 --> 00:02:00.000
+the condition is evaluated again, if it's true, the
+
+31
+00:02:00.000 --> 00:02:04.000
+statements in the y block will be executed, otherwise the while block
+
+32
+00:02:04.000 --> 00:02:08.000
+will terminate. In the next lecture we're going to look at another kind of
+
+33
+00:02:08.000 --> 00:02:11.200
+loops in JavaScript.
+

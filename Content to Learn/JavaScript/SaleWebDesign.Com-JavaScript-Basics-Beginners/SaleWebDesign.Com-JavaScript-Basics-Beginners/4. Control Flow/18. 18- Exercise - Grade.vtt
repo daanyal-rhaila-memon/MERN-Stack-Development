@@ -1,0 +1,394 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+In this exercise,
+
+2
+00:00:04.000 --> 00:00:08.000
+we want to calculate the grade of a student. So here,
+
+3
+00:00:08.000 --> 00:00:12.000
+are the marks of a student in different subjects,
+
+4
+00:00:12.000 --> 00:00:16.000
+we pass this array with this function, calculate grade, what
+
+5
+00:00:16.000 --> 00:00:20.000
+this function does, is first it calculates the average
+
+6
+00:00:20.000 --> 00:00:24.000
+grade. So what is the average here, 80 plus 80
+
+7
+00:00:24.000 --> 00:00:28.000
+plus 50, that comes to 210 divided by 3, so
+
+8
+00:00:28.000 --> 00:00:32.000
+the average is 70. Now here we need
+
+9
+00:00:32.000 --> 00:00:36.000
+a table to see what grade this average corresponds to.
+
+10
+00:00:36.000 --> 00:00:40.000
+So if the average comes down to this range 1 to
+
+11
+00:00:40.000 --> 00:00:44.000
+59, the grade should be f, if it is between 60 and
+
+12
+00:00:44.000 --> 00:00:48.000
+69, that should be d, if it's between
+
+13
+00:00:48.000 --> 00:00:52.000
+70 and 79, that should be a c.
+
+14
+00:00:52.000 --> 00:00:56.000
+If it's between 8- and 89, that should be a b.
+
+15
+00:00:56.000 --> 00:01:00.000
+And finally if it's between 90 and 100,
+
+16
+00:01:00.000 --> 00:01:04.000
+that should be an a. So spend 5 to 10 minutes
+
+17
+00:01:04.000 --> 00:01:08.000
+on this exercise, when you're gone, come back and continue watching.
+
+18
+00:01:08.000 --> 00:01:12.000
+Alright here first we need to
+
+19
+00:01:12.000 --> 00:01:16.000
+calculate the average mark. So to calculate the average,
+
+20
+00:01:16.000 --> 00:01:20.000
+first, we need to declare a variable like some, initialize
+
+21
+00:01:20.000 --> 00:01:24.000
+it to 0, then we need to use the for of loop to
+
+22
+00:01:24.000 --> 00:01:28.000
+iterate this array of marks, and calculate the sum of all
+
+23
+00:01:28.000 --> 00:01:32.000
+these marks. So, for let
+
+24
+00:01:32.000 --> 00:01:36.000
+mark of marks we get mark and add it to
+
+25
+00:01:36.000 --> 00:01:40.000
+sum. So sum + = mark.
+
+26
+00:01:40.000 --> 00:01:44.000
+So this is the total. Now to get the average
+
+27
+00:01:44.000 --> 00:01:48.000
+we need to divided sum by the number of
+
+28
+00:01:48.000 --> 00:01:52.000
+marks. That is marks.length. Now
+
+29
+00:01:52.000 --> 00:01:56.000
+we have the average, we need to use this table to map it to a grade.
+
+30
+00:01:56.000 --> 00:02:00.000
+So, one way to calculate the grade is like this.
+
+31
+00:02:00.000 --> 00:02:04.000
+So if average is greater than or equal
+
+32
+00:02:04.000 --> 00:02:08.000
+to 0, actually here the range should be 0 to 59.
+
+33
+00:02:08.000 --> 00:02:12.000
+So if average is greater than or equal to 0
+
+34
+00:02:12.000 --> 00:02:16.000
+and average is less than or equal to
+
+35
+00:02:16.000 --> 00:02:20.000
+59, we're going to return f
+
+36
+00:02:20.000 --> 00:02:24.000
+and similarly we can have a few other if statements for
+
+37
+00:02:24.000 --> 00:02:28.000
+other grades, but this code is a little bit ugly,
+
+38
+00:02:28.000 --> 00:02:32.000
+there is so much noise in this code. Instead of having two conditions,
+
+39
+00:02:32.000 --> 00:02:36.000
+along with the logical and. We can simplify
+
+40
+00:02:36.000 --> 00:02:40.000
+this expression to something like this. If average is less
+
+41
+00:02:40.000 --> 00:02:44.000
+than 60, because the range for f is
+
+42
+00:02:44.000 --> 00:02:48.000
+0, to 59, so as long as average is longer than
+
+43
+00:02:48.000 --> 00:02:52.000
+60 we get the same result. See what I did here? So there are different
+
+44
+00:02:52.000 --> 00:02:56.000
+solutions to solve a programming problem. And you should aim
+
+45
+00:02:56.000 --> 00:03:00.000
+for the simplest solution. Because as Leonardo Da Vinci says,
+
+46
+00:03:00.000 --> 00:03:04.000
+simplicity is the ultimate sophistication. So using this pattern,
+
+47
+00:03:04.000 --> 00:03:08.000
+I'm going to calculate the other grades.
+
+48
+00:03:08.000 --> 00:03:12.000
+So, if average is less than
+
+49
+00:03:12.000 --> 00:03:16.000
+70, return d. Because
+
+50
+00:03:16.000 --> 00:03:20.000
+if we get to this point, that means average is at least 60 or
+
+51
+00:03:20.000 --> 00:03:24.000
+higher. Now I'm just checking the upper limit. So the upper
+
+52
+00:03:24.000 --> 00:03:28.000
+limit should be 69. So if the average is between 60 and
+
+53
+00:03:28.000 --> 00:03:32.000
+69, we return d, similarly,
+
+54
+00:03:32.000 --> 00:03:36.000
+if the average is less than 80, we'll return
+
+55
+00:03:36.000 --> 00:03:40.000
+c, if average is less than 90,
+
+56
+00:03:40.000 --> 00:03:44.000
+we'll return b, and if we get to this point that means
+
+57
+00:03:44.000 --> 00:03:48.000
+the average is at least 90 or greater, we don't really need
+
+58
+00:03:48.000 --> 00:03:52.000
+another if statement here, we can simply return
+
+59
+00:03:52.000 --> 00:03:56.000
+F. Now we can make this code even better. While this function is fairly
+
+60
+00:03:56.000 --> 00:04:00.000
+simple, it's only about maybe 10 lines of code,
+
+61
+00:04:00.000 --> 00:04:04.000
+we can break this function into 2 smaller functions,
+
+62
+00:04:04.000 --> 00:04:08.000
+each focusing on 1 thing, that is what we call
+
+63
+00:04:08.000 --> 00:04:12.000
+single responsibility principle. I use a metaphor. Think of a
+
+64
+00:04:12.000 --> 00:04:16.000
+restaurant. People working in a restaurant have different roles. So the
+
+65
+00:04:16.000 --> 00:04:20.000
+chef is in the kitchen responsible for cooking. The chef doesn't come out and
+
+66
+00:04:20.000 --> 00:04:24.000
+take orders, so he or she is responsible for only one thing.
+
+67
+00:04:24.000 --> 00:04:28.000
+The same goes for the manager. The manager is responsible for only one thing.
+
+68
+00:04:28.000 --> 00:04:32.000
+Managing the restaurant at a high level. We have the same
+
+69
+00:04:32.000 --> 00:04:36.000
+concept in programming. So we should have functions that are
+
+70
+00:04:36.000 --> 00:04:40.000
+small and are focused only one 1 thing. in this function,
+
+71
+00:04:40.000 --> 00:04:44.000
+we are basically doing 2 different things. The first part of this
+
+72
+00:04:44.000 --> 00:04:48.000
+function is all about calculating the average of numbers in
+
+73
+00:04:48.000 --> 00:04:52.000
+an array. And the second part is about mapping the
+
+74
+00:04:52.000 --> 00:04:56.000
+average to a great. So we can extract these few lines
+
+75
+00:04:56.000 --> 00:05:00.000
+put them in a separate function like this. So,
+
+76
+00:05:00.000 --> 00:05:04.000
+function caluclateAverage
+
+77
+00:05:04.000 --> 00:05:08.000
+we give it an array, this array can be anything, it can
+
+78
+00:05:08.000 --> 00:05:12.000
+be an array of marks, or it can be an array of temperatures,
+
+79
+00:05:12.000 --> 00:05:16.000
+anything, we can reuse this function in the future, whenever we need
+
+80
+00:05:16.000 --> 00:05:20.000
+to calculate the average of a bunch of numbers. Now,
+
+81
+00:05:20.000 --> 00:05:24.000
+I'm going to get all this code, cut it, put it
+
+82
+00:05:24.000 --> 00:05:28.000
+here, now here we need to rename a couple of variables, here
+
+83
+00:05:28.000 --> 00:05:32.000
+we're working with marks but the parameter of this function is called
+
+84
+00:05:32.000 --> 00:05:36.000
+array, so, put the cursor here, press f2,
+
+85
+00:05:36.000 --> 00:05:40.000
+and rename these 2 array. Also, we need to
+
+86
+00:05:40.000 --> 00:05:44.000
+rename our loop variable from mark to variable, so
+
+87
+00:05:44.000 --> 00:05:48.000
+now we have a generic function, it's not tied to marks, it can be reused
+
+88
+00:05:48.000 --> 00:05:52.000
+in different situations. And finally
+
+89
+00:05:52.000 --> 00:05:56.000
+we can return the average here, or we can make this code
+
+90
+00:05:56.000 --> 00:06:00.000
+even simpler, so instead of storing the average in a
+
+91
+00:06:00.000 --> 00:06:04.000
+variable and then returning it, we can simply return the result
+
+92
+00:06:04.000 --> 00:06:08.000
+of this expression, so return, sum divided by
+
+93
+00:06:08.000 --> 00:06:12.000
+array.length. See? And finally
+
+94
+00:06:12.000 --> 00:06:16.000
+we can reuse this function here. So we declare a constant
+
+95
+00:06:16.000 --> 00:06:20.000
+average and set it to calculateAverage
+
+96
+00:06:20.000 --> 00:06:24.000
+of marks. With this change, now
+
+97
+00:06:24.000 --> 00:06:28.000
+we have two very simple functions, each function
+
+98
+00:06:28.000 --> 00:06:32.000
+is responsible only for one thing.
+

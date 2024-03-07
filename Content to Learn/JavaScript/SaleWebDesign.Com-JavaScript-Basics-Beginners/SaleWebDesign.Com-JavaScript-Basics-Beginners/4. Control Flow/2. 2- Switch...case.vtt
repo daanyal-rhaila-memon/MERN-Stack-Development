@@ -1,0 +1,282 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+Alright, now let's take
+
+2
+00:00:04.000 --> 00:00:08.000
+a look at switch and case. So let's start by declaring
+
+3
+00:00:08.000 --> 00:00:12.000
+a variable called roll. Let's imagine this represents
+
+4
+00:00:12.000 --> 00:00:16.000
+the role of the current user. Now we want to see
+
+5
+00:00:16.000 --> 00:00:20.000
+is a guest, or a moderator or an admin. We can
+
+6
+00:00:20.000 --> 00:00:24.000
+easily implement this logic, using a bunch of if and else statements.
+
+7
+00:00:24.000 --> 00:00:28.000
+But there is another way, using switch and case. So let's
+
+8
+00:00:28.000 --> 00:00:32.000
+take a look. We start with this switch statement, we add
+
+9
+00:00:32.000 --> 00:00:36.000
+parenthesis, but instead of adding a condition here,
+
+10
+00:00:36.000 --> 00:00:40.000
+we add a variable, in this case we're going to add the role
+
+11
+00:00:40.000 --> 00:00:44.000
+variable. Now we add curly braces,
+
+12
+00:00:44.000 --> 00:00:48.000
+then we add one or more case statements, each case statement
+
+13
+00:00:48.000 --> 00:00:52.000
+is used to compare the value of this variable with something.
+
+14
+00:00:52.000 --> 00:00:56.000
+So, here's our first case. If
+
+15
+00:00:56.000 --> 00:01:00.000
+this role equals guest, so I'm comparing the
+
+16
+00:01:00.000 --> 00:01:04.000
+value of role with guest, now we add colon,
+
+17
+00:01:04.000 --> 00:01:08.000
+and then after that we add one or more statements. So,
+
+18
+00:01:08.000 --> 00:01:12.000
+we can do a console.log guest user.
+
+19
+00:01:12.000 --> 00:01:16.000
+Like this. Now here we need to add a
+
+20
+00:01:16.000 --> 00:01:20.000
+break statement. So we jump out of this switch block.
+
+21
+00:01:20.000 --> 00:01:24.000
+Otherwise the other statements here will be executed, let me show you.
+
+22
+00:01:24.000 --> 00:01:28.000
+So, we need to add another case statement. If
+
+23
+00:01:28.000 --> 00:01:32.000
+this user is a moderator, we want to display
+
+24
+00:01:32.000 --> 00:01:36.000
+console.log Moderator
+
+25
+00:01:36.000 --> 00:01:40.000
+user once again we need to add the break, so
+
+26
+00:01:40.000 --> 00:01:44.000
+in this case, if I don't add this break statement here,
+
+27
+00:01:44.000 --> 00:01:48.000
+and the role equals guest, both
+
+28
+00:01:48.000 --> 00:01:52.000
+these console.log statements will be executed. That's why we need to
+
+29
+00:01:52.000 --> 00:01:56.000
+add a break to jump out of this switch block, right?
+
+30
+00:01:56.000 --> 00:02:00.000
+Now, we can have as many case statements here
+
+31
+00:02:00.000 --> 00:02:04.000
+there is no limitation. Optionally, if none of these
+
+32
+00:02:04.000 --> 00:02:08.000
+cases are matched, we can have a default
+
+33
+00:02:08.000 --> 00:02:12.000
+statement and execute 1 or more
+
+34
+00:02:12.000 --> 00:02:16.000
+statements so console.log, Unknown,
+
+35
+00:02:16.000 --> 00:02:20.000
+User. Or more accurately, unknown role.
+
+36
+00:02:20.000 --> 00:02:24.000
+Now here for the default statement we don't need a break, because
+
+37
+00:02:24.000 --> 00:02:28.000
+at this point the control will automatically get out of this switch block.
+
+38
+00:02:28.000 --> 00:02:32.000
+Alright, so, let's save the changes and see what we get on the console.
+
+39
+00:02:32.000 --> 00:02:36.000
+Save. We get unknown user, because I have
+
+40
+00:02:36.000 --> 00:02:40.000
+that initialized role, so it's default value is undefined and it doesn't
+
+41
+00:02:40.000 --> 00:02:44.000
+match any of these case statements. Now if I change
+
+42
+00:02:44.000 --> 00:02:48.000
+this to guest save the changes,
+
+43
+00:02:48.000 --> 00:02:52.000
+we get guest user, and similarly if I change moderator
+
+44
+00:02:52.000 --> 00:02:56.000
+we get the moderator user message. So here's the takeaway.
+
+45
+00:02:56.000 --> 00:03:00.000
+With switch and case, we can compare the value of a variable,
+
+46
+00:03:00.000 --> 00:03:04.000
+against a bunch of other values. Now they don't have
+
+47
+00:03:04.000 --> 00:03:08.000
+to be string, they can be numbers or even booleans. But using booleans here
+
+48
+00:03:08.000 --> 00:03:12.000
+is less common. Because if you want to compare the value of a variable with true
+
+49
+00:03:12.000 --> 00:03:16.000
+or false, it makes more sense to use an if statement.
+
+50
+00:03:16.000 --> 00:03:20.000
+Now just to let you know we can implement this exact logic
+
+51
+00:03:20.000 --> 00:03:24.000
+using if and else statements. Let me show you.
+
+52
+00:03:24.000 --> 00:03:28.000
+So, if role equals
+
+53
+00:03:28.000 --> 00:03:32.000
+guest, note that I'm using strip equality here, so
+
+54
+00:03:32.000 --> 00:03:36.000
+triple equal signs, and that means we're checking the type and value
+
+55
+00:03:36.000 --> 00:03:40.000
+of this variable against what we have on the right side.
+
+56
+00:03:40.000 --> 00:03:44.000
+So, if role is guest we want to do a console.log of
+
+57
+00:03:44.000 --> 00:03:48.000
+guest or guest user. Else if
+
+58
+00:03:48.000 --> 00:03:52.000
+role equals moderator then then we're going to do
+
+59
+00:03:52.000 --> 00:03:56.000
+a console.log of moderator
+
+60
+00:03:56.000 --> 00:04:00.000
+finally else if the role is something else
+
+61
+00:04:00.000 --> 00:04:04.000
+we want to display unknown
+
+62
+00:04:04.000 --> 00:04:08.000
+user. Now compare these two implementations
+
+63
+00:04:08.000 --> 00:04:12.000
+you can see implement in this logic with if and else
+
+64
+00:04:12.000 --> 00:04:16.000
+is cleaner and shorter, we don't have all these break statements or
+
+65
+00:04:16.000 --> 00:04:20.000
+default, or these curly braces, these are extra
+
+66
+00:04:20.000 --> 00:04:24.000
+noise in the code. So it doesn't mean you should never use switch and case,
+
+67
+00:04:24.000 --> 00:04:28.000
+well it depends who you ask. I personally tend to use if and else more often,
+
+68
+00:04:28.000 --> 00:04:32.000
+switch and case are kind of outdated, they look a little bit ugly, in my
+
+69
+00:04:32.000 --> 00:04:36.000
+personal opinion. But there is nothing terribly wrong with them, sometimes they are more
+
+70
+00:04:36.000 --> 00:04:40.000
+explicit. It comes back to your personal preference.
+

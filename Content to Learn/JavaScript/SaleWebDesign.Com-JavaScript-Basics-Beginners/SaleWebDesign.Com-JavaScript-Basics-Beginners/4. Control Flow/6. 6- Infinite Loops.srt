@@ -1,0 +1,160 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+When writing loops
+
+2
+00:00:04,000 --> 00:00:08,000
+something that you need to be aware of is what we call an infinite loop.
+
+3
+00:00:08,000 --> 00:00:12,000
+So an infinite loop as the name implies, executes
+
+4
+00:00:12,000 --> 00:00:16,000
+infinitely or forever. So if you accidentally create one of these
+
+5
+00:00:16,000 --> 00:00:20,000
+loops, you're going to crash your browser or your computer. Let me show you an example.
+
+6
+00:00:20,000 --> 00:00:24,000
+So here I'm going to declare a variable, set it
+
+7
+00:00:24,000 --> 00:00:28,000
+to 0, put it in a while loop, so as long as
+
+8
+00:00:28,000 --> 00:00:32,000
+i is less than 5, we're going to do a console.log,
+
+9
+00:00:32,000 --> 00:00:36,000
+of i, now here technically we should increment
+
+10
+00:00:36,000 --> 00:00:40,000
+i, but if you forget to do so, you end up creating an
+
+11
+00:00:40,000 --> 00:00:44,000
+infinite loop, because in the first iteration, i is 0.
+
+12
+00:00:44,000 --> 00:00:48,000
+And it's less than 5, so we'll display an i on the console.
+
+13
+00:00:48,000 --> 00:00:52,000
+Now, in the second iteration i is still 0, and less than 5.
+
+14
+00:00:52,000 --> 00:00:56,000
+So this loop could run forever. So I'm going to save the changes,
+
+15
+00:00:56,000 --> 00:01:00,000
+now on the console, this number you see before 0
+
+16
+00:01:00,000 --> 00:01:04,000
+is the number of times you're displaying 0 on the console,
+
+17
+00:01:04,000 --> 00:01:08,000
+so you can see this number is increasing rapidly
+
+18
+00:01:08,000 --> 00:01:12,000
+so far we have displayed 0, more than 35 hundred times.
+
+19
+00:01:12,000 --> 00:01:16,000
+And if you look at the browser, you can see this spinner going forever.
+
+20
+00:01:16,000 --> 00:01:20,000
+So the only way to get rid of this is to close this window,
+
+21
+00:01:20,000 --> 00:01:24,000
+or if this doesn't work, you'll have to force quit
+
+22
+00:01:24,000 --> 00:01:28,000
+Chrome. So this is
+
+23
+00:01:28,000 --> 00:01:32,000
+1 example of an infinite loop. Here's another example
+
+24
+00:01:32,000 --> 00:01:36,000
+while true. Again, this loop is going to run forever.
+
+25
+00:01:36,000 --> 00:01:40,000
+So it's an infinite loop. And by the way, infinite loops are not
+
+26
+00:01:40,000 --> 00:01:44,000
+limited to while loops, we can create an infinite
+
+27
+00:01:44,000 --> 00:01:48,000
+do while loop, so do while
+
+28
+00:01:48,000 --> 00:01:52,000
+true. Or similar to the last example, maybe we'll
+
+29
+00:01:52,000 --> 00:01:56,000
+create a loop variable like 0 and then
+
+30
+00:01:56,000 --> 00:02:00,000
+have a condition like x is less than 5, but we forget to
+
+31
+00:02:00,000 --> 00:02:04,000
+increment x here. We can also create
+
+32
+00:02:04,000 --> 00:02:08,000
+an infinite for loop. So, for
+
+33
+00:02:08,000 --> 00:02:12,000
+let i equal to 0, as long as i is greater than
+
+34
+00:02:12,000 --> 00:02:16,000
+0, i ++, again with the condition that we have
+
+35
+00:02:16,000 --> 00:02:20,000
+placed here this loop is going run forever, or maybe we
+
+36
+00:02:20,000 --> 00:02:24,000
+have the right condition, like i is less than 10, but we forget
+
+37
+00:02:24,000 --> 00:02:28,000
+to add the third part. So we don't increment i, and this is
+
+38
+00:02:28,000 --> 00:02:32,000
+exactly like this while loop that we had earlier.
+
+39
+00:02:32,000 --> 00:02:36,000
+Without incrementing i. So be aware of the infinite loops,
+
+40
+00:02:36,000 --> 00:02:40,000
+avoid them, because they can crash your browser or your computer.
+

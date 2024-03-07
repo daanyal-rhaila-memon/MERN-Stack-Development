@@ -1,0 +1,402 @@
+﻿WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+This next
+
+2
+00:00:04.000 --> 00:00:08.000
+exercise I want you to work on, is a very popular interview question
+
+3
+00:00:08.000 --> 00:00:12.000
+called the fizzBuzz algorithm. So we have this
+
+4
+00:00:12.000 --> 00:00:16.000
+function called fizz buzz, we give it an input and it
+
+5
+00:00:16.000 --> 00:00:20.000
+returns a string. Let me show you how that works, so
+
+6
+00:00:20.000 --> 00:00:24.000
+let's declare a constant called output. Here we call
+
+7
+00:00:24.000 --> 00:00:28.000
+fizzBuzz and pass an input like
+
+8
+00:00:28.000 --> 00:00:32.000
+3. Then, log the output
+
+9
+00:00:32.000 --> 00:00:36.000
+on the console. Let's see what we get. We get
+
+10
+00:00:36.000 --> 00:00:40.000
+fizz. So if the number that we're passing is divisible
+
+11
+00:00:40.000 --> 00:00:44.000
+by 3, we get fizz. So let me show you here.
+
+12
+00:00:44.000 --> 00:00:48.000
+If the number is divisible by 3 we get fizz.
+
+13
+00:00:48.000 --> 00:00:52.000
+Now if the number that we pass is divisible by 5,
+
+14
+00:00:52.000 --> 00:00:56.000
+we get buzz. So,
+
+15
+00:00:56.000 --> 00:01:00.000
+divisible by 5 we get buzz.
+
+16
+00:01:00.000 --> 00:01:04.000
+Now if the number that we're passing is divisible by 3 and 5,
+
+17
+00:01:04.000 --> 00:01:08.000
+like 15, we get fizz buzz.
+
+18
+00:01:08.000 --> 00:01:12.000
+So, divisible by
+
+19
+00:01:12.000 --> 00:01:16.000
+both 3 and 5, we get fizzBuzz.
+
+20
+00:01:16.000 --> 00:01:20.000
+Now if the number is not divisible by either 3 or
+
+21
+00:01:20.000 --> 00:01:24.000
+5, we're going to get the same number, so if you pass
+
+22
+00:01:24.000 --> 00:01:28.000
+let's say 7, we get 7, so
+
+23
+00:01:28.000 --> 00:01:32.000
+not divisible by 3 or 5, we get
+
+24
+00:01:32.000 --> 00:01:36.000
+the same input. Now if we don't pass a number here, let's say
+
+25
+00:01:36.000 --> 00:01:40.000
+we pass a string, we should get this message,
+
+26
+00:01:40.000 --> 00:01:44.000
+not a number. The same is true if you pass
+
+27
+00:01:44.000 --> 00:01:48.000
+a boolean, or anything that is not a number. So
+
+28
+00:01:48.000 --> 00:01:52.000
+if the input is not a number, that is the message that
+
+29
+00:01:52.000 --> 00:01:56.000
+we should display on the console. So I want you to pause
+
+30
+00:01:56.000 --> 00:02:00.000
+the video. Spend 10-15 minutes on this exercise,
+
+31
+00:02:00.000 --> 00:02:04.000
+and when you're done come back and continue watching.
+
+32
+00:02:04.000 --> 00:02:08.000
+Alright, let's see how we can implement
+
+33
+00:02:08.000 --> 00:02:12.000
+this fizzBuzz function. So we get the input
+
+34
+00:02:12.000 --> 00:02:16.000
+first we want to see if this is a number or not. Because if it's not a number
+
+35
+00:02:16.000 --> 00:02:20.000
+then we don't care about dividing that number by 3 or 5.
+
+36
+00:02:20.000 --> 00:02:24.000
+So, for that we use the type of operator. So,
+
+37
+00:02:24.000 --> 00:02:28.000
+typeof input is not number,
+
+38
+00:02:28.000 --> 00:02:32.000
+we want to return this message, not
+
+39
+00:02:32.000 --> 00:02:36.000
+a number. So that's the first if statement
+
+40
+00:02:36.000 --> 00:02:40.000
+in this function. Now if we get to this point then that means we have a number
+
+41
+00:02:40.000 --> 00:02:44.000
+we want to see if this number is divisible by 3,
+
+42
+00:02:44.000 --> 00:02:48.000
+5, both of them, or none of them. We can write
+
+43
+00:02:48.000 --> 00:02:52.000
+the if statement like this. If input
+
+44
+00:02:52.000 --> 00:02:56.000
+module is 3, equals 3, that means
+
+45
+00:02:56.000 --> 00:03:00.000
+this number is divisible by 3, so
+
+46
+00:03:00.000 --> 00:03:04.000
+we return fizz. Similarly, we
+
+47
+00:03:04.000 --> 00:03:08.000
+have another if statement. So if
+
+48
+00:03:08.000 --> 00:03:12.000
+input module is 5, equals
+
+49
+00:03:12.000 --> 00:03:16.000
+0, we're going to return buzz,
+
+50
+00:03:16.000 --> 00:03:20.000
+next we want to see if this number is divisible
+
+51
+00:03:20.000 --> 00:03:24.000
+by both 3 and 5. So, if
+
+52
+00:03:24.000 --> 00:03:28.000
+input is divisible by 3,
+
+53
+00:03:28.000 --> 00:03:32.000
+and input is divisible by
+
+54
+00:03:32.000 --> 00:03:36.000
+5 as well. Now here we're dealing with a complex expression,
+
+55
+00:03:36.000 --> 00:03:40.000
+to make this code more readable, I would like to put
+
+56
+00:03:40.000 --> 00:03:44.000
+each expression in parenthesis, like this. So
+
+57
+00:03:44.000 --> 00:03:48.000
+here we have one expression, we have the logical and
+
+58
+00:03:48.000 --> 00:03:52.000
+and the second expression. We can select this expression and type
+
+59
+00:03:52.000 --> 00:03:56.000
+the opening parenthesis, and this automatically adds the
+
+60
+00:03:56.000 --> 00:04:00.000
+closing parenthesis. That's a quick tip for you. So if this number is
+
+61
+00:04:00.000 --> 00:04:04.000
+divisible by both 3 and 5, you want to
+
+62
+00:04:04.000 --> 00:04:08.000
+return fizzBuzz, and
+
+63
+00:04:08.000 --> 00:04:12.000
+if we get to this point, that means that number is not divisible
+
+64
+00:04:12.000 --> 00:04:16.000
+by either 3 or 5. So we simply return the same
+
+65
+00:04:16.000 --> 00:04:20.000
+input. Now let's test this function. So initially
+
+66
+00:04:20.000 --> 00:04:24.000
+we have passed false, we should get not a number on the console.
+
+67
+00:04:24.000 --> 00:04:28.000
+Save the changes, we get not a number, beautiful, what happens if
+
+68
+00:04:28.000 --> 00:04:32.000
+we pass 3, we get 3, what happens if we pass
+
+69
+00:04:32.000 --> 00:04:36.000
+5. We get buzz. So far so good,
+
+70
+00:04:36.000 --> 00:04:40.000
+what if we pass 15. 15 is divisible by both
+
+71
+00:04:40.000 --> 00:04:44.000
+3 and 5, so we should get fizzBuzz.
+
+72
+00:04:44.000 --> 00:04:48.000
+Save the changes, wait a sec, what happened here? We got fizz
+
+73
+00:04:48.000 --> 00:04:52.000
+when we expected fizzBuzz. The reason for that is because
+
+74
+00:04:52.000 --> 00:04:56.000
+of how we have ordered our if statements. So in this case
+
+75
+00:04:56.000 --> 00:05:00.000
+15 is divisible by 3, so this if statement is executed
+
+76
+00:05:00.000 --> 00:05:04.000
+and here we immediately return fizz. To solve this
+
+77
+00:05:04.000 --> 00:05:08.000
+problem, we need to move this if statement
+
+78
+00:05:08.000 --> 00:05:12.000
+on the top. So I've selected these two lines, now to move this
+
+79
+00:05:12.000 --> 00:05:16.000
+code up, we can simply press the alt key and the up
+
+80
+00:05:16.000 --> 00:05:20.000
+arrow. Simple as that.
+
+81
+00:05:20.000 --> 00:05:24.000
+Okay, so if the number is divisible by
+
+82
+00:05:24.000 --> 00:05:28.000
+both 3 and 5, we need it to return fizzBuzz.
+
+83
+00:05:28.000 --> 00:05:32.000
+Now, let's save the changes,
+
+84
+00:05:32.000 --> 00:05:36.000
+Okay, the problem is solved, what if we pass a number that is not
+
+85
+00:05:36.000 --> 00:05:40.000
+divisible by 3 or 5. Let's say 7.
+
+86
+00:05:40.000 --> 00:05:44.000
+Now we get the same input beautiful, so this is the fizzBuzz algorithm,
+
+87
+00:05:44.000 --> 00:05:48.000
+that you see in a lot of programming interviews. Now I want to show you
+
+88
+00:05:48.000 --> 00:05:52.000
+something. In JavaScript we have this special value called
+
+89
+00:05:52.000 --> 00:05:56.000
+not a number. So here I'm going to replace this string
+
+90
+00:05:56.000 --> 00:06:00.000
+with not a number. Whenever you're dealing with
+
+91
+00:06:00.000 --> 00:06:04.000
+some mathematical calculation, if the result is not a number,
+
+92
+00:06:04.000 --> 00:06:08.000
+this value is returned. So we can use the same value
+
+93
+00:06:08.000 --> 00:06:12.000
+instead of returning a string like not a number. Now, this was not part of the
+
+94
+00:06:12.000 --> 00:06:16.000
+exercise, it's something that I'm teaching you now. So let's save the changes,
+
+95
+00:06:16.000 --> 00:06:20.000
+now, instead of passing a number, let's pass false.
+
+96
+00:06:20.000 --> 00:06:24.000
+Now we get not a number. Let's take a look
+
+97
+00:06:24.000 --> 00:06:28.000
+at the type of this value. So type of not a number,
+
+98
+00:06:28.000 --> 00:06:32.000
+weirdly enough, the type of this value is a number,
+
+99
+00:06:32.000 --> 00:06:36.000
+the value is something specific that is not a valid
+
+100
+00:06:36.000 --> 00:06:39.200
+mathematical number.
+

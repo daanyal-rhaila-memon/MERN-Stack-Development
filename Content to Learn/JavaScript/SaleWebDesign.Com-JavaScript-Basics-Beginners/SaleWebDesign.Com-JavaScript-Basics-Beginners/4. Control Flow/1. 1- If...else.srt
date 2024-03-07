@@ -1,0 +1,324 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+In the last section you learned about
+
+2
+00:00:04,000 --> 00:00:08,000
+expressions and operators. In this section we're going to use these expressions
+
+3
+00:00:08,000 --> 00:00:12,000
+and operators along with conditional statements
+
+4
+00:00:12,000 --> 00:00:16,000
+to implement interactivity in our applications. In JavaScript
+
+5
+00:00:16,000 --> 00:00:20,000
+we have two types of conditional statements, we have
+
+6
+00:00:20,000 --> 00:00:24,000
+if and else, and switch and case. You're going to learn about if and else
+
+7
+00:00:24,000 --> 00:00:28,000
+in this lecture, and we'll look at switch and case in the next lecture.
+
+8
+00:00:28,000 --> 00:00:32,000
+So imagine in our application we're going to get the current hour
+
+9
+00:00:32,000 --> 00:00:36,000
+and depending on it's value, we're going to greet the user with a different message
+
+10
+00:00:36,000 --> 00:00:40,000
+so if the hour is between
+
+11
+00:00:40,000 --> 00:00:44,000
+let's say 6am and 12pm, you
+
+12
+00:00:44,000 --> 00:00:48,000
+display something like good morning. Similarly, if
+
+13
+00:00:48,000 --> 00:00:52,000
+it is between 12pm and 6pm we're going to display
+
+14
+00:00:52,000 --> 00:00:56,000
+good afternoon. Otherwise we're going to display
+
+15
+00:00:56,000 --> 00:01:00,000
+good evening. So we want to have some logic like this in our application.
+
+16
+00:01:00,000 --> 00:01:04,000
+That's where we use if and else. So we start with
+
+17
+00:01:04,000 --> 00:01:08,000
+the if, then we add parenthesis. And
+
+18
+00:01:08,000 --> 00:01:12,000
+in between these parenthesis, we add a condition. If this
+
+19
+00:01:12,000 --> 00:01:16,000
+condition evaluates to true, the statement we put
+
+20
+00:01:16,000 --> 00:01:20,000
+after will be executed. Now if you have multiple statements,
+
+21
+00:01:20,000 --> 00:01:24,000
+we need to put them in between these curly
+
+22
+00:01:24,000 --> 00:01:28,000
+braces. We refer to these as a block of code.
+
+23
+00:01:28,000 --> 00:01:32,000
+Okay? Now optionally, we can have another condition
+
+24
+00:01:32,000 --> 00:01:36,000
+so we write else if once again parenthesis,
+
+25
+00:01:36,000 --> 00:01:40,000
+anotherCondition. Now, if this
+
+26
+00:01:40,000 --> 00:01:44,000
+condition is true, then this other statement will be executed
+
+27
+00:01:44,000 --> 00:01:48,000
+and similarly, if we have multiple statements, we need to surround them with
+
+28
+00:01:48,000 --> 00:01:52,000
+curly braces. Like this. Also note that
+
+29
+00:01:52,000 --> 00:01:56,000
+as a convention, when we want to define a block of code,
+
+30
+00:01:56,000 --> 00:02:00,000
+we put the first curly brace on the same line, not here,
+
+31
+00:02:00,000 --> 00:02:04,000
+that's kind of ugly in JavaScript, so take that into account,
+
+32
+00:02:04,000 --> 00:02:08,000
+now back to our if and else, we could have yet another
+
+33
+00:02:08,000 --> 00:02:12,000
+condition like this, yet another condition, we could have as many conditions
+
+34
+00:02:12,000 --> 00:02:16,000
+as we want, there is no limitation. And once again here
+
+35
+00:02:16,000 --> 00:02:20,000
+we have 1 or more statements, now optionally if none
+
+36
+00:02:20,000 --> 00:02:24,000
+of these conditions evaluate to true, we could use else
+
+37
+00:02:24,000 --> 00:02:28,000
+to execute 1 or more other statements.
+
+38
+00:02:28,000 --> 00:02:32,000
+So this is the basic structure. Now,
+
+39
+00:02:32,000 --> 00:02:36,000
+we want to get this logic and map it into this structure.
+
+40
+00:02:36,000 --> 00:02:40,000
+It's very easy. So let's start with our first condition.
+
+41
+00:02:40,000 --> 00:02:44,000
+If hour is between 6am and 12 pm, so that's the
+
+42
+00:02:44,000 --> 00:02:48,000
+condition, and the statement we want to execute is good morning,
+
+43
+00:02:48,000 --> 00:02:52,000
+okay? So I'm going to declare a variable here,
+
+44
+00:02:52,000 --> 00:02:56,000
+hour and set it to 10, now in a real world application we want to
+
+45
+00:02:56,000 --> 00:03:00,000
+read the current hour. For now, let's now worry about getting the current time and
+
+46
+00:03:00,000 --> 00:03:04,000
+hard code this number here, 10. So,
+
+47
+00:03:04,000 --> 00:03:08,000
+we want to compare the value of hour with these
+
+48
+00:03:08,000 --> 00:03:12,000
+two numbers. Now for simplicity, let's go with 24 hour time format
+
+49
+00:03:12,000 --> 00:03:16,000
+so we want to see if hour is greater than
+
+50
+00:03:16,000 --> 00:03:20,000
+or equal to 6, and
+
+51
+00:03:20,000 --> 00:03:24,000
+hour is less than 12. You learned this in the last section, right?
+
+52
+00:03:24,000 --> 00:03:28,000
+So here we're using these comparison operators,
+
+53
+00:03:28,000 --> 00:03:32,000
+we have two expressions, here's the first one, here's the second one,
+
+54
+00:03:32,000 --> 00:03:36,000
+and we're applying the logical and in between them.
+
+55
+00:03:36,000 --> 00:03:40,000
+So, if both these expressions evaluate to true, than the result
+
+56
+00:03:40,000 --> 00:03:44,000
+of this expression will also be true. Now let's add the statement.
+
+57
+00:03:44,000 --> 00:03:48,000
+You want to display good morning.
+
+58
+00:03:48,000 --> 00:03:52,000
+And of course we need to terminate this statement with a
+
+59
+00:03:52,000 --> 00:03:56,000
+semi colon. Now here's my suggestion for you. If you want to master JavaScript
+
+60
+00:03:56,000 --> 00:04:00,000
+pause the video now and continue implementing this logic
+
+61
+00:04:00,000 --> 00:04:04,000
+using if and else then come back continue watching and see my
+
+62
+00:04:04,000 --> 00:04:08,000
+solution.
+
+63
+00:04:08,000 --> 00:04:12,000
+Alright let's continue. Here's a second condition. You want
+
+64
+00:04:12,000 --> 00:04:16,000
+to check to see if hour is between 12 and 18. So,
+
+65
+00:04:16,000 --> 00:04:20,000
+very easy. If hour is greater than or
+
+66
+00:04:20,000 --> 00:04:24,000
+equal to 12, and it's less than
+
+67
+00:04:24,000 --> 00:04:28,000
+18. We want to display good afternoon. So
+
+68
+00:04:28,000 --> 00:04:32,000
+console.log good afternoon.
+
+69
+00:04:32,000 --> 00:04:36,000
+Now in this example, we don't need this other else if
+
+70
+00:04:36,000 --> 00:04:40,000
+because otherwise we want to display good evening. So let's delete
+
+71
+00:04:40,000 --> 00:04:44,000
+this, otherwise we do a console.log
+
+72
+00:04:44,000 --> 00:04:48,000
+of good evening. Now in this
+
+73
+00:04:48,000 --> 00:04:52,000
+example, because we're dealing with a single statement
+
+74
+00:04:52,000 --> 00:04:56,000
+these curly braces are getting in the way and creating noise in the code.
+
+75
+00:04:56,000 --> 00:05:00,000
+So it's better to get rid of them and simplify the code
+
+76
+00:05:00,000 --> 00:05:04,000
+here's another pair, okay, that's better.
+
+77
+00:05:04,000 --> 00:05:08,000
+Save the changes, we get good morning here, if I change the
+
+78
+00:05:08,000 --> 00:05:12,000
+hour to 13, we get good afternoon, and if
+
+79
+00:05:12,000 --> 00:05:16,000
+I change this to 20, we get good evening.
+
+80
+00:05:16,000 --> 00:05:20,000
+So this is all about if and else. In the next lecture, you're going to learn about
+
+81
+00:05:20,000 --> 00:05:23,533
+switch and case.
+

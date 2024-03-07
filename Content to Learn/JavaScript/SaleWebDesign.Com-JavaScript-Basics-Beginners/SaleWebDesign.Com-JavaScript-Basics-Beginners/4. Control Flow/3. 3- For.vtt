@@ -1,0 +1,354 @@
+﻿WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+Sometimes we
+
+2
+00:00:04.000 --> 00:00:08.000
+want to repeat an action a number of times. For example, let's imagine
+
+3
+00:00:08.000 --> 00:00:12.000
+we want to display hello world 5 times on the console.
+
+4
+00:00:12.000 --> 00:00:16.000
+The pour way of doing that is like this. So console.log
+
+5
+00:00:16.000 --> 00:00:20.000
+hello world, and then repeat it
+
+6
+00:00:20.000 --> 00:00:24.000
+five times. This code is ugly, there is a better way
+
+7
+00:00:24.000 --> 00:00:28.000
+to achieve the same result, and that's where we use loops.
+
+8
+00:00:28.000 --> 00:00:32.000
+In JavaScript we have various kinds of loops, and all these loops essentially
+
+9
+00:00:32.000 --> 00:00:36.000
+do the same thing. They repeat an action a number of times. We have
+
+10
+00:00:36.000 --> 00:00:40.000
+For loops, while loops, do while loops, for
+
+11
+00:00:40.000 --> 00:00:44.000
+in loops, and for on loops. All these loops
+
+12
+00:00:44.000 --> 00:00:48.000
+essentially do the same thing. But there is a subtle difference between how they
+
+13
+00:00:48.000 --> 00:00:52.000
+start and end. Let's start by looking at the for loop.
+
+14
+00:00:52.000 --> 00:00:56.000
+So, back to this code, this is how we write a for loop,
+
+15
+00:00:56.000 --> 00:01:00.000
+so for we add parenthesis, and here we need
+
+16
+00:01:00.000 --> 00:01:04.000
+3 statements. The first statement is what we call
+
+17
+00:01:04.000 --> 00:01:08.000
+initialExpression. And here we declare an initialized
+
+18
+00:01:08.000 --> 00:01:12.000
+variable. So, we use let to declare a
+
+19
+00:01:12.000 --> 00:01:16.000
+variable like i and set it to 0. Now i is short for
+
+20
+00:01:16.000 --> 00:01:20.000
+index and is a common convention to use in for loops. This is
+
+21
+00:01:20.000 --> 00:01:24.000
+what we call the loop variable. So we initialize it to 0,
+
+22
+00:01:24.000 --> 00:01:28.000
+then we terminate this statement with a semi-colon,
+
+23
+00:01:28.000 --> 00:01:32.000
+and the second part of the for loop is what we call a condition.
+
+24
+00:01:32.000 --> 00:01:36.000
+so here we want to add a condition and compare the value
+
+25
+00:01:36.000 --> 00:01:40.000
+of i with something else. This loop will run
+
+26
+00:01:40.000 --> 00:01:44.000
+as long as this condition evaluates to true. So
+
+27
+00:01:44.000 --> 00:01:48.000
+if you want this loop to run 5 times, we compare
+
+28
+00:01:48.000 --> 00:01:52.000
+i with 5. So as long as i is less than 5,
+
+29
+00:01:52.000 --> 00:01:56.000
+this loop will execute. You will see that in a second. Once again,
+
+30
+00:01:56.000 --> 00:02:00.000
+we terminate this statement with a semi colon, and finally the third part.
+
+31
+00:02:00.000 --> 00:02:04.000
+This is what we call incrementExpression,
+
+32
+00:02:04.000 --> 00:02:08.000
+and quite often what we have here is something like this.
+
+33
+00:02:08.000 --> 00:02:12.000
+So, we use the increment operator to increment the value of
+
+34
+00:02:12.000 --> 00:02:16.000
+i with 1. Now, after this for statement
+
+35
+00:02:16.000 --> 00:02:20.000
+we can add 1 or more statements, just like the if statements
+
+36
+00:02:20.000 --> 00:02:24.000
+if you have multiple statements here, you need to put them in
+
+37
+00:02:24.000 --> 00:02:28.000
+code block. Like this. Now here we want to display hello
+
+38
+00:02:28.000 --> 00:02:32.000
+world on the console. So our statement is console
+
+39
+00:02:32.000 --> 00:02:36.000
+.log Hello World.
+
+40
+00:02:36.000 --> 00:02:40.000
+So instead of repeating this line 5 times, we put it in a
+
+41
+00:02:40.000 --> 00:02:44.000
+for loop, and this loop will run 5 times. Now, save the
+
+42
+00:02:44.000 --> 00:02:48.000
+changes, so we get 5 Hello World messages,
+
+43
+00:02:48.000 --> 00:02:52.000
+on the console. Alright now that you have seen a for loop reaction,
+
+44
+00:02:52.000 --> 00:02:56.000
+let's see exactly how this loop works. So earlier I told you
+
+45
+00:02:56.000 --> 00:03:00.000
+this is what we call an initial expression, here we're initializing
+
+46
+00:03:00.000 --> 00:03:04.000
+i to 0, now this loop will execute
+
+47
+00:03:04.000 --> 00:03:08.000
+as long as this condition is true. So as long as i is
+
+48
+00:03:08.000 --> 00:03:12.000
+less than 5, the statements we have here will be executed. Now,
+
+49
+00:03:12.000 --> 00:03:16.000
+after the first iteration, i is
+
+50
+00:03:16.000 --> 00:03:20.000
+incremented by 1. Then this condition is evaluated
+
+51
+00:03:20.000 --> 00:03:24.000
+again, so 2 is less than 5, so one more time, this
+
+52
+00:03:24.000 --> 00:03:28.000
+loop is executed so we have the second iteration
+
+53
+00:03:28.000 --> 00:03:32.000
+now after the second iteration once again, i is iterated by 1,
+
+54
+00:03:32.000 --> 00:03:36.000
+so now we are in the third iteration. Again, this
+
+55
+00:03:36.000 --> 00:03:40.000
+condition is evaluated, and because it is true, the loop is executed.
+
+56
+00:03:40.000 --> 00:03:44.000
+To show you this in action, I'm going to output i on the
+
+57
+00:03:44.000 --> 00:03:48.000
+console. So, save the changes,
+
+58
+00:03:48.000 --> 00:03:52.000
+this is what we get. So note that in the first iteration i is
+
+59
+00:03:52.000 --> 00:03:56.000
+0, then is incremented by 1 until it
+
+60
+00:03:56.000 --> 00:04:00.000
+reaches 4. So at the end of the 5th iteration i will be
+
+61
+00:04:00.000 --> 00:04:04.000
+4, and when we increment that by 1, it will be 5,
+
+62
+00:04:04.000 --> 00:04:08.000
+so this condition will evaluate to false. So
+
+63
+00:04:08.000 --> 00:04:12.000
+essentially there are two ways to repeat an action a number of times
+
+64
+00:04:12.000 --> 00:04:16.000
+using the for loop. Let's say we want to repeat something 5 times, we can
+
+65
+00:04:16.000 --> 00:04:20.000
+initialize i to 0, and check to see if it's
+
+66
+00:04:20.000 --> 00:04:24.000
+less than 5. Alternatively, we can initialize this to
+
+67
+00:04:24.000 --> 00:04:28.000
+1, and check to see if it's less than or equal to 5/
+
+68
+00:04:28.000 --> 00:04:32.000
+Now, if you save the changes, you can see i starts from
+
+69
+00:04:32.000 --> 00:04:36.000
+1, and finishes at 5. Now we can make this programming
+
+70
+00:04:36.000 --> 00:04:40.000
+more interesting. Let's say we want to display the odd numbers
+
+71
+00:04:40.000 --> 00:04:44.000
+between 1 to 5. So instead of logging Hello World
+
+72
+00:04:44.000 --> 00:04:48.000
+in the console, we can have an if statement
+
+73
+00:04:48.000 --> 00:04:52.000
+and check the remainder of the division of i by 2.
+
+74
+00:04:52.000 --> 00:04:56.000
+So, if the remainder of division of i by
+
+75
+00:04:56.000 --> 00:05:00.000
+2 is not 0, that means i
+
+76
+00:05:00.000 --> 00:05:04.000
+is an odd number. So we can display it
+
+77
+00:05:04.000 --> 00:05:08.000
+on the console. Save the changes, so here are the
+
+78
+00:05:08.000 --> 00:05:12.000
+odd numbers between one and five. There is also another way
+
+79
+00:05:12.000 --> 00:05:16.000
+to write this loop. Instead if starting from 1 and going all the way to
+
+80
+00:05:16.000 --> 00:05:20.000
+5, we can start from 5 and go back to 1. So,
+
+81
+00:05:20.000 --> 00:05:24.000
+we change the initial expression, set i to 5,
+
+82
+00:05:24.000 --> 00:05:28.000
+as long as i is greater than or equal to
+
+83
+00:05:28.000 --> 00:05:32.000
+1, now we want to increment i.
+
+84
+00:05:32.000 --> 00:05:36.000
+Save the changes. Now we get the odd numbers in the
+
+85
+00:05:36.000 --> 00:05:40.000
+reverse order. It's more common to use the previous form, so
+
+86
+00:05:40.000 --> 00:05:44.000
+we initialize i to 0 or 1 and increment it in every
+
+87
+00:05:44.000 --> 00:05:48.000
+iteration. But in certain problems, you want to use the for loop in
+
+88
+00:05:48.000 --> 00:05:50.866
+reverse order.
+

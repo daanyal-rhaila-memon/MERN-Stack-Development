@@ -1,0 +1,78 @@
+﻿WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+So as I told you in the last
+
+2
+00:00:04.000 --> 00:00:08.000
+lecture, starting from ecma script 6, or ES6,
+
+3
+00:00:08.000 --> 00:00:12.000
+we have a new way to iterate over a raise and that is
+
+4
+00:00:12.000 --> 00:00:16.000
+using the for of loop. It's very similar to the
+
+5
+00:00:16.000 --> 00:00:20.000
+for in loop but instead of the in keyword we use the of keyword.
+
+6
+00:00:20.000 --> 00:00:24.000
+So here's an example, for let,
+
+7
+00:00:24.000 --> 00:00:28.000
+color of colors,
+
+8
+00:00:28.000 --> 00:00:32.000
+you can simply log this color on the console.
+
+9
+00:00:32.000 --> 00:00:36.000
+You can see with this new for loop, we don't have to deal with
+
+10
+00:00:36.000 --> 00:00:40.000
+this index. We don't have to access this element
+
+11
+00:00:40.000 --> 00:00:44.000
+at the given index. So in each iteration this
+
+12
+00:00:44.000 --> 00:00:48.000
+color which is our loop variable will hold one of the items in this array.
+
+13
+00:00:48.000 --> 00:00:52.000
+So when I save the changes you see red
+
+14
+00:00:52.000 --> 00:00:56.000
+green and blue. So I'm going to delete this for
+
+15
+00:00:56.000 --> 00:01:00.000
+in loop, bring the colors array down to
+
+16
+00:01:00.000 --> 00:01:04.000
+summarize everything. So we use the for in loop
+
+17
+00:01:04.000 --> 00:01:08.000
+to iterate over the properties of an object and
+
+18
+00:01:08.000 --> 00:01:12.000
+the for of loop to iterate over the elements or items
+
+19
+00:01:12.000 --> 00:01:15.033
+in an array.
+

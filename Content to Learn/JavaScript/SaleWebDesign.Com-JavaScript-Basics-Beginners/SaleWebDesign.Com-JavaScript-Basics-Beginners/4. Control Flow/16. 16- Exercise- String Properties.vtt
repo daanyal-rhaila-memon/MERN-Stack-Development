@@ -1,0 +1,178 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+Alright here's
+
+2
+00:00:04.000 --> 00:00:08.000
+another simple but great exercise, your job is to create a function
+
+3
+00:00:08.000 --> 00:00:12.000
+called show properties. We pass an object here. And this function
+
+4
+00:00:12.000 --> 00:00:16.000
+should display all the properties of this object that are
+
+5
+00:00:16.000 --> 00:00:20.000
+of type string. Let me give you an example. So on the
+
+6
+00:00:20.000 --> 00:00:24.000
+top, I'm going to define an object,
+
+7
+00:00:24.000 --> 00:00:28.000
+like movie, here's the object literal syntax to initialize this,
+
+8
+00:00:28.000 --> 00:00:32.000
+so here we're gonna add a few properties like title,
+
+9
+00:00:32.000 --> 00:00:36.000
+set it to a simple string, the value doesn't really matter, a is enough.
+
+10
+00:00:36.000 --> 00:00:40.000
+Release here, we set it to a number, like 2018.
+
+11
+00:00:40.000 --> 00:00:44.000
+Rating, again, a number, and then director
+
+12
+00:00:44.000 --> 00:00:48.000
+we set it to another string. Now if we call
+
+13
+00:00:48.000 --> 00:00:52.000
+function showProperties, we pass this movie object
+
+14
+00:00:52.000 --> 00:00:56.000
+see what we get. We see the
+
+15
+00:00:56.000 --> 00:01:00.000
+string properties of our movie object, so title is a and director is
+
+16
+00:01:00.000 --> 00:01:04.000
+b. So pause the video, do the exercise
+
+17
+00:01:04.000 --> 00:01:08.000
+and when you're done come back and continue watching.
+
+18
+00:01:08.000 --> 00:01:12.000
+Alright here we need to use the for in loop
+
+19
+00:01:12.000 --> 00:01:16.000
+to iterate over the properties of this object. So,
+
+20
+00:01:16.000 --> 00:01:20.000
+for let key in object
+
+21
+00:01:20.000 --> 00:01:24.000
+so in each iteration this key will hold
+
+22
+00:01:24.000 --> 00:01:28.000
+the name of one of these properties. Let's have a quick look here, console.log
+
+23
+00:01:28.000 --> 00:01:32.000
+of key. So we get title, release
+
+24
+00:01:32.000 --> 00:01:36.000
+Year and so on. Now we need to get the value of each of these properties
+
+25
+00:01:36.000 --> 00:01:40.000
+and then check the type of that value. If the type is a string
+
+26
+00:01:40.000 --> 00:01:44.000
+then we'll display the property and it's value.
+
+27
+00:01:44.000 --> 00:01:48.000
+So to get the value of this property we use the bracket notation, so
+
+28
+00:01:48.000 --> 00:01:52.000
+object of key. Now to check the type of this value
+
+29
+00:01:52.000 --> 00:01:56.000
+use the typeof operator and then we put this in an
+
+30
+00:01:56.000 --> 00:02:00.000
+if statement. So if the type of object
+
+31
+00:02:00.000 --> 00:02:04.000
+of key equals string, then
+
+32
+00:02:04.000 --> 00:02:08.000
+we simply display the
+
+33
+00:02:08.000 --> 00:02:12.000
+key as well as object of
+
+34
+00:02:12.000 --> 00:02:16.000
+key, save the changes.
+
+35
+00:02:16.000 --> 00:02:20.000
+We only get the title and director properties. That's
+
+36
+00:02:20.000 --> 00:02:24.000
+something I need to emphasize here, you might be wondering why I didn't
+
+37
+00:02:24.000 --> 00:02:28.000
+use curly braces here. Because we have two lines
+
+38
+00:02:28.000 --> 00:02:32.000
+under this 4 statement. Well accurately we only have
+
+39
+00:02:32.000 --> 00:02:36.000
+single statement under this for statement so this
+
+40
+00:02:36.000 --> 00:02:40.000
+console.log is a single statement that belongs to our if statement.
+
+41
+00:02:40.000 --> 00:02:44.000
+So here we don't need curly braces because we're dealing with a
+
+42
+00:02:44.000 --> 00:02:48.000
+single statement under the for statement. But if you prefer
+
+43
+00:02:48.000 --> 00:02:52.000
+to put the curly braces here, that's perfectly fine. So let me show you
+
+44
+00:02:52.000 --> 00:02:56.000
+it looks like this. It's more of a personal preference.
+
