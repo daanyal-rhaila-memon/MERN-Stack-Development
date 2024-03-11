@@ -1,0 +1,78 @@
+﻿WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+In low level
+
+2
+00:00:04.000 --> 00:00:08.000
+languages like C or C++, when creating an
+
+3
+00:00:08.000 --> 00:00:12.000
+object, we need to allocate memory to it, and when we're done we need to
+
+4
+00:00:12.000 --> 00:00:16.000
+reallocate memory. But in JavaScript, we don't have this concept.
+
+5
+00:00:16.000 --> 00:00:20.000
+We can easily create the new object,
+
+6
+00:00:20.000 --> 00:00:24.000
+at the time we initialized this object, the memory is automatically
+
+7
+00:00:24.000 --> 00:00:28.000
+allocated to this object, next we can use that, and
+
+8
+00:00:28.000 --> 00:00:32.000
+when we are done using, we don't need to deallocate the memory. So,
+
+9
+00:00:32.000 --> 00:00:36.000
+our JavaScript engine has what we call a garbage
+
+10
+00:00:36.000 --> 00:00:40.000
+collector. The job of this garbage collector is to find the
+
+11
+00:00:40.000 --> 00:00:44.000
+variables or constants that are no longer used and then deallocate the
+
+12
+00:00:44.000 --> 00:00:48.000
+memory that was allocated to them earlier. So you as a
+
+13
+00:00:48.000 --> 00:00:52.000
+JavaScript developer do not have to worry about this. Memory allocation
+
+14
+00:00:52.000 --> 00:00:56.000
+and deallocation automatically happens behind the scenes, and you have no control over
+
+15
+00:00:56.000 --> 00:01:00.000
+that. You cannot tell garbage collector when to run and what
+
+16
+00:01:00.000 --> 00:01:04.000
+variables to remove from memory. So based on some complex algorithms,
+
+17
+00:01:04.000 --> 00:01:08.000
+this garbage collector runs in the background, it figures out
+
+18
+00:01:08.000 --> 00:01:12.000
+what variables are not used, and then it will automatically
+
+19
+00:01:12.000 --> 00:01:14.833
+deallocate their memory.
+

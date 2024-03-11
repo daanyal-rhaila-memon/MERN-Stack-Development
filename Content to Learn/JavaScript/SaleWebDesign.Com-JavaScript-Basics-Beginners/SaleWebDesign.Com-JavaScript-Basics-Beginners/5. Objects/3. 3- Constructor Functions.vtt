@@ -1,0 +1,350 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+In this
+
+2
+00:00:04.000 --> 00:00:08.000
+lecture you're going to learn about another pattern for creating objects.
+
+3
+00:00:08.000 --> 00:00:12.000
+That is a Constructor Function, so
+
+4
+00:00:12.000 --> 00:00:16.000
+just like the factory function, we're going to create a function, and
+
+5
+00:00:16.000 --> 00:00:20.000
+the job of this function is to construct or create
+
+6
+00:00:20.000 --> 00:00:24.000
+an object. However, the naming convention
+
+7
+00:00:24.000 --> 00:00:28.000
+we use for constructor functions is different. So the naming convention
+
+8
+00:00:28.000 --> 00:00:32.000
+we have for factory functions is what we call camel notation,
+
+9
+00:00:32.000 --> 00:00:36.000
+so the first letter of the first word is lowercase, but the
+
+10
+00:00:36.000 --> 00:00:40.000
+first letter of every word after is uppercase. This is what
+
+11
+00:00:40.000 --> 00:00:44.000
+we call camel notation. So it looks like this,
+
+12
+00:00:44.000 --> 00:00:48.000
+camel notation, you've got 1, 2, 3, 4
+
+13
+00:00:48.000 --> 00:00:52.000
+You can see the first letter of the first word is lowercase.
+
+14
+00:00:52.000 --> 00:00:56.000
+And these upper case letters, look like camel humps, that's why we call it
+
+15
+00:00:56.000 --> 00:01:00.000
+camel notaton. In contrast, we have another notation that
+
+16
+00:01:00.000 --> 00:01:04.000
+is called Pascal Notation, and in this notation, the
+
+17
+00:01:04.000 --> 00:01:08.000
+first letter of every word should be upper case. So
+
+18
+00:01:08.000 --> 00:01:12.000
+OneTwoThreeFour. You can see the pattern right?
+
+19
+00:01:12.000 --> 00:01:16.000
+Now, when naming constructor functions, we should use Pascal
+
+20
+00:01:16.000 --> 00:01:20.000
+Notation by convention, because that's something other JavaScript developers
+
+21
+00:01:20.000 --> 00:01:24.000
+expect when they read your code. So we're going to call
+
+22
+00:01:24.000 --> 00:01:28.000
+this function circle with a capital C. Note that
+
+23
+00:01:28.000 --> 00:01:32.000
+I did not call this create circle and you will see that in a second.
+
+24
+00:01:32.000 --> 00:01:36.000
+Now, just like our factory function, here we need to add a parameter, radius
+
+25
+00:01:36.000 --> 00:01:40.000
+however, instead of returning an object,
+
+26
+00:01:40.000 --> 00:01:44.000
+we're going to use a different approach to initialize an object.
+
+27
+00:01:44.000 --> 00:01:48.000
+In JavaScript, we have a keyword called
+
+28
+00:01:48.000 --> 00:01:52.000
+this. And this is a reference to the object
+
+29
+00:01:52.000 --> 00:01:56.000
+that is executing this piece of code. You're going to see that in a second.
+
+30
+00:01:56.000 --> 00:02:00.000
+For now, just imagine this references an empty object.
+
+31
+00:02:00.000 --> 00:02:04.000
+Now you know what with dot notation, we can access
+
+32
+00:02:04.000 --> 00:02:08.000
+properties of an object, we can read a property, or we can set a property, so
+
+33
+00:02:08.000 --> 00:02:12.000
+on this new empty object, we want to add a property
+
+34
+00:02:12.000 --> 00:02:16.000
+called radius, and we set that to this radius argument that
+
+35
+00:02:16.000 --> 00:02:20.000
+you receive here. So in JavaScript our objects are dynamic.
+
+36
+00:02:20.000 --> 00:02:24.000
+Once we create them we can always add additional properties or
+
+37
+00:02:24.000 --> 00:02:28.000
+methods to them. So here we are adding a new property but
+
+38
+00:02:28.000 --> 00:02:32.000
+empty object. Now similarly, we are going to use this
+
+39
+00:02:32.000 --> 00:02:36.000
+approach to add a draw method to this new empty object.
+
+40
+00:02:36.000 --> 00:02:40.000
+So this.draw, but we set this to a function
+
+41
+00:02:40.000 --> 00:02:44.000
+and in the body of this function we simply do
+
+42
+00:02:44.000 --> 00:02:48.000
+a console.log of draw. Now finally
+
+43
+00:02:48.000 --> 00:02:52.000
+in order to create a circle object using
+
+44
+00:02:52.000 --> 00:02:56.000
+constructor function, we're going to define a constant called
+
+45
+00:02:56.000 --> 00:03:00.000
+circle and here we're going to use another keyword,
+
+46
+00:03:00.000 --> 00:03:04.000
+that is new, circle, and pass
+
+47
+00:03:04.000 --> 00:03:08.000
+1 as the radius. What is happening here?
+
+48
+00:03:08.000 --> 00:03:12.000
+Well, when we use this new operator here, 3
+
+49
+00:03:12.000 --> 00:03:16.000
+things happen. This new operator creates an empty
+
+50
+00:03:16.000 --> 00:03:20.000
+JavaScript object. Something like this. Constant, x,
+
+51
+00:03:20.000 --> 00:03:24.000
+set to an empty object. That is happening under the hood, but you don't see
+
+52
+00:03:24.000 --> 00:03:28.000
+that. Next, it will set this
+
+53
+00:03:28.000 --> 00:03:32.000
+to point to this new empty object. So in this code
+
+54
+00:03:32.000 --> 00:03:36.000
+we have access to this empty object, and we set this
+
+55
+00:03:36.000 --> 00:03:40.000
+radius property as we left the draw method in this new object.
+
+56
+00:03:40.000 --> 00:03:44.000
+Finally, this new operator will return
+
+57
+00:03:44.000 --> 00:03:48.000
+this new object from this function, so it looks like
+
+58
+00:03:48.000 --> 00:03:52.000
+this. Return this. We don't have to explicitly
+
+59
+00:03:52.000 --> 00:03:56.000
+add the statement here in this function, this will happen under the hood.
+
+60
+00:03:56.000 --> 00:04:00.000
+So let me recap, when we use the new operator,
+
+61
+00:04:00.000 --> 00:04:04.000
+3 things happen, this operator first creates an empty object
+
+62
+00:04:04.000 --> 00:04:08.000
+then it will set this to point to this object
+
+63
+00:04:08.000 --> 00:04:12.000
+and finally it will return that object from this function.
+
+64
+00:04:12.000 --> 00:04:16.000
+So what we get here is that new object, and we simply set the circle
+
+65
+00:04:16.000 --> 00:04:20.000
+to point to that object. Now let's see the difference
+
+66
+00:04:20.000 --> 00:04:24.000
+between factory and constructor functions.
+
+67
+00:04:24.000 --> 00:04:28.000
+Though with factory functions we create an object like this.
+
+68
+00:04:28.000 --> 00:04:32.000
+Constant myCircle here we call createCircle
+
+69
+00:04:32.000 --> 00:04:36.000
+and pass an argument. So with factory functions,
+
+70
+00:04:36.000 --> 00:04:40.000
+we simply call a function and in this function we return a
+
+71
+00:04:40.000 --> 00:04:44.000
+new object. In contrast, with constructor functions
+
+72
+00:04:44.000 --> 00:04:48.000
+we used the new operator, and instead of returning an object,
+
+73
+00:04:48.000 --> 00:04:52.000
+we use the this keyword. Also in terms of
+
+74
+00:04:52.000 --> 00:04:56.000
+naming convention with constructor functions we use the Pascal naming
+
+75
+00:04:56.000 --> 00:05:00.000
+convention, but in factory functions we use
+
+76
+00:05:00.000 --> 00:05:04.000
+the camel notation. So you might be asking which approach or which
+
+77
+00:05:04.000 --> 00:05:08.000
+pattern you should use to create new objects. Both these patterns are
+
+78
+00:05:08.000 --> 00:05:12.000
+equally good for creating new objects, the constructor function
+
+79
+00:05:12.000 --> 00:05:16.000
+pattern is familiar to developers who have some experience
+
+80
+00:05:16.000 --> 00:05:20.000
+programming in languages like C# and Java. So
+
+81
+00:05:20.000 --> 00:05:24.000
+with this pattern you can see that we're creating a new circle.
+
+82
+00:05:24.000 --> 00:05:28.000
+Alright, if you don't have any experience in languages like C# or Java, you might want to go
+
+83
+00:05:28.000 --> 00:05:32.000
+for a factory function. There is really no difference between
+
+84
+00:05:32.000 --> 00:05:36.000
+these two patterns, however, there are some discussions online by some
+
+85
+00:05:36.000 --> 00:05:40.000
+strongly opinionated developers comparing these to patterns, my
+
+86
+00:05:40.000 --> 00:05:44.000
+suggestion to you is do not get hung up on these discussions, they're just a waste
+
+87
+00:05:44.000 --> 00:05:48.000
+of time, pick one pattern, and just stick to that.
+

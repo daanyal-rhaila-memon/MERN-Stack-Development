@@ -1,0 +1,124 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+One thing we need
+
+2
+00:00:04,000 --> 00:00:08,000
+to understand about objects in JavaScript is that they are dynamic
+
+3
+00:00:08,000 --> 00:00:12,000
+which means once you create them you can always add new properties
+
+4
+00:00:12,000 --> 00:00:16,000
+or methods, or remove existing ones. So here we have a circle
+
+5
+00:00:16,000 --> 00:00:20,000
+object with a single property that is radius, we can add
+
+6
+00:00:20,000 --> 00:00:24,000
+another property like color set it to yellow
+
+7
+00:00:24,000 --> 00:00:28,000
+now when we log the circle on the console you can see we have
+
+8
+00:00:28,000 --> 00:00:32,000
+two properties, color and radius. Similarly, we
+
+9
+00:00:32,000 --> 00:00:36,000
+can add a new method here, circle.draw, we set it to
+
+10
+00:00:36,000 --> 00:00:40,000
+new function and now when we log this on the console
+
+11
+00:00:40,000 --> 00:00:44,000
+we can see our circle object has three members, two properties,
+
+12
+00:00:44,000 --> 00:00:48,000
+color and radius, and one method. We can
+
+13
+00:00:48,000 --> 00:00:52,000
+also delete existing properties or methods, so here before
+
+14
+00:00:52,000 --> 00:00:56,000
+logging the circle, we can use the delete operator, to
+
+15
+00:00:56,000 --> 00:01:00,000
+delete a member from a circle object. That member can be a property
+
+16
+00:01:00,000 --> 00:01:04,000
+method. So circle.color
+
+17
+00:01:04,000 --> 00:01:08,000
+we can also delete the draw method, so circle.draw,
+
+18
+00:01:08,000 --> 00:01:12,000
+now save the changes, we can see now our circle object
+
+19
+00:01:12,000 --> 00:01:16,000
+has only the radius property that we added at the
+
+20
+00:01:16,000 --> 00:01:20,000
+time of creating this object. Now one thing some developers find confusing
+
+21
+00:01:20,000 --> 00:01:24,000
+is that here we have used the const keyword,
+
+22
+00:01:24,000 --> 00:01:28,000
+to define a new constant. However, you can see I have modified
+
+23
+00:01:28,000 --> 00:01:32,000
+the circle object of either the property, and then remove that property.
+
+24
+00:01:32,000 --> 00:01:36,000
+So what kind of constant is that? Well, when we use constant
+
+25
+00:01:36,000 --> 00:01:40,000
+here, that means we cannot reassign this variable,
+
+26
+00:01:40,000 --> 00:01:44,000
+so this variable is more accurately a constant. So we cannot
+
+27
+00:01:44,000 --> 00:01:48,000
+reset circle to a new object. If we do that,
+
+28
+00:01:48,000 --> 00:01:52,000
+we get this error. Assignment to constant variable.
+
+29
+00:01:52,000 --> 00:01:56,000
+So we cannot reassign this constant, but we
+
+30
+00:01:56,000 --> 00:02:00,000
+can always change the circle object by adding
+
+31
+00:02:00,000 --> 00:02:03,200
+or removing properties.
+

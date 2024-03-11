@@ -1,0 +1,290 @@
+﻿WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+One of the
+
+2
+00:00:04.000 --> 00:00:08.000
+confusing concepts in JavaScript is here functions
+
+3
+00:00:08.000 --> 00:00:12.000
+are objects. So this circle function we have here,
+
+4
+00:00:12.000 --> 00:00:16.000
+is actually an object. Don't believe me? Let me show you. So
+
+5
+00:00:16.000 --> 00:00:20.000
+circle. look, these are all the
+
+6
+00:00:20.000 --> 00:00:24.000
+members of the circle function or circle object.
+
+7
+00:00:24.000 --> 00:00:28.000
+So the purple icons are methods, like call, bind, and apply,
+
+8
+00:00:28.000 --> 00:00:32.000
+and the blue icons are properties. So let's take a look
+
+9
+00:00:32.000 --> 00:00:36.000
+at a few of these members in the console. Here in the console
+
+10
+00:00:36.000 --> 00:00:40.000
+circle.name,
+
+11
+00:00:40.000 --> 00:00:44.000
+that returns the name of this function. Circle.length
+
+12
+00:00:44.000 --> 00:00:48.000
+returns the number of arguments, now
+
+13
+00:00:48.000 --> 00:00:52.000
+earlier in the last lecture I told you that every object in JavaScript
+
+14
+00:00:52.000 --> 00:00:56.000
+has a constructor property, and that references the function
+
+15
+00:00:56.000 --> 00:01:00.000
+that was used to create that object. Now here's the interesting part,
+
+16
+00:01:00.000 --> 00:01:04.000
+who do you think, created this object?
+
+17
+00:01:04.000 --> 00:01:08.000
+Let's have a look, so circle.constructor
+
+18
+00:01:08.000 --> 00:01:12.000
+so here we have another built in constructor called
+
+19
+00:01:12.000 --> 00:01:16.000
+function, and when we declare a function using this
+
+20
+00:01:16.000 --> 00:01:20.000
+syntax, internally, JavaScript engine will use
+
+21
+00:01:20.000 --> 00:01:24.000
+this function constructor to create this object.
+
+22
+00:01:24.000 --> 00:01:28.000
+Let me show you. So, I'm going to define
+
+23
+00:01:28.000 --> 00:01:32.000
+a constant called Circle1, to separate from our
+
+24
+00:01:32.000 --> 00:01:36.000
+circle. Set it to new Function, now here
+
+25
+00:01:36.000 --> 00:01:40.000
+our function requires one parameter, radius, so we
+
+26
+00:01:40.000 --> 00:01:44.000
+add that here as a string. Now as a second
+
+27
+00:01:44.000 --> 00:01:48.000
+argument, I'm going to pass the code
+
+28
+00:01:48.000 --> 00:01:52.000
+inside of this function. So to break it up into multiple lines.
+
+29
+00:01:52.000 --> 00:01:56.000
+I'm going to use the back tick character,
+
+30
+00:01:56.000 --> 00:02:00.000
+and then simply copy all this code
+
+31
+00:02:00.000 --> 00:02:04.000
+and put it here, so, when we declare
+
+32
+00:02:04.000 --> 00:02:08.000
+a function internally, it's represented like this.
+
+33
+00:02:08.000 --> 00:02:12.000
+Now we can call this circle 1, just like calling our
+
+34
+00:02:12.000 --> 00:02:16.000
+circle function. So, we can create a circle object
+
+35
+00:02:16.000 --> 00:02:20.000
+by sewing up circle1,
+
+36
+00:02:20.000 --> 00:02:24.000
+and pass 1 as a radius, save the changes,
+
+37
+00:02:24.000 --> 00:02:28.000
+now in the console, let's log circle. Look,
+
+38
+00:02:28.000 --> 00:02:32.000
+it's a real circle object with these two members.
+
+39
+00:02:32.000 --> 00:02:36.000
+Now let's take a look at a couple methods that are available in your
+
+40
+00:02:36.000 --> 00:02:40.000
+functions. So I'm going to delete all this code,
+
+41
+00:02:40.000 --> 00:02:44.000
+Circle.here we have this
+
+42
+00:02:44.000 --> 00:02:48.000
+call method, and with this we can call a function.
+
+43
+00:02:48.000 --> 00:02:52.000
+Look at the arguments. The first argument,
+
+44
+00:02:52.000 --> 00:02:56.000
+is this argument. Here we need to pass
+
+45
+00:02:56.000 --> 00:03:00.000
+an empty object and this will reference
+
+46
+00:03:00.000 --> 00:03:04.000
+this object that we pass here. Okay? Now
+
+47
+00:03:04.000 --> 00:03:08.000
+after that we add our arguments explicitly, so here
+
+48
+00:03:08.000 --> 00:03:12.000
+we have one argument, we pass 1, if we had multiple arguments
+
+49
+00:03:12.000 --> 00:03:16.000
+we would pass them explicitly like this, okay?
+
+50
+00:03:16.000 --> 00:03:20.000
+So, this expression is exactly
+
+51
+00:03:20.000 --> 00:03:24.000
+like expression on line 11,
+
+52
+00:03:24.000 --> 00:03:28.000
+when we use the new operator, this new operator will internally
+
+53
+00:03:28.000 --> 00:03:32.000
+create an empty object and pass that as the first
+
+54
+00:03:32.000 --> 00:03:36.000
+argument to the call method. And this object
+
+55
+00:03:36.000 --> 00:03:40.000
+will determine the context of this, so,
+
+56
+00:03:40.000 --> 00:03:44.000
+this will reference this object. Earlier I told you that if you
+
+57
+00:03:44.000 --> 00:03:48.000
+don't use the new operator, this by
+
+58
+00:03:48.000 --> 00:03:52.000
+default will point to the global object which is window. So,
+
+59
+00:03:52.000 --> 00:03:56.000
+if I want to rewrite this expression in this way,
+
+60
+00:03:56.000 --> 00:04:00.000
+instead of passing an empty object, I would pass window.
+
+61
+00:04:00.000 --> 00:04:04.000
+Of course we don't want to do this, I'm just explaining to you what happens
+
+62
+00:04:04.000 --> 00:04:08.000
+under the hood. So, let's revert this back,
+
+63
+00:04:08.000 --> 00:04:12.000
+so the first argument here, specified the target
+
+64
+00:04:12.000 --> 00:04:16.000
+of this. Okay? Now we have another method
+
+65
+00:04:16.000 --> 00:04:20.000
+called apply.
+
+66
+00:04:20.000 --> 00:04:24.000
+It's exactly like the call method, with this we can call a
+
+67
+00:04:24.000 --> 00:04:28.000
+function, but instead of passing all the arguments explicitly
+
+68
+00:04:28.000 --> 00:04:32.000
+we pass them in an array. So this is useful
+
+69
+00:04:32.000 --> 00:04:36.000
+if you already have an array somewhere in your application, and you want to pass
+
+70
+00:04:36.000 --> 00:04:40.000
+an array as the second argument to the apply method.
+
+71
+00:04:40.000 --> 00:04:44.000
+So this is the takeaway. In JavaScript, functions
+
+72
+00:04:44.000 --> 00:04:47.466
+are objects.
+

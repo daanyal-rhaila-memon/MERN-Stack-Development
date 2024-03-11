@@ -1,0 +1,260 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+In the
+
+2
+00:00:04,000 --> 00:00:08,000
+last lecture you learned how to enumerate the properties of an object.
+
+3
+00:00:08,000 --> 00:00:12,000
+Now using this technique we can get all the properties in an object
+
+4
+00:00:12,000 --> 00:00:16,000
+and copy them into another object. So let's say
+
+5
+00:00:16,000 --> 00:00:20,000
+you want to create another circle object, which is a copy of
+
+6
+00:00:20,000 --> 00:00:24,000
+an object here.  I'm going to call that another. So constant
+
+7
+00:00:24,000 --> 00:00:28,000
+another initially we set it to an empty
+
+8
+00:00:28,000 --> 00:00:32,000
+object, now we can use the for in loop to iterate
+
+9
+00:00:32,000 --> 00:00:36,000
+over all the properties in an object, and copy them
+
+10
+00:00:36,000 --> 00:00:40,000
+into this new object. So for, let key,
+
+11
+00:00:40,000 --> 00:00:44,000
+in circle, now we use the bracket notation to
+
+12
+00:00:44,000 --> 00:00:48,000
+access a property with a given key. So we set another
+
+13
+00:00:48,000 --> 00:00:52,000
+of key to circle of key.
+
+14
+00:00:52,000 --> 00:00:56,000
+So basically here in the first iteration, key will be
+
+15
+00:00:56,000 --> 00:01:00,000
+radius, so this code will be equivalent to this. Another
+
+16
+00:01:00,000 --> 00:01:04,000
+of radius, so we're setting the radius
+
+17
+00:01:04,000 --> 00:01:08,000
+property of another object to circle
+
+18
+00:01:08,000 --> 00:01:12,000
+of radius, now here on the right side of the
+
+19
+00:01:12,000 --> 00:01:16,000
+assignment operator, you're reading the radius property of the circle,
+
+20
+00:01:16,000 --> 00:01:20,000
+the value of this property is 1, so we get 1 and put it
+
+21
+00:01:20,000 --> 00:01:24,000
+in the radius property of the another object. Okay?
+
+22
+00:01:24,000 --> 00:01:28,000
+Now lets log another on the console,
+
+23
+00:01:28,000 --> 00:01:32,000
+save the changes, so here we have this radius
+
+24
+00:01:32,000 --> 00:01:36,000
+property is set to 1, and here's our draw method so if we call
+
+25
+00:01:36,000 --> 00:01:40,000
+another.draw everything works as we expect, beautiful.
+
+26
+00:01:40,000 --> 00:01:44,000
+But this approach for copying or cloning
+
+27
+00:01:44,000 --> 00:01:48,000
+an object is a little bit old. In modern JavaScript we have better
+
+28
+00:01:48,000 --> 00:01:52,000
+ways to achieve the same thing. One way is to use the object.assign
+
+29
+00:01:52,000 --> 00:01:56,000
+method. Let me show you. So I'm going to comment out
+
+30
+00:01:56,000 --> 00:02:00,000
+these few lines, we have this object that
+
+31
+00:02:00,000 --> 00:02:04,000
+we have seen before, this object has a method called assign,
+
+32
+00:02:04,000 --> 00:02:08,000
+now here as the first argument we can pass a target
+
+33
+00:02:08,000 --> 00:02:12,000
+object which can be an empty object, or an existing object, you will see
+
+34
+00:02:12,000 --> 00:02:16,000
+the difference in a second. And then we can pass 1 or more
+
+35
+00:02:16,000 --> 00:02:20,000
+source objects. Let's say
+
+36
+00:02:20,000 --> 00:02:24,000
+circle. What this method does is it takes all
+
+37
+00:02:24,000 --> 00:02:28,000
+the properties of this method in the source object and copies them
+
+38
+00:02:28,000 --> 00:02:32,000
+into this new object, and finally returns the result
+
+39
+00:02:32,000 --> 00:02:36,000
+here. So this line of code is exactly
+
+40
+00:02:36,000 --> 00:02:40,000
+equivalent to these three lines. We save the changes,
+
+41
+00:02:40,000 --> 00:02:44,000
+we get the exact same result. Now this target object
+
+42
+00:02:44,000 --> 00:02:48,000
+pass here doesn't have to be an empty object, it can be an existing object, it can
+
+43
+00:02:48,000 --> 00:02:52,000
+have 1 or more properties or methods, so as an example,
+
+44
+00:02:52,000 --> 00:02:56,000
+let's add a color property here, we set that to
+
+45
+00:02:56,000 --> 00:03:00,000
+yellow, now, save the changes, so,
+
+46
+00:03:00,000 --> 00:03:04,000
+this new object has the color property
+
+47
+00:03:04,000 --> 00:03:08,000
+that we initially had here, as well as the members of the circle object.
+
+48
+00:03:08,000 --> 00:03:12,000
+So this is the object.assign method. Now let me
+
+49
+00:03:12,000 --> 00:03:16,000
+revert this back to an empty object, I'm going to show you
+
+50
+00:03:16,000 --> 00:03:20,000
+yet another simpler and more elegant way to
+
+51
+00:03:20,000 --> 00:03:24,000
+clone an object. We can use the spread operator,
+
+52
+00:03:24,000 --> 00:03:28,000
+so, another, here we set this to a new
+
+53
+00:03:28,000 --> 00:03:32,000
+object, and then use the spread operator, which is
+
+54
+00:03:32,000 --> 00:03:36,000
+three dots, to spread the circle object. Basically
+
+55
+00:03:36,000 --> 00:03:40,000
+what this operator does is that it takes all the properties and methods
+
+56
+00:03:40,000 --> 00:03:44,000
+in this object and puts them here.
+
+57
+00:03:44,000 --> 00:03:48,000
+In between these curly braces. So this is the simplest way
+
+58
+00:03:48,000 --> 00:03:52,000
+to clone an object. Save the changes, again, we get the exact same
+
+59
+00:03:52,000 --> 00:03:56,000
+object as before. So here's what I want you to take away,
+
+60
+00:03:56,000 --> 00:04:00,000
+object.assign copies the properties and methods from 1
+
+61
+00:04:00,000 --> 00:04:04,000
+or more source objects into a target object, and we can
+
+62
+00:04:04,000 --> 00:04:08,000
+use that to clone an object, or combine multiple objects into
+
+63
+00:04:08,000 --> 00:04:12,000
+a single object, and the spread operator is used
+
+64
+00:04:12,000 --> 00:04:16,000
+to spread an object, which basically means getting all it's properties and
+
+65
+00:04:16,000 --> 00:04:20,000
+methods and putting them into another object.
+

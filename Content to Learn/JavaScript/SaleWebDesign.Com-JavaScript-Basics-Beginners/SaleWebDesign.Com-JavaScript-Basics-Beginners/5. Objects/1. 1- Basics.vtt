@@ -1,0 +1,294 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+Earlier in the course
+
+2
+00:00:04.000 --> 00:00:08.000
+you learned a little bit about objects, you learned
+
+3
+00:00:08.000 --> 00:00:12.000
+objects are collections of key value pairs, so if you have
+
+4
+00:00:12.000 --> 00:00:16.000
+properties that are highly related, we want to encapsulate them
+
+5
+00:00:16.000 --> 00:00:20.000
+inside of an object. Here's an example. Let's say we are building
+
+6
+00:00:20.000 --> 00:00:24.000
+an application for drawing different kinds of shapes, like circles,
+
+7
+00:00:24.000 --> 00:00:28.000
+rectangles and so on. So we could declare multiple variables,
+
+8
+00:00:28.000 --> 00:00:32.000
+around circles for example radius we set that to 1,
+
+9
+00:00:32.000 --> 00:00:36.000
+let x and y
+
+10
+00:00:36.000 --> 00:00:40.000
+we're defining multiple variables, but all these variables are highly
+
+11
+00:00:40.000 --> 00:00:44.000
+related, they represent the circle. A better approach is to
+
+12
+00:00:44.000 --> 00:00:48.000
+put these variables inside of an object. Now we can
+
+13
+00:00:48.000 --> 00:00:52.000
+send that object anywhere in our programs, we can pass that to any functions,
+
+14
+00:00:52.000 --> 00:00:56.000
+and all these variables would be available in that object. So,
+
+15
+00:00:56.000 --> 00:01:00.000
+I'm going to define an object, we could use let
+
+16
+00:01:00.000 --> 00:01:04.000
+or const, in this case it doesn't really matter, so let's define a
+
+17
+00:01:04.000 --> 00:01:08.000
+circle object using the object literal syntax, so
+
+18
+00:01:08.000 --> 00:01:12.000
+we add these curly braces, and inside them we add
+
+19
+00:01:12.000 --> 00:01:16.000
+1 or more key value pairs. So, the first key
+
+20
+00:01:16.000 --> 00:01:20.000
+is radius, and the value is 1. Now this value we have
+
+21
+00:01:20.000 --> 00:01:24.000
+here can be any type in JavaScript, it can be a number,
+
+22
+00:01:24.000 --> 00:01:28.000
+a string, a boolean, null, undefined, it can
+
+23
+00:01:28.000 --> 00:01:32.000
+even be another object. or an array, or a function. Let me show you
+
+24
+00:01:32.000 --> 00:01:36.000
+so instead of defining two other key value pairs
+
+25
+00:01:36.000 --> 00:01:40.000
+as x and y, I'm going to add a key called location, and
+
+26
+00:01:40.000 --> 00:01:44.000
+set it's value to another object. Now in this object we can
+
+27
+00:01:44.000 --> 00:01:48.000
+have two key value pairs or properties
+
+28
+00:01:48.000 --> 00:01:52.000
+the first one is x and the second one is y.
+
+29
+00:01:52.000 --> 00:01:56.000
+We can also have another property here like isVisible,
+
+30
+00:01:56.000 --> 00:02:00.000
+and set that to a boolean, true or false, okay?
+
+31
+00:02:00.000 --> 00:02:04.000
+So the purpose of an object is to group
+
+32
+00:02:04.000 --> 00:02:08.000
+related variables. But it's not just grouping related variables,
+
+33
+00:02:08.000 --> 00:02:12.000
+quite often we have functions that should operate
+
+34
+00:02:12.000 --> 00:02:16.000
+on these variables. For example, we can have
+
+35
+00:02:16.000 --> 00:02:20.000
+a function like draw, for drawing a circle. Or,
+
+36
+00:02:20.000 --> 00:02:24.000
+we could have another function for moving a circle, right?
+
+37
+00:02:24.000 --> 00:02:28.000
+So again these functions are highly related to these
+
+38
+00:02:28.000 --> 00:02:32.000
+variables we have to find here. So instead of defining these functions,
+
+39
+00:02:32.000 --> 00:02:36.000
+in a stand alone way, it's better to put these functions,
+
+40
+00:02:36.000 --> 00:02:40.000
+inside of the circle object. Again with this, where we
+
+41
+00:02:40.000 --> 00:02:44.000
+have the circle object in our program, we have access to all
+
+42
+00:02:44.000 --> 00:02:48.000
+of it's properties and functions. So let me show you how to add
+
+43
+00:02:48.000 --> 00:02:52.000
+this draw function inside of the circle object. We add
+
+44
+00:02:52.000 --> 00:02:56.000
+another key value pair, the key is draw, and the value
+
+45
+00:02:56.000 --> 00:03:00.000
+is a function, so I told you that the value of a key value pair
+
+46
+00:03:00.000 --> 00:03:04.000
+can be anything in JavaScript, here the value is a function.
+
+47
+00:03:04.000 --> 00:03:08.000
+Now for simplicity I just want to do a console.log
+
+48
+00:03:08.000 --> 00:03:12.000
+here, let's log draw on the console.
+
+49
+00:03:12.000 --> 00:03:16.000
+So now with this circle object, we no longer need
+
+50
+00:03:16.000 --> 00:03:20.000
+these independent variables, and
+
+51
+00:03:20.000 --> 00:03:24.000
+functions, all of these are now part of a
+
+52
+00:03:24.000 --> 00:03:28.000
+circle object. So we can access them using the dot notation,
+
+53
+00:03:28.000 --> 00:03:32.000
+circle. look, all of them are here. We can simply call
+
+54
+00:03:32.000 --> 00:03:36.000
+this draw function like this. And if I save the changes, you see
+
+55
+00:03:36.000 --> 00:03:40.000
+the draw message here. Now what you see here,
+
+56
+00:03:40.000 --> 00:03:44.000
+is what we refer to as object oriented
+
+57
+00:03:44.000 --> 00:03:48.000
+style programming. So object
+
+58
+00:03:48.000 --> 00:03:52.000
+oriented Programming, also abbreviated as OOP.
+
+59
+00:03:52.000 --> 00:03:56.000
+Object oriented programming is basically a style of programming
+
+60
+00:03:56.000 --> 00:04:00.000
+where we see a program as a collection of
+
+61
+00:04:00.000 --> 00:04:04.000
+objects that talk to each other to perform some functionality.
+
+62
+00:04:04.000 --> 00:04:08.000
+So here we have a circle object, and this object has a few properties
+
+63
+00:04:08.000 --> 00:04:12.000
+and a function. In object oriented programming terms,
+
+64
+00:04:12.000 --> 00:04:16.000
+if a function is part of an object, we call
+
+65
+00:04:16.000 --> 00:04:20.000
+the function a method. So here more accurately instead of saying
+
+66
+00:04:20.000 --> 00:04:24.000
+we're calling the draw function of the circle object, we
+
+67
+00:04:24.000 --> 00:04:28.000
+say we're calling the draw method of the circle object. So draw
+
+68
+00:04:28.000 --> 00:04:32.000
+method. So that's the difference between a function and a method
+
+69
+00:04:32.000 --> 00:04:36.000
+if a function is part of an object, in object oriented programming
+
+70
+00:04:36.000 --> 00:04:40.000
+terms, we refer to that function as a method. Now,
+
+71
+00:04:40.000 --> 00:04:44.000
+using this object literal syntax, is an easy way to
+
+72
+00:04:44.000 --> 00:04:48.000
+create an object, but as our applications get more complex we need a
+
+73
+00:04:48.000 --> 00:04:52.000
+different way to create objects. And that's what you're going to learn next.
+

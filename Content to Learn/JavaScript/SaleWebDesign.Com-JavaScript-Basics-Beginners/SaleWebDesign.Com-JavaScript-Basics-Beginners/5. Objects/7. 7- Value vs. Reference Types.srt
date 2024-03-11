@@ -1,0 +1,348 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+In JavaScript we have two
+
+2
+00:00:04,000 --> 00:00:08,000
+categories of types. On one side we have value types,
+
+3
+00:00:08,000 --> 00:00:12,000
+also called primitives, on the other side we have
+
+4
+00:00:12,000 --> 00:00:16,000
+reference types. So in the value types category we have number,
+
+5
+00:00:16,000 --> 00:00:20,000
+string, boolean, symbol, which is new
+
+6
+00:00:20,000 --> 00:00:24,000
+in ES6, as well as undefined
+
+7
+00:00:24,000 --> 00:00:28,000
+and null. These are the primitive or value types. On the
+
+8
+00:00:28,000 --> 00:00:32,000
+other side we have objects, functions, and arrays.
+
+9
+00:00:32,000 --> 00:00:36,000
+So in the last lecture you learned that functions are also objects.
+
+10
+00:00:36,000 --> 00:00:40,000
+The same is true about arrays, so in a nutshell in JavaScript
+
+11
+00:00:40,000 --> 00:00:44,000
+we have primitives and objects. Now in this lecture, I'm going to show you
+
+12
+00:00:44,000 --> 00:00:48,000
+how primitives and objects behave differently, because this
+
+13
+00:00:48,000 --> 00:00:52,000
+is absolutely important for you to understand, before we move onto the next section
+
+14
+00:00:52,000 --> 00:00:56,000
+where I talk about prototypes. So on
+
+15
+00:00:56,000 --> 00:01:00,000
+this empty canvas, I'm going to define two primitives,
+
+16
+00:01:00,000 --> 00:01:04,000
+x and y. I'm going to set y
+
+17
+00:01:04,000 --> 00:01:08,000
+to x, so here y is 10, now I'm going to change
+
+18
+00:01:08,000 --> 00:01:12,000
+the value of x to 20, what I want you to note here,
+
+19
+00:01:12,000 --> 00:01:16,000
+is that x and y are two independent variables,
+
+20
+00:01:16,000 --> 00:01:20,000
+so, let's save the changes, go back in the console,
+
+21
+00:01:20,000 --> 00:01:24,000
+let's log x, x is 20, and y
+
+22
+00:01:24,000 --> 00:01:28,000
+is 10, they are independent. So when we work
+
+23
+00:01:28,000 --> 00:01:32,000
+with primitives. This value, this value that we have here is
+
+24
+00:01:32,000 --> 00:01:36,000
+stored inside of this variable. When we copy that variable
+
+25
+00:01:36,000 --> 00:01:40,000
+that value that is stored in the variable is
+
+26
+00:01:40,000 --> 00:01:44,000
+copied into this new variable. So they are completely
+
+27
+00:01:44,000 --> 00:01:48,000
+independent of each other. Now let's see what happens
+
+28
+00:01:48,000 --> 00:01:52,000
+if we use a reference type or an object here. So I'm going to
+
+29
+00:01:52,000 --> 00:01:56,000
+change this to an object that has a property called
+
+30
+00:01:56,000 --> 00:02:00,000
+value. And then instead of saying x
+
+31
+00:02:00,000 --> 00:02:04,000
+to 20, I'm going to set x.value to 20.
+
+32
+00:02:04,000 --> 00:02:08,000
+So save the changes, back in the console,
+
+33
+00:02:08,000 --> 00:02:12,000
+let's log x so you can see value property is 20,
+
+34
+00:02:12,000 --> 00:02:16,000
+now let's log y, you can see the value property of y
+
+35
+00:02:16,000 --> 00:02:20,000
+is also 20. So this is the takeaway. When we use
+
+36
+00:02:20,000 --> 00:02:24,000
+an object, that object is not stored in this variable.
+
+37
+00:02:24,000 --> 00:02:28,000
+That object is stored somewhere else in the memory, and the
+
+38
+00:02:28,000 --> 00:02:32,000
+address of that memory location is stored inside that memory variable.
+
+39
+00:02:32,000 --> 00:02:36,000
+So then when we copy x into y,
+
+40
+00:02:36,000 --> 00:02:40,000
+it's the address or the reference that is copied. In other
+
+41
+00:02:40,000 --> 00:02:44,000
+words, both x and y are pointing to the same,
+
+42
+00:02:44,000 --> 00:02:48,000
+object in memory. And when we modify each object using x,
+
+43
+00:02:48,000 --> 00:02:52,000
+or y, our changes are immediately visible to
+
+44
+00:02:52,000 --> 00:02:56,000
+other variable. So here's the conclusion. Primitives
+
+45
+00:02:56,000 --> 00:03:00,000
+are copied by value, reference types or objects are copied by
+
+46
+00:03:00,000 --> 00:03:04,000
+by their reference. Let's take a look at another example.
+
+47
+00:03:04,000 --> 00:03:08,000
+So I'm going to define a function
+
+48
+00:03:08,000 --> 00:03:12,000
+called increase that takes a number,
+
+49
+00:03:12,000 --> 00:03:16,000
+and here we simply increase this number by one.
+
+50
+00:03:16,000 --> 00:03:20,000
+Let's declare a number
+
+51
+00:03:20,000 --> 00:03:24,000
+variable and set it to 10. And then call increase
+
+52
+00:03:24,000 --> 00:03:28,000
+and pass this number. Now, if I
+
+53
+00:03:28,000 --> 00:03:32,000
+log this number on the console, what do you think
+
+54
+00:03:32,000 --> 00:03:36,000
+you'll see? Let's have a look. So save the changes,
+
+55
+00:03:36,000 --> 00:03:40,000
+we see 10. But didn't we increase the number,
+
+56
+00:03:40,000 --> 00:03:44,000
+well, when we call increase and pass this number variable
+
+57
+00:03:44,000 --> 00:03:48,000
+it's value is copied into this
+
+58
+00:03:48,000 --> 00:03:52,000
+parameter that is local in this function. So this
+
+59
+00:03:52,000 --> 00:03:56,000
+variable here is completely independent of this
+
+60
+00:03:56,000 --> 00:04:00,000
+other number variable. Here in this function, we increment this number
+
+61
+00:04:00,000 --> 00:04:04,000
+by 1, so it will be 11, but after this function this number
+
+62
+00:04:04,000 --> 00:04:08,000
+is going to go out of the scope. So when we log
+
+63
+00:04:08,000 --> 00:04:12,000
+this number on the console, we're essentially dealing
+
+64
+00:04:12,000 --> 00:04:16,000
+with this first number. So I told you that primitives
+
+65
+00:04:16,000 --> 00:04:20,000
+are copied by their value. So here we're dealing with two independent
+
+66
+00:04:20,000 --> 00:04:24,000
+copies. That's why you see 10 on the
+
+67
+00:04:24,000 --> 00:04:28,000
+console. Now let's change this to a reference type or an object.
+
+68
+00:04:28,000 --> 00:04:32,000
+So, I'm going to change 10 to an object, that
+
+69
+00:04:32,000 --> 00:04:36,000
+has a value property. Okay? Let's
+
+70
+00:04:36,000 --> 00:04:40,000
+rename this variable to object, and
+
+71
+00:04:40,000 --> 00:04:44,000
+similarly, anyone rename the parameter in this function
+
+72
+00:04:44,000 --> 00:04:48,000
+to object, and then increment object.
+
+73
+00:04:48,000 --> 00:04:52,000
+value. Now when we log this on the console,
+
+74
+00:04:52,000 --> 00:04:56,000
+what do you think we're going to see? We're going to see 11. See?
+
+75
+00:04:56,000 --> 00:05:00,000
+We got this object with value 11. The reason for this
+
+76
+00:05:00,000 --> 00:05:04,000
+is because when we call increase and pass this object.
+
+77
+00:05:04,000 --> 00:05:08,000
+This object is passed by it's reference. So this local
+
+78
+00:05:08,000 --> 00:05:12,000
+parameter that we have here will point to the same object
+
+79
+00:05:12,000 --> 00:05:16,000
+that we defined here. So in this case we are not dealing with
+
+80
+00:05:16,000 --> 00:05:20,000
+two independent copies, we have two variables that are pointing to the same
+
+81
+00:05:20,000 --> 00:05:24,000
+object. So any changes we make to this object will be visible
+
+82
+00:05:24,000 --> 00:05:28,000
+to the other variable. So remember this, in JavaScript
+
+83
+00:05:28,000 --> 00:05:32,000
+we have value types, also called primitives, as well as
+
+84
+00:05:32,000 --> 00:05:36,000
+reference types which are objects. Our primitives are
+
+85
+00:05:36,000 --> 00:05:40,000
+number, string, boolean, undefined and
+
+86
+00:05:40,000 --> 00:05:44,000
+null. Primitives or value types are copied by their value
+
+87
+00:05:44,000 --> 00:05:48,000
+reference types or objects, are copied by their reference.
+

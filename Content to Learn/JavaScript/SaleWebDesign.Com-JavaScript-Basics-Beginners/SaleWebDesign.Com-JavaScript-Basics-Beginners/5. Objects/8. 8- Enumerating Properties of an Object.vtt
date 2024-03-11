@@ -1,0 +1,310 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+So here
+
+2
+00:00:04.000 --> 00:00:08.000
+we have this circle object with the radius property and the draw method.
+
+3
+00:00:08.000 --> 00:00:12.000
+Earlier in the course, you learned how to use the for in
+
+4
+00:00:12.000 --> 00:00:16.000
+and for of loops to iterate over the properties
+
+5
+00:00:16.000 --> 00:00:20.000
+in an object. So in this lecture I'm going to read this to you one more time to make sure you fully
+
+6
+00:00:20.000 --> 00:00:24.000
+understand how everything works. So first, let's take a look at
+
+7
+00:00:24.000 --> 00:00:28.000
+the for in loop. for let key
+
+8
+00:00:28.000 --> 00:00:32.000
+in circle with this we can iterate over all the
+
+9
+00:00:32.000 --> 00:00:36.000
+properties and methods of an object. Now we can
+
+10
+00:00:36.000 --> 00:00:40.000
+log the key on the console, so, we have
+
+11
+00:00:40.000 --> 00:00:44.000
+radius, and draw, and if you want to get the value of a
+
+12
+00:00:44.000 --> 00:00:48.000
+property, we use the bracket notation here. So as the second argument
+
+13
+00:00:48.000 --> 00:00:52.000
+here, we pass circle of
+
+14
+00:00:52.000 --> 00:00:56.000
+key. So we're using the bracket notation to get the
+
+15
+00:00:56.000 --> 00:01:00.000
+value of this key or this property. Save the changes
+
+16
+00:01:00.000 --> 00:01:04.000
+so you can see the value of radius is 1, and the value
+
+17
+00:01:04.000 --> 00:01:08.000
+of draw is a function. And here's the implementation of our draw function
+
+18
+00:01:08.000 --> 00:01:12.000
+or draw method. Now we also have this new
+
+19
+00:01:12.000 --> 00:01:16.000
+for of loop, let's take a look. So for
+
+20
+00:01:16.000 --> 00:01:20.000
+let key of circle
+
+21
+00:01:20.000 --> 00:01:24.000
+simply log it on the console, now when I save the changes, we're going to
+
+22
+00:01:24.000 --> 00:01:28.000
+see an error, circle is not iterable.
+
+23
+00:01:28.000 --> 00:01:32.000
+So earlier I told you that the for of loop can only
+
+24
+00:01:32.000 --> 00:01:36.000
+be used with iterables such as arrays and maps.
+
+25
+00:01:36.000 --> 00:01:40.000
+You have not learned about maps yet, you're going to learn about them later in the course,
+
+26
+00:01:40.000 --> 00:01:44.000
+what you need to know is that an object is not iterable, so we cannot
+
+27
+00:01:44.000 --> 00:01:48.000
+iterate it using a for of loop. However,
+
+28
+00:01:48.000 --> 00:01:52.000
+we have this method object
+
+29
+00:01:52.000 --> 00:01:56.000
+.keys. Of circle with this
+
+30
+00:01:56.000 --> 00:02:00.000
+we can get all the keys in our circle object, and this will return
+
+31
+00:02:00.000 --> 00:02:04.000
+an array. And since arrays are iterable. We can use
+
+32
+00:02:04.000 --> 00:02:08.000
+the for of loop to iterate them. Now save the changes,
+
+33
+00:02:08.000 --> 00:02:12.000
+again, we get radius and draw. Now let's
+
+34
+00:02:12.000 --> 00:02:16.000
+keep a closer look at this method here. So earlier you learned
+
+35
+00:02:16.000 --> 00:02:20.000
+that this object is a built in
+
+36
+00:02:20.000 --> 00:02:24.000
+constructor function. So somewhere we have this
+
+37
+00:02:24.000 --> 00:02:28.000
+constructor function like this, and whenever we create an object
+
+38
+00:02:28.000 --> 00:02:32.000
+using the object literal syntax, internally that is
+
+39
+00:02:32.000 --> 00:02:36.000
+translated into a call to this constructor function. So
+
+40
+00:02:36.000 --> 00:02:40.000
+when we create an object using the object literal syntax, like
+
+41
+00:02:40.000 --> 00:02:44.000
+this, value is 1, internally, that
+
+42
+00:02:44.000 --> 00:02:48.000
+is translated to a call to this object
+
+43
+00:02:48.000 --> 00:02:52.000
+constructor function. So that looks like this, new
+
+44
+00:02:52.000 --> 00:02:56.000
+object. Right? Also, you learned
+
+45
+00:02:56.000 --> 00:03:00.000
+that all functions in JavaScript are objects, so,
+
+46
+00:03:00.000 --> 00:03:04.000
+though they have properties and methods we can access using the
+
+47
+00:03:04.000 --> 00:03:08.000
+dot notation. So when we type object
+
+48
+00:03:08.000 --> 00:03:12.000
+. we can see all the properties and methods defined in this
+
+49
+00:03:12.000 --> 00:03:16.000
+object, so here we're using the keys method,
+
+50
+00:03:16.000 --> 00:03:20.000
+and this method returns a string array which contains all
+
+51
+00:03:20.000 --> 00:03:24.000
+the properties and methods in this object. We have another
+
+52
+00:03:24.000 --> 00:03:28.000
+similar method to object.keys. Let me duplicate
+
+53
+00:03:28.000 --> 00:03:32.000
+this, that other method is called entries.
+
+54
+00:03:32.000 --> 00:03:36.000
+So instead of returning the keys as a string array
+
+55
+00:03:36.000 --> 00:03:40.000
+it returns each value pair as an array. Let me show you.
+
+56
+00:03:40.000 --> 00:03:44.000
+So let's rename key to entry. And to do that we can press f2,
+
+57
+00:03:44.000 --> 00:03:48.000
+to rename all the references to this key variable.
+
+58
+00:03:48.000 --> 00:03:52.000
+Let's change that to entry, we can see that is updated here as well.
+
+59
+00:03:52.000 --> 00:03:56.000
+Save the changes. So you can see each entry
+
+60
+00:03:56.000 --> 00:04:00.000
+is an array, the first element in this array is the key, and the second
+
+61
+00:04:00.000 --> 00:04:04.000
+element is the value. So that is also
+
+62
+00:04:04.000 --> 00:04:08.000
+another way to get access to all the properties
+
+63
+00:04:08.000 --> 00:04:12.000
+and methods in an object. And finally sometimes you want to see if a
+
+64
+00:04:12.000 --> 00:04:16.000
+given object has a given property or method. To do that,
+
+65
+00:04:16.000 --> 00:04:20.000
+you can use the in operator. Here's an example. If
+
+66
+00:04:20.000 --> 00:04:24.000
+radius as a string in
+
+67
+00:04:24.000 --> 00:04:28.000
+circle would display a message like
+
+68
+00:04:28.000 --> 00:04:32.000
+yes. With the in operator
+
+69
+00:04:32.000 --> 00:04:36.000
+you can see if a given property exists in a given object.
+
+70
+00:04:36.000 --> 00:04:40.000
+Save the changes, so we get yes here,
+
+71
+00:04:40.000 --> 00:04:44.000
+if I change radius to let's say color,
+
+72
+00:04:44.000 --> 00:04:48.000
+we're not going to see the yes message now. Save the changes, yes disappear.
+
+73
+00:04:48.000 --> 00:04:52.000
+So the simplest way to enumerate the properties
+
+74
+00:04:52.000 --> 00:04:56.000
+in an object is using the for in loop, but we can also use the
+
+75
+00:04:56.000 --> 00:05:00.000
+for of loop along with object.keys, and object
+
+76
+00:05:00.000 --> 00:05:04.000
+.entries, and finally to see if a given property or method
+
+77
+00:05:04.000 --> 00:05:08.000
+exists in an object we use the in operator.
+
