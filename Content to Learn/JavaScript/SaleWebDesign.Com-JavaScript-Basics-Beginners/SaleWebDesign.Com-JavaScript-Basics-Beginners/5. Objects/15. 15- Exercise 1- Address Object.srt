@@ -1,0 +1,100 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+Alright, here's
+
+2
+00:00:04,000 --> 00:00:08,000
+your first exercise for this section. I want you to create an address object
+
+3
+00:00:08,000 --> 00:00:12,000
+with three properties, street,
+
+4
+00:00:12,000 --> 00:00:16,000
+city, and zip code.
+
+5
+00:00:16,000 --> 00:00:20,000
+When you do that, then create a function called
+
+6
+00:00:20,000 --> 00:00:24,000
+showAddress that takes an address object and displays all
+
+7
+00:00:24,000 --> 00:00:28,000
+the properties of this object along with their value.
+
+8
+00:00:28,000 --> 00:00:32,000
+So pause the video, when you're done, come back and continue watching.
+
+9
+00:00:32,000 --> 00:00:36,000
+So now
+
+10
+00:00:36,000 --> 00:00:40,000
+I'm going to create an address object, we can use the let or constant keyword.
+
+11
+00:00:40,000 --> 00:00:44,000
+In this case it doesn't really matter, here we're using the
+
+12
+00:00:44,000 --> 00:00:48,000
+object literal syntax to initialize this object, so we have
+
+13
+00:00:48,000 --> 00:00:52,000
+the street property we set that to some value, it doesn't really matter
+
+14
+00:00:52,000 --> 00:00:56,000
+next is the city property, and finally
+
+15
+00:00:56,000 --> 00:01:00,000
+zipCode. Next,
+
+16
+00:01:00,000 --> 00:01:04,000
+we need to create this function, showAddress,
+
+17
+00:01:04,000 --> 00:01:08,000
+that takes an address object, and here to
+
+18
+00:01:08,000 --> 00:01:12,000
+enumerate the properties of this object, we're going to use the for
+
+19
+00:01:12,000 --> 00:01:16,000
+in loop. So, let key in address
+
+20
+00:01:16,000 --> 00:01:20,000
+then we do a console.log
+
+21
+00:01:20,000 --> 00:01:24,000
+of key, and address of key,
+
+22
+00:01:24,000 --> 00:01:28,000
+so here we're using the bracket notation for the value of a given key.
+
+23
+00:01:28,000 --> 00:01:32,000
+And finally we call this function,
+
+24
+00:01:32,000 --> 00:01:36,000
+showAddress and pass our address object.
+
+25
+00:01:36,000 --> 00:01:40,000
+Save the changes, and here's the result.
+

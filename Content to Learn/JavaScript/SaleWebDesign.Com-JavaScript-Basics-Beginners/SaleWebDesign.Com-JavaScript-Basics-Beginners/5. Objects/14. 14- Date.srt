@@ -1,0 +1,240 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+And
+
+2
+00:00:04,000 --> 00:00:08,000
+finally, the last built in object we're going to look at in this section is the date
+
+3
+00:00:08,000 --> 00:00:12,000
+object. Now just to clarify, the objects that we're looked at in this section
+
+4
+00:00:12,000 --> 00:00:16,000
+they are not the only built in objects in JavaScript, there is more and you're
+
+5
+00:00:16,000 --> 00:00:20,000
+going to learn about them as we go through the course. So let's see different ways
+
+6
+00:00:20,000 --> 00:00:24,000
+to create a date object. We can create date1
+
+7
+00:00:24,000 --> 00:00:28,000
+set it to new date, so date is a constructor
+
+8
+00:00:28,000 --> 00:00:32,000
+function. Now when you open parenthesis here, you can see
+
+9
+00:00:32,000 --> 00:00:36,000
+this number here, 2 of 6, that shows
+
+10
+00:00:36,000 --> 00:00:40,000
+different versions of this date constructor. You can use
+
+11
+00:00:40,000 --> 00:00:44,000
+the up and down arrows to cycle through these,
+
+12
+00:00:44,000 --> 00:00:48,000
+so we can use the date constructor without any parameters,
+
+13
+00:00:48,000 --> 00:00:52,000
+and this returns the current date time. So let's rename this to
+
+14
+00:00:52,000 --> 00:00:56,000
+now. Let's create another
+
+15
+00:00:56,000 --> 00:01:00,000
+date object, new date, we have another
+
+16
+00:01:00,000 --> 00:01:04,000
+constructor with 1 parameter called value, which can be a string
+
+17
+00:01:04,000 --> 00:01:08,000
+or a number which is the number of milliseconds from
+
+18
+00:01:08,000 --> 00:01:12,000
+January 1st 1970 or another date object.
+
+19
+00:01:12,000 --> 00:01:16,000
+So here I'm going to pass a string
+
+20
+00:01:16,000 --> 00:01:20,000
+let's say May 11 2018,
+
+21
+00:01:20,000 --> 00:01:24,000
+9 AM. Now this format is not the only format
+
+22
+00:01:24,000 --> 00:01:28,000
+that you can pass here, if you want to find out about all possible formats that are
+
+23
+00:01:28,000 --> 00:01:32,000
+supported, simply search for JavaScript
+
+24
+00:01:32,000 --> 00:01:36,000
+date, on this page, if you scroll
+
+25
+00:01:36,000 --> 00:01:40,000
+down, here under date
+
+26
+00:01:40,000 --> 00:01:44,000
+String, you can read about various formats that are supported.
+
+27
+00:01:44,000 --> 00:01:48,000
+And finally, another way to create a date object,
+
+28
+00:01:48,000 --> 00:01:52,000
+is by passing numbers. So here we have another
+
+29
+00:01:52,000 --> 00:01:56,000
+constructor, with these parameters, year, which is a number,
+
+30
+00:01:56,000 --> 00:02:00,000
+month is also number, and then so on. So I'm going to pass 2018,
+
+31
+00:02:00,000 --> 00:02:04,000
+now the confusing thing about isDate objects
+
+32
+00:02:04,000 --> 00:02:08,000
+is that month is 0 based. So, 0
+
+33
+00:02:08,000 --> 00:02:12,000
+represents January, and 11 represents December.
+
+34
+00:02:12,000 --> 00:02:16,000
+So we're going to use 4 for May. The third parameter
+
+35
+00:02:16,000 --> 00:02:20,000
+is the date parameter, and that's the day of the month. So,
+
+36
+00:02:20,000 --> 00:02:24,000
+11, next parameter is hour, so
+
+37
+00:02:24,000 --> 00:02:28,000
+9 am, and minutes is 0. Now we can exclude this argument,
+
+38
+00:02:28,000 --> 00:02:32,000
+because all the other the arguments are initialized to 0 by default.
+
+39
+00:02:32,000 --> 00:02:36,000
+So this is how we create a date object.
+
+40
+00:02:36,000 --> 00:02:40,000
+Now, all these date objects have a bunch of get and set
+
+41
+00:02:40,000 --> 00:02:44,000
+methods. For example, now.get
+
+42
+00:02:44,000 --> 00:02:48,000
+so get date returns the day of the month. getFull year.
+
+43
+00:02:48,000 --> 00:02:52,000
+getHours, milliseconds, minutes, so on. We also have
+
+44
+00:02:52,000 --> 00:02:56,000
+set methods. So, let's call set
+
+45
+00:02:56,000 --> 00:03:00,000
+FullYear and change the year to 2017.
+
+46
+00:03:00,000 --> 00:03:04,000
+We also have set date
+
+47
+00:03:04,000 --> 00:03:08,000
+hours milliseconds, minutes and so on. Alright, now,
+
+48
+00:03:08,000 --> 00:03:12,000
+let's see how we can display this on the console. To save the changes,
+
+49
+00:03:12,000 --> 00:03:16,000
+all these date objects have a few methods for
+
+50
+00:03:16,000 --> 00:03:20,000
+converting them to a string. You can call toDateString
+
+51
+00:03:20,000 --> 00:03:24,000
+and we get a string like this. So Thursday May 11
+
+52
+00:03:24,000 --> 00:03:28,000
+2017, note that we changed the year on line 6.
+
+53
+00:03:28,000 --> 00:03:32,000
+We also have toTimesString which returns
+
+54
+00:03:32,000 --> 00:03:36,000
+the time component of this date object, and
+
+55
+00:03:36,000 --> 00:03:40,000
+another useful method is to ISOString which returns a string
+
+56
+00:03:40,000 --> 00:03:44,000
+like this. So we have date, then T, and
+
+57
+00:03:44,000 --> 00:03:48,000
+time, this is a standard ISO format, and it's commonly used in
+
+58
+00:03:48,000 --> 00:03:52,000
+applications, so if you're building a web or a mobile app that talks to
+
+59
+00:03:52,000 --> 00:03:56,000
+a back end. This is the format you commonly use to transfer date
+
+60
+00:03:56,000 --> 00:04:00,000
+between the client and the server.
+

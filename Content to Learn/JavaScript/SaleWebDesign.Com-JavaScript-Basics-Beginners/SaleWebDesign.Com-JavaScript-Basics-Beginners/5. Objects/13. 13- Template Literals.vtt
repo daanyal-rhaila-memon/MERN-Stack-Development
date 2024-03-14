@@ -1,0 +1,294 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+In the
+
+2
+00:00:04.000 --> 00:00:08.000
+last lecture you learned that /n adds a new line to a string.
+
+3
+00:00:08.000 --> 00:00:12.000
+Now what I don't like about this approach is that it doesn't allow us
+
+4
+00:00:12.000 --> 00:00:16.000
+to visualize what the output looks like. In other
+
+5
+00:00:16.000 --> 00:00:20.000
+words, if we log message on the console, we can see this is what the
+
+6
+00:00:20.000 --> 00:00:24.000
+outcome looks like, so on the first line we have this is my, and on the second line we have
+
+7
+00:00:24.000 --> 00:00:28.000
+first message. But when writing code, our string
+
+8
+00:00:28.000 --> 00:00:32.000
+looks different. Now if you want to make this string similar to what
+
+9
+00:00:32.000 --> 00:00:36.000
+the output looks like, we have to do something like this. So,
+
+10
+00:00:36.000 --> 00:00:40.000
+we break this string into 2 parts, and
+
+11
+00:00:40.000 --> 00:00:44.000
+concatenate them like this, and then we add the second
+
+12
+00:00:44.000 --> 00:00:48.000
+part on a new line. We can also put the first part
+
+13
+00:00:48.000 --> 00:00:52.000
+on a new line. And now this kind of looks similar to what we have in the
+
+14
+00:00:52.000 --> 00:00:56.000
+output. But we still have this /n getting in the
+
+15
+00:00:56.000 --> 00:01:00.000
+way creating some noise in the code. To make the matter worse,
+
+16
+00:01:00.000 --> 00:01:04.000
+if you want to surround first with single quotes, you'll have to
+
+17
+00:01:04.000 --> 00:01:08.000
+escape the single code character like this.
+
+18
+00:01:08.000 --> 00:01:12.000
+Again, this is very very ugly, let's log this one more time,
+
+19
+00:01:12.000 --> 00:01:16.000
+very very ugly and noisy. That's where template
+
+20
+00:01:16.000 --> 00:01:20.000
+literals come in the picture. So far you have learned about different kinds of
+
+21
+00:01:20.000 --> 00:01:24.000
+literals in JavaScript. So we have object literals which are
+
+22
+00:01:24.000 --> 00:01:28.000
+indicated by curly braces, we have boolean literals which are
+
+23
+00:01:28.000 --> 00:01:32.000
+true or false. We have string literals which are indicated by
+
+24
+00:01:32.000 --> 00:01:36.000
+single or double quotes. Now starting from
+
+25
+00:01:36.000 --> 00:01:40.000
+ES6 we have template literals. Which are indicated
+
+26
+00:01:40.000 --> 00:01:44.000
+by the back tick character. This back tick
+
+27
+00:01:44.000 --> 00:01:48.000
+character is the character before number 1 on your keyboard.
+
+28
+00:01:48.000 --> 00:01:52.000
+So let's see how template literals help us write cleaner code.
+
+29
+00:01:52.000 --> 00:01:56.000
+I'm going to define another constant, but this
+
+30
+00:01:56.000 --> 00:02:00.000
+time I'm going to use a template literal instead of a string literal.
+
+31
+00:02:00.000 --> 00:02:04.000
+So, we add the back tick character, this is
+
+32
+00:02:04.000 --> 00:02:08.000
+my, now to add a new line, we don't need to add backslash n here,
+
+33
+00:02:08.000 --> 00:02:12.000
+we can simply add a line break and then type first message.
+
+34
+00:02:12.000 --> 00:02:16.000
+So we can format our string the way we want it to look
+
+35
+00:02:16.000 --> 00:02:20.000
+like. So now, let's log message,
+
+36
+00:02:20.000 --> 00:02:24.000
+and another. See? What we
+
+37
+00:02:24.000 --> 00:02:28.000
+have in code looks very similar to what we have in the output.
+
+38
+00:02:28.000 --> 00:02:32.000
+Now we can also put this on a new line, now if you want to
+
+39
+00:02:32.000 --> 00:02:36.000
+surround first with single quotes we can simply add them here, there is no
+
+40
+00:02:36.000 --> 00:02:40.000
+need to escape them. Because we have used a different character
+
+41
+00:02:40.000 --> 00:02:44.000
+to define our string. So save the changes, one more time,
+
+42
+00:02:44.000 --> 00:02:48.000
+message another, they look identical
+
+43
+00:02:48.000 --> 00:02:52.000
+but compare this code with the former code.
+
+44
+00:02:52.000 --> 00:02:56.000
+This is particularly useful if you want to send out email
+
+45
+00:02:56.000 --> 00:03:00.000
+messages in your application. For example, let's say you want to
+
+46
+00:03:00.000 --> 00:03:04.000
+send an email to the user like this. Hi John,
+
+47
+00:03:04.000 --> 00:03:08.000
+Thank you for joining my mailing list. Regards,
+
+48
+00:03:08.000 --> 00:03:12.000
+Mosh. So we can format our string exactly the way
+
+49
+00:03:12.000 --> 00:03:16.000
+we want it to look like. There is no need for any of these
+
+50
+00:03:16.000 --> 00:03:20.000
+plus or /n characters. So, let me delete all this
+
+51
+00:03:20.000 --> 00:03:24.000
+stuff. Now, another benefit of using template literals
+
+52
+00:03:24.000 --> 00:03:28.000
+is that here we can add placeholders. So let's say we want to
+
+53
+00:03:28.000 --> 00:03:32.000
+add the name dynamically, with a regular string we'll
+
+54
+00:03:32.000 --> 00:03:36.000
+have to do something like this. So message,
+
+55
+00:03:36.000 --> 00:03:40.000
+we set it to hi, then we have to concatenate this with
+
+56
+00:03:40.000 --> 00:03:44.000
+some variable or constant, that we define name
+
+57
+00:03:44.000 --> 00:03:48.000
+here set it to John, now we'll have to concatenate
+
+58
+00:03:48.000 --> 00:03:52.000
+this message with name, then add a comma, then /n
+
+59
+00:03:52.000 --> 00:03:56.000
+this is really, really ugly. Let me show you a better way.
+
+60
+00:03:56.000 --> 00:04:00.000
+With template literals, we can add a place
+
+61
+00:04:00.000 --> 00:04:04.000
+holder using a dollar sign and curly braces.
+
+62
+00:04:04.000 --> 00:04:08.000
+Now inside these curly braces we add an expression. We can pass
+
+63
+00:04:08.000 --> 00:04:12.000
+the name of a variable or a constant, now let's save the changes,
+
+64
+00:04:12.000 --> 00:04:16.000
+let's take a look at another, you can see we've got
+
+65
+00:04:16.000 --> 00:04:20.000
+John here dynamically. So this is a placeholder
+
+66
+00:04:20.000 --> 00:04:24.000
+for our name constant. Now here we can add any kind of expression.
+
+67
+00:04:24.000 --> 00:04:28.000
+We can also add a simple mathematical expression,
+
+68
+00:04:28.000 --> 00:04:32.000
+like this, let's log this one more time,
+
+69
+00:04:32.000 --> 00:04:36.000
+so, Hi John 5.
+
+70
+00:04:36.000 --> 00:04:40.000
+So technically we can add any expression that produces
+
+71
+00:04:40.000 --> 00:04:44.000
+a value in between the curly braces. We cal also
+
+72
+00:04:44.000 --> 00:04:48.000
+call function that returns a value, and that's perfectly valid. So
+
+73
+00:04:48.000 --> 00:04:52.000
+these are the benefits of using template literals.
+

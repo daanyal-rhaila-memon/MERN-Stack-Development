@@ -1,0 +1,134 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+In this
+
+2
+00:00:04.000 --> 00:00:08.000
+exercise I want you to create a blog post object with
+
+3
+00:00:08.000 --> 00:00:12.000
+these properties. title, body,
+
+4
+00:00:12.000 --> 00:00:16.000
+author, views, which represents the number of
+
+5
+00:00:16.000 --> 00:00:20.000
+times this post has been viewed. Comments,
+
+6
+00:00:20.000 --> 00:00:24.000
+now each comment should have a couple properties. Author
+
+7
+00:00:24.000 --> 00:00:28.000
+and body. And finally, another property,
+
+8
+00:00:28.000 --> 00:00:32.000
+that each post should have is isLive. Now
+
+9
+00:00:32.000 --> 00:00:36.000
+that can be either true or false. So once again you should
+
+10
+00:00:36.000 --> 00:00:40.000
+use the object literal syntax to create and initialize a
+
+11
+00:00:40.000 --> 00:00:44.000
+blog post. Give each property some value, the actual value doesn't
+
+12
+00:00:44.000 --> 00:00:48.000
+really matter. I just want you to get comfortable with the object literal syntax
+
+14
+00:00:52.000 --> 00:00:56.000
+Alright here's a solution. So let's create a
+
+15
+00:00:56.000 --> 00:01:00.000
+post object, using the object literal syntax, we set the
+
+16
+00:01:00.000 --> 00:01:04.000
+title to a, body to b,
+
+17
+00:01:04.000 --> 00:01:08.000
+author to c, so all these three
+
+18
+00:01:08.000 --> 00:01:12.000
+properties are strings. Now views should be a
+
+19
+00:01:12.000 --> 00:01:16.000
+number, we can set that to 10, comments,
+
+20
+00:01:16.000 --> 00:01:20.000
+should be an array because we can have multiple comments, so we set that
+
+21
+00:01:20.000 --> 00:01:24.000
+to an array, now each comment should have
+
+22
+00:01:24.000 --> 00:01:28.000
+two properties, so each comment should be an object. So
+
+23
+00:01:28.000 --> 00:01:32.000
+here once again we use the object literal syntax to initialize
+
+24
+00:01:32.000 --> 00:01:36.000
+a comment object. We set the author to a
+
+25
+00:01:36.000 --> 00:01:40.000
+and body to b. We can have another comment
+
+26
+00:01:40.000 --> 00:01:44.000
+in this array. Let's duplicate that, different values
+
+27
+00:01:44.000 --> 00:01:48.000
+and finally we should add
+
+28
+00:01:48.000 --> 00:01:52.000
+the isLive property, so,
+
+29
+00:01:52.000 --> 00:01:56.000
+isLive set that to true.
+
+30
+00:01:56.000 --> 00:02:00.000
+And then let's do a console.log of post
+
+31
+00:02:00.000 --> 00:02:04.000
+inspect this on the console, so we can see
+
+32
+00:02:04.000 --> 00:02:08.000
+the comments property is an array with two objects, if we spend
+
+33
+00:02:08.000 --> 00:02:12.000
+this you can see the properties of each object. We've got author
+
+34
+00:02:12.000 --> 00:02:15.066
+and body.
+

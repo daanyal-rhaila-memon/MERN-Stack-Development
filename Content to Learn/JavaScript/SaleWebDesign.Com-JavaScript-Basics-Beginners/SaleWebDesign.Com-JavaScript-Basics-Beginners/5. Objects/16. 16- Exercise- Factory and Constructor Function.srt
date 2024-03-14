@@ -1,0 +1,180 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+So in the
+
+2
+00:00:04,000 --> 00:00:08,000
+last exercise we used the object literal syntax to initialize
+
+3
+00:00:08,000 --> 00:00:12,000
+an address object. In this exercise, I want you to initialize an
+
+4
+00:00:12,000 --> 00:00:16,000
+address object, first using a factory function and then using
+
+5
+00:00:16,000 --> 00:00:20,000
+a constructor function. So your exercise is to write two different functions
+
+6
+00:00:20,000 --> 00:00:24,000
+one is a factory function, the other is a constructor function, to initialize
+
+7
+00:00:24,000 --> 00:00:28,000
+an address object. So go ahead, and when you're done come back, continue
+
+8
+00:00:28,000 --> 00:00:32,000
+watching.
+
+9
+00:00:32,000 --> 00:00:36,000
+Alright, first I'm going to do the factory function,
+
+10
+00:00:36,000 --> 00:00:40,000
+so factory functions simply return a new object,
+
+11
+00:00:40,000 --> 00:00:44,000
+here we can call this function createAddress
+
+12
+00:00:44,000 --> 00:00:48,000
+we should give it three parameters, street, city,
+
+13
+00:00:48,000 --> 00:00:52,000
+and zipCode, and here we simply return
+
+14
+00:00:52,000 --> 00:00:56,000
+a new object. With three properties. Street,
+
+15
+00:00:56,000 --> 00:01:00,000
+which we set to the street argument we received. Now as I told
+
+16
+00:01:00,000 --> 00:01:04,000
+you before, if key and value are the same, we can make our
+
+17
+00:01:04,000 --> 00:01:08,000
+code cleaner by dropping the value, so in this value we're going to have
+
+18
+00:01:08,000 --> 00:01:12,000
+these three properties.
+
+19
+00:01:12,000 --> 00:01:16,000
+That's it. So that's our factory function, and we can simply create
+
+20
+00:01:16,000 --> 00:01:20,000
+a new address like this. So Instead of using the
+
+21
+00:01:20,000 --> 00:01:24,000
+object literal syntax we call createAddress
+
+22
+00:01:24,000 --> 00:01:28,000
+and give it these three values. Now,
+
+23
+00:01:28,000 --> 00:01:32,000
+let's log the address in the console to make sure it's working
+
+24
+00:01:32,000 --> 00:01:36,000
+okay, here we have a new object, with these three properties.
+
+25
+00:01:36,000 --> 00:01:40,000
+beautiful. Now let's write the constructor function.
+
+26
+00:01:40,000 --> 00:01:44,000
+So, constructor function. As I told you before
+
+27
+00:01:44,000 --> 00:01:48,000
+constructor functions have a different naming convention, so
+
+28
+00:01:48,000 --> 00:01:52,000
+instead of camel notation that we use in factory functions.
+
+29
+00:01:52,000 --> 00:01:56,000
+Here we use Pascal notation, so the first letter of the
+
+30
+00:01:56,000 --> 00:02:00,000
+first word should be capital. So we're going to call this function
+
+31
+00:02:00,000 --> 00:02:04,000
+address. Again, we're going to pass three parameters,
+
+32
+00:02:08,000 --> 00:02:12,000
+Now here instead of returning an object, we're going to use the this keyword,
+
+33
+00:02:12,000 --> 00:02:16,000
+to initialize this new object, so
+
+34
+00:02:16,000 --> 00:02:20,000
+.this.street we set that to the street argument
+
+35
+00:02:20,000 --> 00:02:24,000
+then this.city and finally this.
+
+36
+00:02:24,000 --> 00:02:28,000
+zipCode. Now to create
+
+37
+00:02:28,000 --> 00:02:32,000
+a new address object using this constructor function,
+
+38
+00:02:32,000 --> 00:02:36,000
+here we use the new operator and call
+
+39
+00:02:36,000 --> 00:02:40,000
+our constructor function. Once again we pass these values.
+
+40
+00:02:40,000 --> 00:02:44,000
+And log this address object in the console. So save
+
+41
+00:02:44,000 --> 00:02:48,000
+the changes and we get the exact same object.
+
+42
+00:02:48,000 --> 00:02:52,000
+So the purpose of this exercise was to help you get familiar
+
+43
+00:02:52,000 --> 00:02:56,000
+with the syntax for creating factory and constructor
+
+44
+00:02:56,000 --> 00:03:00,000
+functions. In the next exercise we're going to look at
+
+45
+00:03:00,000 --> 00:03:02,300
+object equality.
+

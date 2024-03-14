@@ -1,0 +1,242 @@
+﻿WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+In this
+
+2
+00:00:04.000 --> 00:00:08.000
+exercise, we're going to use the constructor function that we created in the last
+
+3
+00:00:08.000 --> 00:00:12.000
+exercise to create two address objects. So here's the first
+
+4
+00:00:12.000 --> 00:00:16.000
+address object, I'm going to call this address one, now I'm going
+
+5
+00:00:16.000 --> 00:00:20.000
+to duplicate this line to create another address, but we're going to call
+
+6
+00:00:20.000 --> 00:00:24.000
+this address too. Now in this address too, I want you to
+
+7
+00:00:24.000 --> 00:00:28.000
+create two functions. One is called Are
+
+8
+00:00:28.000 --> 00:00:32.000
+Equal, so we pass two address objects, address
+
+9
+00:00:32.000 --> 00:00:36.000
+2, and we check to see if these two objects
+
+10
+00:00:36.000 --> 00:00:40.000
+are equal. Now as I told you before, objects are
+
+11
+00:00:40.000 --> 00:00:44.000
+reference types, so we can have two objects with the exact
+
+12
+00:00:44.000 --> 00:00:48.000
+same properties, but these objects are in different memory locations,
+
+13
+00:00:48.000 --> 00:00:52.000
+so when we use the equality operator
+
+14
+00:00:52.000 --> 00:00:56.000
+we're essentially checking to see if these objects have the same reference.
+
+15
+00:00:56.000 --> 00:01:00.000
+Now, to properly check to see if two objects are equal,
+
+16
+00:01:00.000 --> 00:01:04.000
+we need to check their properties, we need to make sure
+
+17
+00:01:04.000 --> 00:01:08.000
+that all their properties are equal. So that's the job of this
+
+18
+00:01:08.000 --> 00:01:12.000
+function. areEqual. If all the properties of these two objects
+
+19
+00:01:12.000 --> 00:01:16.000
+are equal, this function should return true, otherwise it should return
+
+20
+00:01:16.000 --> 00:01:20.000
+false. Now the other function I want you to write is
+
+21
+00:01:20.000 --> 00:01:24.000
+areSame. address1 and address2.
+
+22
+00:01:24.000 --> 00:01:28.000
+And this function simply tells us if address 1 and address
+
+23
+00:01:28.000 --> 00:01:32.000
+2 are pointed to the exact same object.
+
+24
+00:01:32.000 --> 00:01:36.000
+In other words, they're referencing the same object. So go
+
+25
+00:01:36.000 --> 00:01:40.000
+ahead, and implement these two functions, when you're done go ahead and
+
+26
+00:01:40.000 --> 00:01:44.000
+continue watching.
+
+27
+00:01:44.000 --> 00:01:48.000
+Alright, I'm going to start by implementing the second function.
+
+28
+00:01:48.000 --> 00:01:52.000
+Because that's easier, so to check to see if two variables
+
+29
+00:01:52.000 --> 00:01:56.000
+are referencing the same object. Use the strict
+
+30
+00:01:56.000 --> 00:02:00.000
+equality operator. So return address1
+
+31
+00:02:00.000 --> 00:02:04.000
+equals address2. So if they are referencing the
+
+32
+00:02:04.000 --> 00:02:08.000
+same object, we'll return true. Otherwise we'll return false.
+
+33
+00:02:08.000 --> 00:02:12.000
+Now with the other function, we need too check individual properties.
+
+34
+00:02:12.000 --> 00:02:16.000
+So here we need to return a boolean, that is
+
+35
+00:02:16.000 --> 00:02:20.000
+the result of evaluation of three conditional statements.
+
+36
+00:02:20.000 --> 00:02:24.000
+So address2.
+
+37
+00:02:24.000 --> 00:02:28.000
+street should be equal to address2.street
+
+38
+00:02:28.000 --> 00:02:32.000
+here we use the logical and next we add address1,
+
+39
+00:02:32.000 --> 00:02:36.000
+.city, it should also equal address 2,
+
+40
+00:02:36.000 --> 00:02:40.000
+.city. Once again we use the logical and
+
+41
+00:02:40.000 --> 00:02:44.000
+and finally address1.zipcode
+
+42
+00:02:44.000 --> 00:02:48.000
+should equal address2,
+
+43
+00:02:48.000 --> 00:02:52.000
+.zipCode. Now let's call these
+
+44
+00:02:52.000 --> 00:02:56.000
+functions. And see the results. So I'm going to do a
+
+45
+00:02:56.000 --> 00:03:00.000
+console.log, call r=
+
+46
+00:03:00.000 --> 00:03:04.000
+pass address1 and address2,
+
+47
+00:03:04.000 --> 00:03:08.000
+and then I'm going to duplicate this and change areEqual
+
+48
+00:03:08.000 --> 00:03:12.000
+to areSame. Save the changes,
+
+49
+00:03:12.000 --> 00:03:16.000
+alright I made a mistake here, so here we should use
+
+50
+00:03:16.000 --> 00:03:20.000
+address2, save the changes, so you can
+
+51
+00:03:20.000 --> 00:03:24.000
+see these two objects are equal, their individual properties are equal,
+
+52
+00:03:24.000 --> 00:03:28.000
+but they are not the same objects. They are two different objects in memory.
+
+53
+00:03:28.000 --> 00:03:32.000
+In contrast, if we declare another variable here,
+
+54
+00:03:32.000 --> 00:03:36.000
+let's say address3. And we set that to address1
+
+55
+00:03:36.000 --> 00:03:40.000
+now both these variables are pointing a reference in the same
+
+56
+00:03:40.000 --> 00:03:44.000
+object in memory. So if we call
+
+57
+00:03:44.000 --> 00:03:48.000
+areSame and pass address1 and address3,
+
+58
+00:03:48.000 --> 00:03:52.000
+we're going to get true because they are pointing to the same
+
+59
+00:03:52.000 --> 00:03:56.000
+object in memory. In the next exercise we're going to work with block
+
+60
+00:03:56.000 --> 00:03:59.266
+post objects.
+

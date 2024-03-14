@@ -1,0 +1,174 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+In this
+
+2
+00:00:04.000 --> 00:00:08.000
+exercise, once again we're going to use a constructor function to create
+
+3
+00:00:08.000 --> 00:00:12.000
+a post object. But this constructor object, is a little bit
+
+4
+00:00:12.000 --> 00:00:16.000
+different than the constructor function you wrote in an earlier exercise.
+
+5
+00:00:16.000 --> 00:00:20.000
+So here's the scenario. Imagine we're building a blogging
+
+6
+00:00:20.000 --> 00:00:24.000
+engine, the user is drafting a post, but they have not
+
+7
+00:00:24.000 --> 00:00:28.000
+published it yet, what do you think that constructor function should
+
+8
+00:00:28.000 --> 00:00:32.000
+look like? So spend a couple minutes on this exercise, when you're done
+
+9
+00:00:32.000 --> 00:00:36.000
+come back and continue watching.
+
+10
+00:00:36.000 --> 00:00:40.000
+Alright, let's start by creating this
+
+11
+00:00:40.000 --> 00:00:44.000
+constructor function, we're going to call that post, and note the
+
+12
+00:00:44.000 --> 00:00:48.000
+capitol P here, so what parameters do we need here?
+
+13
+00:00:48.000 --> 00:00:52.000
+Obviously we need the title and the body and the
+
+14
+00:00:52.000 --> 00:00:56.000
+author, but we don't need the number of views, because the
+
+15
+00:00:56.000 --> 00:01:00.000
+first time we create a post, views should be set to zero, and
+
+16
+00:01:00.000 --> 00:01:04.000
+every time we view that post we increment that value. So views
+
+17
+00:01:04.000 --> 00:01:08.000
+is not something that we want to pass here, we want to use a default value
+
+18
+00:01:08.000 --> 00:01:12.000
+of zero, when initializing this post object.
+
+19
+00:01:12.000 --> 00:01:16.000
+The same is true for the comments property. For a new
+
+20
+00:01:16.000 --> 00:01:20.000
+post that has not been published yet, we don't have any comments
+
+21
+00:01:20.000 --> 00:01:24.000
+so we don't want to add a comments parameter here. The same is true
+
+22
+00:01:24.000 --> 00:01:28.000
+for the isLive property. We want to set this to
+
+23
+00:01:28.000 --> 00:01:32.000
+false. by default so there is really no need to add
+
+24
+00:01:32.000 --> 00:01:36.000
+an extra parameter in this function. So
+
+25
+00:01:36.000 --> 00:01:40.000
+we should aim to have functions with fewer parameters. The more
+
+26
+00:01:40.000 --> 00:01:44.000
+parameters a function has, the harder it gets to use it, okay?
+
+27
+00:01:44.000 --> 00:01:48.000
+So here, we're going to set this.title
+
+28
+00:01:48.000 --> 00:01:52.000
+to the title argument, the same is true for the body,
+
+29
+00:01:52.000 --> 00:01:56.000
+property and author.
+
+30
+00:01:56.000 --> 00:02:00.000
+Now, for the views, I'm going to initialize this
+
+31
+00:02:00.000 --> 00:02:04.000
+to 0, similarly we're going to
+
+32
+00:02:04.000 --> 00:02:08.000
+initialize comments to an empty array, so
+
+33
+00:02:08.000 --> 00:02:12.000
+in the future we can add new objects to this array, and then finally
+
+34
+00:02:12.000 --> 00:02:16.000
+we set isLive to false. Now,
+
+35
+00:02:16.000 --> 00:02:20.000
+instead of initializing this post object here,
+
+36
+00:02:20.000 --> 00:02:24.000
+we're going to call our constructor function,
+
+37
+00:02:24.000 --> 00:02:28.000
+pass the title, body, and author,
+
+38
+00:02:28.000 --> 00:02:32.000
+and finally let's log this on the console.
+
+39
+00:02:32.000 --> 00:02:36.000
+So, we can see
+
+40
+00:02:36.000 --> 00:02:40.000
+author body and title properties are initialized based
+
+41
+00:02:40.000 --> 00:02:44.000
+on the values that we passed here. But the author properties have default
+
+42
+00:02:44.000 --> 00:02:48.000
+values. So comments is initialized to an empty array, isLive
+
+43
+00:02:48.000 --> 00:02:52.000
+is false, and views is 0.
+
