@@ -1,0 +1,344 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+In the last lecture
+
+2
+00:00:04,000 --> 00:00:08,000
+I told you that finding primitives is different than finding
+
+3
+00:00:08,000 --> 00:00:12,000
+reference types. So let's see why. I'm going to start by declaring
+
+4
+00:00:12,000 --> 00:00:16,000
+a new array called courses, and in this array we're going to
+
+5
+00:00:16,000 --> 00:00:20,000
+have a couple of course objects. So
+
+6
+00:00:20,000 --> 00:00:24,000
+here's the first one with two properties, id and name
+
+7
+00:00:24,000 --> 00:00:28,000
+the name doesn't really matter, now we can duplicate this line,
+
+8
+00:00:28,000 --> 00:00:32,000
+by holding down shift, alt, and the down arrow.
+
+9
+00:00:32,000 --> 00:00:36,000
+So, let's change these values,
+
+10
+00:00:36,000 --> 00:00:40,000
+id2, and name b, and don't forget the semi colon here.
+
+11
+00:00:40,000 --> 00:00:44,000
+so we have two course objects here, let's see if we have
+
+12
+00:00:44,000 --> 00:00:48,000
+a course with the name a in this array, the includes method
+
+13
+00:00:48,000 --> 00:00:52,000
+that you learned in the last lecture will not help us here. Now, let me show you.
+
+14
+00:00:52,000 --> 00:00:56,000
+So courses.includes
+
+15
+00:00:56,000 --> 00:01:00,000
+here we pass the object that we're looking for. So,
+
+16
+00:01:00,000 --> 00:01:04,000
+course with id 1, and name a.
+
+17
+00:01:04,000 --> 00:01:08,000
+Now, let's log this on the console. Console.log
+
+18
+00:01:08,000 --> 00:01:12,000
+save the changes, we get false,
+
+19
+00:01:12,000 --> 00:01:16,000
+the reason for this is because these two objects.
+
+20
+00:01:16,000 --> 00:01:20,000
+That is the object that you are passing to the includes method, and the
+
+21
+00:01:20,000 --> 00:01:24,000
+object that we have in the courses array, these are two different
+
+22
+00:01:24,000 --> 00:01:28,000
+objects. They have two different references, they're in two different
+
+23
+00:01:28,000 --> 00:01:32,000
+locations and memory. And in the last section, you learned that objects
+
+24
+00:01:32,000 --> 00:01:36,000
+are reference types so when we check them for their equality, the references
+
+25
+00:01:36,000 --> 00:01:40,000
+are checked. In this case, there are two different references, that's why we get
+
+26
+00:01:40,000 --> 00:01:44,000
+false. So if you have an array with reference types, you need
+
+27
+00:01:44,000 --> 00:01:48,000
+to use the find method. Let me show you. So I'm going to delete
+
+28
+00:01:48,000 --> 00:01:52,000
+this line, courses.find.
+
+29
+00:01:52,000 --> 00:01:56,000
+Now look at the parameter of this method. What we see is
+
+30
+00:01:56,000 --> 00:02:00,000
+way to complicated. So, whenever you want to learn about
+
+31
+00:02:00,000 --> 00:02:04,000
+an object or a function in JavaScript, simply search for that.
+
+32
+00:02:04,000 --> 00:02:08,000
+javascript array find
+
+33
+00:02:08,000 --> 00:02:12,000
+Here the first link is from developer.
+
+34
+00:02:12,000 --> 00:02:16,000
+mozilla.org. So, that's a good reference,
+
+35
+00:02:16,000 --> 00:02:20,000
+here we can find a good description of what this method does and
+
+36
+00:02:20,000 --> 00:02:24,000
+a very simple example of using that method. So here we have
+
+37
+00:02:24,000 --> 00:02:28,000
+an array with a few numbers. We're calling the find method
+
+38
+00:02:28,000 --> 00:02:32,000
+note that as an argument to this method we have to pass a function.
+
+39
+00:02:32,000 --> 00:02:36,000
+We call this function a predicate, and we use that to
+
+40
+00:02:36,000 --> 00:02:40,000
+determine if the given element exists in an array
+
+41
+00:02:40,000 --> 00:02:44,000
+or not. So, this function takes a parameter, that's an
+
+42
+00:02:44,000 --> 00:02:48,000
+element in this array. And in the body of this function,
+
+43
+00:02:48,000 --> 00:02:52,000
+we should return a boolean. So here we have a simple expression
+
+44
+00:02:52,000 --> 00:02:56,000
+if this element is greater than 10, we'll return true
+
+45
+00:02:56,000 --> 00:03:00,000
+otherwise we'll return false. So this is what happens when we call
+
+46
+00:03:00,000 --> 00:03:04,000
+the find method and pass this function. This function is
+
+47
+00:03:04,000 --> 00:03:08,000
+executed once for the first element in this array. So
+
+48
+00:03:08,000 --> 00:03:12,000
+in this case 5 will be passed here. 5 is not greater than 10
+
+49
+00:03:12,000 --> 00:03:16,000
+so we'll return false, and the search will continue. Now this
+
+50
+00:03:16,000 --> 00:03:20,000
+function will be called for the second element in this array. So,
+
+51
+00:03:20,000 --> 00:03:24,000
+12 will be passed as an argument to this function, and because it's
+
+52
+00:03:24,000 --> 00:03:28,000
+greater than 10, we'll return true and the search will stop here.
+
+53
+00:03:28,000 --> 00:03:32,000
+So now, what we'll get here as a result of calling the
+
+54
+00:03:32,000 --> 00:03:36,000
+find method is the first element that matches this
+
+55
+00:03:36,000 --> 00:03:40,000
+criteria. So if you log this found variable on the console,
+
+56
+00:03:40,000 --> 00:03:44,000
+we'll get 12. Now in contrast, if there are
+
+57
+00:03:44,000 --> 00:03:48,000
+no elements in this array that matches this criteria, we'll get
+
+58
+00:03:48,000 --> 00:03:52,000
+undefined. Let me show you. So,
+
+59
+00:03:52,000 --> 00:03:56,000
+back to our example, let's say we want to see if we have a course with the name
+
+60
+00:03:56,000 --> 00:04:00,000
+a in this array. So we pass a function.
+
+61
+00:04:00,000 --> 00:04:04,000
+Here, we call this a predicate or a callback
+
+62
+00:04:04,000 --> 00:04:08,000
+function, because the function is called back as part of
+
+63
+00:04:08,000 --> 00:04:12,000
+finding an element in this array. So here we should have a parameter,
+
+64
+00:04:12,000 --> 00:04:16,000
+we can call that element, or course, because
+
+65
+00:04:16,000 --> 00:04:20,000
+each element in this array is a course object, so it's better to be
+
+66
+00:04:20,000 --> 00:04:24,000
+more explicit, that makes our code more readable and understandable.
+
+67
+00:04:24,000 --> 00:04:28,000
+So, what is our criteria? We're
+
+68
+00:04:28,000 --> 00:04:32,000
+looking for a course with the name equal to a.
+
+69
+00:04:32,000 --> 00:04:36,000
+So, we simply return this and
+
+70
+00:04:36,000 --> 00:04:40,000
+let's store the result in a constant called
+
+71
+00:04:40,000 --> 00:04:44,000
+course. And finally let's log this on the console.
+
+72
+00:04:44,000 --> 00:04:48,000
+Here's the course object, save the changes,
+
+73
+00:04:48,000 --> 00:04:52,000
+and that's the course with the name a. We get the complete course object
+
+74
+00:04:52,000 --> 00:04:56,000
+that we have in this array. Now if I
+
+75
+00:04:56,000 --> 00:05:00,000
+change the search criteria to something like this. xyz,
+
+76
+00:05:00,000 --> 00:05:04,000
+obviously we don't have a course with this name, so when we save the changes,
+
+77
+00:05:04,000 --> 00:05:08,000
+we get undefined. So here's our find method, it returns
+
+78
+00:05:08,000 --> 00:05:12,000
+the first element that matches this criteria. We have a
+
+79
+00:05:12,000 --> 00:05:16,000
+similar method called find index, it works exactly the same
+
+80
+00:05:16,000 --> 00:05:20,000
+but instead of returning the actual object, like the course object, it will
+
+81
+00:05:20,000 --> 00:05:24,000
+return it's index. Let me show you. So I want to change this to find
+
+82
+00:05:24,000 --> 00:05:28,000
+index, in this case we don't have a course with this name,
+
+83
+00:05:28,000 --> 00:05:32,000
+so, when I save the changes, we should see minus 1 on the console.
+
+84
+00:05:32,000 --> 00:05:36,000
+Here it is. Now if I change this back to
+
+85
+00:05:36,000 --> 00:05:40,000
+a and save the changes, we get 0, because the index
+
+86
+00:05:40,000 --> 00:05:44,000
+of the first element that matched this criteria is 0.
+

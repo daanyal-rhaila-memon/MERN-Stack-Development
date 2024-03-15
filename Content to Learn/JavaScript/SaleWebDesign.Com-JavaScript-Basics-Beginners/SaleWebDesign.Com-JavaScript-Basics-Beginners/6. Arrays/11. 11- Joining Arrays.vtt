@@ -1,0 +1,194 @@
+﻿WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+Another
+
+2
+00:00:04.000 --> 00:00:08.000
+useful method of arrays is join. So here we have this numbers array
+
+3
+00:00:08.000 --> 00:00:12.000
+let's say we want to join the elements in this array. That's when we use
+
+4
+00:00:12.000 --> 00:00:16.000
+the join method. So we call numbers.join
+
+5
+00:00:16.000 --> 00:00:20.000
+now look at this parameter here, separate. Note the
+
+6
+00:00:20.000 --> 00:00:24.000
+question mark. Whenever you see a question mark, that means this parameter
+
+7
+00:00:24.000 --> 00:00:28.000
+is optional, and you can see this type of parameter is a string
+
+8
+00:00:28.000 --> 00:00:32.000
+so here we can optionally pass a string and this
+
+9
+00:00:32.000 --> 00:00:36.000
+string will be used as a separate. So let's say we want to join
+
+10
+00:00:36.000 --> 00:00:40.000
+these elements using a comma. So we pass comma as a string here,
+
+11
+00:00:40.000 --> 00:00:44.000
+right? And note that this joint method returns
+
+12
+00:00:44.000 --> 00:00:48.000
+a string. So, we get the result and store it
+
+13
+00:00:48.000 --> 00:00:52.000
+in a constant called joined. Now,
+
+14
+00:00:52.000 --> 00:00:56.000
+let's log it on the console, joined.
+
+15
+00:00:56.000 --> 00:01:00.000
+Save the changes, here's the result.
+
+16
+00:01:00.000 --> 00:01:04.000
+Another useful method that goes hand and hand with join is the
+
+17
+00:01:04.000 --> 00:01:08.000
+split method, but this method is not part. of arrays, it's part of
+
+18
+00:01:08.000 --> 00:01:12.000
+strings, but let me show you how it works. So lets say we have
+
+19
+00:01:12.000 --> 00:01:16.000
+a string called message like this.
+
+20
+00:01:16.000 --> 00:01:20.000
+This is my first message.
+
+21
+00:01:20.000 --> 00:01:24.000
+Now we can split the sentence like this. So message.
+
+22
+00:01:24.000 --> 00:01:28.000
+split, again here we need to pass the separator
+
+23
+00:01:28.000 --> 00:01:32.000
+string so let's say we want to separate this using
+
+24
+00:01:32.000 --> 00:01:36.000
+a white space. Now this method will return
+
+25
+00:01:36.000 --> 00:01:40.000
+an array, so let's call that parts
+
+26
+00:01:40.000 --> 00:01:44.000
+now let's take a look at that array on the console,
+
+27
+00:01:44.000 --> 00:01:48.000
+okay, so, here's the array, we have five elements
+
+28
+00:01:48.000 --> 00:01:52.000
+here, note that each element in this array is a word
+
+29
+00:01:52.000 --> 00:01:56.000
+in our original message. Now that we have an array we can use the joy
+
+30
+00:01:56.000 --> 00:02:00.000
+method, to combine these elements using a separator.
+
+31
+00:02:00.000 --> 00:02:04.000
+So, let's say parts.join
+
+32
+00:02:04.000 --> 00:02:08.000
+you can combine them using a hyphen,
+
+33
+00:02:08.000 --> 00:02:12.000
+and store the result in combined and finally
+
+34
+00:02:12.000 --> 00:02:16.000
+log it on the console. So here's
+
+35
+00:02:16.000 --> 00:02:20.000
+the result. This is my first message. This technique is particularly
+
+36
+00:02:20.000 --> 00:02:24.000
+useful when building a URL slug. Let me show you what I mean
+
+37
+00:02:24.000 --> 00:02:28.000
+by that. So, here I've got this page open
+
+38
+00:02:28.000 --> 00:02:32.000
+on stack overflow.com. Read the title of this question,
+
+39
+00:02:32.000 --> 00:02:36.000
+creating arrays in JavaScript. So here is what the user posted
+
+40
+00:02:36.000 --> 00:02:40.000
+as you can see we have white space in between each word, but we cannot have a
+
+41
+00:02:40.000 --> 00:02:44.000
+white space in url's so if you look at this url here,
+
+42
+00:02:44.000 --> 00:02:48.000
+note the title of question, converted to a
+
+43
+00:02:48.000 --> 00:02:52.000
+url slug. So all the white spaces are
+
+44
+00:02:52.000 --> 00:02:56.000
+replaced with a hyphen. So as part of converting the title of the
+
+45
+00:02:56.000 --> 00:03:00.000
+question to a url slug, you'll have to split this string
+
+46
+00:03:00.000 --> 00:03:04.000
+perhaps throw out some of the words, replace some of the words
+
+47
+00:03:04.000 --> 00:03:08.000
+with other words, and then eventually combine them using
+
+48
+00:03:08.000 --> 00:03:11.800
+the hyphen as you can see here.
+

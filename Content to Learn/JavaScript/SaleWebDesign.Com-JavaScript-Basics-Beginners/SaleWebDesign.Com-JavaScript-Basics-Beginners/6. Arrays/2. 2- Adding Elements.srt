@@ -1,0 +1,216 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+Alright let's
+
+2
+00:00:04,000 --> 00:00:08,000
+start by declaring a constant called numbers
+
+3
+00:00:08,000 --> 00:00:12,000
+and we set this to an array with two elements, 3 and 4.
+
+4
+00:00:12,000 --> 00:00:16,000
+Now note that here I've declared numbers
+
+5
+00:00:16,000 --> 00:00:20,000
+as a constant, that means we cannot reassign
+
+6
+00:00:20,000 --> 00:00:24,000
+numbers to something else, if we do this,
+
+7
+00:00:24,000 --> 00:00:28,000
+we get this error assignment to constant variable, however
+
+8
+00:00:28,000 --> 00:00:32,000
+it's perfectly fine to modify the content of this array.
+
+9
+00:00:32,000 --> 00:00:36,000
+We can add new elements, or remove existing elements. So constant
+
+10
+00:00:36,000 --> 00:00:40,000
+does not stop us from modifying the content of an array.
+
+11
+00:00:40,000 --> 00:00:44,000
+Okay? So, earlier you have learned that arrays
+
+12
+00:00:44,000 --> 00:00:48,000
+are objects, so using the dot notation,
+
+13
+00:00:48,000 --> 00:00:52,000
+we can look at all the properties and methods defined
+
+14
+00:00:52,000 --> 00:00:56,000
+in arrays. In this lecture, we're going to look at 3 of these methods,
+
+15
+00:00:56,000 --> 00:01:00,000
+so add new elements to the end
+
+16
+00:01:00,000 --> 00:01:04,000
+beginning or middle of an array.
+
+17
+00:01:04,000 --> 00:01:08,000
+The first method we're going to use is the push method.
+
+18
+00:01:08,000 --> 00:01:12,000
+So, numbers.push
+
+19
+00:01:12,000 --> 00:01:16,000
+we can pass 1 or more arguments, and these arguments will be
+
+20
+00:01:16,000 --> 00:01:20,000
+placed at the end of this array. So I'm going to pass 5 and 6
+
+21
+00:01:20,000 --> 00:01:24,000
+now let's do a console.log
+
+22
+00:01:24,000 --> 00:01:28,000
+of numbers, save the changes,
+
+23
+00:01:28,000 --> 00:01:32,000
+so we have 3 and 4, now we have 5 and 6 at the end. If you
+
+24
+00:01:32,000 --> 00:01:36,000
+want to add elements to the beginning of an array, you use the
+
+25
+00:01:36,000 --> 00:01:40,000
+unshift method. Let me show you. So, numbers
+
+26
+00:01:40,000 --> 00:01:44,000
+.unshift. This basically pushes the elements
+
+27
+00:01:44,000 --> 00:01:48,000
+in this array to the right, and adds new elements in the beginning.
+
+28
+00:01:48,000 --> 00:01:52,000
+So, again here we can pass one or more arguments, I'm going to pass
+
+29
+00:01:52,000 --> 00:01:56,000
+1 and 2, now let's bring this console
+
+30
+00:01:56,000 --> 00:02:00,000
+.log down, and by the way to do this, we can hold down the
+
+31
+00:02:00,000 --> 00:02:04,000
+alt key, and press the up or down arrow.
+
+32
+00:02:04,000 --> 00:02:08,000
+That's a good tip to know. So save the changes, now we have
+
+33
+00:02:08,000 --> 00:02:12,000
+1 and 2 at the beginning of this array. And finally if you want to add
+
+34
+00:02:12,000 --> 00:02:16,000
+elements to the end of an array, you use the
+
+35
+00:02:16,000 --> 00:02:20,000
+splice method. So let's bring this down,
+
+36
+00:02:20,000 --> 00:02:24,000
+numbers.splice, with this method
+
+37
+00:02:24,000 --> 00:02:28,000
+we can go to a given position, and add new elements or
+
+38
+00:02:28,000 --> 00:02:32,000
+remove existing elements. Later in this section, we're going to look at removing
+
+39
+00:02:32,000 --> 00:02:36,000
+elements, so for now don't worry about that. Now look at the parameters of this
+
+40
+00:02:36,000 --> 00:02:40,000
+method. The first parameter is a start, which is a number.
+
+41
+00:02:40,000 --> 00:02:44,000
+So that's our starting position. So let's say in this array,
+
+42
+00:02:44,000 --> 00:02:48,000
+after 1 and 2 here, between 2 and 3, we want to add a new
+
+43
+00:02:48,000 --> 00:02:52,000
+element. So our starting position is here.
+
+44
+00:02:52,000 --> 00:02:56,000
+What is the index of this element? Well you know that arrays are
+
+45
+00:02:56,000 --> 00:03:00,000
+0 index. So the index of the first element is 0
+
+46
+00:03:00,000 --> 00:03:04,000
+and 1 and here's 2. So our starting position, or starting
+
+47
+00:03:04,000 --> 00:03:08,000
+index is 2. Now look at the second parameter
+
+48
+00:03:08,000 --> 00:03:12,000
+here, that's delete count which is a number. How many
+
+49
+00:03:12,000 --> 00:03:16,000
+elements do we want to delete? In this lecture, none. So I'm going to pass 0
+
+50
+00:03:16,000 --> 00:03:20,000
+and then look at the third parameter. That's the items
+
+51
+00:03:20,000 --> 00:03:24,000
+you want to add. So, to make this stand out, I'm going to add 2
+
+52
+00:03:24,000 --> 00:03:28,000
+characters here. a and b. Save
+
+53
+00:03:28,000 --> 00:03:32,000
+the changes. So note that a and b are placed
+
+54
+00:03:32,000 --> 00:03:35,033
+after 1 and 2.
+

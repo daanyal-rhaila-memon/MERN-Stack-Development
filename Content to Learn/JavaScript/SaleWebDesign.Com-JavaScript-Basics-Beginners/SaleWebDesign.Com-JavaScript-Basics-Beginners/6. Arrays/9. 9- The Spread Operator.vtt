@@ -1,0 +1,146 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+So in the last
+
+2
+00:00:04.000 --> 00:00:08.000
+lecture, you learned how to use the concat method to combine two arrays.
+
+3
+00:00:08.000 --> 00:00:12.000
+Now, there is another way to achieve the same thing using the spread
+
+4
+00:00:12.000 --> 00:00:16.000
+operator in ES6. So I'm going to rewrite this code
+
+5
+00:00:16.000 --> 00:00:20.000
+using the spread operator, and you will see why this approach is cleaner
+
+6
+00:00:20.000 --> 00:00:24.000
+and more flexible. So, I'm going to define
+
+7
+00:00:24.000 --> 00:00:28.000
+combined as a new array, now we want to combine
+
+8
+00:00:28.000 --> 00:00:32.000
+all the elements of the first array and second array.
+
+9
+00:00:32.000 --> 00:00:36.000
+So we use the spread operator like this.
+
+10
+00:00:36.000 --> 00:00:40.000
+First and then second.
+
+11
+00:00:40.000 --> 00:00:44.000
+When we spread an array, all it's elements are spread individually.
+
+12
+00:00:44.000 --> 00:00:48.000
+So basically we're declaring a new array,
+
+13
+00:00:48.000 --> 00:00:52.000
+and in that array, we're adding the individual elements of the
+
+14
+00:00:52.000 --> 00:00:56.000
+first and second arrays. So this piece of code here
+
+15
+00:00:56.000 --> 00:01:00.000
+is exactly like this.
+
+16
+00:01:00.000 --> 00:01:04.000
+Okay? So,
+
+17
+00:01:04.000 --> 00:01:08.000
+we can see with the spread operator, we have a better visualization
+
+18
+00:01:08.000 --> 00:01:12.000
+of how these arrays are combined. It's very clear that we have an array
+
+19
+00:01:12.000 --> 00:01:16.000
+and in this array we have all the elements of the first array,
+
+20
+00:01:16.000 --> 00:01:20.000
+followed by all the elements of the second array. Now with this spread operator,
+
+21
+00:01:20.000 --> 00:01:24.000
+we have more flexibility, let's say as part of combining these
+
+22
+00:01:24.000 --> 00:01:28.000
+two arrays, we want to add an element in between them,
+
+23
+00:01:28.000 --> 00:01:32.000
+you can do that easily like this. Or we can add something at the end.
+
+24
+00:01:32.000 --> 00:01:36.000
+Again we can clearly see what the combined array looks like.
+
+25
+00:01:36.000 --> 00:01:40.000
+In contrast, if you want to do the same thing using the concat
+
+26
+00:01:40.000 --> 00:01:44.000
+method, our code is going to be more complex. So this is how
+
+27
+00:01:44.000 --> 00:01:48.000
+we can use the spread operator to combine two arrays. Now in the
+
+28
+00:01:48.000 --> 00:01:52.000
+last lecture, you learned that if you call the slice method without any
+
+29
+00:01:52.000 --> 00:01:56.000
+arguments, this will return a copy of the original array,
+
+30
+00:01:56.000 --> 00:02:00.000
+here. So let's call that copy,
+
+31
+00:02:00.000 --> 00:02:04.000
+now once again we can use the spread operator to copy all the
+
+32
+00:02:04.000 --> 00:02:08.000
+elements of an array into a new array. So we can rewrite this code
+
+33
+00:02:08.000 --> 00:02:12.000
+like this. Constant, copy,
+
+34
+00:02:12.000 --> 00:02:16.000
+we create a new array, and then spread the
+
+35
+00:02:16.000 --> 00:02:20.000
+combined array. So this will return all the elements
+
+36
+00:02:20.000 --> 00:02:24.000
+of the combined array, and put them into this new area.
+

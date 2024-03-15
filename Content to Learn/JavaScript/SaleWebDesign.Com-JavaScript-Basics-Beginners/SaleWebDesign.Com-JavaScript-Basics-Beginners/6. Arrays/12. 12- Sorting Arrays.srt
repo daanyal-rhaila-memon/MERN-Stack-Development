@@ -1,0 +1,392 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+Back to our
+
+2
+00:00:04,000 --> 00:00:08,000
+numbers array, in this lecture I'm going to change the order of these number so
+
+3
+00:00:08,000 --> 00:00:12,000
+they are not sorted, and then I will tell you how to sort them. So let's
+
+4
+00:00:12,000 --> 00:00:16,000
+change them to 2, 3, 1, and remove 1
+
+5
+00:00:16,000 --> 00:00:20,000
+now how can we sort this array? Very easy. You have this method called
+
+6
+00:00:20,000 --> 00:00:24,000
+sort and what this
+
+7
+00:00:24,000 --> 00:00:28,000
+method does is that it converts each element here to a
+
+8
+00:00:28,000 --> 00:00:32,000
+string and then sorts the elements in the array. So,
+
+9
+00:00:32,000 --> 00:00:36,000
+let's have a look, so console.log of numbers,
+
+10
+00:00:36,000 --> 00:00:40,000
+here's our numbers array sorted. Now another method sorted,
+
+11
+00:00:40,000 --> 00:00:44,000
+is often companion to the sort method is the reverse method.
+
+12
+00:00:44,000 --> 00:00:48,000
+And with this we can reverse the order or elements in an array.
+
+13
+00:00:48,000 --> 00:00:52,000
+So numbers.reverse
+
+14
+00:00:52,000 --> 00:00:56,000
+let's log it on the console one more time, now
+
+15
+00:00:56,000 --> 00:01:00,000
+we have 3, 2, 1. So this sort method is pretty useful.
+
+16
+00:01:00,000 --> 00:01:04,000
+It's very easy to use when you have numbers
+
+17
+00:01:04,000 --> 00:01:08,000
+and strings in an array. But when you have objects like
+
+18
+00:01:08,000 --> 00:01:12,000
+course objects, it doesn't work by default, you have to do some extra work.
+
+19
+00:01:12,000 --> 00:01:16,000
+So, let me delete this code here, and define another array.
+
+20
+00:01:16,000 --> 00:01:20,000
+Called courses, here I'm going to add two course objects
+
+21
+00:01:20,000 --> 00:01:24,000
+with id 1 and name, let's say
+
+22
+00:01:24,000 --> 00:01:28,000
+Node.js. And another course object
+
+23
+00:01:28,000 --> 00:01:32,000
+with id2, and name JavaScript.
+
+24
+00:01:32,000 --> 00:01:36,000
+Now let's say you want to sort this array by name
+
+25
+00:01:36,000 --> 00:01:40,000
+of courses. So JavaScript should come before
+
+26
+00:01:40,000 --> 00:01:44,000
+node.js. So look if I call courses.sort,
+
+27
+00:01:44,000 --> 00:01:48,000
+and then log it on the console,
+
+28
+00:01:48,000 --> 00:01:52,000
+nothing is going to happen. You can see Node
+
+29
+00:01:52,000 --> 00:01:56,000
+is still coming first. So how can we fix this problem? Very easy.
+
+30
+00:01:56,000 --> 00:02:00,000
+This sort method optionally takes an argument
+
+31
+00:02:00,000 --> 00:02:04,000
+and that's a function that is used for comparison. So what do we call
+
+32
+00:02:04,000 --> 00:02:08,000
+the sort method, this method gets two objects in this array,
+
+33
+00:02:08,000 --> 00:02:12,000
+let's say a and b, and compares them.
+
+34
+00:02:12,000 --> 00:02:16,000
+Now if they are in the right order, it will skip to the next few elements, otherwise it's going
+
+35
+00:02:16,000 --> 00:02:20,000
+to rearrange them. So here we need to pass a function,
+
+36
+00:02:20,000 --> 00:02:24,000
+for comparison, this function should take two parameters, we can
+
+37
+00:02:24,000 --> 00:02:28,000
+call them and a and b, or first and second, doesn't really
+
+38
+00:02:28,000 --> 00:02:32,000
+matter, because a and b is pretty self explanatory here.
+
+39
+00:02:32,000 --> 00:02:36,000
+Now, in this function, if a is less than b,
+
+40
+00:02:36,000 --> 00:02:40,000
+we should return minus 1, if a is greater
+
+41
+00:02:40,000 --> 00:02:44,000
+than b, we should return 1, and if they are equal,
+
+42
+00:02:44,000 --> 00:02:48,000
+if they are equal we should return 0. So to
+
+43
+00:02:48,000 --> 00:02:52,000
+implement this, you can write code like this. If a
+
+44
+00:02:52,000 --> 00:02:56,000
+.name, that's our first course is less than b.
+
+45
+00:02:56,000 --> 00:03:00,000
+name we're going to return minus 1, okay?
+
+46
+00:03:00,000 --> 00:03:04,000
+Now, the second condition. If a.name
+
+47
+00:03:04,000 --> 00:03:08,000
+is greater than b.name, we're going to return
+
+48
+00:03:08,000 --> 00:03:12,000
+1, otherwise we return 0. Now,
+
+49
+00:03:12,000 --> 00:03:16,000
+note that here I'm not using else if, because if the first
+
+50
+00:03:16,000 --> 00:03:20,000
+condition is true, this this return statement we're going to jump out
+
+51
+00:03:20,000 --> 00:03:24,000
+of this function. So the control will never move to this point.
+
+52
+00:03:24,000 --> 00:03:28,000
+So there's really no need to use the else keyword.
+
+53
+00:03:28,000 --> 00:03:32,000
+It's just adding extra noise in the code. So now, lets
+
+54
+00:03:32,000 --> 00:03:36,000
+run this code one more time, save the changes,
+
+55
+00:03:36,000 --> 00:03:40,000
+inspect this array, we can see that JavaScript is coming first. Beautiful.
+
+56
+00:03:40,000 --> 00:03:44,000
+However, if I change this j to a lower case
+
+57
+00:03:44,000 --> 00:03:48,000
+j, and save the changes, see what happens.
+
+58
+00:03:48,000 --> 00:03:52,000
+This time Node is coming first, so what's
+
+59
+00:03:52,000 --> 00:03:56,000
+going on here? Well, each character in a computer is
+
+60
+00:03:56,000 --> 00:04:00,000
+internally represented using a number. Let me show you.
+
+61
+00:04:00,000 --> 00:04:04,000
+So open up Google and search for
+
+62
+00:04:04,000 --> 00:04:08,000
+ascii table. That is asc with double
+
+63
+00:04:08,000 --> 00:04:12,000
+i. I remember when I was in university back in Iran, I had this lecturer
+
+64
+00:04:12,000 --> 00:04:16,000
+and he thought these double i's here, are two. So
+
+65
+00:04:16,000 --> 00:04:20,000
+he used to call this asc two. He had no idea that these i's
+
+66
+00:04:20,000 --> 00:04:24,000
+stand for information interchange. So ascii
+
+67
+00:04:24,000 --> 00:04:28,000
+is short for American standard code, for information interchange.
+
+68
+00:04:28,000 --> 00:04:32,000
+So that's ascii table, not asc two.
+
+69
+00:04:32,000 --> 00:04:36,000
+Now, take a look at the second link,
+
+70
+00:04:36,000 --> 00:04:40,000
+so on this table, you can see the numeric representaiton
+
+71
+00:04:40,000 --> 00:04:44,000
+of each character. So, we are looking at
+
+72
+00:04:44,000 --> 00:04:48,000
+lower case j, it's numeric representation is
+
+73
+00:04:48,000 --> 00:04:52,000
+106, and n which is used for our node course is
+
+74
+00:04:52,000 --> 00:04:56,000
+78. We can see 78 is less than 106, that's
+
+75
+00:04:56,000 --> 00:05:00,000
+why our Node course starting with capitol N came
+
+76
+00:05:00,000 --> 00:05:04,000
+first. Now to solve. this problem
+
+77
+00:05:04,000 --> 00:05:08,000
+we should exclude case sensitivity when comparing these names.
+
+78
+00:05:08,000 --> 00:05:12,000
+So, we can do something like this, you can declare two constants,
+
+79
+00:05:12,000 --> 00:05:16,000
+let's say nameA, and set it to A.name.
+
+80
+00:05:16,000 --> 00:05:20,000
+toUpperCase. So whatever the name of the first course is,
+
+81
+00:05:20,000 --> 00:05:24,000
+we're going to convert it to uppercase, and we're going to do the same
+
+82
+00:05:24,000 --> 00:05:28,000
+with the second course. Is I'm going to call the second constant,
+
+83
+00:05:28,000 --> 00:05:32,000
+nameE, and set it to b.name.
+
+84
+00:05:32,000 --> 00:05:36,000
+toUpperCase. Now we have toUpperCase keys, we can compare them.
+
+85
+00:05:36,000 --> 00:05:40,000
+Also, take into account that here we could call two lowercase
+
+86
+00:05:40,000 --> 00:05:44,000
+instead of two uppercase. That's perfectly valid, but what is important
+
+87
+00:05:44,000 --> 00:05:48,000
+is that both these names should be either
+
+88
+00:05:48,000 --> 00:05:52,000
+lower case or uppercase. Now finally we need to replace
+
+89
+00:05:52,000 --> 00:05:56,000
+the instances of a.name, with name a.
+
+90
+00:05:56,000 --> 00:06:00,000
+So I'm going to do multi cursor editing. I've selected a.name,
+
+91
+00:06:00,000 --> 00:06:04,000
+and I'm going to press command and d on Mac, or control d on
+
+92
+00:06:04,000 --> 00:06:08,000
+Windows. We have this second cursor here, as you can see,
+
+93
+00:06:08,000 --> 00:06:12,000
+Now we can delete this and replace it with nameA. Escape,
+
+94
+00:06:12,000 --> 00:06:16,000
+Finished. One more time I'm going to replace b.name
+
+95
+00:06:16,000 --> 00:06:20,000
+command and d, with name e,
+
+96
+00:06:20,000 --> 00:06:24,000
+and escape. Now save the changes
+
+97
+00:06:24,000 --> 00:06:28,000
+now our sort algorithm should work properly.
+
+98
+00:06:28,000 --> 00:06:32,000
+So JavaScript came first.
+

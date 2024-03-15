@@ -1,0 +1,154 @@
+﻿WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+So earlier
+
+2
+00:00:04.000 --> 00:00:08.000
+in the section about control flow, you learned about various loops in
+
+3
+00:00:08.000 --> 00:00:12.000
+JavaScript. So in that section, you learned that if you want to iterate an array, you can
+
+4
+00:00:12.000 --> 00:00:16.000
+use the for of loop. So for, let,
+
+5
+00:00:16.000 --> 00:00:20.000
+number of numbers, now in each iteration
+
+6
+00:00:20.000 --> 00:00:24.000
+this number will be set to one of the elements in this array.
+
+7
+00:00:24.000 --> 00:00:28.000
+So, let's log that on the console.
+
+8
+00:00:28.000 --> 00:00:32.000
+We get 1, 2, and 3. There is
+
+9
+00:00:32.000 --> 00:00:36.000
+also another way to iterate an array, and you may see that approach in some
+
+10
+00:00:36.000 --> 00:00:40.000
+tutorials online. That is using the for each method. So
+
+11
+00:00:40.000 --> 00:00:44.000
+all these arrays have this for each method.
+
+12
+00:00:44.000 --> 00:00:48.000
+That takes a call back function. So we pass a function here,
+
+13
+00:00:48.000 --> 00:00:52.000
+this function takes a
+
+14
+00:00:52.000 --> 00:00:56.000
+parameter, in this case number, and in this function we can simply
+
+15
+00:00:56.000 --> 00:01:00.000
+log this number on the console.
+
+16
+00:01:00.000 --> 00:01:04.000
+So when we call the for each method, this function will
+
+17
+00:01:04.000 --> 00:01:08.000
+be executed for each element in the array.
+
+18
+00:01:08.000 --> 00:01:12.000
+Each element will be passed as an argument to this function.
+
+19
+00:01:12.000 --> 00:01:16.000
+So, save the changes, again we get 1, 2, 3. Now
+
+20
+00:01:16.000 --> 00:01:20.000
+as I told you before, we can use the arrow function syntax to simplify this code,
+
+21
+00:01:20.000 --> 00:01:24.000
+so we get rid of the function keyword, put
+
+22
+00:01:24.000 --> 00:01:28.000
+a fat arrow between the parameters and the body of the function,
+
+23
+00:01:28.000 --> 00:01:32.000
+and because we have a single parameter, we can remove the parenthesis,
+
+24
+00:01:32.000 --> 00:01:36.000
+and finally we need to remove this semi colon here because we don't have this
+
+25
+00:01:36.000 --> 00:01:40.000
+statement in a code block. So here's the end
+
+26
+00:01:40.000 --> 00:01:44.000
+result. Now which approach you choose is more of a
+
+27
+00:01:44.000 --> 00:01:48.000
+personal preference, there is really no significant difference between these
+
+28
+00:01:48.000 --> 00:01:52.000
+two ways of iterating an array. The only thing you need to know
+
+29
+00:01:52.000 --> 00:01:56.000
+is that this call back function, that we pass through the for each method, can
+
+30
+00:01:56.000 --> 00:02:00.000
+optionally take a separate parameter, and that's the index.
+
+31
+00:02:00.000 --> 00:02:04.000
+So here, I'm going to put number in parenthesis to add the
+
+32
+00:02:04.000 --> 00:02:08.000
+second parameter, that's index, now
+
+33
+00:02:08.000 --> 00:02:12.000
+when logging each number, or each element, we can also display it's
+
+34
+00:02:12.000 --> 00:02:16.000
+index. Save the changes,
+
+35
+00:02:16.000 --> 00:02:20.000
+and you can see the index of each element in front of it. We don't
+
+36
+00:02:20.000 --> 00:02:24.000
+get the index with the for of loop, but if you need that we can use the
+
+37
+00:02:24.000 --> 00:02:28.000
+for in loop. Again, its really a tiny issue, just be aware that we have
+
+38
+00:02:28.000 --> 00:02:31.966
+different ways to iterate an array.
+

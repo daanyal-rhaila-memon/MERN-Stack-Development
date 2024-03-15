@@ -1,0 +1,186 @@
+﻿WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+Alright now
+
+2
+00:00:04.000 --> 00:00:08.000
+let's see how we can remove elements from an array. So,
+
+3
+00:00:08.000 --> 00:00:12.000
+start by declaring a new array, numbers, and we
+
+4
+00:00:12.000 --> 00:00:16.000
+set this to 1, 2, 3, 4. Earlier
+
+5
+00:00:16.000 --> 00:00:20.000
+in this section you learned about 3 methods to add new
+
+6
+00:00:20.000 --> 00:00:24.000
+elements to an array. You learned about the push method,
+
+7
+00:00:24.000 --> 00:00:28.000
+which we use to add something at the end of an array.
+
+8
+00:00:28.000 --> 00:00:32.000
+You learned about the unshift method that we use
+
+9
+00:00:32.000 --> 00:00:36.000
+for adding elements at the beginning of an array, and the splice method
+
+10
+00:00:36.000 --> 00:00:40.000
+that we use for adding an element somewhere in the middle. Now,
+
+11
+00:00:40.000 --> 00:00:44.000
+when it comes to removing an element, again we can remove an element from
+
+12
+00:00:44.000 --> 00:00:48.000
+the End, from the beginning and
+
+13
+00:00:48.000 --> 00:00:52.000
+from the middle. Middle. But instead of
+
+14
+00:00:52.000 --> 00:00:56.000
+the push method, we use the pop method. This will remove the
+
+15
+00:00:56.000 --> 00:01:00.000
+last element in this array and return it. So let's
+
+16
+00:01:00.000 --> 00:01:04.000
+store that in a constant called last. And
+
+17
+00:01:04.000 --> 00:01:08.000
+here I'm going to do a console.log of numbers, so you can
+
+18
+00:01:08.000 --> 00:01:12.000
+see the array after we've popped the last element. And also I'm going to show you
+
+19
+00:01:12.000 --> 00:01:16.000
+this last element. Save the changes. So,
+
+20
+00:01:16.000 --> 00:01:20.000
+here's our array, 1, 2, 3, and you can see the last element is
+
+21
+00:01:20.000 --> 00:01:24.000
+4. Now, if you want to remove an element from the
+
+22
+00:01:24.000 --> 00:01:28.000
+beginning you use the shift method. Similar to the
+
+23
+00:01:28.000 --> 00:01:32.000
+pop method this will return the element that was removed.
+
+24
+00:01:32.000 --> 00:01:36.000
+So, we can store that in first, and
+
+25
+00:01:36.000 --> 00:01:40.000
+let's have a look here, save the changes.
+
+26
+00:01:40.000 --> 00:01:44.000
+So the first element is 1, now if we log numbers
+
+27
+00:01:44.000 --> 00:01:48.000
+we only have 2 and 3. Pretty easy. And finally
+
+28
+00:01:48.000 --> 00:01:52.000
+the splice method you learned about earlier, so
+
+29
+00:01:52.000 --> 00:01:56.000
+if you want to remove an element somewhere in the middle
+
+30
+00:01:56.000 --> 00:02:00.000
+you pass the index of that element. So let's say we want to
+
+31
+00:02:00.000 --> 00:02:04.000
+remove these three here. The index of this element is
+
+32
+00:02:04.000 --> 00:02:08.000
+2, so we pass 2 here, and as the second argument,
+
+33
+00:02:08.000 --> 00:02:12.000
+we pass the number of elements we want to delete.
+
+34
+00:02:12.000 --> 00:02:16.000
+We can remove 1 element, and then
+
+35
+00:02:16.000 --> 00:02:20.000
+let's log this on the console, numbers, save the changes
+
+36
+00:02:20.000 --> 00:02:24.000
+actually the result is confusing, so I'm going to comment out,
+
+37
+00:02:24.000 --> 00:02:28.000
+these two lines so we work with our original array,
+
+38
+00:02:28.000 --> 00:02:32.000
+let's have a look, so let's note that three is removed
+
+39
+00:02:32.000 --> 00:02:36.000
+we have 1, 2 , and 4. Now if you want to delete multiple
+
+40
+00:02:36.000 --> 00:02:40.000
+elements, you pass a value greater than 1. So you can delete
+
+41
+00:02:40.000 --> 00:02:44.000
+2 elements, starting from index 2.
+
+42
+00:02:44.000 --> 00:02:48.000
+Save the changes, so 3 and 4 are removed and we only have
+
+43
+00:02:48.000 --> 00:02:52.000
+1 and 2. So, to recap, use the
+
+44
+00:02:52.000 --> 00:02:56.000
+pop method to remove the last element, use the shift method to remove the first
+
+45
+00:02:56.000 --> 00:03:00.000
+element, and the splice element to remove an element somewhere in the
+
+46
+00:03:00.000 --> 00:03:03.033
+middle of an array.
+

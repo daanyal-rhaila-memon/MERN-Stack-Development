@@ -1,0 +1,212 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+Alright now
+
+2
+00:00:04,000 --> 00:00:08,000
+let's see how we can find elements in an array. Finding elements really
+
+3
+00:00:08,000 --> 00:00:12,000
+depends on if you're storing primitive or reference types
+
+4
+00:00:12,000 --> 00:00:16,000
+in an array. So I'm going to start with primitives because they're easier.
+
+5
+00:00:16,000 --> 00:00:20,000
+And then I will show you how to find reference types in an array. So,
+
+6
+00:00:20,000 --> 00:00:24,000
+let's say we have an array of numbers,
+
+7
+00:00:24,000 --> 00:00:28,000
+with 4 elements. 1, 2, 3, 4.
+
+8
+00:00:28,000 --> 00:00:32,000
+Here we have a method called
+
+9
+00:00:32,000 --> 00:00:36,000
+index of, we pass the element
+
+10
+00:00:36,000 --> 00:00:40,000
+we are looking for, and if that element exists in the array,
+
+11
+00:00:40,000 --> 00:00:44,000
+this method will return the index of this element in the array.
+
+12
+00:00:44,000 --> 00:00:48,000
+If it doesn't exist, it will return minus 1. Let me show you a
+
+13
+00:00:48,000 --> 00:00:52,000
+few different examples. So first I'm going to pass the character a,
+
+14
+00:00:52,000 --> 00:00:56,000
+obviously we don't have this element so the result that we'll see
+
+15
+00:00:56,000 --> 00:01:00,000
+will be minus 1.
+
+16
+00:01:00,000 --> 00:01:04,000
+Look, so index of returns the index of the
+
+17
+00:01:04,000 --> 00:01:08,000
+given element in this array. However, if I change this to
+
+18
+00:01:08,000 --> 00:01:12,000
+1, we get 0, because the index
+
+19
+00:01:12,000 --> 00:01:16,000
+of this element is 0, note that the type of this
+
+20
+00:01:16,000 --> 00:01:20,000
+element matters, so if I pass 1, as a string here,
+
+21
+00:01:20,000 --> 00:01:24,000
+again we get minus 1, because we don't have 1 as a string
+
+22
+00:01:24,000 --> 00:01:28,000
+in this array, we have it as a number. Okay? Now similar
+
+23
+00:01:28,000 --> 00:01:32,000
+to index of, we have another method called last index
+
+24
+00:01:32,000 --> 00:01:36,000
+of. And that will return the last index of the given element
+
+25
+00:01:36,000 --> 00:01:40,000
+or minus 1 if it doesn't exist. So to demonstrate this,
+
+26
+00:01:40,000 --> 00:01:44,000
+I'm going to add another 1 here, now,
+
+27
+00:01:44,000 --> 00:01:48,000
+let's do another console.log, numbers
+
+28
+00:01:48,000 --> 00:01:52,000
+.lastIndexof 1.
+
+29
+00:01:52,000 --> 00:01:56,000
+Save the changes. So the last index of is 3,
+
+30
+00:01:56,000 --> 00:02:00,000
+because it's here, and the index of this element is 3.
+
+31
+00:02:00,000 --> 00:02:04,000
+Okay? So basically to see if a given element
+
+32
+00:02:04,000 --> 00:02:08,000
+exists in an array we can do something like this. Console
+
+33
+00:02:08,000 --> 00:02:12,000
+.log numbers.indexOf
+
+34
+00:02:12,000 --> 00:02:16,000
+1 is not minus 1.
+
+35
+00:02:16,000 --> 00:02:20,000
+If this expression returns true that means
+
+36
+00:02:20,000 --> 00:02:24,000
+this element exists in the array. Let's have a look, save the
+
+37
+00:02:24,000 --> 00:02:28,000
+changes, we've got true here. But this is a little bit ugly,
+
+38
+00:02:28,000 --> 00:02:32,000
+we have a new method in JavaScript for achieving the same thing.
+
+39
+00:02:32,000 --> 00:02:36,000
+So, console.log numbers.
+
+40
+00:02:36,000 --> 00:02:40,000
+includes 1. This simply
+
+41
+00:02:40,000 --> 00:02:44,000
+returns true if the given element exists in the array. Let's have a
+
+42
+00:02:44,000 --> 00:02:48,000
+look, so save the changes and we get true here.
+
+43
+00:02:48,000 --> 00:02:52,000
+Now, all thee methods have a second parameter which is optional.
+
+44
+00:02:52,000 --> 00:02:56,000
+And that is the starting index. For example,
+
+45
+00:02:56,000 --> 00:03:00,000
+with index of let's change this to 1 as
+
+46
+00:03:00,000 --> 00:03:04,000
+a number, so save the changes, you can see the index of 1 is
+
+47
+00:03:04,000 --> 00:03:08,000
+0. Because it's here, right? However, I can
+
+48
+00:03:08,000 --> 00:03:12,000
+pass a second argument here, that second argument is
+
+49
+00:03:12,000 --> 00:03:16,000
+from index. And that's the index from which the search
+
+50
+00:03:16,000 --> 00:03:20,000
+will begin. So I can pass 2 here, so that is
+
+51
+00:03:20,000 --> 00:03:24,000
+0, 1, 2, our search will begin here, let's see what we get. Save the changes,
+
+52
+00:03:24,000 --> 00:03:28,000
+so we get 3 which is the index of
+
+53
+00:03:28,000 --> 00:03:32,000
+the second one in this array.
+
