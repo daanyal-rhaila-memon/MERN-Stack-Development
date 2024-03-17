@@ -1,0 +1,340 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+In this lecture,
+
+2
+00:00:04,000 --> 00:00:08,000
+we're going to look at a special kind of methods in objects called
+
+3
+00:00:08,000 --> 00:00:12,000
+getters and setters. So let's imagine we have the
+
+4
+00:00:12,000 --> 00:00:16,000
+person object with two properties.
+
+5
+00:00:16,000 --> 00:00:20,000
+First name, set this to Mosh, and last name,
+
+6
+00:00:20,000 --> 00:00:24,000
+set this to Hamedani. Now
+
+7
+00:00:24,000 --> 00:00:28,000
+somewhere in our application we want to display a person's full name.
+
+8
+00:00:28,000 --> 00:00:32,000
+So, we have to do something like this. Console.log
+
+9
+00:00:32,000 --> 00:00:36,000
+we can either get the person.firstName, concatenate it with
+
+10
+00:00:36,000 --> 00:00:40,000
+space and the last name, or a better way, as I told you before,
+
+11
+00:00:40,000 --> 00:00:44,000
+is to use a template literal. So we use the back tick
+
+12
+00:00:44,000 --> 00:00:48,000
+and then we add a couple arguments here, so,
+
+13
+00:00:48,000 --> 00:00:52,000
+here's the first one, the argument is person.firstname, now we have
+
+14
+00:00:52,000 --> 00:00:56,000
+a space, and here's the second argument, person.lastname,
+
+15
+00:00:56,000 --> 00:01:00,000
+however, the problem with this approach
+
+16
+00:01:00,000 --> 00:01:04,000
+is maybe there are multiple places in our application where we want to display
+
+17
+00:01:04,000 --> 00:01:08,000
+someone's full name. With the current implementation, we'll have to repeat this template
+
+18
+00:01:08,000 --> 00:01:12,000
+literal in multiple places. A better approach is to
+
+19
+00:01:12,000 --> 00:01:16,000
+define a method in this object, call it full name, and
+
+20
+00:01:16,000 --> 00:01:20,000
+move this expression right there. And then whenever we want to
+
+21
+00:01:20,000 --> 00:01:24,000
+display a person's full name we simply call that person's method. So,
+
+22
+00:01:24,000 --> 00:01:28,000
+we can add another key value pair, full name, but we set the value
+
+23
+00:01:28,000 --> 00:01:32,000
+to a function, or as I told you before, in
+
+24
+00:01:32,000 --> 00:01:36,000
+ES6 we have a shorter syntax, to add a method to an object
+
+25
+00:01:36,000 --> 00:01:40,000
+so instead of adding it as a key value pair, we can add it
+
+26
+00:01:40,000 --> 00:01:44,000
+as a function without the function keyword. So, if
+
+27
+00:01:44,000 --> 00:01:48,000
+you want to define a function outside of an object, what do we do?
+
+28
+00:01:48,000 --> 00:01:52,000
+We add function, the name of the function, parenthesis, and curly braces.
+
+29
+00:01:52,000 --> 00:01:56,000
+However, when we need to add this inside of an object, we just
+
+30
+00:01:56,000 --> 00:02:00,000
+drop the function keyword. So you can see, this new syntax
+
+31
+00:02:00,000 --> 00:02:04,000
+is shorter and cleaner than the older syntax, okay?
+
+32
+00:02:04,000 --> 00:02:08,000
+So here's our full name method, we simply return
+
+33
+00:02:08,000 --> 00:02:12,000
+this expression here. So I'm going to cut this, and move
+
+34
+00:02:12,000 --> 00:02:16,000
+it here. Now with this new implementation, every time we
+
+35
+00:02:16,000 --> 00:02:20,000
+need to display someone's full name, we simply call person.fullname.
+
+36
+00:02:20,000 --> 00:02:24,000
+Save the changes, we get Mosh Hamedani.
+
+37
+00:02:24,000 --> 00:02:28,000
+Beautiful. However, there are a couple problems. With this approach.
+
+38
+00:02:28,000 --> 00:02:32,000
+The first problem, is that this is read only.
+
+39
+00:02:32,000 --> 00:02:36,000
+In other words, we cannot set a person's full name
+
+40
+00:02:36,000 --> 00:02:40,000
+from the outside. It will be nice if we could
+
+41
+00:02:40,000 --> 00:02:44,000
+do this, and then the first name and last name
+
+42
+00:02:44,000 --> 00:02:48,000
+properties would be automatically set based on what we passed here.
+
+43
+00:02:48,000 --> 00:02:52,000
+The other issue is that I don't like to call this like a method.
+
+44
+00:02:52,000 --> 00:02:56,000
+It would be nicer, if we could treat this as a property.
+
+45
+00:02:56,000 --> 00:03:00,000
+So, we could drop the parenthesis. Like this. So
+
+46
+00:03:00,000 --> 00:03:04,000
+how do we do this? Well, that's where getters and setters
+
+47
+00:03:04,000 --> 00:03:08,000
+come in the picture. We're use getters to access
+
+48
+00:03:08,000 --> 00:03:12,000
+properties in an object and setters to
+
+49
+00:03:12,000 --> 00:03:16,000
+change or mutate them. So in this object
+
+50
+00:03:16,000 --> 00:03:20,000
+we should add a getter, and with that getter we can read this person's
+
+51
+00:03:20,000 --> 00:03:24,000
+full name, like a property, and with a setter we can set it
+
+52
+00:03:24,000 --> 00:03:28,000
+from the outside. So here is how it works. We prefix this
+
+53
+00:03:28,000 --> 00:03:32,000
+method with the get keyword, and now this method is
+
+54
+00:03:32,000 --> 00:03:36,000
+a getter. So we can access the full name like a property
+
+55
+00:03:36,000 --> 00:03:40,000
+on line 15. Let me temporarily comment out this line,
+
+56
+00:03:40,000 --> 00:03:44,000
+save the changes, you can see our program is still working, beautiful,
+
+57
+00:03:44,000 --> 00:03:48,000
+so this is our getter, now to be able to
+
+58
+00:03:48,000 --> 00:03:52,000
+set this from the outside we need to add a setter. A setter
+
+59
+00:03:52,000 --> 00:03:56,000
+is very similar. So we add the set keyword,
+
+60
+00:03:56,000 --> 00:04:00,000
+the name of the property or method, and then
+
+61
+00:04:00,000 --> 00:04:04,000
+code block. However, this method needs a parameter, you can
+
+62
+00:04:04,000 --> 00:04:08,000
+call it value or anything. And the value of this parameter will be
+
+63
+00:04:08,000 --> 00:04:12,000
+what we have in the right side of the assignment operator.
+
+64
+00:04:12,000 --> 00:04:16,000
+So here let's assume that value is a valid string, we need to
+
+65
+00:04:16,000 --> 00:04:20,000
+split that string by a space, take the parts and
+
+66
+00:04:20,000 --> 00:04:24,000
+set the first name and last name properties. So,
+
+67
+00:04:24,000 --> 00:04:28,000
+value call the split method of string,
+
+68
+00:04:28,000 --> 00:04:32,000
+you want to split it by a space, this will return
+
+69
+00:04:32,000 --> 00:04:36,000
+array, we can call that parts.
+
+70
+00:04:36,000 --> 00:04:40,000
+Now we can set the first name to parts of
+
+71
+00:04:40,000 --> 00:04:44,000
+0, and last name to parts
+
+72
+00:04:44,000 --> 00:04:48,000
+of 1. But finally, instead of logging the
+
+73
+00:04:48,000 --> 00:04:52,000
+person's full name, let's just log the person object. So,
+
+74
+00:04:52,000 --> 00:04:56,000
+initially, we set the first and last name to Mosh Hamedani, now
+
+75
+00:04:56,000 --> 00:05:00,000
+with this new property which is actually a setter, for changing the name
+
+76
+00:05:00,000 --> 00:05:04,000
+to John Smith. Save the changes, here's our
+
+77
+00:05:04,000 --> 00:05:08,000
+person object, you can see first name and last name properties are updated,
+
+78
+00:05:08,000 --> 00:05:12,000
+also note that full name, it's value is
+
+79
+00:05:12,000 --> 00:05:16,000
+... Sometimes when you're logging objects in the console,
+
+80
+00:05:16,000 --> 00:05:20,000
+you may see properties with this kind of value. As you can see from the
+
+81
+00:05:20,000 --> 00:05:24,000
+tool tip, this is a getter. In order to read the value you need to
+
+82
+00:05:24,000 --> 00:05:28,000
+click here, and now this method is executed and the
+
+83
+00:05:28,000 --> 00:05:32,000
+result is returned in the console. So this is the
+
+84
+00:05:32,000 --> 00:05:36,000
+benefit of getters and setters. In the next lecture we're going to look at
+
+85
+00:05:36,000 --> 00:05:38,933
+error handling.
+

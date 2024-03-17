@@ -1,0 +1,286 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+In this lecture
+
+2
+00:00:04.000 --> 00:00:08.000
+we're going to talk about a very important concept called scope.
+
+3
+00:00:08.000 --> 00:00:12.000
+So I'm going to define a constant called message
+
+4
+00:00:12.000 --> 00:00:16.000
+and set it to hi. Now let's log this in the console
+
+5
+00:00:16.000 --> 00:00:20.000
+so obviously we get hi on the console.
+
+6
+00:00:20.000 --> 00:00:24.000
+But what would happen if I add this message
+
+7
+00:00:24.000 --> 00:00:28.000
+in a code block? Let's save the changes and see what happens.
+
+8
+00:00:28.000 --> 00:00:32.000
+We get this error. Uncaught reference error, message
+
+9
+00:00:32.000 --> 00:00:36.000
+is not defined. This is all about scoping.
+
+10
+00:00:36.000 --> 00:00:40.000
+So a scope of a variable or a constant, determines
+
+11
+00:00:40.000 --> 00:00:44.000
+where that variable or constant is accessible.
+
+12
+00:00:44.000 --> 00:00:48.000
+And when we declare variables or constants with let or const,
+
+13
+00:00:48.000 --> 00:00:52.000
+their scope is limited to the block in which
+
+14
+00:00:52.000 --> 00:00:56.000
+they are defined. So message is accessible in this block,
+
+15
+00:00:56.000 --> 00:01:00.000
+but it's not accessible outside of this block. Now you might be wondering
+
+16
+00:01:00.000 --> 00:01:04.000
+why do we need this code block here? Well, this code
+
+17
+00:01:04.000 --> 00:01:08.000
+block can be part of a function. So here we can have a function
+
+18
+00:01:08.000 --> 00:01:12.000
+called start. And now we have a constant
+
+19
+00:01:12.000 --> 00:01:16.000
+in this function. So because the scope of this constant is
+
+20
+00:01:16.000 --> 00:01:20.000
+limited to the block in which it's defined, we cannot access
+
+21
+00:01:20.000 --> 00:01:24.000
+this constant outside of the start function. The same
+
+22
+00:01:24.000 --> 00:01:28.000
+is true when we declare a variable or a constant in an if block.
+
+23
+00:01:28.000 --> 00:01:32.000
+So, let's add an if block here, some condition,
+
+24
+00:01:32.000 --> 00:01:36.000
+we don't care, let's declare another constant,
+
+25
+00:01:36.000 --> 00:01:40.000
+and set it to bye. Now, this constant is
+
+26
+00:01:40.000 --> 00:01:44.000
+only accessible in this block, if I go out of this block,
+
+27
+00:01:44.000 --> 00:01:48.000
+and try to log it on the console, we're going to get an error.
+
+28
+00:01:48.000 --> 00:01:52.000
+So, I'm going to remove the last line, let's just call
+
+29
+00:01:52.000 --> 00:01:56.000
+the start function. Save the changes, we get the same
+
+30
+00:01:56.000 --> 00:02:00.000
+error. Reference error. Another is not defined. We have the same
+
+31
+00:02:00.000 --> 00:02:04.000
+concept in our loops. So let's define a for loop,
+
+32
+00:02:04.000 --> 00:02:08.000
+let i = 0, we're gonna run it
+
+33
+00:02:08.000 --> 00:02:12.000
+5 times, now i is a variable
+
+34
+00:02:12.000 --> 00:02:16.000
+that is only accessible in this block. So here,
+
+35
+00:02:16.000 --> 00:02:20.000
+we can log i, let's save the changes,
+
+36
+00:02:20.000 --> 00:02:24.000
+we get numbers 0-4. But if we go outside of this for block,
+
+37
+00:02:24.000 --> 00:02:28.000
+and log i, we're going to get the same
+
+38
+00:02:28.000 --> 00:02:32.000
+error. Reference error, i is not different.
+
+39
+00:02:32.000 --> 00:02:36.000
+Now, let me simplify this code. So we're going to have
+
+40
+00:02:36.000 --> 00:02:40.000
+a function with a constant called message. We can
+
+41
+00:02:40.000 --> 00:02:44.000
+have another function, let's call that stop. And in this
+
+42
+00:02:44.000 --> 00:02:48.000
+function we can have a constant called message, with
+
+43
+00:02:48.000 --> 00:02:52.000
+a different value. That's perfectly valid JavaScript code.
+
+44
+00:02:52.000 --> 00:02:56.000
+Because the scope of this constant is limited,
+
+45
+00:02:56.000 --> 00:03:00.000
+to the block in which it's defined. So we can have two variables or
+
+46
+00:03:00.000 --> 00:03:04.000
+constants with the same name but different functions. That's perfectly
+
+47
+00:03:04.000 --> 00:03:08.000
+valid. Now, what if we defined a variable or a constant
+
+48
+00:03:08.000 --> 00:03:12.000
+outside of a function. So here I'm going to define a
+
+49
+00:03:12.000 --> 00:03:16.000
+constant, color, and set it to red. Now here we don't have
+
+50
+00:03:16.000 --> 00:03:20.000
+any code blocks, so what do you think is the scope of this
+
+51
+00:03:20.000 --> 00:03:24.000
+constant? This constant has global scope. Global
+
+52
+00:03:24.000 --> 00:03:28.000
+means this constant is accessible everywhere, globally.
+
+53
+00:03:28.000 --> 00:03:32.000
+So we can go to the start function and log
+
+54
+00:03:32.000 --> 00:03:36.000
+color, save the changes you can see we have
+
+55
+00:03:36.000 --> 00:03:40.000
+access to this constant, color, so this constant
+
+56
+00:03:40.000 --> 00:03:44.000
+is accessible in all the functions we have in our programming.
+
+57
+00:03:44.000 --> 00:03:48.000
+Now what if we have a constant with the exact same name,
+
+58
+00:03:48.000 --> 00:03:52.000
+in our function. So let's take a look, I'm going to define
+
+59
+00:03:52.000 --> 00:03:56.000
+this color constant, we'll set it to blue.
+
+60
+00:03:56.000 --> 00:04:00.000
+What do you think we're going to see when I save the changes, let's take a look.
+
+61
+00:04:00.000 --> 00:04:04.000
+We get blue. So, local variables, or
+
+62
+00:04:04.000 --> 00:04:08.000
+local constants in a function, take precedence over
+
+63
+00:04:08.000 --> 00:04:12.000
+global variables or constants. Now in general you should avoid
+
+64
+00:04:12.000 --> 00:04:16.000
+defining global variables or constants, that is considered
+
+65
+00:04:16.000 --> 00:04:20.000
+bad practice. Let me give you a metaphor. Imagine this is a tooth
+
+66
+00:04:20.000 --> 00:04:24.000
+brush, and each function is a person. You don't want to have
+
+67
+00:04:24.000 --> 00:04:28.000
+a tooth brush that is shared with multiple people. Each person should have
+
+68
+00:04:28.000 --> 00:04:32.000
+their own tooth brush. So you should avoid defining global variables
+
+69
+00:04:32.000 --> 00:04:36.000
+or constants because they're accessible everywhere, globally, and
+
+70
+00:04:36.000 --> 00:04:40.000
+each function can accidentally change their value, and this will lead to
+
+71
+00:04:40.000 --> 00:04:44.000
+all kinds of bugs and issues in our programs.
+

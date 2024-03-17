@@ -1,0 +1,168 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+Earlier
+
+2
+00:00:04,000 --> 00:00:08,000
+in the course, in the section about arrays, we had this exercise
+
+3
+00:00:08,000 --> 00:00:12,000
+to count the number of occurrences of a given element in
+
+4
+00:00:12,000 --> 00:00:16,000
+an array. So this is the solution that we wrote for this exercise, if you
+
+5
+00:00:16,000 --> 00:00:20,000
+don't have this, download the source code for all the exercises for this course,
+
+6
+00:00:20,000 --> 00:00:24,000
+you can find this at the beginning of the course in the first section.
+
+7
+00:00:24,000 --> 00:00:28,000
+So, in this project if you look, in the arrays folder,
+
+8
+00:00:28,000 --> 00:00:32,000
+the 5th exercise countOccurances, so
+
+9
+00:00:32,000 --> 00:00:36,000
+copy that code into index.js to use for this exercise.
+
+10
+00:00:36,000 --> 00:00:40,000
+Now, this function has a tiny problem. Here we
+
+11
+00:00:40,000 --> 00:00:44,000
+are assuming that the first argument is a valid array.
+
+12
+00:00:44,000 --> 00:00:48,000
+What happens if we call this function with a boolean?
+
+13
+00:00:48,000 --> 00:00:52,000
+We get this error, uncaught type error,
+
+14
+00:00:52,000 --> 00:00:56,000
+array.reduce is not a function. Because here we're calling array.reduce
+
+15
+00:00:56,000 --> 00:01:00,000
+and booleans don't have this reduce method.
+
+16
+00:01:00,000 --> 00:01:04,000
+The same happens if you pass null or undefined,
+
+17
+00:01:04,000 --> 00:01:08,000
+or number. When we pass null we get a different error, cannot read
+
+18
+00:01:08,000 --> 00:01:12,000
+property reduce of null. So here we need to modify this function
+
+19
+00:01:12,000 --> 00:01:16,000
+and add error handling. So this is what I want you to do for this exercise.
+
+20
+00:01:16,000 --> 00:01:20,000
+If this first argument is not an array,
+
+21
+00:01:20,000 --> 00:01:24,000
+I want you to throw an exception, then wrap these two lines,
+
+22
+00:01:24,000 --> 00:01:28,000
+with a try catch block, we can also wrap these entire
+
+23
+00:01:28,000 --> 00:01:32,000
+three lines altogether in a try catch block, it doesn't really matter
+
+24
+00:01:32,000 --> 00:01:36,000
+one of these lines is going to throw an exception, that is the second line,
+
+25
+00:01:36,000 --> 00:01:40,000
+call to. countOccurences function. So there catch the exception
+
+26
+00:01:40,000 --> 00:01:44,000
+and log it on the console. Again, very simple exercise,
+
+27
+00:01:44,000 --> 00:01:48,000
+it just helps you get used to working with exceptions. You will see my solution
+
+28
+00:01:48,000 --> 00:01:52,000
+next.
+
+29
+00:01:52,000 --> 00:01:56,000
+So in this function, first we need
+
+30
+00:01:56,000 --> 00:02:00,000
+to validate the first argument. Earlier you learned about array
+
+31
+00:02:00,000 --> 00:02:04,000
+.isArray method, so we can pass this first argument
+
+32
+00:02:04,000 --> 00:02:08,000
+here, and if this is not a valid array,
+
+33
+00:02:08,000 --> 00:02:12,000
+we want to throw an exception. So throw new error
+
+34
+00:02:12,000 --> 00:02:16,000
+invalid array. We can add
+
+35
+00:02:16,000 --> 00:02:20,000
+any error messages here, it doesn't really matter. Now, we want
+
+36
+00:02:20,000 --> 00:02:24,000
+to wrap this code in the try catch block. So,
+
+37
+00:02:24,000 --> 00:02:28,000
+try we put these three lines there,
+
+38
+00:02:28,000 --> 00:02:32,000
+and then catch, here we add an
+
+39
+00:02:32,000 --> 00:02:36,000
+identifier for our exception, the error object that we are throwing
+
+40
+00:02:36,000 --> 00:02:40,000
+here, we get that and display
+
+41
+00:02:40,000 --> 00:02:44,000
+it's message property on the console.
+
+42
+00:02:44,000 --> 00:02:48,000
+Save the changes, and here's our error message.
+

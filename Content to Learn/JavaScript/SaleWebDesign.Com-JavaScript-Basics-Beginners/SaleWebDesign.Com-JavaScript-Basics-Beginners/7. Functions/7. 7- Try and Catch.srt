@@ -1,0 +1,336 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+In
+
+2
+00:00:04,000 --> 00:00:08,000
+the last lecture we assume that the value that we receive here is a
+
+3
+00:00:08,000 --> 00:00:12,000
+valid string. But what would happen if we pass
+
+4
+00:00:12,000 --> 00:00:16,000
+a boolean here? That doesn't make sense, right? So let's run this code
+
+5
+00:00:16,000 --> 00:00:20,000
+we get this error. Uncaught type
+
+6
+00:00:20,000 --> 00:00:24,000
+error, value.split is not a function. Because
+
+7
+00:00:24,000 --> 00:00:28,000
+split is a method that belongs to strings. Booleans don't have a
+
+8
+00:00:28,000 --> 00:00:32,000
+split method, right? What would happen if we pass null
+
+9
+00:00:32,000 --> 00:00:36,000
+or undefined? Save the changes, we get a different error.
+
+10
+00:00:36,000 --> 00:00:40,000
+Cannot read property split of null. Again, for the same
+
+11
+00:00:40,000 --> 00:00:44,000
+reason we cannot call the split method on a null, it's only available
+
+12
+00:00:44,000 --> 00:00:48,000
+on a string. So here we need to add error handling.
+
+13
+00:00:48,000 --> 00:00:52,000
+Typically, in situations like this, we should do error handling
+
+14
+00:00:52,000 --> 00:00:56,000
+at the beginning of a function or a method, this is what we call
+
+15
+00:00:56,000 --> 00:01:00,000
+defensive programming. So we want to make sure that the values coming in
+
+16
+00:01:00,000 --> 00:01:04,000
+are valid, they're in the right shape, so we can execute
+
+17
+00:01:04,000 --> 00:01:08,000
+our logic. So, the first line of this method should be something like this.
+
+18
+00:01:08,000 --> 00:01:12,000
+You want to make sure that this value is a string. So,
+
+19
+00:01:12,000 --> 00:01:16,000
+we can use the type of operator, with type of value.
+
+20
+00:01:16,000 --> 00:01:20,000
+isNot String, then, when simple appraoch
+
+21
+00:01:20,000 --> 00:01:24,000
+is to return and with this we'll no longer see
+
+22
+00:01:24,000 --> 00:01:28,000
+this error message here. Save the changes, so we can see the person object
+
+23
+00:01:28,000 --> 00:01:32,000
+with the original first name and last name. So what we passed here
+
+24
+00:01:32,000 --> 00:01:36,000
+null did not take effect. But sometimes we want to report an error
+
+25
+00:01:36,000 --> 00:01:40,000
+in our application. That's where we need to throw an exception.
+
+26
+00:01:40,000 --> 00:01:44,000
+Throwing an exception is a technical jargon that you might here in a lot of
+
+27
+00:01:44,000 --> 00:01:48,000
+programming languages. So let's see how that works in JavaScript.
+
+28
+00:01:48,000 --> 00:01:52,000
+So instead of returning from this method, use the
+
+29
+00:01:52,000 --> 00:01:56,000
+throw keyword and then create a new error object. So new
+
+30
+00:01:56,000 --> 00:02:00,000
+error, that looks familiar right, so error
+
+31
+00:02:00,000 --> 00:02:04,000
+as a constructor function, because here we have the pascal case.
+
+32
+00:02:04,000 --> 00:02:08,000
+And we're calling it, we're calling this function using the new operator
+
+33
+00:02:08,000 --> 00:02:12,000
+to create a new error object. Right? Now,
+
+34
+00:02:12,000 --> 00:02:16,000
+as an argument we can pass an error message. So
+
+35
+00:02:16,000 --> 00:02:20,000
+value is not a string.
+
+36
+00:02:20,000 --> 00:02:24,000
+This is how we throw an exception, now
+
+37
+00:02:24,000 --> 00:02:28,000
+some people confused errors with exceptions, but there is a slight difference between
+
+38
+00:02:28,000 --> 00:02:32,000
+the two, here we can create an error object,
+
+39
+00:02:32,000 --> 00:02:36,000
+let's call it e new error. This is just a plain JavaScript
+
+40
+00:02:36,000 --> 00:02:40,000
+object, there's nothing special about this. But the moment you throw
+
+41
+00:02:40,000 --> 00:02:44,000
+this error, we refer to that as an exception. So this is an exceptional
+
+42
+00:02:44,000 --> 00:02:48,000
+situation that should not have happened. Okay?
+
+43
+00:02:48,000 --> 00:02:52,000
+Now, in this method, we have some basic error handling,
+
+44
+00:02:52,000 --> 00:02:56,000
+so this method is throwing an exception, now somewhere else we need. to catch
+
+45
+00:02:56,000 --> 00:03:00,000
+that exception, we need to catch that, and quite often when we catch an
+
+46
+00:03:00,000 --> 00:03:04,000
+exception, we display an error to the user, so this is how
+
+47
+00:03:04,000 --> 00:03:08,000
+we accomplish this. Line 15 is where we receive
+
+48
+00:03:08,000 --> 00:03:12,000
+this exception, so we need to wrap this line, in a try block,
+
+49
+00:03:12,000 --> 00:03:16,000
+so, try, we move this line here,
+
+50
+00:03:16,000 --> 00:03:20,000
+so try block can have
+
+51
+00:03:20,000 --> 00:03:24,000
+1 or more statements, one of these statements at least can
+
+52
+00:03:24,000 --> 00:03:28,000
+throw an exception, now, we
+
+53
+00:03:28,000 --> 00:03:32,000
+add the catch block after, in parenthesis, we give an
+
+54
+00:03:32,000 --> 00:03:36,000
+identifier, this is the error object that we are throwing
+
+55
+00:03:36,000 --> 00:03:40,000
+here. So in the catch block we can get that error object and
+
+56
+00:03:40,000 --> 00:03:44,000
+do something with it. So here,
+
+57
+00:03:44,000 --> 00:03:48,000
+we can display it on the console, but as you know this is only
+
+58
+00:03:48,000 --> 00:03:52,000
+visible to developers, so an end user will not see this error, so
+
+59
+00:03:52,000 --> 00:03:56,000
+temporarily we can use the alert function, this is not something I'd
+
+60
+00:03:56,000 --> 00:04:00,000
+recommend you to do, because that's a very old and poor way of reporting errors to users.
+
+61
+00:04:00,000 --> 00:04:04,000
+The proper way is to display a label, perhaps a red label on
+
+62
+00:04:04,000 --> 00:04:08,000
+the user interface, but that's a topic for a future video, so for now
+
+63
+00:04:08,000 --> 00:04:12,000
+let's just use the built in alert function. Now,
+
+64
+00:04:12,000 --> 00:04:16,000
+save the changes, and here's our
+
+65
+00:04:16,000 --> 00:04:20,000
+alert. Value is not a string. Now,
+
+66
+00:04:20,000 --> 00:04:24,000
+let's take this to the next level. Instead of passing null, I'm going to pass
+
+67
+00:04:24,000 --> 00:04:28,000
+an empty string. Save the changes,
+
+68
+00:04:28,000 --> 00:04:32,000
+we don't get any errors, but first name is an empty string and
+
+69
+00:04:32,000 --> 00:04:36,000
+last name is undefined. Hm, again that's not desirable.
+
+70
+00:04:36,000 --> 00:04:40,000
+So, ideally we want to make sure that our user is typing a first name
+
+71
+00:04:40,000 --> 00:04:44,000
+and last name. So, when splitting that string,
+
+72
+00:04:44,000 --> 00:04:48,000
+we can check the length of this array, so,
+
+73
+00:04:48,000 --> 00:04:52,000
+if parts.length is not 2,
+
+74
+00:04:52,000 --> 00:04:56,000
+that means something is missing. So here we can throw another
+
+75
+00:04:56,000 --> 00:05:00,000
+exception. Throw new error,
+
+76
+00:05:00,000 --> 00:05:04,000
+with a different message. Enter a first and last
+
+77
+00:05:04,000 --> 00:05:08,000
+name. Okay,
+
+78
+00:05:08,000 --> 00:05:12,000
+now, save the changes, and here's
+
+79
+00:05:12,000 --> 00:05:16,000
+our new exception. Enter a first and last name. So,
+
+80
+00:05:16,000 --> 00:05:20,000
+basically when we throw an exception, the lines after the
+
+81
+00:05:20,000 --> 00:05:24,000
+throw statement are not executed. Will jump out of this method
+
+82
+00:05:24,000 --> 00:05:28,000
+and the control will move to the catch block. Here we catch
+
+83
+00:05:28,000 --> 00:05:32,000
+the exception, and do something with it. So this is the basic of error
+
+84
+00:05:32,000 --> 00:05:35,233
+handling in JavaScript.
+

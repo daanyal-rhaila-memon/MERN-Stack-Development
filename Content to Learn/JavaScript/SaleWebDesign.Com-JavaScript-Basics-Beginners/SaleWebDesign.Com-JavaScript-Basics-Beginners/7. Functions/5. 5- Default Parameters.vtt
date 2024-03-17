@@ -1,0 +1,222 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+There are times
+
+2
+00:00:04.000 --> 00:00:08.000
+that we want to supply default values to the parameters of a function.
+
+3
+00:00:08.000 --> 00:00:12.000
+For example, let's imagine we want to write a function for calculating
+
+4
+00:00:12.000 --> 00:00:16.000
+the total interest. So here we have there parameters,
+
+5
+00:00:16.000 --> 00:00:20.000
+principle, interest rate and years.
+
+6
+00:00:20.000 --> 00:00:24.000
+And here's the formula, to calculate the total interest. Principle
+
+7
+00:00:24.000 --> 00:00:28.000
+times rate divided by 100
+
+8
+00:00:28.000 --> 00:00:32.000
+times years. Now,
+
+9
+00:00:32.000 --> 00:00:36.000
+let's call this function, let's imagine the principle is 10,000 dollars
+
+10
+00:00:36.000 --> 00:00:40.000
+rate is 3.5 percent,
+
+11
+00:00:40.000 --> 00:00:44.000
+and we want to pay this back over 5 years. So let's log
+
+12
+00:00:44.000 --> 00:00:48.000
+this on the console, so the total interest we have
+
+13
+00:00:48.000 --> 00:00:52.000
+to pay is just over 1700. Now,
+
+14
+00:00:52.000 --> 00:00:56.000
+what if we want to have default values for an interest rate and
+
+15
+00:00:56.000 --> 00:01:00.000
+the number of years. Well, earlier in this section about
+
+16
+00:01:00.000 --> 00:01:04.000
+operators, I showed you a technique like this. So rate
+
+17
+00:01:04.000 --> 00:01:08.000
+equals rate or 3.5.
+
+18
+00:01:08.000 --> 00:01:12.000
+So if rate has a value, if it's truthy,
+
+19
+00:01:12.000 --> 00:01:16.000
+we're going to use that, otherwise we're going to use 3.5.
+
+20
+00:01:16.000 --> 00:01:20.000
+So we can use the logical or operator to get a variable
+
+21
+00:01:20.000 --> 00:01:24.000
+a default value, similarly we can set
+
+22
+00:01:24.000 --> 00:01:28.000
+years, years or 5.
+
+23
+00:01:28.000 --> 00:01:32.000
+With this, if we exclude these arguments, those default values
+
+24
+00:01:32.000 --> 00:01:36.000
+will be used. So I'm going to delete these, save the changes,
+
+25
+00:01:36.000 --> 00:01:40.000
+and see we still get the same result. But starting from ES6,
+
+26
+00:01:40.000 --> 00:01:44.000
+we have a cleaner way to actually have the same thing. So instead of having
+
+27
+00:01:44.000 --> 00:01:48.000
+these logical expressions, we can set the default values
+
+28
+00:01:48.000 --> 00:01:52.000
+right here. So, we set to rate to 3.5,
+
+29
+00:01:52.000 --> 00:01:56.000
+and years to 5. And now we can delete
+
+30
+00:01:56.000 --> 00:02:00.000
+these two lines, save the changes, you still get the same result,
+
+31
+00:02:00.000 --> 00:02:04.000
+So we can see that setting the default value for function parameters
+
+32
+00:02:04.000 --> 00:02:08.000
+is really easy. There is just one caveat here, once you give a
+
+33
+00:02:08.000 --> 00:02:12.000
+parameter a default value, you should also give all the
+
+34
+00:02:12.000 --> 00:02:16.000
+other parameters after that a default value. For example, let's see what
+
+35
+00:02:16.000 --> 00:02:20.000
+happens if we set the default value for rate, but not years.
+
+36
+00:02:20.000 --> 00:02:24.000
+When we save the changes, we get not a number,
+
+37
+00:02:24.000 --> 00:02:28.000
+because we past 10,000, so principle is 10,000, rate
+
+38
+00:02:28.000 --> 00:02:32.000
+is by default 3.5 But years doesn't have a value,
+
+39
+00:02:32.000 --> 00:02:36.000
+so it's undefined. That's why the result of this expression is
+
+40
+00:02:36.000 --> 00:02:40.000
+not a number. Now what if we passed 5 for the
+
+41
+00:02:40.000 --> 00:02:44.000
+years? Well this is confusing for the JavaScript engine because it
+
+42
+00:02:44.000 --> 00:02:48.000
+doesn't know if 5 should be used for rate or
+
+43
+00:02:48.000 --> 00:02:52.000
+the years. So if I save the changes, you still
+
+44
+00:02:52.000 --> 00:02:56.000
+get the same result, not a number. Because in this case 5 is
+
+45
+00:02:56.000 --> 00:03:00.000
+used for the rate, but years is still undefined. Now there is
+
+46
+00:03:00.000 --> 00:03:04.000
+a trick around this, so, we can pass undefined for
+
+47
+00:03:04.000 --> 00:03:08.000
+the second parameter, and with this, rate will be set to
+
+48
+00:03:08.000 --> 00:03:12.000
+3.5 and years will be set to 5, now
+
+49
+00:03:12.000 --> 00:03:16.000
+we get the same result as before. But code like this is really ugly.
+
+50
+00:03:16.000 --> 00:03:20.000
+Somebody looking at this code, they wonder, what is this undefined? They have to look
+
+51
+00:03:20.000 --> 00:03:24.000
+at the function to figure out what parameter is associated
+
+52
+00:03:24.000 --> 00:03:28.000
+with undefined? So as a best practice, whenever you want to give
+
+53
+00:03:28.000 --> 00:03:32.000
+the function parameter a default value, make sure that that parameter is
+
+54
+00:03:32.000 --> 00:03:36.000
+the last parameter in the list, or give all the parameters after
+
+55
+00:03:36.000 --> 00:03:40.000
+that a default value.
+

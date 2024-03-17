@@ -1,0 +1,200 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+So you have
+
+2
+00:00:04,000 --> 00:00:08,000
+learned a little bit about functions in JavaScript, in this section, we're going
+
+3
+00:00:08,000 --> 00:00:12,000
+to examine functions in more detail. So I'm going to start
+
+4
+00:00:12,000 --> 00:00:16,000
+defining a function called walk and
+
+5
+00:00:16,000 --> 00:00:20,000
+here we do a console.log of
+
+6
+00:00:20,000 --> 00:00:24,000
+walk. What we have here is what we refer to as
+
+7
+00:00:24,000 --> 00:00:28,000
+a function declaration.
+
+8
+00:00:28,000 --> 00:00:32,000
+But in JavaScript there is another way to define a function,
+
+9
+00:00:32,000 --> 00:00:36,000
+and that is using a function expression. So
+
+10
+00:00:36,000 --> 00:00:40,000
+we start by declaring a variable or a constant
+
+11
+00:00:40,000 --> 00:00:44,000
+give it a name like run and then we set that to
+
+12
+00:00:44,000 --> 00:00:48,000
+a function. So just like we can set a variable to
+
+13
+00:00:48,000 --> 00:00:52,000
+a number, or a string, or an object,
+
+14
+00:00:52,000 --> 00:00:56,000
+we can also set it to a function. And you know that in JavaScript
+
+15
+00:00:56,000 --> 00:01:00,000
+functions are objects. So setting the
+
+16
+00:01:00,000 --> 00:01:04,000
+variable to a function is similar to setting it to an object, okay?
+
+17
+00:01:04,000 --> 00:01:08,000
+And at the end here we need to add a semi colon, because when
+
+18
+00:01:08,000 --> 00:01:12,000
+ever we declare a variable or a constant, we terminate this statement,
+
+19
+00:01:12,000 --> 00:01:16,000
+with a semi colon. So here's another example. We set x to 1,
+
+20
+00:01:16,000 --> 00:01:20,000
+and terminate it with a semi colon. In contrast,
+
+21
+00:01:20,000 --> 00:01:24,000
+we don't put the semi colon when we define a function using the function
+
+22
+00:01:24,000 --> 00:01:28,000
+declaration syntax, it doesn't really matter, so if you run this code
+
+23
+00:01:28,000 --> 00:01:32,000
+you're not going to get any errors, but by convention, we don't do
+
+24
+00:01:32,000 --> 00:01:36,000
+this. So that's one difference between function declarations and
+
+25
+00:01:36,000 --> 00:01:40,000
+function expressions. Now, let's do a console.
+
+26
+00:01:40,000 --> 00:01:44,000
+log, of run here.
+
+27
+00:01:44,000 --> 00:01:48,000
+So basically here we have defined a function, and this function
+
+28
+00:01:48,000 --> 00:01:52,000
+does not have a name. Its syntax is very similar to what
+
+29
+00:01:52,000 --> 00:01:56,000
+we have in a function declaration, except that here we don't have a name,
+
+30
+00:01:56,000 --> 00:02:00,000
+we can give it a name and then we would refer to this as
+
+31
+00:02:00,000 --> 00:02:04,000
+a named function expression. Or we can exclude
+
+32
+00:02:04,000 --> 00:02:08,000
+the name and with this we have
+
+33
+00:02:08,000 --> 00:02:12,000
+an anonymous function expression. So we have defined
+
+34
+00:02:12,000 --> 00:02:16,000
+an anonymous function that doesn't have a name, and set run
+
+35
+00:02:16,000 --> 00:02:20,000
+to reference that function. So now we can call that
+
+36
+00:02:20,000 --> 00:02:24,000
+anonymous function using this reference.
+
+37
+00:02:24,000 --> 00:02:28,000
+Just like how we call a function in JavaScript. So, save the changes,
+
+38
+00:02:28,000 --> 00:02:32,000
+and we get the run message on the console. Now we can declare
+
+39
+00:02:32,000 --> 00:02:36,000
+another variable, call it move, and set it to
+
+40
+00:02:36,000 --> 00:02:40,000
+run. So now both move and run are
+
+41
+00:02:40,000 --> 00:02:44,000
+referencing the same anonymous function, which is one object
+
+42
+00:02:44,000 --> 00:02:48,000
+in memory. So we can call that anonymous function using
+
+43
+00:02:48,000 --> 00:02:52,000
+this other reference. So if we call move,
+
+44
+00:02:52,000 --> 00:02:56,000
+we get the same result. So to recap, in JavaScript
+
+45
+00:02:56,000 --> 00:03:00,000
+there are two ways to define a function, we can use the function declaration
+
+46
+00:03:00,000 --> 00:03:04,000
+syntax, or function expression which basically
+
+47
+00:03:04,000 --> 00:03:08,000
+involves declaring a variable or a constant
+
+48
+00:03:08,000 --> 00:03:12,000
+and then setting it to a function. In the next lecture,
+
+49
+00:03:12,000 --> 00:03:16,000
+we'll look at the key difference between a function declaration, and a
+
+50
+00:03:16,000 --> 00:03:18,800
+function expression.
+

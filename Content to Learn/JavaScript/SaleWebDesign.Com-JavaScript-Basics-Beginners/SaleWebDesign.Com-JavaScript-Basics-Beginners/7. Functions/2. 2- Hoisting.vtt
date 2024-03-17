@@ -1,0 +1,118 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+In the last lecture
+
+2
+00:00:04.000 --> 00:00:08.000
+you learned about function declaration and expression. Now
+
+3
+00:00:08.000 --> 00:00:12.000
+the key difference between these two functions, is we can call this function
+
+4
+00:00:12.000 --> 00:00:16.000
+the one that is defined using the function declaration syntax,
+
+5
+00:00:16.000 --> 00:00:20.000
+before it is defined. So here, we can call
+
+6
+00:00:20.000 --> 00:00:24.000
+walk, save the changes, and we get this message
+
+7
+00:00:24.000 --> 00:00:28.000
+on the console. But we cannot do this without a function that is
+
+8
+00:00:28.000 --> 00:00:32.000
+defined using the function expression syntax. So here,
+
+9
+00:00:32.000 --> 00:00:36.000
+if I call run before it is initialized
+
+10
+00:00:36.000 --> 00:00:40.000
+I get this error. Uncaught reference
+
+11
+00:00:40.000 --> 00:00:44.000
+error. Run is not defined. This is exactly like using
+
+12
+00:00:44.000 --> 00:00:48.000
+a variable or a constant before it is defined. For example,
+
+13
+00:00:48.000 --> 00:00:52.000
+here I'm going to define x,
+
+14
+00:00:52.000 --> 00:00:56.000
+and set it to 1, but I want to log it on the console,
+
+15
+00:00:56.000 --> 00:01:00.000
+before it's declaration. Look, we get
+
+16
+00:01:00.000 --> 00:01:04.000
+the same error. Reference error, x is not defined.
+
+17
+00:01:04.000 --> 00:01:08.000
+So,
+
+18
+00:01:08.000 --> 00:01:12.000
+we can call a function that is defined using the function declaration
+
+19
+00:01:12.000 --> 00:01:16.000
+syntax before it's definition, but why is that?
+
+20
+00:01:16.000 --> 00:01:20.000
+The reason for this is because when our JavaScript engine executes
+
+21
+00:01:20.000 --> 00:01:24.000
+this code, it moves all the function declarations to the
+
+22
+00:01:24.000 --> 00:01:28.000
+top, so our code will look like this at run time.
+
+23
+00:01:28.000 --> 00:01:32.000
+This is what we call hoisting. So if you are
+
+24
+00:01:32.000 --> 00:01:36.000
+at a job interview and someone asks you "what is hoisting in JavaScript?"
+
+25
+00:01:36.000 --> 00:01:40.000
+Hoisting is the process of moving function declarations to the top
+
+26
+00:01:40.000 --> 00:01:44.000
+of the file. And this is done automatically by the JavaScript
+
+27
+00:01:44.000 --> 00:01:48.000
+engine that is executing this code. So that's the reason we can
+
+28
+00:01:48.000 --> 00:01:52.000
+call functions that are defined using the function declaration syntax
+
+29
+00:01:52.000 --> 00:01:56.000
+before their definition.
+

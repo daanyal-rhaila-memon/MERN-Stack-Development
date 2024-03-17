@@ -1,0 +1,440 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+In this lecture, we're going to have a
+
+2
+00:00:04,000 --> 00:00:08,000
+closer look at the this keyword in JavaScript, this is one of those features
+
+3
+00:00:08,000 --> 00:00:12,000
+that confuses a lot of developers, but honestly, I think it's because
+
+4
+00:00:12,000 --> 00:00:16,000
+of the poor teaching materials out there, because I personally was
+
+5
+00:00:16,000 --> 00:00:20,000
+confused about the this keyword for a long time. So in this lecture I'm going to
+
+6
+00:00:20,000 --> 00:00:24,000
+make it super simple for you, so you can explain it to your 7 year old brother.
+
+7
+00:00:24,000 --> 00:00:28,000
+So what is this? This references the
+
+8
+00:00:28,000 --> 00:00:32,000
+object that is executing the current function. Here I'm going to
+
+9
+00:00:32,000 --> 00:00:36,000
+give you a very simple rule of thumb. If the function
+
+10
+00:00:36,000 --> 00:00:40,000
+is part of an object, we call that function a method, right? So if that function
+
+11
+00:00:40,000 --> 00:00:44,000
+is a method in an object, this references that object
+
+12
+00:00:44,000 --> 00:00:48,000
+itself. Othewise if that function is a regular
+
+13
+00:00:48,000 --> 00:00:52,000
+function, which means it's part of an object, this
+
+14
+00:00:52,000 --> 00:00:56,000
+means the global object, which is the window object in browsers
+
+15
+00:00:56,000 --> 00:01:00,000
+and global in Node. Let's take a look at a few examples.
+
+16
+00:01:00,000 --> 00:01:04,000
+So, I'm going to start by creating a video object,
+
+17
+00:01:04,000 --> 00:01:08,000
+in this object we're going to have a title property and
+
+18
+00:01:08,000 --> 00:01:12,000
+a play method. Let's log this
+
+19
+00:01:12,000 --> 00:01:16,000
+here, and finally call video.play.
+
+20
+00:01:16,000 --> 00:01:20,000
+Save the changes, so we get our video object
+
+21
+00:01:20,000 --> 00:01:24,000
+on the console. So in this example, because
+
+22
+00:01:24,000 --> 00:01:28,000
+play is a method in the video object, this references
+
+23
+00:01:28,000 --> 00:01:32,000
+this object itself. By the same token, we can add
+
+24
+00:01:32,000 --> 00:01:36,000
+method later in this object, and we'll get the same result. For example,
+
+25
+00:01:36,000 --> 00:01:40,000
+we can add a stop method here, set it to a function,
+
+26
+00:01:40,000 --> 00:01:44,000
+and here we can do console
+
+27
+00:01:44,000 --> 00:01:48,000
+.log of this, if we call the
+
+28
+00:01:48,000 --> 00:01:52,000
+stop method, once again we're going to see the video object
+
+29
+00:01:52,000 --> 00:01:56,000
+on the console. So save the changes and here is our
+
+30
+00:01:56,000 --> 00:02:00,000
+video object. Because again, stop is
+
+31
+00:02:00,000 --> 00:02:04,000
+a method in the video object. So that's an example
+
+32
+00:02:04,000 --> 00:02:08,000
+of the first rule. Now let's take a look at an example of
+
+33
+00:02:08,000 --> 00:02:12,000
+the second rule. A regular function. So let's delete
+
+34
+00:02:12,000 --> 00:02:16,000
+this, and instead add a function called
+
+35
+00:02:16,000 --> 00:02:20,000
+playVideo. If we log this
+
+36
+00:02:20,000 --> 00:02:24,000
+on the console, we're going to see the global object which is window
+
+37
+00:02:24,000 --> 00:02:28,000
+in browsers and global in Node. So let's call this function
+
+38
+00:02:28,000 --> 00:02:32,000
+playVideo and save the changes so we get
+
+39
+00:02:32,000 --> 00:02:36,000
+the window object here. Now what if this is a constructor function?
+
+40
+00:02:36,000 --> 00:02:40,000
+We call the constructor functions using the new operator.
+
+41
+00:02:40,000 --> 00:02:44,000
+So, let's rename play video to video
+
+42
+00:02:44,000 --> 00:02:48,000
+with a capitol V, that's the convention for constructor functions,
+
+43
+00:02:48,000 --> 00:02:52,000
+now here we're going to pass a title property,
+
+44
+00:02:52,000 --> 00:02:56,000
+and set this.title, title. Now we can
+
+45
+00:02:56,000 --> 00:03:00,000
+use this constructor function to create a new video object.
+
+46
+00:03:00,000 --> 00:03:04,000
+So we use the new operator, save the changes,
+
+47
+00:03:04,000 --> 00:03:08,000
+oops, I forgot to pass a title here, that's the title,
+
+48
+00:03:08,000 --> 00:03:12,000
+so, what do we get here, instead of a window object,
+
+49
+00:03:12,000 --> 00:03:16,000
+we get a new object. The note that this object is not, this video
+
+50
+00:03:16,000 --> 00:03:20,000
+object here is completely separate. To demonstrate this I'm going to change
+
+51
+00:03:20,000 --> 00:03:24,000
+this argument to b, so, instead of the window
+
+52
+00:03:24,000 --> 00:03:28,000
+object, we get this video object,
+
+53
+00:03:28,000 --> 00:03:32,000
+because earlier in the course I told you that when you use the new operator
+
+54
+00:03:32,000 --> 00:03:36,000
+this new operator creates a new empty object
+
+55
+00:03:36,000 --> 00:03:40,000
+like this, and sets this in this
+
+56
+00:03:40,000 --> 00:03:44,000
+constructor function to point to this empty object. So,
+
+57
+00:03:44,000 --> 00:03:48,000
+here on line 12, we add the title property to this new object.
+
+58
+00:03:48,000 --> 00:03:52,000
+So let's recap. When dealing with a regular function,
+
+59
+00:03:52,000 --> 00:03:56,000
+this by default references the global object,
+
+60
+00:03:56,000 --> 00:04:00,000
+but if you call a function, using the new operator, which is the case
+
+61
+00:04:00,000 --> 00:04:04,000
+for constructor functions, this will reference a new
+
+62
+00:04:04,000 --> 00:04:08,000
+empty object. Now the last example.
+
+63
+00:04:08,000 --> 00:04:12,000
+I'm going to clean up this code. Let's add
+
+64
+00:04:12,000 --> 00:04:16,000
+another property in this object, tags, we set it
+
+65
+00:04:16,000 --> 00:04:20,000
+to an array of 3 strings.
+
+66
+00:04:20,000 --> 00:04:24,000
+Now let's rename the play method to showTags
+
+67
+00:04:24,000 --> 00:04:28,000
+so here you can use this to get the current object,
+
+68
+00:04:28,000 --> 00:04:32,000
+and then get the tags property, because this is an array
+
+69
+00:04:32,000 --> 00:04:36,000
+we can call the forEach method, and here we need to pass
+
+70
+00:04:36,000 --> 00:04:40,000
+a callback function. So function, in each
+
+71
+00:04:40,000 --> 00:04:44,000
+iteration this function will get a tag, and then we can
+
+72
+00:04:44,000 --> 00:04:48,000
+display the tag on the console. So console.log of
+
+73
+00:04:48,000 --> 00:04:52,000
+tag. Finally, let's call video.showTags.
+
+74
+00:04:52,000 --> 00:04:56,000
+Save the changes, so we get a, b, c. Beautiful.
+
+75
+00:04:56,000 --> 00:05:00,000
+But what if we want to display the title of the video next to
+
+76
+00:05:00,000 --> 00:05:04,000
+each tag? Well, you can add this.title
+
+77
+00:05:04,000 --> 00:05:08,000
+here, save the changes, you've got undefined.
+
+78
+00:05:08,000 --> 00:05:12,000
+What's going on here? Well, let's remove the title
+
+79
+00:05:12,000 --> 00:05:16,000
+property and see what this is referencing.
+
+80
+00:05:16,000 --> 00:05:20,000
+Save the changes, it's referencing the window object, but aren't
+
+81
+00:05:20,000 --> 00:05:24,000
+we inside a video object here? Shouldn't this
+
+82
+00:05:24,000 --> 00:05:28,000
+reference the video object? No, because here we are
+
+83
+00:05:28,000 --> 00:05:32,000
+inside this callback function, this function is just
+
+84
+00:05:32,000 --> 00:05:36,000
+a regular function. It's not a method in the video object.
+
+85
+00:05:36,000 --> 00:05:40,000
+The only method we have here is showTags.
+
+86
+00:05:40,000 --> 00:05:44,000
+So because this is a regular function, this
+
+87
+00:05:44,000 --> 00:05:48,000
+references the global object. So it's the global object that is executing
+
+88
+00:05:48,000 --> 00:05:52,000
+this anonymous callback function. But how can we
+
+89
+00:05:52,000 --> 00:05:56,000
+solve this problem and display the title of the video next to each tag?
+
+90
+00:05:56,000 --> 00:06:00,000
+Well, we have a few different solutions for this, in this
+
+91
+00:06:00,000 --> 00:06:04,000
+particular case, the for each method has two parameters,
+
+92
+00:06:04,000 --> 00:06:08,000
+the first parameter is our callback function, the second parameter
+
+93
+00:06:08,000 --> 00:06:12,000
+is thisArg? So
+
+94
+00:06:12,000 --> 00:06:16,000
+we can pass an object here, and this will reference that
+
+95
+00:06:16,000 --> 00:06:20,000
+object. For example, here I can pass a new object,
+
+96
+00:06:20,000 --> 00:06:24,000
+the firstName, set to Mosh,
+
+97
+00:06:24,000 --> 00:06:28,000
+now when we save the changes, we can see this
+
+98
+00:06:28,000 --> 00:06:32,000
+is referencing this new object. Now in this example, we don't really want
+
+99
+00:06:32,000 --> 00:06:36,000
+this object, we want our video object. So we can pass
+
+100
+00:06:36,000 --> 00:06:40,000
+this here. Because at this point, we are
+
+101
+00:06:40,000 --> 00:06:44,000
+in the showTags method, so this references the current object.
+
+102
+00:06:44,000 --> 00:06:48,000
+So here we are not inside of a callback function.
+
+103
+00:06:48,000 --> 00:06:52,000
+We are still in the execution context of the showTags
+
+104
+00:06:52,000 --> 00:06:56,000
+method. So now if you save the changes,
+
+105
+00:06:56,000 --> 00:07:00,000
+next to each tag we can see our video object with this title
+
+106
+00:07:00,000 --> 00:07:04,000
+property, so we can add the title property here,
+
+107
+00:07:04,000 --> 00:07:08,000
+and with this, we see the title of the video next
+
+108
+00:07:08,000 --> 00:07:12,000
+to each tag, beautiful. But not all methods in JavaScript
+
+109
+00:07:12,000 --> 00:07:16,000
+give you the ability to pass the this argument.
+
+110
+00:07:16,000 --> 00:07:20,000
+So we have a few different solutions for that, and that's the topic for the next lecture.
+

@@ -1,0 +1,280 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+In
+
+2
+00:00:04,000 --> 00:00:08,000
+modern JavaScript, if you want to have a function with a varying number of parameters
+
+3
+00:00:08,000 --> 00:00:12,000
+you can use the rest operator. Let me show you how that
+
+4
+00:00:12,000 --> 00:00:16,000
+works. So here we modify the declaration of this function.
+
+5
+00:00:16,000 --> 00:00:20,000
+Add a parameter, let's call it args, and then prefix it
+
+6
+00:00:20,000 --> 00:00:24,000
+with ... This is what we call the rest
+
+7
+00:00:24,000 --> 00:00:28,000
+operator. Now don't confuse this with the spread operator, because
+
+8
+00:00:28,000 --> 00:00:32,000
+spread operator looks exactly the same. Earlier we used the spread
+
+9
+00:00:32,000 --> 00:00:36,000
+operator with arrays. So with the spread operator we can spread
+
+10
+00:00:36,000 --> 00:00:40,000
+an array which basically means take in it's individual elements.
+
+11
+00:00:40,000 --> 00:00:44,000
+But when we use this along with the parameter of a function,
+
+12
+00:00:44,000 --> 00:00:48,000
+you refer to this as the rest operator. And you will know why
+
+13
+00:00:48,000 --> 00:00:52,000
+this is called rest in a second. So, let's see how the
+
+14
+00:00:52,000 --> 00:00:56,000
+rest operator works. I'm going to delete all this code. And simply
+
+15
+00:00:56,000 --> 00:01:00,000
+do a console.log of args. So here we
+
+16
+00:01:00,000 --> 00:01:04,000
+call in this function with 6 arguments, save the changes,
+
+17
+00:01:04,000 --> 00:01:08,000
+now here on the console, you can see args is an array
+
+18
+00:01:08,000 --> 00:01:12,000
+of 6 elements. This is a real array. Note that if I remove
+
+19
+00:01:12,000 --> 00:01:16,000
+these three dots, that basically means this function has a single parameter
+
+20
+00:01:16,000 --> 00:01:20,000
+called args. So when I save the changes, instead of
+
+21
+00:01:20,000 --> 00:01:24,000
+this array you're going to see one, because the first argument
+
+22
+00:01:24,000 --> 00:01:28,000
+passing through this function is 1. Save the changes, you get 1.
+
+23
+00:01:28,000 --> 00:01:32,000
+So here's the lesson. When we apply the rest operator
+
+24
+00:01:32,000 --> 00:01:36,000
+to a parameter of a function, we can pass a varying number of
+
+25
+00:01:36,000 --> 00:01:40,000
+arguments and the rest operator will take all of them and
+
+26
+00:01:40,000 --> 00:01:44,000
+put them in an array. Now if you want to get the sum of all the
+
+27
+00:01:44,000 --> 00:01:48,000
+numbers in an array, we can use the reduce method. You learn about that in
+
+28
+00:01:48,000 --> 00:01:52,000
+the section about arrays. So args is an array, we can
+
+29
+00:01:52,000 --> 00:01:56,000
+call the reduce method and pass an arrow function here.
+
+30
+00:01:56,000 --> 00:02:00,000
+A and b, goes to a
+
+31
+00:02:00,000 --> 00:02:04,000
+plus b. You've done this before, right? So, you'd simply return
+
+32
+00:02:04,000 --> 00:02:08,000
+the result. Save the changes, and we get
+
+33
+00:02:08,000 --> 00:02:12,000
+25. So you see in modern JavaScript we can achieve the same
+
+34
+00:02:12,000 --> 00:02:16,000
+functionality with less code. Instead of defining a
+
+35
+00:02:16,000 --> 00:02:20,000
+total variable, setting it to 0, and then looping over
+
+36
+00:02:20,000 --> 00:02:24,000
+the arguments object can have 1 line of code that gives us the
+
+37
+00:02:24,000 --> 00:02:28,000
+same thing. This is more elegant and more professional. Now let's
+
+38
+00:02:28,000 --> 00:02:32,000
+take this example to the next level. Imagine we're going to use this function
+
+39
+00:02:32,000 --> 00:02:36,000
+to calculate the total costs of items in a shopping cart.
+
+40
+00:02:36,000 --> 00:02:40,000
+Here, let's say we want to have a discount factor,
+
+41
+00:02:40,000 --> 00:02:44,000
+so I'm going to add a parameter here, discount,
+
+42
+00:02:44,000 --> 00:02:48,000
+and then rename args to let's say
+
+43
+00:02:48,000 --> 00:02:52,000
+prices. So we're passing the price of all the items,
+
+44
+00:02:52,000 --> 00:02:56,000
+in a shopping cart, now let's change line 8 where
+
+45
+00:02:56,000 --> 00:03:00,000
+we call the sum function, let's say we're going to pass
+
+46
+00:03:00,000 --> 00:03:04,000
+0.1 or 10% for the discount, and
+
+47
+00:03:04,000 --> 00:03:08,000
+we have two products in our shopping cart, we have prices 20
+
+48
+00:03:08,000 --> 00:03:12,000
+and 30 dollars. So here, instead of returning
+
+49
+00:03:12,000 --> 00:03:16,000
+the sum of all the items in the prices array,
+
+50
+00:03:16,000 --> 00:03:20,000
+we're going to store the sum here, in total we don't
+
+51
+00:03:20,000 --> 00:03:24,000
+need this anymore. And then we want to return total
+
+52
+00:03:24,000 --> 00:03:28,000
+times 1 - discount.
+
+53
+00:03:28,000 --> 00:03:32,000
+So if discount is 0.1 subtract it from
+
+54
+00:03:32,000 --> 00:03:36,000
+1, we get 0.9. Then we multiply it by the total
+
+55
+00:03:36,000 --> 00:03:40,000
+and this will return the final price after the discount
+
+56
+00:03:40,000 --> 00:03:44,000
+is applied. Save the changes, so we get 45.
+
+57
+00:03:44,000 --> 00:03:48,000
+Now let me show you something, I'm going to add 1 parameter
+
+58
+00:03:48,000 --> 00:03:52,000
+after prices. Let's call that some
+
+59
+00:03:52,000 --> 00:03:56,000
+Value. Now on line 7 where we call this function,
+
+60
+00:03:56,000 --> 00:04:00,000
+let's pass a new value like 1, save the changes,
+
+61
+00:04:00,000 --> 00:04:04,000
+we get this error. Rest parameter must be last
+
+62
+00:04:04,000 --> 00:04:08,000
+formal paramter. So we cannot have a parameter after
+
+63
+00:04:08,000 --> 00:04:12,000
+using the rest operator so here prices is
+
+64
+00:04:12,000 --> 00:04:16,000
+the rest parameter, so it should be the last parameter in the function.
+
+65
+00:04:16,000 --> 00:04:20,000
+Let's remove this and this is the reason
+
+66
+00:04:20,000 --> 00:04:24,000
+we call the rest. Because we can have 0 or more
+
+67
+00:04:24,000 --> 00:04:28,000
+parameters before this, in this case we have discount, so we have discount
+
+68
+00:04:28,000 --> 00:04:32,000
+and the rest of the parameters, or the rest of the arguments that have
+
+69
+00:04:32,000 --> 00:04:36,000
+passed to this function. That's the reason this operator is called the rest
+
+70
+00:04:36,000 --> 00:04:38,933
+operator.
+

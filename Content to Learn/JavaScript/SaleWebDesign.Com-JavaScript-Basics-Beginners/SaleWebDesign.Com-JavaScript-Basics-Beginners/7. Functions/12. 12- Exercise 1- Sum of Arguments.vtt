@@ -1,0 +1,218 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+Now
+
+2
+00:00:04.000 --> 00:00:08.000
+it's time to practice what you've learned in this section. So here's your first exercise.
+
+3
+00:00:08.000 --> 00:00:12.000
+I want you to create a function called some that
+
+4
+00:00:12.000 --> 00:00:16.000
+takes a varying number of arguments, and returns their sum.
+
+5
+00:00:16.000 --> 00:00:20.000
+We can pass 1 argument or 2 or 3 or more. So here
+
+6
+00:00:20.000 --> 00:00:24.000
+we should get 10. So do this first, then
+
+7
+00:00:24.000 --> 00:00:28.000
+challenge yourself to modify the sum function to be able
+
+8
+00:00:28.000 --> 00:00:32.000
+to accept an array and still return the same
+
+9
+00:00:32.000 --> 00:00:36.000
+result. Now as part of this challenge, you need to
+
+10
+00:00:36.000 --> 00:00:40.000
+detect if the argument is passed is an array.
+
+11
+00:00:40.000 --> 00:00:44.000
+To do that, we use array.isArray method.
+
+12
+00:00:44.000 --> 00:00:48.000
+So let me how you how this works. We can call array.
+
+13
+00:00:48.000 --> 00:00:52.000
+isArray. If we pass an array object, we get true,
+
+14
+00:00:52.000 --> 00:00:56.000
+if we pass anything else like a regular object we get false.
+
+15
+00:00:56.000 --> 00:01:00.000
+So pause the video, when you're done, come back and continue watching.
+
+16
+00:01:04.000 --> 00:01:08.000
+Alright, let's create this function called some.
+
+17
+00:01:08.000 --> 00:01:12.000
+Now to have a varying number of parameters, we use the rest operator.
+
+18
+00:01:12.000 --> 00:01:16.000
+So...items. Now we can pass as
+
+19
+00:01:16.000 --> 00:01:20.000
+many arguments as we want, and this spread operator will convert
+
+20
+00:01:20.000 --> 00:01:24.000
+them all to an array. So we have an array
+
+21
+00:01:24.000 --> 00:01:28.000
+to get the sum of items in an array we can use the reduce method.
+
+22
+00:01:28.000 --> 00:01:32.000
+So, items.reduce, we pass an arrow function
+
+23
+00:01:32.000 --> 00:01:36.000
+a and b, goes to a + b,
+
+24
+00:01:36.000 --> 00:01:40.000
+and finally you return the result. Now, let's call
+
+25
+00:01:40.000 --> 00:01:44.000
+this function, so console.log, of
+
+26
+00:01:44.000 --> 00:01:48.000
+sum of 1, 2, 3, 4, save the changes,
+
+27
+00:01:48.000 --> 00:01:52.000
+we get 10, beautiful. Now let's work on the challenge.
+
+28
+00:01:52.000 --> 00:01:56.000
+So if you pass these arguments in an array,
+
+29
+00:01:56.000 --> 00:02:00.000
+with the current implementation, instead of getting 10, we
+
+30
+00:02:00.000 --> 00:02:04.000
+get the array itself. Let's see why this is happening, so,
+
+31
+00:02:04.000 --> 00:02:08.000
+in this function, I'm going to log items,
+
+32
+00:02:08.000 --> 00:02:12.000
+save the changes, so items is an array of
+
+33
+00:02:12.000 --> 00:02:16.000
+arrays. Note here we have an array, and the first element
+
+34
+00:02:16.000 --> 00:02:20.000
+within this array is this array of numbers. Because I told you
+
+35
+00:02:20.000 --> 00:02:24.000
+that the rest operator converts whatever we pass here into an
+
+36
+00:02:24.000 --> 00:02:28.000
+array. So because we are passing an array of 4 numbers.
+
+37
+00:02:28.000 --> 00:02:32.000
+This rest operator will put this array inside of
+
+38
+00:02:32.000 --> 00:02:36.000
+another array, and that's why we don't get the sum of these arguments.
+
+39
+00:02:36.000 --> 00:02:40.000
+How can we solve this issue? Well we need to check to see
+
+40
+00:02:40.000 --> 00:02:44.000
+if this items array has a single element, and the first
+
+41
+00:02:44.000 --> 00:02:48.000
+element is an array itself. So,
+
+42
+00:02:48.000 --> 00:02:52.000
+you can do something like this. If items
+
+43
+00:02:52.000 --> 00:02:56.000
+.length = 1. And
+
+44
+00:02:56.000 --> 00:03:00.000
+you want to see if the first item is an array, so array.
+
+45
+00:03:00.000 --> 00:03:04.000
+isArray, we pass items of 0, if
+
+46
+00:03:04.000 --> 00:03:08.000
+that's the case, we need to flatten this structure. So
+
+47
+00:03:08.000 --> 00:03:12.000
+instead of having an array of arrays, we want to have just an array of
+
+48
+00:03:12.000 --> 00:03:16.000
+numbers. How do we do that? We use the spread operator.
+
+49
+00:03:16.000 --> 00:03:20.000
+So, you reset the items to a new array
+
+50
+00:03:20.000 --> 00:03:24.000
+and we use the spread operator to spread items of 0,
+
+51
+00:03:24.000 --> 00:03:28.000
+which is another array. That's the array we have here, right?
+
+52
+00:03:28.000 --> 00:03:32.000
+Now, let's save the changes, we get 10,
+
+53
+00:03:32.000 --> 00:03:36.000
+beautiful, so, we can pass an array to our function,
+
+54
+00:03:36.000 --> 00:03:40.000
+or individual arguments, and either way we get their sum.
+
