@@ -1,0 +1,130 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+Alright here's the
+
+2
+00:00:04.000 --> 00:00:08.000
+third exercise. So we have this numbers array, and a functon
+
+3
+00:00:08.000 --> 00:00:12.000
+called except that takes an array and another
+
+4
+00:00:12.000 --> 00:00:16.000
+array and in this array we can add the values we want to be excluded
+
+5
+00:00:16.000 --> 00:00:20.000
+from the original array. So this function returns a new array,
+
+6
+00:00:20.000 --> 00:00:24.000
+without the values that we have passed here.
+
+7
+00:00:24.000 --> 00:00:28.000
+So if you run this program, we get a new array,
+
+8
+00:00:28.000 --> 00:00:32.000
+with these three values, 2, 3, 4, because we excluded 1.
+
+9
+00:00:32.000 --> 00:00:36.000
+Note that it doesn't matter how many 1's we have here so I can add
+
+10
+00:00:36.000 --> 00:00:40.000
+a couple more 1's and we still get the same result.
+
+11
+00:00:40.000 --> 00:00:44.000
+Or we can add multiple values here, so let's say we want to exclude
+
+12
+00:00:44.000 --> 00:00:48.000
+1 and 2, so as a result we get 3, and
+
+13
+00:00:48.000 --> 00:00:52.000
+4. So get started, you will see my solution next.
+
+14
+00:00:52.000 --> 00:00:56.000
+Alright here we need to
+
+15
+00:00:56.000 --> 00:01:00.000
+declare an array called output and initialize it
+
+16
+00:01:00.000 --> 00:01:04.000
+to an empty, this is what we're going to return from this function.
+
+17
+00:01:04.000 --> 00:01:08.000
+Now we need to iterate over this original array,
+
+18
+00:01:08.000 --> 00:01:12.000
+and for each element we have to see if that elements is
+
+19
+00:01:12.000 --> 00:01:16.000
+in this other array. If it's not then we'll add that
+
+20
+00:01:16.000 --> 00:01:20.000
+element into this new array. Okay? So,
+
+21
+00:01:20.000 --> 00:01:24.000
+for let element of array.
+
+22
+00:01:24.000 --> 00:01:28.000
+We iterate over the original array, now, we
+
+23
+00:01:28.000 --> 00:01:32.000
+should see if this excluded array includes
+
+24
+00:01:32.000 --> 00:01:36.000
+this element. So basically we are checking to see if the
+
+25
+00:01:36.000 --> 00:01:40.000
+current element is in the excluded array.
+
+26
+00:01:40.000 --> 00:01:44.000
+If it's not, so we apply the not operator,
+
+27
+00:01:44.000 --> 00:01:48.000
+then we'll add this element into our output array. So,
+
+28
+00:01:48.000 --> 00:01:52.000
+output.push element.
+
+29
+00:01:52.000 --> 00:01:56.000
+And finally we'll return output.
+
+30
+00:01:56.000 --> 00:02:00.000
+So save the changes, if you exclude 1 and 2 here,
+
+31
+00:02:00.000 --> 00:02:04.000
+we'll get 3 and 4, if we exclude all numbers, 3
+
+32
+00:02:04.000 --> 00:02:08.000
+and 4, we'll get an empty array.
+

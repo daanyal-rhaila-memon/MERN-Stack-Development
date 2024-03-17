@@ -1,0 +1,378 @@
+﻿WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+Alright here's
+
+2
+00:00:04.000 --> 00:00:08.000
+another exercise, in this exercise I want you to create this function
+
+3
+00:00:08.000 --> 00:00:12.000
+getMax, we give it an array and it returns the largest
+
+4
+00:00:12.000 --> 00:00:16.000
+number in that array. So if we give it this array of
+
+5
+00:00:16.000 --> 00:00:20.000
+numbers. It returns 4.
+
+6
+00:00:20.000 --> 00:00:24.000
+If we give it an empty array, it returns
+
+7
+00:00:24.000 --> 00:00:28.000
+undefined because we don't have anything in this array. So we cannot return 0 or
+
+8
+00:00:28.000 --> 00:00:32.000
+a negative number because none of these values exist in this array.
+
+9
+00:00:32.000 --> 00:00:36.000
+So go ahead, do this exercise, start with a simple implementation
+
+10
+00:00:36.000 --> 00:00:40.000
+once that implementation is working, then to challenge yourself,
+
+11
+00:00:40.000 --> 00:00:44.000
+implement this function using the reduce method in arrays.
+
+12
+00:00:44.000 --> 00:00:48.000
+You will see my solution next.
+
+13
+00:00:48.000 --> 00:00:52.000
+Alright so let's start with a simplest
+
+14
+00:00:52.000 --> 00:00:56.000
+implementation. First we want to check to see if this array is
+
+15
+00:00:56.000 --> 00:01:00.000
+empty or not. If it's empty, we're going to return undefined.
+
+16
+00:01:00.000 --> 00:01:04.000
+So, if array.length equals
+
+17
+00:01:04.000 --> 00:01:08.000
+0, you're going to return undefined.
+
+18
+00:01:08.000 --> 00:01:12.000
+Also, note that by convention, sometimes if you have
+
+19
+00:01:12.000 --> 00:01:16.000
+an if statement with only 1 line after, some
+
+20
+00:01:16.000 --> 00:01:20.000
+developers prefer to put that line right next to the if statement.
+
+21
+00:01:20.000 --> 00:01:24.000
+Some developers format it like this. It's more of a personal
+
+22
+00:01:24.000 --> 00:01:28.000
+preference. There's really no right or wrong. So I'm going to put this on the same line,
+
+23
+00:01:28.000 --> 00:01:32.000
+now otherwise we have at least 1 element
+
+24
+00:01:32.000 --> 00:01:36.000
+in this array. So I'm going to declare a variable, call
+
+25
+00:01:36.000 --> 00:01:40.000
+it max and set it to the first element in this
+
+26
+00:01:40.000 --> 00:01:44.000
+array. So we want to assume that the first element is the largest
+
+27
+00:01:44.000 --> 00:01:48.000
+number, next, we will iterate this array, and if we find a number that is
+
+28
+00:01:48.000 --> 00:01:52.000
+larger, then we're going to reset this max variable.
+
+29
+00:01:52.000 --> 00:01:56.000
+So, let's do a for loop, let
+
+30
+00:01:56.000 --> 00:02:00.000
+i, we start from the second element in this array, and run this
+
+31
+00:02:00.000 --> 00:02:04.000
+loop as long as i is less than the length of the array.
+
+32
+00:02:04.000 --> 00:02:08.000
+Then we increment I, now we need to check to
+
+33
+00:02:08.000 --> 00:02:12.000
+see if the current number is larger than max. So if
+
+34
+00:02:12.000 --> 00:02:16.000
+array of i, is greater than
+
+35
+00:02:16.000 --> 00:02:20.000
+max, then we're going to set max to this current
+
+36
+00:02:20.000 --> 00:02:24.000
+value. Okay? Finally after this loop,
+
+37
+00:02:24.000 --> 00:02:28.000
+we want to return max. So that's the simplest implementation,
+
+38
+00:02:28.000 --> 00:02:32.000
+if you're on this code, and pass an empty array here we
+
+39
+00:02:32.000 --> 00:02:36.000
+get undefined beautiful. If you pass an array with only 1 number
+
+40
+00:02:36.000 --> 00:02:40.000
+we get that number, if we add two numbers here,
+
+41
+00:02:40.000 --> 00:02:44.000
+2 is the largest number, let's add
+
+42
+00:02:44.000 --> 00:02:48.000
+a few more values here, now we should get 3, beautiful,
+
+43
+00:02:48.000 --> 00:02:52.000
+so our basic implementation is working, now let's reimplement this method
+
+44
+00:02:52.000 --> 00:02:56.000
+using the reduce method. So we want to keep the first
+
+45
+00:02:56.000 --> 00:03:00.000
+line as is, so if you don't have anything in this array we want to return
+
+46
+00:03:00.000 --> 00:03:04.000
+undefined. Otherwise let me
+
+47
+00:03:04.000 --> 00:03:08.000
+comment out this code, so we can compare them side by side.
+
+48
+00:03:08.000 --> 00:03:12.000
+So, we use array
+
+49
+00:03:12.000 --> 00:03:16.000
+.reduce. We pass an
+
+50
+00:03:16.000 --> 00:03:20.000
+arrow function with two parameters, accumulator,
+
+51
+00:03:20.000 --> 00:03:24.000
+and current. And that goes to
+
+52
+00:03:24.000 --> 00:03:28.000
+this code block here.
+
+53
+00:03:28.000 --> 00:03:32.000
+So you know that if we don't pass an initial value,
+
+54
+00:03:32.000 --> 00:03:36.000
+for the accumulator, by default it will be set to the first
+
+55
+00:03:36.000 --> 00:03:40.000
+element in the array. That is exactly like what we have on line
+
+56
+00:03:40.000 --> 00:03:44.000
+11. So in the body of this arrow function,
+
+57
+00:03:44.000 --> 00:03:48.000
+you want to check to see if the current value is greater than
+
+58
+00:03:48.000 --> 00:03:52.000
+what we have in accumulator, exactly like what we have here. If it is,
+
+59
+00:03:52.000 --> 00:03:56.000
+then we want to return the current value, otherwise we want to return
+
+60
+00:03:56.000 --> 00:04:00.000
+accumulator. So, we can right
+
+61
+00:04:00.000 --> 00:04:04.000
+code like this. If current is greater. than accumulator,
+
+62
+00:04:04.000 --> 00:04:08.000
+we want to return current. Otherwise we return
+
+63
+00:04:08.000 --> 00:04:12.000
+accumulator. Now we can rewrite
+
+64
+00:04:12.000 --> 00:04:16.000
+this using a conditional operator. So let me
+
+65
+00:04:16.000 --> 00:04:20.000
+expand this. So instead of these two lines,
+
+66
+00:04:20.000 --> 00:04:24.000
+we can do something like this. Return, we add our condition,
+
+67
+00:04:24.000 --> 00:04:28.000
+which is current greater than accumulator, if that's the
+
+68
+00:04:28.000 --> 00:04:32.000
+case, we want to return currents, otherwise we return
+
+69
+00:04:32.000 --> 00:04:36.000
+accumulator. That is cleaner, right? Now we
+
+70
+00:04:36.000 --> 00:04:40.000
+can make this code even cleaner by renaming these two
+
+71
+00:04:40.000 --> 00:04:44.000
+parameters to something like a and
+
+72
+00:04:44.000 --> 00:04:48.000
+b. So basically we're reducing this array, we get
+
+73
+00:04:48.000 --> 00:04:52.000
+2 elements at a time, if b is greater than a, we're going to return
+
+74
+00:04:52.000 --> 00:04:56.000
+b, otherwise we're going to return a. Actually, I personally
+
+75
+00:04:56.000 --> 00:05:00.000
+prefer change the order of these operands
+
+76
+00:05:00.000 --> 00:05:04.000
+so I would like to say if a is greater than b,
+
+77
+00:05:04.000 --> 00:05:08.000
+then I want to return a, otherwise I want to return b.
+
+78
+00:05:08.000 --> 00:05:12.000
+That is very easy to understand. Also, because we have a single line of
+
+79
+00:05:12.000 --> 00:05:16.000
+code here, we're simply returning a value, we can get rid of the return
+
+80
+00:05:16.000 --> 00:05:20.000
+keyword, as well as the curly braces, bring everything
+
+81
+00:05:20.000 --> 00:05:24.000
+on one line,
+
+82
+00:05:24.000 --> 00:05:28.000
+and here's the end result. So basically
+
+83
+00:05:28.000 --> 00:05:32.000
+you can see this line of code is equivalent to all these lines here.
+
+84
+00:05:32.000 --> 00:05:36.000
+That is the beauty of the reduce method. So this
+
+85
+00:05:36.000 --> 00:05:40.000
+is what I want you to take away from this exercise. Any time you have an
+
+86
+00:05:40.000 --> 00:05:44.000
+array of values and you want to get a single value as a result
+
+87
+00:05:44.000 --> 00:05:48.000
+of iterating that array, think of the reduce method. In this
+
+88
+00:05:48.000 --> 00:05:52.000
+case, we're finding the largest value in this array, so we're reducing this array
+
+89
+00:05:52.000 --> 00:05:56.000
+into a single value. Alright now
+
+90
+00:05:56.000 --> 00:06:00.000
+finally, we need to return whatever we're getting from the reduce method.
+
+91
+00:06:00.000 --> 00:06:04.000
+Now, let's test this and make sure every
+
+92
+00:06:04.000 --> 00:06:08.000
+thing is working. So, I'm going to save the changes, we still get 3,
+
+93
+00:06:08.000 --> 00:06:12.000
+if I pass an empty array, we get undefined
+
+94
+00:06:12.000 --> 00:06:14.633
+beautiful.
+

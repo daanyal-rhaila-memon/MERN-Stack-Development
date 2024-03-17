@@ -1,0 +1,170 @@
+﻿WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+In this lecture,
+
+2
+00:00:04.000 --> 00:00:08.000
+I'm going to show you how to filter an array based on a search criteria.
+
+3
+00:00:08.000 --> 00:00:12.000
+So back to our numbers array, let's say you want to return only the
+
+4
+00:00:12.000 --> 00:00:16.000
+positive numbers. So, we can use the filter method,
+
+5
+00:00:16.000 --> 00:00:20.000
+like this. Filter. Once again we need to pass
+
+6
+00:00:20.000 --> 00:00:24.000
+a callback function, this function has three parameters,
+
+7
+00:00:24.000 --> 00:00:28.000
+value index and array. So
+
+8
+00:00:28.000 --> 00:00:32.000
+out of these we only care about value, we don't care about the index
+
+9
+00:00:32.000 --> 00:00:36.000
+because I just want to see if the number of the value is positive.
+
+10
+00:00:36.000 --> 00:00:40.000
+So function value,
+
+11
+00:00:40.000 --> 00:00:44.000
+now here we can write a simple expression like this,
+
+12
+00:00:44.000 --> 00:00:48.000
+if value is greater than or equal to 0. So when we call
+
+13
+00:00:48.000 --> 00:00:52.000
+the filter method, this method will loop through this array,
+
+14
+00:00:52.000 --> 00:00:56.000
+and execute this callback function for each number.
+
+15
+00:00:56.000 --> 00:01:00.000
+For each element, now if the element matches this criteria,
+
+16
+00:01:00.000 --> 00:01:04.000
+it will add this element to a new array, and finally
+
+17
+00:01:04.000 --> 00:01:08.000
+we can get the new array here. So filtered.
+
+18
+00:01:08.000 --> 00:01:12.000
+Let's take a look at the result, filtered,
+
+19
+00:01:12.000 --> 00:01:16.000
+so in our filtered array, we only have 1, 2,
+
+20
+00:01:16.000 --> 00:01:20.000
+and 3. Now earlier you learned about arrow functions, so this is a
+
+21
+00:01:20.000 --> 00:01:24.000
+good case where you would use an arrow function. You have a single line of code,
+
+22
+00:01:24.000 --> 00:01:28.000
+in this function, and we're simply returning a value. So,
+
+23
+00:01:28.000 --> 00:01:32.000
+we get rid of the function keyword, put a fat
+
+24
+00:01:32.000 --> 00:01:36.000
+arrow between the parameter and the body of this function. We don't
+
+25
+00:01:36.000 --> 00:01:40.000
+need the parenthesis because we have a single parameter, and because we're simply
+
+26
+00:01:40.000 --> 00:01:44.000
+returning a value, we can also exclude the return keyword,
+
+27
+00:01:44.000 --> 00:01:48.000
+as well as the curly braces and then
+
+28
+00:01:48.000 --> 00:01:52.000
+put everything on the same line like this. Now we can make
+
+29
+00:01:52.000 --> 00:01:56.000
+this code a little bit shorter, so in this case we can use an abbreviation
+
+30
+00:01:56.000 --> 00:02:00.000
+like v for value, or n
+
+31
+00:02:00.000 --> 00:02:04.000
+for number. Because it's obvious that we're working with the numbers
+
+32
+00:02:04.000 --> 00:02:08.000
+array. So we filter, and we get numbers where
+
+33
+00:02:08.000 --> 00:02:12.000
+number is greater than or equal to zero.
+
+34
+00:02:12.000 --> 00:02:16.000
+Now here we're dealing with an array of numbers, in a real world application, you will be
+
+35
+00:02:16.000 --> 00:02:20.000
+using an array of objects. For example,
+
+36
+00:02:20.000 --> 00:02:24.000
+here on the yelp website, you can click this button to
+
+37
+00:02:24.000 --> 00:02:28.000
+find only the restaurants that are open now.
+
+38
+00:02:28.000 --> 00:02:32.000
+So this is one kind of filtering. So if you want to implement something
+
+39
+00:02:32.000 --> 00:02:36.000
+like this, instead of an array of numbers you would have an array
+
+40
+00:02:36.000 --> 00:02:40.000
+of restaurants, and each restaurants has opening hours
+
+41
+00:02:40.000 --> 00:02:44.000
+so you could filter restaurants that are currently open
+
+42
+00:02:44.000 --> 00:02:46.866
+and return them.
+

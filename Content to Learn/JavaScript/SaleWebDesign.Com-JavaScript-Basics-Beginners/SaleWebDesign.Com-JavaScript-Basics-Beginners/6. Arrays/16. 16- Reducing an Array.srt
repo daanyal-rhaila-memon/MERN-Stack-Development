@@ -1,0 +1,404 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+Once
+
+2
+00:00:04,000 --> 00:00:08,000
+again with our array of numbers, let's say we want to calculate the
+
+3
+00:00:08,000 --> 00:00:12,000
+sum of all these numbers in this array. This will be similar to calculating
+
+4
+00:00:12,000 --> 00:00:16,000
+the total cost of all the items in a shopping cart. So each
+
+5
+00:00:16,000 --> 00:00:20,000
+numbers here should represent the price of an item in a shopping cart,
+
+6
+00:00:20,000 --> 00:00:24,000
+of course we wouldn't have a negative number there, but you get the point.
+
+7
+00:00:24,000 --> 00:00:28,000
+So here's a very simple algorithm for calculating the sum of all the
+
+8
+00:00:28,000 --> 00:00:32,000
+numbers in this array. You start by declaring a variable
+
+9
+00:00:32,000 --> 00:00:36,000
+called sum and we initialize it to 0. Next we
+
+10
+00:00:36,000 --> 00:00:40,000
+loop over the array, get each element for each number
+
+11
+00:00:40,000 --> 00:00:44,000
+and add it to sum. Something like this.
+
+12
+00:00:44,000 --> 00:00:48,000
+for let n of numbers, now we want
+
+13
+00:00:48,000 --> 00:00:52,000
+to add n to sum. So we can write an expression like this. Sum
+
+14
+00:00:52,000 --> 00:00:56,000
+= sum + n, or a better way is to
+
+15
+00:00:56,000 --> 00:01:00,000
+use the addition assignment operator. So we can
+
+16
+00:01:00,000 --> 00:01:04,000
+exclude the second sum, so this is exactly
+
+17
+00:01:04,000 --> 00:01:08,000
+like the statement we had before, and finally we
+
+18
+00:01:08,000 --> 00:01:12,000
+display sum on the console. So,
+
+19
+00:01:12,000 --> 00:01:16,000
+we get 5. Now there is a cleaner and
+
+20
+00:01:16,000 --> 00:01:20,000
+more elegant way to write the same code using the reduce method in arrays.
+
+21
+00:01:20,000 --> 00:01:24,000
+So all these arrays have this reduce method,
+
+22
+00:01:24,000 --> 00:01:28,000
+and with this method we can reduce all these elements in an array
+
+23
+00:01:28,000 --> 00:01:32,000
+into a single value. That single value can be a number,
+
+24
+00:01:32,000 --> 00:01:36,000
+it can be a string, it can be an object, it can be anything. In this example,
+
+25
+00:01:36,000 --> 00:01:40,000
+we want to reduce all these elements into a single
+
+26
+00:01:40,000 --> 00:01:44,000
+number, that is the sum of all the numbers in this array.
+
+27
+00:01:44,000 --> 00:01:48,000
+So let's see how we can use the reduce method. This method takes
+
+28
+00:01:48,000 --> 00:01:52,000
+a callback function with two parameters.
+
+29
+00:01:52,000 --> 00:01:56,000
+Accumulator and current value.
+
+30
+00:01:56,000 --> 00:02:00,000
+So here I'm using an arrow function. Like
+
+31
+00:02:00,000 --> 00:02:04,000
+this. This accumulator parameter here is exactly
+
+32
+00:02:04,000 --> 00:02:08,000
+like this sum we have here. It's something that we initialize
+
+33
+00:02:08,000 --> 00:02:12,000
+and this callback function is executed multiple times,
+
+34
+00:02:12,000 --> 00:02:16,000
+each time this currentValue will be set to one element
+
+35
+00:02:16,000 --> 00:02:20,000
+in this array. So in each call, we want to get this current
+
+36
+00:02:20,000 --> 00:02:24,000
+value and add it to accumulator. So we simply return
+
+37
+00:02:24,000 --> 00:02:28,000
+the sum of accumulator plus
+
+38
+00:02:28,000 --> 00:02:32,000
+currentValue. Now internally, this reduced
+
+39
+00:02:32,000 --> 00:02:36,000
+method will get this result and store it in the accumulator
+
+40
+00:02:36,000 --> 00:02:40,000
+you will see that in a second. And one last thing here,
+
+41
+00:02:40,000 --> 00:02:44,000
+is to initialize this accumulator to 0. So,
+
+42
+00:02:44,000 --> 00:02:48,000
+as the second argument to the reduce method, we pass
+
+43
+00:02:48,000 --> 00:02:52,000
+0. Note that this reduce method has two arguments, the
+
+44
+00:02:52,000 --> 00:02:56,000
+first argument is a callback function, and the second argument is
+
+45
+00:02:56,000 --> 00:03:00,000
+the initial value for the accumulator. Finally
+
+46
+00:03:00,000 --> 00:03:04,000
+we get the result as a single value.
+
+47
+00:03:04,000 --> 00:03:08,000
+In this case, sum. Now we don't need this code anymore
+
+48
+00:03:08,000 --> 00:03:12,000
+and finally let's bring
+
+49
+00:03:12,000 --> 00:03:16,000
+this console.log here.
+
+50
+00:03:16,000 --> 00:03:20,000
+Save the changes, you can see we get the same result
+
+51
+00:03:20,000 --> 00:03:24,000
+5, but let's see what exactly is happening here.
+
+52
+00:03:24,000 --> 00:03:28,000
+So, initially we set accumulator to 0,
+
+53
+00:03:28,000 --> 00:03:32,000
+so I'm going to set a=0. In the first round,
+
+54
+00:03:32,000 --> 00:03:36,000
+current value will be set to the first number. So,
+
+55
+00:03:36,000 --> 00:03:40,000
+c=1. Now we add this together,
+
+56
+00:03:40,000 --> 00:03:44,000
+so we get 1 and a will be set to 1 after
+
+57
+00:03:44,000 --> 00:03:48,000
+this call back function is executed. So,
+
+58
+00:03:48,000 --> 00:03:52,000
+as a result a will be 1. Now in a second
+
+59
+00:03:52,000 --> 00:03:56,000
+round, a is 1, current value will be set
+
+60
+00:03:56,000 --> 00:04:00,000
+to the second number in this array. So, minus 1.
+
+61
+00:04:00,000 --> 00:04:04,000
+Now once again we add them together, now a
+
+62
+00:04:04,000 --> 00:04:08,000
+will be 0 after the second call. Now the third call
+
+63
+00:04:08,000 --> 00:04:12,000
+so a is 0, the current value is going to be
+
+64
+00:04:12,000 --> 00:04:16,000
+set to the third element in this array. So 2
+
+65
+00:04:16,000 --> 00:04:20,000
+and as a result a will be 2, and finally
+
+66
+00:04:20,000 --> 00:04:24,000
+in the last call, we start with a set to 2,
+
+67
+00:04:24,000 --> 00:04:28,000
+and current value will be 3. So,
+
+68
+00:04:28,000 --> 00:04:32,000
+the result will be 5, and that's why we saw
+
+69
+00:04:32,000 --> 00:04:36,000
+5 on the console. So essentially with this reduced method,
+
+70
+00:04:36,000 --> 00:04:40,000
+we start with an accumulator, then we loop through this array,
+
+71
+00:04:40,000 --> 00:04:44,000
+and convert all these elements into a single value, which
+
+72
+00:04:44,000 --> 00:04:48,000
+is in this case accumulator, or the sum of all the numbers
+
+73
+00:04:48,000 --> 00:04:52,000
+in this array. Now we can make this code even shorter. We can
+
+74
+00:04:52,000 --> 00:04:56,000
+exclude the initialization of the accumulator,
+
+75
+00:04:56,000 --> 00:05:00,000
+and with this, accumulator will be set to the first element.
+
+76
+00:05:00,000 --> 00:05:04,000
+So let me show you what will happen. A will initially
+
+77
+00:05:04,000 --> 00:05:08,000
+be set to 1. And current value will be set to -1.
+
+78
+00:05:08,000 --> 00:05:12,000
+That is exactly like our second call here.
+
+79
+00:05:12,000 --> 00:05:16,000
+Right? So as a result, a will be set to 0,
+
+80
+00:05:16,000 --> 00:05:20,000
+now in our second round a will be 0,
+
+81
+00:05:20,000 --> 00:05:24,000
+and current value will be 2, because in the previous
+
+82
+00:05:24,000 --> 00:05:28,000
+call, current value was here, so now we are here. So current value will be
+
+83
+00:05:28,000 --> 00:05:32,000
+2, and as a result a will be 2, and
+
+84
+00:05:32,000 --> 00:05:36,000
+finally, in the last call, a will be 2, and current value will be
+
+85
+00:05:36,000 --> 00:05:40,000
+3. The last element in this array
+
+86
+00:05:40,000 --> 00:05:44,000
+and once again we get 5. So if we supply
+
+87
+00:05:44,000 --> 00:05:48,000
+an initial value we'll have one more call, if we don't
+
+88
+00:05:48,000 --> 00:05:52,000
+the first element in this array will be used as the initial value.
+
+89
+00:05:52,000 --> 00:05:56,000
+So this is how the reduce method works. And finally, to make this
+
+90
+00:05:56,000 --> 00:06:00,000
+code a little bit shorter, we can get rid of this return keyword,
+
+91
+00:06:00,000 --> 00:06:04,000
+because we have a single line, but we are simply reducing a value.
+
+92
+00:06:04,000 --> 00:06:08,000
+Remove the return, the semi colon and the curly braces
+
+93
+00:06:08,000 --> 00:06:12,000
+put everything on a single line,
+
+94
+00:06:12,000 --> 00:06:16,000
+like this. So with this single line of code, we
+
+95
+00:06:16,000 --> 00:06:20,000
+reduce the numbers array and this is how our reduction
+
+96
+00:06:20,000 --> 00:06:24,000
+algorithm works. We simply get the current value and add it to our
+
+97
+00:06:24,000 --> 00:06:28,000
+accumulator. This is far cleaner and more elegant then
+
+98
+00:06:28,000 --> 00:06:32,000
+declaring a sum and then looping
+
+99
+00:06:32,000 --> 00:06:36,000
+over this array like let n of numbers and then
+
+100
+00:06:36,000 --> 00:06:40,000
+add n to the sum, that's a very
+
+101
+00:06:40,000 --> 00:06:43,800
+old way of writing code.
+

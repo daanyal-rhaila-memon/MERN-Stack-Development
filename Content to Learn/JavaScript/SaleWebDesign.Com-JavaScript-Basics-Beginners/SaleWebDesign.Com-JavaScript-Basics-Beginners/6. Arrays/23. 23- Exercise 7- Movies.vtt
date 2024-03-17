@@ -1,0 +1,282 @@
+﻿WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+Alright this
+
+2
+00:00:04.000 --> 00:00:08.000
+other exercise is a little bit different than the other exercises you have done in this section.
+
+3
+00:00:08.000 --> 00:00:12.000
+I want you to code along with me like this, so let's declare
+
+4
+00:00:12.000 --> 00:00:16.000
+a constant called movies, we set this to an array
+
+5
+00:00:16.000 --> 00:00:20.000
+objects. In this array we're going to have for movie objects
+
+6
+00:00:20.000 --> 00:00:24.000
+in each movie we're going to have 3 properties,
+
+7
+00:00:24.000 --> 00:00:28.000
+title, set the first one to a, and then the second
+
+8
+00:00:28.000 --> 00:00:32.000
+property is year, we set this to 2018,
+
+9
+00:00:32.000 --> 00:00:36.000
+and the first property is rating which we set to 4
+
+10
+00:00:36.000 --> 00:00:40.000
+.5. Now let's duplicate this a few times, so hold
+
+11
+00:00:40.000 --> 00:00:44.000
+down shift alt and the down arrow.
+
+12
+00:00:44.000 --> 00:00:48.000
+With this we can easily duplicate the current line, but
+
+13
+00:00:48.000 --> 00:00:52.000
+change the title of each movie, so, the second one
+
+14
+00:00:52.000 --> 00:00:56.000
+is going to be b, and then c, and then d. And then
+
+15
+00:00:56.000 --> 00:01:00.000
+change the year of the last movie to 2017.
+
+16
+00:01:00.000 --> 00:01:04.000
+And finally change the ratings to 4.7
+
+17
+00:01:04.000 --> 00:01:08.000
+3. And 4.
+
+18
+00:01:08.000 --> 00:01:12.000
+5. Now with this array of movies, your exercise
+
+19
+00:01:12.000 --> 00:01:16.000
+is to write code to get all the movies
+
+20
+00:01:16.000 --> 00:01:20.000
+in 2018, with rating greater
+
+21
+00:01:20.000 --> 00:01:24.000
+than 4. I want you to sort them by their rating
+
+22
+00:01:24.000 --> 00:01:28.000
+in a descending order.
+
+23
+00:01:28.000 --> 00:01:32.000
+So movies that have a higher rating should come first, then
+
+24
+00:01:32.000 --> 00:01:36.000
+I want you to only pick their title property,
+
+25
+00:01:36.000 --> 00:01:40.000
+and display it on the console. So the result,
+
+26
+00:01:40.000 --> 00:01:44.000
+should be b and a. That is what you should see on the console.
+
+27
+00:01:44.000 --> 00:01:48.000
+So go ahead, spend 5 minutes on this exercise, and you'll see my
+
+28
+00:01:48.000 --> 00:01:52.000
+solution next.
+
+29
+00:01:52.000 --> 00:01:56.000
+Alright so we want to filter movies
+
+30
+00:01:56.000 --> 00:02:00.000
+by their year and rating. So movies
+
+31
+00:02:00.000 --> 00:02:04.000
+.filter, here we pass an
+
+32
+00:02:04.000 --> 00:02:08.000
+arrow function, so m as in short for movie goes to
+
+33
+00:02:08.000 --> 00:02:12.000
+m.year should equal 2018,
+
+34
+00:02:12.000 --> 00:02:16.000
+and m.rating should be greater than
+
+35
+00:02:16.000 --> 00:02:20.000
+or equal to 4. So that's the first part. So that's the first part. Our
+
+36
+00:02:20.000 --> 00:02:24.000
+filter. Next we're going to sort them by their rating. So,
+
+37
+00:02:24.000 --> 00:02:28.000
+as you learned earlier these methods are chainable, because
+
+38
+00:02:28.000 --> 00:02:32.000
+filter returns a new array, so we can immediately apply
+
+39
+00:02:32.000 --> 00:02:36.000
+the sort method on that array. Now as you learned earlier,
+
+40
+00:02:36.000 --> 00:02:40.000
+the sort method by default only works for numbers and strings,
+
+41
+00:02:40.000 --> 00:02:44.000
+and objects we need to supply a comparison function. So,
+
+42
+00:02:44.000 --> 00:02:48.000
+here once again I'm going to use an arrow function that takes
+
+43
+00:02:48.000 --> 00:02:52.000
+a and b, so these are two movie objects in our movies array,
+
+44
+00:02:52.000 --> 00:02:56.000
+so a and b goes to
+
+45
+00:02:56.000 --> 00:03:00.000
+and basically if a is less than b we want to return
+
+46
+00:03:00.000 --> 00:03:04.000
+minus 1 or a negative value, if they are equal
+
+47
+00:03:04.000 --> 00:03:08.000
+you want to return 0, and if a is greater than b, you want
+
+48
+00:03:08.000 --> 00:03:12.000
+to return plus 1 or a positive value.
+
+49
+00:03:12.000 --> 00:03:16.000
+A simple way to implement this is like this. So I'm going to delete all this,
+
+50
+00:03:16.000 --> 00:03:20.000
+and the curly braces. We simply get the rating
+
+51
+00:03:20.000 --> 00:03:24.000
+of a, and subtract it from
+
+52
+00:03:24.000 --> 00:03:28.000
+the rating of b. So let's say the
+
+53
+00:03:28.000 --> 00:03:32.000
+rating of a is 4.5 and the rating of b is 4.
+
+54
+00:03:32.000 --> 00:03:36.000
+When we subtract a from b we get 0.5
+
+55
+00:03:36.000 --> 00:03:40.000
+and that's a positive number, so that means a is greater than b.
+
+56
+00:03:40.000 --> 00:03:44.000
+Now if both these ratings are equal, we'll get 0,
+
+57
+00:03:44.000 --> 00:03:48.000
+and that means a equals b. So we don't need three if statements
+
+58
+00:03:48.000 --> 00:03:52.000
+here to return minus 1, plus. 1, or minus 0.
+
+59
+00:03:52.000 --> 00:03:56.000
+Okay? You simply subtract these values.
+
+60
+00:03:56.000 --> 00:04:00.000
+Now, the sort method returns values
+
+61
+00:04:00.000 --> 00:04:04.000
+sorted in an ascending order, but what we want here is
+
+62
+00:04:04.000 --> 00:04:08.000
+descending order, so we need to call the reverse method,
+
+63
+00:04:08.000 --> 00:04:12.000
+change the order of these movies, and finally to
+
+64
+00:04:12.000 --> 00:04:16.000
+pick only their title, you want to use their map method, so map,
+
+65
+00:04:16.000 --> 00:04:20.000
+we get a movie object, pass an arrow function
+
+66
+00:04:20.000 --> 00:04:24.000
+so m goes to m.title. That's the
+
+67
+00:04:24.000 --> 00:04:28.000
+code we should have written. So let's store the result in a constant
+
+68
+00:04:28.000 --> 00:04:32.000
+called titles, and finally display them
+
+69
+00:04:32.000 --> 00:04:36.000
+on the console. So, we get b
+
+70
+00:04:36.000 --> 00:04:38.866
+and a.
+

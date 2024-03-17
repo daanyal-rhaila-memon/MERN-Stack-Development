@@ -1,0 +1,226 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+We have
+
+2
+00:00:04.000 --> 00:00:08.000
+two new methods in modern JavaScript called very and sum.
+
+3
+00:00:08.000 --> 00:00:12.000
+Very useful methods, so here we have our numbers array,
+
+4
+00:00:12.000 --> 00:00:16.000
+let's imagine we want to check and see if all numbers in this array
+
+5
+00:00:16.000 --> 00:00:20.000
+are positive. So, we call numbers
+
+6
+00:00:20.000 --> 00:00:24.000
+.every and here we pass a
+
+7
+00:00:24.000 --> 00:00:28.000
+callback function. Here in the intellisence, you can see this callback function
+
+8
+00:00:28.000 --> 00:00:32.000
+has three parameters. Value, which is a number,
+
+9
+00:00:32.000 --> 00:00:36.000
+because here we have an array of numbers. Index, which is the
+
+10
+00:00:36.000 --> 00:00:40.000
+index of this value and the array, and again, that's a number,
+
+11
+00:00:40.000 --> 00:00:44.000
+and finally the array itself. Now when writing this function you don't have
+
+12
+00:00:44.000 --> 00:00:48.000
+to add all these parameters, you can only add ones you need,
+
+13
+00:00:48.000 --> 00:00:52.000
+for example, here I'm going to add the function and I'm only going to
+
+14
+00:00:52.000 --> 00:00:56.000
+add one parameter, value, because I don't care about the index,
+
+15
+00:00:56.000 --> 00:01:00.000
+of these elements, so, we pass
+
+16
+00:01:00.000 --> 00:01:04.000
+this callback function, and in this function we can check to see if this
+
+17
+00:01:04.000 --> 00:01:08.000
+value is a positive number. So, we return
+
+18
+00:01:08.000 --> 00:01:12.000
+value, greater than or equal to zero. If
+
+19
+00:01:12.000 --> 00:01:16.000
+this expression evalues to true, we'll return true, otherwise we'll return false.
+
+20
+00:01:16.000 --> 00:01:20.000
+Now finally, this method will return a
+
+21
+00:01:20.000 --> 00:01:24.000
+boolean, so we can store it in the constant called
+
+22
+00:01:24.000 --> 00:01:28.000
+allPositive. So when we call this method, this is what's going to happen
+
+23
+00:01:28.000 --> 00:01:32.000
+this method will run this function on every
+
+24
+00:01:32.000 --> 00:01:36.000
+element in this array, as soon as it finds an element
+
+25
+00:01:36.000 --> 00:01:40.000
+that doesn't match this criteria, it's going to stop searching.
+
+26
+00:01:40.000 --> 00:01:44.000
+Let me show you. So, let's log all
+
+27
+00:01:44.000 --> 00:01:48.000
+positive on the console. You can see it's true on the console, because
+
+28
+00:01:48.000 --> 00:01:52.000
+every element, our every number in this array is a positive number.
+
+29
+00:01:52.000 --> 00:01:56.000
+However, if I add -1 here,
+
+30
+00:01:56.000 --> 00:02:00.000
+we get false, and basically as soon as
+
+31
+00:02:00.000 --> 00:02:04.000
+we hit this number, the search will terminate, so
+
+32
+00:02:04.000 --> 00:02:08.000
+if you have a million other numbers in this array, this every method is not
+
+33
+00:02:08.000 --> 00:02:12.000
+going to call this callback function on those numbers.
+
+34
+00:02:12.000 --> 00:02:16.000
+Now we have a similar method called sum, and that checks to
+
+35
+00:02:16.000 --> 00:02:20.000
+see if we have at least one element in this array that
+
+36
+00:02:20.000 --> 00:02:24.000
+matches this criteria. So if I replace every with
+
+37
+00:02:24.000 --> 00:02:28.000
+some, and save the changes, we're going to see true.
+
+38
+00:02:28.000 --> 00:02:32.000
+However, I'm going to change the name of this variable, because this is distracting
+
+39
+00:02:32.000 --> 00:02:36.000
+so always pay great attention to the name of your variables and
+
+40
+00:02:36.000 --> 00:02:40.000
+functions, make sure they're explaining the right thing. So press F2,
+
+41
+00:02:40.000 --> 00:02:44.000
+and rename this to atLeastOne
+
+42
+00:02:44.000 --> 00:02:48.000
+Positive. Okay? Save the changes,
+
+43
+00:02:48.000 --> 00:02:52.000
+we get true, so this some method will run this
+
+44
+00:02:52.000 --> 00:02:56.000
+callback function on every element in this array. As soon as it finds
+
+45
+00:02:56.000 --> 00:03:00.000
+an element that matches this criteria, it's going to return true
+
+46
+00:03:00.000 --> 00:03:04.000
+and the search will terminate. So, in the current example
+
+47
+00:03:04.000 --> 00:03:08.000
+if we have a million numbers in this array, because the first number
+
+48
+00:03:08.000 --> 00:03:12.000
+matches this criteria, this call back function will be executed only
+
+49
+00:03:12.000 --> 00:03:16.000
+on this first element. So it doesn't matter what we have after
+
+50
+00:03:16.000 --> 00:03:20.000
+the first element. So, to recap, every
+
+51
+00:03:20.000 --> 00:03:24.000
+checks to see if every element in a given array matches the given
+
+52
+00:03:24.000 --> 00:03:28.000
+criteria, and some checks to see if we have at least
+
+53
+00:03:28.000 --> 00:03:32.000
+one element that matches the given criteria. Just to let you know,
+
+54
+00:03:32.000 --> 00:03:36.000
+these methods are new in JavaScript, so some older browsers
+
+55
+00:03:36.000 --> 00:03:40.000
+do not support this, but later in the course I'm going to explain
+
+56
+00:03:40.000 --> 00:03:44.000
+how to bring these methods in older browsers.
+

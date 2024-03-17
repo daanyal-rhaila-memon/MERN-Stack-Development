@@ -1,0 +1,118 @@
+﻿WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+Alright now
+
+2
+00:00:04.000 --> 00:00:08.000
+our second exercise. So here we have an array of numbers, you have seen
+
+3
+00:00:08.000 --> 00:00:12.000
+includes method before. So console.log
+
+4
+00:00:12.000 --> 00:00:16.000
+numbers.includes. With this method we can check to see
+
+5
+00:00:16.000 --> 00:00:20.000
+if a given element exists in the array. Now,
+
+6
+00:00:20.000 --> 00:00:24.000
+your exercise is to write a function like
+
+7
+00:00:24.000 --> 00:00:28.000
+the includes method. So imagine we don't have this method in arrays, your
+
+8
+00:00:28.000 --> 00:00:32.000
+job is to implement this method yourself. So, I want you to
+
+9
+00:00:32.000 --> 00:00:36.000
+create a function called includes
+
+10
+00:00:36.000 --> 00:00:40.000
+that takes an array and a search element.
+
+11
+00:00:40.000 --> 00:00:44.000
+If we have the search element in the array we should return true, otherwise we should
+
+12
+00:00:44.000 --> 00:00:48.000
+return false. So, pause the video, do the exercise,
+
+13
+00:00:48.000 --> 00:00:52.000
+and when you're done come back and continue watching.
+
+14
+00:00:52.000 --> 00:00:56.000
+Alright so here we need to iterate over
+
+15
+00:00:56.000 --> 00:01:00.000
+this array. If you find an element that equals the search
+
+16
+00:01:00.000 --> 00:01:04.000
+Element we're going to return true, otherwise we're going to return false.
+
+17
+00:01:04.000 --> 00:01:08.000
+Very very easy. So, for, we're going to use the
+
+18
+00:01:08.000 --> 00:01:12.000
+for of loop. So for let element of
+
+19
+00:01:12.000 --> 00:01:16.000
+array, now if element
+
+20
+00:01:16.000 --> 00:01:20.000
+= the searchElement,
+
+21
+00:01:20.000 --> 00:01:24.000
+we're going to return true, so we don't need to search
+
+22
+00:01:24.000 --> 00:01:28.000
+the rest of this array, we immediately returned true. Otherwise we get
+
+23
+00:01:28.000 --> 00:01:32.000
+to this point that means we didn't find this element in the array, so,
+
+24
+00:01:32.000 --> 00:01:36.000
+we return false. Now let's test this.
+
+25
+00:01:36.000 --> 00:01:40.000
+So, I'm going to call the includes function,
+
+26
+00:01:40.000 --> 00:01:44.000
+pass our numbers array, as the first argument.
+
+27
+00:01:44.000 --> 00:01:48.000
+And 1 as the second argument. Obviously we have these numbers
+
+28
+00:01:48.000 --> 00:01:52.000
+so we get true, but if we pass -1 we get
+
+29
+00:01:52.000 --> 00:01:54.600
+false.
+

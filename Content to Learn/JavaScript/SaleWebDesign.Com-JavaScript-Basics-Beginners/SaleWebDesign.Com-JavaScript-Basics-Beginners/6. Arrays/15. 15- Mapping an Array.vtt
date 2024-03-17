@@ -1,0 +1,470 @@
+﻿WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.000
+Another
+
+2
+00:00:04.000 --> 00:00:08.000
+very useful and powerful method we have in JavaScript is
+
+3
+00:00:08.000 --> 00:00:12.000
+the map method. With this method we can map
+
+4
+00:00:12.000 --> 00:00:16.000
+each item in the array to something else. So
+
+5
+00:00:16.000 --> 00:00:20.000
+following from the example in the last lecture, we have an array of positive
+
+6
+00:00:20.000 --> 00:00:24.000
+numbers let's say we want to construct some HTML markup,
+
+7
+00:00:24.000 --> 00:00:28.000
+using the elements in this array. So we call filtered
+
+8
+00:00:28.000 --> 00:00:32.000
+.map and once again we need to pass
+
+9
+00:00:32.000 --> 00:00:36.000
+a callback function here. This function just like the function that we passed
+
+10
+00:00:36.000 --> 00:00:40.000
+to the filter method can have three parameters. Value, index,
+
+11
+00:00:40.000 --> 00:00:44.000
+and array. So in this case, again, we're going to work only with the value
+
+12
+00:00:44.000 --> 00:00:48.000
+so we can pass a function or an arrow function.
+
+13
+00:00:48.000 --> 00:00:52.000
+So we get a number
+
+14
+00:00:52.000 --> 00:00:56.000
+some html markup. So we can add a string,
+
+15
+00:00:56.000 --> 00:01:00.000
+with an opening list item element.
+
+16
+00:01:00.000 --> 00:01:04.000
+Then we add the number, then finally the closing
+
+17
+00:01:04.000 --> 00:01:08.000
+list item element. So with this markup, we can display each number
+
+18
+00:01:08.000 --> 00:01:12.000
+using a bullet point. Of course we need to put these inside
+
+19
+00:01:12.000 --> 00:01:16.000
+of a ul element, and I'm going to show you that in a second. So,
+
+20
+00:01:16.000 --> 00:01:20.000
+let's see the result of the map method. I'm going to store the
+
+21
+00:01:20.000 --> 00:01:24.000
+result in a constant called items, and
+
+22
+00:01:24.000 --> 00:01:28.000
+now, let's display this on the console. So,
+
+23
+00:01:28.000 --> 00:01:32.000
+you can see each number is now mapped to a string, that's
+
+24
+00:01:32.000 --> 00:01:36.000
+our list item. So now we have an array of strings, we can use
+
+25
+00:01:36.000 --> 00:01:40.000
+the joint method that you learned about earlier to join the elements of this
+
+26
+00:01:40.000 --> 00:01:44.000
+array and create a string. So, constant,
+
+27
+00:01:44.000 --> 00:01:48.000
+html, we set it to items.join and
+
+28
+00:01:48.000 --> 00:01:52.000
+then, display this on the console. Now instead of
+
+29
+00:01:52.000 --> 00:01:56.000
+an array we have a string. Notice that by default comma is
+
+30
+00:01:56.000 --> 00:02:00.000
+used as the separator, we don't want to have comma in our html markup,
+
+31
+00:02:00.000 --> 00:02:04.000
+we just want to combine these using an empty
+
+32
+00:02:04.000 --> 00:02:08.000
+character like this. Save the changes,
+
+33
+00:02:08.000 --> 00:02:12.000
+now comma is gone, the only bit that is remaining is the ul
+
+34
+00:02:12.000 --> 00:02:16.000
+element. So the very simple
+
+35
+00:02:16.000 --> 00:02:20.000
+implementation would be like this, you add ul
+
+36
+00:02:20.000 --> 00:02:24.000
+then concatenate it with all these items
+
+37
+00:02:24.000 --> 00:02:28.000
+and finally another ul.
+
+38
+00:02:28.000 --> 00:02:32.000
+Save the changes, and here's our
+
+39
+00:02:32.000 --> 00:02:36.000
+html markup to display all these numbers using bullet points.
+
+40
+00:02:36.000 --> 00:02:40.000
+Now later in the course I will show you a more elegant way to implement
+
+41
+00:02:40.000 --> 00:02:44.000
+the same thing, all I want you to take away from this lecture is that we can
+
+42
+00:02:44.000 --> 00:02:48.000
+use the map method to map each element in an array,
+
+43
+00:02:48.000 --> 00:02:52.000
+into something else. Now in this example, you are mapping these numbers to
+
+44
+00:02:52.000 --> 00:02:56.000
+strings, but you can also map them to objects, let me
+
+45
+00:02:56.000 --> 00:03:00.000
+show you another example. So I'm going to delete this html,
+
+46
+00:03:00.000 --> 00:03:04.000
+let's expand this a little bit more,
+
+47
+00:03:04.000 --> 00:03:08.000
+instead of mapping a number to a string, let's say you want to map them
+
+48
+00:03:08.000 --> 00:03:12.000
+to an object. So here I'm going to define an object
+
+49
+00:03:12.000 --> 00:03:16.000
+in this object we want to have a value property
+
+50
+00:03:16.000 --> 00:03:20.000
+and set that to this number. And finally you want to return
+
+51
+00:03:20.000 --> 00:03:24.000
+this object. Let's look at the result.
+
+52
+00:03:24.000 --> 00:03:28.000
+Oops, I made a mistake, I deleted the html
+
+53
+00:03:28.000 --> 00:03:32.000
+constant and that's why we get this error. Html is not defined.
+
+54
+00:03:32.000 --> 00:03:36.000
+So, let's display the items constant.
+
+55
+00:03:36.000 --> 00:03:40.000
+Now here's the result of our map.
+
+56
+00:03:40.000 --> 00:03:44.000
+We've mapped each number to an object with a value property.
+
+57
+00:03:44.000 --> 00:03:48.000
+Okay? So very useful when building real world applications.
+
+58
+00:03:48.000 --> 00:03:52.000
+Now let me show you something tricky here, in our callback function
+
+59
+00:03:52.000 --> 00:03:56.000
+we are declaring this constant and then returning it. Technically
+
+60
+00:03:56.000 --> 00:04:00.000
+we don't need to declare this as a separate constant, we can simply
+
+61
+00:04:00.000 --> 00:04:04.000
+put the return keyword here and return this object.
+
+62
+00:04:04.000 --> 00:04:08.000
+Because we are not working with that constant, with that object
+
+63
+00:04:08.000 --> 00:04:12.000
+constant, okay? So, save the changes, you still get
+
+64
+00:04:12.000 --> 00:04:16.000
+the same result, now earlier I told you that in your arrow function
+
+65
+00:04:16.000 --> 00:04:20.000
+if you have a single line of code and you're returning an value
+
+66
+00:04:20.000 --> 00:04:24.000
+you can exclude the return keyword as well as the curly braces.
+
+67
+00:04:24.000 --> 00:04:28.000
+So let's do that and see what happens. So remove the return key
+
+68
+00:04:28.000 --> 00:04:32.000
+word, and the curly braces and put
+
+69
+00:04:32.000 --> 00:04:36.000
+everything on one line like this.
+
+70
+00:04:36.000 --> 00:04:40.000
+Now, if we save the changes, we don't get the same result.
+
+71
+00:04:40.000 --> 00:04:44.000
+We get an array of 3 undefined elements.
+
+72
+00:04:44.000 --> 00:04:48.000
+The reason for this is by default these curly braces in
+
+73
+00:04:48.000 --> 00:04:52.000
+an arrow function, represent a code block. So when the JavaScript
+
+74
+00:04:52.000 --> 00:04:56.000
+engine tries to parse this arrow function it
+
+75
+00:04:56.000 --> 00:05:00.000
+thinks here we are defining a code block as opposed to an object
+
+76
+00:05:00.000 --> 00:05:04.000
+to return. So if you're returning an object
+
+77
+00:05:04.000 --> 00:05:08.000
+you need to put that object in parenthesis.
+
+78
+00:05:08.000 --> 00:05:12.000
+Like this. So, we put this object in parenthesis.
+
+79
+00:05:12.000 --> 00:05:16.000
+And with this our JavaScript engine will not look at this as a code block.
+
+80
+00:05:16.000 --> 00:05:20.000
+Now save the changes, now once again you get
+
+81
+00:05:20.000 --> 00:05:24.000
+3 objects. And one last thing before
+
+82
+00:05:24.000 --> 00:05:28.000
+we finish this lecture. So you have noticed that both the filter
+
+83
+00:05:28.000 --> 00:05:32.000
+and the map method return a new array, they
+
+84
+00:05:32.000 --> 00:05:36.000
+don't modify the original array,
+
+85
+00:05:36.000 --> 00:05:40.000
+these methods are chainable which means we can call them one after another
+
+86
+00:05:40.000 --> 00:05:44.000
+in a chain, so in this case,
+
+87
+00:05:44.000 --> 00:05:48.000
+this filtered constant is only used here. We haven't used this
+
+88
+00:05:48.000 --> 00:05:52.000
+anywhere else in the code. So we don't have to explicitly store the
+
+89
+00:05:52.000 --> 00:05:56.000
+result of this statement inside
+
+90
+00:05:56.000 --> 00:06:00.000
+a separate constant. We can get rid of this,
+
+91
+00:06:00.000 --> 00:06:04.000
+we call the filter method, now we don't want to have a semi colon here because
+
+92
+00:06:04.000 --> 00:06:08.000
+we are not going to terminate this statement. Instead we're going to
+
+93
+00:06:08.000 --> 00:06:12.000
+immediately call the map method on the result
+
+94
+00:06:12.000 --> 00:06:16.000
+that is returned from this statement. So,
+
+95
+00:06:16.000 --> 00:06:20.000
+I'm going to copy our map method here.
+
+96
+00:06:20.000 --> 00:06:24.000
+This is what we call chaining.
+
+97
+00:06:24.000 --> 00:06:28.000
+So we're calling 1 method, that method returns some
+
+98
+00:06:28.000 --> 00:06:32.000
+result, now we're immediately calling the map method on that result.
+
+99
+00:06:32.000 --> 00:06:36.000
+Now, when chaining multiple methods, by convention we put
+
+100
+00:06:36.000 --> 00:06:40.000
+each method call on a separate line, and this makes our code cleaner.
+
+101
+00:06:40.000 --> 00:06:44.000
+Have a look. So, numbers.
+
+102
+00:06:44.000 --> 00:06:48.000
+filter and then.map and
+
+103
+00:06:48.000 --> 00:06:52.000
+so on. And finally we store the result in the items.
+
+104
+00:06:52.000 --> 00:06:56.000
+That's a better and cleaner code.
+
+105
+00:06:56.000 --> 00:07:00.000
+Save the changes, we still get the same result.
+
+106
+00:07:00.000 --> 00:07:04.000
+Great, now note that here because the map method is
+
+107
+00:07:04.000 --> 00:07:08.000
+retuning a new array, again we can call the filter or the map method
+
+108
+00:07:08.000 --> 00:07:12.000
+on that array. So here we can call the
+
+109
+00:07:12.000 --> 00:07:16.000
+filter one more time, we get an object, and maybe we want to get objects
+
+110
+00:07:16.000 --> 00:07:20.000
+with value greater than 1. See what
+
+111
+00:07:20.000 --> 00:07:24.000
+happens? Now in the result we have only 1 of 2 objects
+
+112
+00:07:24.000 --> 00:07:28.000
+in our array, objects with value 2 and 3, and again we can
+
+113
+00:07:28.000 --> 00:07:32.000
+call the map method and maybe map each object
+
+114
+00:07:32.000 --> 00:07:36.000
+to a number. So to read the value property
+
+115
+00:07:36.000 --> 00:07:40.000
+and return it, save the changes, now we have an array of
+
+116
+00:07:40.000 --> 00:07:44.000
+2 numbers. So this is the power of
+
+117
+00:07:44.000 --> 00:07:47.933
+chaining these methods.
+
