@@ -1,0 +1,155 @@
+1
+00:00:02,160 --> 00:00:06,320
+Typescript is amazing but an order to work with it efficiently.
+
+2
+00:00:06,390 --> 00:00:11,900
+I strongly recommend that you also have a powerful code editor a powerful idea.
+
+3
+00:00:12,120 --> 00:00:15,690
+And here my clear recommendation is Visual Studio code.
+
+4
+00:00:16,020 --> 00:00:20,040
+It's free to use and it has amazing typescript support built in.
+
+5
+00:00:20,220 --> 00:00:25,650
+Now you still need to install the types of compiler and we already did this but this has to be built
+
+6
+00:00:25,650 --> 00:00:26,430
+in support.
+
+7
+00:00:26,430 --> 00:00:33,570
+Which shows you a lot of errors directly Endy i.e. before you even compiled the project so you can simply
+
+8
+00:00:33,570 --> 00:00:39,420
+visit code or visuals to do dot com and there you can download it for any operating system and simply
+
+9
+00:00:39,420 --> 00:00:42,810
+walk through the installer there to get this modern idea.
+
+10
+00:00:43,190 --> 00:00:46,550
+Now it is the idea I will be using for all this course.
+
+11
+00:00:46,650 --> 00:00:50,550
+And you can find tune and configure it to your requirements and needs.
+
+12
+00:00:50,550 --> 00:00:54,950
+Here are just some settings I'm using under a code references.
+
+13
+00:00:55,050 --> 00:00:59,760
+You can change the color theme and there I am using the dark plus theme.
+
+14
+00:00:59,760 --> 00:01:02,780
+So if you want the exact same look that's the theme I'm using.
+
+15
+00:01:02,850 --> 00:01:06,410
+But of course you can also play around with any arrow theme here.
+
+16
+00:01:06,420 --> 00:01:13,020
+I also installed certain extensions so third party plugins so to say which changed the appearance or
+
+17
+00:01:13,020 --> 00:01:15,080
+behavior of the editor.
+
+18
+00:01:15,390 --> 00:01:22,110
+You can click on View and then extensions to be taken to the extensions menu or the marketplace and
+
+19
+00:01:22,110 --> 00:01:23,030
+it's all free.
+
+20
+00:01:23,040 --> 00:01:25,600
+No worries nothing here cost you money.
+
+21
+00:01:25,600 --> 00:01:30,690
+Now I got tons of extensions installed but the extensions I would recommend that you definitely have
+
+22
+00:01:30,690 --> 00:01:37,980
+a look at is E as lint that you installed this to get a listing to get code quality check support in
+
+23
+00:01:37,980 --> 00:01:41,170
+your projects and that you installing material.
+
+24
+00:01:41,190 --> 00:01:45,590
+I can theme if you like these file icons I have in my projects.
+
+25
+00:01:45,600 --> 00:01:47,710
+That's a pure visual thing of course.
+
+26
+00:01:47,760 --> 00:01:54,660
+It doesn't change any behaviors and it can all recommend path intelligence so that later in the course
+
+27
+00:01:54,660 --> 00:02:02,190
+once we work with imports you get better support their and prettier which helps you format your code
+
+28
+00:02:02,310 --> 00:02:08,310
+so that it always looks nice and is readable prettier works together with a certain shortcut which you
+
+29
+00:02:08,310 --> 00:02:13,310
+should be aware of under Preferences Keyboard shortcuts there.
+
+30
+00:02:13,350 --> 00:02:19,560
+If you search for format document this shortcut here is a shortcut you can always press in your code
+
+31
+00:02:19,800 --> 00:02:26,550
+to auto format it to add missing semicolons to make sure you use the right indentation everywhere things
+
+32
+00:02:26,550 --> 00:02:32,190
+like that it makes your code more readable and your life as a developer easier and that's it.
+
+33
+00:02:32,250 --> 00:02:38,250
+You can also install t as lint but that will be merged with E as lint in the future so EA's land should
+
+34
+00:02:38,250 --> 00:02:40,050
+be all you really need.
+
+35
+00:02:40,050 --> 00:02:45,550
+With that we can go back to view explorer and you should have the same settings.
+
+36
+00:02:45,630 --> 00:02:52,140
+I have here but all the dive into the settings in general and explore them and find to everything to
+
+37
+00:02:52,140 --> 00:02:53,930
+your needs and to your likings.
+
+38
+00:02:54,000 --> 00:03:00,150
+And with that you have a great editor which allows you to write great code powerful code with a lot
+
+39
+00:03:00,150 --> 00:03:04,500
+of build and type support and you're well-prepared to get the most out of this course.

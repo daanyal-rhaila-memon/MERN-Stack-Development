@@ -1,0 +1,375 @@
+1
+00:00:02,510 --> 00:00:04,910
+So we set up D I.D. which is important.
+
+2
+00:00:04,910 --> 00:00:10,340
+Now let's also set up a starting project which will use for all at this course in the different course
+
+3
+00:00:10,340 --> 00:00:11,300
+modules.
+
+4
+00:00:11,300 --> 00:00:18,770
+So basically a project setup with which we can start every course module to then write our code there.
+
+5
+00:00:18,800 --> 00:00:24,920
+Now as you will see for all this cause writing code doesn't require a complex set up in general but
+
+6
+00:00:25,040 --> 00:00:31,730
+here I want to project where we can write code compile it and then immediately see the output of that
+
+7
+00:00:31,730 --> 00:00:33,520
+code in the browser.
+
+8
+00:00:33,650 --> 00:00:39,490
+And for that I'll first of all add a new index H TO MAIL file and you can add this in any empty folder.
+
+9
+00:00:39,500 --> 00:00:46,910
+The two other files or folders you see here are just config files for GID in case you're using version
+
+10
+00:00:46,910 --> 00:00:47,490
+control.
+
+11
+00:00:47,540 --> 00:00:51,590
+And for my editor which sets the same level so that's all I have here.
+
+12
+00:00:51,680 --> 00:00:58,370
+But in that index H html file I will now initialize it with a base skeleton and for data in visual pseudocode
+
+13
+00:00:58,400 --> 00:01:02,760
+you can just type h him l choose that H HTML5 option.
+
+14
+00:01:02,840 --> 00:01:09,620
+If you're not getting this menu just press the control in space choose the H HTML5 option and hit enter
+
+15
+00:01:09,620 --> 00:01:15,710
+and you'll get this skeleton there we could enter understanding typescript here as a title but that
+
+16
+00:01:15,710 --> 00:01:18,160
+does not matter to much more important.
+
+17
+00:01:18,160 --> 00:01:26,960
+Instead here you add a script tag in your head section and add a source and point at app J.S. here and
+
+18
+00:01:27,020 --> 00:01:28,930
+add the deferred attribute.
+
+19
+00:01:29,030 --> 00:01:35,540
+This tries to import an app as file which of course right now doesn't exist and it will then of course
+
+20
+00:01:35,570 --> 00:01:38,030
+also execute it if it finds it.
+
+21
+00:01:38,030 --> 00:01:45,470
+This allows us to view our changes our code changes directly on the screen in the browser or if we're
+
+22
+00:01:45,470 --> 00:01:49,580
+just logging something to the console in the browser dev tools.
+
+23
+00:01:49,580 --> 00:01:55,520
+Next I will add an app dot key as file that's the file a typescript file where we will write some code
+
+24
+00:01:55,550 --> 00:02:01,600
+and there for example you could console log your code goes here or whatever you want.
+
+25
+00:02:01,610 --> 00:02:07,750
+You can console log whatever you want here and if you do that you can compiled this file with typescript
+
+26
+00:02:07,760 --> 00:02:13,730
+which we installed earlier for Dad you can open the terminal integrated into the editor here and simply
+
+27
+00:02:13,730 --> 00:02:16,530
+write TSC app dot t.
+
+28
+00:02:16,610 --> 00:02:22,010
+This compiles this types could file and generates the app J.S. file now which is to file we're importing
+
+29
+00:02:22,010 --> 00:02:22,760
+here.
+
+30
+00:02:22,760 --> 00:02:28,670
+And if you now open this index H.M. file you'll see whatever happens in here you kick off the logic
+
+31
+00:02:28,670 --> 00:02:34,630
+you wrote in here and even that's logic that manipulate something on the dom or like in this case it's
+
+32
+00:02:34,640 --> 00:02:37,880
+logic which simply gets locked to the console.
+
+33
+00:02:37,910 --> 00:02:41,720
+So here in this case I opened does H smell file in the browser.
+
+34
+00:02:41,720 --> 00:02:44,490
+You can simply double click on it outside of the idea.
+
+35
+00:02:44,520 --> 00:02:50,150
+So in the normal windows explorer or the Mac finder and then maybe open your developer tools if you're
+
+36
+00:02:50,150 --> 00:02:54,010
+just logging something to the console and you'll see your log here.
+
+37
+00:02:54,050 --> 00:03:00,800
+Now that's nice but whenever we change something here in our code we have to manually recompile.
+
+38
+00:03:00,860 --> 00:03:02,390
+Well that is what it is for now.
+
+39
+00:03:02,390 --> 00:03:09,200
+It will change later in of course but we also have to manually reload this page here and to speed this
+
+40
+00:03:09,200 --> 00:03:15,440
+up and make sure that you don't have to do this whenever you change something will actually also add
+
+41
+00:03:15,470 --> 00:03:19,470
+another tool here to this dummy setup which we'll use for this course.
+
+42
+00:03:19,550 --> 00:03:22,120
+So that this happens automatically.
+
+43
+00:03:22,400 --> 00:03:27,840
+Now to install such a tool let's run NPM in it here in this project folder.
+
+44
+00:03:27,890 --> 00:03:35,080
+The NPM command is a way lable if you installed node J.S. make sure that for Dad you visit notorious
+
+45
+00:03:35,240 --> 00:03:40,940
+thought ORIC and download and install the latest version you find here for the moment we're not going
+
+46
+00:03:40,940 --> 00:03:47,210
+to write any note J.S. code but no chance comes to gather with the NPM tool which you can use to install
+
+47
+00:03:47,210 --> 00:03:53,240
+third party dependencies or useful tools that speed up our development and for that reason we need it
+
+48
+00:03:53,240 --> 00:03:53,510
+here.
+
+49
+00:03:53,870 --> 00:03:55,990
+So with that installed you can run NPM in it.
+
+50
+00:03:56,000 --> 00:04:01,460
+In this project folder simply at enter and you can answer all these questions here with the defaults
+
+51
+00:04:01,490 --> 00:04:06,500
+by simply hitting enter all the time and once this completes it gives you a package stuck Jason File
+
+52
+00:04:06,830 --> 00:04:13,400
+which looks something like this and now you can run npm install to install dependency which is exclusive
+
+53
+00:04:13,400 --> 00:04:14,450
+to this project.
+
+54
+00:04:14,450 --> 00:04:20,780
+So to install a tool you could say which you can use in this project dash dash safe dash death to market
+
+55
+00:04:20,810 --> 00:04:22,560
+as a development only dependency.
+
+56
+00:04:22,580 --> 00:04:28,010
+So a tool that helps us during development and does not contain any code which will execute as part
+
+57
+00:04:28,070 --> 00:04:33,530
+of our main code and the tool name is light dash server.
+
+58
+00:04:33,530 --> 00:04:41,230
+If you hit enter here does installs this extra tool and once this finishes just go into your package
+
+59
+00:04:41,230 --> 00:04:47,510
+stop Jason File and in the scripts part add a comma and add a new script which you named start and then
+
+60
+00:04:47,570 --> 00:04:53,540
+as a value between double quotes enter a light dash server so that name of the package which was added
+
+61
+00:04:53,540 --> 00:05:00,950
+here if you now hit Enter you can run NPM start here to start this start script and light server is
+
+62
+00:05:00,950 --> 00:05:06,980
+a simple development server which always serves the index H to mail file next to the package not Jason
+
+63
+00:05:06,980 --> 00:05:07,340
+fault.
+
+64
+00:05:07,340 --> 00:05:15,110
+So this file and it serves your application on this you are L you see your local host three thousand
+
+65
+00:05:15,110 --> 00:05:22,400
+by default and you can then just visit dislocation simply enter local host colon three thousand in the
+
+66
+00:05:22,400 --> 00:05:23,390
+browser.
+
+67
+00:05:23,390 --> 00:05:24,880
+And now your code runs here.
+
+68
+00:05:24,890 --> 00:05:26,210
+And why is this better.
+
+69
+00:05:26,210 --> 00:05:31,700
+Well this will not automatically reload the page whenever another file in this directory changes.
+
+70
+00:05:32,210 --> 00:05:38,970
+So if I for example add exclamation mark here and I save this and I then compiled is again with TSC
+
+71
+00:05:38,970 --> 00:05:46,600
+app dot t T.S. and you go back to the browser you'll see the latest output immediately because it automatically
+
+72
+00:05:46,600 --> 00:05:51,630
+reloaded and that simply saves us the extra work of reloading manually.
+
+73
+00:05:51,730 --> 00:05:54,580
+Not important about this NPM start process.
+
+74
+00:05:54,580 --> 00:06:00,190
+Definitely keep it running as long as you are working on your project as long as you are writing code
+
+75
+00:06:00,220 --> 00:06:02,830
+which you want to see execute in the browser.
+
+76
+00:06:02,830 --> 00:06:08,350
+Once you're done you can always quit this process with control C but once you do so your project is
+
+77
+00:06:08,350 --> 00:06:11,610
+no longer getting served under local host three thousands.
+
+78
+00:06:11,650 --> 00:06:15,640
+So keep it up and running as long as you are writing code and making changes.
+
+79
+00:06:15,700 --> 00:06:17,520
+With that I'll change it back.
+
+80
+00:06:17,530 --> 00:06:18,840
+But this is totally up to you.
+
+81
+00:06:19,450 --> 00:06:20,850
+And this is the project setup.
+
+82
+00:06:20,880 --> 00:06:21,750
+I will use fraud.
+
+83
+00:06:21,760 --> 00:06:25,440
+This course you'll also find it attached of course in the finished form.
+
+84
+00:06:25,540 --> 00:06:27,200
+Just one important note.
+
+85
+00:06:27,340 --> 00:06:33,820
+If you download the attached starting Project or any average course snapshot any other code snapshot
+
+86
+00:06:33,820 --> 00:06:35,920
+you'll find anywhere in the course.
+
+87
+00:06:35,920 --> 00:06:41,080
+Then you will get a download that does not include does note modules folder.
+
+88
+00:06:41,080 --> 00:06:47,040
+This is a huge folder which in the end stores all third party packages and their dependencies.
+
+89
+00:06:47,200 --> 00:06:54,100
+And since it is so huge I typically delete it because you can easily recreate it by running npm install.
+
+90
+00:06:54,130 --> 00:07:00,880
+So if you download one of my attachments navigate into the extracted folder and in that folder run npm
+
+91
+00:07:00,880 --> 00:07:06,810
+install and this will install all dependencies and recreate does node modules folder and once you did
+
+92
+00:07:06,820 --> 00:07:11,970
+this you can run NPM start or do whatever you want to do in this project and was dead.
+
+93
+00:07:11,980 --> 00:07:14,790
+We got this project set up we'll use for the course.
+
+94
+00:07:14,800 --> 00:07:18,160
+Now let's not waste any more time and let's just get started.

@@ -1,0 +1,111 @@
+1
+00:00:02,680 --> 00:00:04,870
+Hi and welcome to this course.
+
+2
+00:00:04,870 --> 00:00:09,060
+My name is Maxim Schwartz Mila and I will be your instructor in this course.
+
+3
+00:00:09,070 --> 00:00:16,390
+Now this course is about typescript superset 2 javascript so a programming language which actually builds
+
+4
+00:00:16,450 --> 00:00:18,010
+up on javascript.
+
+5
+00:00:18,160 --> 00:00:22,690
+You could say it takes javascript to the next level with typescript.
+
+6
+00:00:22,690 --> 00:00:28,660
+You will see in this course you can write less error prone much better and cleaner code and also use
+
+7
+00:00:28,660 --> 00:00:32,950
+some exciting new features which don't exist like this in javascript.
+
+8
+00:00:32,950 --> 00:00:35,910
+Now in this course you will learn typescript from scratch.
+
+9
+00:00:35,920 --> 00:00:39,450
+You don't need to know anything about typescript to get started.
+
+10
+00:00:39,460 --> 00:00:42,880
+Basic javascript knowledge absolutely suffices.
+
+11
+00:00:43,060 --> 00:00:49,600
+You will learn all the basics of typescript how it works why we use it the different advantages it offers
+
+12
+00:00:49,900 --> 00:00:55,960
+we'll dive into the core types it provides and we'll gradually build up knowledge and dive into more
+
+13
+00:00:55,960 --> 00:00:59,910
+and more advanced typescript features for all at this course.
+
+14
+00:00:59,950 --> 00:01:06,490
+Now this course is both a course that focuses on the theory and showing a broad variety of features
+
+15
+00:01:06,970 --> 00:01:11,560
+as well as showing all these features and action in real projects.
+
+16
+00:01:11,570 --> 00:01:14,450
+Therefore in this course we'll have a real project.
+
+17
+00:01:14,500 --> 00:01:18,710
+We'll also have a module where we dive into typescript with react.
+
+18
+00:01:18,730 --> 00:01:25,060
+We'll also have a module where we dive into typescript with node and express so that by the end of this
+
+19
+00:01:25,060 --> 00:01:25,550
+course.
+
+20
+00:01:25,570 --> 00:01:31,960
+You really feel comfortable using typescript in your next projects and then you know why you would use
+
+21
+00:01:31,960 --> 00:01:32,070
+it.
+
+22
+00:01:32,070 --> 00:01:37,690
+And most importantly how you would apply it to any javascript project you're working on.
+
+23
+00:01:37,750 --> 00:01:38,650
+No matter.
+
+24
+00:01:38,650 --> 00:01:44,850
+By the way if data is JavaScript in the browser with or without any framework or if it's on the service
+
+25
+00:01:44,850 --> 00:01:45,440
+side.
+
+26
+00:01:45,490 --> 00:01:47,320
+So that's all in the course.
+
+27
+00:01:47,350 --> 00:01:52,690
+I'm super excited to start this journey together with you and with that I'd say let's not waste any
+
+28
+00:01:52,690 --> 00:01:57,610
+time and let's find out what exactly types code is and which advantages it has to offer.

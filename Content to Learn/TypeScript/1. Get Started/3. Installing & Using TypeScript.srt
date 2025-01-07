@@ -1,0 +1,627 @@
+1
+00:00:02,190 --> 00:00:09,560
+Here is this same example basically in a real project you'll find this simple project the index HMO
+
+2
+00:00:09,580 --> 00:00:13,360
+file and this javascript file attached to this video in a zip file.
+
+3
+00:00:13,380 --> 00:00:16,870
+You can simply open this and then open to engage Tim Al file.
+
+4
+00:00:16,950 --> 00:00:20,990
+You can also open the code in any text editor of your choice.
+
+5
+00:00:21,030 --> 00:00:26,280
+Here I'm using Visual Studio code and it will come back to my exact setup later in this module.
+
+6
+00:00:26,280 --> 00:00:31,110
+For now you can just open these two text files with any text editor.
+
+7
+00:00:31,230 --> 00:00:35,840
+Now what you'll find in there is this javascript file which interact with this index.
+
+8
+00:00:35,860 --> 00:00:42,210
+H Tim Al file and in that index H Tim I'll file you'll find two inputs and a button and a new JavaScript
+
+9
+00:00:42,210 --> 00:00:43,950
+file which gets imported here.
+
+10
+00:00:44,070 --> 00:00:48,840
+We basically reach out to these elements then we have a function year end end event listener on the
+
+11
+00:00:48,840 --> 00:00:53,870
+button that triggers the function and logs the result of the function here in the console.
+
+12
+00:00:53,880 --> 00:01:00,630
+Now if we simply open that index HMO file by double clicking on it in the Windows Explorer or the Mac
+
+13
+00:01:00,630 --> 00:01:03,520
+finder so that it opens up in a browser.
+
+14
+00:01:03,690 --> 00:01:07,290
+What you'll see is this two inputs and the Add button.
+
+15
+00:01:07,350 --> 00:01:11,180
+And here I opened the browser developer tools as well.
+
+16
+00:01:11,190 --> 00:01:16,480
+Now if you enter 10 and 5 here for example you might expect to see 15 as a result.
+
+17
+00:01:16,500 --> 00:01:20,500
+You're on the right but instead you'll see one hundred and five.
+
+18
+00:01:20,640 --> 00:01:23,490
+And this shows us a weakness of JavaScript here.
+
+19
+00:01:23,490 --> 00:01:31,420
+This is not a technical error it's not an error which is thrown but it's a logical error in our application.
+
+20
+00:01:31,680 --> 00:01:34,350
+Now where is this error coming from though.
+
+21
+00:01:34,350 --> 00:01:40,650
+Well here in javascript I reach out to these two inputs and when the button is clicked in the end I
+
+22
+00:01:40,650 --> 00:01:45,290
+get the values of the two input elements and I passed them here to add.
+
+23
+00:01:45,330 --> 00:01:51,420
+And here it's important to know that in JavaScript when you access teh value of an input element it's
+
+24
+00:01:51,630 --> 00:01:57,720
+always a string always no matter which type of input this is if this is of type no or not.
+
+25
+00:01:57,720 --> 00:01:59,850
+It's always a string.
+
+26
+00:01:59,850 --> 00:02:02,730
+So I'm passing into a strings to this function the end.
+
+27
+00:02:03,060 --> 00:02:09,810
+And if you add two strings in JavaScript they get concatenated instead of added mathematically which
+
+28
+00:02:09,810 --> 00:02:14,250
+is why we see one hundred and five ten and five concatenated.
+
+29
+00:02:14,250 --> 00:02:20,880
+This is the issue with JavaScript here and this is something where typescript can help us now without
+
+30
+00:02:21,060 --> 00:02:29,360
+typescript we could of course add if check here and check if the type of num 1 is equal to number and
+
+31
+00:02:29,420 --> 00:02:38,320
+if the type of num 2 is equal to number and if that is the case then I return my calculation like this.
+
+32
+00:02:38,440 --> 00:02:46,130
+Else I might throw an error or I at least convert both to numbers by adding a plus in front of each
+
+33
+00:02:46,760 --> 00:02:48,320
+parameter here.
+
+34
+00:02:48,320 --> 00:02:54,920
+Now this is some code we could write maybe a bit more refined than this in javascript and with that
+
+35
+00:02:54,920 --> 00:03:00,610
+we would ensure that we convert numbers or the inputs to numbers if they're not numbers yet.
+
+36
+00:03:00,710 --> 00:03:07,430
+So with dad if I reload this and I repeat this now we get 15 because of our changed code.
+
+37
+00:03:07,640 --> 00:03:12,300
+So of course you can do it as in JavaScript and does this vanilla javascript nothing typescript bitch
+
+38
+00:03:12,320 --> 00:03:19,880
+about it but we wrote some extra code for an error which I actually would like to prevent in the first
+
+39
+00:03:19,880 --> 00:03:20,200
+place.
+
+40
+00:03:20,210 --> 00:03:22,180
+I don't want that this happens.
+
+41
+00:03:22,280 --> 00:03:29,090
+I want to make sure that we can't even pass strings here to add because ad should be a function that
+
+42
+00:03:29,180 --> 00:03:35,590
+only operates on numbers so that in there we don't need to check whether we get a number or not.
+
+43
+00:03:35,690 --> 00:03:40,480
+So I want to keep this function in the state it was before I went to this function here.
+
+44
+00:03:40,490 --> 00:03:44,180
+Just like this and that is where typescript can help us.
+
+45
+00:03:44,330 --> 00:03:48,920
+So typescript can help us in such situations as I just showed.
+
+46
+00:03:48,950 --> 00:03:52,650
+Now in order to see how it helps us let's install it.
+
+47
+00:03:52,730 --> 00:03:58,850
+So in typescript Lang dot org you can click on download and dare you'll learn how to install it and
+
+48
+00:03:58,850 --> 00:04:04,820
+we will actually install it with this command which uses the NPM tool and the NPM tool is part of the
+
+49
+00:04:04,820 --> 00:04:06,100
+node today as package.
+
+50
+00:04:06,800 --> 00:04:13,370
+So even though we're not going to write no trace code here we still need to install node J.S. simply
+
+51
+00:04:13,370 --> 00:04:17,810
+because behind the scenes that will also be used by some tools we use.
+
+52
+00:04:17,810 --> 00:04:24,890
+And when we install no chance we also install NPM the node package manager a tool which we then can
+
+53
+00:04:24,890 --> 00:04:29,100
+use to install typescript globally on our machine.
+
+54
+00:04:29,270 --> 00:04:34,910
+So simply visit no transport org and they're installed the latest version you'll find here simply click
+
+55
+00:04:34,910 --> 00:04:39,430
+on this button it will then download and install or you can walk fruited installer.
+
+56
+00:04:39,470 --> 00:04:46,460
+It is supported for all operating systems and once you have no charts installed you will be able to
+
+57
+00:04:46,460 --> 00:04:54,740
+run this command simply open up your normal terminal or a command prompt and then copy in that command
+
+58
+00:04:54,860 --> 00:04:56,920
+important on Mac and Linux.
+
+59
+00:04:56,960 --> 00:05:01,910
+You might need to add sudo in front of this to get the right permissions on windows this will not be
+
+60
+00:05:01,910 --> 00:05:02,800
+required.
+
+61
+00:05:02,840 --> 00:05:08,510
+So simply make sure you then install typescript with this command entry or password in case you should
+
+62
+00:05:08,510 --> 00:05:10,230
+be prompted for it.
+
+63
+00:05:10,280 --> 00:05:14,210
+And with that you got typescript installed globally on your machine.
+
+64
+00:05:14,210 --> 00:05:17,480
+Now what does this mean typescript installed.
+
+65
+00:05:17,480 --> 00:05:23,420
+Well remember that typescript is a programming language but it's only a programming language that works
+
+66
+00:05:23,720 --> 00:05:25,930
+because we also have this compiler.
+
+67
+00:05:25,940 --> 00:05:33,800
+This tool which compiles a javascript so in the end what we installed here is the compiler and everything
+
+68
+00:05:33,800 --> 00:05:39,050
+it needs to know to understand typescript code to convert to javascript.
+
+69
+00:05:39,080 --> 00:05:46,230
+So with this we have the compiler installed and we can run the TSC command now which invokes these types
+
+70
+00:05:46,230 --> 00:05:54,120
+of compiler to compile a types could file to JavaScript so to see this in this project we worked on.
+
+71
+00:05:54,170 --> 00:06:01,310
+Let's simply add a new file using t s start T S for example any name you want but the extensions should
+
+72
+00:06:01,310 --> 00:06:05,050
+be dot t s which stands for typescript.
+
+73
+00:06:05,150 --> 00:06:11,330
+Now let's copy that JavaScript code into the types could file here in the visual pseudocode.
+
+74
+00:06:11,390 --> 00:06:17,330
+I immediately get some errors which we now will fix and this is one great advantage of typescript.
+
+75
+00:06:17,420 --> 00:06:22,610
+If you're using the right idea and my strong recommendation really is the visuals through your code
+
+76
+00:06:22,760 --> 00:06:28,900
+and I will come back to that later then you already get great support in the idea when working instead
+
+77
+00:06:28,910 --> 00:06:36,230
+of types could files here already it basically lets types could analyze my code and identifies some
+
+78
+00:06:36,260 --> 00:06:39,760
+weaknesses which is great because that's exactly what I want.
+
+79
+00:06:39,770 --> 00:06:47,990
+So here in this example let me delete the jobs could only J File and with that some of the arrows are
+
+80
+00:06:47,990 --> 00:06:54,380
+gone because it identified that some constants and so on were used in multiple files but it still gives
+
+81
+00:06:54,380 --> 00:06:56,420
+me an error down there.
+
+82
+00:06:56,420 --> 00:07:01,210
+And what you see for example is that it's not sure if there really is a value property.
+
+83
+00:07:01,210 --> 00:07:05,780
+Now that's a mistake I didn't even consider before in javascript but it's true.
+
+84
+00:07:05,780 --> 00:07:08,380
+I'm selecting an element by idea here.
+
+85
+00:07:08,390 --> 00:07:11,720
+Now typescript can't know if this will really work.
+
+86
+00:07:11,720 --> 00:07:13,220
+Maybe I have a typo in here.
+
+87
+00:07:13,220 --> 00:07:18,290
+In this case I wouldn't be able to select an element this element simply wouldn't exist on the page.
+
+88
+00:07:18,500 --> 00:07:24,130
+So we might have a typo in typescript does not analyze your age HTML code to find out if this works.
+
+89
+00:07:24,140 --> 00:07:29,660
+So for one does might fail but even if it succeeds and we select an element there it doesn't have to
+
+90
+00:07:29,660 --> 00:07:30,980
+be an input element.
+
+91
+00:07:30,980 --> 00:07:36,980
+It could be any other element and most aged two male elements don't have a value property you can access
+
+92
+00:07:37,510 --> 00:07:44,000
+and this already is great typescript forces us to be more explicit to be clearer about our intentions
+
+93
+00:07:44,210 --> 00:07:50,000
+and to double check our code and for example here and you don't need to understand all that syntax we
+
+94
+00:07:50,000 --> 00:07:52,500
+will learn it step by step from the courts.
+
+95
+00:07:52,640 --> 00:07:59,180
+But for example here we could let TIBCO know that we are sure that we will get an element by adding
+
+96
+00:07:59,180 --> 00:08:00,110
+an exclamation mark.
+
+97
+00:08:00,110 --> 00:08:04,170
+This basically tells typescript this will never yield null.
+
+98
+00:08:04,190 --> 00:08:06,340
+This will always find an element.
+
+99
+00:08:06,530 --> 00:08:11,540
+And as a developer I of course know that this will always find an element because I double check that
+
+100
+00:08:11,540 --> 00:08:15,630
+idea and as see yeah I have that idea here.
+
+101
+00:08:15,650 --> 00:08:22,250
+Now in addition I also know it will always be an input element so we can use as HD email input element
+
+102
+00:08:22,790 --> 00:08:28,850
+as syntax called typecasting which I will always explain in greater detail later to let TIBCO know which
+
+103
+00:08:28,850 --> 00:08:33,090
+type of element this will be we can apply this to the second element as well.
+
+104
+00:08:33,740 --> 00:08:39,740
+So just to be really clear here this is typescript syntax I can use this exclamation mark here and I
+
+105
+00:08:39,740 --> 00:08:46,280
+can use this type costing here because we are in a dot t s file we are in our types could file we will
+
+106
+00:08:46,280 --> 00:08:54,030
+comp. is to JavaScript this would not work in vanilla javascript this is not a way level there with
+
+107
+00:08:54,030 --> 00:08:59,850
+this we are forced to be clearer about our intentions and to really think about our code and double
+
+108
+00:08:59,850 --> 00:09:06,020
+check it which is great but that's not even the biggest advantage the biggest advantage is the additional
+
+109
+00:09:06,060 --> 00:09:10,230
+types that is what gives typescript its name after all.
+
+110
+00:09:10,230 --> 00:09:13,850
+And here I am not saying anything about the types of data.
+
+111
+00:09:13,860 --> 00:09:20,840
+This function operates on if we hover over one of these parameters we see this anything here and in
+
+112
+00:09:20,840 --> 00:09:27,270
+the end this is typescript saying to us I don't know what's in there it could be any type of value.
+
+113
+00:09:27,600 --> 00:09:34,170
+Now we can add a more explicit type in typescript files so not in JavaScript files but in typescript
+
+114
+00:09:34,170 --> 00:09:42,480
+files by adding a colon here and then specifying the type for example no doing this here and doing this
+
+115
+00:09:42,480 --> 00:09:49,950
+here with this extra syntax which typescript which does compiler understands we're telling typescript
+
+116
+00:09:50,250 --> 00:09:55,620
+that this year will be of type no and this will be of type number and therefore now we get an error
+
+117
+00:09:55,620 --> 00:10:01,980
+here again and we don't just get this error in the IDA e by the way we all get it if we tried to compile
+
+118
+00:10:01,980 --> 00:10:08,640
+this code because that is ultimately what we need to do right now to compile this I will open a terminal
+
+119
+00:10:08,730 --> 00:10:14,580
+and here I'm just opening my terminal or command prompt which is integrated into this idea it's the
+
+120
+00:10:14,580 --> 00:10:21,400
+regular system command prompt the regular system terminal I was using here as well just already navigate
+
+121
+00:10:21,390 --> 00:10:22,950
+it into this folder.
+
+122
+00:10:23,280 --> 00:10:31,740
+So if you are not using some built in IDA e terminal you can use your regular one but C D navigate into
+
+123
+00:10:31,740 --> 00:10:38,160
+debt extracted starting folder where you added your types could file and once you are in that folder
+
+124
+00:10:38,520 --> 00:10:46,890
+you can run T as C Dad will invoke this typescript compiler we installed earlier on using dash t s dot
+
+125
+00:10:46,920 --> 00:10:54,360
+t s and if you run this you will actually get an error you will still get a javascript file because
+
+126
+00:10:54,360 --> 00:11:01,650
+by default typescript will still compile it to JavaScript you will also learn how to suppress this later
+
+127
+00:11:01,650 --> 00:11:08,880
+in the course but it gives you a compiler error while doing so it tells you that argument of type String
+
+128
+00:11:09,120 --> 00:11:13,400
+is not a sizable 2 parameter of type no.
+
+129
+00:11:13,530 --> 00:11:19,830
+So the problem here is that typescript understands that what we get on the value property of our input
+
+130
+00:11:19,860 --> 00:11:28,920
+element will be a string we all see this here in the IP and we can't pass this to add because dear we
+
+131
+00:11:28,920 --> 00:11:29,930
+don't want a string.
+
+132
+00:11:29,940 --> 00:11:31,400
+We want a number.
+
+133
+00:11:31,560 --> 00:11:36,750
+So we have to fix this by for example converting this to a number here by adding a plus.
+
+134
+00:11:36,870 --> 00:11:43,130
+And as soon as we do this we can compile this code again by repeating that command.
+
+135
+00:11:43,290 --> 00:11:45,510
+And now it compiles without errors.
+
+136
+00:11:45,600 --> 00:11:51,450
+It gives us this using typescript or JavaScript file and now it shows some errors again because it doesn't
+
+137
+00:11:51,450 --> 00:11:55,200
+understand that it will never use both files at the same time here again.
+
+138
+00:11:55,220 --> 00:11:59,930
+This is all something which will get better later in the course once we configured as we can ignore
+
+139
+00:11:59,930 --> 00:12:00,900
+this for now.
+
+140
+00:12:00,900 --> 00:12:06,090
+So it gives me this file and if we open this we see something interesting in here.
+
+141
+00:12:06,240 --> 00:12:09,590
+We see that there of course our types are gone.
+
+142
+00:12:09,600 --> 00:12:11,330
+This costing here is gone.
+
+143
+00:12:11,340 --> 00:12:13,450
+We have vanilla javascript again.
+
+144
+00:12:13,920 --> 00:12:16,150
+So if we have a look at our tiles could file here.
+
+145
+00:12:16,290 --> 00:12:18,960
+We see that there we have all these nice additions.
+
+146
+00:12:19,140 --> 00:12:22,410
+But as I mentioned these are just types of features.
+
+147
+00:12:22,470 --> 00:12:29,610
+When you compile two javascript they are used to evaluate your code and to find potential errors but
+
+148
+00:12:29,610 --> 00:12:34,000
+then they all stripped out and we get regular JavaScript as output.
+
+149
+00:12:34,020 --> 00:12:41,160
+So now we can go to our index age time I'll file an import using t s start J.S. and that's important.
+
+150
+00:12:41,280 --> 00:12:45,950
+Always import JavaScript files because the browser can't run typescript.
+
+151
+00:12:46,020 --> 00:12:49,710
+We need to import the result of our compilation.
+
+152
+00:12:49,710 --> 00:12:57,880
+And now with that if we reload this we have our working code because now we have proper javascript code
+
+153
+00:12:58,090 --> 00:13:03,050
+where we fixed this issue by costing our inputs before we pass them to the function.
+
+154
+00:13:03,160 --> 00:13:08,100
+But we were able to fix these issues because of our type annotations here.
+
+155
+00:13:08,170 --> 00:13:13,270
+And as you saw we had to write some other parts of the code in a cleaner way as well.
+
+156
+00:13:13,270 --> 00:13:15,460
+And dad is white high school is amazing.
+
+157
+00:13:15,460 --> 00:13:19,870
+It forces us to write better cleaner and less error prone code.

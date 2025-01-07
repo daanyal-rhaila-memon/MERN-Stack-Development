@@ -1,0 +1,199 @@
+1
+00:00:02,380 --> 00:00:10,670
+So what is Times called What is it all about why would we use it typescript is a javascript superset.
+
+2
+00:00:10,860 --> 00:00:12,270
+Now what does this mean.
+
+3
+00:00:12,280 --> 00:00:16,360
+It means that typescript is in the end a language a programming language.
+
+4
+00:00:16,390 --> 00:00:21,010
+Building up on javascript it's not a brand new language.
+
+5
+00:00:21,010 --> 00:00:27,520
+Instead it takes the javascript language and adds new features and advantages to it.
+
+6
+00:00:27,520 --> 00:00:32,080
+It makes writing javascript code easier and more powerful.
+
+7
+00:00:32,080 --> 00:00:40,090
+You could say but we have one huge disadvantage typescript can't be executed by javascript environments
+
+8
+00:00:40,120 --> 00:00:48,670
+like the browser browsers can't execute TypeScript and for example note J.S. also can't execute typescript
+
+9
+00:00:48,940 --> 00:00:53,990
+soda environments where we can execute javascript don't support typescript.
+
+10
+00:00:54,130 --> 00:01:00,770
+What's the idea behind typescript then it's a better version of JavaScript and we can't use it.
+
+11
+00:01:00,790 --> 00:01:05,990
+Well not quite typescript is a programming language but it's also a tool.
+
+12
+00:01:06,130 --> 00:01:14,470
+It's a powerful compiler which you run over your code to compile your typescript code to javascript.
+
+13
+00:01:14,470 --> 00:01:21,790
+So what you get as a result when writing code in typescript is javascript but you didn't write that
+
+14
+00:01:21,790 --> 00:01:28,480
+JavaScript code you wrote typescript code with all the new features and all the advantages and you get
+
+15
+00:01:28,570 --> 00:01:30,700
+normal javascript code.
+
+16
+00:01:30,700 --> 00:01:37,450
+Well that of course brings up one important question how can typescript add new features if what you
+
+17
+00:01:37,450 --> 00:01:40,860
+get in the end is regular javascript.
+
+18
+00:01:40,870 --> 00:01:47,700
+And the answer is the typescript compiler compiles these new features to JavaScript work arounds.
+
+19
+00:01:47,770 --> 00:01:54,290
+So in the end it might give you a nicer syntax an easier way of doing something and it will then compile
+
+20
+00:01:54,290 --> 00:02:02,290
+that nicer easier way to a more complex javascript snippet which you would have to write otherwise so
+
+21
+00:02:02,290 --> 00:02:03,250
+it's not magic.
+
+22
+00:02:03,250 --> 00:02:10,630
+Of course it can't add what's not possible at all in the javascript language but it can add new features
+
+23
+00:02:10,630 --> 00:02:14,850
+that simply are easier to use nicer syntax things like this.
+
+24
+00:02:15,160 --> 00:02:20,980
+In addition types of course does one important thing which the name already implies.
+
+25
+00:02:20,980 --> 00:02:28,360
+It adds types it adds a feature to these javascript language add which will have a close look in a second
+
+26
+00:02:28,810 --> 00:02:36,550
+which will actually give you as a developer an opportunity of identifying errors in your code earlier
+
+27
+00:02:36,820 --> 00:02:41,300
+before your script runs and the error occurs at runtime in the browser.
+
+28
+00:02:41,410 --> 00:02:46,660
+So it does not only give you some new features and nicer ways of doing something.
+
+29
+00:02:46,750 --> 00:02:54,130
+It also gives you extra error checking where errors which you would otherwise get as runtime errors
+
+30
+00:02:54,520 --> 00:02:58,300
+can be caught and fixed early during development.
+
+31
+00:02:58,390 --> 00:03:06,100
+So why would we use typescript consider disk sample a fairly simple javascript function which adds to
+
+32
+00:03:06,100 --> 00:03:06,760
+numbers.
+
+33
+00:03:06,760 --> 00:03:12,580
+Now when I call it please notice that I'm passing in two strings instead of two numbers and I'll show
+
+34
+00:03:12,580 --> 00:03:18,130
+you a real example where it's something like this could happen realistically in just a second.
+
+35
+00:03:18,130 --> 00:03:23,080
+So we're calling this function with two strings and as a result what you would actually get here is
+
+36
+00:03:23,080 --> 00:03:29,740
+probably an unwanted behavior because if you add two strings javascript will come candidate the strings
+
+37
+00:03:30,100 --> 00:03:32,790
+instead of doing a mathematical calculation here.
+
+38
+00:03:32,830 --> 00:03:39,040
+So the result would not be 5 but 20 free concatenated string of the two numbers.
+
+39
+00:03:39,040 --> 00:03:41,720
+This is an error you could have in JavaScript.
+
+40
+00:03:41,770 --> 00:03:43,510
+It's not a technical error.
+
+41
+00:03:43,600 --> 00:03:51,100
+You probably won't get a runtime error but you have a logical mistake in your code and that of course
+
+42
+00:03:51,100 --> 00:03:55,900
+can lead to huge problems in the web applications you're writing with JavaScript.
+
+43
+00:03:55,930 --> 00:03:59,370
+Now of course in JavaScript we have mitigation strategies.
+
+44
+00:03:59,380 --> 00:04:05,390
+We could add an if check in the function to check the types of DB inputs at runtime.
+
+45
+00:04:05,470 --> 00:04:11,430
+We could also validate and sanitize user input and whilst we might want to do all of that it would also
+
+46
+00:04:11,440 --> 00:04:15,590
+be nice if we could catch errors like this during development already.
+
+47
+00:04:15,910 --> 00:04:22,510
+And thankfully this is possible with typescript because developers can write invalid code here and introduce
+
+48
+00:04:22,510 --> 00:04:28,330
+bugs like this in javascript and with typescript we have a tool that helps us write better code and
+
+49
+00:04:28,330 --> 00:04:30,040
+avoid such problems.
+
+50
+00:04:30,100 --> 00:04:31,680
+So let's have a closer look at this.

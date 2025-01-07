@@ -1,0 +1,123 @@
+1
+00:00:02,350 --> 00:00:06,790
+So you saw typescript in action and it offers great advantages.
+
+2
+00:00:06,790 --> 00:00:14,980
+It makes writing clean code really easier typescript adds types and Data's super important with types.
+
+3
+00:00:14,980 --> 00:00:22,090
+We have to be way more explicit about how things work and we can avoid many unexpected and unnecessary
+
+4
+00:00:22,210 --> 00:00:24,520
+errors by using types.
+
+5
+00:00:24,520 --> 00:00:31,510
+In addition to that we also can use I.D. modern I.D. which have built in types of support which can
+
+6
+00:00:31,510 --> 00:00:38,350
+pick up on these types and give us better auto completion and built in errors which show before we even
+
+7
+00:00:38,350 --> 00:00:42,870
+compiled a code because they all understand typescript.
+
+8
+00:00:43,060 --> 00:00:49,660
+But besides the types and the huge advantages we get a loan by using types we also get our features
+
+9
+00:00:49,690 --> 00:00:56,610
+added by typescript we can use certain next generation javascript features which you can write and use
+
+10
+00:00:56,610 --> 00:01:03,340
+in our typescript files and then they will get compiled down to JavaScript code to work arounds that
+
+11
+00:01:03,400 --> 00:01:05,550
+even work in older browsers.
+
+12
+00:01:05,710 --> 00:01:11,170
+If you know Babel which is a tool that allows us to do that with vanilla javascript as well.
+
+13
+00:01:11,170 --> 00:01:17,710
+It's a bit like debt just already built into typescript we can use modern javascript features and still
+
+14
+00:01:17,710 --> 00:01:22,290
+produce and ship code that works in older browsers as well.
+
+15
+00:01:22,630 --> 00:01:29,070
+Types could also add certain features which only types could understand like interfaces and generics.
+
+16
+00:01:29,140 --> 00:01:35,140
+These are features which can't be compiled to javascript but they don't have to because they are features
+
+17
+00:01:35,410 --> 00:01:40,690
+that help us during development that give us clearer errors and help us a wide.
+
+18
+00:01:40,690 --> 00:01:42,000
+Even more errors.
+
+19
+00:01:42,250 --> 00:01:44,950
+So it even adds more features on that front.
+
+20
+00:01:45,010 --> 00:01:51,970
+Besides the types we already learn about it also gives us certain meta programming features like decorators
+
+21
+00:01:52,180 --> 00:01:57,760
+on which I have a whole module in this coords where you will understand what exactly decorators are
+
+22
+00:01:57,910 --> 00:02:04,260
+why they are so meta and why they are amazing typescript could all is highly configurable.
+
+23
+00:02:04,300 --> 00:02:10,300
+We didn't configure it thus far but I have a whole module in the course where we talk only about the
+
+24
+00:02:10,300 --> 00:02:16,990
+compiler and how to configure it and you can really fine tune it to your requirements to make it stricter
+
+25
+00:02:17,050 --> 00:02:25,150
+or looser and to ensure that it behaves in exactly the way you wanted to behave and with modern tooling
+
+26
+00:02:25,150 --> 00:02:30,530
+with modern I.D. you even get support in non types good projects.
+
+27
+00:02:30,640 --> 00:02:36,970
+The idea you just saw visuals through you code that even gives you better support in plain JavaScript
+
+28
+00:02:36,970 --> 00:02:44,730
+files because it is able to use some types of features under the hood without you explicitly using typescript.
+
+29
+00:02:44,770 --> 00:02:51,980
+So that's a free gain you get out of the box when being aware of TypeScript and when using modern tools.
+
+30
+00:02:52,060 --> 00:02:57,880
+So there are many reasons for using TypeScript and that's probably why you took this course in this
+
+31
+00:02:57,880 --> 00:03:03,520
+course we will now learn it step by step and we will learn all about the amazing features it adds.

@@ -1,0 +1,159 @@
+1
+00:00:02,290 --> 00:00:07,630
+Your success matters to me and I want to ensure that you get the most out of this course.
+
+2
+00:00:07,630 --> 00:00:10,690
+No of course that starts with watching the videos.
+
+3
+00:00:10,690 --> 00:00:13,120
+This is a video on the mind course self.
+
+4
+00:00:13,120 --> 00:00:14,610
+Course watch the videos.
+
+5
+00:00:14,650 --> 00:00:17,350
+You can go through this course step by step.
+
+6
+00:00:17,350 --> 00:00:22,940
+It's built in such a way that all the modules and lectures built up on each other.
+
+7
+00:00:22,990 --> 00:00:28,030
+You can also skip cert modules of course because all the modules all do work on their own.
+
+8
+00:00:28,030 --> 00:00:33,990
+If you already know a concept for example now when watching the videos of course do that at your speed.
+
+9
+00:00:34,000 --> 00:00:40,150
+You got speed controls here in the video player and you can slow me down if I'm going too fast or speed
+
+10
+00:00:40,150 --> 00:00:42,410
+me up if I'm going to slow for your taste.
+
+11
+00:00:43,060 --> 00:00:45,440
+I also recommend that you code along.
+
+12
+00:00:45,490 --> 00:00:52,090
+It's not a must do but you typically learn better if you write code on your own and you have to find
+
+13
+00:00:52,090 --> 00:00:58,480
+and fix your own mistakes all the pause and rewind the videos for that because the videos are of course
+
+14
+00:00:58,480 --> 00:01:03,170
+recorded in a way that also makes sense to people who are not coding along.
+
+15
+00:01:03,190 --> 00:01:09,580
+So if you do you might need to pause occasionally try out the next steps on your own or go back to an
+
+16
+00:01:09,610 --> 00:01:16,060
+earlier point in a video to see how exactly I implemented something there and in general practicing
+
+17
+00:01:16,150 --> 00:01:23,410
+is important in this course we work on real projects and we have many smaller demos and I can only encourage
+
+18
+00:01:23,410 --> 00:01:29,710
+you that you sometimes pause and try out the next steps on your own or that you deviate from what I
+
+19
+00:01:29,710 --> 00:01:31,750
+do and try out your own things.
+
+20
+00:01:31,750 --> 00:01:34,140
+So definitely all the advance on your own.
+
+21
+00:01:34,150 --> 00:01:38,920
+Of course only to a certain extent because if you haven't learned about a certain feature it might be
+
+22
+00:01:38,920 --> 00:01:43,620
+hard to implement it on your own but whenever possible whenever you feel like it.
+
+23
+00:01:43,690 --> 00:01:46,570
+Definitely try out things on your own.
+
+24
+00:01:47,020 --> 00:01:53,400
+Now when you do that or when you just code along as well you will also face some errors.
+
+25
+00:01:53,410 --> 00:01:55,370
+Things don't always go as planned.
+
+26
+00:01:55,390 --> 00:01:59,170
+You introduced a mistake in your code and you get an error.
+
+27
+00:01:59,290 --> 00:02:05,290
+Now debug these errors and search on your own you will see attached code which you'll find attached
+
+28
+00:02:05,290 --> 00:02:10,990
+to many lectures in the course always to the last lecture of each module so that you can compare your
+
+29
+00:02:10,990 --> 00:02:17,440
+code to mine and find out where it deviates but also if you get error messages google them or use the
+
+30
+00:02:17,440 --> 00:02:23,020
+search here and you'll need me to also search the Q and A section because chances are someone else had
+
+31
+00:02:23,020 --> 00:02:27,780
+a similar error and you can quickly fix it by looking at their solution.
+
+32
+00:02:27,820 --> 00:02:33,970
+Now of course if you're really stuck or if some concept is unclear you can also ask but also answer
+
+33
+00:02:34,210 --> 00:02:36,280
+here in the Q and A section.
+
+34
+00:02:36,280 --> 00:02:43,090
+I do my best to provide quick support there but also try to help others there on your own because besides
+
+35
+00:02:43,090 --> 00:02:50,170
+fixing your own errors if you all will help others and work with our students you get a lot out of this
+
+36
+00:02:50,170 --> 00:02:54,400
+course as well so that's definitely all the recommendation I have.
+
+37
+00:02:54,400 --> 00:03:01,390
+And with all these steps or all these building blocks you have everything you need to get the most out
+
+38
+00:03:01,390 --> 00:03:02,210
+of this course.
+
+39
+00:03:02,310 --> 00:03:08,830
+In the next lecture I will show you d d setup the idea e I will be using for this course and thereafter
+
+40
+00:03:08,890 --> 00:03:10,870
+we can already dive into typescript.

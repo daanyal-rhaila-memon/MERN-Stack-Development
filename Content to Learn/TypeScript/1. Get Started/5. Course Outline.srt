@@ -1,0 +1,199 @@
+1
+00:00:02,170 --> 00:00:04,910
+This course is packed with content.
+
+2
+00:00:04,930 --> 00:00:10,420
+We're almost done getting started and they're off there will dive right into TypeScript and into all
+
+3
+00:00:10,420 --> 00:00:13,870
+its exciting features to learn them step by step.
+
+4
+00:00:13,870 --> 00:00:18,850
+We'll start with the typescript basics of course the core types how it generally works.
+
+5
+00:00:18,850 --> 00:00:24,760
+Some of the new features it adds and all you need to know to get a good understanding of typescript
+
+6
+00:00:25,310 --> 00:00:31,390
+they're after will already dive deeper into the types of compiler and the configuration of it because
+
+7
+00:00:31,390 --> 00:00:36,580
+it's super important for you to understand what you can configure there and what all these different
+
+8
+00:00:36,580 --> 00:00:37,490
+settings do.
+
+9
+00:00:37,490 --> 00:00:40,840
+So we'll have a closer look at that in this module.
+
+10
+00:00:40,870 --> 00:00:46,810
+Thereafter We'll explore next generation javascript features supported in typescript how they work and
+
+11
+00:00:46,810 --> 00:00:48,940
+how you can use them in typescript.
+
+12
+00:00:48,940 --> 00:00:55,760
+We'll continue with classes and interfaces a super important concept partly also in vanilla javascript.
+
+13
+00:00:55,770 --> 00:01:01,600
+In the case of classes but with interfaces we also got a brand new typescript feature and you will understand
+
+14
+00:01:01,600 --> 00:01:06,200
+what they are what they do and why we might want to use them.
+
+15
+00:01:06,350 --> 00:01:08,200
+After it's time to dive deeper.
+
+16
+00:01:08,230 --> 00:01:13,210
+We'll have a look at some advanced types and advanced types good features in general.
+
+17
+00:01:13,300 --> 00:01:18,790
+Taking it to the next level there and building up on the basics we already learned about up to this
+
+18
+00:01:18,790 --> 00:01:20,110
+point.
+
+19
+00:01:20,170 --> 00:01:27,250
+Also an advanced feature which definitely deserves its own section is d generics feature.
+
+20
+00:01:27,250 --> 00:01:31,140
+You will learn what that is and why it's really really helpful.
+
+21
+00:01:31,210 --> 00:01:39,250
+In this module followed by decorators decorators are a pretty cool feature also added by TypeScript
+
+22
+00:01:39,430 --> 00:01:45,880
+and we'll have a closer look at decorators and all the builds I'm really useful decorators in that module
+
+23
+00:01:46,240 --> 00:01:52,660
+and thereafter we will have learned a lot about typescript now the course is organized such that I show
+
+24
+00:01:52,720 --> 00:01:59,030
+all these individual features in relatively small simple demos.
+
+25
+00:01:59,080 --> 00:02:05,980
+Now to also give you a bigger picture and to see how you would apply all these features in a real project
+
+26
+00:02:06,320 --> 00:02:14,170
+will build just that we'll have a whole module where we built an entire project entirely with typescript
+
+27
+00:02:14,470 --> 00:02:17,740
+from scratch so that you see many of these features.
+
+28
+00:02:17,740 --> 00:02:23,590
+Most of these features you'll learn about up to that point in action and you'll see how they work together
+
+29
+00:02:23,770 --> 00:02:28,180
+and why they simplify the process of building such a project.
+
+30
+00:02:28,210 --> 00:02:33,640
+Once we're done building this project will identify a new problem and we'll learn how to solve it by
+
+31
+00:02:33,640 --> 00:02:40,550
+working with namespace and modules which will help us make our code more manageable and readable.
+
+32
+00:02:40,570 --> 00:02:47,080
+Building up on that will also explore Westpac with typescript Westpac is a build tool we use in modern
+
+33
+00:02:47,080 --> 00:02:52,620
+front end web development and you can use it combined with typescript to get a better project setup
+
+34
+00:02:53,020 --> 00:02:58,010
+which simply makes certain things easier and allows you to get the best of both worlds.
+
+35
+00:02:58,060 --> 00:03:04,120
+A great development experience and also code that works really well for your end users.
+
+36
+00:03:04,150 --> 00:03:10,220
+Once we're done with that we have a very solid picture of TypeScript and how to work with it in projects.
+
+37
+00:03:10,240 --> 00:03:16,660
+Now what you will need in a lot of real projects are third party libraries so we will take a closer
+
+38
+00:03:16,660 --> 00:03:22,690
+look at that because there are certain third party libraries which really embrace TypeScript and have
+
+39
+00:03:22,690 --> 00:03:28,540
+built in typescript support but there also are many libraries which don't and we'll have a look at how
+
+40
+00:03:28,540 --> 00:03:32,410
+we can work with both types of libraries in a great way.
+
+41
+00:03:32,420 --> 00:03:34,180
+Entire good projects.
+
+42
+00:03:34,580 --> 00:03:39,650
+Well and then there are some specific scenarios which does serve their own modules.
+
+43
+00:03:39,670 --> 00:03:46,030
+We'll have a whole module about react with typescript how you can build an entire react application
+
+44
+00:03:46,030 --> 00:03:53,320
+with typescript only and also an entire module about node J.S. and express and typescript.
+
+45
+00:03:53,320 --> 00:04:00,490
+So did you also have great examples for these very popular and specific use cases of typescript where
+
+46
+00:04:00,490 --> 00:04:06,700
+you can suddenly create react or node applications in a brand new way with a brand new language.
+
+47
+00:04:06,820 --> 00:04:09,280
+So lots of exciting content in the course.
+
+48
+00:04:09,280 --> 00:04:10,970
+Let's not waste any time.
+
+49
+00:04:11,020 --> 00:04:14,110
+Let's see how you can get the most out of the course and thereafter.
+
+50
+00:04:14,170 --> 00:04:15,150
+Let's dive in.
