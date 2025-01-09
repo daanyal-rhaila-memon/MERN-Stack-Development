@@ -1,0 +1,519 @@
+1
+00:00:02,050 --> 00:00:06,330
+Typescript provides many types to JavaScript.
+
+2
+00:00:06,460 --> 00:00:12,400
+Now JavaScript itself also knows some data types and I'll come back to that in this module as well but
+
+3
+00:00:12,400 --> 00:00:19,270
+typescript adds many more types and as you will all learn in this discourse typescript also enables
+
+4
+00:00:19,270 --> 00:00:21,150
+you to write your own types.
+
+5
+00:00:21,160 --> 00:00:27,640
+Now let's start with some of the core types which javascript already knows and which typescript all
+
+6
+00:00:27,640 --> 00:00:33,610
+the supports and we'll all have a look at what the difference between javascript knowing the type and
+
+7
+00:00:33,610 --> 00:00:40,180
+typescript using that type means one of the core types we work with in JavaScript and typescript is
+
+8
+00:00:40,270 --> 00:00:41,800
+the number type.
+
+9
+00:00:41,800 --> 00:00:47,290
+Now in JavaScript and the same is true for typescript there is only one number type.
+
+10
+00:00:47,290 --> 00:00:50,690
+There is no special type for integers or floats.
+
+11
+00:00:50,800 --> 00:00:55,430
+Instead these values here would all be numbers.
+
+12
+00:00:55,570 --> 00:00:58,310
+One would be a number without a decimal place.
+
+13
+00:00:58,370 --> 00:00:59,090
+Five.
+
+14
+00:00:59,320 --> 00:01:03,930
+Obviously is one with a decimal place and all these values are of type.
+
+15
+00:01:03,940 --> 00:01:10,320
+No other programming languages have special integer types and float or double types.
+
+16
+00:01:10,480 --> 00:01:14,110
+Javascript doesn't have that and types could doesn't have it either.
+
+17
+00:01:14,170 --> 00:01:16,880
+So we have the number type which we know from javascript.
+
+18
+00:01:16,900 --> 00:01:25,060
+Also as a type in typescript we also have to string data type and that would be text which you can find
+
+19
+00:01:25,060 --> 00:01:30,850
+in one of these free ways with single quotes with double quotes or also with back.
+
+20
+00:01:30,940 --> 00:01:38,320
+The last notation with back takes is a special syntax provided in modern javascript and also in typescript
+
+21
+00:01:38,710 --> 00:01:45,250
+which allows us to write so called template liberals that are normal strings where you can dynamically
+
+22
+00:01:45,250 --> 00:01:52,330
+inject some data into them and so strings are simply text and JavaScript knows about string value types
+
+23
+00:01:53,020 --> 00:01:55,030
+typescript does so as well.
+
+24
+00:01:55,030 --> 00:02:00,310
+Last but not least one of the core data types javascript knows and typescript all the supports is the
+
+25
+00:02:00,400 --> 00:02:07,180
+boolean data type that would be true or false and that's super important in programming obviously especially
+
+26
+00:02:07,180 --> 00:02:08,950
+when working with statements.
+
+27
+00:02:09,100 --> 00:02:15,340
+Here we got these two values and that's important because in JavaScript you also might note this idea
+
+28
+00:02:15,340 --> 00:02:17,520
+of truth and false values.
+
+29
+00:02:17,560 --> 00:02:24,490
+For example that 0 the number 0 is a false C value if you use it in the if condition it is treated as
+
+30
+00:02:24,490 --> 00:02:25,340
+false.
+
+31
+00:02:25,540 --> 00:02:28,810
+The boolean data type really just knows these two values though.
+
+32
+00:02:28,810 --> 00:02:34,210
+True or false and that's not just a case for typescript but all of our javascript does truth the false
+
+33
+00:02:34,210 --> 00:02:40,780
+C concept which you should know that is not related to data types that some behind the scenes work.
+
+34
+00:02:40,840 --> 00:02:48,190
+Javascript does add runtime when it sees certain values and if conditions so with numbers strings ebullience
+
+35
+00:02:48,570 --> 00:02:54,100
+we get a couple of core data types of course not all we got objects ends on as well but let's focus
+
+36
+00:02:54,100 --> 00:02:59,100
+on these types and see what typescript does with them or what we can do with them.
+
+37
+00:02:59,140 --> 00:03:05,860
+With the help of typescript for this I'm back to the project we saw in the first course module and there
+
+38
+00:03:05,860 --> 00:03:11,860
+I showed you that all you need to do now is run NPM start in a terminal navigated into this project
+
+39
+00:03:11,860 --> 00:03:18,610
+folder to spin up this life development server which will reload whenever we change something and here
+
+40
+00:03:18,670 --> 00:03:25,100
+I opened up this local host 3000 address in a new tab of my browser read.
+
+41
+00:03:25,120 --> 00:03:28,360
+Now I'm getting an error because I have no app has followed yet.
+
+42
+00:03:28,360 --> 00:03:34,390
+Of course you find this starting Project all attached to this lecture will get such a app jazz file
+
+43
+00:03:34,420 --> 00:03:40,810
+which we're trying to import here in our index HCM El file as soon as we compile apt yes from typescript
+
+44
+00:03:40,810 --> 00:03:45,100
+to JavaScript and we can do that in a new tab off the terminal.
+
+45
+00:03:45,100 --> 00:03:54,070
+So did we keep this process running and open a new tab instead by simply running TSC app dot t s and
+
+46
+00:03:54,070 --> 00:04:00,010
+what this does is it compiles the type could file and spits out a javascript file and once that happens
+
+47
+00:04:00,280 --> 00:04:04,110
+we can reload this page and we get the time to get started.
+
+48
+00:04:04,180 --> 00:04:04,780
+Output here.
+
+49
+00:04:05,560 --> 00:04:12,370
+So now we have this setup here where we can write some types good code and then compile it to JavaScript
+
+50
+00:04:12,370 --> 00:04:14,560
+code to see what it does.
+
+51
+00:04:14,610 --> 00:04:20,050
+Now with that India types could file I'll actually get rid of the content there because now I want to
+
+52
+00:04:20,050 --> 00:04:25,420
+dive into these core data types which I just showed you on the slide so that you understand how to work
+
+53
+00:04:25,420 --> 00:04:27,220
+with them in typescript.
+
+54
+00:04:27,280 --> 00:04:29,450
+Now let's start very very simple.
+
+55
+00:04:29,470 --> 00:04:36,370
+Let's say we have a new function ad and there we expect two numbers and one that adds to an ad return
+
+56
+00:04:36,400 --> 00:04:37,850
+and 1 plus and 2.
+
+57
+00:04:37,930 --> 00:04:42,430
+Just like that very simple function nothing typescript ish about it.
+
+58
+00:04:42,430 --> 00:04:49,650
+Now we have two numbers with which we want to work that could be number one here which is say 5.
+
+59
+00:04:49,870 --> 00:04:58,790
+And also number 2 which is maybe 2 dot 8 whatever you want two numbers here now obviously and not very
+
+60
+00:04:58,790 --> 00:05:05,990
+surprisingly we can add or call the add function and pass in number one and number two as arguments
+
+61
+00:05:05,990 --> 00:05:12,620
+to this function store to result in a new constant maybe and then to see something on the screen we
+
+62
+00:05:12,620 --> 00:05:21,170
+can console log the result if we do that and I recompile this file with TSC apt yes then this page should
+
+63
+00:05:21,170 --> 00:05:22,700
+automatically reload already.
+
+64
+00:05:22,790 --> 00:05:27,000
+If not you can manually reload of course and you should see 7 dot eight.
+
+65
+00:05:27,060 --> 00:05:30,290
+Now you might think that's not too special right.
+
+66
+00:05:30,290 --> 00:05:36,470
+This is a pretty straight forward javascript snippet and indeed there is nothing typescript ish about
+
+67
+00:05:36,470 --> 00:05:37,340
+it.
+
+68
+00:05:37,370 --> 00:05:41,910
+Well let's do something which will break that snippet in normal javascript.
+
+69
+00:05:41,930 --> 00:05:48,420
+Lets say this input here is actually not a number but some text a 5 in text.
+
+70
+00:05:48,520 --> 00:05:55,390
+And if we now save that and rerun our compilation command here you'll see that once this page reloads
+
+71
+00:05:55,390 --> 00:05:58,280
+here I get fifty two dot eight as output.
+
+72
+00:05:58,390 --> 00:06:02,190
+And that's obviously not the correct result of this addition.
+
+73
+00:06:02,230 --> 00:06:07,810
+Now do you know why we're getting this output in normal javascript which in the end are executing here
+
+74
+00:06:08,380 --> 00:06:15,460
+while we're getting does output because this is not the result of the mathematical additions but instead
+
+75
+00:06:15,610 --> 00:06:19,830
+this concatenated does as a string because it's just input here.
+
+76
+00:06:19,860 --> 00:06:22,920
+5 is a string and then javascript sees OK.
+
+77
+00:06:23,140 --> 00:06:26,280
+I got a string I'm adding something to the string.
+
+78
+00:06:26,290 --> 00:06:32,710
+Well certainly this something should also be converted to a string so that overall I got a string because
+
+79
+00:06:32,710 --> 00:06:38,230
+the first value was a string and hence what javascript does is it converts to about 8 from a number
+
+80
+00:06:38,230 --> 00:06:44,680
+to a string concatenated a longer string from 5 and 2 dot eight hence yielding fifty two dot eight as
+
+81
+00:06:44,680 --> 00:06:46,700
+a string and return instead.
+
+82
+00:06:46,750 --> 00:06:52,390
+So it's not treating this in a mathematical way but instead as a string and with JavaScript this can
+
+83
+00:06:52,390 --> 00:06:52,930
+happen.
+
+84
+00:06:52,930 --> 00:06:55,570
+Now of course you might think why would I write such code.
+
+85
+00:06:55,570 --> 00:06:56,540
+I am the developer.
+
+86
+00:06:56,560 --> 00:06:57,850
+Why would I make this mistake.
+
+87
+00:06:58,210 --> 00:07:01,270
+Well maybe you're not the one making this mistake.
+
+88
+00:07:01,270 --> 00:07:06,220
+Maybe this Disney's getting fetched from some user input and you introduce to the little bug in your
+
+89
+00:07:06,220 --> 00:07:13,420
+code where you forgot to transform this or you're working in a team and you're having a couple of script
+
+90
+00:07:13,420 --> 00:07:19,300
+files working together and some other developer introduce such an error it's not impossible to make
+
+91
+00:07:19,300 --> 00:07:24,490
+such errors but it can be hard to track them down here of course it's pretty obvious that something
+
+92
+00:07:24,490 --> 00:07:29,410
+went wrong because we have a basic script but in a bigger script you might not even immediately recognize
+
+93
+00:07:29,710 --> 00:07:33,670
+that something went wrong here and that's where typescript can help us.
+
+94
+00:07:33,790 --> 00:07:38,780
+We can add type assignments in this function to our parameters.
+
+95
+00:07:38,860 --> 00:07:45,330
+We can tell typescript that these two parameters should be of type no and not be of type.
+
+96
+00:07:45,400 --> 00:07:52,090
+I don't care which is the default so we do that by adding a colon here after the value to which we want
+
+97
+00:07:52,090 --> 00:07:52,930
+to assign a type.
+
+98
+00:07:52,930 --> 00:07:59,320
+So in this case after the parameter name and then the name of the type for example number would be one
+
+99
+00:07:59,320 --> 00:08:06,190
+of the supported names besides No you also got string or a boolean but we'll come back to those for
+
+100
+00:08:06,190 --> 00:08:10,420
+the moment we need number and we don't just need that on the first parameter here.
+
+101
+00:08:10,540 --> 00:08:11,970
+But all on the second one.
+
+102
+00:08:12,040 --> 00:08:16,070
+So here also we can add a colon and then number.
+
+103
+00:08:16,210 --> 00:08:22,810
+And now what we're saying to typescript is hey both parameters here should be of type number passing
+
+104
+00:08:22,810 --> 00:08:25,380
+in values of a different type is not allowed.
+
+105
+00:08:25,600 --> 00:08:32,350
+And indeed my idea e already complains here because visual pseudocode code has built in typescript support.
+
+106
+00:08:32,530 --> 00:08:40,290
+But even if we would overlook this as soon as I read compile this by rerunning TSC apt yes you will
+
+107
+00:08:40,290 --> 00:08:42,630
+see we get an error we get an error.
+
+108
+00:08:42,630 --> 00:08:48,560
+That argument of type String 5 is not a sizable 2 parameter of type number.
+
+109
+00:08:48,720 --> 00:08:54,430
+And it even shows us where it is happened and gives us the line number line 8.
+
+110
+00:08:54,480 --> 00:08:56,790
+And it's basically showing us the same I.D. shows here.
+
+111
+00:08:56,790 --> 00:09:01,290
+So in case we overlook that in the I.T. compiling it now fro is an error.
+
+112
+00:09:01,410 --> 00:09:03,590
+And that's the important thing about typescript.
+
+113
+00:09:03,690 --> 00:09:06,280
+It only helps us during compilation.
+
+114
+00:09:06,300 --> 00:09:12,520
+It doesn't change javascript to work differently at runtime because browsers have no built in typescript
+
+115
+00:09:12,560 --> 00:09:13,530
+support.
+
+116
+00:09:13,590 --> 00:09:19,290
+It can only help us during development before we compile our typescript code to JavaScript.
+
+117
+00:09:19,290 --> 00:09:26,640
+But there it's extremely useful because it adds an extra step an extra sanity check where here we find
+
+118
+00:09:26,640 --> 00:09:29,240
+out oh we made a mistake here.
+
+119
+00:09:29,250 --> 00:09:34,220
+This shouldn't be a string this should be a number and we can fix this and we're good.
+
+120
+00:09:34,230 --> 00:09:37,430
+This is what typescript does it helps you during development.
+
+121
+00:09:37,470 --> 00:09:40,110
+It does not change your runtime code.
+
+122
+00:09:40,200 --> 00:09:46,380
+Indeed here even with the default settings it compiled our error here even though it detected it during
+
+123
+00:09:46,380 --> 00:09:52,290
+compilation and created a file which causes the incorrect result because by default typescript does
+
+124
+00:09:52,290 --> 00:09:53,610
+not step in here.
+
+125
+00:09:53,640 --> 00:09:59,280
+Later you'll learn how you can make sure that it does but by default it doesn't even block compilation.
+
+126
+00:09:59,310 --> 00:10:06,250
+Still it yells at you and points at this mistake so that you can fix it and so did you can a white.
+
+127
+00:10:06,250 --> 00:10:11,910
+Such mistakes here by the way make sure you don't have app chairs and apps yes open at the same time.
+
+128
+00:10:11,980 --> 00:10:16,630
+You could get errors here and the idea regarding duplicate function implementations closing the jobs
+
+129
+00:10:16,630 --> 00:10:17,230
+could fall.
+
+130
+00:10:17,260 --> 00:10:17,860
+Fix systems.

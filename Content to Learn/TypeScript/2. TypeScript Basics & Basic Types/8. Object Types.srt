@@ -1,0 +1,387 @@
+1
+00:00:02,330 --> 00:00:09,050
+Let's dig deeper into the core types typescript supports the next time that's interesting is the object
+
+2
+00:00:09,080 --> 00:00:09,830
+type.
+
+3
+00:00:09,830 --> 00:00:15,200
+Now you know objects in javascript they look like this you have curly braces and then you have key value
+
+4
+00:00:15,200 --> 00:00:21,050
+pairs in there and such values would all be treated as object types in typescript.
+
+5
+00:00:21,050 --> 00:00:28,340
+So any jobs would object is of type object though I will already say there are more specific versions
+
+6
+00:00:28,460 --> 00:00:32,790
+of objects in typescript so that you can say this is not just any object.
+
+7
+00:00:32,930 --> 00:00:38,630
+Does this object which has to has these properties or which has to be based on this or that constructor
+
+8
+00:00:38,630 --> 00:00:39,370
+function.
+
+9
+00:00:39,500 --> 00:00:43,050
+But we'll get there step by step to dive into objects.
+
+10
+00:00:43,060 --> 00:00:51,250
+I'll first of all rename apt yes here and I'll rename this to basics T S here and add a new app.
+
+11
+00:00:51,260 --> 00:00:57,220
+Yes file which will then overwrite the old app Jay has followed once we compile it where we can now
+
+12
+00:00:57,220 --> 00:01:01,120
+dive into objects and let's start by creating a basic object here.
+
+13
+00:01:01,120 --> 00:01:07,390
+Let's say a person with curly braces here and we give this a name here I'll go with Maximilian because
+
+14
+00:01:07,390 --> 00:01:10,750
+that is my name and the age of 30.
+
+15
+00:01:10,750 --> 00:01:20,960
+Now of course we can console lock person here and if we do so and we compiled is unsurprisingly we should
+
+16
+00:01:20,960 --> 00:01:24,980
+see that object being printed here in the console.
+
+17
+00:01:24,980 --> 00:01:32,780
+Now what we also can do in Javascript is we can try to access let's say nickname a property which does
+
+18
+00:01:32,780 --> 00:01:34,010
+not exist here.
+
+19
+00:01:34,040 --> 00:01:40,310
+Now you immediately see the typescript is not too happy about that and hence my idea tells me it tells
+
+20
+00:01:40,310 --> 00:01:44,090
+me that property nickname does not exist on that type.
+
+21
+00:01:44,090 --> 00:01:51,230
+So if we save that and I try to compile it we indeed get that same error down there to typescript compiler
+
+22
+00:01:51,230 --> 00:01:56,360
+does not like this and it tells me that we have no nickname property on this object.
+
+23
+00:01:56,540 --> 00:02:03,830
+It finds out that we don't have this nickname property because if we hover over person it inferred we
+
+24
+00:02:03,830 --> 00:02:09,530
+can see there is a colon after person so often the variable or constant name it inferred that this is
+
+25
+00:02:09,860 --> 00:02:12,160
+the type of data which is stored in there.
+
+26
+00:02:12,170 --> 00:02:13,720
+Note it's not just object.
+
+27
+00:02:13,730 --> 00:02:16,820
+As you can tell that is a concrete object.
+
+28
+00:02:16,820 --> 00:02:23,240
+It's the object with a name key where then to type and turn has to be a string and the H key where the
+
+29
+00:02:23,240 --> 00:02:24,700
+type has to be No.
+
+30
+00:02:24,750 --> 00:02:27,520
+And actually this can be confusing here.
+
+31
+00:02:27,560 --> 00:02:31,090
+This here obviously looks like a javascript object.
+
+32
+00:02:31,130 --> 00:02:37,370
+Curly braces key value pairs Well the first important thing to see here is that we have a semicolon
+
+33
+00:02:37,370 --> 00:02:38,570
+here after each line.
+
+34
+00:02:38,570 --> 00:02:41,770
+We don't have that in a javascript object with a comma here.
+
+35
+00:02:42,020 --> 00:02:46,340
+And indeed this is not a javascript object here which is created somewhere.
+
+36
+00:02:46,400 --> 00:02:54,500
+This is the object type inferred by TypeScript and object types are written almost like objects.
+
+37
+00:02:54,500 --> 00:03:02,270
+But of course we don't have key value pairs there but key type pairs object types are dear to describe
+
+38
+00:03:02,420 --> 00:03:06,260
+well the type of object that is getting used somewhere.
+
+39
+00:03:06,440 --> 00:03:14,510
+We could be more generic I could explicitly assign a type here to the constant of Object object is one
+
+40
+00:03:14,510 --> 00:03:16,120
+of the built in types.
+
+41
+00:03:16,130 --> 00:03:22,130
+Just like number and string and now if a hover over does we see persons of type object and now typescript
+
+42
+00:03:22,130 --> 00:03:30,800
+really only cares about the fact that this object type now is still if we compiled is we get that error
+
+43
+00:03:30,800 --> 00:03:35,920
+though because typescript still analyzes our code and sees that we try to access something which doesn't
+
+44
+00:03:35,920 --> 00:03:36,990
+exist there.
+
+45
+00:03:37,010 --> 00:03:42,830
+But it's important to understand that it all starts with this most generic Object type but often you
+
+46
+00:03:42,830 --> 00:03:44,650
+want to be more specific than that.
+
+47
+00:03:44,720 --> 00:03:47,920
+You don't just want to work with that generic Object type.
+
+48
+00:03:48,020 --> 00:03:50,710
+You really want to get the full support.
+
+49
+00:03:50,960 --> 00:03:56,690
+For example right now if I had a dot here and I have a look at my auto completion I get no help there
+
+50
+00:03:56,690 --> 00:03:57,100
+at all.
+
+51
+00:03:57,150 --> 00:04:04,520
+My I.D. reason for data is that all we tell the idea is that we have a value here in person which is
+
+52
+00:04:04,520 --> 00:04:05,810
+of type object.
+
+53
+00:04:05,930 --> 00:04:12,130
+Indeed now we actually also get an error if I tried to access name name exists here right.
+
+54
+00:04:12,220 --> 00:04:18,380
+But what we tell typescript here is that we just have an object where we don't give any our information
+
+55
+00:04:18,380 --> 00:04:19,260
+to typescript.
+
+56
+00:04:19,460 --> 00:04:25,130
+So actually typescript doesn't support any type of property because we don't tell it anything about
+
+57
+00:04:25,130 --> 00:04:25,720
+the object.
+
+58
+00:04:26,270 --> 00:04:32,750
+So we should be more specific and we are more specific by setting a specific object type the thing which
+
+59
+00:04:32,750 --> 00:04:35,220
+types could also inferred automatically.
+
+60
+00:04:35,600 --> 00:04:43,430
+We do this by adding curly braces here often to colon after our concept or a variable name.
+
+61
+00:04:43,430 --> 00:04:46,880
+So this here does not create a new javascript object.
+
+62
+00:04:46,880 --> 00:04:50,780
+This will actually be stripped out of the compile javascript code instead.
+
+63
+00:04:50,780 --> 00:04:58,100
+Does this just type scripts notation of specialized object type so to say so all the object type where
+
+64
+00:04:58,100 --> 00:05:01,770
+we provide some information about the structure of the object.
+
+65
+00:05:01,850 --> 00:05:07,250
+Now by assigning just an empty pair of curly braces as a type we essentially do the same as with object
+
+66
+00:05:07,490 --> 00:05:10,640
+we tell typescript that this is some object.
+
+67
+00:05:10,640 --> 00:05:16,570
+Now we can be more specific though we can add key value entries here.
+
+68
+00:05:16,580 --> 00:05:20,060
+However not key value but key type instead.
+
+69
+00:05:20,090 --> 00:05:26,630
+So here we could say the object would should be stored in person should have a name property and the
+
+70
+00:05:26,780 --> 00:05:31,160
+value of that name property should be of type String.
+
+71
+00:05:31,160 --> 00:05:36,840
+So here we describe the type of value which will eventually be stored in name.
+
+72
+00:05:37,160 --> 00:05:41,600
+Now by the way you see I'm getting an error here because what I'm telling typescript now is that my
+
+73
+00:05:41,600 --> 00:05:47,810
+person should have an object with exactly one key value pair where the key is name and the value of
+
+74
+00:05:47,810 --> 00:05:48,700
+that key string.
+
+75
+00:05:49,010 --> 00:05:55,910
+But we DNA sign an object with two key value pairs name which holds a string that is fine but age which
+
+76
+00:05:55,910 --> 00:05:56,770
+holds a number.
+
+77
+00:05:56,890 --> 00:05:58,130
+And that would not be fine.
+
+78
+00:05:58,550 --> 00:06:03,600
+So here we have to adjust this by adding a semicolon and then adding a number key value pair here where
+
+79
+00:06:03,620 --> 00:06:07,930
+we say age should be of type number so not 30 year.
+
+80
+00:06:08,240 --> 00:06:13,550
+That actually would be supported in typescript that we restricted to one specific number but then we'll
+
+81
+00:06:13,550 --> 00:06:15,660
+run into issues as soon as we change that.
+
+82
+00:06:15,670 --> 00:06:22,390
+Instead here I just want to say age should be some number and now we basically are explicitly assigning
+
+83
+00:06:22,390 --> 00:06:25,720
+the same typescript inferred before as you learned.
+
+84
+00:06:25,720 --> 00:06:31,540
+That's not a good practice but to understand object types that wanted to do it here still this is something
+
+85
+00:06:31,540 --> 00:06:32,860
+you can do.
+
+86
+00:06:32,950 --> 00:06:40,230
+It's better to let typescript infer it is as we did before like this.
+
+87
+00:06:40,480 --> 00:06:42,790
+Now just to show something interesting.
+
+88
+00:06:42,820 --> 00:06:48,580
+If I switch back to these sub optimal code where we explicitly assign a type typescript would be able
+
+89
+00:06:48,580 --> 00:06:55,200
+to infer if we compile this code of course it works.
+
+90
+00:06:55,200 --> 00:07:00,480
+We can access the name property but if we didn't have a look at aptly as we see this type assignment
+
+91
+00:07:00,480 --> 00:07:03,780
+is removed here and that of course should be something expected.
+
+92
+00:07:03,840 --> 00:07:09,500
+As I mentioned types and type assignments are not part of JavaScript they're typescript only.
+
+93
+00:07:09,510 --> 00:07:13,860
+I just wondered you showed us again to make it really clear that this syntax here is not creating some
+
+94
+00:07:13,860 --> 00:07:16,890
+javascript object which is somewhere in our code.
+
+95
+00:07:16,890 --> 00:07:24,600
+Does this just type scripts representation of an object type that helps typescript understand the objects
+
+96
+00:07:24,600 --> 00:07:28,140
+you're working with the better syntax of course.
+
+97
+00:07:28,140 --> 00:07:29,430
+Is this in Texas you learned.

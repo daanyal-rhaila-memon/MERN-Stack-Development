@@ -1,0 +1,139 @@
+1
+00:00:02,370 --> 00:00:10,560
+Now when working with union types like this and this can be cumbersome to always repeat the union type
+
+2
+00:00:11,130 --> 00:00:16,930
+you might want to create a new type which he store is this union type and you can do that with a number
+
+3
+00:00:16,930 --> 00:00:25,550
+of cool types would feature the feature of type aliases you create such alias typically before you use
+
+4
+00:00:25,550 --> 00:00:25,670
+it.
+
+5
+00:00:25,700 --> 00:00:33,110
+So here at the top of the file in this case here with the type keyword now to type keyword is not built
+
+6
+00:00:33,110 --> 00:00:34,110
+into javascript.
+
+7
+00:00:34,120 --> 00:00:41,330
+It's supported in typescript though and after type you add the name of your custom type or of your type
+
+8
+00:00:41,450 --> 00:00:46,740
+alias I should say for example combined label but the name is really up to you.
+
+9
+00:00:46,760 --> 00:00:52,940
+You can invent any name here which is not built into JavaScript or typescript as a key name something
+
+10
+00:00:52,940 --> 00:00:58,070
+like date would not be allowed because that's built into javascript but combined ABL is not built into
+
+11
+00:00:58,070 --> 00:01:01,340
+javascript not built into typescript so we can use it.
+
+12
+00:01:01,430 --> 00:01:07,310
+And now with an equal sign you assign the type you want to encode in your alias.
+
+13
+00:01:07,310 --> 00:01:13,520
+So to say so we could store a number here and now whenever we want to make sure that something should
+
+14
+00:01:13,520 --> 00:01:16,430
+be a number we could use combined ABL instead.
+
+15
+00:01:16,430 --> 00:01:18,580
+Now that doesn't make too much sense.
+
+16
+00:01:18,620 --> 00:01:21,560
+It arguably would even make our code harder to read.
+
+17
+00:01:21,680 --> 00:01:29,090
+If I use combined a down there for example this would work technically but if we just glance over our
+
+18
+00:01:29,090 --> 00:01:33,170
+code it's not obvious that here we want a number or a string.
+
+19
+00:01:33,230 --> 00:01:39,320
+Well typically therefore you use that in conjunction with union types so we can store a union type in
+
+20
+00:01:39,320 --> 00:01:42,360
+our custom type so to say in our type alias.
+
+21
+00:01:42,500 --> 00:01:47,890
+And now just refer to combine them all down there instead of our union type.
+
+22
+00:01:48,230 --> 00:01:51,040
+So we have exactly the same setup I asked before.
+
+23
+00:01:51,110 --> 00:01:57,290
+We just have our reusable type alias here which we can use instead and that allows us to save some extra
+
+24
+00:01:57,290 --> 00:02:03,920
+code and make sure we always refer to the same types or the same type setup when we use combined all.
+
+25
+00:02:03,950 --> 00:02:06,530
+And of course we can not just use that for number and string.
+
+26
+00:02:06,650 --> 00:02:13,790
+We can use that for any type setup we might want to stored in an alias including these two literal types
+
+27
+00:02:13,790 --> 00:02:14,840
+for example.
+
+28
+00:02:14,840 --> 00:02:22,400
+So for these two types here for this union type we could also create a type alias conversion descriptor
+
+29
+00:02:22,460 --> 00:02:28,980
+or however you want to name it and store exactly this type in this type alias.
+
+30
+00:02:28,980 --> 00:02:32,200
+And now we can use this type alias down there.
+
+31
+00:02:32,330 --> 00:02:35,000
+So type aliases are really really useful.
+
+32
+00:02:35,000 --> 00:02:40,120
+You can encode more complex type definitions into your own types into your own type names.
+
+33
+00:02:40,130 --> 00:02:45,920
+So to say and reuse that everywhere in your code where you need exactly this type setup.
+
+34
+00:02:45,980 --> 00:02:52,280
+So did you have wide typos down there and you can simply save code write code quicker and also be clearer
+
+35
+00:02:52,370 --> 00:02:57,500
+about your intentions for example by choosing descriptive type alias names up there.

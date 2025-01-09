@@ -1,0 +1,307 @@
+1
+00:00:02,370 --> 00:00:10,210
+So now did we know about typescript fundamentals and how it differs and all is related to JavaScript.
+
+2
+00:00:10,230 --> 00:00:16,230
+Let's dig a bit deeper into the different core types typescript knows the number is the type we see
+
+3
+00:00:16,230 --> 00:00:16,670
+here.
+
+4
+00:00:16,680 --> 00:00:22,050
+And as I explained there is no difference between integers like the five here and floats or doubles
+
+5
+00:00:22,080 --> 00:00:25,580
+as it would be called in other programming languages like the 2.8 here.
+
+6
+00:00:25,710 --> 00:00:30,870
+Indeed in JavaScript and the same is true in typescript all numbers are floats by default.
+
+7
+00:00:30,870 --> 00:00:36,330
+So for JavaScript and dev for all of our typescript there is no difference between 5 like this and 5
+
+8
+00:00:36,330 --> 00:00:39,780
+like this it's the same number essentially.
+
+9
+00:00:39,810 --> 00:00:44,350
+Now besides numbers we all to have other core types and that would be strings.
+
+10
+00:00:44,400 --> 00:00:49,000
+So text and boolean is let's all to have a look at those we actually saw.
+
+11
+00:00:49,020 --> 00:00:54,000
+All of those in action here in this if statement already which we learned is a bit redundant.
+
+12
+00:00:54,000 --> 00:00:59,970
+Nonetheless this here would be a string although of course 5 with quotes would be a string because it's
+
+13
+00:00:59,970 --> 00:01:04,180
+text and the result for example of this comparison here.
+
+14
+00:01:04,200 --> 00:01:11,280
+That would be a boolean this operator the triple equals sign or the negated equality operator here that
+
+15
+00:01:11,280 --> 00:01:14,100
+produces True or false.
+
+16
+00:01:14,160 --> 00:01:20,130
+And of course we can ever produce it dynamically enough if check which we'll of do or we initialize
+
+17
+00:01:20,130 --> 00:01:22,380
+a variable with a true or false value.
+
+18
+00:01:22,380 --> 00:01:24,110
+So let's do both here.
+
+19
+00:01:24,130 --> 00:01:29,950
+Here we could add a new constant print result and set this to true for example.
+
+20
+00:01:30,060 --> 00:01:34,770
+And just to make it really clear this could be a variable as well it doesn't have to be constant can
+
+21
+00:01:34,770 --> 00:01:37,650
+be a variable which you would create with let in JavaScript.
+
+22
+00:01:37,740 --> 00:01:42,840
+But since I don't plan on changing it here I'll go with a constant and we could pass this as a third
+
+23
+00:01:42,840 --> 00:01:43,690
+parameter here.
+
+24
+00:01:43,740 --> 00:01:47,730
+Let's say we pass in print result which holds true here.
+
+25
+00:01:47,730 --> 00:01:53,190
+Now we immediately get an error of course because our add function does not support a third argument.
+
+26
+00:01:53,190 --> 00:01:56,160
+We see expect the two arguments but got three.
+
+27
+00:01:56,280 --> 00:01:59,420
+So therefore we have to make sure we support a third argument.
+
+28
+00:01:59,460 --> 00:02:06,270
+And there we could add a show resolve parameter you could name it print or assault here as well.
+
+29
+00:02:06,300 --> 00:02:11,910
+I'm going with show result to a wide confusion regarding the naming but technically these two names
+
+30
+00:02:11,910 --> 00:02:12,990
+would not clash.
+
+31
+00:02:12,990 --> 00:02:15,170
+So here I'll name it shall result.
+
+32
+00:02:15,180 --> 00:02:20,820
+And I want to make sure that this is of type boolean by setting this to boolean again by adding a colon
+
+33
+00:02:20,910 --> 00:02:26,130
+after the parameter here and then by adding the name of the type.
+
+34
+00:02:26,160 --> 00:02:32,790
+Now this function accepts does and now what we can do is we can add a if check here and check if show
+
+35
+00:02:32,790 --> 00:02:33,510
+result.
+
+36
+00:02:33,570 --> 00:02:38,520
+If this is true we can of current course compare it to true but as you know in JavaScript you can all
+
+37
+00:02:38,540 --> 00:02:45,900
+just pass in the true or false C value here and JavaScript Bill evaluated and if this yields true somehow
+
+38
+00:02:45,900 --> 00:02:49,110
+or a truth value in general then we'll make it entity of block.
+
+39
+00:02:49,230 --> 00:02:50,630
+Otherwise we won't.
+
+40
+00:02:50,710 --> 00:02:56,970
+And let's say we do make it in here and then I want to console log and 1 plus and 2 otherwise in the
+
+41
+00:02:56,970 --> 00:03:01,090
+Ellis case if we don't make it in there then I want to return this.
+
+42
+00:03:01,110 --> 00:03:07,410
+So now does is a function which sometimes returns a value and sometimes does not return a value but
+
+43
+00:03:07,500 --> 00:03:09,040
+output it immediately.
+
+44
+00:03:09,060 --> 00:03:15,000
+Now you could argue if you want to write such a function which is kind of unpredictable or which might
+
+45
+00:03:15,060 --> 00:03:18,840
+behave unexpectedly if you are passing and true here.
+
+46
+00:03:18,840 --> 00:03:19,980
+But here we're doing it.
+
+47
+00:03:20,040 --> 00:03:26,190
+So this function only sometimes returns sometimes it also does not return but instead just locks something
+
+48
+00:03:26,190 --> 00:03:27,870
+to the console.
+
+49
+00:03:27,870 --> 00:03:33,630
+Now here we can't actually call at just like this and don't need to store it in result and don't need
+
+50
+00:03:33,630 --> 00:03:39,570
+to console log result because with print result set to true at itself.
+
+51
+00:03:39,570 --> 00:03:42,450
+So the function itself will print the result.
+
+52
+00:03:42,450 --> 00:03:49,020
+Hence if you know saved it and we recompile our apt yes file here with the TSC command.
+
+53
+00:03:49,020 --> 00:03:52,560
+Once this is done the page will reload and we still see our output here.
+
+54
+00:03:52,590 --> 00:03:54,860
+But now it's coming from line 6.
+
+55
+00:03:54,970 --> 00:03:56,270
+And if we have a look.
+
+56
+00:03:56,280 --> 00:03:58,930
+Line 6 is indeed inside the function.
+
+57
+00:03:59,010 --> 00:04:00,600
+So this is a boolean.
+
+58
+00:04:00,600 --> 00:04:06,330
+Now let's say we want to customize the output and therefore we have a result phrase constant here where
+
+59
+00:04:06,330 --> 00:04:14,940
+we say result is colon and then some whitespace and we pass that in as foo as well with result Frasier.
+
+60
+00:04:14,940 --> 00:04:19,680
+Well then we could expect this as an argument here as well phrase which should be of type String.
+
+61
+00:04:19,800 --> 00:04:23,040
+By adding a colon and then string is the name of the type.
+
+62
+00:04:23,040 --> 00:04:28,360
+And now we could use that phrase to output it as part of our result output.
+
+63
+00:04:28,380 --> 00:04:34,500
+If we're printing the result right into function so then here we could have phrased plus and 1 plus
+
+64
+00:04:34,500 --> 00:04:41,070
+and 2 and if we do that and we recompile by repeating that command we'll see that this phrase is part
+
+65
+00:04:41,070 --> 00:04:47,670
+of the result but we also now reintroduce the old back because I have a string which I combined with
+
+66
+00:04:47,670 --> 00:04:48,660
+two numbers.
+
+67
+00:04:48,660 --> 00:04:55,980
+Everything is converted to a string here and that's not what I want to a white does in this function.
+
+68
+00:04:55,980 --> 00:05:02,480
+We could add a result variable here or a result constant and store our result here.
+
+69
+00:05:02,520 --> 00:05:08,010
+This will now be treated in a mathematical way because only numbers are involved and then a heater.
+
+70
+00:05:08,010 --> 00:05:11,450
+We could combine that with phrase or just return it.
+
+71
+00:05:11,490 --> 00:05:17,360
+And now since this is never directly calculated to gather with a string this will always be a number.
+
+72
+00:05:17,400 --> 00:05:21,410
+And yes then here does number of combined with a string will be converted to a string.
+
+73
+00:05:21,510 --> 00:05:26,130
+But since the mathematical calculation finished before that will have the right result.
+
+74
+00:05:26,130 --> 00:05:30,780
+So now if repeat dad at a recompile we get the right output.
+
+75
+00:05:30,810 --> 00:05:33,830
+So now these are the core data types and action.
+
+76
+00:05:33,870 --> 00:05:40,290
+Let's now make sure we fully understand how types are assigned and also why we don't explicitly assign
+
+77
+00:05:40,290 --> 00:05:41,480
+types down there.

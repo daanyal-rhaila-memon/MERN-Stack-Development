@@ -1,0 +1,291 @@
+1
+00:00:02,230 --> 00:00:09,310
+Now besides objects we also have arrays in JavaScript very important type of data arrays are created
+
+2
+00:00:09,310 --> 00:00:10,390
+like this in javascript.
+
+3
+00:00:10,390 --> 00:00:16,330
+As you know and you can store any data in their numbers strings boolean as objects of a race you can
+
+4
+00:00:16,330 --> 00:00:19,420
+have nested Arrays after all and you can also mix data.
+
+5
+00:00:19,420 --> 00:00:26,470
+You can have an array with strings and numbers mixed and types with all the supports arrays any javascript
+
+6
+00:00:26,470 --> 00:00:32,200
+array is supported and the types of the array can be flexible or strict.
+
+7
+00:00:32,200 --> 00:00:36,300
+Now let's have a look at that in typescript for that here in Apt.
+
+8
+00:00:36,310 --> 00:00:36,810
+Yes.
+
+9
+00:00:36,850 --> 00:00:40,470
+Let's say our person also has a hobbyist key.
+
+10
+00:00:40,600 --> 00:00:45,690
+But of course we could also have a variable or a constant hobbies outside of the object.
+
+11
+00:00:45,700 --> 00:00:52,010
+So using arrays is exactly the same inside of objects and outside of them.
+
+12
+00:00:52,070 --> 00:00:58,190
+So here we have hobbies and hobbies could be sports and cooking let's say.
+
+13
+00:00:58,220 --> 00:01:03,630
+So I have two elements in there and these elements as you can tell are strings.
+
+14
+00:01:03,650 --> 00:01:10,650
+Now if you hover over a is typescript correctly detected that this of type String array.
+
+15
+00:01:10,670 --> 00:01:16,170
+Now that's a syntax you haven't seen before but this is how typescript describes an array of data.
+
+16
+00:01:16,220 --> 00:01:21,340
+You have to square brackets and in front of that the type of data which is stored in there.
+
+17
+00:01:21,350 --> 00:01:26,540
+Now this is the type type inferred it sorted here we have an array and that we only have strings in
+
+18
+00:01:26,540 --> 00:01:27,020
+there.
+
+19
+00:01:27,080 --> 00:01:33,860
+So it inferred that Hobbes probably should be the array of strings and indeed for Hobbes that makes
+
+20
+00:01:33,860 --> 00:01:36,200
+a lot of sense.
+
+21
+00:01:36,260 --> 00:01:44,660
+Of course you can also explicitly set the type of a variable if we would add a new variable favorite
+
+22
+00:01:45,610 --> 00:01:46,980
+activities.
+
+23
+00:01:47,240 --> 00:01:53,080
+And initially that should be empty then we might want to explicitly set the type of data stored in there.
+
+24
+00:01:53,100 --> 00:01:55,250
+Now let's say that should be an array of strings.
+
+25
+00:01:55,250 --> 00:02:00,680
+Well then we can just repeat what we just saw type string and then square brackets thereafter and this
+
+26
+00:02:00,680 --> 00:02:04,510
+tells typescript what we store in here is not just a single string.
+
+27
+00:02:04,520 --> 00:02:06,000
+It's an array of strings.
+
+28
+00:02:06,230 --> 00:02:12,970
+And indeed if I try to store just sports and there I get an error I get an error because that here is
+
+29
+00:02:12,970 --> 00:02:15,630
+a single string and not an array of strings.
+
+30
+00:02:15,710 --> 00:02:21,470
+I don't get an error of course if I wrapped as into square brackets and therefore effectively I create
+
+31
+00:02:21,470 --> 00:02:22,630
+an array.
+
+32
+00:02:22,700 --> 00:02:28,310
+I again do you get an error though if I add a number let's say because we defined this to be an array
+
+33
+00:02:28,310 --> 00:02:29,270
+of strings.
+
+34
+00:02:29,270 --> 00:02:31,100
+Now here we have a mixed array.
+
+35
+00:02:31,370 --> 00:02:34,250
+It's an array of strings and numbers.
+
+36
+00:02:34,250 --> 00:02:37,200
+So that does not work and is not supported here.
+
+37
+00:02:37,250 --> 00:02:43,000
+If we would want to support such a mixed array one solution would be to use any here.
+
+38
+00:02:43,160 --> 00:02:48,740
+D any type is a special type and typescript which will have a closer look later which basically means
+
+39
+00:02:49,010 --> 00:02:50,550
+do whatever you want.
+
+40
+00:02:50,600 --> 00:02:55,370
+It's of course a type you don't want to use too often because you'll lose the benefits typescript gives
+
+41
+00:02:55,370 --> 00:03:00,200
+you your back and JavaScript the world where you also can use any value anywhere.
+
+42
+00:03:00,200 --> 00:03:07,100
+So any is really flexible but the flexibility comes at the price of basically giving up all benefits
+
+43
+00:03:07,100 --> 00:03:08,750
+types good offers.
+
+44
+00:03:08,780 --> 00:03:12,770
+So hero when I go back to string because a re don't want to have a number in there and hence we can
+
+45
+00:03:12,770 --> 00:03:18,380
+remove the number and we're good erase all that give us a great example.
+
+46
+00:03:18,430 --> 00:03:21,800
+Actually just like objects and their properties.
+
+47
+00:03:21,940 --> 00:03:28,990
+How dynamic type scripts type inference is if we add a for loop here at the bottom and we want to go
+
+48
+00:03:28,990 --> 00:03:30,880
+through all the hobbies of person.
+
+49
+00:03:31,060 --> 00:03:38,570
+We can of course use a traditional for loop with for const hobby of person dog hobbies.
+
+50
+00:03:38,680 --> 00:03:45,110
+So accessing the hobbies property and going through all the hobby stair storing each hobby for each
+
+51
+00:03:45,110 --> 00:03:46,870
+iteration in this constant.
+
+52
+00:03:47,000 --> 00:03:50,100
+And then we can console log hobby here.
+
+53
+00:03:50,120 --> 00:03:51,310
+Now that's not too fancy.
+
+54
+00:03:51,310 --> 00:03:53,770
+That's something we know from javascript right.
+
+55
+00:03:53,780 --> 00:04:02,840
+If I now compiled is apt yes file down their we get the name from this line and they're after the two
+
+56
+00:04:02,840 --> 00:04:09,740
+hobbies being printed but what's actually interesting here is that on hobby we can access anything we
+
+57
+00:04:09,740 --> 00:04:12,820
+can access on any string for example to upper case.
+
+58
+00:04:12,830 --> 00:04:16,230
+I get this all to completion and typescript does not complain.
+
+59
+00:04:16,280 --> 00:04:21,980
+Why does it not complain because it knows that Hobbes is of type String array.
+
+60
+00:04:21,980 --> 00:04:28,490
+So when I access persons that Hobbes type scripts inference detects that Hobbes will be an array of
+
+61
+00:04:28,490 --> 00:04:29,380
+strings.
+
+62
+00:04:29,750 --> 00:04:35,720
+So a hobby on the other end is correctly identified as being a string because since we go through an
+
+63
+00:04:35,720 --> 00:04:41,990
+array of strings Well the individual values have to be just strings and therefore typescript offers
+
+64
+00:04:41,990 --> 00:04:47,840
+us great support down there and allows us to do anything with hobby that can be done with a string because
+
+65
+00:04:47,840 --> 00:04:53,990
+it knows with certainty that hobby will be a string because of the types we setup up there.
+
+66
+00:04:53,990 --> 00:04:59,390
+And that's really flexible in of course a great feature which makes writing code a lot easier and way
+
+67
+00:04:59,390 --> 00:05:01,400
+more flexible and secure.
+
+68
+00:05:01,400 --> 00:05:06,650
+For example we would get an error here if it would try to access hobby dot map.
+
+69
+00:05:06,650 --> 00:05:12,590
+If I thought this would be an array the map method is available on arrays but not on strings and here
+
+70
+00:05:12,590 --> 00:05:14,000
+correctly I get an error.
+
+71
+00:05:14,000 --> 00:05:17,330
+That map does not exist on type string because it doesn't.
+
+72
+00:05:17,870 --> 00:05:23,710
+So here we get an error and that's good that we get it because this would be wrong.
+
+73
+00:05:23,810 --> 00:05:27,200
+And here we see typescript inference really really shine.

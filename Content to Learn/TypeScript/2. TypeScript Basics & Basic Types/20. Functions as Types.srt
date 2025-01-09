@@ -1,0 +1,271 @@
+1
+00:00:02,190 --> 00:00:08,110
+So you can use types for function parameters and for the return value of the function.
+
+2
+00:00:08,130 --> 00:00:14,890
+Now to take it to the next level what after all the were a function type itself.
+
+3
+00:00:14,900 --> 00:00:17,150
+Now let me make it clear what I mean.
+
+4
+00:00:17,220 --> 00:00:19,080
+Let's say we have a variable.
+
+5
+00:00:19,380 --> 00:00:24,150
+Combine values and this variable by default has a type of any.
+
+6
+00:00:24,150 --> 00:00:26,900
+Now as you learned any is not that useful.
+
+7
+00:00:26,910 --> 00:00:32,610
+What I want to do eventually is I want to set combined values equal to add.
+
+8
+00:00:32,640 --> 00:00:40,230
+So when a store that at function a pointer at this add function in combined values so that in the end
+
+9
+00:00:40,290 --> 00:00:46,230
+we can console lock combine values and execute combined values as a function to which I pass eight and
+
+10
+00:00:46,260 --> 00:00:47,470
+eight.
+
+11
+00:00:47,520 --> 00:00:53,850
+Now if I save that and I execute this After compiling it so if we compile this file and then we let
+
+12
+00:00:53,850 --> 00:00:55,860
+this reload we get 60 here.
+
+13
+00:00:55,890 --> 00:01:00,790
+So that works and we would expect it to work because that is normal javascript code.
+
+14
+00:01:00,930 --> 00:01:06,780
+We can store a pointer at a function in a number variable and then deal for execute this variable as
+
+15
+00:01:06,780 --> 00:01:09,960
+a function because well it points at that function right.
+
+16
+00:01:09,960 --> 00:01:13,240
+So we can execute that function through that variable.
+
+17
+00:01:13,290 --> 00:01:19,560
+The problem we have with this snippet here from a typescript perspective just is that combined values
+
+18
+00:01:19,560 --> 00:01:20,700
+as any.
+
+19
+00:01:20,700 --> 00:01:28,440
+So if I set combined values to a number here thereafter of course we can comp. is unfortunately because
+
+20
+00:01:28,440 --> 00:01:33,990
+typescript has no chance of detecting that this is unwanted or that this could cause a problem.
+
+21
+00:01:34,230 --> 00:01:39,870
+But at runtime you would get an error because obviously we tried to execute combine values as a function
+
+22
+00:01:40,170 --> 00:01:42,110
+when it actually is a number.
+
+23
+00:01:42,120 --> 00:01:48,620
+Now we want to widen this and for that we need to be clear that combined values will hold a function.
+
+24
+00:01:48,630 --> 00:01:54,700
+Now a first step into that direction is that we set the type here to function.
+
+25
+00:01:54,780 --> 00:01:58,140
+Function is a type provided by typescript in the end.
+
+26
+00:01:58,230 --> 00:02:02,230
+And this makes it clear that whatever we store it in here has to be a function.
+
+27
+00:02:02,250 --> 00:02:06,750
+Therefore here I'm getting an error because 5 is a number and not a function.
+
+28
+00:02:06,810 --> 00:02:13,410
+And if I comment this out we can comp. is otherwise who would get an error during compilation and now
+
+29
+00:02:13,410 --> 00:02:15,420
+it is again runs as expected.
+
+30
+00:02:15,450 --> 00:02:22,620
+So that's good but it's not perfect because now we say this should be a function but it could also set
+
+31
+00:02:22,620 --> 00:02:27,170
+combined values equal to print result for example here.
+
+32
+00:02:27,210 --> 00:02:32,640
+And of course typescript would not complain because print result is a function but of course it's not
+
+33
+00:02:32,640 --> 00:02:34,860
+a function that takes two arguments.
+
+34
+00:02:34,860 --> 00:02:41,520
+So again if I compiled this typescript will not complain but if we reload we see undefined here and
+
+35
+00:02:41,520 --> 00:02:42,480
+result eight.
+
+36
+00:02:42,480 --> 00:02:47,330
+So I don't get the result I want because I store the wrong function in there.
+
+37
+00:02:47,430 --> 00:02:53,580
+Again it would be nice if types would tell us about that typescript can't inform us about this because
+
+38
+00:02:53,580 --> 00:02:56,190
+all we said to typescript is dead.
+
+39
+00:02:56,190 --> 00:03:00,570
+We want to store a function in there and does this clearly the case.
+
+40
+00:03:00,600 --> 00:03:06,240
+So it would be good if we could be more precise regarding how the function should look like that we
+
+41
+00:03:06,240 --> 00:03:13,190
+want to store it and combine values and that's where function types come into play function types are
+
+42
+00:03:13,220 --> 00:03:19,910
+types that describe a function regarding the parameters and the return value of that function.
+
+43
+00:03:19,940 --> 00:03:27,440
+A function type is created with this arrow function notation you know from JavaScript or at least close
+
+44
+00:03:27,500 --> 00:03:28,940
+to that notation.
+
+45
+00:03:28,940 --> 00:03:33,240
+You don't add curly braces here because we aren't creating a arrow function here.
+
+46
+00:03:33,320 --> 00:03:35,480
+We're creating a function type instead.
+
+47
+00:03:35,480 --> 00:03:41,150
+Now on the right set of this arrow you specify the return type of the function you eventually want to
+
+48
+00:03:41,150 --> 00:03:42,620
+be able to store here.
+
+49
+00:03:42,710 --> 00:03:49,820
+That should be no now with dad was saying combined values accepts any function that takes no parameters
+
+50
+00:03:50,090 --> 00:03:51,800
+and then returns a number.
+
+51
+00:03:51,890 --> 00:03:54,150
+Now that's of course not entirely what we want.
+
+52
+00:03:54,230 --> 00:04:00,740
+We want to make sure that combined values takes a function or is able to store functions that take two
+
+53
+00:04:00,740 --> 00:04:02,940
+numbers and return a number.
+
+54
+00:04:02,940 --> 00:04:06,080
+Now for Dad we can add parameters here to this function type.
+
+55
+00:04:06,080 --> 00:04:10,340
+We don't have to match the parameters names for up there just the types.
+
+56
+00:04:10,550 --> 00:04:15,670
+So we could have a which should be of type number and B which should be of type number.
+
+57
+00:04:15,710 --> 00:04:22,940
+And now what we're saying to typescript is that combined values should accept any function that takes
+
+58
+00:04:22,940 --> 00:04:29,780
+two parameters where each parameter is a number and where the function overall then returns a number.
+
+59
+00:04:29,870 --> 00:04:34,060
+And that's why typescript does not complain about us storing.
+
+60
+00:04:34,070 --> 00:04:41,270
+Add in combined values because add is a function that perfectly satisfies this type definition but it
+
+61
+00:04:41,270 --> 00:04:49,140
+does complain about print result because print resolved as it tells us here is a function of type 1
+
+62
+00:04:49,160 --> 00:04:56,120
+argument which is a number nothing is returned whereas we actually expect to get a function with two
+
+63
+00:04:56,120 --> 00:05:00,480
+arguments where each argument is a number and we all return a number.
+
+64
+00:05:00,530 --> 00:05:06,830
+So we have a mismatch here and if I would try to comp. is we therefore would get an error here of course
+
+65
+00:05:07,160 --> 00:05:12,100
+in the compiler and we only can fix this by removing this line of code.
+
+66
+00:05:12,110 --> 00:05:18,350
+Now we are able to recompile does without errors and now does runs as expected.
+
+67
+00:05:18,350 --> 00:05:25,280
+So function types allow us to describe which type of function specifically we want to use somewhere
+
+68
+00:05:25,410 --> 00:05:32,150
+B that an expected value in a parameter for create a function with some callback or like here a variable.

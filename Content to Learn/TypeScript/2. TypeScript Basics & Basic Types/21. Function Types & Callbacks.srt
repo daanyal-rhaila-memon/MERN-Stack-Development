@@ -1,0 +1,211 @@
+1
+00:00:02,480 --> 00:00:07,540
+Now speaking of callbacks and function types there it works pretty much in the same way.
+
+2
+00:00:08,450 --> 00:00:13,940
+Let's say we have a new function up there AD and handle.
+
+3
+00:00:14,030 --> 00:00:22,350
+Let's say there we expect to get two numbers and then I also want to get a callback function here.
+
+4
+00:00:22,360 --> 00:00:26,690
+So a function which is passed in is an argument that should do something with the result.
+
+5
+00:00:26,710 --> 00:00:31,090
+Then here we could generate the result of course but now I'm not returning it.
+
+6
+00:00:31,090 --> 00:00:35,670
+But instead I want to call the callback function and pass in result.
+
+7
+00:00:35,710 --> 00:00:39,300
+Now for that I want to be really clear that callback should be a function.
+
+8
+00:00:39,310 --> 00:00:47,020
+So again I'm using that function type definition that maybe does not return anything but that does take
+
+9
+00:00:47,800 --> 00:00:53,320
+a number as an argument because we're passing it a number here so the callback function the function
+
+10
+00:00:53,320 --> 00:00:58,390
+we're passing into this function as a parameter should accept a number.
+
+11
+00:00:58,390 --> 00:01:05,920
+And now down there we could call add and handle pass in 10 and 20 and then passing a function for example
+
+12
+00:01:05,950 --> 00:01:07,630
+an anonymous function here.
+
+13
+00:01:07,630 --> 00:01:12,760
+So now here when we call the function this is of course not a function type but a concrete value we're
+
+14
+00:01:12,760 --> 00:01:15,190
+passing in for this third argument.
+
+15
+00:01:15,190 --> 00:01:22,810
+So this now here is an anonymous function creating here and there we know we'll get a number maybe name
+
+16
+00:01:22,810 --> 00:01:26,200
+it or assault here and then we can do with it whatever we want.
+
+17
+00:01:26,220 --> 00:01:33,450
+Now if you compiled is we see this locked down there 30 which is the result of our callback function
+
+18
+00:01:33,600 --> 00:01:39,720
+which we pass to add and handle where add and handle combines the two numbers and then calls the callback
+
+19
+00:01:39,900 --> 00:01:43,150
+where to call that has to meet this condition here.
+
+20
+00:01:43,200 --> 00:01:49,020
+The advantage of us to finding the callback function definition here is dead inside of the function
+
+21
+00:01:49,020 --> 00:01:54,660
+we pass in as a callback typescript is able to infer that result will be a number and hence we could
+
+22
+00:01:54,660 --> 00:01:56,590
+do anything with result here.
+
+23
+00:01:56,670 --> 00:02:02,580
+What we could do with a number without explicitly stating the type here because typescript nodes result
+
+24
+00:02:02,580 --> 00:02:07,890
+will be a number because we made it really clear that the callback will get one argument which is a
+
+25
+00:02:07,890 --> 00:02:14,850
+number hence all the if we would expect the second arguments here into callback we'd get an error because
+
+26
+00:02:14,850 --> 00:02:20,550
+we know well the callback we expect in our ad and handle function only should have one argument.
+
+27
+00:02:20,550 --> 00:02:26,140
+So if we then pass on a callback function which takes a second argument that clearly is a mistake.
+
+28
+00:02:26,280 --> 00:02:30,360
+The only thing typescript does not pick up is if we return something here.
+
+29
+00:02:30,360 --> 00:02:35,910
+If a return result then the callback does return something even though we made it clear that it shouldn't
+
+30
+00:02:35,970 --> 00:02:37,330
+return anything.
+
+31
+00:02:37,350 --> 00:02:44,400
+This however is not a mistake or a bag and typescript it actually happens on purpose by specifying void
+
+32
+00:02:44,400 --> 00:02:45,960
+here on our callback type.
+
+33
+00:02:46,020 --> 00:02:50,950
+We're essentially saying we'll ignore any result you might be returning here.
+
+34
+00:02:50,970 --> 00:02:57,120
+So we're basically saying in AD and handle where we get that callback function will not do anything
+
+35
+00:02:57,120 --> 00:02:58,060
+with the return type.
+
+36
+00:02:58,110 --> 00:03:01,830
+That's why you will be able to return something here without punishment.
+
+37
+00:03:02,130 --> 00:03:09,210
+But you know because it's clearly defined here on the callback type that the callback will not do anything
+
+38
+00:03:09,240 --> 00:03:10,920
+with the value you might return here.
+
+39
+00:03:10,920 --> 00:03:15,720
+So that ad and handle inside of the function will not do anything with that value.
+
+40
+00:03:15,720 --> 00:03:21,230
+You might be returning and that's of course a useful piece of information you might expect it in here.
+
+41
+00:03:21,330 --> 00:03:29,280
+We're doing something with the value returned by the callback and by specifying this type here we make
+
+42
+00:03:29,280 --> 00:03:33,960
+it really clear that instead of ad and handler we're not interested in any return value.
+
+43
+00:03:33,960 --> 00:03:38,240
+So this does not force you to pass in a callback that doesn't return anything.
+
+44
+00:03:38,340 --> 00:03:43,650
+It just tells you that anything you might return will not be used for the parameters it's of course
+
+45
+00:03:43,650 --> 00:03:44,070
+different.
+
+46
+00:03:44,080 --> 00:03:50,010
+There does isn't forest because here it really matters that you know if you're passing a callback that
+
+47
+00:03:50,010 --> 00:03:55,770
+expects more parameters well then you'll get an error or you'll not get the result you want because
+
+48
+00:03:55,830 --> 00:03:57,700
+I only give you one result.
+
+49
+00:03:57,810 --> 00:04:02,880
+So dear we can't just ignore what you might want as it's the case for the return type.
+
+50
+00:04:02,880 --> 00:04:08,520
+We can ignore that here for passing something in we're the ad and handle function is responsible for
+
+51
+00:04:08,520 --> 00:04:10,950
+that because that's where to call that gets called.
+
+52
+00:04:10,950 --> 00:04:16,470
+This is why parameters are enforced and then typescript is really strict regarding the number and type
+
+53
+00:04:16,470 --> 00:04:21,120
+of parameters of callback functions and why doesn't really care about the return type.

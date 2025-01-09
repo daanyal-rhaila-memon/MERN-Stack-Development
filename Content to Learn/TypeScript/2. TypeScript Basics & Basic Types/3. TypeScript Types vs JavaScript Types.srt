@@ -1,0 +1,243 @@
+1
+00:00:02,450 --> 00:00:06,230
+So we already see how typescript can help us during development.
+
+2
+00:00:06,230 --> 00:00:13,280
+Now we also know that there is a number type in JavaScript and we can see it with the built in type
+
+3
+00:00:13,280 --> 00:00:14,010
+of operator.
+
+4
+00:00:14,030 --> 00:00:20,480
+This is now not typescript specific does is a built in operator in keyword supported by javascript.
+
+5
+00:00:20,480 --> 00:00:22,850
+We can use it to get the type of a certain value.
+
+6
+00:00:22,970 --> 00:00:30,080
+So here we could console log type of number one and what we'll see if we do that is that as soon as
+
+7
+00:00:30,080 --> 00:00:33,670
+we compiled it so that we run the updated code.
+
+8
+00:00:33,830 --> 00:00:37,090
+Here we print number two to console.
+
+9
+00:00:37,100 --> 00:00:42,890
+Now we do that thanks to this output here and thanks to the type of operator and in vanilla javascript
+
+10
+00:00:42,890 --> 00:00:46,610
+without types could we could use that to also improve our function here.
+
+11
+00:00:46,730 --> 00:00:52,740
+We could check if type of number is equal to number excuse me type of.
+
+12
+00:00:52,760 --> 00:01:00,440
+And 1 I mean if data is equal to number and we could also check if type of and 2 is equal to number
+
+13
+00:01:00,770 --> 00:01:06,680
+and only perform our operation here if it is an otherwise fro an error or do the opposite and check
+
+14
+00:01:06,680 --> 00:01:10,910
+if it's not equal or if and two is not equal.
+
+15
+00:01:10,910 --> 00:01:17,960
+And if either of the two is not a number then we could throw a new error where we say incorrect input
+
+16
+00:01:18,950 --> 00:01:25,280
+this actually would be a non typescript way of ensuring that we can't call this function with a string
+
+17
+00:01:25,280 --> 00:01:25,720
+here.
+
+18
+00:01:25,760 --> 00:01:31,580
+If I do this now and I recompile we get our typescript error but let's ignore that for now if we rerun
+
+19
+00:01:31,580 --> 00:01:34,970
+this we get the incorrect input which were flowing ourselves.
+
+20
+00:01:35,000 --> 00:01:38,180
+So now we hardened dysfunction in JavaScript.
+
+21
+00:01:38,180 --> 00:01:44,980
+It fails at runtime but failing might here be better than showing an incorrect output which we had before.
+
+22
+00:01:44,990 --> 00:01:50,660
+So this would be a way of checking the inputs in just JavaScript you don't need typescript for that.
+
+23
+00:01:50,660 --> 00:01:53,180
+That's regular jobs good code.
+
+24
+00:01:53,180 --> 00:01:55,150
+But of course this approach has downsides.
+
+25
+00:01:55,220 --> 00:01:57,170
+Sometimes it's the right thing to do.
+
+26
+00:01:57,200 --> 00:02:01,210
+Sometimes you only can validate certain inputs at runtime.
+
+27
+00:02:01,430 --> 00:02:07,790
+But the downside is here we're checking something which we actually can avoid during development with
+
+28
+00:02:07,790 --> 00:02:08,970
+typescript.
+
+29
+00:02:08,990 --> 00:02:14,990
+So yes we're throwing an error and in our application we might have built in measures that can then
+
+30
+00:02:14,990 --> 00:02:21,020
+fall back to some other behavior to save the running application but still we're throwing an error which
+
+31
+00:02:21,020 --> 00:02:24,200
+is really not necessary to occur in the first place.
+
+32
+00:02:24,230 --> 00:02:27,410
+We could have prevented it with typescript.
+
+33
+00:02:27,410 --> 00:02:31,430
+And here we really see the difference between javascript and typescript when it comes to types.
+
+34
+00:02:31,460 --> 00:02:37,610
+JavaScript is dynamically typed which means it's perfectly fine that we have a variable which initially
+
+35
+00:02:37,610 --> 00:02:41,650
+might hold a number where we later assign a string to it.
+
+36
+00:02:41,780 --> 00:02:48,890
+And that's why we have the type of operator so that we can check the current type of something at runtime
+
+37
+00:02:49,100 --> 00:02:55,490
+if we have some code that depends on a certain type typescript on the other end is statically type which
+
+38
+00:02:55,490 --> 00:03:01,690
+means we define the types of variables and parameters ends on during development.
+
+39
+00:03:01,760 --> 00:03:04,980
+They don't suddenly change during runtime.
+
+40
+00:03:05,030 --> 00:03:10,540
+Now of course since typescript is compiled to JavaScript they theoretically could.
+
+41
+00:03:10,670 --> 00:03:17,300
+But if we use tie of script and we write code where we suddenly assign a new type of data into a variable
+
+42
+00:03:17,600 --> 00:03:20,870
+where we previously set that this should be a number for example.
+
+43
+00:03:20,870 --> 00:03:25,880
+And now we're assigning a string then we get an error during development.
+
+44
+00:03:25,880 --> 00:03:32,170
+So we are forced to be clear regarding the types something can or can not hold.
+
+45
+00:03:32,180 --> 00:03:33,690
+That's the difference here.
+
+46
+00:03:33,740 --> 00:03:38,060
+So we don't really want to use implementations or solutions like that.
+
+47
+00:03:38,390 --> 00:03:44,810
+If we can avoid it with typescript still it's important to know that JavaScript of course knows about
+
+48
+00:03:44,810 --> 00:03:52,070
+the concept of types it knows about some types like numbers string and boolean but using that always
+
+49
+00:03:52,070 --> 00:03:58,040
+means that we can only fail at runtime instead of during development which is a better place for us
+
+50
+00:03:58,070 --> 00:03:58,790
+as a developer.
+
+51
+00:03:58,790 --> 00:04:05,720
+It allows us to fix bugs earlier and in addition javascript only knows about a couple of types as you
+
+52
+00:04:05,720 --> 00:04:12,110
+will learn from this course typescript knows about way more types than javascript so does runtime checking
+
+53
+00:04:12,320 --> 00:04:19,220
+is really not as flexible or not as powerful as what we can do with TypeScript and for all these reasons
+
+54
+00:04:19,490 --> 00:04:22,570
+this approach is actually not the approach we want to use here.
+
+55
+00:04:22,610 --> 00:04:29,900
+Sometimes it can be useful to get the type at runtime but sometimes like in this example it's way better
+
+56
+00:04:29,930 --> 00:04:31,760
+to get it during development.
+
+57
+00:04:31,760 --> 00:04:37,760
+The only important thing to recognize of course just is that with typescript you only get to support
+
+58
+00:04:37,760 --> 00:04:43,460
+during development not at runtime because these typescript features and checks are not built into the
+
+59
+00:04:43,460 --> 00:04:44,470
+JavaScript engine.
+
+60
+00:04:44,720 --> 00:04:47,660
+So Dad logic can't execute in the browser.
+
+61
+00:04:47,660 --> 00:04:51,050
+It can only execute during development when you compile your code.

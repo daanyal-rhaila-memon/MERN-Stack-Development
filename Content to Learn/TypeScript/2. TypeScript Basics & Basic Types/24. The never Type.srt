@@ -1,0 +1,199 @@
+1
+00:00:02,270 --> 00:00:07,500
+The last interesting type I want to show in this module is to never type.
+
+2
+00:00:07,520 --> 00:00:13,430
+Now we saw a function that returned white so that never returns anything.
+
+3
+00:00:13,430 --> 00:00:15,440
+Never is another type.
+
+4
+00:00:15,440 --> 00:00:17,420
+Functions can return.
+
+5
+00:00:17,420 --> 00:00:19,280
+And that might sound strange.
+
+6
+00:00:19,280 --> 00:00:21,130
+Let's have a look at how it works.
+
+7
+00:00:21,170 --> 00:00:28,470
+Let's say we have a function generate error or here I expect to get a message which is a string and
+
+8
+00:00:28,470 --> 00:00:31,620
+maybe some error code which might be a number.
+
+9
+00:00:31,650 --> 00:00:35,070
+Now inside of this function let's say we throw an error.
+
+10
+00:00:35,190 --> 00:00:41,550
+So this should essentially be a utility function that generates error objects and throws them.
+
+11
+00:00:41,550 --> 00:00:46,740
+So here we might throw an object which we can do in JavaScript we can throw any object or any value
+
+12
+00:00:46,740 --> 00:00:49,350
+as an error and that should have a message.
+
+13
+00:00:49,350 --> 00:00:56,400
+Property in which I stored the value of my message argument here and I want to have an error code property
+
+14
+00:00:56,400 --> 00:00:59,720
+let's say we're a store to code argument in.
+
+15
+00:01:00,390 --> 00:01:07,770
+So now it is would be a valid function and we can call this with an error occurred for example and a
+
+16
+00:01:07,770 --> 00:01:09,510
+code of 500.
+
+17
+00:01:09,720 --> 00:01:17,090
+If we do that and we compiled is file here we see that once this reloads we get our error.
+
+18
+00:01:17,120 --> 00:01:24,230
+Well as an error here and this might sound pretty abstract but actually it isn't having utility functions
+
+19
+00:01:24,230 --> 00:01:29,900
+like this would be pretty standard in bigger applications where you don't manually want to throw an
+
+20
+00:01:29,900 --> 00:01:35,180
+error in ten different places of your app but where you want to reach out to one convenient function
+
+21
+00:01:35,390 --> 00:01:40,940
+that builds the error object for you and maybe also froze it immediately so that you can call this function
+
+22
+00:01:41,090 --> 00:01:44,710
+with different inputs but you always have an error being thrown.
+
+23
+00:01:44,720 --> 00:01:49,450
+Now the interesting thing about this function is it does not just return wide.
+
+24
+00:01:49,520 --> 00:01:56,150
+I actually can specify that it returns wide because of course returns nothing but actually does not
+
+25
+00:01:56,150 --> 00:01:57,950
+just return nothing.
+
+26
+00:01:58,100 --> 00:02:02,660
+If we're totally honest this function returns never.
+
+27
+00:02:02,660 --> 00:02:05,510
+This function never produces a return value.
+
+28
+00:02:06,050 --> 00:02:15,090
+If I would try to restore the return value here and a console log result and I then compile my code
+
+29
+00:02:15,090 --> 00:02:22,530
+and this executes we see there is no undefined being locked here because since an error is thrown this
+
+30
+00:02:22,530 --> 00:02:24,720
+essentially crashes our script.
+
+31
+00:02:24,720 --> 00:02:30,360
+You could say it cancels our script and this will always be the case for this function.
+
+32
+00:02:30,360 --> 00:02:34,260
+Of course we can wrap it and try catch so that we can still continue in the script.
+
+33
+00:02:34,260 --> 00:02:37,650
+But this function essentially never produces a value.
+
+34
+00:02:37,650 --> 00:02:42,930
+This function always crashes the script or this part of the script.
+
+35
+00:02:42,930 --> 00:02:50,160
+If you're using try catch and therefore never returns anything and hence the return type of this function
+
+36
+00:02:50,460 --> 00:02:55,660
+actually is not just wide but also never.
+
+37
+00:02:55,740 --> 00:03:00,840
+Now the interesting thing is if you hover over it without assigning never you see the inferred type
+
+38
+00:03:00,840 --> 00:03:05,490
+as white all because never is a newer type.
+
+39
+00:03:05,490 --> 00:03:10,890
+It's been around for some time now but it wasn't built into the first versions of TypeScript and therefore
+
+40
+00:03:10,980 --> 00:03:18,180
+why it is typically assumed and it's not horrible to leave it at that but you can be very clear and
+
+41
+00:03:18,450 --> 00:03:20,040
+explicitly set.
+
+42
+00:03:20,040 --> 00:03:24,300
+Never asked the return type to make it really clear that this never returns anything.
+
+43
+00:03:24,510 --> 00:03:30,360
+So from a code quality perspective this might be clearer regarding your intentions and make it really
+
+44
+00:03:30,360 --> 00:03:35,760
+clear to average developers reading your code that this function is intended to never return anything
+
+45
+00:03:35,970 --> 00:03:43,110
+and to essentially crash or break your script or that part of the script and no function that would
+
+46
+00:03:43,110 --> 00:03:47,200
+never return by the way would be a function with an infinite loop.
+
+47
+00:03:47,220 --> 00:03:52,800
+So if we have while true in there that creates an infinite loop and that therefore all would be a function
+
+48
+00:03:52,800 --> 00:03:59,690
+that never returns the error function here or the function that generates and throws an error probably
+
+49
+00:03:59,690 --> 00:04:02,980
+is the more common use case though so never.
+
+50
+00:04:03,030 --> 00:04:08,370
+Also an interesting type which you can use on functions for cases like this one here.

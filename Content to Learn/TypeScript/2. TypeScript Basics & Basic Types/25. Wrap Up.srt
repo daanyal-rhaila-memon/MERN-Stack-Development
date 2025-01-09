@@ -1,0 +1,91 @@
+1
+00:00:02,200 --> 00:00:08,260
+Now with that we had a thorough look at all the core types and the types good basics you hopefully now
+
+2
+00:00:08,260 --> 00:00:16,090
+understand how we create and the sign types how we assign types to variables and two parameters and
+
+3
+00:00:16,090 --> 00:00:17,530
+why we do that.
+
+4
+00:00:17,560 --> 00:00:17,890
+How.
+
+5
+00:00:17,890 --> 00:00:24,810
+Type assignments and types could differ from javascript type checks that JavaScript uses runtime types
+
+6
+00:00:24,810 --> 00:00:31,480
+and typescript uses static types that mattered during development that the built javascript code Dale
+
+7
+00:00:31,480 --> 00:00:34,450
+for does not include any type assignments.
+
+8
+00:00:34,450 --> 00:00:40,980
+It of course includes any type checks because dad is regular javascript code but something like this
+
+9
+00:00:40,980 --> 00:00:46,310
+year does is simply not allowed in JavaScript does not support its syntax.
+
+10
+00:00:46,310 --> 00:00:49,670
+That's typescript only so that's hopefully clear.
+
+11
+00:00:49,670 --> 00:00:56,270
+And then we had a look at numbers strings boolean ends at function types and setting return types argument
+
+12
+00:00:56,270 --> 00:01:02,090
+types and also describing the type of an overall function which can be helpful if you want to have a
+
+13
+00:01:02,090 --> 00:01:04,780
+variable that eventually holds a function.
+
+14
+00:01:04,820 --> 00:01:10,460
+We had a look at objects and arrays and E numbers and how that can be interesting and help you the same
+
+15
+00:01:10,460 --> 00:01:12,020
+is true for tuples.
+
+16
+00:01:12,080 --> 00:01:20,180
+And now we also had a look at aliases type aliases where you can merge complex types into aliases which
+
+17
+00:01:20,180 --> 00:01:21,240
+you can reuse.
+
+18
+00:01:21,260 --> 00:01:27,350
+We had a look at literal types and union types which can be useful for scenarios where you expect more
+
+19
+00:01:27,350 --> 00:01:29,370
+than one possible type.
+
+20
+00:01:29,600 --> 00:01:37,160
+And now at the end we all had a look at unknown and never which are niche types but still in their niche
+
+21
+00:01:37,310 --> 00:01:39,300
+they can be very useful.
+
+22
+00:01:39,380 --> 00:01:44,900
+And now with these basics we'll dive deeper into individual aspects and of course also explore other
+
+23
+00:01:45,080 --> 00:01:49,010
+types and JavaScript constructs where typescript can be helpful.

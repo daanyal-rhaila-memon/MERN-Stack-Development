@@ -1,0 +1,155 @@
+1
+00:00:02,390 --> 00:00:06,250
+We're almost done with the basics about TypeScript and the core types.
+
+2
+00:00:06,290 --> 00:00:13,270
+There are two more types which are good to be aware of because they will matter from time to time.
+
+3
+00:00:13,310 --> 00:00:21,170
+The first type is the UN known type for Dad all named does fall here functions T S and add a new apt
+
+4
+00:00:21,200 --> 00:00:32,230
+yes file and in their let's say we have a new variable user input and this is of type and known.
+
+5
+00:00:32,450 --> 00:00:38,330
+It's not type any which would be the default but unknown which is a different type introduced by typescript.
+
+6
+00:00:38,580 --> 00:00:43,800
+It might be unknown because we don't know yet what the user will eventually enter if it's a number if
+
+7
+00:00:43,800 --> 00:00:44,820
+it's a string.
+
+8
+00:00:44,820 --> 00:00:46,800
+We don't know.
+
+9
+00:00:46,830 --> 00:00:51,840
+Now the interesting thing about the unknown type is we can store any value in there without getting
+
+10
+00:00:51,900 --> 00:00:53,280
+errors.
+
+11
+00:00:53,280 --> 00:00:54,650
+So this is all allowed.
+
+12
+00:00:54,660 --> 00:01:02,340
+If I now compile my file here you see I get no compilation error so thus far it's the same as if we
+
+13
+00:01:02,340 --> 00:01:05,310
+wouldn't have assigned a type here and hence we have any type.
+
+14
+00:01:05,310 --> 00:01:13,530
+Or if he would have explicitly set any as a type but still unknown is different to any this year works
+
+15
+00:01:14,160 --> 00:01:21,060
+but will run into issues if I have another variable let's say user name which should be a string and
+
+16
+00:01:21,060 --> 00:01:27,230
+that's on initialized here but then here I want to set a user name equal to user input.
+
+17
+00:01:27,240 --> 00:01:32,890
+Now you see we're getting an error that type unknown is not a sign to type string.
+
+18
+00:01:33,060 --> 00:01:38,120
+So user name once a string and of course unknown is not guaranteed to be a string.
+
+19
+00:01:38,130 --> 00:01:41,630
+Here I assigned one but that's just a case in this line.
+
+20
+00:01:41,670 --> 00:01:46,530
+User input technically could hold any value because it's I'm known.
+
+21
+00:01:46,530 --> 00:01:52,440
+Now the interesting thing is if I switch unknown to any this error goes away because any is the most
+
+22
+00:01:52,440 --> 00:01:58,500
+flexible type and TypeScript and it basically disables all type checking and typescript just says I
+
+23
+00:01:58,500 --> 00:01:59,190
+give up.
+
+24
+00:01:59,220 --> 00:02:06,780
+Do whatever you want unknown is a bit more restrictive than any with unknown.
+
+25
+00:02:06,780 --> 00:02:13,530
+We have to first of all check the type that's currently stored in user input before we can assign it
+
+26
+00:02:13,560 --> 00:02:16,230
+to for example a variable that wants a string.
+
+27
+00:02:16,230 --> 00:02:24,370
+So since a string is wanted here we could check if type of user input is equal to string and typescript
+
+28
+00:02:24,390 --> 00:02:30,780
+will detect this check and understand that in here what is stored in user name because it's inside of
+
+29
+00:02:30,780 --> 00:02:36,540
+this if statement where I check for a user input being of type String user input is guaranteed to be
+
+30
+00:02:36,540 --> 00:02:43,800
+a string and Dale for I can safely assign to user name so I need such a extra type check here with unknown
+
+31
+00:02:44,040 --> 00:02:52,950
+to be able to assign a unknown value to a value with a fixed type and Dale for unknown is the better
+
+32
+00:02:52,950 --> 00:03:00,600
+choice over any if you know I can't tell exactly what type all stored in there it might be a number
+
+33
+00:03:00,600 --> 00:03:07,590
+it might be a string but I know what I want to do with it eventually we'll just add an extra check to
+
+34
+00:03:07,590 --> 00:03:12,720
+make sure that what you want to do can be done so that if you want to work with the string you have
+
+35
+00:03:12,720 --> 00:03:19,650
+a string and you're good and then unknown is better than any because it makes sure that you're not allowed
+
+36
+00:03:19,650 --> 00:03:23,370
+to do everything but you have at least some type checking.
+
+37
+00:03:23,370 --> 00:03:28,800
+Of course if you have a chance of knowing in advance that user input is always a string or always a
+
+38
+00:03:28,800 --> 00:03:35,190
+string or a number well then you should use string or such a union type instead of unknown so unknown
+
+39
+00:03:35,190 --> 00:03:41,280
+still is a type you shouldn't use all the time but it is better than any for the reasons described.

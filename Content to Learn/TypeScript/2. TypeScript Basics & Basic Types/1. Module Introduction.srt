@@ -1,0 +1,15 @@
+1
+00:00:02,370 --> 00:00:08,970
+Now with the clear basics or with the Getting Started section out of the way let's dive in to the core
+
+2
+00:00:09,000 --> 00:00:15,500
+typescript syntax the core features and that of course means we'll dive into the types which types typescript
+
+3
+00:00:15,630 --> 00:00:21,480
+offers and supports and how we work with these types how we assign types how we can reap the benefits
+
+4
+00:00:21,480 --> 00:00:24,060
+of using types and all that fun stuff.

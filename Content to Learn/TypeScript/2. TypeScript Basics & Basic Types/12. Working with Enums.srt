@@ -1,0 +1,335 @@
+1
+00:00:02,280 --> 00:00:10,230
+Loosely related to the idea of a tuple is the idea of having a couple of specific identifiers global
+
+2
+00:00:10,230 --> 00:00:15,010
+constants you might be working within your app which you want to represent as numbers.
+
+3
+00:00:15,030 --> 00:00:18,780
+But to which you want to assign a human readable label.
+
+4
+00:00:18,780 --> 00:00:20,550
+And for Dad you have to enum type.
+
+5
+00:00:20,550 --> 00:00:23,770
+Again that does exist in some other programming languages.
+
+6
+00:00:23,820 --> 00:00:28,170
+Javascript doesn't know it though it looks like this is how you create a enum.
+
+7
+00:00:28,170 --> 00:00:33,080
+You used to enum keyword which only exists in types called world not in JavaScript.
+
+8
+00:00:33,110 --> 00:00:39,240
+They're off to you you have curly braces and then your identifiers and this type which is added by typescript
+
+9
+00:00:39,570 --> 00:00:42,000
+gives you an enumerated list.
+
+10
+00:00:42,090 --> 00:00:48,060
+So these labels are in the end just translated to numbers starting at zero where you have human readable
+
+11
+00:00:48,060 --> 00:00:52,610
+labels you can work with in your code to show you an example.
+
+12
+00:00:52,630 --> 00:00:55,630
+Let's go back here to our person with its role.
+
+13
+00:00:55,690 --> 00:01:00,880
+I'll copy that code and then comment it out because I'm going to change it a bit and then here I'll
+
+14
+00:01:00,880 --> 00:01:07,350
+get rid of that explicit type assignment and instead go back to inference because I'll now change role.
+
+15
+00:01:07,350 --> 00:01:13,450
+And now let's say we want to have a admin an author and maybe a read only user the admin should have
+
+16
+00:01:13,450 --> 00:01:21,160
+an idea of zero read only user has one author has to now of course we can store that exactly like this
+
+17
+00:01:21,160 --> 00:01:22,560
+with these numbers.
+
+18
+00:01:22,600 --> 00:01:27,550
+One downside is that we can also add a number for which we might not have a role and if we then later
+
+19
+00:01:27,550 --> 00:01:31,920
+in our code try to extract a role and use it if check.
+
+20
+00:01:31,920 --> 00:01:38,530
+This might lead to errors and in addition we as a developer have a hard time to understand which role
+
+21
+00:01:38,530 --> 00:01:45,040
+is user has lost to the author or was it do you read on the user you might forget this after making
+
+22
+00:01:45,040 --> 00:01:48,850
+longer pauses when working in bigger teams and so on.
+
+23
+00:01:48,880 --> 00:01:57,370
+So as a developer we might want human readable identifiers something like admin and read only user something
+
+24
+00:01:57,370 --> 00:01:58,660
+like that.
+
+25
+00:01:58,660 --> 00:02:02,910
+Now of course we could use that we could work with such string values.
+
+26
+00:02:02,920 --> 00:02:09,130
+The problem is if we then later need that and they if check we check if person dot role is equal to
+
+27
+00:02:09,610 --> 00:02:13,510
+was it read only user or was it one word.
+
+28
+00:02:13,510 --> 00:02:15,350
+Was it with underscores.
+
+29
+00:02:15,430 --> 00:02:21,490
+You see then we have to remember how we wrote these strings which exact text we have in there because
+
+30
+00:02:21,640 --> 00:02:27,440
+this string with the dashes between the words is of course not the same as this string.
+
+31
+00:02:27,460 --> 00:02:37,390
+So here we would never make it in their is read only if we tried to compile and print that because well
+
+32
+00:02:37,420 --> 00:02:39,220
+the checks simply doesn't yield true.
+
+33
+00:02:39,220 --> 00:02:43,960
+We don't have dad as a role on person hence we don't get the output here in a console.
+
+34
+00:02:43,960 --> 00:02:48,700
+So string identifiers all have downsides now for such scenarios.
+
+35
+00:02:48,700 --> 00:02:54,910
+It's quite common in javascript to define global constants for example admin which can hold certain
+
+36
+00:02:54,910 --> 00:03:03,160
+values like numbers or strings both as possible numbers of course can save us some extra code and bits
+
+37
+00:03:03,160 --> 00:03:11,770
+and memory and then we might have admin read only an author like this and down there we then just have
+
+38
+00:03:11,770 --> 00:03:13,710
+to use that role.
+
+39
+00:03:13,810 --> 00:03:19,750
+Now the advantage of that is that we can use this everywhere in our code and therefore here for example
+
+40
+00:03:20,710 --> 00:03:28,570
+if I run this code if I compile it and then we let this reload we see as admin here.
+
+41
+00:03:28,610 --> 00:03:31,550
+So this works and this is a common pattern in JavaScript.
+
+42
+00:03:31,550 --> 00:03:35,400
+Downside is that now again role is inferred to be just a number.
+
+43
+00:03:35,450 --> 00:03:39,570
+So we could store any number in there even a number which we don't support.
+
+44
+00:03:39,710 --> 00:03:42,460
+And in addition we have to define all these constants.
+
+45
+00:03:42,470 --> 00:03:44,070
+We have to manage them.
+
+46
+00:03:44,090 --> 00:03:45,910
+This is where a enum can save us work.
+
+47
+00:03:45,920 --> 00:03:48,770
+This is totally fine but at enum makes it easier.
+
+48
+00:03:48,770 --> 00:03:55,030
+We create a enum with the enum keyword we can name ID roll conventioneers to start with the uppercase
+
+49
+00:03:55,040 --> 00:04:00,620
+character because the enum also is a custom type it's your first custom type.
+
+50
+00:04:00,640 --> 00:04:02,450
+We're going to write many more in this course.
+
+51
+00:04:02,450 --> 00:04:08,210
+This is the first one and then after the name of the type you want to assign to this enum you add curly
+
+52
+00:04:08,210 --> 00:04:12,740
+brace just like that no colon no equal sign just curly braces.
+
+53
+00:04:12,800 --> 00:04:15,830
+After the name then a semicolon.
+
+54
+00:04:15,830 --> 00:04:25,970
+And now in here you can assign your values like admin read only and author and behind the scenes this
+
+55
+00:04:25,970 --> 00:04:28,870
+year receives the number is 0 this year.
+
+56
+00:04:28,890 --> 00:04:30,550
+Number one this year.
+
+57
+00:04:30,570 --> 00:04:31,890
+Number two.
+
+58
+00:04:31,950 --> 00:04:38,620
+And then here you can access roll dot admin like on an object you axis your identifier and you can use
+
+59
+00:04:38,620 --> 00:04:40,500
+that anywhere else in your code as well.
+
+60
+00:04:40,500 --> 00:04:45,320
+Here we can check if the roll is author and then print author.
+
+61
+00:04:45,450 --> 00:04:51,260
+And of course we shouldn't see that if I run that now because we assigned a role of admin here but the
+
+62
+00:04:51,270 --> 00:04:57,540
+key takeaway is that we did all of that with the help of the enum which assigns labels to numbers.
+
+63
+00:04:57,590 --> 00:05:03,150
+We have a look at that in JavaScript so in the compiled code we see does this how it's rebuilt in the
+
+64
+00:05:03,150 --> 00:05:10,380
+end it's rebuilt with a if a year so a function which executes itself and roll here simply is managed
+
+65
+00:05:10,560 --> 00:05:16,290
+as an object in the end which has admin property a read only property and all through property where
+
+66
+00:05:16,290 --> 00:05:21,960
+we then store our no value is here you could say so it's a bit more complex than that but that's what
+
+67
+00:05:21,960 --> 00:05:27,600
+types in the end does here to replicate this enum construct in JavaScript code when it compiles the
+
+68
+00:05:27,600 --> 00:05:33,660
+code here as a developer we simply have these conveniently created numbers if you hover over them you'll
+
+69
+00:05:33,660 --> 00:05:39,720
+see the number which was stored in there and you can use these numbers here in a human readable way
+
+70
+00:05:40,810 --> 00:05:46,420
+now for in you're also not restricted to the default behavior let's say for some reason you don't want
+
+71
+00:05:46,420 --> 00:05:52,540
+to start with zero as a starting number then you can add a equals sign here after your identifier and
+
+72
+00:05:52,540 --> 00:05:58,990
+enter any other number and now admin is assigned to the number 5 and the other identifiers after the
+
+73
+00:05:58,990 --> 00:06:04,610
+identifier where you assign a value pick up on that and simply increment this starting value.
+
+74
+00:06:04,630 --> 00:06:13,090
+So now we have 5 6 7 instead of 0 1 2 you of course also can assign your own values to all these identifiers
+
+75
+00:06:13,120 --> 00:06:18,790
+if you need your own numbers you're also not restricted to numbers you can also go with text here or
+
+76
+00:06:18,790 --> 00:06:24,910
+even mix it like I'm doing it here anything goes there but often the default of incrementing numbers
+
+77
+00:06:24,910 --> 00:06:31,180
+that start at zero is what you want but if you need a different behavior if you want to use a string
+
+78
+00:06:31,180 --> 00:06:37,900
+in here and then a number here and here a number as well or maybe another string then you can absolutely
+
+79
+00:06:37,900 --> 00:06:38,770
+do that.
+
+80
+00:06:38,790 --> 00:06:44,170
+The advantages you defined it up there and then thereafter you always just refer to your role.
+
+81
+00:06:44,170 --> 00:06:50,350
+Type 2 this custom type you created to this custom enum you created and you use that in your if checks
+
+82
+00:06:50,350 --> 00:06:52,700
+and your type assignments and you're good.
+
+83
+00:06:53,020 --> 00:06:59,080
+That's the power of the enum and it's a great construct whenever you need identifiers that are human
+
+84
+00:06:59,080 --> 00:07:03,040
+readable and have some mapped value behind the scenes.

@@ -1,0 +1,379 @@
+1
+00:00:02,210 --> 00:00:04,050
+Time for another new file.
+
+2
+00:00:04,130 --> 00:00:12,150
+I'll rename apt yes here to Union aliases T.S. and add a new app.
+
+3
+00:00:12,150 --> 00:00:18,640
+Yes file where we can start from scratch again closed the other file and now in here I want to dive
+
+4
+00:00:18,640 --> 00:00:20,710
+a bit deeper into functions.
+
+5
+00:00:20,710 --> 00:00:25,630
+Now of course we already work with functions for example here in the union alias is file with the combined
+
+6
+00:00:25,630 --> 00:00:26,590
+function.
+
+7
+00:00:26,590 --> 00:00:32,270
+And for example you saw that for functions you can assign types to the parameters of functions.
+
+8
+00:00:32,580 --> 00:00:37,980
+Well turns out there is a bit more you can do with functions and types for that.
+
+9
+00:00:37,980 --> 00:00:45,750
+I'll recreate my add function which simply accepts numbers not strings which does one simple thing it
+
+10
+00:00:45,750 --> 00:00:48,270
+returns and one plus and 2.
+
+11
+00:00:48,390 --> 00:00:49,950
+So not too tricky.
+
+12
+00:00:50,130 --> 00:00:53,630
+Now as I mentioned we can't assign types to parameters.
+
+13
+00:00:53,640 --> 00:00:54,930
+That's not new.
+
+14
+00:00:55,170 --> 00:00:58,940
+D function overall however has one import our type.
+
+15
+00:00:59,010 --> 00:01:05,730
+It has a return type and here to return type is inferred by typescript we can see it if we hover over
+
+16
+00:01:05,730 --> 00:01:07,800
+at here at the end.
+
+17
+00:01:07,830 --> 00:01:15,210
+The colon after the parameter list this year describes the return type of the function so to type off
+
+18
+00:01:15,210 --> 00:01:16,820
+the return value.
+
+19
+00:01:17,040 --> 00:01:24,030
+Here I return the additional and 1 and 2 and since both these inputs are numbers typescript is able
+
+20
+00:01:24,030 --> 00:01:29,100
+to infer that the result of this will be a number and simply to return it that the return type of this
+
+21
+00:01:29,100 --> 00:01:30,900
+function therefore will be a number.
+
+22
+00:01:30,900 --> 00:01:38,400
+If you would concatenate them as strings here with two string for example then types could would correctly
+
+23
+00:01:38,400 --> 00:01:41,920
+infer that we return a string here.
+
+24
+00:01:41,940 --> 00:01:48,000
+Now of course we can always explicitly assign a return type here by adding a colon after dy parameter
+
+25
+00:01:48,000 --> 00:01:55,010
+list and then to type you want a return like number this would be the same type as inferred if it for
+
+26
+00:01:55,010 --> 00:01:56,810
+example set us to string.
+
+27
+00:01:56,810 --> 00:02:03,510
+I would get an error here because obviously my calculation here does not match my described return type.
+
+28
+00:02:03,570 --> 00:02:10,490
+Now just as with variables it's a good idea to let typescript do its job regarding type inference and
+
+29
+00:02:10,490 --> 00:02:17,060
+if you have no specific reason for explicitly setting the type you should therefore not set the type.
+
+30
+00:02:17,120 --> 00:02:22,450
+And instead let typescript infer to type regarding the return types.
+
+31
+00:02:22,450 --> 00:02:27,580
+Though there is one interesting type which we haven't seen before and which might be brand new to you
+
+32
+00:02:27,580 --> 00:02:32,320
+if you have no experience with our programming languages because it is a type that doesn't really exist
+
+33
+00:02:32,320 --> 00:02:35,170
+in JavaScript it's the white type.
+
+34
+00:02:35,230 --> 00:02:38,130
+Let's say we have the print or assault method.
+
+35
+00:02:38,170 --> 00:02:42,330
+There we get a no argument which should be.
+
+36
+00:02:42,430 --> 00:02:44,110
+Well no.
+
+37
+00:02:44,230 --> 00:02:49,990
+And then there I want to console log NUM and I want to console log it as part of a string where I say
+
+38
+00:02:49,990 --> 00:02:52,210
+a result plus numbers.
+
+39
+00:02:52,210 --> 00:02:56,300
+So now it is will be concatenated to one long string and will be output.
+
+40
+00:02:56,300 --> 00:03:02,440
+And now I can call print result and for example past two that the result of my add function call with
+
+41
+00:03:02,440 --> 00:03:04,710
+five plus let's say twelve.
+
+42
+00:03:05,050 --> 00:03:08,950
+So I am executing add here with two numbers and the result of that.
+
+43
+00:03:08,950 --> 00:03:15,690
+So what ad returns is then passed as an argument into print result and that should print it to the console.
+
+44
+00:03:15,850 --> 00:03:22,690
+If we now compile this and then have a look at that in our page or on our page here we see results 17
+
+45
+00:03:22,690 --> 00:03:24,310
+which makes sense.
+
+46
+00:03:24,310 --> 00:03:27,660
+Now the interesting thing here is the return type of print result.
+
+47
+00:03:27,670 --> 00:03:31,100
+What would you guess is the return type here.
+
+48
+00:03:31,270 --> 00:03:35,070
+So maybe you think it's string because I'm creating a string in here.
+
+49
+00:03:35,170 --> 00:03:37,420
+But keep in mind we're not returning this.
+
+50
+00:03:37,420 --> 00:03:41,310
+We're not returning anything here and data for disk print result.
+
+51
+00:03:41,380 --> 00:03:45,030
+Function here has a special return type white.
+
+52
+00:03:45,040 --> 00:03:51,370
+Now you might note is wide returned hype from other programming languages there you have something like
+
+53
+00:03:51,370 --> 00:03:57,400
+this javascript doesn't really know that or doesn't really have a name for this situation typescript
+
+54
+00:03:57,400 --> 00:04:01,940
+however does so indeed this function here has a return type of white.
+
+55
+00:04:01,990 --> 00:04:06,150
+And of course you don't need to specify as your type scripts inference did its job.
+
+56
+00:04:06,460 --> 00:04:11,290
+But I want to make it really clear that this has the wide return type which is why I am adding it here
+
+57
+00:04:11,440 --> 00:04:13,670
+for demo purposes.
+
+58
+00:04:13,780 --> 00:04:20,740
+Now why it really just means dysfunction doesn't have a return statement it doesn't return anything
+
+59
+00:04:21,120 --> 00:04:28,120
+it successfully completes its stuff it does its job and executes its code it does not yield an error
+
+60
+00:04:28,210 --> 00:04:32,560
+or anything like that but it then doesn't return anything.
+
+61
+00:04:32,560 --> 00:04:34,900
+That's the wide return type.
+
+62
+00:04:35,020 --> 00:04:42,300
+Now technically in JavaScript of course if we would console log the result of print result here and
+
+63
+00:04:42,300 --> 00:04:48,690
+I now compile this and we see what gets output here on the page we see that undefined is returned by
+
+64
+00:04:48,690 --> 00:04:49,490
+that.
+
+65
+00:04:49,530 --> 00:04:56,580
+So technically and that's re interesting in javascript if we use the return value of a function that
+
+66
+00:04:56,580 --> 00:05:00,870
+doesn't return anything we get undefined as a value.
+
+67
+00:05:00,870 --> 00:05:07,680
+And as you probably know undefined and Javascript is actually a real value a value you for example also
+
+68
+00:05:07,680 --> 00:05:11,410
+get if you try to access a property on an object which doesn't exist.
+
+69
+00:05:11,910 --> 00:05:16,770
+So here we get white even though technically this returns undefined.
+
+70
+00:05:16,770 --> 00:05:24,740
+And now to make it even more confusing undefined actually is a type in typescript you can have undefined
+
+71
+00:05:24,750 --> 00:05:25,680
+as a type.
+
+72
+00:05:25,800 --> 00:05:34,060
+And for example a brand new variable some value can receive undefined as a type and you will not get
+
+73
+00:05:34,060 --> 00:05:34,680
+an error.
+
+74
+00:05:34,720 --> 00:05:40,270
+This variable will now just be forever undefined how useful that might be as a different question but
+
+75
+00:05:40,440 --> 00:05:47,320
+undefined is a valid type and typescript nonetheless here you see we're getting an error and we are
+
+76
+00:05:47,320 --> 00:05:51,560
+getting an error because a function is not allowed to return undefined.
+
+77
+00:05:51,700 --> 00:05:56,890
+Technically it of course does but typescript thinks about functions a bit differently.
+
+78
+00:05:56,890 --> 00:06:04,000
+You should use why here if a function returns nothing and not undefined because with y you make clear
+
+79
+00:06:04,330 --> 00:06:08,350
+that this function deliberately does not have a return statement.
+
+80
+00:06:08,350 --> 00:06:14,950
+If you would say undefined here then typescript would expect that you have a return statement where
+
+81
+00:06:14,950 --> 00:06:17,130
+you just don't return a value.
+
+82
+00:06:17,140 --> 00:06:18,700
+That's the technical difference.
+
+83
+00:06:18,700 --> 00:06:22,900
+Now you see I'm not getting an error from a javascript perspective.
+
+84
+00:06:22,900 --> 00:06:29,090
+This is basically the same as this but typescript makes a differentiation here.
+
+85
+00:06:29,200 --> 00:06:34,960
+And therefore why does the type you want to use if you don't have a return statement undefined which
+
+86
+00:06:34,960 --> 00:06:41,120
+you will rarely need to be honest can be used if you return without returning an actual value.
+
+87
+00:06:41,140 --> 00:06:47,680
+But again this is a rare use case and you could use wide with a return statement like this as well you
+
+88
+00:06:47,680 --> 00:06:53,380
+would not get an error and by default you would actually also use white in this scenario unless you
+
+89
+00:06:53,380 --> 00:06:58,480
+really have a function that should produce undefined and you want to be clear about that.
+
+90
+00:06:58,630 --> 00:07:01,510
+But again dead will rarely be the case.
+
+91
+00:07:01,510 --> 00:07:06,550
+I just want to make sure here that you understand the difference between white and undefined that white
+
+92
+00:07:06,610 --> 00:07:12,130
+is the standard which you'll use in pretty much all scenarios where you have a function that does not
+
+93
+00:07:12,130 --> 00:07:18,580
+return a value and that you can assign it explicitly but of course types all always able to infer it
+
+94
+00:07:18,850 --> 00:07:20,290
+like it would be able here as well.
+
+95
+00:07:20,500 --> 00:07:22,930
+I just added this for demo purposes here.

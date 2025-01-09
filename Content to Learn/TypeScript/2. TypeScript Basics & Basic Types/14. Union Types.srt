@@ -1,0 +1,331 @@
+1
+00:00:02,180 --> 00:00:05,220
+So we covered a couple of the core types of knows.
+
+2
+00:00:05,240 --> 00:00:06,540
+Now let's move on.
+
+3
+00:00:06,540 --> 00:00:12,820
+And for that I'll rename A.S. here to objects arrays erase imams or whatever you want to name it.
+
+4
+00:00:12,820 --> 00:00:16,590
+Basically Soledad we still have that file but I'll create a brand new apt.
+
+5
+00:00:16,610 --> 00:00:20,260
+Yes follows that we have an empty file again in which we can work.
+
+6
+00:00:20,540 --> 00:00:27,080
+Now in this file I want to dive into not interesting type which you find in typescript and that's the
+
+7
+00:00:27,170 --> 00:00:28,700
+union type.
+
+8
+00:00:28,700 --> 00:00:30,260
+Now what's that.
+
+9
+00:00:30,260 --> 00:00:34,550
+Let's come back to our ad function which we wrote earlier.
+
+10
+00:00:34,550 --> 00:00:37,180
+I'll copy that and move that into apt yes.
+
+11
+00:00:37,280 --> 00:00:41,720
+Get rid of that comment here and here on AD.
+
+12
+00:00:41,720 --> 00:00:42,690
+Let's close basics.
+
+13
+00:00:42,710 --> 00:00:42,950
+Yes.
+
+14
+00:00:42,950 --> 00:00:46,010
+So did we get rid of that error here in AD.
+
+15
+00:00:46,100 --> 00:00:49,960
+I now want to be more flexible regarding what we accept here.
+
+16
+00:00:49,970 --> 00:00:54,140
+I will also get rid of show resolved and phrase I don't need that.
+
+17
+00:00:54,410 --> 00:00:59,540
+And the only thing I want to do is I want to calculate a result and return it but I want to be more
+
+18
+00:00:59,540 --> 00:01:01,920
+flexible regarding the inputs.
+
+19
+00:01:01,940 --> 00:01:06,470
+Previously we made sure that we only work with numbers.
+
+20
+00:01:06,470 --> 00:01:13,520
+Now let's say we actually named this combine and it should work with both numbers and strings because
+
+21
+00:01:13,520 --> 00:01:18,970
+it turns out we can combine both numbers and strings with this plus operator.
+
+22
+00:01:18,980 --> 00:01:25,180
+The only difference is that in one scenario we get back a number as a result in the average scenario
+
+23
+00:01:25,190 --> 00:01:30,140
+we get a concatenated string as we actually already saw earlier in this module.
+
+24
+00:01:30,140 --> 00:01:35,330
+But now I want to allow his behavior because you could have an application where you want of a flexible
+
+25
+00:01:35,330 --> 00:01:42,400
+combination function that does work with numbers and strings therefore I will all named this input one
+
+26
+00:01:42,400 --> 00:01:49,750
+year and this input 2 and combine these two now but we will have one problem of course.
+
+27
+00:01:49,750 --> 00:01:53,070
+Right now we set both parameters to be numbers.
+
+28
+00:01:53,200 --> 00:01:54,480
+This means dead.
+
+29
+00:01:54,490 --> 00:01:59,620
+We can call this function as long as we do want to work with numbers let's say down there we're creating
+
+30
+00:01:59,620 --> 00:02:09,850
+a new constant combined ages and dare I call combine and pass and thirty and twenty six here as ages
+
+31
+00:02:10,240 --> 00:02:15,400
+in whatever application we're building an idea after a console log combined ages.
+
+32
+00:02:15,400 --> 00:02:21,460
+Well it shouldn't be too surprising that if we now compiled this file here and we then reload this page
+
+33
+00:02:21,460 --> 00:02:22,400
+we get 56.
+
+34
+00:02:22,410 --> 00:02:24,500
+So this works we get this number.
+
+35
+00:02:24,670 --> 00:02:32,350
+But of course we have a problem if we try to create a string here combined names for example if I tried
+
+36
+00:02:32,350 --> 00:02:41,940
+to combine Max and Anna here then well we immediately get an area that Max is not a sizable to type
+
+37
+00:02:41,940 --> 00:02:44,360
+number because it is of course is a string.
+
+38
+00:02:44,400 --> 00:02:47,780
+Now of course we could change this to accept strings instead of numbers.
+
+39
+00:02:47,790 --> 00:02:50,370
+But now the first function call would fail.
+
+40
+00:02:50,370 --> 00:02:57,360
+And that is where union types can help us if we have some place in our application be that a parameter
+
+41
+00:02:57,420 --> 00:03:03,930
+of a function or a constant or a variable we're using somewhere where we accept two different kinds
+
+42
+00:03:03,930 --> 00:03:04,950
+of values.
+
+43
+00:03:05,070 --> 00:03:12,270
+Well then a union type can help us to tell typescript that we are fine with either a number or a string
+
+44
+00:03:12,750 --> 00:03:20,750
+we use number and then the pipe symbol here and then the other type we all accept.
+
+45
+00:03:20,750 --> 00:03:25,280
+And you can have more than two types you can accept as many types here as you need.
+
+46
+00:03:25,280 --> 00:03:28,780
+So here I only need two though and that stage for the type assignment.
+
+47
+00:03:28,790 --> 00:03:32,420
+I'll go with number or string.
+
+48
+00:03:32,420 --> 00:03:38,270
+Now I get an error here that the plus operator cannot be applied to type string or number and string
+
+49
+00:03:38,270 --> 00:03:41,490
+or no that's actually not entirely correct.
+
+50
+00:03:41,510 --> 00:03:47,360
+This should work because we can use the plus operator with both numbers and with strings but typescript
+
+51
+00:03:47,390 --> 00:03:52,610
+only sees that we have a union type here and it doesn't analyze what's in the union type.
+
+52
+00:03:52,610 --> 00:03:58,820
+It just sees OK you're expecting multiple types maybe that includes types where you can't use the plus
+
+53
+00:03:58,820 --> 00:03:59,540
+operator.
+
+54
+00:03:59,540 --> 00:04:01,630
+Hence I will complain here.
+
+55
+00:04:01,700 --> 00:04:08,630
+Now thankfully we can work around that issue though we can add our runtime type check here and see if
+
+56
+00:04:08,990 --> 00:04:21,050
+input one of the type of that is equal to number and if the type of input two is equal to number
+
+57
+00:04:24,170 --> 00:04:26,370
+and then move this calculation in there.
+
+58
+00:04:26,450 --> 00:04:28,550
+Now just one improvement.
+
+59
+00:04:28,550 --> 00:04:35,330
+Let's create result as a variable outside of that if check because of blocks scoping so that this is
+
+60
+00:04:35,420 --> 00:04:38,430
+a variable saleable in the entire function.
+
+61
+00:04:38,540 --> 00:04:40,370
+And then just assign a new value in there.
+
+62
+00:04:40,370 --> 00:04:46,510
+So now here we check if we do have two numbers and therefore a typescript no listed in here.
+
+63
+00:04:46,520 --> 00:04:49,850
+Input 1 and input 2 both will be numbers.
+
+64
+00:04:49,850 --> 00:04:59,030
+Now let's add a else check here and there we consider assault equal to input one dot to string explicitly
+
+65
+00:04:59,030 --> 00:05:02,750
+converting this to a string and input to two string.
+
+66
+00:05:02,930 --> 00:05:08,220
+And this will then all be fine for TypeScript and JavaScript because we can concatenate two strings.
+
+67
+00:05:08,270 --> 00:05:13,520
+So now we have almost the same calculation but we may clear that here will always work with numbers
+
+68
+00:05:13,730 --> 00:05:17,580
+here will always work with strings and then we return the result.
+
+69
+00:05:17,750 --> 00:05:27,730
+And now with that if we console lock the combined names down there and we compiled his file we'll see
+
+70
+00:05:27,730 --> 00:05:33,190
+that once we revisit our page we've got the combined numbers there which were simply added together
+
+71
+00:05:33,190 --> 00:05:36,910
+and hence we get a number as a result and to combine names here.
+
+72
+00:05:36,910 --> 00:05:43,810
+So this is how we can use union types to be more flexible regarding what we do in a function for example
+
+73
+00:05:43,810 --> 00:05:45,970
+or anywhere else in our code.
+
+74
+00:05:45,970 --> 00:05:52,240
+This extra runtime type check will not always be required when you work with union types but often will
+
+75
+00:05:52,240 --> 00:05:58,570
+be because with union types you can be more flexible in for example the parameters you accept but then
+
+76
+00:05:58,570 --> 00:06:03,780
+you might have different logic in your function based on which exact type you are getting.
+
+77
+00:06:03,790 --> 00:06:10,060
+So did your function is able to work with multiple types of values but that a den does slightly different
+
+78
+00:06:10,060 --> 00:06:12,340
+things depending on the type you're getting.
+
+79
+00:06:12,460 --> 00:06:18,100
+So off you might need such a runtime check when working with union types but you will not always need
+
+80
+00:06:18,100 --> 00:06:18,550
+it.
+
+81
+00:06:18,550 --> 00:06:24,550
+You will certainly also encounter situations in types good programs where you can use a union type without
+
+82
+00:06:24,550 --> 00:06:25,920
+a runtime type check.
+
+83
+00:06:25,930 --> 00:06:28,540
+It really depends on the logic your writing.

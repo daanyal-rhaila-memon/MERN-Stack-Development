@@ -1,0 +1,299 @@
+1
+00:00:02,300 --> 00:00:07,550
+So we're using the core types of no boolean and string.
+
+2
+00:00:07,550 --> 00:00:14,300
+And here in the list of parameters of dysfunction we're always explicitly assigning to types with a
+
+3
+00:00:14,300 --> 00:00:14,990
+colon.
+
+4
+00:00:14,990 --> 00:00:18,470
+Often the parameter name and then the name of the type.
+
+5
+00:00:18,470 --> 00:00:21,620
+So here the names are no boolean and string.
+
+6
+00:00:21,620 --> 00:00:25,420
+And in case you were wondering these are now special identifiers.
+
+7
+00:00:25,430 --> 00:00:30,220
+This overall here is a special syntax which is added by typescript.
+
+8
+00:00:30,260 --> 00:00:32,930
+It's not part of the compile javascript code.
+
+9
+00:00:32,960 --> 00:00:39,510
+If we check that code here these type assignments are gone because javascript does not support them.
+
+10
+00:00:39,560 --> 00:00:46,640
+Does colon thing after a variable or after a parameter and then number and boolean and string these
+
+11
+00:00:46,640 --> 00:00:48,320
+special keywords.
+
+12
+00:00:48,320 --> 00:00:53,490
+This is introduced by typescript the typescript compiler understands it.
+
+13
+00:00:53,540 --> 00:00:58,500
+The idea e here supports TypeScript and therefore doesn't complain about these special keywords.
+
+14
+00:00:58,610 --> 00:01:05,450
+Javascript does not understand the syntax it doesn't understand a colon after a parameter where a colon
+
+15
+00:01:05,450 --> 00:01:11,030
+after a variable and then the special number or string keyword javascript doesn't understand this and
+
+16
+00:01:11,030 --> 00:01:13,640
+therefore does is not part of the javascript output.
+
+17
+00:01:13,640 --> 00:01:19,430
+It's really just use but it types with compiler and then well it is a compiler because it converts this
+
+18
+00:01:19,430 --> 00:01:21,790
+code to JavaScript code.
+
+19
+00:01:21,860 --> 00:01:27,740
+Side note you also see it switches concept for Wah but that's something I'll come back to later.
+
+20
+00:01:27,740 --> 00:01:33,940
+So we have our explicit type assignments here and it's only understood by typescript right.
+
+21
+00:01:33,980 --> 00:01:35,920
+Why don't we have them down there.
+
+22
+00:01:36,920 --> 00:01:42,410
+I don't have explicit type of assignments here and by the way also not here when we calculate the result
+
+23
+00:01:42,410 --> 00:01:49,310
+for example because typescript has a built in feature which is called Type inference This means that
+
+24
+00:01:49,340 --> 00:01:56,570
+typescript does its best and it does a pretty good job there to understand which type you have in a
+
+25
+00:01:56,570 --> 00:01:58,710
+certain variable or a constant.
+
+26
+00:01:59,150 --> 00:02:07,040
+And here for example it understands that no one will always be of type no in the end because you initialize
+
+27
+00:02:07,040 --> 00:02:08,060
+it with a number.
+
+28
+00:02:08,060 --> 00:02:09,980
+Now this actually is a constant.
+
+29
+00:02:10,010 --> 00:02:11,800
+So it's even more specific than that.
+
+30
+00:02:11,870 --> 00:02:18,680
+And the type it identifies here is not just any number it's the number five because you'll not be able
+
+31
+00:02:18,680 --> 00:02:23,930
+to assign a new number or a new value to a concept value anyways.
+
+32
+00:02:23,930 --> 00:02:25,880
+If you what changed is to a variable.
+
+33
+00:02:25,880 --> 00:02:31,580
+So if you would use let instead then of course this would not break anything we can use a variable there.
+
+34
+00:02:31,580 --> 00:02:36,200
+It might be best practice because there's value never changes but it's also not horrible.
+
+35
+00:02:36,200 --> 00:02:39,740
+But now if we hover over this we see typescript doesn't say okay.
+
+36
+00:02:39,770 --> 00:02:41,120
+This has to be a 5.
+
+37
+00:02:41,210 --> 00:02:45,550
+But still it detects that the type here is a number.
+
+38
+00:02:45,560 --> 00:02:49,270
+Now we absolutely could write this code here on our own.
+
+39
+00:02:49,280 --> 00:02:54,860
+We can add a colon after the variable name on the left side of the equal sign and then the name of the
+
+40
+00:02:54,860 --> 00:02:55,640
+type.
+
+41
+00:02:55,640 --> 00:03:01,880
+So basically the same we did in the parameters of this function but does this redundant and it actually
+
+42
+00:03:01,880 --> 00:03:09,050
+is also not considered to be a good practice because typescript is able to perfectly infer this type
+
+43
+00:03:09,050 --> 00:03:10,000
+from there.
+
+44
+00:03:10,040 --> 00:03:13,700
+So assigning this is not a good idea.
+
+45
+00:03:13,700 --> 00:03:17,890
+This only changes if you would create this variable in a unassigned way.
+
+46
+00:03:19,050 --> 00:03:26,190
+Like this if you don't initialize it immediately then it's a good practice to tell typescript which
+
+47
+00:03:26,190 --> 00:03:32,450
+value will eventually be stored in there so that when you later assign a value to it.
+
+48
+00:03:32,610 --> 00:03:35,360
+And of course it's a bit redundant here to split this in two lines.
+
+49
+00:03:35,370 --> 00:03:41,280
+I'm just doing this for demo purposes but now if I assigned this here this works because I told typescript
+
+50
+00:03:41,370 --> 00:03:45,650
+in advance that this will be of type No you don't have to do that.
+
+51
+00:03:45,660 --> 00:03:52,110
+It also works if you don't do that but now you could also add this 5 and you wouldn't get an error because
+
+52
+00:03:52,110 --> 00:03:57,340
+you're not telling typescript anything about the type which will be stored in this variable and therefore
+
+53
+00:03:57,360 --> 00:03:59,520
+typescript allows any type.
+
+54
+00:03:59,730 --> 00:04:06,780
+If you instead add code a number here you're telling typescript hey eventually a number will be stored
+
+55
+00:04:06,780 --> 00:04:12,030
+in there and hence if you later stored something else and there like in this case where we store a string
+
+56
+00:04:12,510 --> 00:04:14,940
+you'll get an error here in the idea.
+
+57
+00:04:15,240 --> 00:04:18,540
+And of course also if you compile your code we'll get the error.
+
+58
+00:04:18,540 --> 00:04:24,970
+We already saw before so this is how you can assign types.
+
+59
+00:04:24,970 --> 00:04:31,690
+Now even if types just inferred a type and let me fix this it will yell at you if you break that inferred
+
+60
+00:04:31,690 --> 00:04:32,770
+type.
+
+61
+00:04:32,770 --> 00:04:35,680
+Actually it's wrong to say even because of course it does.
+
+62
+00:04:35,680 --> 00:04:41,200
+Why would it not do that type and for instance dare for you to save you code to a why did you manually
+
+63
+00:04:41,200 --> 00:04:47,200
+have to assign a type of course typescript yells at you if you then use a wrong type a type that it
+
+64
+00:04:47,200 --> 00:04:48,650
+did not infer.
+
+65
+00:04:48,670 --> 00:04:55,480
+For example here if resolve phrase is created with left so that it's variable then type code here infers
+
+66
+00:04:55,510 --> 00:04:59,790
+that this will be of type String because we initialize it with a string.
+
+67
+00:04:59,890 --> 00:05:05,380
+So this is basically the equivalent to not initializing it and setting the type on our own and then
+
+68
+00:05:05,380 --> 00:05:07,450
+assigning a value later.
+
+69
+00:05:07,450 --> 00:05:15,910
+Now if we change result phrase to let's say 0 here for whatever reason we might want to do that well
+
+70
+00:05:15,910 --> 00:05:17,300
+then we get an error here.
+
+71
+00:05:17,380 --> 00:05:24,340
+That type 0 is not a signal of type String and that makes sense right typescript inferred that we want
+
+72
+00:05:24,340 --> 00:05:25,480
+to store a string.
+
+73
+00:05:25,480 --> 00:05:28,570
+We're now trying to store a number we get an error.
+
+74
+00:05:28,570 --> 00:05:29,850
+That's the job.
+
+75
+00:05:29,890 --> 00:05:36,820
+The core task of typescript checking typos and yelling at us if we're using them incorrectly.
