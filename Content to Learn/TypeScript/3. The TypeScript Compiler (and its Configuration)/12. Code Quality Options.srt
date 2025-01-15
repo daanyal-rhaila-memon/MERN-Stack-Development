@@ -1,0 +1,215 @@
+1
+00:00:02,260 --> 00:00:07,840
+Now if we move on we get more options no unused locals no unused parameters no implicit returns.
+
+2
+00:00:07,930 --> 00:00:15,280
+This helps you with code quality basically typescript will complain if you have certain unused variables
+
+3
+00:00:15,280 --> 00:00:15,960
+and so on.
+
+4
+00:00:15,970 --> 00:00:24,520
+So if we turn these free options on for example this option helps you with switch statements where you
+
+5
+00:00:24,520 --> 00:00:31,240
+might forget the brake cured but if we turn these free options on what types will complain about is
+
+6
+00:00:31,240 --> 00:00:36,880
+for example if you had a user named variable here locally in this function and you don't use it you
+
+7
+00:00:36,880 --> 00:00:44,070
+see this has yellow squiggly lines because it's not an error really it's more like a warning or a hint.
+
+8
+00:00:44,110 --> 00:00:51,710
+So if I compile here you see now however I do get an Arabic must have could only knows errors.
+
+9
+00:00:51,940 --> 00:00:57,370
+And there we see the user name is declared but its value is never read because we made sure that we
+
+10
+00:00:57,370 --> 00:01:06,670
+don't want unused local variables unused global variables so if I had something like app I.D. here are
+
+11
+00:01:06,670 --> 00:01:12,920
+allowed though because typescript can't know if you may be need that globally defined value in a numbers
+
+12
+00:01:12,930 --> 00:01:17,800
+script file so therefore this is allowed but in a function where there is no other place where you could
+
+13
+00:01:17,800 --> 00:01:24,040
+needed typescript will complain now if you have unused code and that's generally a good idea allows
+
+14
+00:01:24,040 --> 00:01:26,500
+you to strip out such unused code.
+
+15
+00:01:26,500 --> 00:01:33,070
+Same goes for unused parameters if you would take a h here for one of course bind is broken now.
+
+16
+00:01:33,070 --> 00:01:35,970
+But even if we pass this in this works.
+
+17
+00:01:35,980 --> 00:01:41,830
+But now again TypeScript and therefore also the idea tells us that this is unused and indeed it is.
+
+18
+00:01:41,830 --> 00:01:44,460
+So maybe you should remove it or start using it.
+
+19
+00:01:46,070 --> 00:01:53,840
+So that's no unused parameters and no implicit returns means that we'll get an error if we have a function
+
+20
+00:01:53,840 --> 00:02:01,180
+that sometimes returns something and sometimes it does not let's say we have another function at where
+
+21
+00:02:01,180 --> 00:02:14,370
+we get two numbers number and and 2 is a number and of course we can return and 1 plus and 2 but let's
+
+22
+00:02:14,370 --> 00:02:20,850
+say where for some reason checking if and 1 plus and 2 is greater than 0 because we only want to return
+
+23
+00:02:20,850 --> 00:02:25,070
+if we have a result greater than zero and then we want to return to value.
+
+24
+00:02:25,080 --> 00:02:26,960
+Otherwise we want to return nothing.
+
+25
+00:02:26,970 --> 00:02:28,230
+We don't want a return.
+
+26
+00:02:28,230 --> 00:02:34,620
+Well then we get a warning because of that extra setting with no implicit returns typescript detects
+
+27
+00:02:34,670 --> 00:02:40,070
+that not all branches in this function lead to a return statement and because of our setting that's
+
+28
+00:02:40,070 --> 00:02:40,730
+not allowed.
+
+29
+00:02:40,730 --> 00:02:46,700
+We at least have to deliberately not return anything here by adding the return keyword just omitting
+
+30
+00:02:46,700 --> 00:02:48,280
+it is not allowed here.
+
+31
+00:02:48,320 --> 00:02:51,610
+It is allowed if you have a function that does not return anything.
+
+32
+00:02:51,620 --> 00:02:57,320
+In no branch but if you have at least one case where your function does return something then you have
+
+33
+00:02:57,320 --> 00:03:01,730
+to make sure you return something in all cases.
+
+34
+00:03:01,900 --> 00:03:04,270
+And with that we're nearing the end of this contact walkthrough.
+
+35
+00:03:04,270 --> 00:03:06,910
+We can ignore the module resolution here.
+
+36
+00:03:06,910 --> 00:03:11,890
+All these options actually are pretty advanced that don't matter to us here don't matter to you in a
+
+37
+00:03:11,890 --> 00:03:13,540
+lot of projects.
+
+38
+00:03:13,570 --> 00:03:16,630
+Source map options allow you to tweak these source maps.
+
+39
+00:03:16,630 --> 00:03:22,450
+We had a look at earlier so these translation files from javascript to typescript typically default
+
+40
+00:03:22,450 --> 00:03:27,640
+settings should be fine here so if you don't know what you're changing and why you're doing it you typically
+
+41
+00:03:27,640 --> 00:03:29,640
+don't need to change anything here.
+
+42
+00:03:29,710 --> 00:03:36,610
+And regarding these experimental options I'll have a look at them specifically add experimental decorators
+
+43
+00:03:36,850 --> 00:03:38,940
+later in the decorators module.
+
+44
+00:03:38,950 --> 00:03:45,400
+This basically enabled certain features to be used in typescript which are really experimental where
+
+45
+00:03:45,400 --> 00:03:51,790
+it's not sure if they will end up in JavaScript at sometime in the future and where you still might
+
+46
+00:03:51,790 --> 00:03:52,880
+want to work with them.
+
+47
+00:03:52,960 --> 00:03:57,940
+Then you explicitly have to tell typescript that you want to work with these features and you can do
+
+48
+00:03:57,940 --> 00:04:03,550
+that with that configuration but again it will come back to that and therefore now we walked through
+
+49
+00:04:03,550 --> 00:04:04,160
+this file.
+
+50
+00:04:04,180 --> 00:04:07,640
+Lot of options you can set there and ask typescript grows.
+
+51
+00:04:07,660 --> 00:04:10,090
+You typically also get more and more options.
+
+52
+00:04:10,170 --> 00:04:10,790
+This.
+
+53
+00:04:10,960 --> 00:04:16,360
+Therefore the official docs are of course always a great place to dive deeper and to make sure that
+
+54
+00:04:16,360 --> 00:04:20,200
+you don't miss an interesting option that might help you in your project.

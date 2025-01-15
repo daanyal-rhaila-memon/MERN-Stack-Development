@@ -1,0 +1,35 @@
+1
+00:00:02,300 --> 00:00:06,890
+In this module we'll take a closer look at the typescript compiler.
+
+2
+00:00:06,950 --> 00:00:13,170
+Thus far we always just used it by running TSC and then pointing at a file which we want to compile.
+
+3
+00:00:13,280 --> 00:00:19,490
+Now whilst that of course works it's not really feasible for bigger projects where you have multiple
+
+4
+00:00:19,490 --> 00:00:23,540
+files or where you simply don't want to run this command.
+
+5
+00:00:23,540 --> 00:00:30,020
+After every change you want to see in practice in addition to that convenience which we currently don't
+
+6
+00:00:30,020 --> 00:00:30,750
+have.
+
+7
+00:00:30,800 --> 00:00:36,560
+There also are a couple of interesting things you can configure regarding the compilation process which
+
+8
+00:00:36,560 --> 00:00:40,320
+actually change what is compiled and how it is compiled.
+
+9
+00:00:40,490 --> 00:00:43,970
+And these are therefore the things we'll take a closer look at in this module.

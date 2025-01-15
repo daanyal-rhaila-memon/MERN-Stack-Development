@@ -1,0 +1,103 @@
+1
+00:00:02,280 --> 00:00:08,000
+Source map helps us with debugging and development so to show what this does.
+
+2
+00:00:08,010 --> 00:00:11,510
+Let me compile everything without that's where it's map setting.
+
+3
+00:00:12,060 --> 00:00:16,950
+If we now go to the browser and we want to understand what our code does we can go to the sources tab
+
+4
+00:00:16,950 --> 00:00:21,660
+here indie developer tools and there we find our JavaScript files.
+
+5
+00:00:21,660 --> 00:00:27,780
+Now we can dive into these files and the good thing is these files are fairly readable to us humans
+
+6
+00:00:27,780 --> 00:00:30,980
+of course because they contain javascript code in the end.
+
+7
+00:00:31,000 --> 00:00:32,740
+Now that's good.
+
+8
+00:00:32,750 --> 00:00:40,050
+But what if we had more complex types of code and we want to debug our typescript code and not the compiled
+
+9
+00:00:40,080 --> 00:00:41,350
+javascript code.
+
+10
+00:00:41,400 --> 00:00:46,620
+In other words it would be nice if we would see the types of files here and not the JavaScript files
+
+11
+00:00:47,220 --> 00:00:49,610
+with the source map option you can get there.
+
+12
+00:00:50,070 --> 00:00:56,340
+If you set this to true and you run the TSC command again then you see we got these dot J.S. dot map
+
+13
+00:00:56,340 --> 00:00:58,840
+files being generated as well.
+
+14
+00:00:58,860 --> 00:01:04,920
+Now if we look at them they're pretty strange files but what they do is they basically act as a bridge
+
+15
+00:01:04,950 --> 00:01:12,120
+which is understood by modern browsers and developer tools there to connect the JavaScript files to
+
+16
+00:01:12,120 --> 00:01:13,440
+the input files.
+
+17
+00:01:13,440 --> 00:01:20,940
+So with these files generated if I reload here you see in the sources tab we now not just have our JavaScript
+
+18
+00:01:20,940 --> 00:01:21,630
+files.
+
+19
+00:01:21,840 --> 00:01:27,420
+We also see our types could files there and we can even place breakpoints in the type of files.
+
+20
+00:01:27,430 --> 00:01:33,180
+And if I now click on that button for example it pauses in the typescript file which is of course super
+
+21
+00:01:33,270 --> 00:01:39,750
+super convenient because dad really takes our debugging process to the next level because we can work
+
+22
+00:01:39,750 --> 00:01:41,600
+directly in our input files.
+
+23
+00:01:41,610 --> 00:01:45,940
+Basically in our types could files instead of the JavaScript files now.
+
+24
+00:01:45,960 --> 00:01:50,820
+Nonetheless here I'll comment this out because we have a fairly simple project here and I don't want
+
+25
+00:01:50,820 --> 00:01:53,580
+to have these extra dot map files lie around here.
+
+26
+00:01:53,580 --> 00:01:57,780
+But this is super useful in projects because it simplifies debugging.

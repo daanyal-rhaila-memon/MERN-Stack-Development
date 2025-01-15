@@ -1,0 +1,203 @@
+1
+00:00:02,220 --> 00:00:04,800
+So now that we have a properly configured project.
+
+2
+00:00:04,800 --> 00:00:10,020
+Let's dive a bit deeper into how you can debug your project or how you can have a great development
+
+3
+00:00:10,020 --> 00:00:16,300
+flow I showed you my basic idea is that at the beginning of this course re make sure you got the right
+
+4
+00:00:16,300 --> 00:00:25,570
+extensions installed there for typescript it comes down to is lint which can help you with lending your
+
+5
+00:00:25,570 --> 00:00:26,410
+typescript code.
+
+6
+00:00:26,410 --> 00:00:32,890
+So with improving the code quality though you might need additional configuration for is Linda to have
+
+7
+00:00:32,890 --> 00:00:33,840
+an effect.
+
+8
+00:00:33,970 --> 00:00:40,510
+It can help you in more advanced projects though but more interesting than that you want to really use
+
+9
+00:00:40,600 --> 00:00:47,230
+prettier to automatically format your code and have a nicely formatted code and you might want to give
+
+10
+00:00:47,290 --> 00:00:54,810
+debugger for Chrome a try because data allows you to debug your types good files even from inside the
+
+11
+00:00:54,840 --> 00:01:02,110
+US code through Chrome but without using the Chrome dev tools of course you can use those as well as
+
+12
+00:01:02,110 --> 00:01:08,800
+learned if you do enable source maps here but you can of course always do you get these translated files
+
+13
+00:01:08,800 --> 00:01:16,000
+there as well which is really nice but you can also use V as code you can place breakpoints here.
+
+14
+00:01:16,010 --> 00:01:24,010
+Let's say the click handler and now to launch your files you're through we as code you need to enable
+
+15
+00:01:24,010 --> 00:01:31,330
+source maps as well but we still will be able to use TV as code instead of the browser dev tools so
+
+16
+00:01:31,330 --> 00:01:32,750
+enable source maps.
+
+17
+00:01:32,830 --> 00:01:38,980
+Place your breakpoint and then go to debug start debugging.
+
+18
+00:01:38,980 --> 00:01:44,080
+Now the first time you run this ad should ask you for an environment in there with that debugger for
+
+19
+00:01:44,080 --> 00:01:45,350
+a Chrome extension installed.
+
+20
+00:01:45,350 --> 00:01:47,700
+You should be able to choose chrome.
+
+21
+00:01:47,930 --> 00:01:53,140
+It will now go to a launch Jason file where you can figure how it should launch that.
+
+22
+00:01:53,270 --> 00:01:58,550
+And there you should point that at local host three thousand because that's where our development server
+
+23
+00:01:58,550 --> 00:01:59,270
+is running.
+
+24
+00:01:59,390 --> 00:02:00,890
+And of course that process.
+
+25
+00:02:00,890 --> 00:02:07,250
+So the NPM start process should be up and running so pointed local host three thousand there and as
+
+26
+00:02:07,250 --> 00:02:12,530
+a web route where you can leave that place holder here which means this project folder is assumed to
+
+27
+00:02:12,530 --> 00:02:18,860
+be the host of your files which is the case and now compile your code so that the source maps also are
+
+28
+00:02:18,860 --> 00:02:22,520
+generated after setting the source maps conflict to true.
+
+29
+00:02:22,520 --> 00:02:27,430
+So then do we now have these in the javascript code then with your breakpoint added here and your lawn
+
+30
+00:02:27,420 --> 00:02:33,290
+shapes and configured let's run debugging here start debugging now for real and it will open up a new
+
+31
+00:02:33,290 --> 00:02:39,500
+tab now automatically this tab will be closed whenever you quit the debugging process or if you close
+
+32
+00:02:39,500 --> 00:02:41,990
+to tab the debugging process will quit.
+
+33
+00:02:41,990 --> 00:02:46,830
+So now with Dad you entered this debugging view here in view code where you can track variables and
+
+34
+00:02:46,830 --> 00:02:50,080
+watch certain expressions and see the current calls stack.
+
+35
+00:02:50,250 --> 00:02:57,050
+If you now click on Click me you should be taken back into the editor and code execution pauses at your
+
+36
+00:02:57,050 --> 00:03:03,770
+breakpoint in the typescript file and now you can walk from the file here inspect local values for this
+
+37
+00:03:03,770 --> 00:03:10,940
+keyword or for the message variable for example script wide variables you might have and global variables
+
+38
+00:03:10,940 --> 00:03:18,800
+you got access to global objects you can watch certain expressions like message plus multiple exclamation
+
+39
+00:03:18,800 --> 00:03:24,390
+marks and well then you can always track the value which is in there.
+
+40
+00:03:24,410 --> 00:03:30,300
+Here in this window if you wanted to see the dead would work and you can see the kernel function calls
+
+41
+00:03:30,310 --> 00:03:35,140
+Take for example that recurrent and click handler and now you can step through your code with these
+
+42
+00:03:35,140 --> 00:03:41,500
+controls to step to the next step skipping over the next function call stepping into the function call
+
+43
+00:03:41,560 --> 00:03:46,720
+or stepping out of the current function call and the call stack of course here will adjust according
+
+44
+00:03:46,720 --> 00:03:47,960
+to that.
+
+45
+00:03:48,040 --> 00:03:54,790
+And with that you can ignore this browser sync thing here with that you can always resume code execution
+
+46
+00:03:54,790 --> 00:03:59,780
+by clicking the play button and only pause whenever you reach your breakpoint the next time.
+
+47
+00:04:00,340 --> 00:04:02,090
+So this is how you can debug code.
+
+48
+00:04:02,110 --> 00:04:04,090
+You can remove a breakpoint by clicking on it.
+
+49
+00:04:04,090 --> 00:04:10,020
+This is how you can debug code from inside this code with the help of the built in debugging tools.
+
+50
+00:04:10,120 --> 00:04:17,100
+The chrome debugger extension to ride configuration and source maps which are setup in your typescript
+
+51
+00:04:17,110 --> 00:04:17,680
+can think.

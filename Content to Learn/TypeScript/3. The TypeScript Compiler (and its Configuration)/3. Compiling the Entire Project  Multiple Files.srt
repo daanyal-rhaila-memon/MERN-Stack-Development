@@ -1,0 +1,171 @@
+1
+00:00:02,170 --> 00:00:06,100
+So as I mentioned in the last lecture watch mode is a great start.
+
+2
+00:00:06,100 --> 00:00:09,130
+But what if we have more than one typescript file.
+
+3
+00:00:09,130 --> 00:00:18,550
+What if we all have analytics start T.S. file where we hypothetically send analytics data to our server.
+
+4
+00:00:18,550 --> 00:00:24,280
+Now here to just have anything in there I'll just put in the console log statement.
+
+5
+00:00:24,280 --> 00:00:29,180
+But of course you could be sending H to the p requests to your analytics service here as I said.
+
+6
+00:00:29,230 --> 00:00:36,360
+So let's say we also did import this file here in our engaged him file.
+
+7
+00:00:36,460 --> 00:00:44,110
+If we point at analytics dot J as here which does not exist yet but which will exist after compilation
+
+8
+00:00:44,800 --> 00:00:49,570
+then we could be loading these two files and of course we want to compile both files whenever one of
+
+9
+00:00:49,570 --> 00:00:50,860
+them changes.
+
+10
+00:00:50,920 --> 00:00:57,670
+Now for that it would be nice if we could enter some general watch mode where we just run TSC like this.
+
+11
+00:00:57,700 --> 00:01:04,270
+So without pointing out a file and it just watches our entire project folder and recompile as any types
+
+12
+00:01:04,270 --> 00:01:11,250
+could follow that might change well turns out that this is possible for Dad we just need to tell typescript
+
+13
+00:01:11,250 --> 00:01:19,030
+that this year is one project dad should be managed with TypeScript and we do that by first of all.
+
+14
+00:01:19,030 --> 00:01:23,770
+And we only need to do this once running TSC dash dash in it.
+
+15
+00:01:23,770 --> 00:01:26,190
+So I'm not pointing at a specific file here.
+
+16
+00:01:26,200 --> 00:01:32,420
+I just run TSC and then dash dash in it here and again this is only required ONCE IT will initialize
+
+17
+00:01:32,420 --> 00:01:36,430
+this project in which you run this command as a typescript project.
+
+18
+00:01:36,430 --> 00:01:43,120
+That means it will now basically tell typescript that everything in the folder where you run this command
+
+19
+00:01:43,180 --> 00:01:47,830
+and therefore it's important that you navigate it into the right folder before you ran this command
+
+20
+00:01:48,130 --> 00:01:53,710
+with the built in terminal here in V as code I'm automatically in this project folder where my files
+
+21
+00:01:53,710 --> 00:01:54,220
+are.
+
+22
+00:01:54,370 --> 00:02:00,870
+So that this project is now managed by Hapgood lets it enter and what this does is it creates this as
+
+23
+00:02:00,910 --> 00:02:02,900
+conflict adjacent file.
+
+24
+00:02:03,100 --> 00:02:11,350
+This basically is the indicator for typescript bad the project in which this file lies and all sub folders
+
+25
+00:02:11,410 --> 00:02:14,730
+of this folder should be managed by typescript.
+
+26
+00:02:14,740 --> 00:02:17,860
+Now if we have a look into this file we see there are a bunch of options.
+
+27
+00:02:17,890 --> 00:02:22,470
+Most of them are common that out there just errors so that you see that you could set them and you've
+
+28
+00:02:22,470 --> 00:02:27,280
+got a short explanation here as well but we don't have to worry about those right now we'll dive into
+
+29
+00:02:27,280 --> 00:02:29,080
+them in a second.
+
+30
+00:02:29,080 --> 00:02:36,150
+For the moment let's just close this file here and let's see what this gives us because what it does
+
+31
+00:02:36,150 --> 00:02:43,200
+give us is that we can now run just TSC like this without pointing at a specific file and what this
+
+32
+00:02:43,200 --> 00:02:50,790
+will do is it will tell typescript to go ahead and compile all typescript files so all dot t is files
+
+33
+00:02:51,150 --> 00:02:58,530
+it can find in this project if I hit enter year you see this takes a while and now what we got is this
+
+34
+00:02:58,560 --> 00:03:02,650
+analytics Dutch js file and does app J.S. file.
+
+35
+00:03:02,670 --> 00:03:09,060
+Now the analytics jazz file was just created by typescript because it found that we have the analytics
+
+36
+00:03:09,060 --> 00:03:14,510
+of T file and as I said it will now compile all types of files in the project.
+
+37
+00:03:14,820 --> 00:03:17,600
+And of course this can all be combined with watch mode.
+
+38
+00:03:17,700 --> 00:03:25,200
+You can run TSC dash w or dash dash watch as I showed before and this will now enter watch mode for
+
+39
+00:03:25,320 --> 00:03:26,970
+all types good files.
+
+40
+00:03:27,030 --> 00:03:33,750
+So now whenever I change one of them and I save it it will recompile and it will recompile that file
+
+41
+00:03:33,870 --> 00:03:38,000
+that changed and therefore all the reflect the change in the javascript file and hence.
+
+42
+00:03:38,010 --> 00:03:43,140
+Now here if I go back to my page we see sending data here as well because now the analytics t as file
+
+43
+00:03:43,140 --> 00:03:44,340
+was also compiled.

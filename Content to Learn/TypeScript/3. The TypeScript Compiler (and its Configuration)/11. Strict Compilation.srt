@@ -1,0 +1,575 @@
+1
+00:00:02,180 --> 00:00:05,000
+So that was an important first set of options.
+
+2
+00:00:05,000 --> 00:00:09,830
+Now let's dive into these strict options because these are pretty interesting.
+
+3
+00:00:09,890 --> 00:00:12,160
+There is this strict true option.
+
+4
+00:00:12,200 --> 00:00:16,740
+And actually what this does is it enables all strict type checking options.
+
+5
+00:00:16,790 --> 00:00:22,340
+So in fact if he's setting this is the same as if you would set all these options separately so you
+
+6
+00:00:22,340 --> 00:00:28,880
+can ever set all these options one by one or just set this option of course you want to set the individual
+
+7
+00:00:28,880 --> 00:00:35,090
+options if you want to have some options set to false because otherwise they're all set to true if you
+
+8
+00:00:35,090 --> 00:00:39,320
+want them all set to true then using just this option is of course way shorter.
+
+9
+00:00:39,320 --> 00:00:41,420
+Now what do these options do though.
+
+10
+00:00:41,420 --> 00:00:47,340
+Let's start with no implicit any no implicit any is a quite interesting option.
+
+11
+00:00:47,340 --> 00:00:49,200
+Debt helps us write better code.
+
+12
+00:00:49,220 --> 00:00:51,950
+Let's go to our analytics file here and there.
+
+13
+00:00:51,950 --> 00:01:00,510
+Let's add a function send analytics that gets a data option let's say and there we could send this to
+
+14
+00:01:00,510 --> 00:01:01,010
+a server.
+
+15
+00:01:01,020 --> 00:01:07,560
+But here I'm just console logging it then I call send analytics with that data.
+
+16
+00:01:07,560 --> 00:01:13,110
+So with the string now as you see my I.D. you already complaints here and so does typescript the compiler
+
+17
+00:01:13,170 --> 00:01:15,010
+because the two of course are connected.
+
+18
+00:01:15,060 --> 00:01:20,070
+If I tried to compile this parameter data implicitly has an any type.
+
+19
+00:01:20,130 --> 00:01:23,930
+So this seems to be related to this no implicit any option.
+
+20
+00:01:24,030 --> 00:01:27,180
+Indeed if I set this to false.
+
+21
+00:01:27,180 --> 00:01:32,850
+So if I set all strict options to true but it said this option two falls which I can do then this error
+
+22
+00:01:32,850 --> 00:01:37,170
+goes away both in the IP and when we compile the code.
+
+23
+00:01:37,170 --> 00:01:38,770
+So what does this option do.
+
+24
+00:01:38,790 --> 00:01:44,080
+It ensures and I'll comment that out again to turn it on again because of strict truth.
+
+25
+00:01:44,280 --> 00:01:52,530
+It ensures that we have to be clear about our parameters about the values we're working within our code
+
+26
+00:01:53,090 --> 00:01:54,310
+here.
+
+27
+00:01:54,510 --> 00:02:00,330
+We don't give types could any information about the type of data we'll get as a parameter here and we
+
+28
+00:02:00,330 --> 00:02:04,880
+should if typescript is able to infer this then of course it's fine.
+
+29
+00:02:04,890 --> 00:02:08,820
+But here how what types could be able to infer it from this line.
+
+30
+00:02:08,820 --> 00:02:12,970
+Well keep in mind that this function gets declared first before this file executes.
+
+31
+00:02:12,990 --> 00:02:17,280
+So at the point of time when the functions create it there is no chance of knowing what will end up
+
+32
+00:02:17,280 --> 00:02:18,420
+in there.
+
+33
+00:02:18,420 --> 00:02:24,090
+So here we can fix this error by simply declaring the type and being clear about which type we use their
+
+34
+00:02:25,140 --> 00:02:33,510
+no please note that if you had a variable locked and you set this to true here you don't get an error
+
+35
+00:02:33,510 --> 00:02:38,530
+about this declaration either though it all is it gets a default type of any form variables.
+
+36
+00:02:38,530 --> 00:02:40,940
+This is OK for parameters it's not OK.
+
+37
+00:02:40,950 --> 00:02:42,510
+Why is it OK for variables.
+
+38
+00:02:42,540 --> 00:02:47,430
+Because what typescript does for variables what is possible for variables what's not possible here because
+
+39
+00:02:47,430 --> 00:02:52,840
+the function is created first here types who is able to track the values you assign you see.
+
+40
+00:02:52,830 --> 00:02:53,160
+OK.
+
+41
+00:02:53,160 --> 00:02:54,510
+I got locked here like this.
+
+42
+00:02:54,690 --> 00:02:56,760
+Now I set it to true.
+
+43
+00:02:56,760 --> 00:03:07,940
+So therefore they're after if I console log locked here it's a boolean.
+
+44
+00:03:08,070 --> 00:03:14,340
+So typescript is here able to understand the flow of your code and they offer you don't need to be precise
+
+45
+00:03:14,340 --> 00:03:15,510
+regarding the type here.
+
+46
+00:03:15,510 --> 00:03:20,490
+Of course you want to be precise if you want to a wide that you can freely assign a new value which
+
+47
+00:03:20,490 --> 00:03:22,980
+you can do here because it is of type any.
+
+48
+00:03:22,980 --> 00:03:28,160
+So you want to still assign a type to a white this but typescript is at least able to find out if decode
+
+49
+00:03:28,160 --> 00:03:31,440
+your calling works with the type it currently holds.
+
+50
+00:03:31,440 --> 00:03:35,770
+That's not the case here because these are the function is to find before you call it and therefore
+
+51
+00:03:35,790 --> 00:03:41,250
+types could would have no chance of knowing if what you pass in there can be used inside of the function
+
+52
+00:03:43,300 --> 00:03:48,820
+strict null checks is another important option it's actually related to our button selection which we
+
+53
+00:03:48,820 --> 00:03:49,450
+have here.
+
+54
+00:03:49,450 --> 00:03:52,500
+Remember I had to add this exclamation mark here to make it work.
+
+55
+00:03:52,510 --> 00:03:54,420
+Otherwise I'd get an error.
+
+56
+00:03:54,430 --> 00:04:00,370
+Now we can also get rid of that error without adding the exclamation mark by setting strict null checks
+
+57
+00:04:00,490 --> 00:04:02,080
+to false.
+
+58
+00:04:02,140 --> 00:04:04,440
+So let's do that here and let's safeties.
+
+59
+00:04:04,460 --> 00:04:11,710
+And as you see this error is now gone here and I can compile all files and what do is strict null checks
+
+60
+00:04:11,720 --> 00:04:19,580
+do they tell typescript to be pretty well strict regarding how you access and work with values that
+
+61
+00:04:19,580 --> 00:04:24,950
+might potentially hold a null value and button here might be null.
+
+62
+00:04:24,950 --> 00:04:32,120
+It's not always pointing add a button element it's not always pointing at such a element because either
+
+63
+00:04:32,120 --> 00:04:37,940
+though you have such a selector heater a button might simply not exist on the page on which this script
+
+64
+00:04:37,940 --> 00:04:44,270
+runs and effort typescript can't tell because it's not diving into your HDD him out of file and looking
+
+65
+00:04:44,270 --> 00:04:48,300
+at that it can't tell whether it is will be successful or not.
+
+66
+00:04:48,410 --> 00:04:56,630
+And if this fails to return a pointer at a dawn node then it will return null were undefined to be precise
+
+67
+00:04:56,660 --> 00:04:58,570
+but that's treated equally here.
+
+68
+00:04:59,150 --> 00:05:03,550
+So therefore then button might hold a null value and therefore this code could fail.
+
+69
+00:05:03,590 --> 00:05:09,800
+Indeed if I comment out this button here if I now compile everything it works because I disabled the
+
+70
+00:05:09,800 --> 00:05:17,090
+null checks but I therefore now have a runtime error because I can't call event listener an event listener
+
+71
+00:05:17,300 --> 00:05:20,980
+on null and I got null here because I got no button.
+
+72
+00:05:20,990 --> 00:05:22,240
+Now this is a mistake.
+
+73
+00:05:22,250 --> 00:05:28,160
+We could a white by setting strict null checks to true and that's automatically set.
+
+74
+00:05:28,160 --> 00:05:36,080
+If we have strict set to true where typescript anticipates that this might happen and therefore forces
+
+75
+00:05:36,080 --> 00:05:41,930
+us to work around that now one cheap work around is this exclamation mark.
+
+76
+00:05:41,930 --> 00:05:49,010
+Operator here this tells typescript that you the developer know that this button exists or that this
+
+77
+00:05:49,010 --> 00:05:53,730
+operation will yield a non null value.
+
+78
+00:05:53,750 --> 00:05:54,910
+Now maybe you do.
+
+79
+00:05:54,920 --> 00:06:00,410
+You certainly do if you know that you are working on the age demo code and that there is a button here
+
+80
+00:06:00,440 --> 00:06:03,350
+that this selector here will work.
+
+81
+00:06:03,350 --> 00:06:06,500
+So it would be fine to use the estimation mark in this scenario.
+
+82
+00:06:07,650 --> 00:06:12,690
+If you have another scenario where you don't know for sure if it works and you just hope that it works
+
+83
+00:06:13,080 --> 00:06:19,320
+then it might be better to simply wrap the code that might fail in an if check which will be there at
+
+84
+00:06:19,320 --> 00:06:26,160
+runtime as well of course you could simply check if button is true for you which it won't be if it's
+
+85
+00:06:26,160 --> 00:06:30,090
+null or undefined and move that code into this if check here.
+
+86
+00:06:30,120 --> 00:06:36,780
+Now even without the exclamation mark in strict null checks mode we get no error because typescript
+
+87
+00:06:36,810 --> 00:06:43,080
+understands that this code is inside of this if statement and that is if statement makes sure that button
+
+88
+00:06:43,380 --> 00:06:46,280
+is not null and that this will not fail.
+
+89
+00:06:46,350 --> 00:06:49,350
+So this might actually be the cleaner work around.
+
+90
+00:06:49,350 --> 00:06:55,440
+However of course to save code if you know with certainty that something does exist using the exclamation
+
+91
+00:06:55,440 --> 00:06:58,460
+mark is shorter and an absolutely fine option.
+
+92
+00:06:58,590 --> 00:07:00,480
+Here I set both so that we see both.
+
+93
+00:07:00,480 --> 00:07:05,010
+Of course you just need one of the two things you really have check or the exclamation mark.
+
+94
+00:07:05,010 --> 00:07:12,030
+Strict function types here is a little bit of a more advanced setting catching some some niche bugs
+
+95
+00:07:12,030 --> 00:07:14,880
+which you might not have in many applications.
+
+96
+00:07:14,880 --> 00:07:21,210
+It is related to well function types you might be setting up so not types inside of functions but if
+
+97
+00:07:21,210 --> 00:07:26,970
+you define how a function should look like regarding its parameters and return value and you create
+
+98
+00:07:26,970 --> 00:07:32,670
+such a function type which you'll learn about in the basics module then there you can introduce box
+
+99
+00:07:32,670 --> 00:07:38,080
+if you work with classes and inheritance which we have learned about yet which we haven't used yet and
+
+100
+00:07:38,080 --> 00:07:43,670
+therefore for now let's ignore this strict bind call apply if that can be helpful.
+
+101
+00:07:43,680 --> 00:07:49,740
+If you do work with BIND call or apply for Dad let's quickly see an example.
+
+102
+00:07:49,740 --> 00:07:52,050
+Here we have our or a button and our function here.
+
+103
+00:07:52,050 --> 00:08:00,260
+Now let's say this would be a function which we define here with the function keyword were as an error
+
+104
+00:08:00,280 --> 00:08:01,140
+function.
+
+105
+00:08:01,140 --> 00:08:01,930
+Doesn't matter.
+
+106
+00:08:01,980 --> 00:08:12,580
+I'll use the function key word here click handler and in there I console log clicked and now here we
+
+107
+00:08:12,580 --> 00:08:18,790
+point at click handler and for some reason we want to make sure that when executes we pass in certain
+
+108
+00:08:18,790 --> 00:08:22,840
+arguments or we set the this keyword in there to a certain value.
+
+109
+00:08:22,840 --> 00:08:30,390
+Well let's say here we do expect a message argument which should be a string and we want to output this
+
+110
+00:08:30,390 --> 00:08:32,170
+year as well.
+
+111
+00:08:32,170 --> 00:08:38,080
+Now since click handler is passed to add event listener like that so that the browser basically executes
+
+112
+00:08:38,080 --> 00:08:42,070
+this for us if we want to pre configure the arguments which will be passed in.
+
+113
+00:08:42,100 --> 00:08:49,090
+We can use bind and bind as a first argument takes what we want to bind the this keyword to.
+
+114
+00:08:49,390 --> 00:08:53,620
+And here we could say it does not matter to us because we're not using this in this function.
+
+115
+00:08:53,640 --> 00:08:55,970
+So we bind it to now.
+
+116
+00:08:55,990 --> 00:09:03,580
+Now you see here I get an error I get an error that can be a y that if I set strict bind call and apply
+
+117
+00:09:03,580 --> 00:09:06,850
+to false.
+
+118
+00:09:07,100 --> 00:09:08,700
+Now you see the error is gone.
+
+119
+00:09:08,720 --> 00:09:10,830
+Now what does this option do they'll form.
+
+120
+00:09:10,850 --> 00:09:16,030
+It basically checks on which function you're calling bind call or apply.
+
+121
+00:09:16,250 --> 00:09:19,860
+And it checks if what you were setting up here makes sense.
+
+122
+00:09:20,150 --> 00:09:26,930
+And here typescript sees we want our argument we want a parameter in click handler with bind we're not
+
+123
+00:09:26,930 --> 00:09:30,480
+configuring that dough and therefore here we get an error.
+
+124
+00:09:30,680 --> 00:09:36,230
+If I set this back to true or adjust commented it out because of course it is set to true by default
+
+125
+00:09:36,230 --> 00:09:37,880
+by setting strict too Drew.
+
+126
+00:09:37,910 --> 00:09:39,770
+We then forget the error again.
+
+127
+00:09:39,810 --> 00:09:45,200
+Now if we wouldn't expect an argument here you see the error would be gone down there if we all the
+
+128
+00:09:45,200 --> 00:09:50,690
+room with the message because typescript understands our code and sees you're not passing in any arguments
+
+129
+00:09:50,690 --> 00:09:53,780
+to that method or to this function because it doesn't take any.
+
+130
+00:09:53,870 --> 00:09:54,770
+So that's fine.
+
+131
+00:09:54,800 --> 00:09:56,480
+But of course here we want one.
+
+132
+00:09:56,480 --> 00:09:57,390
+So we get an error.
+
+133
+00:09:57,440 --> 00:10:03,860
+The solution is to provide this second argument here which is the first argument you want to pass in
+
+134
+00:10:04,430 --> 00:10:06,320
+now typescript is really smart here.
+
+135
+00:10:06,380 --> 00:10:11,090
+And for example if a pass on a number it would still complain because it understands that I need a string
+
+136
+00:10:11,090 --> 00:10:19,400
+here if I pass in the correct string though like you're welcome then it does not complain anymore because
+
+137
+00:10:19,430 --> 00:10:24,860
+now it understands this and it sees that this is matching my function definition here.
+
+138
+00:10:24,890 --> 00:10:30,470
+So this is very useful behavior that makes sure that you don't accidentally use bind call or apply in
+
+139
+00:10:30,470 --> 00:10:36,840
+a way that does not work with your code now a strict property initialization becomes important once
+
+140
+00:10:36,840 --> 00:10:39,980
+we work with classes we can ignore it for now no implicit.
+
+141
+00:10:40,050 --> 00:10:44,380
+This all does not matter right now it has to do with the this keyword and types.
+
+142
+00:10:44,390 --> 00:10:50,100
+It basically tries to warn you if you use the this keyword in a place where it's not clear what it refers
+
+143
+00:10:50,100 --> 00:10:56,760
+to and always strict simply controls that the JavaScript files which are generated are using strict
+
+144
+00:10:56,760 --> 00:11:02,230
+mode so that this is added with that we covered all these strict options.

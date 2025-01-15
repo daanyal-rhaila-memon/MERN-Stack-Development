@@ -1,0 +1,151 @@
+1
+00:00:02,100 --> 00:00:07,380
+We can't ignore isolated modules but there is one other option which is actually not even mentioned
+
+2
+00:00:07,380 --> 00:00:14,730
+here which I still want to mention myself though and that's D No emit en error option.
+
+3
+00:00:14,730 --> 00:00:18,620
+You can set this to true or false and the default is false.
+
+4
+00:00:18,800 --> 00:00:20,640
+And what does this do if we set it to false.
+
+5
+00:00:20,640 --> 00:00:23,060
+Let me show you where this might be a problem.
+
+6
+00:00:23,100 --> 00:00:27,620
+It is a problem if we introduce an error or it can be a problem.
+
+7
+00:00:27,630 --> 00:00:32,460
+Let's say here I do with my button and I removed his exclamation mark.
+
+8
+00:00:32,460 --> 00:00:34,740
+Now even though we don't fully understand what's going on.
+
+9
+00:00:34,800 --> 00:00:38,030
+The problem here simply is that typescript does not know.
+
+10
+00:00:38,100 --> 00:00:43,790
+Dad we certainly have a button here after all when querying for a button we might not get one.
+
+11
+00:00:43,830 --> 00:00:48,770
+If there is no element in the dorms that satisfying this selector then this will return null.
+
+12
+00:00:48,870 --> 00:00:55,050
+And that's basically what types of complaints about here we access something on a potential null object
+
+13
+00:00:55,500 --> 00:00:57,190
+and that's not good.
+
+14
+00:00:57,240 --> 00:00:59,220
+Now that's an error we have here.
+
+15
+00:00:59,340 --> 00:01:04,700
+If we compile our code we also get this error here in the console.
+
+16
+00:01:04,800 --> 00:01:08,280
+Nonetheless the file is created.
+
+17
+00:01:08,280 --> 00:01:11,720
+So even if I delete the app just file it will be recreated.
+
+18
+00:01:11,730 --> 00:01:16,240
+So even if we have an error typescript creates a javascript file.
+
+19
+00:01:16,320 --> 00:01:18,750
+This might or might not be wanted.
+
+20
+00:01:18,780 --> 00:01:23,160
+Maybe you have an error in your types could file and you don't really know how to work around it but
+
+21
+00:01:23,160 --> 00:01:26,740
+you know it will not be a problem in the final app like here.
+
+22
+00:01:26,790 --> 00:01:29,200
+Even if we don't know about the exclamation mark.
+
+23
+00:01:29,460 --> 00:01:35,310
+Well if we don't know about the exclamation mark we might not know how to disable this they are basically
+
+24
+00:01:35,940 --> 00:01:39,530
+but still we know that this will work in our page here.
+
+25
+00:01:39,690 --> 00:01:45,210
+So we might be fine with compiling this despite having an error but of course in reality you should
+
+26
+00:01:45,270 --> 00:01:52,630
+aim for error free projects and rather learn how you can work around this issue then ignore it nonetheless.
+
+27
+00:01:52,770 --> 00:01:59,820
+You could set this to false or not set it at all because falls is the default if you are fine with generating
+
+28
+00:01:59,850 --> 00:02:02,440
+JavaScript files if you have an error.
+
+29
+00:02:02,670 --> 00:02:09,130
+If you set this to true however what will happen is that problematic files will not be generated.
+
+30
+00:02:09,180 --> 00:02:17,660
+If I now rerun this you see nothing is generated actually even the analytics team's fault is not output
+
+31
+00:02:17,660 --> 00:02:18,220
+there.
+
+32
+00:02:18,260 --> 00:02:26,560
+If we have some content in there besides console log you see it's not getting generated.
+
+33
+00:02:26,730 --> 00:02:32,970
+And the reason for that is that we have an error in a file and if any file fails to compile no files
+
+34
+00:02:32,970 --> 00:02:34,280
+will be emitted.
+
+35
+00:02:34,350 --> 00:02:39,300
+So here therefore we have to make sure we fixed as they are before we then can get typescript to again
+
+36
+00:02:39,330 --> 00:02:42,120
+compile files for us and therefore it is an option.
+
+37
+00:02:42,120 --> 00:02:48,360
+I typically like to set because I'm not interested in getting JavaScript files if I still have errors
+
+38
+00:02:48,540 --> 00:02:49,560
+in my type good files.

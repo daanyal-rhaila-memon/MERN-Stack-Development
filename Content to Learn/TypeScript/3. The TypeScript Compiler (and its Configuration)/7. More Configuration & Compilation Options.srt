@@ -1,0 +1,91 @@
+1
+00:00:02,250 --> 00:00:08,380
+Now also interesting is allow J.S. with allow J.S. and by the way all the way Czech chess.
+
+2
+00:00:08,400 --> 00:00:11,610
+You can also include JavaScript files in the compilation.
+
+3
+00:00:11,670 --> 00:00:18,030
+Now with allow J.S. a jobs good file will be compiled by typescript so even if it doesn't end with thought
+
+4
+00:00:18,060 --> 00:00:20,880
+yes types could will compile it with check.
+
+5
+00:00:20,890 --> 00:00:26,970
+J.S. It will not compile it but it will still check the syntax in there and report potential errors.
+
+6
+00:00:26,970 --> 00:00:31,140
+This could be nice if you don't really want to use typescript but you want to take advantage of some
+
+7
+00:00:31,140 --> 00:00:32,330
+of its features.
+
+8
+00:00:32,520 --> 00:00:39,690
+And as far as typescript can help you with any type only which is effectively what you have in JavaScript
+
+9
+00:00:40,200 --> 00:00:42,560
+it will do so if you enabled these options.
+
+10
+00:00:42,570 --> 00:00:48,480
+Now we don't need it for this project and for this project we would want to make sure we don't double
+
+11
+00:00:48,480 --> 00:00:54,000
+compile these JavaScript files which do stem from types of files so we would have to tweak to include
+
+12
+00:00:54,000 --> 00:00:58,710
+and exclude settings a bit but you could use that in projects where you don't want to use typescript
+
+13
+00:00:58,800 --> 00:00:59,430
+at all.
+
+14
+00:00:59,550 --> 00:01:06,750
+Or where for whatever reason you have some vanilla javascript files next to your types good files and
+
+15
+00:01:06,750 --> 00:01:10,550
+you want to check the vanilla javascript files as well.
+
+16
+00:01:10,560 --> 00:01:12,170
+Now let's fast forward a bit.
+
+17
+00:01:12,180 --> 00:01:18,630
+J as X is an option that can help you with react J.S. which does not really matter for us here.
+
+18
+00:01:18,630 --> 00:01:21,330
+Declaration and declaration map is all is not important.
+
+19
+00:01:21,330 --> 00:01:27,840
+Your DTA s files are an advanced concept which matter to you if you are shipping your project as a library
+
+20
+00:01:27,840 --> 00:01:34,020
+to our people and you need it basically a manifest file which describes all the types you have in your
+
+21
+00:01:34,020 --> 00:01:34,730
+project.
+
+22
+00:01:34,740 --> 00:01:39,050
+That's such a detail as file source map is an interesting one.
+
+23
+00:01:39,050 --> 00:01:39,270
+Though.

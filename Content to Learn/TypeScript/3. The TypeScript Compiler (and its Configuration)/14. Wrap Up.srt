@@ -1,0 +1,55 @@
+1
+00:00:02,280 --> 00:00:04,170
+And that's it for this module.
+
+2
+00:00:04,170 --> 00:00:09,210
+We had a very detailed look at the types of compiler how you can configure it and how you can make sure
+
+3
+00:00:09,210 --> 00:00:12,840
+that it really compiles your code the way you want.
+
+4
+00:00:12,840 --> 00:00:18,660
+We had to look at all these different options especially district options really allow you to write
+
+5
+00:00:18,660 --> 00:00:24,960
+correct code and not run into strange bugs strange or runtime bugs you might face for example with the
+
+6
+00:00:24,960 --> 00:00:26,460
+strict null checks.
+
+7
+00:00:26,670 --> 00:00:32,250
+And in addition to that we had a look at debugging how you can easily configure chrome and view as code
+
+8
+00:00:32,250 --> 00:00:37,740
+such that you can debug from inside view as code debugging from inside chrome with source maps and the
+
+9
+00:00:37,740 --> 00:00:40,420
+sources tab of course is always an option.
+
+10
+00:00:40,440 --> 00:00:46,740
+The key here also are the source maps which you are configuring to be generated in the tiers config
+
+11
+00:00:46,740 --> 00:00:51,200
+file which are these map files that live next to your JavaScript files.
+
+12
+00:00:51,240 --> 00:00:57,840
+They basically act as bridges for the debugger between your JavaScript files and your Tapscott files.
+
+13
+00:00:58,020 --> 00:01:02,720
+And with that we know a bit more regarding how to manage our projects.
+
+14
+00:01:02,730 --> 00:01:06,030
+Let's now see what else we can do with TypeScript and JavaScript.

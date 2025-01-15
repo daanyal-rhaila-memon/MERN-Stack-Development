@@ -1,0 +1,91 @@
+1
+00:00:02,260 --> 00:00:07,150
+Now to get started I want to make sure that I don't have to rerun this command here.
+
+2
+00:00:07,150 --> 00:00:15,160
+This TSC command we're at point at a file after every change I make because right now whenever I change
+
+3
+00:00:15,160 --> 00:00:24,580
+something here in my typescript file and a one hour reflect that in my output file and on this Web page
+
+4
+00:00:24,580 --> 00:00:35,470
+here we have to save to file run the compilation again and then reload this file or if we have our NPM
+
+5
+00:00:35,550 --> 00:00:41,730
+start process running which we should have that at least our browser will automatically reload if we
+
+6
+00:00:41,730 --> 00:00:46,110
+don't directly open the file but instead are on low closed three thousand.
+
+7
+00:00:46,200 --> 00:00:52,260
+But nonetheless even though with that reloading automatically we still have to manually rerun the compilation
+
+8
+00:00:52,260 --> 00:00:52,740
+command.
+
+9
+00:00:52,800 --> 00:00:56,660
+So to get rid of that we can enter watch mode.
+
+10
+00:00:56,700 --> 00:01:05,040
+That means we can tell typescript to watch file and whenever that file changes typescript will recompile.
+
+11
+00:01:05,040 --> 00:01:12,210
+So for that we can still run the same command but now we add dash dash watch at the end or just single
+
+12
+00:01:12,210 --> 00:01:17,910
+dash w if we do that then we are in watch mode on that file.
+
+13
+00:01:18,000 --> 00:01:24,300
+And now whenever we change anything in there and we save that so that the file on the disk technically
+
+14
+00:01:24,300 --> 00:01:25,650
+changes as well.
+
+15
+00:01:25,650 --> 00:01:28,050
+You see does automate automated you read compiles.
+
+16
+00:01:28,050 --> 00:01:32,830
+And of course this also means that if we would do anything which is not allowed.
+
+17
+00:01:32,880 --> 00:01:37,830
+Like for example reassigning to a constant and then a wrong type as well.
+
+18
+00:01:37,830 --> 00:01:40,910
+Whenever we tried to do that of course it all recompensed.
+
+19
+00:01:40,950 --> 00:01:46,250
+But then just as if we manually run the command we see the compilation error down there.
+
+20
+00:01:46,320 --> 00:01:49,560
+So watch mode is already a big improvement.
+
+21
+00:01:49,560 --> 00:01:56,670
+The downside is that we still have to specifically target this file here and at the moment of course
+
+22
+00:01:56,700 --> 00:01:58,980
+this is the only file we're working with.
+
+23
+00:01:58,980 --> 00:02:02,820
+But typically in bigger projects that's not necessarily the case.

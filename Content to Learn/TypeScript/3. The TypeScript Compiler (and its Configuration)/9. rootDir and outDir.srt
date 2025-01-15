@@ -1,0 +1,263 @@
+1
+00:00:02,280 --> 00:00:02,880
+Let's move on.
+
+2
+00:00:02,880 --> 00:00:04,940
+We got the outfall option here.
+
+3
+00:00:04,950 --> 00:00:07,780
+Now this option does not matter to us right now.
+
+4
+00:00:07,800 --> 00:00:09,480
+It won't work right now.
+
+5
+00:00:09,480 --> 00:00:16,020
+More interesting to us is outdoor and rooster the bigger your project gets the more you might want to
+
+6
+00:00:16,080 --> 00:00:17,640
+organize your files.
+
+7
+00:00:17,640 --> 00:00:24,180
+Typically you don't just want to have your files lie around here in your root level project folder.
+
+8
+00:00:24,180 --> 00:00:29,580
+Instead what you often will see in projects is that you have a source folder and you have a dust folder
+
+9
+00:00:29,850 --> 00:00:31,290
+next to next.
+
+10
+00:00:31,290 --> 00:00:38,190
+So the disk folder has the job of holding all the output so all the JavaScript files let's say and the
+
+11
+00:00:38,190 --> 00:00:44,250
+source folder might hold all our types good files so we can move to types good falls into the source
+
+12
+00:00:44,250 --> 00:00:45,300
+folder.
+
+13
+00:00:45,300 --> 00:00:51,080
+And if I Now delete the javascript folder we have the problem that if we compile everything these types
+
+14
+00:00:51,080 --> 00:00:57,480
+of files are compiled because typescript the compiler does look into some folders but the output sits
+
+15
+00:00:57,480 --> 00:01:02,760
+next to our input files and that's something we can control with the outer.
+
+16
+00:01:02,760 --> 00:01:10,740
+For example if we set outer we can tell the typescript compiler where the created files should be stored.
+
+17
+00:01:10,980 --> 00:01:13,370
+We could set this to dist.
+
+18
+00:01:13,600 --> 00:01:20,560
+Now if we do that Dan if you run TSC you will see that the JavaScript files indeed are not placed in
+
+19
+00:01:20,560 --> 00:01:23,220
+the source folder but into this folder.
+
+20
+00:01:23,220 --> 00:01:29,580
+Now we just have to adjust our index age to Mal file and their point at this app J.S. and disk analytics
+
+21
+00:01:29,580 --> 00:01:35,670
+chance or alternatively move the index age to Mal file into the disk folder but then our def server
+
+22
+00:01:35,670 --> 00:01:37,620
+wouldn't work correctly anymore right now.
+
+23
+00:01:37,620 --> 00:01:40,400
+So let's just adjust these imports.
+
+24
+00:01:40,590 --> 00:01:48,360
+And with that we got a working application still as you see but now with a cleaner product structure.
+
+25
+00:01:48,510 --> 00:01:53,880
+Now the good thing is if we had a sub folder here and analytics folder let's say and we had our types
+
+26
+00:01:53,880 --> 00:01:59,720
+could file in there then if we recompile and it does not matter if you do it with this command or in
+
+27
+00:01:59,750 --> 00:02:05,610
+the watch mode this folder structure you have in the source folder will also be replicated in the distiller
+
+28
+00:02:05,670 --> 00:02:11,370
+which is of course very convenient because that makes sure that you can import the files basically as
+
+29
+00:02:11,370 --> 00:02:16,660
+you would import them into source folder as well so that the structure you set up there is kept.
+
+30
+00:02:16,680 --> 00:02:22,380
+Now you can also set the root directory and set this specifically at the folder where your files are
+
+31
+00:02:22,380 --> 00:02:29,340
+stored in like in this example source to make sure that the types of compiler does not look in other
+
+32
+00:02:29,340 --> 00:02:30,040
+folders.
+
+33
+00:02:30,060 --> 00:02:33,570
+That's also something you could do with the include option down there.
+
+34
+00:02:33,570 --> 00:02:33,890
+Right.
+
+35
+00:02:34,860 --> 00:02:42,120
+But with root directory the type some compiler will not just look only at that source folder it also
+
+36
+00:02:42,120 --> 00:02:47,910
+makes sure that project structure you set up there is kept in this folder.
+
+37
+00:02:47,910 --> 00:02:50,040
+Now it did so by default before as you saw.
+
+38
+00:02:50,040 --> 00:02:56,130
+But keep in mind that before it would have included any types of files you're is outside of source.
+
+39
+00:02:56,130 --> 00:03:01,740
+So for example if you come at this out temporarily if we had a user folder here on the top level with
+
+40
+00:03:01,740 --> 00:03:08,670
+a user test file where we have a user name of Max let's say then if we compile this you will also see
+
+41
+00:03:08,670 --> 00:03:14,970
+that user folder in the dist folder and now the source folder is included as well because now we have
+
+42
+00:03:15,510 --> 00:03:20,850
+a typescript file on a higher level and therefore the types of compiler things that our whole project
+
+43
+00:03:20,850 --> 00:03:26,000
+again is the input and it replicates the folder structure it finds there in the disk folder.
+
+44
+00:03:26,010 --> 00:03:32,650
+Now that's of course not what we would want and that's where the route year option helps us.
+
+45
+00:03:32,700 --> 00:03:38,280
+Now if we set this to source even if we had our folders with types of files in there on the route level
+
+46
+00:03:38,670 --> 00:03:43,830
+they would not be included in the output and the source folder itself would not suddenly end up there.
+
+47
+00:03:43,830 --> 00:03:49,860
+So off you set both routes dir and outer to be really clear regarding where your input files live and
+
+48
+00:03:49,860 --> 00:03:55,770
+where you are output files would be generated in if we move on we can ignore composite we can have a
+
+49
+00:03:55,770 --> 00:04:02,640
+look at remove comments should be pretty clear if you set this then any comments you might have in your
+
+50
+00:04:02,670 --> 00:04:10,710
+types good files will be removed in the compiled JavaScript files so if I comment this in and I compiled
+
+51
+00:04:10,710 --> 00:04:16,530
+my code you'll see an apt Yes I have a comment in app J.S. it's not there so you can do that to make
+
+52
+00:04:16,530 --> 00:04:22,340
+your files smaller and therefore this might be a nice option You can also set no limits.
+
+53
+00:04:22,380 --> 00:04:25,580
+If you don't want to generate any JavaScript files.
+
+54
+00:04:25,590 --> 00:04:31,050
+Now this might sound strange because that's the idea of typescript but if you just want to check whether
+
+55
+00:04:31,050 --> 00:04:36,360
+your files are correct but you don't want to write all these output files to save some time for example
+
+56
+00:04:36,360 --> 00:04:43,260
+in a bigger project then you could set this to true to just have the types of compiler check your files
+
+57
+00:04:43,260 --> 00:04:48,110
+and report any potential errors without actually creating an output file.
+
+58
+00:04:48,140 --> 00:04:50,660
+Import helpers is not really important to us here.
+
+59
+00:04:50,660 --> 00:04:54,620
+We can ignore that down level iteration is an advanced option.
+
+60
+00:04:54,630 --> 00:05:02,670
+It is interesting when you compile your code to older versions of JavaScript and you work with for loops
+
+61
+00:05:02,700 --> 00:05:08,760
+then in some rare scenarios you could run into issues where the compilation doesn't work correctly.
+
+62
+00:05:08,760 --> 00:05:15,020
+This option if you turn it on gives you a more exact compilation which will work in these niche cases.
+
+63
+00:05:15,330 --> 00:05:20,520
+So therefore you might think you should always turn it on but it will also output more where both code.
+
+64
+00:05:20,520 --> 00:05:26,070
+So you should only turn this on if you have loops and you see that your generated code suddenly behaves
+
+65
+00:05:26,100 --> 00:05:27,710
+differently than it should.
+
+66
+00:05:27,750 --> 00:05:28,860
+Regarding those loops.
