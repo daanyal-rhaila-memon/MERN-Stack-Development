@@ -1,0 +1,219 @@
+1
+00:00:02,290 --> 00:00:11,350
+We also got useful features related to arrays and objects and how we can retrieve the data that's stored
+
+2
+00:00:11,560 --> 00:00:13,570
+in arrays and objects.
+
+3
+00:00:13,630 --> 00:00:17,190
+Now for that let's add a new array here.
+
+4
+00:00:17,220 --> 00:00:19,540
+Let's say hobbies and that can be an array of strings
+
+5
+00:00:22,560 --> 00:00:24,850
+like sports and cooking gear.
+
+6
+00:00:25,140 --> 00:00:32,980
+And now obviously we can retrieve elements by index here like this for example.
+
+7
+00:00:33,040 --> 00:00:36,040
+But you should know these basic javascript things.
+
+8
+00:00:36,190 --> 00:00:43,940
+Next Gen javascript introduced a nice feature if we want to extract all values of an array.
+
+9
+00:00:43,960 --> 00:00:44,950
+When could you need that.
+
+10
+00:00:44,990 --> 00:00:54,400
+But let's say you have the active hobbies and that's an array where I do have hiking as a hobby and
+
+11
+00:00:54,400 --> 00:00:56,560
+now I want to add sports and cooking.
+
+12
+00:00:56,560 --> 00:01:01,270
+Now we can add item two active hobbies by calling push by the way in case you're wondering how I can
+
+13
+00:01:01,270 --> 00:01:03,100
+push to a constant.
+
+14
+00:01:03,100 --> 00:01:08,140
+Keep in mind that Arrays are objects and objects are reference values.
+
+15
+00:01:08,140 --> 00:01:10,780
+When we push we change the memory but not the address.
+
+16
+00:01:11,080 --> 00:01:13,050
+If this doesn't tell you anything.
+
+17
+00:01:13,120 --> 00:01:17,410
+Check the additional resources I attached to this lecture regarding that topic.
+
+18
+00:01:17,410 --> 00:01:21,060
+So back to this example then we can push here but push.
+
+19
+00:01:21,100 --> 00:01:28,360
+If we push into hobbies we'll add hobbies as a new array in the arrays so as a new nested array which
+
+20
+00:01:28,360 --> 00:01:35,050
+types could actually detect that it tells me that if I want to add a string array to an array of strings
+
+21
+00:01:35,080 --> 00:01:36,060
+that's not okay.
+
+22
+00:01:37,140 --> 00:01:39,870
+So instead push takes single values.
+
+23
+00:01:39,870 --> 00:01:47,370
+So we could pass Hobbes 0 actually push even takes an unlimited amount of arguments so that we can push
+
+24
+00:01:47,490 --> 00:01:53,850
+multiple items in order at once like that but that's a bit cumbersome and that's where the spread operator
+
+25
+00:01:53,850 --> 00:01:54,880
+comes in.
+
+26
+00:01:54,960 --> 00:02:00,870
+It looks like this it's free dots and yes it does look strange but this is a valid javascript operator
+
+27
+00:02:00,870 --> 00:02:08,850
+supported by TypeScript and after dead we specify or we point at the array or object as he will also
+
+28
+00:02:08,850 --> 00:02:11,740
+learn that we want to spread.
+
+29
+00:02:11,760 --> 00:02:17,970
+So what this does is it tells JavaScript in the end because that's a vanilla javascript operator available
+
+30
+00:02:18,030 --> 00:02:26,670
+in modern javascript so it tells javascript to pull out all the elements of that array and basically
+
+31
+00:02:26,730 --> 00:02:32,970
+add them as a list of values so not as an array but a list of individual values in the place where you
+
+32
+00:02:32,970 --> 00:02:34,020
+used that operator.
+
+33
+00:02:34,020 --> 00:02:39,510
+So here for example is a list of arguments passed to push and no place where you could use Stead is
+
+34
+00:02:39,510 --> 00:02:42,280
+directly when you create a new array dear.
+
+35
+00:02:42,300 --> 00:02:46,080
+You can also spread an existing array into that array.
+
+36
+00:02:46,260 --> 00:02:51,500
+So basically whenever you need a comma separated list of values you can use the spread operator with
+
+37
+00:02:51,500 --> 00:02:54,400
+an array to get such a comma separated list.
+
+38
+00:02:54,420 --> 00:03:00,000
+That's the idea of the spread operator and therefore it's really useful for pulling out elements of
+
+39
+00:03:00,000 --> 00:03:02,970
+an array the spread operator.
+
+40
+00:03:02,980 --> 00:03:05,280
+All that does not just exist on arrays.
+
+41
+00:03:05,350 --> 00:03:07,900
+It also exists on objects.
+
+42
+00:03:07,930 --> 00:03:14,860
+Let's say we have a person which has a name key Max and that age key which is 30 and now we want to
+
+43
+00:03:14,860 --> 00:03:16,690
+create a copied person.
+
+44
+00:03:16,690 --> 00:03:23,140
+Now if we just assign purpose like this what we're doing is actually we're copying the pointer at this
+
+45
+00:03:23,140 --> 00:03:29,970
+person object in memory into this copied person constant and again check my reference value resources
+
+46
+00:03:29,980 --> 00:03:36,130
+attached if that doesn't tell you much so we're not really creating a copy of that object.
+
+47
+00:03:36,220 --> 00:03:42,490
+Now to create a real copy we can use the spread operator with objects we create a new object with curly
+
+48
+00:03:42,490 --> 00:03:49,660
+braces and then we use the spread operator free dots with our first object which you want to copy.
+
+49
+00:03:49,660 --> 00:03:56,260
+Now what this does is it pulls out all the elements but of course here the elements are key value pairs
+
+50
+00:03:56,350 --> 00:03:58,760
+not single values like in an array.
+
+51
+00:03:58,780 --> 00:04:06,940
+Here we get key value pairs so these key value pairs are pulled out of there and then can be used anywhere
+
+52
+00:04:07,000 --> 00:04:13,490
+where you need key value pairs which typically is a number object you might be adding them too so therefore
+
+53
+00:04:13,660 --> 00:04:19,130
+to this otherwise empty object the key value pairs of person are now added.
+
+54
+00:04:19,210 --> 00:04:25,840
+And since we created a new object here and just added to key value pairs we got a perfect copy of the
+
+55
+00:04:25,840 --> 00:04:30,670
+original object and not just the pointer that points to the object in memory.

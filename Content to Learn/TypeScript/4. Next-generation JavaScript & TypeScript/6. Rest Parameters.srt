@@ -1,0 +1,243 @@
+1
+00:00:02,090 --> 00:00:07,100
+Kind of related to the spread operator ah rest parameters.
+
+2
+00:00:07,100 --> 00:00:10,900
+And for that all again tweak my add function.
+
+3
+00:00:10,910 --> 00:00:20,120
+Solid comment out all that code up here so that nothing breaks and re add my add function with any syntax
+
+4
+00:00:20,120 --> 00:00:23,840
+you want with the function keyword as an arrow function whatever you want.
+
+5
+00:00:23,840 --> 00:00:26,320
+But now I want to have a special function.
+
+6
+00:00:26,450 --> 00:00:32,510
+I don't want to restricted to two values I want to be able to add as many values as the user passes
+
+7
+00:00:32,510 --> 00:00:44,600
+in so that we can basically call ad like this 5 10 2 3 dot 7 ends on with as many values as you want.
+
+8
+00:00:44,600 --> 00:00:48,590
+If you would want to call it with 10 values that should also be possible.
+
+9
+00:00:48,590 --> 00:00:53,570
+Now of course however right now it's not possible as you can clearly see typescript is giving me an
+
+10
+00:00:53,570 --> 00:00:57,810
+error and correctly so because I'm accepting no arguments here.
+
+11
+00:00:57,810 --> 00:01:02,210
+Now of course I could accept for arguments here and assign the correct types.
+
+12
+00:01:02,210 --> 00:01:04,330
+But what if I then called it with 5.
+
+13
+00:01:04,340 --> 00:01:06,220
+As I said I want to be flexible.
+
+14
+00:01:06,380 --> 00:01:13,180
+That's where rest parameters come in in the place where you expect a list of values.
+
+15
+00:01:13,580 --> 00:01:18,710
+So not where you want to pass it but where you want to accept that as incoming values.
+
+16
+00:01:18,710 --> 00:01:25,660
+You can also use the free dots and then any name of your choice like numbers.
+
+17
+00:01:25,670 --> 00:01:34,900
+Now what this will do is it will merge all incoming parameters or generally the incoming list of values
+
+18
+00:01:34,940 --> 00:01:39,360
+comma separated list of values into an array.
+
+19
+00:01:39,410 --> 00:01:46,100
+So numbers here will be an array but of course by default a type of any values so an array full of any
+
+20
+00:01:46,190 --> 00:01:47,020
+values.
+
+21
+00:01:47,210 --> 00:01:52,760
+And that's not what we should do we should be more explicit in here we could say it will be a number
+
+22
+00:01:52,760 --> 00:01:54,470
+array like that.
+
+23
+00:01:54,470 --> 00:01:58,670
+So now we are defining the correct type and now we can work with that numbers array.
+
+24
+00:01:58,760 --> 00:02:01,910
+Now we can sum it up in a couple of different ways.
+
+25
+00:02:01,910 --> 00:02:06,740
+We can work with a result variable and then a for loop because numbers is in the right.
+
+26
+00:02:07,250 --> 00:02:11,710
+So here we could loop through numbers and add that to the result.
+
+27
+00:02:11,960 --> 00:02:19,040
+Or we use the reduced method which is available on arrays reduce works such that it performs an operation
+
+28
+00:02:19,070 --> 00:02:20,990
+on every element in an array.
+
+29
+00:02:20,990 --> 00:02:27,530
+Returns are assault and then adds these results together for Dad you provide a function to reduce and
+
+30
+00:02:27,530 --> 00:02:35,930
+then starting value which here is 0 and then dysfunction which you pass to reduce itself takes two arguments
+
+31
+00:02:35,960 --> 00:02:39,150
+and that's the current result you could say.
+
+32
+00:02:39,470 --> 00:02:45,920
+And it's the current value which we're looking at which will be each value off the array once and then
+
+33
+00:02:45,920 --> 00:02:54,290
+here you can return cur result which for the first run will be that initial value here plus curve value.
+
+34
+00:02:54,290 --> 00:02:57,980
+And if you do that reduce overall here we'll return a number.
+
+35
+00:02:57,980 --> 00:03:05,600
+So here we can overall return the result of numbers reduce and hence to add variable or constant here
+
+36
+00:03:05,600 --> 00:03:11,420
+will in the end hold a function which takes a couple of numbers not an array of numbers but because
+
+37
+00:03:11,420 --> 00:03:12,680
+of the risk parameters.
+
+38
+00:03:12,680 --> 00:03:17,840
+A list of numbers which is then merged into an array inside of the function and which returns a number
+
+39
+00:03:17,840 --> 00:03:18,250
+in the end.
+
+40
+00:03:18,590 --> 00:03:23,370
+So different now if we save everything it should all work and we see the result.
+
+41
+00:03:23,370 --> 00:03:26,290
+The sum of our little addition here.
+
+42
+00:03:26,300 --> 00:03:28,430
+So that's rest parameters.
+
+43
+00:03:28,460 --> 00:03:35,780
+A really useful feature for accepting an unlimited amount of arguments and a couple of built in methods
+
+44
+00:03:35,810 --> 00:03:37,510
+like the push method Brooke exactly.
+
+45
+00:03:37,520 --> 00:03:42,290
+That way you'll see push here has this strange parameter definition.
+
+46
+00:03:42,620 --> 00:03:48,890
+Well that's exactly what we just learned push here takes a couple of items for dessert array which is
+
+47
+00:03:48,900 --> 00:03:50,410
+an array full of strings.
+
+48
+00:03:50,450 --> 00:03:55,250
+It takes a couple of strings and this does not mean it takes an array of strings but instead here with
+
+49
+00:03:55,250 --> 00:04:01,010
+the rest parameters a comma separated list of strings which instead of portions then merged into an
+
+50
+00:04:01,010 --> 00:04:03,140
+array and handled internally.
+
+51
+00:04:03,140 --> 00:04:06,640
+That is the rest parameters syntax.
+
+52
+00:04:06,800 --> 00:04:16,490
+You can even combine this with tuples by the way if you know you want to support multiple arguments
+
+53
+00:04:16,520 --> 00:04:18,320
+but you know how many it will be.
+
+54
+00:04:18,440 --> 00:04:26,660
+So if it's not an unlimited list then you can also use a tuple type there and for example say I do accept
+
+55
+00:04:26,990 --> 00:04:32,030
+my free numbers here and then I have to remove the fourth argument here of course when calling a function
+
+56
+00:04:32,270 --> 00:04:37,040
+because now I'm pretty clear that I want to get free arguments which each are numbers.
+
+57
+00:04:37,040 --> 00:04:42,200
+So of course we could have just added free standalone parameters here but this syntax might still be
+
+58
+00:04:42,200 --> 00:04:50,320
+a bit shorter or easier to setup than adding the free parameters it really depends on your application
+
+59
+00:04:50,350 --> 00:04:51,810
+and your requirements here.
+
+60
+00:04:51,910 --> 00:04:58,630
+All move away from that setup and be more generic and accept as many arguments as I get because for
+
+61
+00:04:58,630 --> 00:05:02,590
+this function I am indeed able to handle an infinite amount of arguments.

@@ -1,0 +1,107 @@
+1
+00:00:02,240 --> 00:00:03,900
+Let's stick to functions.
+
+2
+00:00:03,890 --> 00:00:09,470
+Another nice feature which is available in modern javascript is that you can assign default arguments
+
+3
+00:00:09,470 --> 00:00:11,800
+to function parameters.
+
+4
+00:00:11,930 --> 00:00:13,850
+Let's say you're in our add function.
+
+5
+00:00:13,850 --> 00:00:17,520
+For some reason be one of a default value for b.
+
+6
+00:00:17,780 --> 00:00:22,580
+So we know we want to be able to add two numbers together but in case you call this function with only
+
+7
+00:00:22,580 --> 00:00:30,040
+one number we'll assume a default for the second argument or for the second parameter.
+
+8
+00:00:30,070 --> 00:00:35,200
+We can do so by adding a equals on year in the parameter list and then setting our default value which
+
+9
+00:00:35,200 --> 00:00:36,950
+of course has to match our type.
+
+10
+00:00:36,970 --> 00:00:39,610
+For example 1 or whatever the default should be.
+
+11
+00:00:40,270 --> 00:00:46,030
+And now it does enables us to call this function with only one argument so I could call it like this
+
+12
+00:00:46,030 --> 00:00:50,740
+and typescript would not complain because it detects that we have a default argument here which is then
+
+13
+00:00:50,740 --> 00:00:58,150
+taken for a b and therefore here I get output of 6 because my default B is 1 and I add 5 which makes
+
+14
+00:00:58,150 --> 00:00:59,090
+6.
+
+15
+00:00:59,170 --> 00:01:06,940
+Now one important note about default arguments here they have to be lost in the list.
+
+16
+00:01:07,160 --> 00:01:12,440
+If you assign a default argument to a for example we'll have an issue why.
+
+17
+00:01:12,680 --> 00:01:16,870
+Because default arguments are not skipped when you call a function.
+
+18
+00:01:16,880 --> 00:01:23,090
+So if I call the function here with one argument then the arguments and passing in here are passed to
+
+19
+00:01:23,090 --> 00:01:24,960
+the parameters in the same order.
+
+20
+00:01:25,100 --> 00:01:31,010
+So calling the function with 1 argument 5 and this case passes does one argument to the first argument
+
+21
+00:01:31,010 --> 00:01:37,580
+here in the parameter list and since the second argument is not provided with a default it's not optional
+
+22
+00:01:37,790 --> 00:01:40,430
+and hence we provide no second argument at all.
+
+23
+00:01:40,970 --> 00:01:48,890
+So typescript or JavaScript actually does not look at your function definition and guess that you probably
+
+24
+00:01:48,890 --> 00:01:53,330
+want to skip the default argument and provide your value to the non default one.
+
+25
+00:01:53,330 --> 00:01:59,730
+Instead it simply adheres to the order and therefore you should set defaults from the right.
+
+26
+00:01:59,750 --> 00:02:05,930
+So make sure that the parameters for what you don't accept default arguments come first before your
+
+27
+00:02:05,930 --> 00:02:07,340
+default parameters.

@@ -1,0 +1,115 @@
+1
+00:00:02,310 --> 00:00:08,340
+Now did we have a good understanding of the basic types good features and what typescript adds.
+
+2
+00:00:08,460 --> 00:00:12,280
+And we also understand how to typescript compiler works.
+
+3
+00:00:12,360 --> 00:00:17,880
+Let's have a look at what else typescript has to offer specifically when it comes to modern javascript
+
+4
+00:00:17,880 --> 00:00:18,750
+syntax.
+
+5
+00:00:18,750 --> 00:00:24,660
+Now this is a difficult a pretty wake term but in the end what I mean by that are javascript features
+
+6
+00:00:24,660 --> 00:00:31,170
+which have been around for a few years by now and which are well-supported in modern browsers but which
+
+7
+00:00:31,170 --> 00:00:37,530
+don't necessarily run in all especially in older browsers and there especially in Internet Explorer.
+
+8
+00:00:37,620 --> 00:00:43,700
+I'm talking about things like let concert arrow functions D structuring syntax spread.
+
+9
+00:00:43,730 --> 00:00:45,390
+Operator and so on.
+
+10
+00:00:45,390 --> 00:00:52,920
+So if debt is something you absolutely know you can skip this module because it will also refresh the
+
+11
+00:00:52,920 --> 00:00:58,930
+knowledge on these topics but I'll also explain what typescript does with these things with this syntax.
+
+12
+00:00:59,040 --> 00:01:03,420
+Though the short story is typescript compiles it's such that it works nonetheless.
+
+13
+00:01:03,420 --> 00:01:08,250
+We'll take a look at that but you can skip this module if that's all stuff you already know.
+
+14
+00:01:08,340 --> 00:01:12,840
+You can just have a look at the curriculum and see if there is any lecture in this module which might
+
+15
+00:01:12,840 --> 00:01:14,200
+still be interesting to you.
+
+16
+00:01:14,310 --> 00:01:20,490
+Otherwise as you often does module if you're not sure about these features if you know javascript regarding
+
+17
+00:01:20,490 --> 00:01:24,840
+var and so on but you don't know what the LAT or con's keyword really means.
+
+18
+00:01:24,840 --> 00:01:30,020
+Then you should stick with me and dive into this module for that I got a brand new project set up you'll
+
+19
+00:01:30,030 --> 00:01:36,390
+find it attached and you always need to run npm install first in these projects don't forget this to
+
+20
+00:01:36,390 --> 00:01:41,340
+install all dependencies and thereafter always NPM start to start up that development server.
+
+21
+00:01:41,430 --> 00:01:44,520
+Now this is a project basically as we had it before.
+
+22
+00:01:44,520 --> 00:01:52,400
+At the end of last module is conflict file with a pretty strict configuration an apt yes file here and
+
+23
+00:01:52,530 --> 00:01:55,170
+that this folder will be generated automatically by the way.
+
+24
+00:01:55,170 --> 00:02:00,630
+Keep this development severe running of course as you did before and now we can always compile our code
+
+25
+00:02:00,630 --> 00:02:04,050
+with the T S C command here or.
+
+26
+00:02:04,120 --> 00:02:05,190
+And that's what I'll do here.
+
+27
+00:02:05,190 --> 00:02:10,980
+TSC dash W to enter watch mode and make sure we recompile whenever we change something.
+
+28
+00:02:11,040 --> 00:02:17,180
+So now that's our project setup and now we'll dive into some next gen Java's good features which types
+
+29
+00:02:17,180 --> 00:02:19,070
+of supports and what you should be aware of.

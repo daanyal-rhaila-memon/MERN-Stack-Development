@@ -1,0 +1,247 @@
+1
+00:00:02,190 --> 00:00:09,990
+Now besides let and concert and no major feature added with next gen javascript with iOS 6 specifically
+
+2
+00:00:10,230 --> 00:00:12,600
+were aero functions.
+
+3
+00:00:12,630 --> 00:00:17,610
+Now let's rewrite does add function down here and let's not use the function keyword but let's instead
+
+4
+00:00:17,610 --> 00:00:23,040
+use this new Arrow function syntax for Dad you have to write the function as an expression which you
+
+5
+00:00:23,040 --> 00:00:28,320
+stored in a variable so we could have our add variable and dad can hold a function with the function
+
+6
+00:00:28,320 --> 00:00:28,770
+keyword.
+
+7
+00:00:28,770 --> 00:00:34,560
+As you probably know but you cannot also write a function without the function word with your parameter
+
+8
+00:00:34,560 --> 00:00:40,380
+list then an arrow which you construct by using the equals sign and a greater than sign and then your
+
+9
+00:00:40,380 --> 00:00:41,680
+function body.
+
+10
+00:00:41,790 --> 00:00:43,830
+And this is a valid function.
+
+11
+00:00:43,830 --> 00:00:51,030
+So here you can also assign parameters and use them and for example return it like this.
+
+12
+00:00:51,030 --> 00:00:58,350
+And then if you console log at 2 and 5 here like that and we save everything we'll see 7 in the console
+
+13
+00:00:58,350 --> 00:00:59,090
+here.
+
+14
+00:00:59,130 --> 00:01:01,380
+So that is something we can do.
+
+15
+00:01:01,380 --> 00:01:05,880
+That's a new syntax and one obvious benefit is that it's a bit shorter.
+
+16
+00:01:05,880 --> 00:01:11,430
+We save the function keyword and no benefit is that it has a couple of nice variations which make it
+
+17
+00:01:11,460 --> 00:01:13,980
+even more useful for example.
+
+18
+00:01:13,980 --> 00:01:17,290
+Besides it is already very short syntax here.
+
+19
+00:01:17,310 --> 00:01:24,390
+You could also if you just have one expression amidst the curly braces like this and then all the removed
+
+20
+00:01:24,390 --> 00:01:27,560
+the return statement and just write this function like that.
+
+21
+00:01:27,630 --> 00:01:32,520
+If you only have one expression you can admit to curly braces and the result of that one expression
+
+22
+00:01:32,610 --> 00:01:34,430
+is then automatically returned.
+
+23
+00:01:34,470 --> 00:01:38,340
+So there always is an implicit return statement in front of this.
+
+24
+00:01:38,580 --> 00:01:42,480
+So now does this way shorter than the function alternative as you can tell.
+
+25
+00:01:42,480 --> 00:01:45,290
+Now again this only is available though if you have one expression.
+
+26
+00:01:45,300 --> 00:01:51,390
+If you had two expressions or more in the body of that function you could not use these shorter syntax
+
+27
+00:01:51,570 --> 00:01:58,710
+you would need a real and normal function body surrounded with curly braces and no nice variation is
+
+28
+00:01:58,710 --> 00:02:07,880
+that if you have a function that only takes one parameter let's say we have our print output function
+
+29
+00:02:08,540 --> 00:02:16,790
+and that takes output which is string or a number let's say using a little union type here and then
+
+30
+00:02:16,790 --> 00:02:21,010
+we console lock output here.
+
+31
+00:02:21,280 --> 00:02:31,170
+Then we can of course use that to call print output here and add 5 and 2 but now of course from 1 we
+
+32
+00:02:31,170 --> 00:02:33,890
+can shorten this by removing the curly braces.
+
+33
+00:02:33,930 --> 00:02:39,360
+I am not really interested in the returned value of console log but it's also not a problem if we do
+
+34
+00:02:39,360 --> 00:02:42,550
+return it because as you learn there is an implicit return statement.
+
+35
+00:02:42,810 --> 00:02:48,960
+But now since we only have one argument we can even omit the parentheses around that argument.
+
+36
+00:02:48,960 --> 00:02:51,570
+However with a type assignment it will then not work.
+
+37
+00:02:51,630 --> 00:02:56,550
+It would work like that which works in vanilla javascript but which is not supported in typescript because
+
+38
+00:02:56,550 --> 00:02:58,350
+we admit to type assignment.
+
+39
+00:02:58,530 --> 00:03:03,840
+But if you would have to type assignment in a different place let's say with the function type assigned
+
+40
+00:03:03,840 --> 00:03:08,950
+to the constant which also gives typescript information about what will be stored in a constant.
+
+41
+00:03:09,120 --> 00:03:10,890
+Then this would be a syntax we can use.
+
+42
+00:03:11,400 --> 00:03:20,710
+So if we have this setup here and we give that type information to typescript in a different place then
+
+43
+00:03:20,710 --> 00:03:23,620
+we could use this more concise syntax.
+
+44
+00:03:23,620 --> 00:03:28,940
+Now arguably here we don't save a lot because now what we have to add that type assignment on our own.
+
+45
+00:03:29,170 --> 00:03:35,440
+But our case where we would save a lot is for example if you reach out to a button which we find in
+
+46
+00:03:35,440 --> 00:03:36,730
+the dorm maybe.
+
+47
+00:03:36,730 --> 00:03:40,630
+And please note here I have no button dorm but we can try to find one nonetheless
+
+48
+00:03:43,330 --> 00:03:48,460
+and we then add an event listener and now to make sure the typescript does not complain because button
+
+49
+00:03:48,460 --> 00:03:50,350
+could be null as it actually is here.
+
+50
+00:03:50,380 --> 00:03:55,900
+We can wrap this code into a check as you learned and now add an event listener to a click.
+
+51
+00:03:56,140 --> 00:04:01,640
+And now here we want to pass on a function that should be executed well that can be an anonymous function
+
+52
+00:04:01,640 --> 00:04:03,370
+here just like that.
+
+53
+00:04:03,460 --> 00:04:06,130
+And that shows us how great error functions are.
+
+54
+00:04:06,130 --> 00:04:16,550
+That's really not a lot of code and in here we get the event object which we now could console log like
+
+55
+00:04:16,550 --> 00:04:17,450
+this.
+
+56
+00:04:17,450 --> 00:04:23,180
+Now here we don't need to specify any function type anywhere because typescript knows what add event
+
+57
+00:04:23,180 --> 00:04:26,320
+listeners will provide to us that this will be an event object.
+
+58
+00:04:26,510 --> 00:04:32,270
+So indeed type code is able to infer this even the correct event object based on the event we're listening
+
+59
+00:04:32,270 --> 00:04:38,360
+to and ends here we can then retake take advantage of this very short and concise syntax.
+
+60
+00:04:38,360 --> 00:04:42,740
+So these are some of the variations of Arrow functions and of course I already used arrow functions
+
+61
+00:04:42,770 --> 00:04:43,980
+thus far in the course.
+
+62
+00:04:44,000 --> 00:04:48,080
+Just wanted to make it really clear again what they are and what we can do with them.

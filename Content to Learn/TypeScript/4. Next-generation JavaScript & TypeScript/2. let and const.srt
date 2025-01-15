@@ -1,0 +1,323 @@
+1
+00:00:02,120 --> 00:00:07,440
+Now before we dive into any features though attached to this lecture you find a link to this page.
+
+2
+00:00:07,460 --> 00:00:16,250
+This page basically lists all more or less modern javascript features which browsers support these features
+
+3
+00:00:16,820 --> 00:00:24,440
+and all of which compilers support these features and dare you all to find typescript typescript combined
+
+4
+00:00:24,440 --> 00:00:31,040
+with core chars which supposedly filled provider but generally describes what typescript is able to
+
+5
+00:00:31,040 --> 00:00:32,040
+compile.
+
+6
+00:00:32,130 --> 00:00:37,040
+Now you can always use this resource if you're looking for a specific feature like let's say the cons
+
+7
+00:00:37,070 --> 00:00:37,900
+keyword.
+
+8
+00:00:38,000 --> 00:00:40,860
+Where do you want to know is typescript to works with that or not.
+
+9
+00:00:40,880 --> 00:00:44,750
+Then you can see well how it works with dad and what the restrictions are.
+
+10
+00:00:44,750 --> 00:00:46,800
+Which browser support is does.
+
+11
+00:00:46,800 --> 00:00:51,140
+Also by the way gives you a hint regarding which browsers you might want to target.
+
+12
+00:00:51,140 --> 00:00:53,690
+Regarding the typescript target ends on.
+
+13
+00:00:53,810 --> 00:00:59,710
+So this is a great resource which allows you to switch between different iterations of JavaScript and
+
+14
+00:00:59,720 --> 00:01:04,040
+features each iteration introduced and how these features are supported.
+
+15
+00:01:04,280 --> 00:01:09,560
+So definitely use this as a resource to find out what you can use what you can compile and which target
+
+16
+00:01:09,560 --> 00:01:11,100
+you might need to set.
+
+17
+00:01:11,120 --> 00:01:17,090
+And with that let's start with one of the most important and obvious and often used introductions.
+
+18
+00:01:17,090 --> 00:01:21,830
+Next Gen javascript added by the way with next gen Javascript.
+
+19
+00:01:21,830 --> 00:01:27,760
+I mean iOS 6 or more recent and that's let or concert what I'm talking about.
+
+20
+00:01:27,950 --> 00:01:32,610
+It allows you to define constants or variables.
+
+21
+00:01:32,780 --> 00:01:39,950
+The difference is that constants so variables defined with the cons keyword cannot be changed.
+
+22
+00:01:39,950 --> 00:01:45,770
+If you would try to assign a new value here even if it has the correct type you'll get an error because
+
+23
+00:01:45,770 --> 00:01:47,250
+it's a constant.
+
+24
+00:01:47,270 --> 00:01:52,430
+Now this is by the way an error it is thrown by typescript in vanilla javascript you would get an error
+
+25
+00:01:52,460 --> 00:01:57,300
+by the browser when you run your code here and that's the idea behind typescript as you learned.
+
+26
+00:01:57,320 --> 00:02:03,030
+We get an error already wants to writing the code because that of course is better for us as a developer.
+
+27
+00:02:03,050 --> 00:02:07,880
+It allows us to fix this code earlier before testing it in the console.
+
+28
+00:02:07,880 --> 00:02:14,750
+So therefore here if we remove that or a comment out this line now it compiles and therefore we get
+
+29
+00:02:14,750 --> 00:02:21,380
+no error in the browser as well so that's const let is a variable which can be changed and therefore
+
+30
+00:02:21,380 --> 00:02:27,800
+of course it's similar to var var although still exists because javascript works such that features
+
+31
+00:02:27,830 --> 00:02:33,250
+aren't suddenly taken away because then older browsers and their scripts might break.
+
+32
+00:02:33,470 --> 00:02:37,930
+But you shouldn't use var anymore and why should you not use Wah anymore.
+
+33
+00:02:37,940 --> 00:02:42,490
+I mean it makes sense that we have cons because that really adds a new feature constants.
+
+34
+00:02:42,500 --> 00:02:43,370
+But why let.
+
+35
+00:02:43,370 --> 00:02:45,410
+Why did they introduce a new keyword here.
+
+36
+00:02:45,410 --> 00:02:51,490
+Why didn't they stick to Wah let and cons have one important difference to LA.
+
+37
+00:02:51,510 --> 00:02:56,460
+Well the obvious difference for constants that the value can't be changed but for let we also get a
+
+38
+00:02:56,460 --> 00:02:57,120
+difference.
+
+39
+00:02:57,120 --> 00:03:00,960
+And that's the scope in which this variable is a way lable.
+
+40
+00:03:01,010 --> 00:03:08,520
+Now you should know this concept of scopes and JavaScript and with var you have global and a function
+
+41
+00:03:08,520 --> 00:03:14,550
+scope that means that variables that you define outside of functions are available everywhere in your
+
+42
+00:03:14,550 --> 00:03:19,380
+scripts variables defined inside functions are only available in that function.
+
+43
+00:03:19,410 --> 00:03:29,160
+For example here if I had a function add and there might get two numbers a and b then we can add a variable
+
+44
+00:03:29,160 --> 00:03:31,520
+in there with var result.
+
+45
+00:03:31,530 --> 00:03:36,280
+Let's say and we set result equal to A plus B then and then we return result.
+
+46
+00:03:36,390 --> 00:03:40,980
+And of course we could have written this in a shorter way but I want to show what more does and this
+
+47
+00:03:40,980 --> 00:03:41,910
+would be fine.
+
+48
+00:03:41,910 --> 00:03:47,960
+And the result would only be available instead of dysfunctions if I tried to console log results here
+
+49
+00:03:47,970 --> 00:03:53,460
+Deadwood failed because it's only available in the scope of this function if I defined it outside of
+
+50
+00:03:53,460 --> 00:03:56,610
+there however everything works because now it's available globally.
+
+51
+00:03:56,640 --> 00:04:00,220
+Therefore here I can access it and also the way jobs good works.
+
+52
+00:04:00,270 --> 00:04:03,570
+You can access variables on a higher level.
+
+53
+00:04:03,630 --> 00:04:10,110
+So instead of a function you can work with variables scoped to this function but all the variables having
+
+54
+00:04:10,110 --> 00:04:19,220
+a higher scope like the global scope here so let's Wah now for let the behavior is generally the same.
+
+55
+00:04:19,220 --> 00:04:21,470
+This works and this works.
+
+56
+00:04:21,620 --> 00:04:27,170
+So it's generally the same for let but and important differences that for wah.
+
+57
+00:04:27,200 --> 00:04:30,910
+You really only have global and function scope.
+
+58
+00:04:30,920 --> 00:04:32,370
+What about if statements.
+
+59
+00:04:32,510 --> 00:04:40,940
+If we check age greater 20 year and then in there we create a variable is old and set this to true.
+
+60
+00:04:41,240 --> 00:04:49,100
+Then if I console lock is old here we get an error in typescript but actually would not get one in JavaScript
+
+61
+00:04:50,090 --> 00:04:51,140
+this code here.
+
+62
+00:04:51,260 --> 00:04:56,720
+If we grab it just to see that it works and move to the javascript developer tools and there in the
+
+63
+00:04:56,720 --> 00:05:02,490
+console and we paste it in there and hit enter you see true is getting printed here and indeed if you
+
+64
+00:05:02,490 --> 00:05:05,080
+try to access is old you get true.
+
+65
+00:05:05,100 --> 00:05:11,670
+So this is old variable is registered globally and not just in of the if statement because with var
+
+66
+00:05:11,700 --> 00:05:17,850
+javascript doesn't know any average scopes and functions and global and that changes with let now as
+
+67
+00:05:17,850 --> 00:05:22,470
+a Z typescript complains nonetheless because this is not good code to write but technically it would
+
+68
+00:05:22,470 --> 00:05:30,210
+work with let dead changes now with let this really is only available inside of these curly braces because
+
+69
+00:05:30,210 --> 00:05:36,150
+let them cons to introduce a new concept called block scope which means a variable or constant is always
+
+70
+00:05:36,150 --> 00:05:42,540
+available in the block in which you define it or in any lower blocks and a block is basically always
+
+71
+00:05:42,540 --> 00:05:48,630
+a snippet surrounded with currently braces as you have it for a if statement in a for loop in a function
+
+72
+00:05:48,840 --> 00:05:54,780
+or even that's possible if you just add curly braces like this any variable defined in here would only
+
+73
+00:05:54,780 --> 00:06:00,600
+be available in that block and that's a good thing because it forces you to write cleaner code and a
+
+74
+00:06:00,600 --> 00:06:02,220
+wide situations like this.
+
+75
+00:06:02,520 --> 00:06:08,550
+So just to also proved that there is a difference in the browser if I copy this code using let and I
+
+76
+00:06:08,550 --> 00:06:14,730
+reload my page here and now enter this year you see I get an error that is old is not defined we didn't
+
+77
+00:06:14,730 --> 00:06:16,180
+get an error before.
+
+78
+00:06:16,200 --> 00:06:20,080
+Indeed if I tried to output is old I get that error again.
+
+79
+00:06:20,130 --> 00:06:25,140
+So that's the difference and therefore let and cause is better not just because we get this constant
+
+80
+00:06:25,140 --> 00:06:29,190
+feature but also because we are forced to write cleaner code.
+
+81
+00:06:29,220 --> 00:06:31,010
+So let me comment this out to make it work again.
