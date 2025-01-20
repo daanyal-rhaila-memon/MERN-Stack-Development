@@ -1,0 +1,131 @@
+1
+00:00:02,260 --> 00:00:04,410
+So now that's the basics about inheritance.
+
+2
+00:00:04,420 --> 00:00:09,720
+We can also override methods or properties of our base class.
+
+3
+00:00:09,850 --> 00:00:15,030
+So let's say in the accounting I want to add my own ad employee method.
+
+4
+00:00:15,040 --> 00:00:16,240
+We can do that.
+
+5
+00:00:16,240 --> 00:00:20,110
+We can add our own method here and get the name here.
+
+6
+00:00:20,140 --> 00:00:25,930
+Let's say now here I want to have a different logic for adding that extra if check where to check if
+
+7
+00:00:25,930 --> 00:00:27,640
+name equals Max.
+
+8
+00:00:27,640 --> 00:00:34,800
+Well then I want a return and not add Max as an employee because Max is totally unsuited for debt.
+
+9
+00:00:34,810 --> 00:00:38,010
+Otherwise if the name is not Max I want to add the employee.
+
+10
+00:00:38,080 --> 00:00:40,480
+Now however we also face another issue.
+
+11
+00:00:40,480 --> 00:00:47,510
+If I tried to add this to employees we see employees is not a known property.
+
+12
+00:00:47,560 --> 00:00:51,880
+The reason for that is that employees is private and that's important.
+
+13
+00:00:51,880 --> 00:00:58,540
+Private properties are really only accessible from inside the class in which they're defined not classes
+
+14
+00:00:58,540 --> 00:01:00,670
+that inherit from that class.
+
+15
+00:01:00,700 --> 00:01:06,130
+So employees is available instead of department but not in classes based on department.
+
+16
+00:01:06,160 --> 00:01:11,260
+So accounting department doesn't have direct access to the employees property.
+
+17
+00:01:11,440 --> 00:01:18,610
+If we want to grant dead access and still make sure that it's not a property that can be changed from
+
+18
+00:01:18,640 --> 00:01:26,710
+outside we can switch it to protect it protected us like private but unlike private it's now not just
+
+19
+00:01:26,710 --> 00:01:32,070
+a way lable in this class but also in any class that extends this class.
+
+20
+00:01:32,080 --> 00:01:39,970
+So now we can access employees from inside our accounting department here I can now add an employee
+
+21
+00:01:39,970 --> 00:01:41,540
+if it's not Max.
+
+22
+00:01:41,590 --> 00:01:49,410
+So they are for now if I go down there and on my accounting I want to add an employee often a max this
+
+23
+00:01:49,410 --> 00:01:51,890
+should not work if I try to add menu.
+
+24
+00:01:51,890 --> 00:01:52,650
+This should work.
+
+25
+00:01:52,830 --> 00:01:59,970
+So if we now save dad and we also output print employee information here and then save that we should
+
+26
+00:01:59,970 --> 00:02:05,700
+see that indeed we have one employee there which is menu because of my own accounting method logic for
+
+27
+00:02:05,700 --> 00:02:08,640
+ad employee Max was not added.
+
+28
+00:02:08,640 --> 00:02:14,030
+So the key takeaway here is that you a can override methods of your base class.
+
+29
+00:02:14,070 --> 00:02:20,130
+You can add your own implementation and then that implementation is used instead of the base classes
+
+30
+00:02:20,250 --> 00:02:21,420
+implementation.
+
+31
+00:02:21,420 --> 00:02:29,910
+And B you also have to control access to properties with protected because if you use private you're
+
+32
+00:02:29,910 --> 00:02:36,990
+really restricted to this class whereas protected still makes it and accessible from outside but makes
+
+33
+00:02:36,990 --> 00:02:41,010
+it accessible from inside of classes that extend the base class.

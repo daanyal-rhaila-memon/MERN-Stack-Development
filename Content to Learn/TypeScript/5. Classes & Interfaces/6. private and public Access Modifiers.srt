@@ -1,0 +1,259 @@
+1
+00:00:02,060 --> 00:00:04,200
+So that was a very basic class.
+
+2
+00:00:04,220 --> 00:00:08,550
+Now when building classes they often get more complex than that.
+
+3
+00:00:08,720 --> 00:00:15,650
+And you might want to store more data under let's say a department also should have employees that could
+
+4
+00:00:15,650 --> 00:00:20,220
+be an array and initially it might be an empty array.
+
+5
+00:00:20,360 --> 00:00:25,070
+And to also be a bit more precise about what you want to store in there.
+
+6
+00:00:25,070 --> 00:00:28,840
+It could be a string array to keep it relatively simple.
+
+7
+00:00:28,850 --> 00:00:33,770
+Now we could have a method here at employee there.
+
+8
+00:00:33,860 --> 00:00:40,430
+We want an employee as our argument which should just be a string in our example and then we can set
+
+9
+00:00:40,460 --> 00:00:50,790
+this employees push so push a new employee onto our employees array with this code.
+
+10
+00:00:50,810 --> 00:00:57,820
+Now we could all add another method print employee in for Mason
+
+11
+00:01:00,400 --> 00:01:11,710
+and there I went to console log this DOT employees dot length and I also want to console log this DOT
+
+12
+00:01:11,800 --> 00:01:13,510
+employees itself.
+
+13
+00:01:15,530 --> 00:01:21,200
+Now if we go down here now we can come it out this code here would which would break again because we
+
+14
+00:01:21,290 --> 00:01:28,070
+again don't fit the department description with our object down there and instead here on this accounting
+
+15
+00:01:28,070 --> 00:01:36,410
+department we can add an employee let's say Max and another employee let's say menu and then besides
+
+16
+00:01:36,410 --> 00:01:41,570
+describing it I also want to get my employee information on there.
+
+17
+00:01:41,570 --> 00:01:47,610
+If we safeties we should get this output to employees and here's some information.
+
+18
+00:01:47,880 --> 00:01:55,160
+Now that's all nice to have one problem we have with this class is that we could change employees from
+
+19
+00:01:55,190 --> 00:02:02,540
+outside not only with an employee but by directly accessing the employees property just as we can do
+
+20
+00:02:02,540 --> 00:02:04,490
+it for the name as well by the way.
+
+21
+00:02:04,490 --> 00:02:11,920
+So what I mean is we could also go to accounting and then reach out to employees and maybe add another
+
+22
+00:02:11,930 --> 00:02:19,370
+employee at index 2 and they're Pozen and I like that if we do that and we save it we get free employees
+
+23
+00:02:19,370 --> 00:02:20,330
+and we get Anna.
+
+24
+00:02:20,330 --> 00:02:22,760
+Now you might think well great we got no way.
+
+25
+00:02:22,760 --> 00:02:28,130
+Well when building more complex applications you typically want a wide something like this don't you
+
+26
+00:02:28,130 --> 00:02:30,940
+want to make sure that there is one clear path.
+
+27
+00:02:30,950 --> 00:02:34,790
+One way of using your class and that things like that.
+
+28
+00:02:34,910 --> 00:02:41,510
+Alternative ways of using it are not really supported because if you're working in a bigger team well
+
+29
+00:02:41,510 --> 00:02:47,480
+then one colleague is going to use this approach for adding an employee and no colleague might use this
+
+30
+00:02:47,480 --> 00:02:54,200
+approach and you don't want this you want to have one uniform way of doing this also because maybe in
+
+31
+00:02:54,200 --> 00:03:00,140
+the ad employee method you do more than just add it to the array maybe you first of all want to have
+
+32
+00:03:00,140 --> 00:03:02,380
+some validation etc. in here.
+
+33
+00:03:02,450 --> 00:03:09,500
+So you might have extra code in there which simply does not execute if you directly assign a new value
+
+34
+00:03:09,560 --> 00:03:12,910
+or add a new value to the array with this line here.
+
+35
+00:03:13,010 --> 00:03:20,030
+So you don't want to permit that employees is accessible like this from outside of the class.
+
+36
+00:03:20,030 --> 00:03:28,160
+And typescript Scott you covered you can turn employees here into a private property a private field
+
+37
+00:03:28,340 --> 00:03:32,250
+by adding the private keyword in front of it.
+
+38
+00:03:32,270 --> 00:03:40,790
+Now what private means is that employees is now a property which is only accessible from inside the
+
+39
+00:03:40,790 --> 00:03:41,240
+class.
+
+40
+00:03:41,240 --> 00:03:43,440
+So from inside the created object.
+
+41
+00:03:43,550 --> 00:03:51,440
+So any method inside of the department class is able to still work with employees but you can't access
+
+42
+00:03:51,440 --> 00:03:52,610
+it like this anymore.
+
+43
+00:03:52,610 --> 00:03:55,610
+Here you see him now getting an error that tried to save.
+
+44
+00:03:55,610 --> 00:04:01,640
+Does I get a compilation error that the property employees as private and only accessible within the
+
+45
+00:04:01,640 --> 00:04:03,550
+class department.
+
+46
+00:04:03,590 --> 00:04:09,380
+So now we forest dead when employees should be added to this department.
+
+47
+00:04:09,380 --> 00:04:16,630
+People have to use the add employee method because they get an error or if they write code like this.
+
+48
+00:04:16,790 --> 00:04:19,230
+This is a so-called modifier here.
+
+49
+00:04:19,250 --> 00:04:25,580
+The private keyword and besides private we all got public which is the default though you don't need
+
+50
+00:04:25,580 --> 00:04:31,660
+to add public so name like this is exactly the same as name with public in front of it.
+
+51
+00:04:31,670 --> 00:04:36,410
+The difference is that public properties are accessible from outside.
+
+52
+00:04:36,410 --> 00:04:43,580
+So for example here I could also reach out to name and assign a new name here if I wanted to.
+
+53
+00:04:43,640 --> 00:04:47,490
+That is possible for private properties.
+
+54
+00:04:47,570 --> 00:04:51,350
+This year is not possible we can only use them from inside.
+
+55
+00:04:51,590 --> 00:04:58,820
+Technically by the way javascript doesn't know public and private only in very modern versions added
+
+56
+00:04:58,820 --> 00:05:02,320
+recently such a thing exists in the past.
+
+57
+00:05:02,360 --> 00:05:09,140
+Javascript didn't know private or public properties all properties always were public there typescript
+
+58
+00:05:09,140 --> 00:05:15,500
+introduces this feature which of course does not work during runtime however because javascript.
+
+59
+00:05:15,500 --> 00:05:18,830
+Until recently only new public properties.
+
+60
+00:05:18,830 --> 00:05:23,300
+So this line here frozen area during typescript compilation.
+
+61
+00:05:23,300 --> 00:05:30,500
+If you compile it to JavaScript nonetheless this code would still executed runtime without errors because
+
+62
+00:05:30,500 --> 00:05:34,920
+again javascript on its own until recently didn't notice concept.
+
+63
+00:05:34,930 --> 00:05:39,980
+So depending on the where's your compiling for it still won't know it and therefore typescript only
+
+64
+00:05:39,980 --> 00:05:45,130
+supports this because it checks it during compilation not at runtime with it.
+
+65
+00:05:45,140 --> 00:05:49,730
+However we can a wide code like this and force everyone to write cleaner code.

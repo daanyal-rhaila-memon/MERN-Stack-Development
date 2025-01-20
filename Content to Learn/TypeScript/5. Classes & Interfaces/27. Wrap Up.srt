@@ -1,0 +1,99 @@
+1
+00:00:02,190 --> 00:00:08,460
+And that is it for interfaces and classes in this module we had a detailed look at classes and what
+
+2
+00:00:08,460 --> 00:00:09,510
+we can do there.
+
+3
+00:00:09,630 --> 00:00:15,990
+Classes in typescript in the end just build up on classes for JavaScript and I already summarized those
+
+4
+00:00:16,170 --> 00:00:18,810
+a little bit earlier in this module.
+
+5
+00:00:18,810 --> 00:00:20,760
+Interfaces are a different thing.
+
+6
+00:00:20,760 --> 00:00:27,420
+They only exist in typescript very pure types with feature helping you to write clear clearly structured
+
+7
+00:00:27,420 --> 00:00:34,770
+and very explicit code they can help you to force classes to have certain features or objects in general
+
+8
+00:00:34,890 --> 00:00:36,660
+to have a certain structure.
+
+9
+00:00:36,810 --> 00:00:39,740
+They can be used as a function type as you learned.
+
+10
+00:00:39,900 --> 00:00:45,050
+They allow for optional properties and all the four optional methods by the way.
+
+11
+00:00:45,270 --> 00:00:50,080
+If you add a question mark after the method name so that is something you can use.
+
+12
+00:00:50,220 --> 00:00:56,910
+And as you just saw when being compiled after fulfilling their role of allowing typescript to check
+
+13
+00:00:56,910 --> 00:01:00,440
+your code nothing is emitted for these interfaces.
+
+14
+00:01:00,450 --> 00:01:02,400
+The code is simply dumped.
+
+15
+00:01:02,400 --> 00:01:08,310
+Interfaces nonetheless are a powerful feature to force your classes or your objects to have a certain
+
+16
+00:01:08,310 --> 00:01:14,850
+structure and to clearly describe your idea of how an object should look like.
+
+17
+00:01:14,850 --> 00:01:21,170
+Now as you learned you mostly can replace them with custom types if you wanted to.
+
+18
+00:01:21,180 --> 00:01:28,050
+You can also implement custom types but it simply is more common to use an interface for Dad to use
+
+19
+00:01:28,050 --> 00:01:33,300
+an interface if you want to describe an object and if you want to implement it all div for historic
+
+20
+00:01:33,300 --> 00:01:33,960
+reasons.
+
+21
+00:01:34,020 --> 00:01:40,770
+Because in the early days of typescript custom types couldn't be implemented or used like interfaces.
+
+22
+00:01:40,770 --> 00:01:45,190
+Now there is more flexibility but it's still recommended to go for interfaces.
+
+23
+00:01:45,210 --> 00:01:50,250
+If you work with objects and if you want to describe their structure will also see them throughout this
+
+24
+00:01:50,250 --> 00:01:50,630
+course.
+
+25
+00:01:50,640 --> 00:01:51,720
+Over and over again.

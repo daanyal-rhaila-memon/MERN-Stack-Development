@@ -1,0 +1,223 @@
+1
+00:00:02,190 --> 00:00:08,370
+And now our nice feature related to properties and methods which exists also in JavaScript when you're
+
+2
+00:00:08,380 --> 00:00:15,850
+using iOS 6 or later but also typescript are static properties and methods static properties and methods
+
+3
+00:00:15,940 --> 00:00:22,540
+allow you to add properties and methods to classes which are not accessed on an instance of the class
+
+4
+00:00:22,600 --> 00:00:29,170
+so where you don't need to call new class name first but once you access directly on the class this
+
+5
+00:00:29,170 --> 00:00:38,350
+is often used for utility functions that you want to group or map to a class logically or global constants
+
+6
+00:00:38,350 --> 00:00:41,000
+which you also want to store in a class.
+
+7
+00:00:40,990 --> 00:00:46,630
+An example built into javascript which is not defined by TypeScript and not defined by you but part
+
+8
+00:00:46,630 --> 00:00:52,690
+of JavaScript in the browser is the math constructor function or a class if you want to call it like
+
+9
+00:00:52,690 --> 00:00:59,740
+this that's globally available in JavaScript where you can access pi as a constant value to give you
+
+10
+00:00:59,740 --> 00:01:08,610
+that pi number or functions or methods to be precise like p o w to calculate the power of something.
+
+11
+00:01:08,650 --> 00:01:14,530
+These are methods on properties which you don't access on the instance of math you don't have to call
+
+12
+00:01:14,800 --> 00:01:16,360
+new math first.
+
+13
+00:01:16,360 --> 00:01:22,420
+Indeed that won't work but you access these properties and methods directly on the class itself.
+
+14
+00:01:22,420 --> 00:01:29,350
+So moth acts more like a namespace as a grouping mechanism here and that's a common use case for static
+
+15
+00:01:29,350 --> 00:01:35,980
+methods and properties and you can add them to your own classes as well let's say on department we want
+
+16
+00:01:35,980 --> 00:01:43,480
+to have the method that helps us create employees and dad is something we might want to be able to access
+
+17
+00:01:43,480 --> 00:01:49,330
+without instantiating department because we typically instantiate our more specialized versions I.T.
+
+18
+00:01:49,330 --> 00:01:55,570
+department and accounting department and we don't really want to instantiate department just to call
+
+19
+00:01:55,570 --> 00:02:02,470
+a utility method and therefore we can Adam effort here create employee let's say where we want to get
+
+20
+00:02:02,470 --> 00:02:09,910
+the name which is a string as an argument and there we want to return something now to make that a static
+
+21
+00:02:09,910 --> 00:02:15,460
+method which we can access without instantiating this class we add the static keyword in front of this
+
+22
+00:02:15,460 --> 00:02:23,620
+method and then in here we maybe return an object where we have the Name property mapped to this name
+
+23
+00:02:24,010 --> 00:02:25,010
+value.
+
+24
+00:02:25,210 --> 00:02:31,960
+Now of course that's a very simple method but you get the idea now to use that we could go down there
+
+25
+00:02:31,960 --> 00:02:40,220
+where we execute our code and now let's say we want a new employee employee 1 well then we can just
+
+26
+00:02:40,220 --> 00:02:48,260
+get this with the part meant dot create employee and pass and Max for example and if I then console
+
+27
+00:02:49,010 --> 00:02:53,210
+log employee 1 we should see an object with a name of Max.
+
+28
+00:02:53,210 --> 00:02:58,140
+So if I save that indeed here there's this deep employee we just created.
+
+29
+00:02:58,280 --> 00:03:03,860
+So this would be a typical example for a static method we call it directly on the class without the
+
+30
+00:03:03,860 --> 00:03:09,830
+new keyword and therefore we use the class as a grouping mechanism you could say and if you would want
+
+31
+00:03:09,830 --> 00:03:19,940
+to add a static property you could do that as well if you had something like the fiscal year here that
+
+32
+00:03:19,940 --> 00:03:22,100
+you currently want to use in your company.
+
+33
+00:03:22,100 --> 00:03:25,010
+You could set this to let's say 2020.
+
+34
+00:03:25,160 --> 00:03:30,170
+And then again to make it available without instantiating this you could add static in front of this
+
+35
+00:03:30,170 --> 00:03:33,980
+property or in front of that field and now X is dead.
+
+36
+00:03:33,980 --> 00:03:35,280
+So now down there.
+
+37
+00:03:35,300 --> 00:03:38,700
+Right console log my created employee here.
+
+38
+00:03:38,780 --> 00:03:43,910
+We can also access Department DOD fiscal year.
+
+39
+00:03:43,920 --> 00:03:46,260
+Just like that without instantiating it.
+
+40
+00:03:46,320 --> 00:03:51,140
+And if we save that unsurprisingly we'll see 2020 being locked here.
+
+41
+00:03:51,180 --> 00:03:53,650
+So these are static methods and properties.
+
+42
+00:03:53,700 --> 00:03:59,610
+One important word about them or one thing you should keep in mind when you add them on a class you
+
+43
+00:03:59,610 --> 00:04:03,420
+can't access them from inside your non static parts.
+
+44
+00:04:03,420 --> 00:04:09,300
+So if you feel like accessing the fiscal year in the clear in the constructor and you want a console
+
+45
+00:04:09,300 --> 00:04:13,540
+log it here this as you can see will not work.
+
+46
+00:04:13,540 --> 00:04:19,900
+I'm getting an error here that the property fiscal year is a static member we can't access this here
+
+47
+00:04:19,900 --> 00:04:25,480
+because the constructor and basically anything in there all the methods as well which are not marked
+
+48
+00:04:25,480 --> 00:04:31,900
+with static and you can't mark de constructor s static by the way will not be able to access static
+
+49
+00:04:31,900 --> 00:04:37,610
+properties because this does refer to the instance created based on the class.
+
+50
+00:04:37,720 --> 00:04:44,200
+Well the static property is not a way to block the instance because the whole idea behind static properties
+
+51
+00:04:44,200 --> 00:04:47,800
+and static methods is that they're detached from instances.
+
+52
+00:04:47,830 --> 00:04:53,980
+So of course you can't access them with the this keyword if you would want to use the static property
+
+53
+00:04:53,980 --> 00:04:56,140
+or a method from inside the class.
+
+54
+00:04:56,140 --> 00:04:59,400
+You would have to use to class name here to access it.
+
+55
+00:04:59,410 --> 00:05:02,410
+This gives you access to static properties and methods.
+
+56
+00:05:02,410 --> 00:05:06,430
+Also from inside the CLOs that's one important thing to keep in mind.

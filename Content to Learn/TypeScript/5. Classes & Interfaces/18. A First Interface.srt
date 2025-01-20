@@ -1,0 +1,231 @@
+1
+00:00:02,280 --> 00:00:04,050
+So now did we covered classes.
+
+2
+00:00:04,050 --> 00:00:07,940
+Let's have a look at interfaces for Dad I'm going to rename the app.
+
+3
+00:00:08,040 --> 00:00:13,730
+Fall to classes and add a new app Tia's file which they're all through will be compiled to objects.
+
+4
+00:00:13,770 --> 00:00:17,040
+And in this app to us follow we'll now dive into interfaces.
+
+5
+00:00:17,040 --> 00:00:19,500
+So what is an interface.
+
+6
+00:00:19,890 --> 00:00:27,000
+Well in its simplest version an interface describes the structure of an object we can use it to describe
+
+7
+00:00:27,000 --> 00:00:28,890
+how an object should look like.
+
+8
+00:00:28,890 --> 00:00:30,350
+Let me show you an example.
+
+9
+00:00:30,420 --> 00:00:37,500
+We created the interface with the interface keyword which only exists in typescript not in vanilla javascript.
+
+10
+00:00:37,530 --> 00:00:43,470
+Now let's name it person maybe again just like on a class I started with a capital of character not
+
+11
+00:00:43,470 --> 00:00:46,720
+a must do but a recommendation and a convention.
+
+12
+00:00:46,860 --> 00:00:51,180
+And now in there we can define how a person object should look like.
+
+13
+00:00:51,210 --> 00:00:56,820
+Now unlike a class will not use this as a blueprint however just as a custom type.
+
+14
+00:00:56,820 --> 00:01:02,820
+We could say so here could say a person should have a name which is of type String and The Age which
+
+15
+00:01:02,820 --> 00:01:04,200
+is of type number.
+
+16
+00:01:04,200 --> 00:01:09,990
+So as you can see here I add properties or field definitions where I have the names of the properties
+
+17
+00:01:09,990 --> 00:01:13,480
+and the types of values which will be stored in there.
+
+18
+00:01:13,500 --> 00:01:16,480
+What we don't have here are the concrete values.
+
+19
+00:01:16,620 --> 00:01:22,140
+So we don't have this and if we would try to assign a default value here we would get an error that
+
+20
+00:01:22,140 --> 00:01:29,650
+an interface can't have an initialize or so we can't just find a structure not the concrete values.
+
+21
+00:01:29,650 --> 00:01:31,420
+We can also add a method here.
+
+22
+00:01:31,480 --> 00:01:32,920
+Greed for example.
+
+23
+00:01:32,990 --> 00:01:37,390
+No justice with properties we don't add the actual method here though.
+
+24
+00:01:37,480 --> 00:01:44,620
+But just the structure the description so to say how it should look like and to define a method which
+
+25
+00:01:44,800 --> 00:01:46,470
+a person object should have.
+
+26
+00:01:46,630 --> 00:01:50,820
+We add the name of the method then parentheses and then the return type.
+
+27
+00:01:50,950 --> 00:01:56,620
+For example white and in parentheses you could have any arguments you want to have like a phrase which
+
+28
+00:01:56,620 --> 00:01:57,710
+should be a type.
+
+29
+00:01:57,790 --> 00:02:04,030
+Again just the name of the argument and then the type and then the return type of the method of course
+
+30
+00:02:04,030 --> 00:02:06,160
+you don't have to add parameters.
+
+31
+00:02:06,160 --> 00:02:09,090
+So what can we now do with this person interface.
+
+32
+00:02:09,100 --> 00:02:11,410
+What's the idea behind it.
+
+33
+00:02:11,410 --> 00:02:18,970
+While we can now use this to type check an object for example we could have a variable User 1 and let's
+
+34
+00:02:18,970 --> 00:02:25,570
+say for some reason we don't initialize it immediately we just want to eventually store an object in
+
+35
+00:02:25,570 --> 00:02:28,100
+there which has this structure.
+
+36
+00:02:28,330 --> 00:02:35,500
+So then we can assign a type to user one which could be person we can use our interface as a type.
+
+37
+00:02:35,500 --> 00:02:41,890
+And now when I assign a value to user one it has to be an object because interfaces are used to define
+
+38
+00:02:41,920 --> 00:02:48,580
+objects and it has to be an object with a name property which must hold a string age property which
+
+39
+00:02:48,580 --> 00:02:56,750
+must hold a number and a great method which must take a phrase argument and then also return nothing.
+
+40
+00:02:56,770 --> 00:03:00,780
+So here in does object we can add a name Max for example.
+
+41
+00:03:00,790 --> 00:03:07,390
+Now here we add the concrete value and it has to be of that type defined up there now separated with
+
+42
+00:03:07,390 --> 00:03:14,500
+a comma and that's a difference from our interface definition dare we separate our keys our properties
+
+43
+00:03:14,500 --> 00:03:16,370
+and methods with semicolons.
+
+44
+00:03:16,480 --> 00:03:23,260
+But down there when we create object justice in vanilla javascript we use a comma then a H and then
+
+45
+00:03:23,290 --> 00:03:25,550
+all of course degreed method.
+
+46
+00:03:25,600 --> 00:03:32,740
+Now the great method as you learned has to be a method which takes one parameter phrase which has to
+
+47
+00:03:32,740 --> 00:03:39,890
+be a string and where I then want to console lock phrase plus let's say some whitespace plus this stored
+
+48
+00:03:39,900 --> 00:03:41,140
+name.
+
+49
+00:03:41,230 --> 00:03:43,960
+This could be one implementation of the Greek method.
+
+50
+00:03:43,960 --> 00:03:49,000
+Now what's in there doesn't matter it's just import that we have as one parameter which is a string
+
+51
+00:03:49,330 --> 00:03:51,260
+and that we return nothing.
+
+52
+00:03:51,310 --> 00:03:57,940
+And now this would be a valid user one object because it satisfies this definition of our interface.
+
+53
+00:03:58,090 --> 00:04:03,980
+So therefore of course we can now for example cold read and say Hi there I am.
+
+54
+00:04:04,060 --> 00:04:06,070
+And thereafter we should print name.
+
+55
+00:04:06,130 --> 00:04:11,590
+So if we now are safe that and let it reload we see Hi there I am Max and that's coming from our agreed
+
+56
+00:04:11,590 --> 00:04:12,510
+method.
+
+57
+00:04:12,580 --> 00:04:19,960
+So this is an interface it allows us to define the structure of an object we can use it as a type to
+
+58
+00:04:19,960 --> 00:04:24,310
+type check for objects that must have this structure.

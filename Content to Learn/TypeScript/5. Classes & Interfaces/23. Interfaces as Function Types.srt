@@ -1,0 +1,131 @@
+1
+00:00:02,250 --> 00:00:07,490
+Now I mentioned that interfaces are used to define the structure of an object.
+
+2
+00:00:07,500 --> 00:00:11,780
+Now interfaces can all be used to define the structure of a function.
+
+3
+00:00:11,790 --> 00:00:17,850
+So basically as a replacement for the function types you already learn about just as a quick refresher
+
+4
+00:00:17,880 --> 00:00:20,090
+we can define the type of a function.
+
+5
+00:00:20,100 --> 00:00:27,570
+For example with a custom type with the type keyword at f n for add function which then could hold a
+
+6
+00:00:27,570 --> 00:00:29,430
+function definition like this.
+
+7
+00:00:29,430 --> 00:00:36,030
+It should return a number and it should take two arguments where each argument also is of type number.
+
+8
+00:00:36,030 --> 00:00:42,870
+Now we could create a new function add here which is of type at f n and when we don't initialize it
+
+9
+00:00:42,870 --> 00:00:49,470
+but assign our function later then of course we have to make sure that this function takes two arguments
+
+10
+00:00:49,500 --> 00:00:55,190
+which are of type number and that in there we all return a number.
+
+11
+00:00:55,200 --> 00:00:56,370
+This is something we can do.
+
+12
+00:00:56,400 --> 00:00:58,420
+This is what you already learned.
+
+13
+00:00:58,440 --> 00:01:05,740
+Now you can also use an interface as an alternative to this custom type interfaces are there to define
+
+14
+00:01:05,740 --> 00:01:07,530
+the structure of an object as it taught you.
+
+15
+00:01:07,740 --> 00:01:12,780
+But in the end functions are just objects and therefore this is a little exception.
+
+16
+00:01:12,780 --> 00:01:19,350
+You can create function types with interfaces for Dad you create an interface name it add if and to
+
+17
+00:01:19,440 --> 00:01:22,390
+still keep that name here and now in there.
+
+18
+00:01:22,410 --> 00:01:30,720
+You defined a bit of function by just adding parentheses with your arguments a number B number for example
+
+19
+00:01:31,200 --> 00:01:37,120
+and then a colon not an arrow but a colon here with the return type.
+
+20
+00:01:37,260 --> 00:01:42,990
+So in the end like you would define a method as we're doing it here with Grete with the exception that
+
+21
+00:01:43,500 --> 00:01:45,600
+we're now not adding a method name.
+
+22
+00:01:45,750 --> 00:01:53,010
+So we have an anonymous function if you want to call it like this in the at f an interface and typescript
+
+23
+00:01:53,010 --> 00:01:59,070
+understands this special syntax off this anonymous function in your interface and understands that you
+
+24
+00:01:59,070 --> 00:02:05,400
+want to use this interface as a function type and this is how your function should look like.
+
+25
+00:02:05,430 --> 00:02:11,610
+So now we can use ADF and here and indeed if I would try to accept a string here we would get an error
+
+26
+00:02:11,610 --> 00:02:16,950
+because this is not a sizeable we need to have a number instead of a string.
+
+27
+00:02:17,100 --> 00:02:20,950
+So it's simply an alternative to this custom type of course here.
+
+28
+00:02:21,000 --> 00:02:25,050
+I would argue using a custom type is probably a bit more common.
+
+29
+00:02:25,050 --> 00:02:30,740
+It's all a bit shorter but it's a nice alternative syntax to be aware of especially if you encountered
+
+30
+00:02:30,740 --> 00:02:33,150
+as in some project and your other wise lost.
+
+31
+00:02:33,150 --> 00:02:34,050
+What this means.
+
+32
+00:02:34,050 --> 00:02:35,900
+This strange anonymous method.
+
+33
+00:02:36,030 --> 00:02:38,850
+Well it's in the end just a custom function type.

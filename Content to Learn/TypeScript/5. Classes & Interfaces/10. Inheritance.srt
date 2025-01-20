@@ -1,0 +1,379 @@
+1
+00:00:02,340 --> 00:00:07,110
+So we work with our department quite a bit here and I created my accounting department.
+
+2
+00:00:07,380 --> 00:00:14,330
+Now for the application we're building we might need departments of course but we might need more information
+
+3
+00:00:14,340 --> 00:00:20,550
+for the specific types of departments we might have an I.T. department which has an I.D. which has a
+
+4
+00:00:20,550 --> 00:00:26,700
+name which has employees but which also has administrators something which only the I.T. Department
+
+5
+00:00:26,700 --> 00:00:34,010
+has for example we might have the accounting department which might all have an I.D. or a name and employees
+
+6
+00:00:34,290 --> 00:00:41,070
+but it might also have let's say reports in Israel for reports it degenerated and so on.
+
+7
+00:00:41,070 --> 00:00:46,790
+So we might have some base properties and also methods which all departments should have.
+
+8
+00:00:46,980 --> 00:00:52,020
+But then we might have specialized workings of these apartments with their own specific properties and
+
+9
+00:00:52,020 --> 00:00:57,000
+methods which only that the part that might have an inheritance can help us implement something like
+
+10
+00:00:57,000 --> 00:00:58,100
+this.
+
+11
+00:00:58,140 --> 00:00:59,970
+So how can we utilize inheritance here.
+
+12
+00:01:00,060 --> 00:01:05,170
+Well we have our class department now let's create these specialized departments.
+
+13
+00:01:05,190 --> 00:01:14,130
+So here we could have a class I.T. department and in this class here I want to utilize the name and
+
+14
+00:01:14,160 --> 00:01:17,300
+the I.D. and the employees of the general department.
+
+15
+00:01:17,310 --> 00:01:19,620
+But I want to add my own features.
+
+16
+00:01:19,800 --> 00:01:24,220
+Now we can inherit the department class by using the extensions keyword here.
+
+17
+00:01:24,360 --> 00:01:25,930
+And then the class we want to inherit.
+
+18
+00:01:26,130 --> 00:01:27,510
+In this case that's department.
+
+19
+00:01:27,580 --> 00:01:33,000
+Now important you can only inherited from one class so you can't inherit from multiple classes.
+
+20
+00:01:33,090 --> 00:01:34,710
+If you would need that.
+
+21
+00:01:34,710 --> 00:01:37,880
+So now you're inheriting from department.
+
+22
+00:01:38,130 --> 00:01:44,820
+And one consequence is that if I now create an I.T. department here I indeed can call it like this with
+
+23
+00:01:44,820 --> 00:01:46,270
+this kind of constructor.
+
+24
+00:01:46,290 --> 00:01:51,990
+Even though the I.T. Department class is empty if we save that we indeed see it works.
+
+25
+00:01:52,020 --> 00:01:59,610
+Ask before because when we inherit from another class the class which inherits automatically gets everything
+
+26
+00:01:59,610 --> 00:02:04,740
+the base class department in this case has including its constructor.
+
+27
+00:02:04,740 --> 00:02:13,560
+So as long as we don't add a dedicated constructor Ford is inherited class so Ford to subclass the base
+
+28
+00:02:13,560 --> 00:02:14,750
+classes constructor.
+
+29
+00:02:14,760 --> 00:02:20,810
+So this constructor is automatically used when we instantiate our subclass.
+
+30
+00:02:20,850 --> 00:02:28,020
+So we in the end magically call the base class constructor with the arguments per passenger.
+
+31
+00:02:28,020 --> 00:02:33,690
+Now we can add our own constructor though by adding constructor here in I.T. department.
+
+32
+00:02:33,840 --> 00:02:35,710
+And now you see I'm getting errors.
+
+33
+00:02:35,850 --> 00:02:41,910
+For one we now of course should accept the data we're getting here though we could argue the name should
+
+34
+00:02:41,910 --> 00:02:48,300
+not be something we need to pass in here and it shouldn't also be accounting but instead here the name
+
+35
+00:02:48,300 --> 00:02:53,550
+of the department since it's the I.T. Department class can always be I.T..
+
+36
+00:02:53,750 --> 00:02:56,800
+I still want to accept my I.D. though.
+
+37
+00:02:56,960 --> 00:03:05,960
+But now I want to essentially forward that just like you fixed name I.T. to the constructor of department
+
+38
+00:03:06,500 --> 00:03:13,790
+and for that we have a special keyword we we can and in this case we have to use and that's super whenever
+
+39
+00:03:13,790 --> 00:03:20,380
+you add your own constructor in a class that inherits from a number of class you have to add super Indian
+
+40
+00:03:20,380 --> 00:03:27,590
+heritage class and you have to execute it like a function super here calls the constructor of the base
+
+41
+00:03:27,590 --> 00:03:28,090
+class.
+
+42
+00:03:28,100 --> 00:03:34,400
+So department's constructor in this case and now they are first super takes the arguments of the parent
+
+43
+00:03:34,400 --> 00:03:37,670
+class constructor the I.D. and the name.
+
+44
+00:03:37,700 --> 00:03:39,530
+So here it can forward I.D..
+
+45
+00:03:39,650 --> 00:03:42,740
+So I.D. which I'm getting here is just passed to super.
+
+46
+00:03:42,890 --> 00:03:46,860
+And it can hard code a value for the name like a T.
+
+47
+00:03:46,910 --> 00:03:53,210
+So this will now call the constructor of the base class from inside the subclass not important.
+
+48
+00:03:53,210 --> 00:03:59,570
+You have to call super first in your constructor before you do anything with the this keyword.
+
+49
+00:03:59,750 --> 00:04:06,730
+So if you plan on assigning any other special properties here you have to do that after calling Super.
+
+50
+00:04:06,720 --> 00:04:10,720
+And indeed I want to add my own special properties here.
+
+51
+00:04:10,750 --> 00:04:20,180
+We could add our admins here let's say as a private whereas a public actually as a public property admins
+
+52
+00:04:21,440 --> 00:04:25,450
+and that should be an array of strings let's say.
+
+53
+00:04:25,700 --> 00:04:32,900
+Well then I don't want to forward this to my base class because the department class doesn't want any
+
+54
+00:04:33,020 --> 00:04:34,710
+administrator data.
+
+55
+00:04:34,730 --> 00:04:38,830
+Instead I want to store it is in a property of I.T. department.
+
+56
+00:04:38,840 --> 00:04:47,030
+So here we can then add admins as a field which takes a couple of administrators and store admins in
+
+57
+00:04:47,030 --> 00:04:52,700
+there or because I'm using public and here I'm already using that shortcut where a property of the same
+
+58
+00:04:52,700 --> 00:04:59,060
+name will be created and the data we feed into this argument is stored in that automatically created
+
+59
+00:04:59,060 --> 00:05:03,740
+property still to make it clear that super has to be called first.
+
+60
+00:05:03,740 --> 00:05:12,760
+I'll take the longer route add Adam Edmonds here like that and that here say this dot admins equals
+
+61
+00:05:12,840 --> 00:05:13,300
+admins.
+
+62
+00:05:13,300 --> 00:05:15,180
+Again the shortcut would be shorter.
+
+63
+00:05:15,190 --> 00:05:20,350
+I'm doing this here to show and make it really clear that if you are using something that uses the this
+
+64
+00:05:20,350 --> 00:05:24,550
+keyword you have to do that after calling Super.
+
+65
+00:05:24,550 --> 00:05:30,070
+And with that if we save that I'm getting an error because I'm not passing in any admin so let's do
+
+66
+00:05:30,070 --> 00:05:30,970
+that here.
+
+67
+00:05:30,970 --> 00:05:33,840
+Max is the only admin I'm passing in here.
+
+68
+00:05:33,970 --> 00:05:37,110
+Now we can save that and compiled it without errors.
+
+69
+00:05:37,180 --> 00:05:39,930
+And now here indeed we see our department here.
+
+70
+00:05:39,970 --> 00:05:46,600
+It now has the name I.T. and if we can so lock the entire department and we may be all the renamed is
+
+71
+00:05:46,990 --> 00:05:56,110
+from accounting to I.T. and then console lock I.T. here of course renaming that while it's optional
+
+72
+00:05:56,110 --> 00:06:01,890
+just makes more sense given that we're building an I.T. department here now that a console locked entire
+
+73
+00:06:01,900 --> 00:06:09,220
+department we indeed see we got admins but we also got employees and everything which I set up in my
+
+74
+00:06:10,390 --> 00:06:12,000
+department class here.
+
+75
+00:06:12,070 --> 00:06:14,000
+So that's inheritance and action.
+
+76
+00:06:14,020 --> 00:06:21,910
+A very useful feature because now of course we can all do create our accounting department here by extending
+
+77
+00:06:22,060 --> 00:06:28,960
+department and there we could then add our accounting specific things so we can still use a constructor
+
+78
+00:06:28,960 --> 00:06:29,510
+here.
+
+79
+00:06:29,620 --> 00:06:36,310
+And now maybe with the shortcut except a couple of reports here which might be a private property and
+
+80
+00:06:36,310 --> 00:06:46,560
+then we have ADD report which takes text which should be a string and then we reach out to reports here
+
+81
+00:06:46,650 --> 00:06:53,840
+and push text as item into the report and maybe we also have get reports here and there we just console
+
+82
+00:06:54,330 --> 00:06:59,740
+lock this reports or we name it print report stage 4.
+
+83
+00:06:59,790 --> 00:07:05,130
+Makes more sense and now we would have a very special Where's another department with two methods which
+
+84
+00:07:05,130 --> 00:07:06,780
+the pace department doesn't have.
+
+85
+00:07:06,870 --> 00:07:12,180
+And with extra property which to base department doesn't have and still we get everything from the base
+
+86
+00:07:12,180 --> 00:07:18,210
+department the name which I'll set to accounting here and the I.D. which we all look forward to the
+
+87
+00:07:18,210 --> 00:07:20,190
+base department constructor.
+
+88
+00:07:20,340 --> 00:07:28,230
+And so with that down there if we create our accounting here with new accounting department we can feed
+
+89
+00:07:28,230 --> 00:07:38,240
+in our I.D. and then our reports let's say that's an empty array initially then we can call at report.
+
+90
+00:07:38,410 --> 00:07:43,840
+Something went wrong never that good of course in the accounting I guess.
+
+91
+00:07:43,840 --> 00:07:50,080
+And then we can also print our reports here like that.
+
+92
+00:07:50,150 --> 00:07:56,660
+And with all of that it compiles just fine and we get the reports here and we see the I.T. Department
+
+93
+00:07:56,660 --> 00:07:58,810
+for example wouldn't have any reports.
+
+94
+00:07:58,910 --> 00:08:04,670
+The accounting department does because of inheritance where we inherit certain features and add our
+
+95
+00:08:04,670 --> 00:08:05,480
+own features.

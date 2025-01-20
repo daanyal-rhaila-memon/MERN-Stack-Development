@@ -1,0 +1,191 @@
+1
+00:00:02,240 --> 00:00:05,470
+Let's come back to interfaces for objects.
+
+2
+00:00:05,660 --> 00:00:13,950
+You can also define optional properties in interfaces and also in classes as I will show you.
+
+3
+00:00:14,120 --> 00:00:20,820
+For Dad you add your property name let's say output name here can be whatever you want of course.
+
+4
+00:00:20,870 --> 00:00:27,520
+And that should be a string but I don't want to force every class based on name to have that.
+
+5
+00:00:27,680 --> 00:00:30,920
+It should be optional whether you want to have that or not.
+
+6
+00:00:31,160 --> 00:00:37,700
+You can specify an optional property by adding a question mark after the property name.
+
+7
+00:00:37,700 --> 00:00:44,330
+This tells typescript that this property might exist in classes that implement this interface but it
+
+8
+00:00:44,330 --> 00:00:45,710
+doesn't have to.
+
+9
+00:00:45,860 --> 00:00:51,800
+And therefore we get no error here in person either though I don't have the output Name property because
+
+10
+00:00:51,800 --> 00:00:53,480
+it is optional.
+
+11
+00:00:53,480 --> 00:01:00,440
+Now of course I can add output name here and initialize this with some value or use it like any other
+
+12
+00:01:00,440 --> 00:01:01,010
+property.
+
+13
+00:01:01,040 --> 00:01:08,480
+But I don't have to know on a class you can also have an optional property let's say name here should
+
+14
+00:01:08,480 --> 00:01:16,220
+be optional because maybe we don't get a value here for n we can add a question mark here as well in
+
+15
+00:01:16,220 --> 00:01:23,030
+our class we now adjust all to have to make it optional here in named otherwise we violate against our
+
+16
+00:01:23,090 --> 00:01:26,440
+interface which for assistance to be a string.
+
+17
+00:01:26,510 --> 00:01:28,830
+Now I'm saying this can be optional.
+
+18
+00:01:29,060 --> 00:01:36,170
+So here it's not optional and here when I set this equal to N I only want to do this if n is truthfully
+
+19
+00:01:36,200 --> 00:01:37,620
+if it is set.
+
+20
+00:01:37,700 --> 00:01:42,220
+So only if it's not an empty string for example otherwise name will not be set.
+
+21
+00:01:42,220 --> 00:01:48,890
+And Dad is okay because I turned out to be an optional property both here in the interface but also
+
+22
+00:01:48,890 --> 00:01:50,690
+in my class.
+
+23
+00:01:50,690 --> 00:01:58,090
+So now a year when we construct a new object we could do this without passing in a name to allow that
+
+24
+00:01:58,390 --> 00:02:05,330
+we have to go to the constructor and provide a default value here or also add a question mark here does
+
+25
+00:02:05,330 --> 00:02:06,280
+this also allowed.
+
+26
+00:02:06,280 --> 00:02:13,690
+You can add optional parameters either by providing a default full back value or by adding a question
+
+27
+00:02:13,690 --> 00:02:17,330
+mark in which case the default value will be undefined.
+
+28
+00:02:17,470 --> 00:02:23,530
+And now we can call this constructor without a value because we have that optional parameter and because
+
+29
+00:02:23,530 --> 00:02:29,800
+we have the optional property that is OK we don't need to initialize it and hence thereafter if we create
+
+30
+00:02:30,130 --> 00:02:33,430
+well this name of course will yield on the fine.
+
+31
+00:02:33,580 --> 00:02:40,030
+So probably we should check here as well if we got a name and if we do we can't lock this else we can
+
+32
+00:02:40,020 --> 00:02:46,600
+so lock high without any reference to the name because we don't have one if we save that everything
+
+33
+00:02:46,600 --> 00:02:53,650
+compiles and we see just high here because it didn't provide a name so that would be optional properties
+
+34
+00:02:53,950 --> 00:02:59,690
+both in a class and in an interface and also in my constructor list here.
+
+35
+00:02:59,860 --> 00:03:04,760
+And now just to make it really clear again these free things are only loosely related.
+
+36
+00:03:04,840 --> 00:03:11,260
+You can have an optional property in an interface and then implement it as a non optional property in
+
+37
+00:03:11,260 --> 00:03:11,940
+the class.
+
+38
+00:03:11,950 --> 00:03:17,060
+You then just have to make sure that your logic is such that this is always initialized otherwise you
+
+39
+00:03:17,060 --> 00:03:25,790
+get an error as you just saw or you have an optional property in an interface and an optional property
+
+40
+00:03:25,790 --> 00:03:31,520
+in your class then you don't have to assign a value in all cases here.
+
+41
+00:03:31,700 --> 00:03:37,040
+And in addition in all the totally unrelated here you can have optional parameters in functions and
+
+42
+00:03:37,050 --> 00:03:42,860
+therefore also in methods including the constructor method optional parameters are defined either with
+
+43
+00:03:42,860 --> 00:03:50,180
+the question mark where the default value if not set is therefore undefined or simply by assigning a
+
+44
+00:03:50,180 --> 00:03:51,630
+default value like this.
+
+45
+00:03:51,740 --> 00:03:56,990
+Then as you learned this is also optional and the default value will be assumed if you don't pass in
+
+46
+00:03:56,990 --> 00:03:58,690
+a more specific value.
+
+47
+00:03:58,790 --> 00:04:02,760
+So this gives you more flexibility in how you structure your classes.
+
+48
+00:04:02,990 --> 00:04:08,960
+And when we talk about interfaces how you structure your contracts classes might need to adhere to.

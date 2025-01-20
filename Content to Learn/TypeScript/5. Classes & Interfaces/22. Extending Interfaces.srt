@@ -1,0 +1,123 @@
+1
+00:00:02,210 --> 00:00:05,800
+You can also implement inheritance in interfaces.
+
+2
+00:00:05,930 --> 00:00:13,970
+Let's say we have another interface named and this is the interface which actually makes sure that we
+
+3
+00:00:13,970 --> 00:00:16,230
+have a name property.
+
+4
+00:00:16,460 --> 00:00:22,610
+So now a here in person we could implement readable and named to be forced to have both agreed method
+
+5
+00:00:22,730 --> 00:00:30,650
+and a name that is something we could do or if we know that agreeable things Greta all objects always
+
+6
+00:00:30,650 --> 00:00:31,840
+need to have a name.
+
+7
+00:00:31,880 --> 00:00:38,000
+We could make sure that this readable interface actually extends to named interface so that together
+
+8
+00:00:38,030 --> 00:00:44,900
+they form a new interface which forces every object based on the readable to have a grid method but
+
+9
+00:00:44,900 --> 00:00:52,160
+also to have a name and to do that we can add extends here on the interface as well and we extend named
+
+10
+00:00:52,560 --> 00:00:58,370
+now therefore as I said this forms a new interface which is in the end the interface that forces us
+
+11
+00:00:58,370 --> 00:01:00,830
+to have a great effort but not just yet.
+
+12
+00:01:00,830 --> 00:01:03,110
+It also forces us to have everything.
+
+13
+00:01:03,140 --> 00:01:07,130
+The named interface defines in this case a Name property.
+
+14
+00:01:07,190 --> 00:01:13,430
+So if a would remove name here I would already get an error because this class now incorrectly implements
+
+15
+00:01:13,430 --> 00:01:17,660
+the interface readable because the property name is missing.
+
+16
+00:01:17,660 --> 00:01:20,960
+So that's also how we can combine interfaces.
+
+17
+00:01:20,960 --> 00:01:23,450
+Why would we split an interface like this.
+
+18
+00:01:23,450 --> 00:01:29,270
+Well maybe you have an application where on some objects you only want to force them to have a name
+
+19
+00:01:29,420 --> 00:01:30,970
+and not agreed method.
+
+20
+00:01:31,160 --> 00:01:34,670
+Whereas on other objects you need both greet and name.
+
+21
+00:01:34,670 --> 00:01:41,510
+With this split this is possible some objects or some classes can just implement named and others can
+
+22
+00:01:41,510 --> 00:01:45,880
+implement reasonable and are forced to have both greet and the name.
+
+23
+00:01:46,040 --> 00:01:48,680
+So extending interfaces is possible.
+
+24
+00:01:48,680 --> 00:01:55,020
+And there you can also extend more than one so you can merge multiple interfaces into one single interface.
+
+25
+00:01:55,100 --> 00:01:57,380
+We could merge and no interface.
+
+26
+00:01:57,380 --> 00:02:03,590
+If we had it simply separated with a comma remembered at four classes this was not possible.
+
+27
+00:02:03,590 --> 00:02:09,560
+When you use classes and inheritance you can only inherit from one class you can't inherit from multiple
+
+28
+00:02:09,560 --> 00:02:16,190
+classes for interfaces that is different for interfaces you can indeed inherit from multiple interfaces.
+
+29
+00:02:16,190 --> 00:02:18,830
+Because in the end they're all just getting merged together.
+
+30
+00:02:18,980 --> 00:02:25,190
+And in this pure type of feature which is actually not translated to JavaScript as you will see we can
+
+31
+00:02:25,190 --> 00:02:31,580
+de offer for break the rules set up for JavaScript classes and extend multiple interfaces.

@@ -1,0 +1,263 @@
+1
+00:00:02,120 --> 00:00:04,690
+So with static properties out of the way.
+
+2
+00:00:04,790 --> 00:00:11,510
+Let's come back to inheritance into a concept related to that and no way of adding methods to classes
+
+3
+00:00:11,810 --> 00:00:14,500
+which you plan to inherit from.
+
+4
+00:00:14,500 --> 00:00:19,520
+Here's our department class and as you know we're inheriting from it on the I.T. Department and the
+
+5
+00:00:19,520 --> 00:00:21,410
+accounting department.
+
+6
+00:00:21,410 --> 00:00:22,630
+Now we do have debt.
+
+7
+00:00:22,640 --> 00:00:29,570
+Describe method here in our department class and therefore we can call this on any instance based on
+
+8
+00:00:29,630 --> 00:00:35,180
+I.T. department and accounting department because these classes are based on department and they have
+
+9
+00:00:35,180 --> 00:00:41,000
+access to all the properties and methods of that department base class now.
+
+10
+00:00:41,120 --> 00:00:43,830
+As you learned you can override methods.
+
+11
+00:00:43,880 --> 00:00:50,300
+So for example here in accounting department we could add our own describe method worship in where I
+
+12
+00:00:50,300 --> 00:00:58,970
+want to do something different where it may be when I say accounting department I.D. and then access
+
+13
+00:00:58,970 --> 00:01:08,040
+distort I.D. notice would not work here because ideas a private property of department and therefore
+
+14
+00:01:08,040 --> 00:01:14,760
+we need to turn this into a protected one so that it's available in classes based on this class as well.
+
+15
+00:01:14,760 --> 00:01:16,260
+But with that it should work.
+
+16
+00:01:16,260 --> 00:01:21,510
+And if I now call describe on accounting which we can do of course let's maybe call it out.
+
+17
+00:01:21,510 --> 00:01:29,300
+These two lines and instead call accounting dot describe down there we should see that new output.
+
+18
+00:01:29,370 --> 00:01:33,210
+And indeed we see accounting department I.D. d.
+
+19
+00:01:33,390 --> 00:01:38,610
+Now of course we could also override the described method in the I.T. department.
+
+20
+00:01:38,910 --> 00:01:44,710
+But sometimes you don't just want to offer the option of overriding a method.
+
+21
+00:01:44,730 --> 00:01:51,570
+Because that always exists you instead want to force the developers working with a certain class or
+
+22
+00:01:51,570 --> 00:01:56,780
+extending a certain class to implement a certain method or to override a certain method.
+
+23
+00:01:56,880 --> 00:01:58,410
+When would you do that.
+
+24
+00:01:58,410 --> 00:02:05,310
+Well whenever you want to ensure that a certain method is a way lable in all classes based on some base
+
+25
+00:02:05,310 --> 00:02:07,320
+class in this case department.
+
+26
+00:02:07,320 --> 00:02:13,800
+But when you also know at the same time that the exact implementation will depend on the specific work.
+
+27
+00:02:14,250 --> 00:02:20,970
+So when you can't provide a general method but you want to enforce that this method exists but the inheriting
+
+28
+00:02:20,970 --> 00:02:27,210
+classes will need to provide their own implementation because you can't provide a default implementation
+
+29
+00:02:27,210 --> 00:02:28,560
+in the base class.
+
+30
+00:02:28,590 --> 00:02:37,020
+So in such a situation you might want to have an empty method in your base class and now force all classes
+
+31
+00:02:37,020 --> 00:02:44,040
+based on that class to add and override this method and you can do so by adding the abstract keyword
+
+32
+00:02:44,040 --> 00:02:44,940
+here.
+
+33
+00:02:44,940 --> 00:02:51,200
+If you add abstract here you see we get an error that does is only available in an abstract class.
+
+34
+00:02:51,480 --> 00:02:57,840
+So if you have one method or more with abstract in front of the method you have to add abstract here
+
+35
+00:02:58,290 --> 00:02:59,980
+in front of class as well.
+
+36
+00:03:00,060 --> 00:03:01,580
+And now we're good regarding that.
+
+37
+00:03:01,710 --> 00:03:06,720
+But now you see I have an error here describe cannot have an implementation because it is marked as
+
+38
+00:03:06,720 --> 00:03:07,860
+abstract.
+
+39
+00:03:07,890 --> 00:03:14,790
+You have to remove the curly braces add a semicolon and instead add the return type does should have
+
+40
+00:03:15,030 --> 00:03:16,850
+in this case white.
+
+41
+00:03:16,860 --> 00:03:21,830
+So now you're just defining how this method should look like what its structure is.
+
+42
+00:03:21,990 --> 00:03:25,160
+But you're not saying anything else besides this.
+
+43
+00:03:25,260 --> 00:03:31,740
+Now however we get an error in the I.T. department because it does not implement the inherited abstract
+
+44
+00:03:31,740 --> 00:03:37,920
+member describe which means we don't offer to describe method here and we do have to do that because
+
+45
+00:03:37,920 --> 00:03:43,290
+we're based on the department class which is abstract and which has such an abstract method which means
+
+46
+00:03:43,530 --> 00:03:48,860
+this method has to be implemented by any class based on this the part and class.
+
+47
+00:03:49,650 --> 00:03:56,400
+So now here in I.T. department we have to add a describe method and in there we can now cancel lock
+
+48
+00:03:56,700 --> 00:04:01,000
+I.T. department and then do whatever we want.
+
+49
+00:04:01,140 --> 00:04:05,850
+This can be the same implementation as we have it in the accounting department but it can also be a
+
+50
+00:04:05,850 --> 00:04:07,490
+different one.
+
+51
+00:04:07,500 --> 00:04:13,050
+So now with that we can save this and add recompile and we get the almost same output as before but
+
+52
+00:04:13,050 --> 00:04:18,630
+now we have two different implementations of the described method in our different classes based on
+
+53
+00:04:18,630 --> 00:04:19,940
+department.
+
+54
+00:04:20,100 --> 00:04:23,370
+Abstract can therefore be very useful if you want to.
+
+55
+00:04:23,640 --> 00:04:30,750
+And Forest at all classes based on some other class share some common method or property we can all
+
+56
+00:04:30,750 --> 00:04:37,230
+have abstract properties but at the same time you want to make sure that you don't have to provide concrete
+
+57
+00:04:37,230 --> 00:04:43,810
+value to concrete implementation in the base class but instead the inheriting class has to do that all
+
+58
+00:04:43,830 --> 00:04:46,030
+important abstract classes.
+
+59
+00:04:46,050 --> 00:04:51,480
+So class is marked as abstract with this keyword can't be instantiated themselves.
+
+60
+00:04:51,480 --> 00:04:53,630
+So you can't instantiate department.
+
+61
+00:04:53,640 --> 00:04:54,140
+No.
+
+62
+00:04:54,300 --> 00:04:58,020
+It's basically just a class that's there to be inherited from.
+
+63
+00:04:58,110 --> 00:05:05,250
+So that these inheriting classes can be instantiated and inheriting classes are forced to provide concrete
+
+64
+00:05:05,250 --> 00:05:11,780
+implementations for in this case to describe method following the structure you laid out here.
+
+65
+00:05:11,820 --> 00:05:18,480
+So with the this keyword referring to a department instance or instance somehow based on Department
+
+66
+00:05:18,480 --> 00:05:23,550
+including inherit the classes that might be in between and that it doesn't return anything.

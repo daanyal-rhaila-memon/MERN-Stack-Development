@@ -1,0 +1,79 @@
+1
+00:00:02,290 --> 00:00:07,990
+So now did we know about these powerful features an obvious question is why would we use that.
+
+2
+00:00:07,990 --> 00:00:09,640
+Why why is that helpful.
+
+3
+00:00:09,670 --> 00:00:15,820
+Well it is useful in situations like this where we know we want to have a certain set of functionalities
+
+4
+00:00:15,850 --> 00:00:22,900
+let's say agreat method and we want to ensure that a class has such agreed method and a number of class
+
+5
+00:00:22,900 --> 00:00:24,490
+has it maybe as well.
+
+6
+00:00:24,490 --> 00:00:29,470
+Well then we can implement an interface which forces the existence of this method.
+
+7
+00:00:29,470 --> 00:00:35,560
+So then we can easily share functionality amongst classes and every class has to add its own implementation
+
+8
+00:00:35,890 --> 00:00:39,460
+the exact code that should execute when the method is called.
+
+9
+00:00:39,460 --> 00:00:44,920
+But we enforce a certain structure with the help of interfaces and this can be useful if we then have
+
+10
+00:00:44,980 --> 00:00:48,670
+other parts of our code which rely on that structure.
+
+11
+00:00:48,730 --> 00:00:55,420
+Here we said user 1 to be of type readable and with Dad we say we don't care what's inside user but
+
+12
+00:00:55,420 --> 00:01:00,970
+what has to be in there is agreed method and we know that it has to be in there because whatever we
+
+13
+00:01:00,970 --> 00:01:03,390
+store in user one has to be readable.
+
+14
+00:01:03,400 --> 00:01:08,950
+And that allows us to write truly powerful and flexible code where we don't have to know everything
+
+15
+00:01:08,950 --> 00:01:14,500
+about an object or everything about a class but we just know whatever I'm getting here and user one
+
+16
+00:01:14,770 --> 00:01:16,220
+has to have a great method.
+
+17
+00:01:16,270 --> 00:01:19,290
+We don't care whether a person has anything else here.
+
+18
+00:01:19,330 --> 00:01:24,760
+We're interested in great hands who sent us to readable and therefore we can't store anything in user
+
+19
+00:01:24,760 --> 00:01:31,540
+1 which would not have agreed method because readable force says whatever you base on it to have such
+
+20
+00:01:31,540 --> 00:01:32,200
+a read method.

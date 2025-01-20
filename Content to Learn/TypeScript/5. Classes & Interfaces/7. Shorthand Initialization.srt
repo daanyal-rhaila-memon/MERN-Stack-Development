@@ -1,0 +1,143 @@
+1
+00:00:02,380 --> 00:00:04,540
+Now have you learned about private and public.
+
+2
+00:00:04,540 --> 00:00:07,700
+I also want to turn name into a private property.
+
+3
+00:00:07,870 --> 00:00:12,740
+And now here we have a little bit of not really an issue but a little bit of inconvenience.
+
+4
+00:00:12,760 --> 00:00:14,560
+We have that name field here.
+
+5
+00:00:14,560 --> 00:00:19,570
+Then we get a value for it here in the constructor and then we stored that value for that field here
+
+6
+00:00:19,570 --> 00:00:21,970
+in the constructor in the field.
+
+7
+00:00:21,970 --> 00:00:25,540
+We can do that and it's certainly very clear what we're doing here.
+
+8
+00:00:25,810 --> 00:00:32,500
+But in a lot of use cases you'll have a lot of classes where all the properties you have all the fields
+
+9
+00:00:32,500 --> 00:00:38,650
+you have are initialized in the constructor and therefore often you might find yourself writing a couple
+
+10
+00:00:38,650 --> 00:00:42,100
+of properties a couple of fields like this at the top.
+
+11
+00:00:42,130 --> 00:00:44,370
+No matter if they're private or public.
+
+12
+00:00:44,620 --> 00:00:52,410
+And then you just repeat all of that down there in the constructor just to then initialize these values
+
+13
+00:00:52,410 --> 00:00:55,090
+here in the constructor function.
+
+14
+00:00:55,160 --> 00:00:56,560
+You don't have to do that.
+
+15
+00:00:57,140 --> 00:01:05,150
+Instead of doing this double initialization code here you can get rid of your field definitions up there
+
+16
+00:01:05,270 --> 00:01:10,520
+and now you see you would get an error but you can always get rid of this year and instead now simply
+
+17
+00:01:10,640 --> 00:01:15,140
+add the Axis modifier in front of the parameter.
+
+18
+00:01:15,170 --> 00:01:19,620
+So if it should be public at public let's say for the name we keep it public.
+
+19
+00:01:19,620 --> 00:01:23,480
+Now if it should be private at private.
+
+20
+00:01:23,600 --> 00:01:31,850
+Here you have to add public because this now is an explicit instruction for typescript that tells typescript
+
+21
+00:01:31,850 --> 00:01:38,720
+that you want to not just get these arguments here in the constructor but that you want to create properties
+
+22
+00:01:38,720 --> 00:01:45,410
+for this class with the exact same names and therefore here we should also rename n to name.
+
+23
+00:01:45,410 --> 00:01:49,220
+So did a name property is created on the create a class.
+
+24
+00:01:49,310 --> 00:01:56,360
+So this is simply a shortcut for this double initialization code here where you had to find your fields
+
+25
+00:01:56,360 --> 00:01:57,970
+and then stored the value.
+
+26
+00:01:57,980 --> 00:02:00,140
+Now we're doing it all in one go.
+
+27
+00:02:00,140 --> 00:02:05,870
+We defined which arguments to constructor takes and then for every argument which has such a access
+
+28
+00:02:05,870 --> 00:02:12,170
+modifier in front of it a property of the same name is created and the value for the argument is stored
+
+29
+00:02:12,260 --> 00:02:14,450
+in that created property.
+
+30
+00:02:14,450 --> 00:02:20,680
+So now we just have to fix our department creation here and add an idea because I added this new argument.
+
+31
+00:02:20,900 --> 00:02:27,170
+And now what you'll see is that that when we call describe down there and I do actually output the idea
+
+32
+00:02:27,170 --> 00:02:28,640
+there as well.
+
+33
+00:02:29,180 --> 00:02:38,830
+Maybe by changing this department to use a string literal here the part meant this dot idea.
+
+34
+00:02:40,000 --> 00:02:45,410
+And then here this dot name you will see that this all still works.
+
+35
+00:02:45,410 --> 00:02:52,340
+It compiles without errors here and here we get the output with our I.D. and with our name because of
+
+36
+00:02:52,340 --> 00:02:55,430
+that little shortcut we also say if some code for all of that.

@@ -1,0 +1,83 @@
+1
+00:00:02,150 --> 00:00:04,240
+Now that's it for classes.
+
+2
+00:00:04,260 --> 00:00:06,230
+We learned about classes themselves.
+
+3
+00:00:06,240 --> 00:00:13,770
+We learned about their properties the Axis modifiers private for internal axis protected for internal
+
+4
+00:00:13,770 --> 00:00:14,280
+axis.
+
+5
+00:00:14,280 --> 00:00:19,620
+Also inheriting classes and public for axis from everywhere.
+
+6
+00:00:19,620 --> 00:00:25,260
+We also learned about methods which we can add about static methods and properties about abstract methods
+
+7
+00:00:25,560 --> 00:00:31,380
+and abstract classes which is important when we talk about another important concept.
+
+8
+00:00:31,380 --> 00:00:37,640
+The inheritance which we can use here we're inheriting from the apartment with the X tense keyword.
+
+9
+00:00:37,680 --> 00:00:44,490
+This allows us to share functionalities properties and methods from the Department class with this inheritance
+
+10
+00:00:44,490 --> 00:00:52,230
+class and add our own functionalities or override existing functionalities ever because we have to overwrite
+
+11
+00:00:52,620 --> 00:00:58,530
+as in the case of describe which is an abstract method or because we want to override like in the case
+
+12
+00:00:58,530 --> 00:01:01,680
+of an employee here in the accounting department.
+
+13
+00:01:01,680 --> 00:01:03,260
+That's not an abstract method.
+
+14
+00:01:03,270 --> 00:01:04,210
+In the base class.
+
+15
+00:01:04,290 --> 00:01:07,550
+But of course we still can override it if we want to.
+
+16
+00:01:07,560 --> 00:01:14,430
+We also learned about the Singleton pattern and private constructors which can also be useful sometimes.
+
+17
+00:01:14,430 --> 00:01:19,200
+And therefore overall you now hopefully have a good idea of classes and what you can do with them and
+
+18
+00:01:19,200 --> 00:01:25,410
+typescript in general of course you need to know what classes and objects and all to bid what prototypes
+
+19
+00:01:25,500 --> 00:01:32,040
+are about in vanilla javascript because that's generally not something introduced by a typescript but
+
+20
+00:01:32,040 --> 00:01:38,350
+of course something typescript is related to because typescript builds up on these default javascript
+
+21
+00:01:38,370 --> 00:01:41,520
+features and adds its own magic on top of these features.

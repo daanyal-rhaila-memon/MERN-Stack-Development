@@ -1,0 +1,147 @@
+1
+00:00:02,300 --> 00:00:08,180
+Kind of related to what you just learned about access modifiers is another modifier and that's the read
+
+2
+00:00:08,180 --> 00:00:09,590
+only modifier.
+
+3
+00:00:09,650 --> 00:00:14,070
+Let's say we have certain fields which should not just be private or public.
+
+4
+00:00:14,270 --> 00:00:18,170
+They also shouldn't change after their initialization.
+
+5
+00:00:18,170 --> 00:00:23,570
+For example the I.D. should not change their offer to make it clear that it shouldn't change.
+
+6
+00:00:23,570 --> 00:00:27,920
+You can add read only here as well and you could have added that up here as well.
+
+7
+00:00:27,920 --> 00:00:32,290
+So here you would have all the written Private Read only know the read only keyword.
+
+8
+00:00:32,330 --> 00:00:35,720
+Just like private and public is introduced by typescript.
+
+9
+00:00:35,780 --> 00:00:38,000
+It does not exist in JavaScript.
+
+10
+00:00:38,000 --> 00:00:44,210
+It makes sure that if you tried to write to this property thereafter you fail so you can only use it
+
+11
+00:00:44,210 --> 00:00:46,540
+once during initialization but thereafter.
+
+12
+00:00:46,550 --> 00:00:52,490
+Let's save for ad employee for whatever reason I tried to change ideas to D2.
+
+13
+00:00:52,490 --> 00:00:59,270
+You see we get an error here that I can't assign to I.D. because it's read only so does add some extra
+
+14
+00:00:59,270 --> 00:01:04,640
+safety to make it really clear that a certain property should only be initialized to once and shouldn't
+
+15
+00:01:04,640 --> 00:01:05,840
+change their offer.
+
+16
+00:01:05,960 --> 00:01:11,690
+A requirement you have quite often for certain properties in your objects so this can add extra type
+
+17
+00:01:11,690 --> 00:01:14,950
+safety again and make your intentions very clear.
+
+18
+00:01:14,990 --> 00:01:18,410
+Of course you can always say well I'm the one writing the code.
+
+19
+00:01:18,410 --> 00:01:20,540
+I won't do anything I don't want.
+
+20
+00:01:20,540 --> 00:01:27,380
+Well it's still good to be very clear when you define your code because A you might forget what you
+
+21
+00:01:27,380 --> 00:01:28,280
+wanted to do.
+
+22
+00:01:28,370 --> 00:01:33,800
+If you paused working on your code for a couple of weeks or whatever it is and B you might be working
+
+23
+00:01:33,800 --> 00:01:40,160
+in a team or sharing your code with our people and it's generally a good idea to write clearer and explicit
+
+24
+00:01:40,160 --> 00:01:45,290
+code that makes our intentions very clear and read only can help you there because it makes it very
+
+25
+00:01:45,290 --> 00:01:47,140
+clear what your goal is.
+
+26
+00:01:47,270 --> 00:01:53,420
+If we have a look at app yes as I mentioned we see neither private nor public nor read only because
+
+27
+00:01:53,420 --> 00:01:57,650
+that all only exists in typescript not in JavaScript.
+
+28
+00:01:57,650 --> 00:02:01,300
+We also see something different which is also interesting.
+
+29
+00:02:01,460 --> 00:02:06,530
+The methods are added to the prototype of our constructor function.
+
+30
+00:02:06,530 --> 00:02:11,420
+Now for this you need to know what prototypes are and introducing those in this course would be a little
+
+31
+00:02:11,420 --> 00:02:16,110
+bit too much attached you find some resources where you can dive into prototypes.
+
+32
+00:02:16,130 --> 00:02:20,510
+It's an important part of JavaScript especially of JavaScript.
+
+33
+00:02:20,510 --> 00:02:26,150
+Before we had classes and it doesn't hurt to understand prototypes if you're a javascript developer
+
+34
+00:02:26,540 --> 00:02:33,080
+still here I will not dive deeper into them because it's a pure Javascript topic not specific to typescript.
+
+35
+00:02:33,080 --> 00:02:39,140
+Indeed in typescript we typically work less with prototypes because we can do more with classes and
+
+36
+00:02:39,140 --> 00:02:40,130
+related to that.
+
+37
+00:02:40,130 --> 00:02:43,340
+We got another important class concept inheritance.

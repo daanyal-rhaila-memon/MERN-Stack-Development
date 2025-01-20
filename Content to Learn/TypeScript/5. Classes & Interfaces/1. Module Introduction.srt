@@ -1,0 +1,43 @@
+1
+00:00:02,470 --> 00:00:06,130
+In this module let's dive into classes and interfaces.
+
+2
+00:00:06,160 --> 00:00:10,910
+Now the concept of classes might not totally be new to you.
+
+3
+00:00:10,930 --> 00:00:17,050
+Classes also exist in vanilla javascript in modern vanilla javascript at least.
+
+4
+00:00:17,110 --> 00:00:23,050
+But if you haven't really worked with modern javascript then you might not know classes or if you're
+
+5
+00:00:23,050 --> 00:00:26,560
+relatively new to jobs so you might also not know about them yet.
+
+6
+00:00:26,650 --> 00:00:33,880
+So I'll introduce you to classes in this module as well and entirely new in JavaScript world at least
+
+7
+00:00:33,960 --> 00:00:35,550
+our interfaces.
+
+8
+00:00:35,560 --> 00:00:39,750
+So in this module we'll explore what these things are and why we use them.
+
+9
+00:00:39,760 --> 00:00:45,140
+Then we'll have a detailed look at classes and they are all that our concept called inheritance and
+
+10
+00:00:45,160 --> 00:00:51,880
+add interfaces what they bring to the table how they're compile to JavaScript and why we might use these
+
+11
+00:00:51,880 --> 00:00:52,570
+features.

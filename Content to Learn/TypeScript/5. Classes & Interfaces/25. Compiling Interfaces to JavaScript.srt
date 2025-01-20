@@ -1,0 +1,91 @@
+1
+00:00:02,190 --> 00:00:05,620
+There was a lot of talking about interfaces and classes now.
+
+2
+00:00:05,640 --> 00:00:13,560
+Now let's look under the hood and see what javascript actually produces or offers as an alternative
+
+3
+00:00:13,560 --> 00:00:15,320
+to interface.
+
+4
+00:00:15,330 --> 00:00:21,630
+We learned that four class code Indiana depends on the word you were compiling for if you compile for
+
+5
+00:00:21,660 --> 00:00:29,120
+iOS 6 year in it he has conflict then our output would use the class keyword since we compile 4 is 5
+
+6
+00:00:29,130 --> 00:00:33,480
+here We instead see this work around using constructor functions in the end.
+
+7
+00:00:33,480 --> 00:00:36,530
+What however happens for interfaces.
+
+8
+00:00:36,720 --> 00:00:41,820
+Well let's have a look at the app J File and there you see nothing.
+
+9
+00:00:41,820 --> 00:00:46,410
+You'll not see any translations for our interfaces.
+
+10
+00:00:46,410 --> 00:00:54,810
+Add a friend named readable you don't find these things anywhere in app J.S. you just find our function
+
+11
+00:00:54,810 --> 00:00:59,180
+here you find our constructor function for the person object.
+
+12
+00:00:59,220 --> 00:01:06,330
+So basically that translation for the person class anti Abra code you find no reference at any interface
+
+13
+00:01:07,030 --> 00:01:08,260
+and there's a good reason for that.
+
+14
+00:01:08,310 --> 00:01:13,600
+There is no translation for interfaces javascript doesn't know about this feature.
+
+15
+00:01:13,710 --> 00:01:20,190
+It's a pure typescript feature only available during development and compilation so you can use it to
+
+16
+00:01:20,190 --> 00:01:21,550
+improve your code.
+
+17
+00:01:21,660 --> 00:01:27,870
+No output for that will end up in your javascript files though so therefore it's a pure development
+
+18
+00:01:27,870 --> 00:01:30,720
+feature helping you to write better code.
+
+19
+00:01:30,720 --> 00:01:38,680
+Clearly structured code following clear rules at runtime no trace will be left of these interfaces.
+
+20
+00:01:38,760 --> 00:01:45,420
+You'll not see anything related to the interfaces in your code only functions classes and all the other
+
+21
+00:01:45,420 --> 00:01:49,270
+code is compiled and output interfaces are simply dumped.
+
+22
+00:01:49,290 --> 00:01:54,360
+You could say they're used during compilation to check your code and then they're ignored.
+
+23
+00:01:54,360 --> 00:01:56,430
+There is nothing that would be output for them.

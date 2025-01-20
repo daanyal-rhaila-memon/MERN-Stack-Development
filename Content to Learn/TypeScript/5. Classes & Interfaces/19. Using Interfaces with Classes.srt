@@ -1,0 +1,315 @@
+1
+00:00:02,290 --> 00:00:09,040
+Now if we come back to this interface here the question is why do we need this wouldn't we have the
+
+2
+00:00:09,040 --> 00:00:13,380
+exact same thing if we would at a custom type here and there.
+
+3
+00:00:13,380 --> 00:00:18,010
+The difference is just that we have to have a equals sign and then we're saying the person type is an
+
+4
+00:00:18,010 --> 00:00:19,870
+object which looks like this.
+
+5
+00:00:20,020 --> 00:00:26,800
+And indeed if we saved added compiles without errors so we could replace our interface with such a type.
+
+6
+00:00:26,800 --> 00:00:28,330
+And it works as before.
+
+7
+00:00:28,540 --> 00:00:30,670
+So why do we have an interface then.
+
+8
+00:00:31,330 --> 00:00:35,310
+Well an interface and a custom type are not exactly the same.
+
+9
+00:00:35,350 --> 00:00:42,130
+Whilst often you can use them interchangeably and you can use the interface instead of a custom type
+
+10
+00:00:42,190 --> 00:00:43,530
+or the other way around.
+
+11
+00:00:43,540 --> 00:00:45,750
+There also are some differences.
+
+12
+00:00:45,760 --> 00:00:51,520
+Well one major difference is that interfaces can only be used to describe the structure of an object.
+
+13
+00:00:51,520 --> 00:00:57,250
+You can use type for that as well but instead of a custom type you can also store other things like
+
+14
+00:00:57,250 --> 00:01:03,490
+union types and so on what we did earlier in the course that sounds like type is therefore more flexible.
+
+15
+00:01:03,760 --> 00:01:10,830
+But the other side of the coin is that interface is clearer when you define something as an interface.
+
+16
+00:01:10,930 --> 00:01:15,570
+It's super clear that you want to define the structure of an object with that.
+
+17
+00:01:15,640 --> 00:01:21,630
+And indeed when it comes to defining object types you more often see interfaces out there in the wild.
+
+18
+00:01:21,670 --> 00:01:23,830
+Then you see custom types.
+
+19
+00:01:23,830 --> 00:01:30,280
+Now another thing you can do with interfaces but you would also be able to do with custom types is you
+
+20
+00:01:30,280 --> 00:01:33,400
+can implement an interface in a class.
+
+21
+00:01:33,400 --> 00:01:34,840
+What do I mean by that.
+
+22
+00:01:34,840 --> 00:01:38,740
+The reason why you often work with interfaces is dead.
+
+23
+00:01:38,740 --> 00:01:42,060
+Interface can be used as a contract.
+
+24
+00:01:42,100 --> 00:01:46,370
+A class can implement and a class then has to adhere to.
+
+25
+00:01:46,520 --> 00:01:48,010
+What do you mean with that.
+
+26
+00:01:48,190 --> 00:01:55,650
+Let's say our interface is not a person interface with a name in the age but instead we name it.
+
+27
+00:01:55,790 --> 00:02:03,070
+Greed double notice might look like a strange name but in the end this just says any object dad should
+
+28
+00:02:03,070 --> 00:02:09,260
+be treated as readable has to be object with a name and with a creat method.
+
+29
+00:02:09,280 --> 00:02:14,530
+So now we could say this here this user one variable should hold a reasonable object.
+
+30
+00:02:14,710 --> 00:02:19,590
+And of course now we get an error because we have more than just name and greet.
+
+31
+00:02:19,930 --> 00:02:25,540
+But we could use this interface to share it amongst possibly multiple classes.
+
+32
+00:02:25,540 --> 00:02:31,570
+We have to ensure that every class that adheres to this interface has to have a name property and has
+
+33
+00:02:31,570 --> 00:02:33,460
+to have a great method.
+
+34
+00:02:33,460 --> 00:02:38,440
+So here we could now add a person class the name is available again because I renamed the interface
+
+35
+00:02:38,830 --> 00:02:46,870
+and now tell typescript that this class should basically adhere to this interface it should implement
+
+36
+00:02:47,080 --> 00:02:52,780
+this interface it should follow that contract set up by this interface.
+
+37
+00:02:53,050 --> 00:03:00,260
+We do it by adding the implements keyword offered a class name and then the name of our interface readable.
+
+38
+00:03:00,490 --> 00:03:02,760
+And you can implement more than one interface.
+
+39
+00:03:02,800 --> 00:03:07,300
+That's a difference compared to inheritance you can inherit only from one class.
+
+40
+00:03:07,330 --> 00:03:12,790
+You can implement multiple interfaces by simply separating them with a comma.
+
+41
+00:03:12,790 --> 00:03:16,500
+So there we could have another interface if we had one here.
+
+42
+00:03:16,540 --> 00:03:17,850
+I only have one though.
+
+43
+00:03:18,010 --> 00:03:24,190
+And now the implication of this is that we get an error here because our class incorrectly implements
+
+44
+00:03:24,190 --> 00:03:25,160
+the interface.
+
+45
+00:03:25,270 --> 00:03:29,230
+It does not have the name property does not have the Greek method.
+
+46
+00:03:29,740 --> 00:03:37,540
+So now we have to set this year in our class maybe also add a constructor where we get a value for the
+
+47
+00:03:37,540 --> 00:03:41,200
+name and then set it up like this.
+
+48
+00:03:41,330 --> 00:03:48,020
+And where we also add our agreed method where we then might have this logic from now there.
+
+49
+00:03:48,140 --> 00:03:50,800
+Now in our class we can't have more than that.
+
+50
+00:03:50,840 --> 00:03:52,360
+We can't have more fields.
+
+51
+00:03:52,370 --> 00:03:53,930
+We can have more methods.
+
+52
+00:03:53,960 --> 00:03:56,090
+We can also extend this class.
+
+53
+00:03:56,090 --> 00:04:02,840
+We can work with this class as we always can but we're forced to implement this method correctly to
+
+54
+00:04:02,840 --> 00:04:09,710
+have this name property because we're implementing this interface and ever interfaces are often used
+
+55
+00:04:09,740 --> 00:04:16,590
+to share functionality amongst different classes not regarding their concrete implementation.
+
+56
+00:04:16,610 --> 00:04:20,600
+You can't have implementation or values instead of interfaces.
+
+57
+00:04:20,690 --> 00:04:25,070
+But regarding the structure regarding the features a class should have.
+
+58
+00:04:25,070 --> 00:04:30,980
+It's a bit like working with abstract class to stay up for the difference being that an interface has
+
+59
+00:04:30,980 --> 00:04:38,240
+no implementation details at all whereas abstract classes can be a mixture of you have to overwrite
+
+60
+00:04:38,240 --> 00:04:39,380
+this parts.
+
+61
+00:04:39,380 --> 00:04:42,440
+And I have a concrete implementation parts.
+
+62
+00:04:42,530 --> 00:04:46,880
+That's an important difference between interfaces and abstract classes.
+
+63
+00:04:46,910 --> 00:04:54,790
+Now with that however we have our Person class here and now here User 1 can be created by using new
+
+64
+00:04:54,790 --> 00:04:58,220
+person and feeding in the name for example.
+
+65
+00:04:58,330 --> 00:05:05,380
+And now you see it's OK that we have this eight year end user one because we build user one based on
+
+66
+00:05:05,380 --> 00:05:11,110
+person person implements treatable and you can add more than treatable ones in a class but you have
+
+67
+00:05:11,110 --> 00:05:15,340
+to satisfy the conditions set up by the interface.
+
+68
+00:05:15,340 --> 00:05:18,570
+And if for now if we save everything we have a valid code.
+
+69
+00:05:18,760 --> 00:05:25,990
+And if we log our user one down there with console log we see that it is a normal object with an age
+
+70
+00:05:26,000 --> 00:05:27,470
+and a name in this case.
+
+71
+00:05:27,580 --> 00:05:33,400
+But the key takeaway is that it is based on a class which implements the interface and you can then
+
+72
+00:05:33,430 --> 00:05:37,630
+all use the interface as a type of course we could have set this to type person.
+
+73
+00:05:37,780 --> 00:05:43,300
+But as you see using type Greta here all the works because the person object which we store in the user
+
+74
+00:05:43,300 --> 00:05:47,780
+one class in the end is based on the readable interface it implements this.
+
+75
+00:05:47,800 --> 00:05:55,000
+So that's another powerful feature you can use an interface as a type on some constant or variable which
+
+76
+00:05:55,000 --> 00:06:01,810
+will then actually store and never a class of a number type which in turn is based on the interface
+
+77
+00:06:01,810 --> 00:06:03,910
+type because it implements it.
+
+78
+00:06:04,000 --> 00:06:06,580
+So that's interfaces in a nutshell.
+
+79
+00:06:06,580 --> 00:06:08,500
+Lot of powerful features included.

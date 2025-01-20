@@ -1,0 +1,295 @@
+1
+00:00:02,310 --> 00:00:04,650
+For days I get a little starting project for you.
+
+2
+00:00:04,650 --> 00:00:05,640
+You find it attached.
+
+3
+00:00:05,640 --> 00:00:08,790
+It's the same starting Project we used over and over again.
+
+4
+00:00:08,850 --> 00:00:14,970
+You start D development server with NPM start and then I start at the typescript compilation in watch
+
+5
+00:00:14,970 --> 00:00:19,850
+mode with TSC dash w in a separate terminal.
+
+6
+00:00:19,890 --> 00:00:25,230
+So you're in my built in terminal I got two taps one with the development server which you should keep
+
+7
+00:00:25,260 --> 00:00:30,390
+up and running so that it watches for changes and reloads the page and keeps the server up and running
+
+8
+00:00:30,780 --> 00:00:35,550
+and another tab where I have that running typescript compilation watcher.
+
+9
+00:00:35,580 --> 00:00:41,520
+Now with that we can work in the apt yes file which is empty right now and start writing some code there
+
+10
+00:00:41,580 --> 00:00:46,400
+and I want to start right away by defining a class which we can use.
+
+11
+00:00:46,530 --> 00:00:49,450
+We do this by using the class keyword just like that.
+
+12
+00:00:49,500 --> 00:00:56,520
+And then the name of the class and there let's say we're building an app a web application a user interface
+
+13
+00:00:56,910 --> 00:01:02,540
+for some web tool that allows us to manage our different departments.
+
+14
+00:01:02,550 --> 00:01:08,310
+We might have in our company maybe we're building some kind of company internal tool whatever it is
+
+15
+00:01:08,580 --> 00:01:11,300
+and we need to have multiple departments there.
+
+16
+00:01:11,310 --> 00:01:17,760
+Now we could use objects to manage the data for the different departments and we might then also add
+
+17
+00:01:17,760 --> 00:01:24,510
+methods there to each object so that we can render that department information onto the screen and to
+
+18
+00:01:24,510 --> 00:01:31,350
+simplify the creation of these different apartment objects which will all look the same is to create
+
+19
+00:01:31,410 --> 00:01:35,710
+a department class so we could name this class department.
+
+20
+00:01:35,730 --> 00:01:36,840
+The name is totally up to you.
+
+21
+00:01:36,840 --> 00:01:42,770
+The convention is that it starts with an opera case character to make it clear that this is a class.
+
+22
+00:01:42,780 --> 00:01:49,050
+Now if you've been around to JavaScript development for a longer time you might know the idea of constructor
+
+23
+00:01:49,050 --> 00:01:50,130
+functions by the way.
+
+24
+00:01:50,220 --> 00:01:55,590
+And classes in the end our syntactic sugar for dead you could say but we'll see that once we compile
+
+25
+00:01:55,620 --> 00:01:57,030
+our code.
+
+26
+00:01:57,030 --> 00:02:03,150
+So here we have our class department and now in there we might have a name property you can add it just
+
+27
+00:02:03,150 --> 00:02:09,960
+like this without any let or constant front of it just like this directly in the class.
+
+28
+00:02:10,020 --> 00:02:15,300
+And then of course you can also assign a type to this you do that by adding a colon here and then to
+
+29
+00:02:15,300 --> 00:02:16,810
+type for example string.
+
+30
+00:02:16,920 --> 00:02:17,910
+And that's important.
+
+31
+00:02:17,940 --> 00:02:24,300
+This might look like an object but it isn't an object in an object use key value pairs with a colon
+
+32
+00:02:24,540 --> 00:02:27,560
+to have a key name and then the value for the key here.
+
+33
+00:02:27,570 --> 00:02:28,760
+That's not the case.
+
+34
+00:02:28,830 --> 00:02:32,190
+This is a so-called field of a class.
+
+35
+00:02:32,280 --> 00:02:34,490
+You create a class with curly braces as well.
+
+36
+00:02:34,680 --> 00:02:37,100
+But here this is not a key value pair.
+
+37
+00:02:37,140 --> 00:02:39,510
+This just defines the name of a key.
+
+38
+00:02:39,510 --> 00:02:46,800
+You will have an object which you will create based on the class and you define the value type that
+
+39
+00:02:46,800 --> 00:02:48,580
+Key will hold in the end.
+
+40
+00:02:48,600 --> 00:02:55,910
+You can also set an initial value here with the equal sign default but you don't need to do that.
+
+41
+00:02:55,980 --> 00:03:02,020
+Instead another thing you commonly have in classes is a special function in there.
+
+42
+00:03:02,070 --> 00:03:09,480
+A so-called method functions and objects are simply called methods which is the constructor method.
+
+43
+00:03:09,480 --> 00:03:15,540
+We can't added like this and this is a reserved word constructor is a reserved keyword understood by
+
+44
+00:03:15,540 --> 00:03:18,430
+TypeScript and by modern JavaScript as well.
+
+45
+00:03:18,600 --> 00:03:24,990
+And this is essentially a function tied to this class and tied to any object you create based on the
+
+46
+00:03:24,990 --> 00:03:29,690
+class which is executed when the object is being created.
+
+47
+00:03:29,700 --> 00:03:36,390
+So this allows you to basically do some initialization work for the object you're building now in there
+
+48
+00:03:36,390 --> 00:03:42,540
+you could accept an argument let's name it and maybe which could also be of type String and then you
+
+49
+00:03:42,540 --> 00:03:45,530
+want to store dad in your name field here.
+
+50
+00:03:45,660 --> 00:03:52,020
+While you can do this by reaching out to name with the this keyword and storing N in it what this does
+
+51
+00:03:52,020 --> 00:03:56,880
+is it sets the value of the name field also called property.
+
+52
+00:03:56,910 --> 00:04:04,590
+So the name property to the value you're getting in on end when a department object is created.
+
+53
+00:04:04,590 --> 00:04:06,930
+Now how could we create such a department object.
+
+54
+00:04:07,080 --> 00:04:14,160
+Nothing easier than that outside of the class you created by using the new keyword which is also built
+
+55
+00:04:14,160 --> 00:04:18,450
+into TypeScript and JavaScript and then you repeat the name of the class.
+
+56
+00:04:18,450 --> 00:04:25,050
+Then you add parentheses and this would create a new department object but the constructor is called
+
+57
+00:04:25,050 --> 00:04:30,810
+at this point of time when you execute this class like this with the new keyword and the constructor
+
+58
+00:04:30,810 --> 00:04:33,480
+here takes an argument a string.
+
+59
+00:04:33,480 --> 00:04:37,920
+Now you pass constructor arguments to this department called here.
+
+60
+00:04:37,920 --> 00:04:39,840
+So between these parentheses.
+
+61
+00:04:39,840 --> 00:04:44,520
+So here we could named as accounting because maybe we're building the accounting department here.
+
+62
+00:04:44,760 --> 00:04:49,860
+Now this will now create a new javascript object based on this blueprint.
+
+63
+00:04:49,860 --> 00:04:57,250
+So now we can store does not concern for example and then console lock accounting here to see what we
+
+64
+00:04:57,250 --> 00:04:57,910
+get.
+
+65
+00:04:58,060 --> 00:05:04,270
+If we now safe debt and we didn't go back to our page here and have a look at the development console
+
+66
+00:05:04,270 --> 00:05:07,860
+here in the def tools we should see our department object here.
+
+67
+00:05:07,990 --> 00:05:13,020
+It's a regular javascript object just passed us department type attached to it.
+
+68
+00:05:13,020 --> 00:05:18,880
+You could say and in the end it's an object with one key value pair where the key is name because that's
+
+69
+00:05:18,880 --> 00:05:25,840
+what we defined up there and the value is accounting and we have does accounting value here because
+
+70
+00:05:25,840 --> 00:05:29,630
+we're passing this as an argument to the constructor.
+
+71
+00:05:29,650 --> 00:05:36,640
+There we are accepting such a string restoring the value in this field and fields are in the end just
+
+72
+00:05:36,640 --> 00:05:41,930
+translated to properties the object based on the class will have to offer.
+
+73
+00:05:41,950 --> 00:05:46,520
+So this is how we can create a simple class and what the general idea is.
+
+74
+00:05:46,630 --> 00:05:49,990
+Now let's see what we actually get in JavaScript.
