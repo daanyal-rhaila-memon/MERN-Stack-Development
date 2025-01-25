@@ -1,0 +1,191 @@
+1
+00:00:02,510 --> 00:00:09,830
+Let's step away from function overloads now and let me introduce one our very neat feature and that
+
+2
+00:00:09,920 --> 00:00:13,390
+is optional chaining.
+
+3
+00:00:13,430 --> 00:00:20,390
+Let's say you have an application where you're getting data from a back end and data from a database
+
+4
+00:00:20,420 --> 00:00:29,460
+or from any source where you don't know with certainty if in an object a certain property is defined.
+
+5
+00:00:29,540 --> 00:00:33,910
+Let's say we have fetched user data and fetched user data.
+
+6
+00:00:33,910 --> 00:00:40,580
+Could be an object about a user we fetched there we might have an I.D. we might have a name Max and
+
+7
+00:00:40,640 --> 00:00:50,660
+we also might expect no property job which is an object which has a title and which then also has a
+
+8
+00:00:50,660 --> 00:00:52,080
+description.
+
+9
+00:00:52,160 --> 00:00:53,990
+My own company.
+
+10
+00:00:53,990 --> 00:00:56,940
+Now if we get data like this of course you can work with it.
+
+11
+00:00:56,960 --> 00:01:03,980
+Now you might do more complex things but here for a start let's say all I'm doing is I'm actually outputting
+
+12
+00:01:03,980 --> 00:01:11,680
+the job title here right now if we save Dad with our development server up and running and compilation
+
+13
+00:01:11,680 --> 00:01:14,470
+running in watch mode I get SEO here.
+
+14
+00:01:14,470 --> 00:01:17,570
+Now thus far that's not too fancy.
+
+15
+00:01:17,570 --> 00:01:26,200
+However if we are fetching this from a backend for whatever reason maybe we don't fetch all the data
+
+16
+00:01:26,200 --> 00:01:34,750
+we need maybe some data is not set at this point in bigger more complex applications use certainly sometimes
+
+17
+00:01:34,750 --> 00:01:42,040
+work with structured with nested data where you don't know with certainty if some property on an object
+
+18
+00:01:42,040 --> 00:01:45,280
+is set or if it's maybe on the find.
+
+19
+00:01:45,370 --> 00:01:52,480
+So here let's say job does not exist here for whatever reason we're not fetching it here of course I
+
+20
+00:01:52,480 --> 00:01:58,250
+get an error in out hire some complains about this because it knows that there is no job property now.
+
+21
+00:01:58,480 --> 00:02:05,260
+The problem is it knows for this data it wouldn't know if dead were data we're fetching from some file
+
+22
+00:02:05,260 --> 00:02:11,800
+that's not controlled from typescript or as I just said if we're maybe fetching this from the back end
+
+23
+00:02:11,800 --> 00:02:15,580
+and we don't know with certainty which data will be returned.
+
+24
+00:02:15,580 --> 00:02:20,860
+Now if you wouldn't know whether that's the find or not what we can do in regular javascript is we can
+
+25
+00:02:20,860 --> 00:02:26,010
+try to access job and if that works we continue and we access title.
+
+26
+00:02:26,170 --> 00:02:32,860
+This is the javascript way of checking whether something exists before we then dive deeper into debt
+
+27
+00:02:32,950 --> 00:02:39,340
+potential object and if Dad is on the find this code never runs and hence we have wider runtime error.
+
+28
+00:02:39,460 --> 00:02:44,800
+Again here types could of course knows that job does not exist but if this would be fetch from some
+
+29
+00:02:44,800 --> 00:02:50,800
+source for typescript can't look into like the result of a HBP request this would be the secure way
+
+30
+00:02:51,070 --> 00:02:54,940
+of a widening runtime errors in JavaScript.
+
+31
+00:02:54,940 --> 00:02:58,110
+Now if this does exist you get the same output as before.
+
+32
+00:02:58,180 --> 00:03:04,270
+If it does not exist we don't get a runtime error at least with typescript.
+
+33
+00:03:04,270 --> 00:03:06,910
+You actually got a nicer way of doing that.
+
+34
+00:03:07,060 --> 00:03:10,570
+You got the optional chaining operator.
+
+35
+00:03:10,570 --> 00:03:16,890
+You can add a question mark after the thing you're not sure whether it's to find or not.
+
+36
+00:03:16,930 --> 00:03:23,200
+At least if you're using typescript where you free dots seven or higher here my idea it doesn't like
+
+37
+00:03:23,200 --> 00:03:25,350
+this but this is a supported syntax.
+
+38
+00:03:25,360 --> 00:03:29,040
+Then this tells typescript does this exist.
+
+39
+00:03:29,050 --> 00:03:34,900
+If it does access job and ends here we can all get a question mark and therefore only access title if
+
+40
+00:03:34,900 --> 00:03:36,820
+job is defined.
+
+41
+00:03:36,820 --> 00:03:41,560
+Now if we do that I still get an error here if I tried to compile it because typescript still knows
+
+42
+00:03:41,560 --> 00:03:47,530
+with certainty that job does not exist but if it wouldn't need notepad or if I comment does and this
+
+43
+00:03:47,530 --> 00:03:55,690
+compiles just fine and all the executes ask before so does optional chaining operator here helps us
+
+44
+00:03:55,720 --> 00:04:01,380
+safely access nested properties and nested objects in our object data.
+
+45
+00:04:01,570 --> 00:04:07,240
+And if the thing in front of the question mark is undefined it will not access the thing they're after
+
+46
+00:04:07,420 --> 00:04:12,430
+and therefore will not flow a runtime error but instead it will just not continue.
+
+47
+00:04:12,430 --> 00:04:18,040
+So behind the scenes does is basically compile to if check which checks whether Dad exists before it
+
+48
+00:04:18,040 --> 00:04:19,360
+tries to access this.

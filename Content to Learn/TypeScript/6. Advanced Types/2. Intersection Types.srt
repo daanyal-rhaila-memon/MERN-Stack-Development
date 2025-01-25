@@ -1,0 +1,223 @@
+1
+00:00:02,310 --> 00:00:04,620
+For this I'm back in the general project set up.
+
+2
+00:00:04,620 --> 00:00:07,980
+We worked on before you find it attached empty.
+
+3
+00:00:07,990 --> 00:00:09,840
+Next H to metal fall empty apt.
+
+4
+00:00:09,840 --> 00:00:11,550
+Yes fall in in there.
+
+5
+00:00:11,550 --> 00:00:19,620
+I want to dive right in with intersection types intersection types allow us to combine our types.
+
+6
+00:00:19,620 --> 00:00:24,950
+Let's say we have a type admin which is an object type.
+
+7
+00:00:24,990 --> 00:00:27,090
+So again this is not creating object here.
+
+8
+00:00:27,090 --> 00:00:28,190
+We're defining a type.
+
+9
+00:00:28,200 --> 00:00:35,240
+So I'm just finding a type definition here and admin should have a name which is a string let's say
+
+10
+00:00:35,630 --> 00:00:43,210
+and an admin should also have privileges and that should be a String array.
+
+11
+00:00:43,220 --> 00:00:46,790
+For example now we could have created this with an interface.
+
+12
+00:00:47,030 --> 00:00:56,260
+But here I am doing it with a type and now I have another type general employee type let's say and there
+
+13
+00:00:56,320 --> 00:00:58,950
+I also have a name string.
+
+14
+00:00:59,200 --> 00:01:04,370
+I have no privileges but I have a start date and that could be of type date.
+
+15
+00:01:04,420 --> 00:01:10,300
+We haven't seen that before but date is a type that is supported by typescript based on the date object
+
+16
+00:01:10,360 --> 00:01:13,620
+that is built into javascript.
+
+17
+00:01:13,680 --> 00:01:22,380
+So now we want to create a new type here an elevated employee let's say which should be the combination
+
+18
+00:01:22,380 --> 00:01:23,930
+of these two types.
+
+19
+00:01:23,970 --> 00:01:29,610
+Of course we could created manually by simply defining an object type which has a name which has a start
+
+20
+00:01:29,610 --> 00:01:31,600
+date and which has privileges.
+
+21
+00:01:31,770 --> 00:01:38,790
+But if we have these two types already then we can all just combine this by saying admin and so we used
+
+22
+00:01:38,790 --> 00:01:46,440
+the M percent symbol here employee and now the result is a new object type which you must have both.
+
+23
+00:01:46,440 --> 00:01:54,570
+So if I have my employee one which should be of type elevated employee then I can store an object in
+
+24
+00:01:54,570 --> 00:01:59,940
+there which must have a name property which must have a privileged property
+
+25
+00:02:02,540 --> 00:02:10,280
+create server and which also must have a start date and with new data I create a new Date object which
+
+26
+00:02:10,280 --> 00:02:12,740
+simply is the current timestamp.
+
+27
+00:02:12,770 --> 00:02:15,640
+So this is now a simple way of combining two types.
+
+28
+00:02:15,650 --> 00:02:22,370
+No I will say that intersection types are closely related to interface inheritance because of course
+
+29
+00:02:22,370 --> 00:02:32,590
+we could have achieved the same year by using an interface admin and then an interface employee and
+
+30
+00:02:32,590 --> 00:02:40,770
+then we could also use an intersection type on these interfaces or we create a third interface elevated
+
+31
+00:02:40,780 --> 00:02:43,950
+employee which extends
+
+32
+00:02:47,280 --> 00:02:56,680
+employee and admin and therefore if I now comment this out we would have the exact same effect.
+
+33
+00:02:56,880 --> 00:03:02,910
+Now arguably that's a bit more code one reason why we maybe would prefer to use types here instead of
+
+34
+00:03:02,910 --> 00:03:08,910
+interfaces but the relation definitely is very close and you could absolutely use interfaces for this
+
+35
+00:03:08,910 --> 00:03:09,810
+example.
+
+36
+00:03:09,810 --> 00:03:15,630
+However it is worth noting that whilst intersection types can be especially useful when used in conjunction
+
+37
+00:03:15,630 --> 00:03:20,850
+with object types as we're doing it here you can use them with any types.
+
+38
+00:03:20,970 --> 00:03:28,510
+So if you had some other type calm buyable let's say and that's either a string or a number.
+
+39
+00:03:28,510 --> 00:03:34,180
+So we have a union type here with the string or number of base types and then we had a numeric type
+
+40
+00:03:34,180 --> 00:03:43,270
+here which is either a number or a boolean well then we could have our let's say universal type here
+
+41
+00:03:43,750 --> 00:03:50,590
+by intersecting combined table with numeric and in the end typescript then seized that universal of
+
+42
+00:03:50,590 --> 00:03:51,600
+courses of type.
+
+43
+00:03:51,600 --> 00:03:54,720
+No because that is the only intersection we have here.
+
+44
+00:03:54,760 --> 00:04:00,340
+But if you had more intersections then this would be the type that is assigned universals or that could
+
+45
+00:04:00,340 --> 00:04:04,990
+also be a union type which is the intersection of these two union types.
+
+46
+00:04:04,990 --> 00:04:12,040
+So the intersection operator can be used with any types and it then simply builds the intersection of
+
+47
+00:04:12,040 --> 00:04:12,950
+these types.
+
+48
+00:04:13,030 --> 00:04:17,350
+In the case of a union type that is basically the types they have in common.
+
+49
+00:04:17,350 --> 00:04:24,370
+In the case of object types it's simply the combination of these object properties so to say so these
+
+50
+00:04:24,430 --> 00:04:27,400
+are intersection types can sometimes be useful.
+
+51
+00:04:27,400 --> 00:04:32,770
+You will not use them all the time but you definitely can encounter situations where you can express
+
+52
+00:04:32,770 --> 00:04:37,270
+something in a simpler or shorter way by using intersection types.
+
+53
+00:04:37,270 --> 00:04:39,550
+Now just to prove that this also all works.
+
+54
+00:04:39,550 --> 00:04:46,120
+Let me open up a new tab here in my terminal and run TSC dash W to start to watch mode so that I don't
+
+55
+00:04:46,120 --> 00:04:51,730
+just have to ongoing live server but I actually also build my code now for reload once here we see this
+
+56
+00:04:51,730 --> 00:04:55,270
+runs without errors and it also compiles without errors.

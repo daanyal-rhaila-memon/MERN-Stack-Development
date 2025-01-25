@@ -1,0 +1,271 @@
+1
+00:00:02,570 --> 00:00:10,760
+Next I want to explore a function overloads a feature that allows us to define multiple functions signatures
+
+2
+00:00:10,880 --> 00:00:17,750
+so to save for one at the same function which simply means we can have multiple possible ways of calling
+
+3
+00:00:17,750 --> 00:00:24,120
+a function with different parameters for example to then do something inside of that function.
+
+4
+00:00:24,380 --> 00:00:29,480
+And a good example where function overloads can help us can be seen a little bit further above this
+
+5
+00:00:29,600 --> 00:00:36,980
+add function we wrote earlier what it does is it takes two combined table values which means strings
+
+6
+00:00:36,980 --> 00:00:43,320
+or numbers and then as you can see the return type typescript infers here all these combining all and
+
+7
+00:00:43,490 --> 00:00:48,710
+this simply means typescript understands that what it returns although either is a string or a number
+
+8
+00:00:49,220 --> 00:00:52,940
+but actually if you think about it that's not really true.
+
+9
+00:00:52,940 --> 00:00:58,310
+I mean technically it's true but we know that if we pass in two numbers the return type will always
+
+10
+00:00:58,310 --> 00:00:59,310
+be number.
+
+11
+00:00:59,400 --> 00:01:03,980
+If we pass in at least one string to return type will be string.
+
+12
+00:01:03,980 --> 00:01:05,470
+Now why might this matter.
+
+13
+00:01:05,480 --> 00:01:10,850
+Keep in mind that the add function is written like this and actually we can comment out everything below
+
+14
+00:01:11,120 --> 00:01:15,470
+and add some new code up there right below to function.
+
+15
+00:01:15,470 --> 00:01:22,840
+If I now get my result here by calling at an impasse and 1 and 5 you'll see results of type combining
+
+16
+00:01:22,840 --> 00:01:30,440
+all a consequence of this is that typescript does not know whether result is a number or a string.
+
+17
+00:01:30,440 --> 00:01:39,670
+Now this might really matter if we are passing in strings if I pass in Max Schwartz here then this works
+
+18
+00:01:39,700 --> 00:01:46,600
+but I still get back combined bill now as a consequence I can't call string functions on result I can't
+
+19
+00:01:46,600 --> 00:01:53,320
+call split for example to split on the whitespace I know that this will work because I know that when
+
+20
+00:01:53,320 --> 00:01:59,320
+I called a function like this I will make it into this if branch and I will get back a string so I know
+
+21
+00:01:59,320 --> 00:02:05,650
+that result will hold a string but typescript just knows that it holds a string or a number.
+
+22
+00:02:05,650 --> 00:02:11,770
+Now of course we can use typecasting here and tell typescript that what we get back is a string we can
+
+23
+00:02:11,770 --> 00:02:15,780
+do that with the typecasting syntax you learned about earlier.
+
+24
+00:02:16,090 --> 00:02:18,850
+Still it's not optimal that we have to do that.
+
+25
+00:02:18,850 --> 00:02:24,520
+I would argue because we have to write more code here even though we would expect typescript to understand
+
+26
+00:02:24,580 --> 00:02:30,160
+that when we call this function like this we always get back a string but typescript isn't really analyzing
+
+27
+00:02:30,160 --> 00:02:36,550
+our code good enough here and that's where a function overload can help us function overload is written
+
+28
+00:02:36,550 --> 00:02:44,410
+by simply writing function right above your main function so to say with the same name so you repeat
+
+29
+00:02:44,500 --> 00:02:52,110
+this line you're basically however without the curly braces no opening and closing curly braces thereafter
+
+30
+00:02:52,600 --> 00:02:55,450
+and now you're you want to use specific types.
+
+31
+00:02:55,510 --> 00:02:58,030
+No and No.
+
+32
+00:02:58,030 --> 00:03:03,760
+And then to find a return type for when this is the case when you get at least one number in there we
+
+33
+00:03:03,760 --> 00:03:08,710
+could say then the return type is number.
+
+34
+00:03:08,910 --> 00:03:15,480
+So now is that we're saying to typescript if we call this function and both arguments are a number then
+
+35
+00:03:15,480 --> 00:03:17,220
+this function returns a number.
+
+36
+00:03:17,220 --> 00:03:22,350
+Now this of course is not certain texts that would work in JavaScript it will be eliminated by typescript
+
+37
+00:03:22,530 --> 00:03:30,210
+indie compilation process but typescript merges this function information and this function declaration
+
+38
+00:03:30,210 --> 00:03:37,020
+here to gather and basically combines the knowledge of these two lines here and now it knows OK we can
+
+39
+00:03:37,020 --> 00:03:43,750
+call this function here ever with a and b of type combining able or with a and b of type No.
+
+40
+00:03:43,800 --> 00:03:48,090
+By the way you also can add more or less parameters here in your overloads.
+
+41
+00:03:48,090 --> 00:03:50,090
+You're really flexible there.
+
+42
+00:03:50,100 --> 00:03:58,470
+We could also add function add here and just expect one number and return a number and this would also
+
+43
+00:03:58,500 --> 00:04:05,340
+work if we make B optional in our other overloads as well because ultimately of course you need to ensure
+
+44
+00:04:05,580 --> 00:04:10,820
+that your code in here always works and you receive all the arguments you need in the end.
+
+45
+00:04:10,920 --> 00:04:14,640
+So if B would be optional here then you'd see this works.
+
+46
+00:04:14,640 --> 00:04:19,500
+Now of course we just would have to work around B being potentially optional down there.
+
+47
+00:04:19,620 --> 00:04:24,390
+I don't need that however so I'll get rid of that and just leave this but I also do not want an overload
+
+48
+00:04:24,480 --> 00:04:31,410
+for when we call this with strings so I will add another add function overload here where a is a string
+
+49
+00:04:31,710 --> 00:04:38,040
+and B is a string and then I'm pretty clear regarding the fact that what we return will be a string
+
+50
+00:04:38,490 --> 00:04:44,710
+by the way it is a good practice to add a semicolon after these overload lines here so now is dead I'm
+
+51
+00:04:44,710 --> 00:04:49,150
+saying if we're calling this function with two numbers we always get back a number.
+
+52
+00:04:49,150 --> 00:04:52,210
+If we call it with two strings we always get back a string.
+
+53
+00:04:52,240 --> 00:04:57,010
+If we call it with one string and one number we technically also always get back a string.
+
+54
+00:04:57,010 --> 00:05:01,920
+But I don't want to add all these possible combinations here of course I could add more and that also
+
+55
+00:05:01,930 --> 00:05:07,530
+add number here or the average combination we might have which is this one.
+
+56
+00:05:07,550 --> 00:05:13,530
+Well I guess now I did add all combinations and I'm listing all potential combinations of values here.
+
+57
+00:05:13,640 --> 00:05:19,310
+And what we return in each case now with that you see the error down there is gone because now typescript
+
+58
+00:05:19,310 --> 00:05:21,580
+knows that result will be of type String.
+
+59
+00:05:21,650 --> 00:05:28,490
+If we call add with these two values which are both strings and if I hover over add you see there are
+
+60
+00:05:28,490 --> 00:05:34,430
+three additional overloads away lable here I'm calling add with two strings but typescript knows there
+
+61
+00:05:34,430 --> 00:05:40,430
+are three other ways of calling this for example with a string and a number in which case I get back
+
+62
+00:05:40,430 --> 00:05:48,560
+a string with a number and some string or with two numbers this would all the work.
+
+63
+00:05:48,680 --> 00:05:54,380
+Then of course I can call split because types correctly identifies that when I called us with two numbers
+
+64
+00:05:54,680 --> 00:06:01,670
+I get back a number and on the number you can call split so these are function overloads and that can
+
+65
+00:06:01,670 --> 00:06:07,340
+help you in situations like this here where typescript would not be able to correctly inferred a return
+
+66
+00:06:07,340 --> 00:06:08,780
+type on its own.
+
+67
+00:06:08,780 --> 00:06:14,270
+Here you can be really clear about what's getting returned for two different combinations you might
+
+68
+00:06:14,270 --> 00:06:15,890
+support in your function.

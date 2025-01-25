@@ -1,0 +1,63 @@
+1
+00:00:02,330 --> 00:00:04,610
+And this is it for this module.
+
+2
+00:00:04,670 --> 00:00:10,850
+We had a look at some advanced typescript features that can come in handy in applications and like with
+
+3
+00:00:10,850 --> 00:00:13,180
+all the other concepts you already learn about.
+
+4
+00:00:13,220 --> 00:00:18,410
+Of course we will have a project where we see many of these things in action so that you don't just
+
+5
+00:00:18,410 --> 00:00:22,180
+learn them here in theory but you also see them applied in a real project.
+
+6
+00:00:22,670 --> 00:00:28,760
+Nonetheless I hope the concepts taught here are pretty clear and dairy use as clear as well and why
+
+7
+00:00:28,760 --> 00:00:36,650
+you might want to use some of these patterns because features like intersection types function overloads
+
+8
+00:00:37,250 --> 00:00:44,570
+type guards in various variations with different approaches to find out which type something has that
+
+9
+00:00:44,600 --> 00:00:47,450
+discriminated union's pattern ends on.
+
+10
+00:00:47,450 --> 00:00:53,510
+These are all interesting patterns said can help you improve your code your code quality and make your
+
+11
+00:00:53,510 --> 00:00:54,860
+intentions clearer.
+
+12
+00:00:54,960 --> 00:01:01,010
+Type costing can be super important to get proper types of support and make sure that you can really
+
+13
+00:01:01,010 --> 00:01:06,320
+work with types in the best possible way and get the best possible type checking.
+
+14
+00:01:06,320 --> 00:01:11,070
+And with that let's move on to our modules and see what else typescript has in store for us.
+
+15
+00:01:11,090 --> 00:01:16,250
+As I mentioned will of course also see many of these concepts being applied in a real project and in
+
+16
+00:01:16,250 --> 00:01:17,930
+general throughout this course.

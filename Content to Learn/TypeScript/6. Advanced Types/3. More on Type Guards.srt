@@ -1,0 +1,439 @@
+1
+00:00:02,270 --> 00:00:07,280
+No intersection types are one thing used more often however is a natural feature and that would be type
+
+2
+00:00:07,280 --> 00:00:07,830
+guards.
+
+3
+00:00:07,880 --> 00:00:12,370
+A feature we actually already used a bit let's use combined BBL here.
+
+4
+00:00:12,470 --> 00:00:18,410
+It's a union type where we even have a string or a number and type cards help us with union types because
+
+5
+00:00:18,410 --> 00:00:24,920
+whilst it is nice to have that flexibility often you need to know which exact type you are getting now
+
+6
+00:00:25,010 --> 00:00:26,240
+at runtime.
+
+7
+00:00:26,240 --> 00:00:33,040
+Let's say here we have our add function where I get a number which needs to be of type combined ABL.
+
+8
+00:00:33,110 --> 00:00:39,740
+So a string or a number and therefore I'll actually name it a year and then I got another argument which
+
+9
+00:00:39,770 --> 00:00:40,990
+also needs to be combined.
+
+10
+00:00:41,000 --> 00:00:44,680
+So a number or a string and then it will return A plus B.
+
+11
+00:00:44,690 --> 00:00:47,060
+Now we saw in the past that this does not work.
+
+12
+00:00:47,060 --> 00:00:59,720
+Instead we now need to check if type of A is equal to string for example or type of B is equal to string.
+
+13
+00:00:59,960 --> 00:01:04,520
+And if that is the case we return a two string plus B to string.
+
+14
+00:01:04,670 --> 00:01:06,800
+So we concatenate these two strings.
+
+15
+00:01:06,800 --> 00:01:12,620
+Otherwise if we don't make it into this if statement v return A plus B like this because now typescript
+
+16
+00:01:12,620 --> 00:01:18,530
+knows a and b have to be numbers here because if at least one of them would not be a number we would
+
+17
+00:01:18,530 --> 00:01:19,550
+be in here.
+
+18
+00:01:19,760 --> 00:01:27,680
+Now this year is called a Type guard because it allows us to utilize the flexibility union types gives
+
+19
+00:01:27,680 --> 00:01:35,330
+us and still ensure that our code runs correctly at runtime because often you have functions that work
+
+20
+00:01:35,330 --> 00:01:40,210
+with two or three different types and therefore a union type is perfect.
+
+21
+00:01:40,580 --> 00:01:46,030
+But what exactly you do with the values then does depend on the type.
+
+22
+00:01:46,160 --> 00:01:51,600
+Like here where we even concatenate or we add mathematically.
+
+23
+00:01:51,710 --> 00:01:58,210
+Now this is a type card using type of you can all the right other kinds of type cards.
+
+24
+00:01:59,030 --> 00:02:02,170
+And for that let me come back to my admin and employee types.
+
+25
+00:02:02,180 --> 00:02:08,610
+I got up there where I got privileges on the admin and start date on the employee.
+
+26
+00:02:08,620 --> 00:02:11,840
+Now we have the elevated employee which combines both.
+
+27
+00:02:11,860 --> 00:02:14,740
+Now I'll also create another type here.
+
+28
+00:02:15,010 --> 00:02:17,420
+That's the unknown employee.
+
+29
+00:02:17,920 --> 00:02:22,000
+This is ever just an employee or an admin.
+
+30
+00:02:22,000 --> 00:02:29,440
+So we have a union type using my to custom object types so I know an employee is either off the to now
+
+31
+00:02:29,440 --> 00:02:36,940
+we might have a function print employee information where I need to pass in an employee and that should
+
+32
+00:02:36,940 --> 00:02:39,650
+be of type unknown employee.
+
+33
+00:02:39,700 --> 00:02:45,250
+Now here I want to console log various pieces of information about the employee for example the name
+
+34
+00:02:45,790 --> 00:02:51,430
+from EMP dog name which will work without issues because both types of employees have a name property
+
+35
+00:02:52,150 --> 00:03:01,520
+but then I also want to console log the privileges by accessing EMP dot privilege.
+
+36
+00:03:01,560 --> 00:03:08,100
+And here I already get problems in the auto completion because typescript can't confirm that this always
+
+37
+00:03:08,100 --> 00:03:14,580
+exists on the argument because the unknown employee might be a normal employee which does not have a
+
+38
+00:03:14,580 --> 00:03:18,270
+privileged property only the admin asked it.
+
+39
+00:03:18,360 --> 00:03:20,130
+So now we need a type card here.
+
+40
+00:03:20,130 --> 00:03:27,600
+The problem just is with type of will not win anything if we check the type of employee debt will just
+
+41
+00:03:27,600 --> 00:03:29,520
+be object at runtime.
+
+42
+00:03:29,520 --> 00:03:32,970
+That doesn't tell us whether it has this property or not though.
+
+43
+00:03:33,000 --> 00:03:38,700
+Hence if I move the code in the safe check typescript is not happier than before because an object is
+
+44
+00:03:38,730 --> 00:03:44,820
+well just an object doesn't tell us anything about the properties we can check if it's off type employee
+
+45
+00:03:45,030 --> 00:03:46,920
+because dad is not a type.
+
+46
+00:03:47,010 --> 00:03:53,490
+Javascript knows and keep in mind that this check runs at runtime and uses javascript so we can only
+
+47
+00:03:53,490 --> 00:04:01,920
+compare the type type of gets us with the types javascript knows and that would be object string number
+
+48
+00:04:01,980 --> 00:04:08,370
+and boolean and so on and our custom type is not part of it that only exists in typescript world not
+
+49
+00:04:08,430 --> 00:04:14,040
+in the comp. javascript world so therefore does also does not work.
+
+50
+00:04:14,040 --> 00:04:17,670
+Now here a work around is to use a different if check.
+
+51
+00:04:18,000 --> 00:04:26,210
+We know we want to access privileges so we could check if employee privilege is a thing.
+
+52
+00:04:26,430 --> 00:04:30,720
+The problem Justice types typescript doesn't allow us to X this property at all.
+
+53
+00:04:30,720 --> 00:04:36,170
+Not even to check it like this but there is a different way for us to check it.
+
+54
+00:04:36,240 --> 00:04:43,950
+We can use the N keyword that's built into javascript we can check if privilege is now written as a
+
+55
+00:04:43,950 --> 00:04:46,600
+string is in m.
+
+56
+00:04:46,710 --> 00:04:54,090
+This is javascript code that allows to check if this exists as a property on employee and if that's
+
+57
+00:04:54,110 --> 00:05:03,360
+the case typescript a text is check here and therefore allows us to access this property inside of this
+
+58
+00:05:03,600 --> 00:05:11,570
+if check here and we can repeat that for the start date and therefore check if start date is a property
+
+59
+00:05:11,570 --> 00:05:17,990
+here and we can therefore also output this in this if check.
+
+60
+00:05:18,760 --> 00:05:27,740
+So now with that if we call print employee information and we pass in that one employee we created you
+
+61
+00:05:27,750 --> 00:05:28,200
+1
+
+62
+00:05:31,370 --> 00:05:36,490
+you will see that this compiles without errors and indeed outputs the privileges.
+
+63
+00:05:36,500 --> 00:05:42,570
+And while also here to date I should just also say start date here of course.
+
+64
+00:05:42,570 --> 00:05:45,650
+But with that it gives us the output we would expect.
+
+65
+00:05:45,870 --> 00:05:51,750
+And on the other end if we pass in an employee which does not have all these fields for example if we
+
+66
+00:05:51,750 --> 00:05:59,460
+create one on the fly which only has a start date but no privileges then does all the works and compiled
+
+67
+00:05:59,470 --> 00:06:04,050
+without errors and we simply don't print anything about the privileges because of this.
+
+68
+00:06:04,300 --> 00:06:13,640
+If check we have in their when working with classes you can also use a type of type guard and that would
+
+69
+00:06:13,640 --> 00:06:17,650
+be the instance of type guard let's say down there.
+
+70
+00:06:17,660 --> 00:06:29,210
+We have a class car that has a drive method where adjusts a console log driving and we have another
+
+71
+00:06:29,210 --> 00:06:39,160
+class truck which also has a drive method where we maybe you say driving a truck but we do have to say
+
+72
+00:06:39,160 --> 00:06:46,750
+method name and where we all have a load cargo method where we have an amount which is a number and
+
+73
+00:06:46,750 --> 00:06:54,310
+then here I'm just having some dummy code where I say loading cargo plus amount something like that
+
+74
+00:06:54,940 --> 00:07:01,200
+amount something like that so that we have two classes which of course have some similarity.
+
+75
+00:07:01,270 --> 00:07:03,940
+The drive method but also have a difference.
+
+76
+00:07:03,940 --> 00:07:11,740
+Now again we can create a union type here vehicle which is either a car or a truck.
+
+77
+00:07:11,980 --> 00:07:15,310
+And now let's say we create a new vehicle.
+
+78
+00:07:15,430 --> 00:07:23,920
+We won which is a new car and a number one B2 which is a new truck.
+
+79
+00:07:23,920 --> 00:07:31,360
+Now I have a function use vehicle which just expects to get a vehicle which should be of type vehicle.
+
+80
+00:07:31,390 --> 00:07:36,920
+So what should be of this union type so here we get a vehicle.
+
+81
+00:07:36,920 --> 00:07:43,460
+And now let's say our goal here is to do everything we can do with vehicles drive and load cargo.
+
+82
+00:07:43,460 --> 00:07:47,540
+So of course we can call vehicle drives because that always exists.
+
+83
+00:07:47,540 --> 00:07:54,500
+But for vehicle load cargo we have a problem because only a truck has that a car doesn't have it.
+
+84
+00:07:54,500 --> 00:07:56,430
+So this won't work.
+
+85
+00:07:56,480 --> 00:08:06,900
+Now we can of course again check if load cargo is in vehicle and if that is the case we can use it at
+
+86
+00:08:06,900 --> 00:08:09,520
+least if I fix that typo here.
+
+87
+00:08:09,520 --> 00:08:16,950
+So we now save that and we then call use vehicle and pass in the one and then we call it again with
+
+88
+00:08:16,950 --> 00:08:18,560
+V2 and I save all of that.
+
+89
+00:08:18,570 --> 00:08:21,700
+It compiles and it works.
+
+90
+00:08:21,730 --> 00:08:27,000
+Now that is one way of doing it and I'll shoot it this way which might be a bit more elegant because
+
+91
+00:08:27,000 --> 00:08:33,150
+it also eliminates the risk of you Miss typing in this property string here is that you use instance
+
+92
+00:08:33,180 --> 00:08:41,940
+off we can check if vehicle is an instance of truck if that's the case we know it will have a load cargo
+
+93
+00:08:41,940 --> 00:08:47,370
+method an instance of is a normal operator built into vanilla javascript.
+
+94
+00:08:47,460 --> 00:08:53,790
+So this is no typescript code just like type of this is part of JavaScript and it executes at runtime
+
+95
+00:08:54,300 --> 00:09:00,600
+javascript doesn't know the truck type but it knows constructor functions and classes in the end are
+
+96
+00:09:00,600 --> 00:09:07,470
+just translated to constructor functions and typescript is then able to find out if Weigl was created
+
+97
+00:09:07,470 --> 00:09:13,890
+based on the truck constructor function so since classes are compiled to something javascript understands
+
+98
+00:09:14,100 --> 00:09:20,190
+constructor functions it is able to use that if we would be using a interface here instead of a class
+
+99
+00:09:20,460 --> 00:09:24,360
+and therefore of course we couldn't have to implementation in here but would do that when we create
+
+100
+00:09:24,600 --> 00:09:31,230
+object with the object literal notation then we could not use instance of because interfaces as you
+
+101
+00:09:31,230 --> 00:09:37,900
+learn are not compile to any javascript code and therefore we can't use them at runtime for a class
+
+102
+00:09:37,910 --> 00:09:43,530
+as we can do that because javascript supports classes in constructor functions and with instance off
+
+103
+00:09:43,530 --> 00:09:49,830
+you can then find out if some object is based on that class and we know if it is then it will have a
+
+104
+00:09:49,830 --> 00:09:51,180
+load cargo function.
+
+105
+00:09:51,900 --> 00:09:59,730
+So these are type guards in the end type guards is just a term that describes the idea or approach of
+
+106
+00:09:59,730 --> 00:10:07,740
+checking if a certain property or method exists before you try to use it or if you can do something
+
+107
+00:10:07,740 --> 00:10:16,800
+with the type before you try to use it for objects that can be done with instance of or with in for
+
+108
+00:10:16,890 --> 00:10:23,760
+other types you can use type off and therefore we now have all the flexibility to use the flexibility
+
+109
+00:10:23,760 --> 00:10:30,780
+union types give you and still write code that then does one thing or the other based on the exact type
+
+110
+00:10:30,930 --> 00:10:32,430
+you're getting at runtime.

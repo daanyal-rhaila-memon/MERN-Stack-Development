@@ -1,0 +1,47 @@
+1
+00:00:02,560 --> 00:00:08,410
+With a lot of the basics out of the way let's explore some advanced typing concepts now some advanced
+
+2
+00:00:08,410 --> 00:00:13,640
+concepts typescript offers to you that can become handy in certain situations.
+
+3
+00:00:13,690 --> 00:00:19,360
+You might be facing in the projects you're working on in this module we'll have a look at a couple of
+
+4
+00:00:19,360 --> 00:00:23,260
+interesting concepts among them intersection types.
+
+5
+00:00:23,260 --> 00:00:25,700
+What that is and why it might be useful.
+
+6
+00:00:25,840 --> 00:00:26,970
+Type guards.
+
+7
+00:00:27,040 --> 00:00:33,460
+What we can do with those discriminated unions fancy term for a quite interesting topic.
+
+8
+00:00:33,460 --> 00:00:35,820
+We'll also have a look at type.
+
+9
+00:00:35,860 --> 00:00:40,490
+A useful feature for telling typescript about the type of something.
+
+10
+00:00:40,510 --> 00:00:46,480
+In cases where typescript is not able to find out which type something has on its own and we'll have
+
+11
+00:00:46,480 --> 00:00:52,270
+a look at function overload it's a pretty neat feature that allows us to write more flexible functions
+
+12
+00:00:52,270 --> 00:00:56,290
+with better typescript support than we might otherwise get it.

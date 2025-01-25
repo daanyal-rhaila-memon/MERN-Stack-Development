@@ -1,0 +1,367 @@
+1
+00:00:02,310 --> 00:00:10,170
+So discriminated unions really really useful and not a very useful feature is typecasting typecasting
+
+2
+00:00:10,410 --> 00:00:18,270
+helps you tell typescript that some value is office specific type where typescript is not able to detect
+
+3
+00:00:18,270 --> 00:00:24,120
+it on its own but you as a developer know that it will be the case and a good example for days is if
+
+4
+00:00:24,120 --> 00:00:31,140
+we get access to something in the dorm let's say here we have a paragraph from the dorm only a paragraph.
+
+5
+00:00:31,140 --> 00:00:33,410
+Nothing else in there and it's an empty paragraph.
+
+6
+00:00:33,440 --> 00:00:37,190
+So obviously if we save that we don't see anything here on the screen.
+
+7
+00:00:37,200 --> 00:00:46,440
+Now we can get access to that paragraph from inside our script here cons para graph with document queries
+
+8
+00:00:46,440 --> 00:00:49,210
+selector P for example.
+
+9
+00:00:49,210 --> 00:00:54,940
+Now when we use queries selector and we pass in P as a selector so it's selecting by the p tag then
+
+10
+00:00:54,940 --> 00:01:00,310
+typescript is actually able to find out as you can see if I hover over it that this will be of type
+
+11
+00:01:00,610 --> 00:01:06,730
+paragraph element or now because maybe such element doesn't exist in the page but that's a different
+
+12
+00:01:06,730 --> 00:01:07,060
+thing.
+
+13
+00:01:07,060 --> 00:01:09,940
+Let's ignore the or null case for now.
+
+14
+00:01:09,940 --> 00:01:14,650
+The important thing is to typescript actually finds out that this is a paragraph element.
+
+15
+00:01:14,650 --> 00:01:16,810
+Notice changes if we select by something else.
+
+16
+00:01:16,810 --> 00:01:19,830
+Let's say an I.D. we named as here.
+
+17
+00:01:19,930 --> 00:01:21,260
+Message output.
+
+18
+00:01:21,280 --> 00:01:23,980
+So this paragraph has an idea of message output.
+
+19
+00:01:23,980 --> 00:01:29,290
+Now we as a developer of course know that we assign this I.D. to this paragraph but typescript doesn't
+
+20
+00:01:29,290 --> 00:01:34,630
+know that typescript does not dive into our HQ and files and analyze them.
+
+21
+00:01:34,630 --> 00:01:41,710
+So if we now select by that idea here for example with get element by I.D. then we see what types infers
+
+22
+00:01:41,770 --> 00:01:45,200
+is that this is just an H html element or null.
+
+23
+00:01:45,220 --> 00:01:52,210
+It doesn't know which specific aged him Al element that is now for a paragraph that might not matter
+
+24
+00:01:52,210 --> 00:01:52,750
+too much.
+
+25
+00:01:52,750 --> 00:01:59,050
+Maybe we just want to do things with it that we could do with any H.M. element for example access its
+
+26
+00:01:59,110 --> 00:02:03,380
+text content or anything like that but what if we had a input here.
+
+27
+00:02:03,460 --> 00:02:10,480
+What if we actually had an input type text and we want to get the value the user entered.
+
+28
+00:02:10,480 --> 00:02:15,520
+So I'll give it an idea of user input and now I select this in my typescript code.
+
+29
+00:02:15,550 --> 00:02:21,560
+So here I select by idea user input and it's no longer a paragraph but user input element.
+
+30
+00:02:21,580 --> 00:02:27,910
+Now we as a developer we know that here we reach out to this input element but as a said typescript
+
+31
+00:02:27,910 --> 00:02:31,060
+doesn't know that typescript doesn't read our age similar code.
+
+32
+00:02:31,180 --> 00:02:34,990
+So types God only knows that it's some H html element.
+
+33
+00:02:35,030 --> 00:02:41,560
+Now if I would want to set the value property off this deal for and I would try to do user input element
+
+34
+00:02:41,590 --> 00:02:43,680
+dot value equal high.
+
+35
+00:02:43,850 --> 00:02:50,560
+There you see that I actually get an error I get an error because for one does object as possibly no
+
+36
+00:02:50,830 --> 00:02:56,410
+we can fix this by adding an exclamation mark after this and I'll come back to this in a second but
+
+37
+00:02:56,440 --> 00:03:03,100
+even then I still get an error that value does not ex system type h him l element because this generic
+
+38
+00:03:03,100 --> 00:03:11,440
+type which basically any H to male element has as a type does not support properties that are specific
+
+39
+00:03:11,440 --> 00:03:18,520
+to well specific H HTML elements so we would need to tell typescript that actually what we select here
+
+40
+00:03:18,730 --> 00:03:26,770
+is not just not null but that it's also of type H HTML input element and that's what we can do with
+
+41
+00:03:26,770 --> 00:03:28,170
+typecasting.
+
+42
+00:03:28,270 --> 00:03:34,170
+Now there are two ways of type cost and as syntax taxes we can use and they are equivalent.
+
+43
+00:03:34,210 --> 00:03:40,720
+One is that we add something in front of the thing we want to convert or where we want to tell typescript
+
+44
+00:03:40,720 --> 00:03:47,830
+the type we add angle brackets opening and closing and then between these brackets the type of the thing
+
+45
+00:03:48,010 --> 00:03:49,530
+after the angle brackets.
+
+46
+00:03:49,540 --> 00:03:56,260
+In this case h him l input element and this type is globally available because of my t as conflict file
+
+47
+00:03:56,350 --> 00:04:03,600
+I am including the DOM lib with that typescript knows that whatever we select here after the angle brackets
+
+48
+00:04:03,870 --> 00:04:09,000
+will be of type H to male input element and therefore it doesn't complain anymore.
+
+49
+00:04:09,000 --> 00:04:10,270
+So this is where John in.
+
+50
+00:04:10,380 --> 00:04:14,790
+Let me copy that and comment it out and show you the alternative.
+
+51
+00:04:14,790 --> 00:04:17,840
+This works absolutely fine and you can use this.
+
+52
+00:04:18,060 --> 00:04:24,840
+Now if you know react however you know that there you also have such a angled bracket syntax inside
+
+53
+00:04:24,840 --> 00:04:32,370
+of JavaScript or typescript if you use that for react files where are you right J as X code in your
+
+54
+00:04:32,370 --> 00:04:33,600
+react components.
+
+55
+00:04:33,600 --> 00:04:36,090
+Now if you don't know react that might not tell you much.
+
+56
+00:04:36,090 --> 00:04:43,110
+Just be aware that a similar syntax exists in react projects and are the angle brackets are not used
+
+57
+00:04:43,320 --> 00:04:50,400
+to pass any information regarding the types you're using but instead they are parsed by some bill tools
+
+58
+00:04:50,400 --> 00:04:54,280
+and by react ultimately to know what you want to render on the screen.
+
+59
+00:04:54,450 --> 00:04:59,940
+So totally detached from typescript to not clash with that J is X syntax.
+
+60
+00:04:59,940 --> 00:05:04,400
+The typescript team provides an alternative to this angled bracket typecasting.
+
+61
+00:05:04,410 --> 00:05:07,940
+You can also add something after the thing you want to type cost.
+
+62
+00:05:07,950 --> 00:05:12,750
+So after this selection in this case and that thing is the as keyword.
+
+63
+00:05:12,750 --> 00:05:16,760
+And then here you again add the type to which you want to cost this.
+
+64
+00:05:16,800 --> 00:05:21,110
+So this now tells typescript that the expression in front of it.
+
+65
+00:05:21,180 --> 00:05:29,130
+In this case this expression here will yield a value of type HD him El input element and therefore again
+
+66
+00:05:29,160 --> 00:05:30,570
+we get no error.
+
+67
+00:05:30,570 --> 00:05:35,270
+So this is an alternative and you can use eval of the two soon taxes whatever you prefer.
+
+68
+00:05:35,340 --> 00:05:40,830
+You just should try to be consistent throughout your project then so that you don't alternate between
+
+69
+00:05:40,830 --> 00:05:48,300
+these two syntax but with that you can past is valuable extra information to TypeScript and make code
+
+70
+00:05:48,300 --> 00:05:54,060
+like this work even though typescript on its own would not be able to find out that this year yields
+
+71
+00:05:54,060 --> 00:06:00,450
+are aged male input element of course since you're forcing typescript to use this type it's your responsibility
+
+72
+00:06:00,450 --> 00:06:05,670
+as a developer to ensure that whatever does expression yields will be of that type.
+
+73
+00:06:05,670 --> 00:06:11,520
+Otherwise you might get a runtime error or unexpected behaviour at runtime if you try to interact with
+
+74
+00:06:11,520 --> 00:06:18,080
+that element in a way that actually is not supported so typecasting is a powerful feature.
+
+75
+00:06:18,100 --> 00:06:20,530
+So is this exclamation mark here.
+
+76
+00:06:20,530 --> 00:06:24,540
+I actually did X Florida's a little bit earlier in the course already.
+
+77
+00:06:24,850 --> 00:06:30,280
+This exclamation mark allows us to tell typescript that the expression in front of it will never yield
+
+78
+00:06:30,280 --> 00:06:35,800
+now and does this required for some expressions like this here when we select something from the dom
+
+79
+00:06:36,100 --> 00:06:40,980
+that might return null if we know as a developer that this will never return null.
+
+80
+00:06:41,020 --> 00:06:45,520
+Then we can use this exclamation mark otherwise and you'll learn that already.
+
+81
+00:06:45,520 --> 00:06:51,220
+I just want to reiterate on that otherwise if you're not sure that this will not return now you can
+
+82
+00:06:51,220 --> 00:06:52,580
+use a if check.
+
+83
+00:06:52,660 --> 00:06:59,460
+So you could check if user input element is true 3 and Alfred does not now and then use it in there.
+
+84
+00:06:59,500 --> 00:07:05,920
+Now I had to remove the typecasting in this case because if we do type cost here we also tell typescript
+
+85
+00:07:05,920 --> 00:07:10,540
+that this will not be null and since I'm not certain about that I can't cast here.
+
+86
+00:07:10,540 --> 00:07:15,280
+Instead I have to do that here when I use to value and therefore I want to do it before I access to
+
+87
+00:07:15,280 --> 00:07:19,750
+value property by adding as H2 l input elements like this.
+
+88
+00:07:19,870 --> 00:07:23,250
+Of course dad however would fail this is invalid syntax.
+
+89
+00:07:23,260 --> 00:07:30,290
+We would try to access a value property on a H2 Mel input element thing and this doesn't even make sense.
+
+90
+00:07:30,340 --> 00:07:35,530
+We simply have to wrap this expression into parentheses then to make sure that this is evaluated first
+
+91
+00:07:35,740 --> 00:07:39,620
+and then we try to access value on the result of this expression.
+
+92
+00:07:39,670 --> 00:07:42,760
+And now we have an alternative to using the exclamation mark.

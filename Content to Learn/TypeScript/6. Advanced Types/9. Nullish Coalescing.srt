@@ -1,0 +1,139 @@
+1
+00:00:02,330 --> 00:00:07,850
+Now loosely related to optional Cheney we got another nice feature in typescript which helps us deal
+
+2
+00:00:07,850 --> 00:00:12,850
+with knowledge data and that feature is called knowledge coalescing.
+
+3
+00:00:12,860 --> 00:00:19,000
+Now imagine you have some data some input where you don't know with certainty whether it's now or on
+
+4
+00:00:19,000 --> 00:00:23,360
+the find or whether it's actually a valid piece of data.
+
+5
+00:00:23,360 --> 00:00:31,370
+For example user input could be now let's say now again here we hard code doesn't to typescript hence
+
+6
+00:00:31,370 --> 00:00:33,480
+typescript knows that this is now.
+
+7
+00:00:33,590 --> 00:00:39,560
+But if you're fetching this through some DOM API where you don't know it with certainty or if you're
+
+8
+00:00:39,560 --> 00:00:44,630
+getting this from a back end then you might not know in advance and typescript might not know where
+
+9
+00:00:44,630 --> 00:00:52,720
+it is is null or not if you didn't want to store this in some other constant or variable like stored
+
+10
+00:00:52,750 --> 00:00:53,850
+data.
+
+11
+00:00:54,130 --> 00:00:58,770
+You might want to make sure that if it is now you store a fallback value.
+
+12
+00:00:58,810 --> 00:01:06,760
+Now you can do so with the logical or operator where you store a default where you get that second value
+
+13
+00:01:06,760 --> 00:01:08,530
+of the first one is undefined or.
+
+14
+00:01:08,530 --> 00:01:11,590
+Now if it's false C to be precise.
+
+15
+00:01:11,590 --> 00:01:18,820
+The problem with this approach is if this is actually not now or undefined but let's say an empty string
+
+16
+00:01:19,030 --> 00:01:25,660
+it is treated as a false value and data for debt default fallback value will kick in.
+
+17
+00:01:25,660 --> 00:01:32,860
+So if I set a console lock stored data here you will see that this prints default now maybe it is what
+
+18
+00:01:32,860 --> 00:01:38,680
+you want and in that case this is a perfectly fine solution but if you want to keep that user input
+
+19
+00:01:38,860 --> 00:01:45,540
+or whatever data you're working with unless it really is now or undefined then you need another approach.
+
+20
+00:01:45,550 --> 00:01:48,960
+Because here we would treat this as false and use the fallback.
+
+21
+00:01:48,970 --> 00:01:54,760
+But maybe you want to keep an empty input just null or undefined should be handled differently for that
+
+22
+00:01:54,760 --> 00:01:56,410
+type could also has an operator.
+
+23
+00:01:56,410 --> 00:01:57,760
+The double question Mark.
+
+24
+00:01:57,760 --> 00:02:05,080
+Operator this is called The Knowledge coalescing operator and it means if this is null or undefined
+
+25
+00:02:05,290 --> 00:02:13,270
+and really just that not an empty string not zero really just now or undefined then we'll use the fallback
+
+26
+00:02:13,450 --> 00:02:15,130
+if it's not Nala on the find.
+
+27
+00:02:15,160 --> 00:02:16,730
+We'll use that value.
+
+28
+00:02:16,750 --> 00:02:21,400
+So in this scenario here this compiles and you see we stored the empty string.
+
+29
+00:02:21,430 --> 00:02:23,020
+Hence I'm not printing anything here.
+
+30
+00:02:23,080 --> 00:02:24,500
+This is the empty string.
+
+31
+00:02:24,770 --> 00:02:28,330
+If is on the other hand let's say is undefined here in safeties.
+
+32
+00:02:28,600 --> 00:02:32,550
+You say now it says default because thanks to this double question Mark.
+
+33
+00:02:32,560 --> 00:02:34,400
+Operator we fall back to this.
+
+34
+00:02:34,430 --> 00:02:40,600
+Well back and therefore here we got a number very useful feature which can help you deal with knowledge
+
+35
+00:02:40,630 --> 00:02:42,610
+or undefined values with grace.
