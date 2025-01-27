@@ -1,0 +1,167 @@
+1
+00:00:02,380 --> 00:00:06,700
+So we got started with generics and hopefully it's clear what types does here.
+
+2
+00:00:06,700 --> 00:00:12,520
+We passed some extra information into the merge function so that we can work in a better way with the
+
+3
+00:00:12,520 --> 00:00:17,890
+result of the merge function and that's typically what generics are therefore they allow you to continue
+
+4
+00:00:17,890 --> 00:00:21,990
+working with your data in a typescript optimal way.
+
+5
+00:00:22,000 --> 00:00:28,750
+Now in this case here however we would have a problem if I pass in let's say just a number 30 year of
+
+6
+00:00:28,750 --> 00:00:33,580
+course typescript now frozen Arrow because it tried to access to h but accessing the name would work
+
+7
+00:00:33,910 --> 00:00:40,060
+nonetheless if we save that it compiles without errors and if I print the overall merge object we see
+
+8
+00:00:40,060 --> 00:00:46,630
+what I get back is just a hobby is a name in my object which makes sense because 30 is a number.
+
+9
+00:00:46,630 --> 00:00:51,780
+And when we pass that as a second argument to object a sign which we in the end are doing here.
+
+10
+00:00:51,970 --> 00:00:58,420
+Well then this just fails silently javascript doesn't throw an error it doesn't complain but of course
+
+11
+00:00:58,420 --> 00:01:02,310
+it all doesn't merge 30 into the newly created object.
+
+12
+00:01:02,320 --> 00:01:04,750
+You see there is no 30 in this object.
+
+13
+00:01:04,750 --> 00:01:11,650
+Now how which javascript do so because 30 is not an object an object a sign only is capable of merging
+
+14
+00:01:11,650 --> 00:01:14,140
+different objects with each other.
+
+15
+00:01:14,140 --> 00:01:17,650
+So what we in the end want to say well we don't care about the exact type.
+
+16
+00:01:17,650 --> 00:01:22,690
+We don't care about the exact structure of the object you're providing here for a new entity.
+
+17
+00:01:22,960 --> 00:01:31,360
+But what we do care about is that both parameters both types t and you should be any kind of object
+
+18
+00:01:31,360 --> 00:01:34,370
+but they should be an object at all times.
+
+19
+00:01:34,450 --> 00:01:40,150
+And currently we're not saying that currently we're just saying this should be of any type I don't care.
+
+20
+00:01:40,150 --> 00:01:41,750
+Now often that's not OK.
+
+21
+00:01:41,770 --> 00:01:49,340
+You want to restrict the types of T and you hear some of your generic types and you can do that with
+
+22
+00:01:49,340 --> 00:01:52,670
+type constraints for generic types.
+
+23
+00:01:52,670 --> 00:01:59,060
+You can set certain constraints regarding the types your generic types can be based on and you do this
+
+24
+00:01:59,060 --> 00:02:05,200
+with the extents keyword here in the angled brackets after the type which you want to constrain.
+
+25
+00:02:05,210 --> 00:02:12,680
+So here we could say extends Object and with that I'm saying the T type can be any object with any structure
+
+26
+00:02:12,770 --> 00:02:17,510
+but it has to be an object we can do the same for you.
+
+27
+00:02:17,600 --> 00:02:24,470
+And if I do that you see now I already get an error here in the ITC and if I try to save that I also
+
+28
+00:02:24,470 --> 00:02:31,160
+get an error in the compiler because the type 30 argument here is not a signal to type object.
+
+29
+00:02:32,120 --> 00:02:34,500
+So that's of course the behavior we want here.
+
+30
+00:02:34,520 --> 00:02:41,930
+Now we're forced to pass in an object again which is like this now we're forced to pass this in again
+
+31
+00:02:42,110 --> 00:02:49,040
+and therefore we improve does function because now it really works and we no object assign ones to objects.
+
+32
+00:02:49,040 --> 00:02:55,160
+So in the end we want to guarantee that we get two objects here by setting certain constraints on our
+
+33
+00:02:55,160 --> 00:03:01,670
+generic types and these constraints here can be anything you can refer to object to string you could
+
+34
+00:03:01,670 --> 00:03:03,670
+use your own type if you had it.
+
+35
+00:03:03,770 --> 00:03:08,380
+You can also use union types here if you want to you're really flexible there.
+
+36
+00:03:08,540 --> 00:03:10,430
+You can set any constraints you want.
+
+37
+00:03:10,550 --> 00:03:15,530
+And of course you don't have to constrain all generic types if you just want to constrain you.
+
+38
+00:03:15,530 --> 00:03:21,770
+You can do that in this example it just makes sense to constrain both because object design once two
+
+39
+00:03:21,890 --> 00:03:24,600
+objects here but you're really flexible there.
+
+40
+00:03:24,710 --> 00:03:29,870
+It is important to be aware of that concept of constraints though because that allows you to work with
+
+41
+00:03:29,870 --> 00:03:36,020
+generic types and a better in an optimal way which is why it's unnecessary errors or strange behaviors
+
+42
+00:03:36,260 --> 00:03:37,310
+as we had it before.

@@ -1,0 +1,55 @@
+1
+00:00:02,550 --> 00:00:06,450
+In this module we'll dive into a concept called generics.
+
+2
+00:00:06,450 --> 00:00:10,920
+Generics exist in typescript not in vanilla javascript.
+
+3
+00:00:10,920 --> 00:00:16,620
+So there is no real translation here but we can utilize him in typescript and the concept of generic
+
+4
+00:00:16,620 --> 00:00:22,230
+types all exists in our programming languages not in all our programming languages of course but in
+
+5
+00:00:22,230 --> 00:00:22,860
+some.
+
+6
+00:00:22,860 --> 00:00:27,250
+For example in C sharp now this course of course is not about C sharp though.
+
+7
+00:00:27,360 --> 00:00:31,730
+So let's have a look at what generics are and what they are in typescript and how we use them there
+
+8
+00:00:31,740 --> 00:00:33,250
+and why we use them there.
+
+9
+00:00:33,450 --> 00:00:38,920
+Specifically we'll have a look at what exactly generics are and why they are interesting and helpful.
+
+10
+00:00:39,030 --> 00:00:45,570
+We'll then build our own generic functions and classes because turns out we can do that will then have
+
+11
+00:00:45,570 --> 00:00:51,670
+a look at generic constraints and what that is and why we would use something like that.
+
+12
+00:00:51,870 --> 00:00:58,080
+And we'll have a look at a couple of special typescript types which also typically are generic and which
+
+13
+00:00:58,080 --> 00:01:00,830
+we do have for only really can understand now.
+
+14
+00:01:01,140 --> 00:01:03,120
+So let's see what we got there.

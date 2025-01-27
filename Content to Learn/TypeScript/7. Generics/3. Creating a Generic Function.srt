@@ -1,0 +1,399 @@
+1
+00:00:02,250 --> 00:00:08,580
+So to get started with our own generics here below loaded commented out code I will start with a generic
+
+2
+00:00:08,670 --> 00:00:12,630
+function you can build generic classes and functions all show both.
+
+3
+00:00:12,630 --> 00:00:15,370
+And here I'll start with a function.
+
+4
+00:00:15,390 --> 00:00:23,700
+Now let's say we want to have a function which basically merges two objects and returns a new object.
+
+5
+00:00:23,700 --> 00:00:30,030
+So here we could name it merge and we want to get object a an object B as a input.
+
+6
+00:00:30,050 --> 00:00:37,220
+Now of course we could write this function in a certain way we could say this is of type object and
+
+7
+00:00:37,250 --> 00:00:40,070
+this is of type object.
+
+8
+00:00:40,070 --> 00:00:46,550
+And then what does function does is it returns the result of object assign where it get object a and
+
+9
+00:00:46,580 --> 00:00:48,160
+object B.
+
+10
+00:00:48,160 --> 00:00:53,710
+So of course since we get this object assign method already built into normal javascript we could argue
+
+11
+00:00:53,760 --> 00:00:55,680
+if we really need a merge function.
+
+12
+00:00:55,790 --> 00:00:58,170
+But of course you could be doing additional work here.
+
+13
+00:00:58,180 --> 00:01:03,100
+You could enriched is with extra information with extra options and in the end does this just a demo
+
+14
+00:01:03,110 --> 00:01:04,790
+just an example.
+
+15
+00:01:04,790 --> 00:01:12,760
+So this would be valid we could call merge here and console log its result like this and then pass in
+
+16
+00:01:12,820 --> 00:01:17,630
+an object which has a name key and a second object which has a h.
+
+17
+00:01:17,740 --> 00:01:23,770
+And if we run that and we save this here in the browser indeed we get this outputs we get this merged
+
+18
+00:01:23,800 --> 00:01:24,300
+object.
+
+19
+00:01:24,310 --> 00:01:39,550
+Now this works the problem we have with that is if we try to store this merge name Max and age 30.
+
+20
+00:01:39,660 --> 00:01:41,340
+If we tried to store this year
+
+21
+00:01:44,230 --> 00:01:46,540
+I can't ex's name on the result.
+
+22
+00:01:46,570 --> 00:01:52,750
+I can't access age on the results on this merged object even though we know that both will exist because
+
+23
+00:01:52,750 --> 00:01:58,840
+typescript doesn't know this types we can't know this because we are just telling it you getting an
+
+24
+00:01:58,840 --> 00:02:05,110
+object that Indiana type infers that we return an object which is correct but which doesn't carry all
+
+25
+00:02:05,110 --> 00:02:07,810
+the information we could use here.
+
+26
+00:02:07,840 --> 00:02:09,990
+Now of course we can always do typecasting.
+
+27
+00:02:10,030 --> 00:02:15,370
+We can tell TypeScript and what we get back is an object where we have a name key and we have a H key
+
+28
+00:02:15,970 --> 00:02:19,080
+but that's really cumbersome if we have to do that.
+
+29
+00:02:19,090 --> 00:02:21,410
+So here generics can help us.
+
+30
+00:02:21,490 --> 00:02:27,190
+We turned it into a generic function by adding these angled brackets after the function name and then
+
+31
+00:02:27,280 --> 00:02:29,750
+we define Q identifiers.
+
+32
+00:02:29,770 --> 00:02:36,960
+Typically you start with T for type but you could use any identifier here doesn't have to be a single
+
+33
+00:02:37,000 --> 00:02:37,720
+character.
+
+34
+00:02:37,750 --> 00:02:42,640
+But the conventions use a single character and typically if you only have one generic type you named
+
+35
+00:02:42,640 --> 00:02:43,620
+as T.
+
+36
+00:02:43,780 --> 00:02:48,880
+And then you say well this generic type here this is now available inside of this function so we could
+
+37
+00:02:48,880 --> 00:02:55,760
+say what we get here is of type T look strange will get there no worries.
+
+38
+00:02:55,760 --> 00:02:59,630
+Now here we get two arguments where we don't know exactly what it will look like.
+
+39
+00:02:59,630 --> 00:03:04,820
+So I will accept a second generic type here simply by adding a comma and the angle brackets and then
+
+40
+00:03:05,030 --> 00:03:11,870
+we just continue in the alphabet and Deford a second generic parameter or type you might be using in
+
+41
+00:03:12,060 --> 00:03:15,620
+a function typically is named you.
+
+42
+00:03:15,680 --> 00:03:21,820
+So we could say this is of type you know what test is yield us.
+
+43
+00:03:22,130 --> 00:03:28,820
+Well a lot actually as you see with this alone if you hover over emerge typescript infers that this
+
+44
+00:03:28,820 --> 00:03:36,980
+function returns the intersection of T and you could of course also set is explicitly like this but
+
+45
+00:03:36,980 --> 00:03:42,740
+we don't even need to do that because object assign returns an intersection and therefore since we returned
+
+46
+00:03:42,740 --> 00:03:48,440
+a result of object assigned types could automatically understands that this function returns the intersection.
+
+47
+00:03:48,440 --> 00:03:50,340
+So how is this helpful then.
+
+48
+00:03:50,360 --> 00:03:55,610
+Well if we now hover over merged object we see that now with this alone typescript understands that
+
+49
+00:03:55,610 --> 00:04:01,700
+what we store in merged object is the intersection of these two object types because it sees that we're
+
+50
+00:04:01,700 --> 00:04:05,210
+passing in these objects which are of these object types.
+
+51
+00:04:05,210 --> 00:04:11,630
+It infers name string and h no and that our function returns the intersection.
+
+52
+00:04:11,630 --> 00:04:18,710
+Why is it able to inferred is now and not with object which we had before because object is a highly
+
+53
+00:04:18,710 --> 00:04:25,310
+unspecific type we say any object and yes therefore typescript is able to infer that we return the intersection
+
+54
+00:04:25,310 --> 00:04:31,970
+of object and object but the intersection of two unknown objects is just a new unknown object which
+
+55
+00:04:31,970 --> 00:04:36,620
+doesn't offer any additional type information to typescript with generic types.
+
+56
+00:04:36,620 --> 00:04:45,380
+What we're telling typescript is that these two parameters can and often will be of different types
+
+57
+00:04:45,950 --> 00:04:51,590
+and Danforth type good is able to understand dead we're not just working with some random objects type
+
+58
+00:04:51,860 --> 00:04:58,610
+but dead we will get different type data here and the dysfunction overall will return the intersection
+
+59
+00:04:58,610 --> 00:05:04,070
+of debt data and Danforth type good is able to understand that what we store in here in merged object
+
+60
+00:05:04,460 --> 00:05:11,360
+is such intersect that data of these two inputs because now we're not just dealing with some unknown
+
+61
+00:05:11,450 --> 00:05:19,920
+objects here but with very specific types and therefore for now if a console log merged object age here
+
+62
+00:05:19,950 --> 00:05:27,540
+this works without errors as you can tell here I'm printing thirty because of generic types we're giving
+
+63
+00:05:27,530 --> 00:05:33,330
+time of the extra information that we don't know what exactly the types will be short they will be objects
+
+64
+00:05:33,330 --> 00:05:38,460
+here we can tell that but we don't know if it's an object with a name key with the H key with a Hobbes
+
+65
+00:05:38,460 --> 00:05:44,100
+key we don't know and we don't care we don't care about the exact object here we don't want to specify
+
+66
+00:05:44,100 --> 00:05:49,620
+that this has to be of this type because then all of a sudden if I had Hobbes in there we would have
+
+67
+00:05:49,620 --> 00:05:50,580
+a problem.
+
+68
+00:05:50,580 --> 00:05:55,650
+So I don't want to be that restrictive I just want to say this is of any type which I don't care about
+
+69
+00:05:55,920 --> 00:05:58,650
+but it's most likely a different type than this one here.
+
+70
+00:05:58,650 --> 00:06:04,440
+And if it would be the same that would be fine too but typescript understands that we do have specific
+
+71
+00:06:04,440 --> 00:06:09,840
+types here for these two parameters and then we returned intersection of them instead of just having
+
+72
+00:06:09,960 --> 00:06:12,610
+any unspecific object here.
+
+73
+00:06:12,720 --> 00:06:17,700
+Now specifically the magic here is not just that we tell typescript that we got two different types
+
+74
+00:06:17,700 --> 00:06:24,000
+here but dead these types are not set in stone when we define this function but they are set dynamically
+
+75
+00:06:24,000 --> 00:06:25,860
+when we called the function.
+
+76
+00:06:25,860 --> 00:06:32,220
+So here we're calling the function and types in first the types for two arguments for t it basically
+
+77
+00:06:32,220 --> 00:06:38,070
+fills in an object type with an object with a name property which holds a string and a Hobbes property
+
+78
+00:06:38,070 --> 00:06:44,940
+which holds an array of strings and for a you add fields in a type of type object with H property where
+
+79
+00:06:45,000 --> 00:06:48,010
+h is of type No.
+
+80
+00:06:48,030 --> 00:06:54,530
+Now when we call this function again in number line and we pass in different objects in a store does
+
+81
+00:06:54,550 --> 00:07:01,650
+in a new constant with a new name then of course different types are filled in for t and you for this
+
+82
+00:07:01,650 --> 00:07:02,940
+function call.
+
+83
+00:07:03,180 --> 00:07:09,120
+You can also specifically tell types which types it should fill in by adding angle brackets after the
+
+84
+00:07:09,120 --> 00:07:15,870
+function name when you call it and then you would fill in your own types for t and you we could tell
+
+85
+00:07:15,870 --> 00:07:21,070
+typescript a t should be of type String for this function call and you should be of type No.
+
+86
+00:07:21,420 --> 00:07:26,340
+But then of course typescript would complain about the concrete values were passing in here because
+
+87
+00:07:26,370 --> 00:07:28,070
+this clearly is not a string.
+
+88
+00:07:28,190 --> 00:07:31,360
+And if we would fix this this clearly would not be of type.
+
+89
+00:07:31,360 --> 00:07:32,330
+No.
+
+90
+00:07:32,340 --> 00:07:38,790
+So here we could be very specific and say well the first argument were the type t to be precise for
+
+91
+00:07:38,790 --> 00:07:45,210
+this function call here will be an object type where we have a name property which is of type String
+
+92
+00:07:45,510 --> 00:07:52,320
+and a Hobbes property which is of type String array and the concrete type for you for this function
+
+93
+00:07:52,320 --> 00:07:57,330
+call will be an object where we have a property which should be of type no.
+
+94
+00:07:57,390 --> 00:08:02,560
+And now we would be good and no errors would be there anymore and this would work.
+
+95
+00:08:02,790 --> 00:08:04,090
+But this is redundant.
+
+96
+00:08:04,140 --> 00:08:09,120
+You can absolutely do that and it is important to understand that this is in the end what generics are
+
+97
+00:08:09,120 --> 00:08:15,750
+all about that you can fill in different concrete types for different function calls but we don't need
+
+98
+00:08:15,750 --> 00:08:21,750
+to do that here because typescript simply infers the types of the values we're passing as arguments
+
+99
+00:08:21,750 --> 00:08:28,230
+here and then add plaques in the inferred types for t and you for this function call.
+
+100
+00:08:28,290 --> 00:08:31,170
+That's how generics work behind the scenes in the end.

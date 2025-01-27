@@ -1,0 +1,427 @@
+1
+00:00:02,350 --> 00:00:04,350
+OK enough about generic functions.
+
+2
+00:00:04,420 --> 00:00:08,170
+We will also use them for this cause all in the course project.
+
+3
+00:00:08,200 --> 00:00:10,290
+So that should be getting clearer and clearer.
+
+4
+00:00:10,290 --> 00:00:11,720
+The more we work with it.
+
+5
+00:00:11,920 --> 00:00:14,280
+The general idea hopefully is clear by now.
+
+6
+00:00:14,280 --> 00:00:20,960
+Already generic functions aren't everything we can use though we also got generic classes and therefore
+
+7
+00:00:20,960 --> 00:00:26,540
+let's see how we would create such a generic class and why we could do that why that could be useful
+
+8
+00:00:26,540 --> 00:00:27,530
+for us.
+
+9
+00:00:27,800 --> 00:00:36,350
+We could be creating a storage class here a class let's say which has a private property data which
+
+10
+00:00:36,350 --> 00:00:42,830
+in the end will hold an array of data and then it has a add item method which takes the item and that
+
+11
+00:00:42,830 --> 00:00:45,620
+should be added to data with push let's say
+
+12
+00:00:48,740 --> 00:00:58,560
+we have a remove item method which takes item where we could say this data splice and then we just need
+
+13
+00:00:58,560 --> 00:01:02,820
+to get the index of item here and splice one element.
+
+14
+00:01:02,820 --> 00:01:11,920
+This is how we can remove an element from an array and of course get items where return lets say a copy
+
+15
+00:01:12,040 --> 00:01:16,410
+of this data like that with the spread operator you learn about.
+
+16
+00:01:16,660 --> 00:01:19,270
+Now we can do that and we're getting a bunch of arrows here.
+
+17
+00:01:19,480 --> 00:01:24,400
+We're getting a bunch of arrows now for one because the named storage is a reserved name so let's name
+
+18
+00:01:24,400 --> 00:01:24,490
+it.
+
+19
+00:01:24,490 --> 00:01:26,230
+Data storage that's easy to get rid of.
+
+20
+00:01:26,650 --> 00:01:30,670
+Now we also get an error here because we're not saying anything about the kind of data were storing
+
+21
+00:01:30,940 --> 00:01:33,100
+and which type item has here.
+
+22
+00:01:33,100 --> 00:01:37,960
+And that's exactly where we can turn it into a generic class because you might not care about the type
+
+23
+00:01:37,960 --> 00:01:40,890
+of data we want to make sure it's uniform data.
+
+24
+00:01:40,930 --> 00:01:47,580
+So it's even just strings or just numbers or just objects but other than that I don't care about it.
+
+25
+00:01:47,590 --> 00:01:53,590
+So here we could turn us into a generic class by adding angle brackets after the class name and then
+
+26
+00:01:53,590 --> 00:02:00,490
+again t you whatever you want to use as an identifier and add is here as a generic type you know here
+
+27
+00:02:00,490 --> 00:02:04,490
+we can say this here is an array of type T.
+
+28
+00:02:04,510 --> 00:02:08,040
+So it stores data off that generic type in it.
+
+29
+00:02:08,070 --> 00:02:13,840
+Therefore here we add such data and we try to remove such data here and they'll for a year get items
+
+30
+00:02:13,840 --> 00:02:18,440
+correctly is inferred to return an array of generic types.
+
+31
+00:02:18,640 --> 00:02:20,700
+And now we can create different storage.
+
+32
+00:02:20,920 --> 00:02:29,510
+We can have our string or our text storage here by calling new data storage setting that generic type
+
+33
+00:02:29,510 --> 00:02:35,660
+2 type string here and then here and text storage I can call add item and if I try to add a number I
+
+34
+00:02:35,660 --> 00:02:41,420
+get an error because I am saying that this will be a data storage which only stores strings so I can
+
+35
+00:02:41,420 --> 00:02:51,980
+indeed store Macs here and maybe also store menu and then call text storage remove item Macs and then
+
+36
+00:02:51,980 --> 00:03:00,320
+console log text storage get items and this should all work if we save that because it's a generic type
+
+37
+00:03:00,320 --> 00:03:08,240
+and indeed at the end we just have menu in there so this would be one simple generic class we can create.
+
+38
+00:03:08,280 --> 00:03:10,530
+Now why would we build such a generic class.
+
+39
+00:03:10,530 --> 00:03:14,280
+Well just as I said because maybe we don't just want to store text.
+
+40
+00:03:14,280 --> 00:03:20,610
+I might also want to store some numbers in a different data storage so then I could create such a data
+
+41
+00:03:20,610 --> 00:03:26,360
+storage and setting this to number ensures that now we can only add numbers to data storage.
+
+42
+00:03:26,410 --> 00:03:30,500
+And of course we could also set up a storage where we allow both by using a union type.
+
+43
+00:03:30,570 --> 00:03:38,400
+So we got full flexibility there but we give types some extra information that makes this both a flexible
+
+44
+00:03:38,550 --> 00:03:46,320
+and still strongly typed class just as we headed with functions really flexible and still perfect type
+
+45
+00:03:46,320 --> 00:03:46,950
+support.
+
+46
+00:03:46,950 --> 00:03:49,930
+That's the whole idea behind generic types.
+
+47
+00:03:49,950 --> 00:03:55,740
+So here we can do that with the data storage class by storing strings or by storing numbers or whatever
+
+48
+00:03:55,740 --> 00:03:57,650
+we want.
+
+49
+00:03:57,840 --> 00:04:04,920
+We'll have one problem about our data storage class though let's say here I have my object storage.
+
+50
+00:04:04,920 --> 00:04:10,530
+Now I can create new data storage and say India I want to store objects right.
+
+51
+00:04:10,530 --> 00:04:17,670
+I want to store objects and data for of course we can go to object storage and add an item let's say
+
+52
+00:04:17,690 --> 00:04:20,520
+object where I have a name Max India.
+
+53
+00:04:20,620 --> 00:04:26,790
+Let's also store another object where a store menu then let's say we're doing some stuff in our code
+
+54
+00:04:26,790 --> 00:04:33,270
+and at a later point of time here I want to remove the item when to remove the item with name menu here
+
+55
+00:04:34,170 --> 00:04:40,560
+and then I want to console log object storage get items like that.
+
+56
+00:04:40,560 --> 00:04:45,870
+If we save that we see we get to object in there that's Max.
+
+57
+00:04:45,870 --> 00:04:46,640
+So that looks good.
+
+58
+00:04:46,640 --> 00:04:49,200
+Right now it's not really good.
+
+59
+00:04:49,200 --> 00:04:52,530
+Let's say here I want to remove Max now.
+
+60
+00:04:52,530 --> 00:05:00,400
+So now we should have manual left in the data storage hence if I reload a well it's still Max.
+
+61
+00:05:00,600 --> 00:05:03,720
+Now the problem is that we're working with objects here.
+
+62
+00:05:03,720 --> 00:05:09,450
+As you know objects and JavaScript are reference types now attached you find an additional resource
+
+63
+00:05:09,450 --> 00:05:13,310
+which allows you to dive into reference words as primitive values here.
+
+64
+00:05:13,320 --> 00:05:18,660
+I assume you know the difference because it's a core javascript thing totally unrelated to typescript
+
+65
+00:05:19,180 --> 00:05:19,550
+here.
+
+66
+00:05:19,550 --> 00:05:27,120
+The problem is the way our class is built with this logic on how data is removed and identified.
+
+67
+00:05:27,120 --> 00:05:32,230
+We're not really doing a good job when we work with non primitive values.
+
+68
+00:05:32,250 --> 00:05:38,640
+So when we work with objects or arrays because index off if we pass in an object here will not work
+
+69
+00:05:38,670 --> 00:05:40,980
+because technically this is a new object.
+
+70
+00:05:40,980 --> 00:05:46,470
+It might look like this one but it doesn't work because this technically is a brand new object in memory
+
+71
+00:05:46,630 --> 00:05:53,370
+and has a different address and indeed here javascript will look for the address and basically not find
+
+72
+00:05:53,370 --> 00:05:53,490
+it.
+
+73
+00:05:53,490 --> 00:06:01,130
+So what it then does is it removes the last element in the array here because it isn't the end returns
+
+74
+00:06:01,310 --> 00:06:04,580
+minus one index of returns minus one here.
+
+75
+00:06:04,640 --> 00:06:08,060
+If it doesn't find anything which means it starts at the end of the array.
+
+76
+00:06:08,060 --> 00:06:12,230
+That's normal javascript behavior and removes the last element of the array deal for.
+
+77
+00:06:12,320 --> 00:06:18,020
+That's why it worked for a menu it didn't really work it accidentally worked but why it does not work
+
+78
+00:06:18,020 --> 00:06:23,990
+for Max we're always removing the last element of the array for analysis we can't identify it no one
+
+79
+00:06:23,990 --> 00:06:32,780
+work around to at least fix that is to check if we find item so we can check if this code here if Dad
+
+80
+00:06:32,780 --> 00:06:39,050
+is equal to minus 1 which means we did not find it then we can return and make sure we don't accidentally
+
+81
+00:06:39,050 --> 00:06:44,780
+remove the wrong item but of course now we just fixed that but but we still don't have this in a state
+
+82
+00:06:44,870 --> 00:06:46,640
+where it would work with objects.
+
+83
+00:06:46,640 --> 00:06:51,760
+Well the only way how it could work with objects is if we pass in the exact same object again.
+
+84
+00:06:51,800 --> 00:06:59,100
+So here if I had my max object stored at a constant like this and then here I pass and Max object and
+
+85
+00:06:59,100 --> 00:07:05,250
+I do the same here then I'm really using the same the exact same object the exact same object in memory
+
+86
+00:07:05,490 --> 00:07:06,560
+and therefore for now it would work.
+
+87
+00:07:06,570 --> 00:07:12,360
+This would be the only way to make this work so therefore here the better idea might be to make sure
+
+88
+00:07:12,360 --> 00:07:20,940
+that this really only works with primitive values so we could say that T extends string no.
+
+89
+00:07:21,090 --> 00:07:24,010
+Maybe all the bully ends and so on.
+
+90
+00:07:24,060 --> 00:07:30,000
+So now we basically say data storage should only work with these types therefore objects are not allowed
+
+91
+00:07:30,000 --> 00:07:31,110
+anymore.
+
+92
+00:07:31,110 --> 00:07:36,450
+Does might be better here because we would need a more specialized data storage which then probably
+
+93
+00:07:36,450 --> 00:07:42,360
+only works with objects and turned and not with primitive values to fine tune our retrieval logic here
+
+94
+00:07:42,450 --> 00:07:45,820
+to maybe check for some I.D. in the item that should be removed.
+
+95
+00:07:45,900 --> 00:07:51,300
+The way it works here it really only works for primitive types so setting such a constraint is definitely
+
+96
+00:07:51,300 --> 00:07:52,320
+a good idea.
+
+97
+00:07:52,440 --> 00:07:59,920
+And with that if we saved it after commenting this out it again works of course now needless to say
+
+98
+00:08:00,010 --> 00:08:04,320
+hopefully that of course you could have more than one generic type here as well.
+
+99
+00:08:04,330 --> 00:08:10,330
+You're not limited to one type when you work with classes and you can also have methods which have their
+
+100
+00:08:10,390 --> 00:08:16,700
+own generic types inside of classes so you could introduce new generic types in class methods.
+
+101
+00:08:16,720 --> 00:08:21,790
+If you have some generic type which only is needed in a certain method and not in the entire class so
+
+102
+00:08:21,790 --> 00:08:28,120
+you're really flexible there you can use constraints everywhere and in general generic types are there
+
+103
+00:08:28,120 --> 00:08:37,000
+to make your life easier and to give you that perfect combination of full flexibility we can use any
+
+104
+00:08:37,000 --> 00:08:44,140
+primitive value we want here and type safety because we know perfectly well what is stored in this data
+
+105
+00:08:44,140 --> 00:08:46,600
+storage and what is stored in this data storage.
+
+106
+00:08:46,810 --> 00:08:50,680
+So this combination is the awesome thing.
+
+107
+00:08:50,680 --> 00:08:52,150
+Generic types give us.

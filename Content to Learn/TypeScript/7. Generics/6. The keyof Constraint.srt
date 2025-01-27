@@ -1,0 +1,155 @@
+1
+00:00:02,270 --> 00:00:04,970
+So we get the basics about generics down hopefully.
+
+2
+00:00:04,970 --> 00:00:09,920
+Now let's dive a bit deeper into constraints or into one specific type of constraint which we can add
+
+3
+00:00:10,460 --> 00:00:19,940
+retail trade yet a no function of generic function which will name extract and convert the idea of this
+
+4
+00:00:19,940 --> 00:00:21,110
+function here is dead.
+
+5
+00:00:21,110 --> 00:00:30,760
+We get an object as a first argument and the second parameter is in the end a key now want to return
+
+6
+00:00:30,760 --> 00:00:35,680
+to value for that key in the object which we can do with this default javascript notation using the
+
+7
+00:00:35,680 --> 00:00:38,200
+square brackets to access a property in object.
+
+8
+00:00:38,200 --> 00:00:39,870
+But that's nothing typescript specific.
+
+9
+00:00:39,880 --> 00:00:41,950
+That's vanilla javascript in the end.
+
+10
+00:00:42,000 --> 00:00:44,570
+Now Therefore here we could say that here we want to have an object.
+
+11
+00:00:44,700 --> 00:00:47,490
+And for the key we want to have a string.
+
+12
+00:00:47,500 --> 00:00:53,200
+Let's say now you're getting an error though because what we don't know here in the end is whether the
+
+13
+00:00:53,200 --> 00:00:57,410
+object we're getting here really will have that key.
+
+14
+00:00:57,550 --> 00:01:01,480
+That's the end what typescript is telling us here with this strange error.
+
+15
+00:01:01,480 --> 00:01:07,930
+For example here I could console lock the result of calling this with let's say an empty object and
+
+16
+00:01:07,930 --> 00:01:14,530
+then name and here by the way I'm calling this extract and convert because I want to call this without
+
+17
+00:01:14,530 --> 00:01:18,580
+console log and simply say value colon plus.
+
+18
+00:01:18,580 --> 00:01:22,350
+But that's just a side note I'm returning a string here and the end with that retrieve data.
+
+19
+00:01:22,450 --> 00:01:27,820
+But the main problem here is I could call it like this and it would pass in an object as a first parameter
+
+20
+00:01:28,180 --> 00:01:32,890
+and then a string as a second but correctly typescript tells me that in the end it's not guaranteed
+
+21
+00:01:33,190 --> 00:01:39,740
+that this key exists in this object now could guarantee us we can again use generic types here.
+
+22
+00:01:39,950 --> 00:01:47,290
+We could say we got a type T and it will be our object here we can say extends Object but we also got
+
+23
+00:01:47,290 --> 00:01:51,630
+a type you are a key here let's say.
+
+24
+00:01:51,670 --> 00:01:56,350
+Which in the end has to be a key of our t type though.
+
+25
+00:01:56,350 --> 00:02:02,710
+So of this object we want to guarantee that what we get here is a second parameter is a key is a property
+
+26
+00:02:03,280 --> 00:02:04,950
+of that first type.
+
+27
+00:02:05,050 --> 00:02:08,800
+And for Dad we can sake extends key of
+
+28
+00:02:11,610 --> 00:02:16,770
+and now you see the error is gone here and instead of got the error down there because now I'm informing
+
+29
+00:02:16,770 --> 00:02:21,300
+typescript here that the first parameter should be any kind of object.
+
+30
+00:02:22,050 --> 00:02:25,890
+And a second parameter should be any kind of key in that object.
+
+31
+00:02:25,920 --> 00:02:26,520
+And here.
+
+32
+00:02:26,520 --> 00:02:30,450
+Yes we're passing in any kind of object but we don't have a name key in there.
+
+33
+00:02:30,450 --> 00:02:35,040
+This error will only go away as soon as I add a name key.
+
+34
+00:02:35,040 --> 00:02:41,610
+So this is all something we can use generic types for with this key off keyword here also to tell typescript
+
+35
+00:02:41,820 --> 00:02:47,850
+that we want to ensure that we have this correct structure and that's of course really useful because
+
+36
+00:02:47,850 --> 00:02:53,550
+it allows us to ensure that we don't make dumb mistakes where we tried to call this function which in
+
+37
+00:02:53,550 --> 00:02:56,790
+the end would try to access a property that doesn't exist.
+
+38
+00:02:56,790 --> 00:03:00,960
+So this works but if I tried to access h here I again get an error.
+
+39
+00:03:00,960 --> 00:03:04,680
+For example let's switch just back to name them for.

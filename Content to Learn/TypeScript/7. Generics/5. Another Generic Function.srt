@@ -1,0 +1,255 @@
+1
+00:00:02,180 --> 00:00:06,770
+So let's continue practicing with these generic types because I know they can be strange to wrap your
+
+2
+00:00:06,770 --> 00:00:07,720
+head around.
+
+3
+00:00:07,940 --> 00:00:09,890
+In the end they're really straightforward though.
+
+4
+00:00:10,010 --> 00:00:14,840
+Let's create an average generic function count and print.
+
+5
+00:00:14,840 --> 00:00:22,520
+Now this function should take some argument some parameter let's name it element but the name is really
+
+6
+00:00:22,520 --> 00:00:26,460
+up to you which should be of a generic type.
+
+7
+00:00:26,570 --> 00:00:30,200
+Because I read don't care about the type at least in certain ways.
+
+8
+00:00:30,440 --> 00:00:35,840
+So let's say we have one generic type and does function and our parameter is off that type.
+
+9
+00:00:35,860 --> 00:00:38,340
+That's by the way all the typical for generic types.
+
+10
+00:00:38,420 --> 00:00:43,270
+If you have a generic function then off your parameter will be of the type doesn't have to be.
+
+11
+00:00:43,340 --> 00:00:48,230
+But often that is how you work with generic functions as you will see as you get more and more experience
+
+12
+00:00:48,230 --> 00:00:49,130
+with them.
+
+13
+00:00:49,130 --> 00:00:54,460
+So here we get count and print with our generic type here and element is of that type.
+
+14
+00:00:54,470 --> 00:01:00,710
+Now what I want to return here is in the end a tuple with two elements where the first element should
+
+15
+00:01:00,710 --> 00:01:08,250
+be my element itself and the second element should be a description string maybe rename it count and
+
+16
+00:01:08,280 --> 00:01:10,170
+describe therefore.
+
+17
+00:01:10,200 --> 00:01:20,660
+So here I get my description text and here I'll say got no value and I want to use that if we pass in
+
+18
+00:01:20,660 --> 00:01:26,690
+an element which has no length because my idea with counted describe is that we can pass in an array
+
+19
+00:01:26,750 --> 00:01:32,000
+or a string and we get back the amount of characters or elements in that string or array.
+
+20
+00:01:32,090 --> 00:01:35,360
+So if you got an empty string or empty array when he was got no well you.
+
+21
+00:01:35,540 --> 00:01:45,530
+But here if I check that element dot length is greater than zero then I want to set description text
+
+22
+00:01:45,540 --> 00:01:58,120
+to got plus element dot length plus elements it could be even more specific and check if the length
+
+23
+00:01:58,120 --> 00:02:12,280
+is equal to one year and then say got one element else if element length is greater than one we have
+
+24
+00:02:12,290 --> 00:02:23,520
+description text equal got plus element length elements so that we got the plural form right now here.
+
+25
+00:02:23,520 --> 00:02:26,280
+Description text to stay for the second element and return here.
+
+26
+00:02:26,280 --> 00:02:31,290
+Now you'll already see Torchwood complains about the length here because it's not clear that element
+
+27
+00:02:31,290 --> 00:02:32,400
+has a length.
+
+28
+00:02:32,400 --> 00:02:34,810
+So maybe we should make it clear that it does.
+
+29
+00:02:34,830 --> 00:02:39,600
+We could do so by creating a new interface or a custom type with the type.
+
+30
+00:02:39,630 --> 00:02:45,840
+Keyword here but here I'll go for an interface which I'll name lengthy which in the end is just guaranteeing
+
+31
+00:02:45,840 --> 00:02:50,910
+that we have an object with a length property which should yield a number in the end.
+
+32
+00:02:50,910 --> 00:02:55,950
+And then here we can set a constraint and say that T extends and lengthy so we know whatever we get
+
+33
+00:02:56,070 --> 00:03:01,870
+we'll have a length property and an array or a string would have a length property.
+
+34
+00:03:02,070 --> 00:03:11,290
+Now year I can console log count and describe and pass in let's say hi there.
+
+35
+00:03:11,290 --> 00:03:16,390
+Notice we're X because a string has a length property it's not a object it's a string but behind the
+
+36
+00:03:16,390 --> 00:03:21,760
+scenes javascript kind of converts does to object on the fly you could say and adds a length property
+
+37
+00:03:21,760 --> 00:03:22,570
+when we need it.
+
+38
+00:03:22,690 --> 00:03:29,680
+So therefore we can safely call it like this typescript infers that here we return an array with either
+
+39
+00:03:29,710 --> 00:03:32,470
+a string or type T elements in there.
+
+40
+00:03:32,470 --> 00:03:37,480
+Now I want to have a tuple so I'll be more specific here and set the return type to be basically an
+
+41
+00:03:37,480 --> 00:03:41,250
+array with exactly two elements where the first element will be of type T.
+
+42
+00:03:41,380 --> 00:03:43,880
+And the second element will be of type String.
+
+43
+00:03:43,900 --> 00:03:49,270
+So now I'm just saying that we return a tuple here where the first element will be well any element
+
+44
+00:03:49,390 --> 00:03:50,720
+of our generic type.
+
+45
+00:03:50,740 --> 00:03:54,090
+And the second element will be a string.
+
+46
+00:03:54,160 --> 00:04:00,640
+Notice that if we safety's this recompile is without errors and prints Hi there got nine elements because
+
+47
+00:04:00,640 --> 00:04:08,210
+we've got nine characters in their we could all called is within their array where we have sports and
+
+48
+00:04:08,510 --> 00:04:15,800
+cooking and now you will see that we got got two elements as a description text or all with an empty
+
+49
+00:04:15,800 --> 00:04:16,640
+array of course.
+
+50
+00:04:16,670 --> 00:04:23,930
+In which case if I save that we got no value but we won't be able to call this for example with a number
+
+51
+00:04:23,960 --> 00:04:28,120
+because a number doesn't have a length property and therefore this does not work.
+
+52
+00:04:28,130 --> 00:04:36,320
+So here again we got our generic function idea is similar to the function before we want to be a bit
+
+53
+00:04:36,380 --> 00:04:39,190
+unspecific about the type of data we get here.
+
+54
+00:04:39,200 --> 00:04:44,510
+We don't really care if it's a string if it's an array or anything else which has a length property
+
+55
+00:04:44,780 --> 00:04:50,360
+we just care about that it does have a length property and then we want to do something with it because
+
+56
+00:04:50,360 --> 00:04:54,560
+we rely on the length property in our code so we need to guarantee that we get that.
+
+57
+00:04:54,680 --> 00:04:58,080
+But Abbott and Ed we really have no interest in which type of data we're getting here.
+
+58
+00:04:58,100 --> 00:05:03,530
+I don't want to lock this down to a string or to an array and I don't want to create a bunch of overloads
+
+59
+00:05:03,680 --> 00:05:06,050
+to handle all the different possible types.
+
+60
+00:05:06,050 --> 00:05:11,390
+I also don't want to create a very long union type here because I might forget types which have a length
+
+61
+00:05:11,390 --> 00:05:16,230
+property or if I create my own object with a length property I might not allow for it.
+
+62
+00:05:16,310 --> 00:05:22,460
+If I restrict this year to be of type String and array or anything like that so therefore I want to
+
+63
+00:05:22,460 --> 00:05:27,950
+be more flexible and with generic types we can be that we don't care about the exact type here.
+
+64
+00:05:28,000 --> 00:05:33,230
+Thanks to the constraint I only care about the fact that it has length property.

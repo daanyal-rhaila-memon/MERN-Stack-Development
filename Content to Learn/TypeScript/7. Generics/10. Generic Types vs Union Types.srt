@@ -1,0 +1,195 @@
+1
+00:00:02,160 --> 00:00:04,770
+Now one common source of confusion.
+
+2
+00:00:04,840 --> 00:00:09,030
+I want to clarify here is the difference between generics and union types.
+
+3
+00:00:09,040 --> 00:00:12,010
+Why could you confuse these two.
+
+4
+00:00:12,010 --> 00:00:14,380
+Well for example our data storage here.
+
+5
+00:00:14,500 --> 00:00:21,760
+If we're accepting generic types based on these types we could all rewrite that to just say well we
+
+6
+00:00:21,760 --> 00:00:27,100
+want to store strings or numbers or billions in here.
+
+7
+00:00:27,100 --> 00:00:27,370
+Right.
+
+8
+00:00:27,640 --> 00:00:30,520
+So we could store that or to be precise.
+
+9
+00:00:30,520 --> 00:00:34,880
+Wrap this in parentheses so that we say either of these types as an array.
+
+10
+00:00:35,080 --> 00:00:39,760
+And then here of course we could also say well what we get here when we add item is either a string
+
+11
+00:00:39,760 --> 00:00:42,060
+a number or boolean we remove it.
+
+12
+00:00:42,070 --> 00:00:43,320
+It's the same.
+
+13
+00:00:43,600 --> 00:00:45,900
+Now what's the problem with this approach.
+
+14
+00:00:45,910 --> 00:00:52,290
+On first sight it might look like it achieves the same but actually does something totally different.
+
+15
+00:00:52,330 --> 00:00:57,220
+What we're saying here is we're storing any kind of data in there as long as it's ever in the array
+
+16
+00:00:57,220 --> 00:00:59,770
+of strings numbers are billions.
+
+17
+00:00:59,770 --> 00:01:05,380
+And we're also then adding any kind of data here even a string a number or boolean and the same for
+
+18
+00:01:05,380 --> 00:01:11,680
+removing and we already got some errors down there of course because it can't initialized isn't a generic
+
+19
+00:01:11,680 --> 00:01:12,380
+way anymore.
+
+20
+00:01:12,520 --> 00:01:14,270
+But other than that it works.
+
+21
+00:01:14,470 --> 00:01:21,670
+Now the problem however is for one up here we're not saying this is ever an array of strings or in arrays
+
+22
+00:01:21,670 --> 00:01:24,150
+of numbers or an array of ebullience.
+
+23
+00:01:24,220 --> 00:01:30,160
+This says well we got an array which can have strings numbers and boolean is mixed.
+
+24
+00:01:30,250 --> 00:01:36,430
+So if we would want to say either an array of strings or an array of numbers we would have to say string
+
+25
+00:01:36,430 --> 00:01:38,950
+array number array or boolean array.
+
+26
+00:01:39,130 --> 00:01:41,670
+Well we can do that but now we get a problem here.
+
+27
+00:01:41,680 --> 00:01:48,430
+Now we're adding a string a number or a boolean but depending on what we actually set this data array
+
+28
+00:01:48,430 --> 00:01:54,160
+to be either a number array or a billionaire rate where a string array we're not allowed to add a number
+
+29
+00:01:54,160 --> 00:01:55,800
+or a boolean or a string.
+
+30
+00:01:55,960 --> 00:02:02,230
+If we set this to be a String array well then we can't add a number here yet here I am fine with any
+
+31
+00:02:02,230 --> 00:02:05,710
+parameter as long as it is a number boolean or string.
+
+32
+00:02:05,710 --> 00:02:12,580
+So the problem is here with union types we accept any of these values every time this method gets called
+
+33
+00:02:12,730 --> 00:02:14,290
+or this method.
+
+34
+00:02:14,290 --> 00:02:20,080
+So we're not saying hey whenever we're working with this class you have to decide for one type and then
+
+35
+00:02:20,080 --> 00:02:21,040
+stick to it.
+
+36
+00:02:21,040 --> 00:02:26,070
+Instead we're saying whenever you're calling this method you're free to use any of these types.
+
+37
+00:02:26,170 --> 00:02:29,650
+And that's exactly not what we want here.
+
+38
+00:02:29,740 --> 00:02:34,750
+If a reverts this to the previous setup where we used generic types
+
+39
+00:02:37,600 --> 00:02:43,890
+then we got a different setup here we say you got to choose ones which kind of data you want to store
+
+40
+00:02:44,110 --> 00:02:54,190
+and then you're only allowed to add that exact type of data so yea if I add a number for example I get
+
+41
+00:02:54,190 --> 00:02:59,010
+an error because that's not a string and I chose that I only want to manage strings here.
+
+42
+00:02:59,050 --> 00:03:05,770
+When I set the generic type and that's the difference between union types and generic types union types
+
+43
+00:03:05,770 --> 00:03:06,460
+can be great.
+
+44
+00:03:06,460 --> 00:03:12,190
+If you want to have a function which you can call with one of these types every time you call it generic
+
+45
+00:03:12,190 --> 00:03:12,900
+types are great.
+
+46
+00:03:12,900 --> 00:03:19,480
+If you want to lock in a certain type you is the same type throughout the entire class instance you
+
+47
+00:03:19,480 --> 00:03:26,050
+create you use the same type throughout the entire function that's where you want the generic type you
+
+48
+00:03:26,050 --> 00:03:33,040
+want union types when you are flexible to have a different type with every method call with every function
+
+49
+00:03:33,040 --> 00:03:38,620
+call then you can use union types generic types lock in a type.
