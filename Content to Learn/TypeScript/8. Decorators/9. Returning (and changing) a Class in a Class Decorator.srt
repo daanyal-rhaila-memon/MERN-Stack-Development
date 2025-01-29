@@ -1,0 +1,407 @@
+1
+00:00:02,140 --> 00:00:07,930
+In order to do more advanced things with decorators you have to know that some decorators for example
+
+2
+00:00:07,930 --> 00:00:09,140
+class decorators.
+
+3
+00:00:09,190 --> 00:00:14,580
+But all the method decorators for example actually are also capable of returning something.
+
+4
+00:00:14,680 --> 00:00:17,560
+Now I'm not returning anything and any decorator.
+
+5
+00:00:17,560 --> 00:00:22,470
+I'm not talking about the decorator function which gets returned and the decorator factory.
+
+6
+00:00:22,570 --> 00:00:28,920
+I really mean a return value inside of the decorator function and we don't have any such value anywhere.
+
+7
+00:00:28,920 --> 00:00:35,530
+Now in this with template function in as with template decorator function I should say we could add
+
+8
+00:00:35,530 --> 00:00:41,650
+such a return value and what you can return and what typescript is able to use depends on which kind
+
+9
+00:00:41,650 --> 00:00:43,870
+of decorator you're working with.
+
+10
+00:00:43,870 --> 00:00:49,570
+Here we're working with a decorator that gets added to a class and in such a decorator function you
+
+11
+00:00:49,570 --> 00:00:55,500
+can return a new constructor function which will replace the old one so which will replace the class
+
+12
+00:00:55,500 --> 00:00:58,390
+to which you added the decorator you could say.
+
+13
+00:00:58,390 --> 00:01:05,890
+So here we can return a new function and you constructor function or simply return a new class in the
+
+14
+00:01:05,890 --> 00:01:12,580
+end because a class to class keyword allows us to use this syntactic sugar to create such a constructor
+
+15
+00:01:12,580 --> 00:01:20,620
+function and the class I created doesn't need to have a name but we can and we should extend the constructor
+
+16
+00:01:21,010 --> 00:01:22,300
+we're getting here.
+
+17
+00:01:22,300 --> 00:01:28,070
+So what I'm doing here now is in my decorator function here I'm returning a new class.
+
+18
+00:01:28,090 --> 00:01:32,750
+And again keep in mind that's just syntactic sugar for a constructor function.
+
+19
+00:01:32,830 --> 00:01:38,780
+So I'm returning a constructor function the end which is based on the original constructor function.
+
+20
+00:01:38,860 --> 00:01:44,810
+So did I keep all the properties of my original class of my original constructor function.
+
+21
+00:01:44,860 --> 00:01:50,100
+We don't necessarily have to do that but I don't want to lose my properties here so I will do it.
+
+22
+00:01:50,800 --> 00:01:56,800
+And then in here we can add new functionality for example and now we'll have to change some names here
+
+23
+00:01:57,340 --> 00:02:01,540
+I can add a new constructor function in there until wide confusion.
+
+24
+00:02:01,540 --> 00:02:07,030
+I'll rename the constructor I'm getting here so the class on which I added this decorator I'll name
+
+25
+00:02:07,060 --> 00:02:08,050
+this year.
+
+26
+00:02:08,380 --> 00:02:19,160
+Original constructor and copy that all over here and now instead of this constructor function here I
+
+27
+00:02:19,160 --> 00:02:25,400
+have to call super to call this original a constructor function from inside of it.
+
+28
+00:02:25,430 --> 00:02:30,920
+Because if you add a constructor function in a class that extends another class which is in the end
+
+29
+00:02:30,920 --> 00:02:33,680
+what we're doing here then you have to call super.
+
+30
+00:02:33,830 --> 00:02:36,470
+And now in here you can run any logic you want.
+
+31
+00:02:36,530 --> 00:02:45,340
+And for example here we could move this template rendering logic here out of our decorator function
+
+32
+00:02:45,700 --> 00:02:49,060
+into this new constructor function we're returning here.
+
+33
+00:02:49,060 --> 00:02:54,190
+So again really keep in mind that we're creating a class here which the end just creates a constructor
+
+34
+00:02:54,190 --> 00:02:55,720
+function with this logic in it.
+
+35
+00:02:56,710 --> 00:03:03,490
+So now what I'm trying to do is I tried to replace the class the constructor function to which we added
+
+36
+00:03:03,490 --> 00:03:10,930
+our decorator with a new class with a new constructor function where I still execute the old logic but
+
+37
+00:03:10,930 --> 00:03:16,720
+where I also add my own new logic and therefore now the template should actually only be rendered to
+
+38
+00:03:16,720 --> 00:03:24,460
+the DOM if I really instantiate my object here and not all the time when this decorator function is
+
+39
+00:03:24,460 --> 00:03:29,650
+executed which as you learned happens as soon as we defined a class.
+
+40
+00:03:29,650 --> 00:03:34,330
+Now a little tweak here I don't call my original constructor in here anymore.
+
+41
+00:03:34,330 --> 00:03:42,490
+Instead we can just access this start name to get the name property value off the instance we are creating.
+
+42
+00:03:42,790 --> 00:03:49,360
+Now we got a little complaint down there regarding the types not being correct to fix that though we
+
+43
+00:03:49,360 --> 00:03:55,390
+can turn our decorator function into a generic function where we get a type and set this as the type
+
+44
+00:03:55,450 --> 00:04:04,170
+of original constructor and now make clear that this will actually be basically a constructor function
+
+45
+00:04:04,590 --> 00:04:11,670
+and we can make that clear by assigning a special type an object type where we set a new property.
+
+46
+00:04:11,670 --> 00:04:16,350
+This is a reserved name of course but it tells typescript that in the end this will be an object which
+
+47
+00:04:16,350 --> 00:04:17,790
+can be nude.
+
+48
+00:04:17,790 --> 00:04:23,040
+So that will be a constructor function a function we can call with the new keyword to generate a new
+
+49
+00:04:23,040 --> 00:04:32,850
+object and this new function is new method which the object T is based on will have will get any amount
+
+50
+00:04:32,850 --> 00:04:38,100
+of arguments some using rest parameters here to accept as many arguments as you want so that we're really
+
+51
+00:04:38,100 --> 00:04:43,350
+flexible regarding the arguments that can be passed to the constructor of the class we're trying to
+
+52
+00:04:43,350 --> 00:04:50,120
+change and the new functional debt and yen return an object here.
+
+53
+00:04:50,190 --> 00:04:56,190
+Now I should also just copy that definition of the rest parameter to my constructor here so that this
+
+54
+00:04:56,190 --> 00:05:00,300
+constructor is also capable of accepting all the arguments we might be getting.
+
+55
+00:05:00,300 --> 00:05:05,240
+So we can basically instantiate person with any arguments you want to pass and you're with any arguments
+
+56
+00:05:05,250 --> 00:05:09,600
+we might also need here in the original constructor function.
+
+57
+00:05:09,750 --> 00:05:14,340
+And with that the only problem will face is that we don't know that such a name property exists.
+
+58
+00:05:14,370 --> 00:05:15,160
+And correct.
+
+59
+00:05:15,180 --> 00:05:20,100
+So we don't know to which class will add this with template decorator.
+
+60
+00:05:20,100 --> 00:05:23,820
+So we don't know if there will be a named property on the class we added to.
+
+61
+00:05:24,360 --> 00:05:30,240
+But we can fix this by simply telling typescript that the object T is based on.
+
+62
+00:05:30,240 --> 00:05:37,320
+So our original constructor function will not just produce any object but actually will produce an object
+
+63
+00:05:37,500 --> 00:05:39,660
+with a name property which will be of type String.
+
+64
+00:05:39,720 --> 00:05:41,120
+And that is correct.
+
+65
+00:05:41,190 --> 00:05:45,910
+Our with template decorator is added to a class which will have a name property.
+
+66
+00:05:46,320 --> 00:05:51,030
+If a would comment is out we would get an error because now we would try to add this decorator to a
+
+67
+00:05:51,030 --> 00:05:53,230
+class which does not fulfill this criterion.
+
+68
+00:05:53,460 --> 00:05:56,650
+But here this does fulfill it.
+
+69
+00:05:56,670 --> 00:06:00,690
+Now I get an error here when I tried to compile this because I'm not using args here.
+
+70
+00:06:00,690 --> 00:06:05,520
+We can change this to an underscore to tell typescript that we know we don't use it and that we want
+
+71
+00:06:05,520 --> 00:06:06,230
+to ignore this.
+
+72
+00:06:06,240 --> 00:06:08,100
+This is a valid parameter name.
+
+73
+00:06:08,100 --> 00:06:12,120
+It's just a special name which typescript takes as a I get it.
+
+74
+00:06:12,120 --> 00:06:20,080
+I need to accept it but I won't use it parameter and with that that all compiles and if we reload UC
+
+75
+00:06:20,420 --> 00:06:22,430
+we still see Max on the page here.
+
+76
+00:06:22,430 --> 00:06:27,090
+The interesting thing justice if we now remove that code very instantiate person.
+
+77
+00:06:27,110 --> 00:06:34,010
+If I comment this out so did I just to find a person class but I never instantiated anywhere you see
+
+78
+00:06:34,040 --> 00:06:34,790
+as it reloads.
+
+79
+00:06:34,790 --> 00:06:41,360
+We don't see Max on the screen all the decorators still execute but we don't render anything to the
+
+80
+00:06:41,360 --> 00:06:42,320
+screen anymore.
+
+81
+00:06:42,470 --> 00:06:47,810
+And the reason for that is that we now enhanced our decorator here even more by taking advantage of
+
+82
+00:06:47,840 --> 00:06:52,480
+its feature where we can return a new value.
+
+83
+00:06:52,490 --> 00:06:55,400
+Or in this case a new constructor function.
+
+84
+00:06:55,400 --> 00:07:01,790
+In the case of the class decorator This is a new constructor function or a new class which as I explained
+
+85
+00:07:01,790 --> 00:07:04,640
+is just syntactic sugar for the constructor function.
+
+86
+00:07:04,640 --> 00:07:11,210
+And this constructor function therefore replaces our original class our original constructor function
+
+87
+00:07:12,190 --> 00:07:15,160
+now since I call super in here.
+
+88
+00:07:15,280 --> 00:07:21,700
+We save dual original function we save the original class so everything we initialize here basically
+
+89
+00:07:21,700 --> 00:07:27,340
+still happens because I do that in my replacing constructor as well and I extend the original class
+
+90
+00:07:27,520 --> 00:07:30,460
+so we save everything that was in your original class.
+
+91
+00:07:30,460 --> 00:07:35,980
+You don't have to do that but I am doing it here because I don't want to lose that original data but
+
+92
+00:07:35,980 --> 00:07:42,220
+behind the scenes I replaced a class with my new custom class here and that allows us to add extra logic
+
+93
+00:07:42,400 --> 00:07:45,640
+that should run when the class is instantiated.
+
+94
+00:07:45,640 --> 00:07:52,300
+And now all of a sudden we are able to add logic that does not run when the class is defined.
+
+95
+00:07:52,420 --> 00:07:58,870
+But when the class is instantiated at this day offer should be a great first example of the full power
+
+96
+00:07:58,870 --> 00:08:00,610
+you can unleash.
+
+97
+00:08:00,610 --> 00:08:05,890
+With decorators if you really understand what you can do with them and you can not just to find them
+
+98
+00:08:05,890 --> 00:08:11,830
+as functions and you can not just to find them with factory functions in some decorator select the class
+
+99
+00:08:11,830 --> 00:08:17,710
+decorator you can always return something to replace the thing you add at the decorator to.
+
+100
+00:08:17,710 --> 00:08:25,570
+In our case to class with a new class that can implement the old class but also add its new custom logic
+
+101
+00:08:26,080 --> 00:08:31,830
+and with that if we comment this back in we again render Max to the screen with our own clause that
+
+102
+00:08:31,860 --> 00:08:35,650
+places or that extends and replaces the old class.

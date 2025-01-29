@@ -1,0 +1,171 @@
+1
+00:00:02,470 --> 00:00:06,400
+We saw how we can build quite amazing things with decorators.
+
+2
+00:00:06,400 --> 00:00:12,730
+Decorator factories and then also by utilizing the return values of decorators which in the example
+
+3
+00:00:12,730 --> 00:00:16,920
+of a class decorator allows us to basically replace the class.
+
+4
+00:00:16,930 --> 00:00:22,960
+We added the decorator to with a class that is totally different that builds up on the existing class.
+
+5
+00:00:22,960 --> 00:00:27,250
+Like in our case and that therefore might add some functionalities.
+
+6
+00:00:27,280 --> 00:00:33,160
+Now you can return values in our decorators too but not all of them or not in all of them.
+
+7
+00:00:33,160 --> 00:00:39,940
+The return value is respected now decorators where you can return something are the decorators you add
+
+8
+00:00:39,940 --> 00:00:43,600
+two methods and the decorators you add to accessories.
+
+9
+00:00:43,600 --> 00:00:47,380
+So here on the center log two and log three on the method.
+
+10
+00:00:47,410 --> 00:00:50,100
+These two decorators lock to enlarge three.
+
+11
+00:00:50,170 --> 00:00:58,060
+These also could return something and typescript would use it d decorators on properties and on parameters
+
+12
+00:00:58,090 --> 00:00:58,620
+of course.
+
+13
+00:00:58,660 --> 00:01:02,480
+Also can return something but typescript will ignore it.
+
+14
+00:01:02,560 --> 00:01:07,720
+So return values are not support there or are not used to be precise.
+
+15
+00:01:07,720 --> 00:01:09,730
+Now what can you return on log free.
+
+16
+00:01:09,760 --> 00:01:18,310
+So on method decorators and on log to so on accessory decorators though you can return a brand new property
+
+17
+00:01:18,310 --> 00:01:23,160
+descriptor locked you in log free which are the two decorators I'm talking about right.
+
+18
+00:01:23,170 --> 00:01:28,870
+Lock to unlock free both get the descriptor off the property off the method.
+
+19
+00:01:28,870 --> 00:01:33,300
+You could say they are attached to because an accessories kind of like a method.
+
+20
+00:01:33,400 --> 00:01:36,150
+You have a function that gets executed there.
+
+21
+00:01:36,250 --> 00:01:39,480
+Now the property descriptor is a Java's good thing.
+
+22
+00:01:39,490 --> 00:01:45,960
+As you know if we have a look at this page again and we reloaded we see that for example for our excess
+
+23
+00:01:46,040 --> 00:01:52,630
+our decorator the property descriptor is this object here which has to configurable and enumerable and
+
+24
+00:01:52,630 --> 00:01:59,230
+get and set properties and forward a method decorator our descriptor is this object here which all day
+
+25
+00:01:59,240 --> 00:02:05,920
+has configurable innumerable value and Reidel and this is vanilla javascript you have property descriptors
+
+26
+00:02:05,950 --> 00:02:13,060
+in vanilla javascript as well they allow you to define property in more detail you can't of course assign
+
+27
+00:02:13,060 --> 00:02:18,100
+a value to a property and since we're talking about a method the value is a function in this case but
+
+28
+00:02:18,100 --> 00:02:19,990
+you can also control whether it's Reidel.
+
+29
+00:02:20,050 --> 00:02:25,900
+So if it can be changed after it has been created after the object has been created whether it's configurable
+
+30
+00:02:25,960 --> 00:02:31,030
+so if you can change this conflagration and if you can delete this property and if it's enumerable which
+
+31
+00:02:31,030 --> 00:02:36,820
+means if it shows up when you loop through your object for example and therefore a method for example
+
+32
+00:02:36,820 --> 00:02:42,550
+by default does a set to false so that if you use a for in loop on an object this method is not printed
+
+33
+00:02:42,580 --> 00:02:48,460
+as a property for an accessory also got configurable and enumerable but we gotta get to the set and
+
+34
+00:02:48,460 --> 00:02:55,270
+there you could of course also for example return a new descriptor which assigns a brand new set method
+
+35
+00:02:55,300 --> 00:02:58,770
+or which suddenly also adds a get functionality.
+
+36
+00:02:58,810 --> 00:03:05,230
+So here in lock to unlock for you can return a new descriptor object in the end and make that clear
+
+37
+00:03:05,230 --> 00:03:10,610
+to typescript that you will do so by returning or by setting the return type to property descriptor.
+
+38
+00:03:10,780 --> 00:03:18,160
+And there you can therefore also set the set keyword to get keyword there configurable already enumerable
+
+39
+00:03:18,700 --> 00:03:24,690
+property and change how this assessor or method is configured.
+
+40
+00:03:24,820 --> 00:03:27,580
+Now I don't want to do that here for the successor.
+
+41
+00:03:27,580 --> 00:03:32,110
+There's nothing interesting I could do with that and therefore I will not return a property descriptor
+
+42
+00:03:32,560 --> 00:03:38,890
+but I will actually show you an example with the method decorator where we will return something and
+
+43
+00:03:38,890 --> 00:03:42,400
+where we can build something interesting with the help of decorators.

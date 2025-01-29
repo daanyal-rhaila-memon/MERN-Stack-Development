@@ -1,0 +1,127 @@
+1
+00:00:02,320 --> 00:00:05,290
+So we now saw a more useful decorator.
+
+2
+00:00:05,290 --> 00:00:10,570
+I want to conclude this very basic introduction to decorator with another important thing you should
+
+3
+00:00:10,570 --> 00:00:11,080
+know.
+
+4
+00:00:11,080 --> 00:00:17,770
+You can add more than one decorator to a clause or anywhere else where you can use a decorator.
+
+5
+00:00:17,800 --> 00:00:23,110
+So let's also add the logger decorator heater for example like this.
+
+6
+00:00:23,110 --> 00:00:29,040
+If we save that you see it compiles without errors and indeed we see the log message here as well.
+
+7
+00:00:29,050 --> 00:00:34,510
+This just leaves one important question in which order do these decorators execute.
+
+8
+00:00:34,870 --> 00:00:38,920
+Well for dad to find out let's for a log messages into both.
+
+9
+00:00:38,920 --> 00:00:41,370
+We do have a log message and a logger obviously.
+
+10
+00:00:41,380 --> 00:00:43,390
+Now let's go to the decorator function.
+
+11
+00:00:43,450 --> 00:00:50,090
+So to the inner function of with template and say rendering template for example.
+
+12
+00:00:50,090 --> 00:00:55,660
+And now let's see in which order these functions are executing and in which order these log statements
+
+13
+00:00:55,660 --> 00:01:02,590
+are printed and we see rendering template runs first and then we get the logger output.
+
+14
+00:01:02,590 --> 00:01:08,470
+Now what this tells us of course is that they execute bottom up the bottom most decorator first and
+
+15
+00:01:08,470 --> 00:01:15,260
+they're often the decorators above it with template runs first then logger executes an important.
+
+16
+00:01:15,340 --> 00:01:18,670
+I'm talking about the actual decorator functions.
+
+17
+00:01:18,970 --> 00:01:23,200
+The decorator factories here run earlier.
+
+18
+00:01:23,770 --> 00:01:31,090
+If we have logger factory here and we have the same log in the template factory.
+
+19
+00:01:31,120 --> 00:01:37,420
+So dare I say template factory in my log you will see that there actually the logger factory runs first
+
+20
+00:01:37,540 --> 00:01:42,550
+and then we got the template factory and that makes sense because in the end even though we get this
+
+21
+00:01:42,610 --> 00:01:46,870
+at symbol here here I'm executing a function and we're doing the same here.
+
+22
+00:01:46,930 --> 00:01:52,720
+And of course regular javascript rules apply here and dysfunction execution happens before dysfunction
+
+23
+00:01:52,720 --> 00:01:59,530
+execution which is why we see the logger factory before we see template factory.
+
+24
+00:01:59,530 --> 00:02:06,130
+So the creation of our actual decorator functions happens in the order in which we specify these factory
+
+25
+00:02:06,130 --> 00:02:13,930
+functions but the execution of the actual decorator functions then happens bottom up which means the
+
+26
+00:02:14,080 --> 00:02:17,320
+bottom most decorator executes first.
+
+27
+00:02:17,320 --> 00:02:24,550
+So this decorator function enter after the decorator above that executes it's just something you have
+
+28
+00:02:24,550 --> 00:02:32,250
+to know with that we got a solid base knowledge about decorators and you also saw a more advanced decorator
+
+29
+00:02:32,250 --> 00:02:39,150
+which hopefully also gives you a first impression of Y decorators can be useful especially if you also
+
+30
+00:02:39,150 --> 00:02:41,970
+think about frameworks like angular.
+
+31
+00:02:42,000 --> 00:02:49,440
+Now let's see to which other places besides clauses we can add decorators and what we might be able
+
+32
+00:02:49,440 --> 00:02:50,190
+to do their.

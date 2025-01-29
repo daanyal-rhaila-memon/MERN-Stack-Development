@@ -1,0 +1,243 @@
+1
+00:00:02,300 --> 00:00:09,260
+Now before we explore more useful use cases or scenarios for some decorators I want to briefly show
+
+2
+00:00:09,260 --> 00:00:12,590
+you all the other places where you can add decorators.
+
+3
+00:00:12,590 --> 00:00:18,320
+Well obviously we can add decorators to classes but there are more places where we can add them for
+
+4
+00:00:18,320 --> 00:00:18,490
+that.
+
+5
+00:00:18,510 --> 00:00:23,330
+I'll create a new class because we need a class for any decorator we want to use but we don't have to
+
+6
+00:00:23,420 --> 00:00:26,410
+add all decorators directly to the class.
+
+7
+00:00:26,450 --> 00:00:33,950
+Let's say we have a product class here and in the product class we have a title maybe which is a string
+
+8
+00:00:34,530 --> 00:00:37,090
+and we can assign a value here with the constructor.
+
+9
+00:00:37,100 --> 00:00:41,600
+Of course we could also use the shortcut and do it all in one step in a constructor.
+
+10
+00:00:41,600 --> 00:00:44,660
+As you learned earlier here will take the longer route.
+
+11
+00:00:44,810 --> 00:00:50,180
+We can have a method there get price with tax.
+
+12
+00:00:50,180 --> 00:00:53,810
+For Dad I expect to get a tax rate which is a number.
+
+13
+00:00:53,930 --> 00:00:57,160
+And for that to work we should also store a price here.
+
+14
+00:00:57,170 --> 00:01:01,250
+Price property which we also get as part of the constructor.
+
+15
+00:01:01,250 --> 00:01:05,360
+Again we could use a shortcut here but I'll do it like this.
+
+16
+00:01:05,420 --> 00:01:14,410
+And then in this method I will return this stock price times one plus tax so that we have this utility
+
+17
+00:01:14,410 --> 00:01:19,120
+method and we can also add a gather in the setter if you want to.
+
+18
+00:01:19,120 --> 00:01:25,950
+For example we can add a setter for the price here where we get the value which should be a number and
+
+19
+00:01:25,960 --> 00:01:28,990
+where we control that we can only set certain values.
+
+20
+00:01:28,990 --> 00:01:35,370
+Now to make this work I'll rename price up here to underscore price and make it private actually.
+
+21
+00:01:35,380 --> 00:01:37,530
+So we can't directly reach it.
+
+22
+00:01:37,660 --> 00:01:42,820
+And here I will set this underscore price and here I will use this underscore price.
+
+23
+00:01:42,820 --> 00:01:48,360
+And with these changes in the setter we can set this underscore price equal to the value we get.
+
+24
+00:01:48,370 --> 00:01:52,820
+But before we do so we can check if value is greater than zero.
+
+25
+00:01:52,840 --> 00:01:55,630
+So we don't accept negative prices.
+
+26
+00:01:55,650 --> 00:01:58,480
+So with Dad we only set the price if it's graded and zero.
+
+27
+00:01:58,480 --> 00:02:00,640
+Otherwise we don't do anything.
+
+28
+00:02:00,640 --> 00:02:09,830
+Indeed we could throw an error in the Abacus invalid price should be positive so that's something we
+
+29
+00:02:09,830 --> 00:02:10,280
+can do.
+
+30
+00:02:10,280 --> 00:02:17,660
+Now we have a class with two properties with an assessor and also with method here and this method has
+
+31
+00:02:17,660 --> 00:02:25,260
+a parameter now to all these things we can add decorators and let's start with a good old friend a log
+
+32
+00:02:25,280 --> 00:02:31,220
+decorator hero named Locke to not clash with logger up there because this log decorator will not be
+
+33
+00:02:31,220 --> 00:02:34,580
+added to a class and therefore it will get different arguments.
+
+34
+00:02:34,580 --> 00:02:40,030
+It will get arguments though and which arguments decorator gets depends on where you add it.
+
+35
+00:02:40,070 --> 00:02:45,730
+Which is why I can't reuse logger because Dad was fine tuned to only work with classes.
+
+36
+00:02:45,740 --> 00:02:51,190
+Now here I don't have a decorator factory actually I just have to decorator function like this but still.
+
+37
+00:02:51,200 --> 00:02:55,230
+Which arguments this decorator function gets depends on where we use it.
+
+38
+00:02:55,280 --> 00:02:58,910
+For example we can add a decorator to a property.
+
+39
+00:02:58,910 --> 00:03:01,250
+Here I can add log like this.
+
+40
+00:03:01,250 --> 00:03:06,260
+And if you add a decorator to a property the decorator receives two arguments.
+
+41
+00:03:06,530 --> 00:03:09,560
+The first argument is the target of the property.
+
+42
+00:03:09,920 --> 00:03:16,250
+And for instance property like this one which we call on for instance if we work with it this will be
+
+43
+00:03:16,250 --> 00:03:22,150
+the prototype of the object that was created if we had a static property here.
+
+44
+00:03:22,160 --> 00:03:25,520
+Target would refer to the constructor function instead.
+
+45
+00:03:25,550 --> 00:03:31,070
+So here I'll say any because I don't know exactly which structure does object will have the second argument
+
+46
+00:03:31,070 --> 00:03:40,440
+we get is the property name simply that could be a string here could of course also be a symbol.
+
+47
+00:03:40,450 --> 00:03:44,520
+We don't know what we use as a property identifier added here.
+
+48
+00:03:44,530 --> 00:03:52,830
+I will log property decorator so that we can see when does runs anyone a console log.
+
+49
+00:03:52,830 --> 00:03:58,700
+Target and also property names so that we see what's in these two values.
+
+50
+00:03:58,700 --> 00:04:05,540
+With that if we save that it compiles without errors and if we go to our server we see property decorator
+
+51
+00:04:05,570 --> 00:04:09,050
+gets printed down there and this is our output we get.
+
+52
+00:04:09,050 --> 00:04:16,430
+We see here that's the prototype of our object because we're not seeing title and price here but we
+
+53
+00:04:16,430 --> 00:04:21,840
+do see get price with tax and indeed methods are registered on the prototype of an object.
+
+54
+00:04:21,950 --> 00:04:27,940
+So that's the prototype of our object and we see title over here on the right that's the property name.
+
+55
+00:04:27,970 --> 00:04:28,810
+We're working with.
+
+56
+00:04:29,840 --> 00:04:33,810
+Now when exactly dust is logger execute though.
+
+57
+00:04:33,840 --> 00:04:41,570
+Well as you can tell since I never instantiate any product it executes basically when your class definition
+
+58
+00:04:41,720 --> 00:04:49,340
+is registered by javascript so it executes when you define this property basically to JavaScript as
+
+59
+00:04:49,340 --> 00:04:50,960
+part of your class here.
+
+60
+00:04:51,020 --> 00:04:57,140
+As part of this constructor function which is created here in the end this is when does property decorator
+
+61
+00:04:57,230 --> 00:04:57,920
+executes.

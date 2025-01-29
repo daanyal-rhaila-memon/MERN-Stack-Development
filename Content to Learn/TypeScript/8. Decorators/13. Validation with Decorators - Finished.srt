@@ -1,0 +1,603 @@
+1
+00:00:02,330 --> 00:00:10,970
+To implement this I will first of all trade interface validator config where I want to configure that
+
+2
+00:00:10,970 --> 00:00:11,690
+storage.
+
+3
+00:00:11,690 --> 00:00:17,030
+I have to work with my idea there is to have a couple of properties and hence I use this index type
+
+4
+00:00:17,030 --> 00:00:17,940
+notation here.
+
+5
+00:00:19,780 --> 00:00:23,440
+Which are basically strings where the value is yet another object.
+
+6
+00:00:23,440 --> 00:00:29,410
+Because this here would be basically the class name for which you want to register some validated properties
+
+7
+00:00:29,830 --> 00:00:31,740
+and then in the object which was stored there.
+
+8
+00:00:31,750 --> 00:00:37,040
+We have two concrete properties of the class that have validators attached to them.
+
+9
+00:00:37,060 --> 00:00:43,630
+So here we have the valid data bill property if you want to call it like this which also will be a String
+
+10
+00:00:43,990 --> 00:00:49,930
+key and then the value for that should be an array of strings where basically we have something like
+
+11
+00:00:52,460 --> 00:01:00,310
+required positive ends or something like that could be added here as a list of validators.
+
+12
+00:01:00,340 --> 00:01:07,810
+Now we can create our registered validators conflict here which should be of type validated conflict
+
+13
+00:01:07,990 --> 00:01:12,970
+which initially is an empty object because initially when the app starts when our third party library
+
+14
+00:01:12,970 --> 00:01:17,890
+gets loaded no validators have been registered yet well.
+
+15
+00:01:17,900 --> 00:01:23,540
+And then here in our decorators we want to add something to dead registry.
+
+16
+00:01:23,540 --> 00:01:31,010
+Now keep in mind that property decorator function gets two arguments the target which is the prototype
+
+17
+00:01:31,070 --> 00:01:37,730
+of the object the property sits on or the constructor function if it were a static property and the
+
+18
+00:01:37,730 --> 00:01:39,320
+property name.
+
+19
+00:01:39,320 --> 00:01:44,200
+These are the two arguments we get here we don't get the descriptor for properties.
+
+20
+00:01:44,420 --> 00:01:51,320
+Now we can go to our registered validators and dare I want to add a new entry for Target dot constructor
+
+21
+00:01:52,770 --> 00:01:59,130
+the prototype of the instance we're working with we'll have a constructor key which points at the constructor
+
+22
+00:01:59,130 --> 00:02:05,970
+function that was used to create our object and that day for will basically be something like course
+
+23
+00:02:05,970 --> 00:02:06,150
+here.
+
+24
+00:02:06,150 --> 00:02:11,370
+So the name of that constructor function and the end can be retrieved from the constructor because constructor
+
+25
+00:02:11,370 --> 00:02:16,830
+is a function we can use to name property which exists on any function in javascript to get the function
+
+26
+00:02:16,830 --> 00:02:17,340
+name.
+
+27
+00:02:17,340 --> 00:02:20,080
+And this then will be the course name here for example.
+
+28
+00:02:20,670 --> 00:02:26,760
+So now we were just had a class name as a key in registered validators and the value for that then should
+
+29
+00:02:26,760 --> 00:02:29,570
+be a number object so asset does equal to a number.
+
+30
+00:02:29,580 --> 00:02:36,360
+Object here and in that object I also have a dynamically assigned property where I use my prop name.
+
+31
+00:02:36,360 --> 00:02:42,370
+So the property for which I want to add a validator as a key and now the value here is an array of strings.
+
+32
+00:02:42,390 --> 00:02:45,570
+And here it will add required as a string.
+
+33
+00:02:45,570 --> 00:02:47,930
+Now of course this is a very naive validator.
+
+34
+00:02:48,000 --> 00:02:52,800
+If we had our validators registered for this property already I would now overwrite it here.
+
+35
+00:02:52,890 --> 00:02:58,530
+So it would be better to first retrieve any existing validators and then copy them into disarray and
+
+36
+00:02:58,560 --> 00:03:04,800
+only add required to that existing array again to save some time here and to just show me general idea.
+
+37
+00:03:04,800 --> 00:03:12,060
+I will have to more naive approach here was that we got the required annotation though let's now work
+
+38
+00:03:12,150 --> 00:03:16,670
+on the positive number annotation and of course that's basically the same.
+
+39
+00:03:16,800 --> 00:03:23,720
+I copy that code but I set this year to positive or whatever identifier you want to use.
+
+40
+00:03:23,790 --> 00:03:27,690
+And of course we have to make sure we accept the right arguments.
+
+41
+00:03:27,690 --> 00:03:34,320
+So with that alone with this what we added thus far we register these properties and they're validators
+
+42
+00:03:34,470 --> 00:03:36,050
+in our global conflict.
+
+43
+00:03:36,060 --> 00:03:42,900
+When this class is defined now we just need to work on the validate function the validate function should
+
+44
+00:03:42,900 --> 00:03:48,960
+go through all registered validators and then basically run different logic based on which validators
+
+45
+00:03:49,020 --> 00:03:50,370
+it finds.
+
+46
+00:03:50,370 --> 00:03:57,630
+So here first of all I want to retrieve the configuration for the concrete object we're dealing with.
+
+47
+00:03:57,630 --> 00:04:03,780
+For that we need to find out which constructor function the object is based on and then get D validation
+
+48
+00:04:04,170 --> 00:04:09,120
+configured a property validator mappings here which we set up for that object.
+
+49
+00:04:09,120 --> 00:04:15,540
+So you're all named as object validators or object validator conflict maybe and we reach out to the
+
+50
+00:04:15,540 --> 00:04:23,900
+registered validators here and access a property which should be object dot constructor dot name.
+
+51
+00:04:23,940 --> 00:04:29,100
+Same logic as before we access to constructor property which exists on the prototype of the object and
+
+52
+00:04:29,100 --> 00:04:31,630
+therefore we can access it directly on the object.
+
+53
+00:04:31,770 --> 00:04:36,660
+Thanks to our javascript works and thanks to the prototype chain we will then reach out to the prototype
+
+54
+00:04:36,780 --> 00:04:42,450
+if we can't find the constructor property on the object itself and that will work and therefore now
+
+55
+00:04:42,450 --> 00:04:48,210
+we got the constructor name and we find out that for example this course here is based on this course
+
+56
+00:04:48,210 --> 00:04:48,980
+class.
+
+57
+00:04:49,110 --> 00:04:52,860
+So we look up any validated configuration we have for the course class.
+
+58
+00:04:52,860 --> 00:04:55,440
+So now we're looking at this object basically.
+
+59
+00:04:55,950 --> 00:04:58,890
+This is now stored an object validator Conficker.
+
+60
+00:04:59,340 --> 00:05:05,140
+Now of course we might not find this if we're trying to validate the object for which nothing was registered.
+
+61
+00:05:05,160 --> 00:05:12,030
+So if we don't have any validated config if we don't find anything there I want to return true because
+
+62
+00:05:12,060 --> 00:05:13,720
+then this certainly is valid.
+
+63
+00:05:13,800 --> 00:05:14,030
+Right.
+
+64
+00:05:14,030 --> 00:05:15,350
+There is nothing to validate.
+
+65
+00:05:15,390 --> 00:05:18,270
+So the object certainly is valid.
+
+66
+00:05:18,390 --> 00:05:24,960
+Otherwise if we do find it I want to loop fruit is in your object here with a for in loop.
+
+67
+00:05:24,960 --> 00:05:32,220
+So with that I loop through my properties for which I registered validators with const prop in object
+
+68
+00:05:32,220 --> 00:05:34,350
+validator config.
+
+69
+00:05:34,410 --> 00:05:39,690
+This gives me access to all the property names for which we then might have validators.
+
+70
+00:05:39,690 --> 00:05:43,960
+So now of course I need to go through all the validators we might have for a property.
+
+71
+00:05:44,010 --> 00:05:48,990
+This always should be an array even if we only have one validator added so we can use a for off loop
+
+72
+00:05:48,990 --> 00:05:54,800
+here now and get the concrete validator which we have for the object validated conflict.
+
+73
+00:05:54,810 --> 00:06:01,650
+Ford is given property so now we're getting things like positive or required which are stored in the
+
+74
+00:06:01,650 --> 00:06:06,010
+validated constant then and then we could have a switch statement here.
+
+75
+00:06:06,150 --> 00:06:09,640
+Or of course call external functions based on which validated we find.
+
+76
+00:06:09,840 --> 00:06:12,080
+But here I'll go with a built in switch statement.
+
+77
+00:06:12,180 --> 00:06:16,650
+Switch on validator and then basically you have different cases.
+
+78
+00:06:16,650 --> 00:06:28,170
+For example the required case here was like this here I want to return True is our property which we're
+
+79
+00:06:28,170 --> 00:06:28,830
+looking at.
+
+80
+00:06:28,980 --> 00:06:39,070
+So this property on this object has a non empty value so I will return true if object prop is truly
+
+81
+00:06:39,210 --> 00:06:44,420
+and to convert this to a real true or false value we can use the double bang operator.
+
+82
+00:06:44,460 --> 00:06:49,500
+Now here types of complaints that it doesn't know whether object has this property.
+
+83
+00:06:49,500 --> 00:06:53,570
+So here we should actually change this to any to get this extra flexibility here.
+
+84
+00:06:53,640 --> 00:06:56,100
+Of course you could also work on the types here.
+
+85
+00:06:56,220 --> 00:07:03,300
+And for example also turn your identifiers here into clearly defined types where in comes you work with
+
+86
+00:07:03,510 --> 00:07:08,310
+and maybe all improved the typing here though to be honest since I want this to work with any object
+
+87
+00:07:08,340 --> 00:07:11,830
+it is hard to improve it in a way that types do will like it.
+
+88
+00:07:11,850 --> 00:07:13,340
+We could work with generic types.
+
+89
+00:07:13,350 --> 00:07:20,130
+But then again we would need to kind of restrict ourselves to which objects to generic types should
+
+90
+00:07:20,130 --> 00:07:22,130
+extend and accept them for.
+
+91
+00:07:22,140 --> 00:07:28,140
+So any might be our best option here to be really flexible and accept a lot of different objects in
+
+92
+00:07:28,140 --> 00:07:30,690
+this validate function.
+
+93
+00:07:30,690 --> 00:07:34,740
+Now back to the switch statement the required case is one possible case.
+
+94
+00:07:34,800 --> 00:07:40,890
+We also got the positive case which you want to handle and there are one to return true if the property
+
+95
+00:07:40,890 --> 00:07:43,740
+we're looking at is greater than zero.
+
+96
+00:07:43,830 --> 00:07:48,860
+So if object prop is greater than zero then does returns through.
+
+97
+00:07:48,870 --> 00:07:52,900
+Otherwise this will return false.
+
+98
+00:07:52,930 --> 00:07:58,900
+Now if we don't make it into this four block or if we somehow have a loop that doesn't loop through
+
+99
+00:07:58,900 --> 00:08:04,180
+anything because we haven't registered any validators we passed an empty array here or something.
+
+100
+00:08:04,180 --> 00:08:10,300
+So if we make it past this for loop I will return true as a default as well.
+
+101
+00:08:10,310 --> 00:08:16,180
+And now we return something in all circumstances and we can use validate with that.
+
+102
+00:08:16,310 --> 00:08:17,840
+Let's see whether it works.
+
+103
+00:08:17,840 --> 00:08:19,100
+If we now save this
+
+104
+00:08:23,660 --> 00:08:28,820
+and we reload our app here and I tried to submit this we get an error Invalid input please try again
+
+105
+00:08:29,480 --> 00:08:38,130
+if I enter some text here javascript that complete guide I still get this because my number is wrong.
+
+106
+00:08:38,160 --> 00:08:42,090
+If I enter minus one year we also get this because that's not positive.
+
+107
+00:08:42,090 --> 00:08:45,070
+If I enter a positive number however it works.
+
+108
+00:08:45,070 --> 00:08:46,290
+If I have a positive number.
+
+109
+00:08:46,320 --> 00:08:48,270
+But the first field is empty.
+
+110
+00:08:48,270 --> 00:08:49,860
+Then there's all the work.
+
+111
+00:08:49,860 --> 00:08:52,140
+So that's something we'll have to work on.
+
+112
+00:08:52,230 --> 00:08:56,400
+So let's find out what the problem is and to find out.
+
+113
+00:08:56,520 --> 00:09:00,750
+I actually will add a little console lock here and lock the property we're looking at.
+
+114
+00:09:00,750 --> 00:09:05,640
+We could of course all use breakpoints and the developer tools now click save.
+
+115
+00:09:05,680 --> 00:09:10,510
+Here you see the first thing which gets validated here is the price and thereafter we stop.
+
+116
+00:09:11,590 --> 00:09:16,950
+So the prize is the first property that gets validated and that's the interesting thing here.
+
+117
+00:09:16,990 --> 00:09:22,240
+The price is actually only property that matters here because we return invalidate.
+
+118
+00:09:22,240 --> 00:09:29,140
+That means the first time we find any validator that returns true or false we immediately return and
+
+119
+00:09:29,140 --> 00:09:31,540
+we don't care about the other validators.
+
+120
+00:09:31,540 --> 00:09:37,210
+Now in the false case this is OK because if one element is false if one properties falls is invalid
+
+121
+00:09:37,540 --> 00:09:42,540
+then we're fine not even looking at the others but for the true case it's a problem.
+
+122
+00:09:42,640 --> 00:09:49,340
+If we return true to first time one property meets our expectations we have a problem.
+
+123
+00:09:49,450 --> 00:09:56,050
+So we should enhanced this by having a is valid property here which initially is true is valid variable
+
+124
+00:09:56,060 --> 00:10:05,990
+I mean and then here we set is valid equal to is valid and this year and the same down deer set does
+
+125
+00:10:06,050 --> 00:10:11,260
+equal to this so that we don't return immediately.
+
+126
+00:10:11,260 --> 00:10:18,400
+Instead we just update is valid and we break their offer to not fall through the result of that is that
+
+127
+00:10:18,400 --> 00:10:24,490
+in the end after all these loops is valid evil is still is true but as soon as one of these checks here
+
+128
+00:10:24,490 --> 00:10:30,820
+is false thanks to our javascript works the overall is valid value will be false because true combined
+
+129
+00:10:30,820 --> 00:10:36,010
+with false will return false and then down there we should return is valid.
+
+130
+00:10:36,070 --> 00:10:41,140
+So now we ensure that all properties are checked and not just the first one.
+
+131
+00:10:41,140 --> 00:10:45,480
+JavaScript has a look at this however will not be our only problem.
+
+132
+00:10:45,480 --> 00:10:50,450
+We also have a problem here when we have a look at how we register our validate or logic.
+
+133
+00:10:50,580 --> 00:10:57,070
+I always overwrite the registered validators for a given class name with a new object.
+
+134
+00:10:57,210 --> 00:11:00,020
+Instead we should add any existing validators here.
+
+135
+00:11:00,090 --> 00:11:01,590
+So did we don't do that.
+
+136
+00:11:01,650 --> 00:11:07,740
+For example if the spread operator like that to take any existing key value pairs for that class name
+
+137
+00:11:08,190 --> 00:11:12,390
+only registered validators and add that first before we add our new one.
+
+138
+00:11:12,540 --> 00:11:21,790
+Also down there of course and now with that if we save this we go back to our application here.
+
+139
+00:11:22,040 --> 00:11:24,130
+If I have both empty we've failed.
+
+140
+00:11:24,200 --> 00:11:28,460
+If we enter a valid price but we have invalid title we fail.
+
+141
+00:11:28,550 --> 00:11:31,460
+If both is valid we succeed.
+
+142
+00:11:31,550 --> 00:11:38,180
+If we have a valid title but not price we fail also with the negative price and therefore it is not
+
+143
+00:11:38,180 --> 00:11:39,190
+looks good to me.
+
+144
+00:11:39,260 --> 00:11:45,680
+And this is now a first naive implementation of how such a validator could work with the help of typescript
+
+145
+00:11:45,680 --> 00:11:46,640
+decorators.
+
+146
+00:11:46,790 --> 00:11:52,520
+And keep in mind that all of that here all the decorators to validate function and the registry would
+
+147
+00:11:52,520 --> 00:11:53,630
+be hidden away from you.
+
+148
+00:11:53,630 --> 00:11:58,130
+That could be part of the third party library which you're working on of course in a more elaborate
+
+149
+00:11:58,130 --> 00:12:03,350
+way than probably which you share with your end users and you as an end user would just import these
+
+150
+00:12:03,350 --> 00:12:10,340
+things at these decorators and called validate and you would have a very convenient way of adding validation
+
+151
+00:12:10,520 --> 00:12:11,650
+to your class system.

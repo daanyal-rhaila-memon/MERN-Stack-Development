@@ -1,0 +1,247 @@
+1
+00:00:02,150 --> 00:00:05,590
+Port hatched you find our good old starting Project.
+
+2
+00:00:05,680 --> 00:00:12,700
+I already started the server with NPM start and the hives go to watch process with TSC dash W and the
+
+3
+00:00:12,700 --> 00:00:16,450
+very first thing we need to configure there isn't a TSA conflict file.
+
+4
+00:00:16,450 --> 00:00:25,090
+Make sure your target is set to iOS 6 and then if you scroll down make sure that you add this experimental
+
+5
+00:00:25,090 --> 00:00:30,790
+decorators line here and add a comma in front of this and then you can auto format to format this all
+
+6
+00:00:30,790 --> 00:00:31,730
+correctly.
+
+7
+00:00:31,750 --> 00:00:32,740
+This is important.
+
+8
+00:00:32,740 --> 00:00:36,010
+Otherwise you won't be able to use decorators in your project.
+
+9
+00:00:36,010 --> 00:00:42,910
+So make sure you tweak your Ts config Jason File appropriately and with that we can dive right in and
+
+10
+00:00:42,910 --> 00:00:48,940
+to write our first decorator here in the apt yes file and I want to start with a decorator.
+
+11
+00:00:48,940 --> 00:00:55,750
+We can add to a class now decorators in general are all about classes but this is a decorator which
+
+12
+00:00:55,750 --> 00:00:58,270
+we will add to the class as a whole.
+
+13
+00:00:58,270 --> 00:01:05,320
+For now let's say we have a class person very trivial class where we have a name maybe with a value
+
+14
+00:01:05,320 --> 00:01:12,640
+of Max pre initialized here where we have a constructor function where I just log creating Person object.
+
+15
+00:01:12,640 --> 00:01:15,800
+So did we see that this is executed.
+
+16
+00:01:15,950 --> 00:01:22,960
+And then of course we can create a new person here with the new keyword like this.
+
+17
+00:01:22,980 --> 00:01:28,610
+And if you want to be kind of course locked is created person and this should hold no surprises if we
+
+18
+00:01:28,610 --> 00:01:31,730
+save all of that it compiled without errors.
+
+19
+00:01:32,150 --> 00:01:37,700
+And if we visit our page then on local host three thousand in the javascript console we see creating
+
+20
+00:01:37,700 --> 00:01:44,450
+Person object which is coming from that constructor and we of course also see the person itself here
+
+21
+00:01:45,850 --> 00:01:46,930
+now there.
+
+22
+00:01:46,990 --> 00:01:49,580
+In this example we got no decorators involved.
+
+23
+00:01:49,600 --> 00:01:55,330
+Let's change this at the top of the file let's add a decorator and a decorator and that's really important
+
+24
+00:01:55,330 --> 00:02:02,020
+to understand isn't the end just a function of function you apply to something for example to a class
+
+25
+00:02:02,050 --> 00:02:03,490
+in a certain way.
+
+26
+00:02:03,580 --> 00:02:11,540
+So let's create a function here with the function keyword and I will name it logger notice is a function
+
+27
+00:02:11,550 --> 00:02:15,600
+the only special thing here is that I start with a capital character.
+
+28
+00:02:15,600 --> 00:02:18,000
+This is not a must do by the way.
+
+29
+00:02:18,030 --> 00:02:23,700
+You don't have to use a capital starting character you can use a lowercase one as well you just see
+
+30
+00:02:23,760 --> 00:02:30,060
+a lot of decorators out there in libraries which you might use that use uppercase starting characters.
+
+31
+00:02:30,120 --> 00:02:32,190
+And therefore I'll do the same here.
+
+32
+00:02:32,250 --> 00:02:39,390
+So the logger function here is a function and we can apply is as a decorator as it will turn out.
+
+33
+00:02:39,390 --> 00:02:41,580
+Now let's add a console log in here.
+
+34
+00:02:41,670 --> 00:02:44,750
+Logging so that we can see when does function runs.
+
+35
+00:02:44,760 --> 00:02:47,370
+Because I will not call it directly.
+
+36
+00:02:47,370 --> 00:02:50,130
+Instead I want to add it as a decorator to this class.
+
+37
+00:02:50,550 --> 00:02:55,220
+And we do so by adding a at symbol here in front of the class.
+
+38
+00:02:55,410 --> 00:03:02,910
+And then our function here just like this no couple of special things here the at symbol here is a special
+
+39
+00:03:02,970 --> 00:03:06,440
+identifier typescript sees or recognizes.
+
+40
+00:03:06,450 --> 00:03:13,020
+And then the thing directly after the at symbol should point at a function not executed but point at
+
+41
+00:03:13,020 --> 00:03:15,840
+it which should be your decorator.
+
+42
+00:03:15,840 --> 00:03:20,700
+Now here you see that logger Dan accepts too few arguments to be used as a decorator here.
+
+43
+00:03:20,700 --> 00:03:24,910
+So the good thing is typescript understands that I want to use it as a decorator here.
+
+44
+00:03:24,960 --> 00:03:32,150
+The bad thing is we don't pass enough arguments and indeed decorators receive arguments how many arguments
+
+45
+00:03:32,160 --> 00:03:39,840
+depends on where you use the decorator here for decorator we add to a class we get one argument and
+
+46
+00:03:39,840 --> 00:03:47,850
+that's the target of this decorator so to say which is our constructor function so we can say we get
+
+47
+00:03:47,850 --> 00:03:54,980
+a function here as an argument in the end we could also name it constructor because in the end we will
+
+48
+00:03:54,980 --> 00:04:00,890
+get our constructor function of this class or whichever class we add this decorator to as our argument
+
+49
+00:04:01,520 --> 00:04:09,800
+lets all the console log that so that we can get some insight into this constructor argument here and
+
+50
+00:04:09,800 --> 00:04:10,580
+let's save this.
+
+51
+00:04:10,580 --> 00:04:12,760
+And as you see it compiles without errors.
+
+52
+00:04:12,800 --> 00:04:17,930
+And if we now have a look at our output we see the old code from before but we also see the logging
+
+53
+00:04:17,930 --> 00:04:22,760
+output and this constructor function being logged while we actually see the whole class here.
+
+54
+00:04:22,790 --> 00:04:27,680
+But classes in the end are just syntactical sugar over a constructor functions.
+
+55
+00:04:27,680 --> 00:04:34,820
+Please also note that our decorator output logging and this closet does constructor function log here
+
+56
+00:04:35,090 --> 00:04:43,160
+is printed first before we see creating Person object and our Person object because indeed decorators
+
+57
+00:04:43,160 --> 00:04:50,190
+and that's really important decorators execute when your class is defined not when it is instantiate
+
+58
+00:04:50,190 --> 00:04:55,670
+it you don't need to instantiate your class at all we could remove that code for instantiating the class
+
+59
+00:04:55,970 --> 00:05:02,750
+and we would still get death decorator output so the decorator runs when javascript finds your class
+
+60
+00:05:02,750 --> 00:05:09,380
+definition your constructor function definition not when you use that constructor function to instantiate
+
+61
+00:05:09,380 --> 00:05:12,990
+an object that's really important to understand.
+
+62
+00:05:13,310 --> 00:05:18,920
+So this is our first decorator it's not the only way of how we can create a decorator though.

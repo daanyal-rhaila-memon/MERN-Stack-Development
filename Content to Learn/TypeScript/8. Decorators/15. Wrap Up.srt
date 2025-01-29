@@ -1,0 +1,143 @@
+1
+00:00:02,380 --> 00:00:08,170
+So we had a look at a lot of decorators how you work with them how you can configure them how you can
+
+2
+00:00:08,740 --> 00:00:14,830
+do stuff with them what you can do with them and this hopefully shows you the complexity but also the
+
+3
+00:00:14,830 --> 00:00:19,000
+power of decorators and how you can think about them how you can use them.
+
+4
+00:00:19,150 --> 00:00:25,810
+Now you're not only able to create your own decorators there also is a rich ecosystem out there of packages
+
+5
+00:00:25,810 --> 00:00:30,670
+and frameworks that rely on decorators for example CLOs and validator.
+
+6
+00:00:30,730 --> 00:00:37,600
+If you search for T S Class validator you find a package which basically has a more elaborate implementation
+
+7
+00:00:37,810 --> 00:00:40,240
+of our own custom validation logic.
+
+8
+00:00:40,240 --> 00:00:46,780
+We worked on this package can be added to any project you're working on and then you can simply import
+
+9
+00:00:46,780 --> 00:00:52,360
+a bunch of decorators or decorator factories as you can see since we execute them here at home to your
+
+10
+00:00:52,360 --> 00:00:57,630
+properties with or without some extra configuration depending on the validator it is.
+
+11
+00:00:57,750 --> 00:01:03,370
+And behind the scenes this will manage such a registry you could say such a configuration object in
+
+12
+00:01:03,370 --> 00:01:09,670
+the end store your validator is set up for the different properties in your different classes and then
+
+13
+00:01:09,820 --> 00:01:16,000
+give you validate method which you also import from the package which you can execute and pass your
+
+14
+00:01:16,000 --> 00:01:20,590
+object to to apply all the validation logic you set up in the class.
+
+15
+00:01:20,590 --> 00:01:27,040
+So it's basically doing what we just did just with more validators and with all the heavy lifting done
+
+16
+00:01:27,040 --> 00:01:27,600
+for you.
+
+17
+00:01:27,850 --> 00:01:32,590
+But of course it helps to understand how it is generally works since we built it on our own here in
+
+18
+00:01:32,590 --> 00:01:34,990
+a more nave version.
+
+19
+00:01:35,050 --> 00:01:40,840
+Now besides this package of course we also have angular for example angular is a framework which I mentioned
+
+20
+00:01:40,870 --> 00:01:47,410
+early already which heavily relies on decorators like this component decorator which allows you to create
+
+21
+00:01:47,410 --> 00:01:54,220
+some wear which allows you to assign some dynamic HDL code which taps into properties of your classes
+
+22
+00:01:54,220 --> 00:02:00,160
+as well with a special syntax added by angular to then render some dynamic content onto the screen.
+
+23
+00:02:00,220 --> 00:02:05,650
+So here angular does more than just offer these decorators but the decorators are a core part of angular
+
+24
+00:02:06,370 --> 00:02:13,180
+and last but not least I also want to show you nest J.S. nest J as is a service side javascript framework
+
+25
+00:02:13,180 --> 00:02:20,010
+for note J.S. which also heavily utilizes TypeScript and this also embraces decorators.
+
+26
+00:02:20,140 --> 00:02:27,040
+Are you use decorators to define controllers and routs the methods which users have to use on their
+
+27
+00:02:27,040 --> 00:02:33,910
+age the p requests to trigger certain functions and also a lot of other decorators you can use to extract
+
+28
+00:02:33,940 --> 00:02:36,940
+data from incoming requests and so on.
+
+29
+00:02:36,940 --> 00:02:42,910
+So here this framework also again offers all these decorators for you so that you can just add them
+
+30
+00:02:42,940 --> 00:02:49,660
+to your properties to your methods to your classes and add extra functionality which the framework then
+
+31
+00:02:49,660 --> 00:02:53,250
+in turn also takes into account when it executes your code.
+
+32
+00:02:53,260 --> 00:03:00,670
+So here again decorators are used for meta programming to add extra configuration extra logic which
+
+33
+00:03:00,670 --> 00:03:07,930
+then is taken into account by in this case the code of the framework which executes your code or which
+
+34
+00:03:07,930 --> 00:03:11,110
+works together with your code and that's it.
+
+35
+00:03:11,110 --> 00:03:16,510
+For decorators this hopefully gives you a good overview of what you can do with decorators why they
+
+36
+00:03:16,510 --> 00:03:19,420
+can be very helpful and how they generally work.

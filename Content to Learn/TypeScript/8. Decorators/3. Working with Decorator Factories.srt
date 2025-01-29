@@ -1,0 +1,103 @@
+1
+00:00:02,120 --> 00:00:08,900
+Besides creating a decorator like this we can also define a decorator factory which basically returns
+
+2
+00:00:08,930 --> 00:00:15,620
+a decorator function but allows us to configure it when we assign it as a decorator to something to
+
+3
+00:00:15,620 --> 00:00:16,280
+show this.
+
+4
+00:00:16,310 --> 00:00:19,820
+Let's convert dysfunction here into a factory.
+
+5
+00:00:19,820 --> 00:00:25,100
+For that I will grab this constructor argument and remove it and instead in here it will return a new
+
+6
+00:00:25,100 --> 00:00:30,410
+anonymous function which takes that constructor argument which then holds this logic which I want to
+
+7
+00:00:30,410 --> 00:00:33,040
+execute inside of the decorator.
+
+8
+00:00:33,140 --> 00:00:34,380
+So I move that in there.
+
+9
+00:00:34,670 --> 00:00:37,920
+So now we have a function that returns a new function.
+
+10
+00:00:37,940 --> 00:00:43,330
+So now when we want to apply this decorator we have to execute it as a function here.
+
+11
+00:00:43,400 --> 00:00:45,740
+So did we execute does outer function.
+
+12
+00:00:45,860 --> 00:00:51,650
+And we attached a return value which is this inner function which is our valid decorator function as
+
+13
+00:00:51,650 --> 00:00:53,420
+a decorator to CLOs they offer.
+
+14
+00:00:53,480 --> 00:00:54,730
+Why would we do that.
+
+15
+00:00:54,770 --> 00:01:00,420
+Because now here for example we could except lock a string here which is a string.
+
+16
+00:01:00,440 --> 00:01:07,760
+Any argument of your choice and as many arguments as you want and pass a value for dead in logging person
+
+17
+00:01:08,330 --> 00:01:13,880
+and use that instead of our decorator function so that here instead of showing that standard logging
+
+18
+00:01:13,880 --> 00:01:16,350
+text we show our log string.
+
+19
+00:01:16,370 --> 00:01:24,890
+So now we can customize the values the decorator function uses when it executes with our factory function.
+
+20
+00:01:25,040 --> 00:01:31,700
+We now call our decorator here because we're not executing the decorator function but we're executing
+
+21
+00:01:31,700 --> 00:01:35,240
+a function that will return such a decorator function.
+
+22
+00:01:35,240 --> 00:01:42,890
+And the advantage just is that we now can pass in values which will be used by that inner returned decorator
+
+23
+00:01:42,890 --> 00:01:43,770
+function.
+
+24
+00:01:43,790 --> 00:01:49,910
+So if I now save that we see the old output but with our custom log string here.
+
+25
+00:01:50,000 --> 00:01:57,350
+So using decorator factories can give us some more power and more possibilities of configuring what
+
+26
+00:01:57,350 --> 00:01:59,870
+the decorator then does internally.

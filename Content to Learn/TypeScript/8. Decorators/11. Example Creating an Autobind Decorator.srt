@@ -1,0 +1,487 @@
+1
+00:00:02,320 --> 00:00:07,360
+So we can return something on method decorators and that something should be a descriptor which allows
+
+2
+00:00:07,360 --> 00:00:11,300
+us to change the method or change the configuration of the method.
+
+3
+00:00:11,350 --> 00:00:14,220
+And this is something I want to do here now for dead.
+
+4
+00:00:14,260 --> 00:00:16,810
+I will first of all go to index HQ file and there.
+
+5
+00:00:16,840 --> 00:00:25,030
+Let's add a button click me a very simple button in my apt yes file I now want to make sure that when
+
+6
+00:00:25,030 --> 00:00:29,820
+we click this button we execute a method on an object.
+
+7
+00:00:29,820 --> 00:00:36,520
+And for Dad I will simply add a new class here first of all printer and in there I want to have a property
+
+8
+00:00:36,820 --> 00:00:39,780
+message which is just this work.
+
+9
+00:00:39,780 --> 00:00:46,690
+So a simple string stored in there and then I want to have a show message method in there where I simply
+
+10
+00:00:46,690 --> 00:00:49,640
+console log this message.
+
+11
+00:00:49,660 --> 00:00:53,920
+So of course this is kind of a simple Dummy Class but nonetheless this allows to show you what I want
+
+12
+00:00:53,920 --> 00:00:54,340
+to show you.
+
+13
+00:00:54,910 --> 00:01:02,350
+Let's select a button in the dorm now with document query selector button and let's add an event listener
+
+14
+00:01:02,350 --> 00:01:02,990
+to it.
+
+15
+00:01:03,010 --> 00:01:07,990
+Now first of all I'll add my exclamation mark here to make it clear to typescript that this exists that
+
+16
+00:01:07,990 --> 00:01:09,150
+this will not be now.
+
+17
+00:01:09,310 --> 00:01:15,340
+And then I will add an event listener a click event listener and then I want to trigger does show message
+
+18
+00:01:15,490 --> 00:01:20,220
+method here for data will create a new printer here like this.
+
+19
+00:01:20,440 --> 00:01:23,110
+And then here pointed p dot show message.
+
+20
+00:01:23,110 --> 00:01:25,280
+That's my idea here.
+
+21
+00:01:25,330 --> 00:01:33,150
+Now if we save that and we go back to our page and they click on this button we get undefined here though
+
+22
+00:01:33,360 --> 00:01:36,210
+we don't get our message being shown.
+
+23
+00:01:36,210 --> 00:01:41,850
+And the reason for Dad is Dad with an event listener if we point at a function it should be executed.
+
+24
+00:01:41,850 --> 00:01:49,320
+The this keyword inside of that function will not have the same context or reference as it has if we
+
+25
+00:01:49,320 --> 00:01:53,530
+call just p dot show message.
+
+26
+00:01:53,640 --> 00:01:56,490
+In this case this would refer to the printer.
+
+27
+00:01:56,490 --> 00:01:56,850
+No.
+
+28
+00:01:56,880 --> 00:02:03,420
+In the scenario here where we use an event listener this will refer to the target of the event because
+
+29
+00:02:03,510 --> 00:02:09,060
+ad event listener in the end finds this in the function which is to be executed to the target of the
+
+30
+00:02:09,060 --> 00:02:09,540
+event.
+
+31
+00:02:09,630 --> 00:02:11,320
+And of course I don't want this.
+
+32
+00:02:11,400 --> 00:02:17,970
+Now a common work around here would be to use the bind method and bind show message to p or bind this
+
+33
+00:02:17,970 --> 00:02:24,450
+in show message to p so that when does executes this is not referring to what ad event listener wants
+
+34
+00:02:24,450 --> 00:02:31,560
+it to refer to but instead this instead of show message will refer to this P to this object here again
+
+35
+00:02:31,870 --> 00:02:34,620
+and it for now have a reload here and it clear us again.
+
+36
+00:02:34,620 --> 00:02:36,240
+Now we see this works.
+
+37
+00:02:36,330 --> 00:02:39,260
+Now that is all default javascript.
+
+38
+00:02:39,300 --> 00:02:46,320
+Now we'll build a decorator which we can add to this method which will automatically bind this to the
+
+39
+00:02:46,320 --> 00:02:47,460
+surrounding class.
+
+40
+00:02:47,490 --> 00:02:53,390
+So to the object this method belongs to every time it's called no matter where we call it.
+
+41
+00:02:53,430 --> 00:02:58,590
+So for dead above the printer I'll add a new function and it will name it all to bind because status
+
+42
+00:02:58,620 --> 00:03:03,540
+the and what we do and that will be my decorator order bind can all of course use a capital starting
+
+43
+00:03:03,540 --> 00:03:08,640
+character to stay in line with our other names but again you can use either of the two when you define
+
+44
+00:03:08,640 --> 00:03:10,440
+a decorator function.
+
+45
+00:03:10,470 --> 00:03:13,220
+Now this year will be my decorator already.
+
+46
+00:03:13,380 --> 00:03:18,690
+And in there we get a couple of arguments we get the target as you'll learn and that is any it is ever
+
+47
+00:03:18,690 --> 00:03:22,880
+the prototype of the object we're working with or it's the constructor function.
+
+48
+00:03:22,890 --> 00:03:28,260
+If we would be adding this to a static method but here it will be the prototype because we will add
+
+49
+00:03:28,260 --> 00:03:29,950
+it to instance method.
+
+50
+00:03:30,240 --> 00:03:34,890
+Then we have a method name or the property name but since we added to a method we can call this method
+
+51
+00:03:34,890 --> 00:03:36,430
+name makes more sense.
+
+52
+00:03:36,450 --> 00:03:40,550
+This is a string or a symbol or it could also be a number of course.
+
+53
+00:03:40,580 --> 00:03:45,930
+But here we know we will typically work with strings so we can't all just go with string here depending
+
+54
+00:03:45,930 --> 00:03:50,490
+on where you plan on adding this decorator and how generic it should be.
+
+55
+00:03:50,490 --> 00:03:56,370
+And last but not least we get the descriptor here which will be of type property descriptor as we learned.
+
+56
+00:03:56,400 --> 00:04:02,610
+So now we get these free arguments which we all used on log free which was our method decorator before
+
+57
+00:04:03,570 --> 00:04:03,880
+now.
+
+58
+00:04:03,900 --> 00:04:10,650
+In order bind I now want to make sure that we always set the this keyword to the object.
+
+59
+00:04:10,650 --> 00:04:12,510
+This method belongs to an yet.
+
+60
+00:04:12,510 --> 00:04:14,250
+Now how can we achieve this.
+
+61
+00:04:14,250 --> 00:04:19,620
+First of all I have to get access to the method which should be called and this will be possible with
+
+62
+00:04:19,620 --> 00:04:24,360
+the help of our descriptor because if you reload the app and you have a look at such a method descriptor
+
+63
+00:04:24,360 --> 00:04:29,880
+down there you see we get the value property in the descriptor and that points at the function because
+
+64
+00:04:29,880 --> 00:04:35,100
+the value of this property is a function in this case a method is just a property with a function as
+
+65
+00:04:35,100 --> 00:04:35,940
+a value.
+
+66
+00:04:35,940 --> 00:04:38,670
+So the value key holds the original function.
+
+67
+00:04:38,670 --> 00:04:46,410
+Therefore here we can extract the original method if we want to call it like this by accessing descriptor
+
+68
+00:04:46,410 --> 00:04:47,370
+dot value.
+
+69
+00:04:47,370 --> 00:04:52,360
+This will give us access to the well original method next.
+
+70
+00:04:52,390 --> 00:04:55,490
+I will set up a new adjusted descriptor.
+
+71
+00:04:55,510 --> 00:04:58,290
+This will in the end be what we return later.
+
+72
+00:04:58,360 --> 00:05:03,640
+Now this will be an object and it will be of type property descriptor.
+
+73
+00:05:03,670 --> 00:05:09,970
+Now in this object here we can add all the things we can't add to a property descriptor for example
+
+74
+00:05:09,970 --> 00:05:17,170
+can set this to configurable true set enumerable two false so that this doesn't show up in for in loops.
+
+75
+00:05:17,170 --> 00:05:24,730
+And now add a getter here that's new I added getter here which is a method or a property that holds
+
+76
+00:05:24,730 --> 00:05:32,280
+a function which is the same so that we can execute some extra logic when users try to access this property
+
+77
+00:05:32,310 --> 00:05:35,980
+so that we don't just directly execute the value of this properties.
+
+78
+00:05:36,000 --> 00:05:40,890
+So to function but that we can step in and do some extra work before we execute the function.
+
+79
+00:05:40,890 --> 00:05:43,260
+That's the idea here.
+
+80
+00:05:43,260 --> 00:05:46,350
+So I don't add a value property to this descriptor here.
+
+81
+00:05:46,350 --> 00:05:52,620
+I just have a getter and again the getter basically is like having a value property with extra logic
+
+82
+00:05:52,620 --> 00:05:55,200
+that runs before the value is returned.
+
+83
+00:05:55,200 --> 00:06:02,880
+Now in here I want to have my bound function where I can use the original method we extract up here
+
+84
+00:06:03,510 --> 00:06:11,750
+and we call bind and bind this and now the big question of course is what does this refer to in here.
+
+85
+00:06:11,760 --> 00:06:14,030
+Keep in mind it's instead of the scatter method.
+
+86
+00:06:14,190 --> 00:06:20,720
+So this will refer to whatever is responsible for triggering the scatter method and that's the trick.
+
+87
+00:06:20,720 --> 00:06:27,270
+Now the getter method will be triggered by the concrete object to which it belongs.
+
+88
+00:06:27,270 --> 00:06:33,630
+So this ends up off the getter method will always refer to the object on which we defined to gather.
+
+89
+00:06:33,630 --> 00:06:39,780
+This will not be overwritten by an event listener because the getter is like an extra layer between
+
+90
+00:06:39,780 --> 00:06:45,310
+our function that's being executed and the object to which it belongs and the event listener.
+
+91
+00:06:45,420 --> 00:06:52,050
+So therefore this in here will refer to the object on which we originally defined the method so we can
+
+92
+00:06:52,050 --> 00:06:55,470
+safely bind this for the original method and ensure that.
+
+93
+00:06:55,470 --> 00:07:01,200
+Now this inside of the original method will all the refer to the exact same object.
+
+94
+00:07:01,200 --> 00:07:07,320
+Now I will return a bone function year and thereafter outside of those adjusted descriptor returned
+
+95
+00:07:07,320 --> 00:07:08,970
+the adjusted descriptor.
+
+96
+00:07:08,970 --> 00:07:14,280
+So that's our decorator function returning a new descriptor object and therefore this descriptor object
+
+97
+00:07:14,610 --> 00:07:16,950
+will override the old descriptor.
+
+98
+00:07:16,950 --> 00:07:22,110
+That is what types will do with it types could will then replace the old methods descriptor so the old
+
+99
+00:07:22,110 --> 00:07:29,410
+methods configuration with this new configuration here which added this extra gather layer.
+
+100
+00:07:29,500 --> 00:07:34,840
+Now I'm not interested in target and method name here of course.
+
+101
+00:07:34,840 --> 00:07:41,710
+So to a wide area I will named as underscore in this your underscore to again just to tell typescript
+
+102
+00:07:41,710 --> 00:07:42,380
+dead.
+
+103
+00:07:42,700 --> 00:07:45,570
+I'm not interested in these values but I need to accept them.
+
+104
+00:07:45,660 --> 00:07:49,820
+And now let's add all of bind to show message here.
+
+105
+00:07:49,840 --> 00:07:57,460
+So here I will add at auto bind and make sure that you removed bind down there in the event listener
+
+106
+00:07:57,880 --> 00:07:59,380
+and safeties.
+
+107
+00:07:59,630 --> 00:08:01,480
+And now let's have a look at that.
+
+108
+00:08:01,480 --> 00:08:04,750
+Let's click click me and you should see this works.
+
+109
+00:08:04,750 --> 00:08:12,100
+If I reload this works because this is now bound correctly and just to verify that it's really our decorator
+
+110
+00:08:12,100 --> 00:08:13,550
+that makes a difference here.
+
+111
+00:08:13,570 --> 00:08:20,050
+If I would remove the binding here in my gat or any decorator and I save that you'll see that if it
+
+112
+00:08:20,050 --> 00:08:24,100
+does now reload and we click click me we see undefined again.
+
+113
+00:08:24,100 --> 00:08:29,800
+So it's really does extra gather layer which does its work here which ensures that this is always bound
+
+114
+00:08:29,800 --> 00:08:33,280
+correctly no matter how you call show message.
+
+115
+00:08:33,310 --> 00:08:36,100
+If we call it like this direct you on your object it will work.
+
+116
+00:08:36,190 --> 00:08:40,740
+If we call it here like this with an event listener it also works.
+
+117
+00:08:40,810 --> 00:08:46,420
+So you'll see this works here which in the end is coming from this show message call and then you also
+
+118
+00:08:46,420 --> 00:08:47,100
+see it works.
+
+119
+00:08:47,110 --> 00:08:48,540
+If I click on the button.
+
+120
+00:08:48,700 --> 00:08:55,120
+So this is one neat example of how you can utilize decorators to build a quite amazing functionality
+
+121
+00:08:55,330 --> 00:08:59,210
+and save you the hassle of manually calling bind everywhere.
+
+122
+00:08:59,260 --> 00:09:01,720
+Instead you just bind it like this.

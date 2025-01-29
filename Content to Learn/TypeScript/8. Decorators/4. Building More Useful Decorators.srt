@@ -1,0 +1,295 @@
+1
+00:00:02,520 --> 00:00:10,350
+Now with the knowledge about factory functions or factory decorators we can do quite interesting stuff
+
+2
+00:00:11,610 --> 00:00:16,190
+we could create a new decorator factory with template.
+
+3
+00:00:16,290 --> 00:00:27,250
+For example and there I expect to get a template which should be some string and hook idea which should
+
+4
+00:00:27,250 --> 00:00:28,660
+all be a string.
+
+5
+00:00:28,900 --> 00:00:34,770
+And then here I return my anonymous function which is the actual decorator as you'll learned.
+
+6
+00:00:34,810 --> 00:00:38,540
+Because again I have a decorator factory in India.
+
+7
+00:00:38,620 --> 00:00:45,100
+I want to render some template which should be some H HTML code into some place in the DOM where I find
+
+8
+00:00:45,130 --> 00:00:46,560
+this hook idea.
+
+9
+00:00:46,570 --> 00:00:51,700
+So now we can go to index H Tim l. and add such a place so that we can see that this works can add a
+
+10
+00:00:51,700 --> 00:01:03,140
+div here with an idea of app maybe and then an apt yes instead of logger I add with template let's pass
+
+11
+00:01:03,140 --> 00:01:06,850
+an empty string as a first argument for now and app as a second argument.
+
+12
+00:01:06,860 --> 00:01:12,180
+So this idea I assigned to the div here and now inside of that inner function.
+
+13
+00:01:12,180 --> 00:01:20,430
+So our actual decorator inside of this decorator function I want to reach out to 2D element to the hook
+
+14
+00:01:21,740 --> 00:01:26,860
+element with document get element by ideas for the hook.
+
+15
+00:01:26,870 --> 00:01:37,360
+Ideas were getting here as argument and if hook L. is a thing that exists then I want Q access its inner
+
+16
+00:01:37,380 --> 00:01:39,350
+H Temple and set as equal to template.
+
+17
+00:01:39,360 --> 00:01:42,830
+Let's say a very simple setup of course but this should do the trick.
+
+18
+00:01:43,620 --> 00:01:48,690
+Now I'm not interested in the constructor and to tell typescript that I'm not interested here I can
+
+19
+00:01:48,690 --> 00:01:51,960
+add an underscore as a name which basically signals to typescript.
+
+20
+00:01:52,140 --> 00:01:54,600
+Yeah I know I get this argument but I don't need it.
+
+21
+00:01:54,630 --> 00:01:56,190
+I have to specify though.
+
+22
+00:01:56,220 --> 00:02:01,710
+So with this underscore I tell you that I'm aware of it but that I won't use it because all I want to
+
+23
+00:02:01,710 --> 00:02:05,560
+do for now is I want to render this here.
+
+24
+00:02:05,630 --> 00:02:14,930
+So now when we add with template here here we could add a h1 tag my person object like this all the
+
+25
+00:02:14,930 --> 00:02:15,500
+clothes it
+
+26
+00:02:19,030 --> 00:02:25,380
+and if we now save that it compiled without errors and indeed here you see this was rendered on the
+
+27
+00:02:25,380 --> 00:02:25,940
+screen.
+
+28
+00:02:26,440 --> 00:02:33,300
+And this hopefully shows you the the power you have with decorators you can build a really advanced
+
+29
+00:02:33,300 --> 00:02:39,300
+decorators like this one which all of a sudden does some magic behind the scenes and that is what I
+
+30
+00:02:39,300 --> 00:02:41,250
+mean with method programming.
+
+31
+00:02:41,310 --> 00:02:47,010
+We add some logic here which we could expose if this would be a third party library we share with our
+
+32
+00:02:47,010 --> 00:02:47,940
+users.
+
+33
+00:02:47,940 --> 00:02:54,270
+We could ex post as as part of the library and anyone who uses our library can import this decorator
+
+34
+00:02:54,270 --> 00:03:00,460
+function and add it to a class to then magically render some content all of a sudden.
+
+35
+00:03:00,660 --> 00:03:05,190
+And of course you're you're not even limited to that if you would want to output the name which is part
+
+36
+00:03:05,190 --> 00:03:09,570
+of the class when it gets instantiated you can do that as well.
+
+37
+00:03:09,630 --> 00:03:14,120
+We get our constructor function here after all.
+
+38
+00:03:14,220 --> 00:03:20,850
+Now what we can do with that is we can create a new person here by calling our constructor because that
+
+39
+00:03:20,850 --> 00:03:23,870
+is our constructor function here after all.
+
+40
+00:03:23,880 --> 00:03:28,950
+Let me convert it to any sort of typescript allows this and doesn't think it's a normal function.
+
+41
+00:03:29,370 --> 00:03:35,310
+And then we could go to our hook element and query for a h1 tag which we of course in practice will
+
+42
+00:03:35,310 --> 00:03:41,250
+not always have but for demo purposes I assume we will always have one here Whip's initial all the close
+
+43
+00:03:41,250 --> 00:03:43,830
+to H1 tacked on they are not as yet.
+
+44
+00:03:43,980 --> 00:03:46,760
+And then here with an exclamation mark.
+
+45
+00:03:46,800 --> 00:03:53,810
+Again assuming that we always find H one element we can set the text content equal to P dog name and
+
+46
+00:03:53,820 --> 00:04:01,590
+if I do that and safeties now I output the name which is part of the object here in the template.
+
+47
+00:04:01,590 --> 00:04:06,690
+So this is something you can do and of course you can write way more elaborate decorators than I'm doing
+
+48
+00:04:06,690 --> 00:04:07,810
+it here.
+
+49
+00:04:07,860 --> 00:04:14,820
+Consider angular a very popular framework that uses typescript they use decorators like this component
+
+50
+00:04:14,820 --> 00:04:22,080
+decorator to allow you to pass in an object where you specify things like the template for this component
+
+51
+00:04:22,470 --> 00:04:25,770
+and the selector in the DOM where this template should be rendered.
+
+52
+00:04:25,800 --> 00:04:31,220
+This is relatively close to what we defined here a template and then a place where it should be rendered.
+
+53
+00:04:31,260 --> 00:04:37,560
+Now needless to say the angular decorators are of course way more advanced and elaborate than our basic
+
+54
+00:04:37,560 --> 00:04:38,780
+decorator here.
+
+55
+00:04:38,790 --> 00:04:45,150
+Nonetheless the core idea is the same angular it gives you the decorators here so that you can specify
+
+56
+00:04:45,150 --> 00:04:52,260
+some HDL code which can be connected to your component class that will be rendered to the DOM when this
+
+57
+00:04:52,260 --> 00:04:53,870
+component gets rendered.
+
+58
+00:04:53,880 --> 00:04:55,820
+Now in case you don't know how angular works.
+
+59
+00:04:55,890 --> 00:04:57,070
+That's not a problem.
+
+60
+00:04:57,120 --> 00:05:02,070
+You just have to understand here that it works with classes and decorators and then it does.
+
+61
+00:05:02,070 --> 00:05:03,630
+Basically what we did here.
+
+62
+00:05:03,660 --> 00:05:09,210
+So that's one of the thing you can do with decorators or specifically here with decorator factories
+
+63
+00:05:09,240 --> 00:05:13,560
+because that allows us to pass in that extra corn flake which we need here.
+
+64
+00:05:13,860 --> 00:05:16,650
+And that's also what I meant with meta programming.
+
+65
+00:05:16,650 --> 00:05:24,180
+We're creating things we're creating decorator functions which you might say have some impact on the
+
+66
+00:05:24,180 --> 00:05:24,840
+end user.
+
+67
+00:05:24,870 --> 00:05:30,450
+In the end we do render something on the screen here but we do that with a tool which we expose to our
+
+68
+00:05:30,450 --> 00:05:37,290
+developers because this decorator is such a tool which our developers have to use by adding it to a
+
+69
+00:05:37,290 --> 00:05:38,460
+class in this example.
+
+70
+00:05:38,460 --> 00:05:40,280
+Otherwise this would do nothing.
+
+71
+00:05:40,350 --> 00:05:47,250
+So we provide extra utilities to developers which the other developers can use to for example conveniently
+
+72
+00:05:47,250 --> 00:05:50,610
+render something on the screen for a given class.
+
+73
+00:05:50,610 --> 00:05:51,660
+That's the same thing.
+
+74
+00:05:51,660 --> 00:05:57,180
+Angular does here in a more advanced way and it is something decorators are perfect for.

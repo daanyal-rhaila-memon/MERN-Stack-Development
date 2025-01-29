@@ -1,0 +1,327 @@
+1
+00:00:02,210 --> 00:00:07,790
+So now that we saw another nice example for how we can work with decorators there is one last example
+
+2
+00:00:07,790 --> 00:00:14,630
+which I want to dive into and that is decorators for validation for that at the bottom of the file.
+
+3
+00:00:14,630 --> 00:00:23,070
+I will add yet another new class here and that could be a course now a course should have a title which
+
+4
+00:00:23,070 --> 00:00:33,510
+is a string and maybe a price which is a number and then here we have a constructor where we get both
+
+5
+00:00:33,510 --> 00:00:40,830
+values here and I'm deliberately not using the shortcut here so that I can easily add property decorators
+
+6
+00:00:42,680 --> 00:00:48,010
+and then I set this title equal to t and this price equal to P.
+
+7
+00:00:48,040 --> 00:00:52,600
+Now of course now when we want to instantiate this course we have to pass an invalid title and a valid
+
+8
+00:00:52,630 --> 00:00:53,390
+price.
+
+9
+00:00:53,620 --> 00:01:00,370
+But one common scenario you might encounter in some applications is that you fetch data let's say from
+
+10
+00:01:00,370 --> 00:01:07,150
+a web resource Ed you get data where you guess you have a couple of courses let's say but you don't
+
+11
+00:01:07,150 --> 00:01:14,890
+know for sure or another possible scenario you let users enter the data and you simply want to assign
+
+12
+00:01:14,890 --> 00:01:20,710
+that data and create a new course with the user enter data and you assume it's right but you are not
+
+13
+00:01:20,710 --> 00:01:24,210
+guaranteed that it's right and therefore you want to validate the input.
+
+14
+00:01:24,250 --> 00:01:26,410
+That's the scenario I want to fake here.
+
+15
+00:01:26,410 --> 00:01:31,140
+Let's say in our index age time I'll file we got a simple form here and I'll not style it.
+
+16
+00:01:31,150 --> 00:01:37,000
+So it will not be that beautiful but we have a simple formula with the input of type text in a place
+
+17
+00:01:37,000 --> 00:01:45,820
+holder of title scores title and an idea of let's say title and below that we have a number input where
+
+18
+00:01:45,820 --> 00:01:54,180
+to type is all the text but it's to cause Price sent the ideas price and then we have our button where
+
+19
+00:01:54,180 --> 00:01:55,080
+we submit this.
+
+20
+00:01:55,080 --> 00:01:58,850
+So the button is of type.
+
+21
+00:01:58,910 --> 00:02:00,040
+Submit.
+
+22
+00:02:00,080 --> 00:02:01,240
+So very simple form.
+
+23
+00:02:01,250 --> 00:02:06,060
+And as I said it's not that beautiful if we have a look at it here but it has everything we need.
+
+24
+00:02:06,110 --> 00:02:14,040
+Now let's hook up a listener to the forum here so here I got my cause form which I can get with.
+
+25
+00:02:14,040 --> 00:02:19,970
+Document query use selector form and I add the exclamation mark because I know it will get one.
+
+26
+00:02:19,980 --> 00:02:22,020
+So this will not be null.
+
+27
+00:02:22,110 --> 00:02:28,830
+And then on the form we can add an event listener the submit event listener and then we get the event
+
+28
+00:02:28,860 --> 00:02:34,710
+object passed into the function which I assign automatically there I want to call event prevent default
+
+29
+00:02:34,740 --> 00:02:39,990
+so that we don't submit the form and send no h he requests and then we want to extract the data for
+
+30
+00:02:39,990 --> 00:02:42,870
+the title and for the price.
+
+31
+00:02:42,960 --> 00:02:49,290
+So the title can be extracted by reaching out to document query selector or actually since we assign
+
+32
+00:02:49,290 --> 00:02:51,300
+an idea get element by Aidid
+
+33
+00:02:54,870 --> 00:03:01,170
+and we know that this will be an t input element so we can use typecasting to let typescript know about
+
+34
+00:03:01,180 --> 00:03:09,270
+this and the prize is document get element by I.D. prize and we can also convert this to an input element
+
+35
+00:03:09,600 --> 00:03:14,760
+and I actually do have for these are the elements so we'll renamed the to title L and price l it to
+
+36
+00:03:14,760 --> 00:03:21,210
+get the concrete title we can now go to title l access to value property and to get the prize we can
+
+37
+00:03:21,210 --> 00:03:25,160
+do the same for the price element and get the value there too.
+
+38
+00:03:25,320 --> 00:03:30,080
+And I want to have that as a number so I at the plus in front of it to convert it to a number.
+
+39
+00:03:30,120 --> 00:03:36,070
+Now that stat but now I want to create a new course with that information.
+
+40
+00:03:36,120 --> 00:03:43,770
+So here we have the created quarters where I can call new course and I pass in title and price.
+
+41
+00:03:43,890 --> 00:03:48,570
+Now typescript accepts this because title will be a string and since I convert this input to a number
+
+42
+00:03:48,600 --> 00:03:50,170
+price will be a number.
+
+43
+00:03:50,250 --> 00:03:55,590
+So if I then console lock de created course thereafter we can check if this works.
+
+44
+00:03:55,590 --> 00:04:01,710
+Let's save that reload maybe cleared a console so that we can clearly see the output and then add a
+
+45
+00:04:01,710 --> 00:04:06,450
+new course here javascript a complete guide cost one hundred ninety nine dollars.
+
+46
+00:04:06,690 --> 00:04:10,340
+And this seems to work now unfortunately does all the work still.
+
+47
+00:04:10,560 --> 00:04:16,540
+If I don't enter anything if I now click save we this cause is created.
+
+48
+00:04:16,650 --> 00:04:23,490
+Now this technically is a valid course but of course it's not really valid for our application.
+
+49
+00:04:23,490 --> 00:04:28,650
+We probably want to have a title which is not empty and a price which is greater than zero.
+
+50
+00:04:28,680 --> 00:04:30,420
+So we want to add validation.
+
+51
+00:04:30,510 --> 00:04:37,350
+Now of course we can simply add if check here and check if title trim length is greater than zero which
+
+52
+00:04:37,350 --> 00:04:43,230
+means it does not empty and where we also validate the price but that means that whenever we create
+
+53
+00:04:43,230 --> 00:04:47,790
+a new course we have to add the validation logic here before we added.
+
+54
+00:04:47,940 --> 00:04:53,280
+Wouldn't it be nice if the validation logic would be included in the course class with the help of decorators
+
+55
+00:04:53,280 --> 00:04:54,050
+maybe.
+
+56
+00:04:54,150 --> 00:04:56,820
+And that's exactly what I want to do here.
+
+57
+00:04:56,820 --> 00:05:03,080
+Now we'll only provide a basic idea of how we could implement this in the next module.
+
+58
+00:05:03,090 --> 00:05:09,150
+I will show you an example package which just is in a way more elaborate way and which we will then
+
+59
+00:05:09,150 --> 00:05:12,120
+also use there to play around with it a bit.
+
+60
+00:05:12,120 --> 00:05:18,420
+Now however here I want to implement this with my own decorators and it will add a decorator required
+
+61
+00:05:18,420 --> 00:05:27,970
+here and it will add another decorator function which I'll name positive number so I got two decorators
+
+62
+00:05:27,970 --> 00:05:34,690
+here and now my idea is that we can add them here to our properties for example required in front of
+
+63
+00:05:34,690 --> 00:05:43,900
+title and positive number in front of the prize and typescript kind of registers this somewhere and
+
+64
+00:05:43,900 --> 00:05:54,540
+then we got a third function validate to which we can parse object so any object and typescript then
+
+65
+00:05:54,600 --> 00:06:01,200
+has a look at that object finds any validation we've registered on this class for it as object earlier
+
+66
+00:06:01,500 --> 00:06:03,410
+and applies our validation logic.
+
+67
+00:06:03,420 --> 00:06:05,520
+That's the idea I have here.
+
+68
+00:06:05,520 --> 00:06:11,160
+So this could be part of a third party library we're exposing to you and then you just import required
+
+69
+00:06:11,160 --> 00:06:16,760
+positive number and validate to first set up the validators and then at some point call validate.
+
+70
+00:06:16,800 --> 00:06:23,260
+So for example here when we created the course we can call validate and pass in the created course.
+
+71
+00:06:23,460 --> 00:06:34,430
+And if this is not true so let's say this should return true or false if this is not true then we flow
+
+72
+00:06:34,430 --> 00:06:43,010
+an error or show an alert invalid input please try again and only otherwise we continue.
+
+73
+00:06:43,010 --> 00:06:48,080
+So that's my idea that we can call validate this returns to her false true if it's a valid false if
+
+74
+00:06:48,080 --> 00:06:51,620
+it's not valid and we can therefore use that result.
+
+75
+00:06:51,710 --> 00:06:56,270
+So therefore we get a couple of things to do we need to make sure that when we add a decorator here
+
+76
+00:06:56,750 --> 00:06:59,390
+this is somehow stored somewhere.
+
+77
+00:06:59,390 --> 00:07:03,020
+Again keep in mind this could be part of our own third party library.
+
+78
+00:07:03,020 --> 00:07:10,070
+So in there we could have some kind of storage that stores that for this class and for this title property
+
+79
+00:07:10,080 --> 00:07:16,340
+for example we want wanted to be required and invalidate we can then check if in this storage 40 object
+
+80
+00:07:16,340 --> 00:07:22,250
+we got for the class the object is based on we do have a validated registered for the title for the
+
+81
+00:07:22,250 --> 00:07:25,280
+price and so on and we then run our validation logic.
+
+82
+00:07:25,280 --> 00:07:26,300
+That's my idea here.
