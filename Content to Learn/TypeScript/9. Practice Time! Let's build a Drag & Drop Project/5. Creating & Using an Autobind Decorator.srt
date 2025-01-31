@@ -1,0 +1,211 @@
+1
+00:00:02,290 --> 00:00:07,990
+I'm talking about a decorator which you can add which automatically binds the this keyword so that we
+
+2
+00:00:07,990 --> 00:00:09,920
+don't have to call bind here.
+
+3
+00:00:09,970 --> 00:00:14,890
+Now obviously calling bind here is not a big thing and there is nothing wrong with it but we also want
+
+4
+00:00:14,890 --> 00:00:20,140
+to practice what we learned and if we have to do it as in many many places across our app.
+
+5
+00:00:20,260 --> 00:00:24,970
+Having a decorator which just can add might actually be easier.
+
+6
+00:00:25,030 --> 00:00:30,070
+So let's get rid of bind this year at instead above the class here.
+
+7
+00:00:30,070 --> 00:00:37,780
+I'll add the auto bind decorator and I'm just adding some comments here to keep this file organized
+
+8
+00:00:37,780 --> 00:00:38,770
+at least a bit.
+
+9
+00:00:38,770 --> 00:00:39,840
+Project input.
+
+10
+00:00:39,850 --> 00:00:42,000
+Class.
+
+11
+00:00:42,310 --> 00:00:46,220
+So what does a decorator a decorator is a function.
+
+12
+00:00:46,220 --> 00:00:46,770
+Right.
+
+13
+00:00:46,840 --> 00:00:52,830
+And you can define it either with the function declaration here or as a function expression so you're
+
+14
+00:00:52,830 --> 00:00:56,630
+a will use a function declaration and I'll name it all to bind.
+
+15
+00:00:56,630 --> 00:01:01,730
+NAME IS UP TO YOU AND THIS decorator will receive free arguments.
+
+16
+00:01:01,730 --> 00:01:06,430
+The target the method name to which it is bound.
+
+17
+00:01:06,450 --> 00:01:16,580
+Because I'm going to create a method decorator here and also the descriptor of that method property
+
+18
+00:01:16,580 --> 00:01:22,810
+descriptor because methods in the end are just properties properties which hold functions.
+
+19
+00:01:22,810 --> 00:01:24,430
+Now why is this a method decorator.
+
+20
+00:01:24,430 --> 00:01:32,220
+Because the ideas that we can add it to submit handler like this and be done with it.
+
+21
+00:01:32,230 --> 00:01:33,590
+That's the idea.
+
+22
+00:01:33,730 --> 00:01:40,480
+Now we're not entirely there yet but this is how it should work in the end now to make it work.
+
+23
+00:01:40,480 --> 00:01:46,770
+Let's go back to our function up there and what has to go into the function body then.
+
+24
+00:01:46,900 --> 00:01:54,580
+Well in there are first of all want to get access to the original method with descriptor dot value so
+
+25
+00:01:54,580 --> 00:02:02,710
+that we store the method which we originally defined then on when I create my adjusted descriptor here
+
+26
+00:02:03,610 --> 00:02:14,120
+which is the object of type property descriptor actually where configurable should be set to true so
+
+27
+00:02:14,120 --> 00:02:21,260
+that we can always change it and where we then need to gather and indent gather here which should be
+
+28
+00:02:21,260 --> 00:02:28,820
+executed when you try to access the function we will set up the bound function year by using the original
+
+29
+00:02:28,820 --> 00:02:39,590
+method which we're extracting up there and calling bind this on it then I want to return that bound
+
+30
+00:02:39,590 --> 00:02:46,550
+function and that should be all and overall of course I will therefore return the adjusted descriptor
+
+31
+00:02:46,670 --> 00:02:49,550
+in that method decorator.
+
+32
+00:02:49,550 --> 00:02:55,580
+Now we get an error with that on the Submit handler that experimental support for decorators is a feature
+
+33
+00:02:56,090 --> 00:02:58,010
+which basically needs to be enabled.
+
+34
+00:02:58,010 --> 00:03:04,280
+So we should go to the T as config file and then there if you scroll down you should find dead experimental
+
+35
+00:03:04,280 --> 00:03:12,340
+decorators option just comment that in and add a comma in front of it save that and then restart these
+
+36
+00:03:12,350 --> 00:03:15,500
+types of compilation process now.
+
+37
+00:03:15,530 --> 00:03:22,530
+It still shows me some errors here if I expanders as the method name is declared but its value is never
+
+38
+00:03:22,530 --> 00:03:29,640
+read an apt yes line for is referring to this here I got this argument which I receive here which actually
+
+39
+00:03:29,640 --> 00:03:34,260
+never use same is true for a target I never use that.
+
+40
+00:03:34,410 --> 00:03:41,550
+Now there are two ways to solve this the one way is to go to the TS con thick and loose and our strictness
+
+41
+00:03:41,550 --> 00:03:45,260
+rules here no unused parameters.
+
+42
+00:03:45,270 --> 00:03:51,870
+If we set this to faults we're actually allowing unused parameters so it would be one thing or you use
+
+43
+00:03:51,930 --> 00:04:01,870
+special names underscore and underscore to does actually is a hint for TypeScript and JavaScript.
+
+44
+00:04:01,900 --> 00:04:06,880
+Dad you're aware Dad you're not going to use these values but you need to accept them because you need
+
+45
+00:04:07,160 --> 00:04:08,480
+argument thereafter.
+
+46
+00:04:08,780 --> 00:04:15,420
+If you now say if this is compiles without errors and if we go back and enter hallow here and submit
+
+47
+00:04:15,420 --> 00:04:17,110
+this it still works.
+
+48
+00:04:17,110 --> 00:04:23,820
+Now thanks to our order bind decorator which hopefully also shows that this decorator can have some
+
+49
+00:04:23,820 --> 00:04:24,900
+real use.
+
+50
+00:04:24,990 --> 00:04:29,400
+Now of course here it's actually a bit more work than just calling bind.
+
+51
+00:04:29,520 --> 00:04:35,250
+But imagine this being used on more and more methods which all have to be bound not having to call bind
+
+52
+00:04:35,280 --> 00:04:41,040
+this manually can then reuse save you some time and also prevent some potential errors in cases where
+
+53
+00:04:41,040 --> 00:04:42,210
+you just forgot it.

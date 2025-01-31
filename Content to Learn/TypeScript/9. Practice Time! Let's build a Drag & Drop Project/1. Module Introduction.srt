@@ -1,0 +1,43 @@
+1
+00:00:02,470 --> 00:00:08,410
+Now with all the things we covered thus far in the course it's now time to practice a bit.
+
+2
+00:00:08,440 --> 00:00:10,870
+We're definitely not done with typescript.
+
+3
+00:00:10,870 --> 00:00:15,130
+There are more things to explore and more things will cover in the course.
+
+4
+00:00:15,130 --> 00:00:18,720
+For example how we can combine TypeScript and react.
+
+5
+00:00:18,850 --> 00:00:24,010
+But for the moment it's time to take a short break and practice some of the things we learned about
+
+6
+00:00:24,370 --> 00:00:26,440
+in a little demo project.
+
+7
+00:00:26,470 --> 00:00:32,430
+Now in this module we'll work on this project together but I definitely encourage you.
+
+8
+00:00:32,440 --> 00:00:38,590
+Did you occasionally hit the pause button and tried the next steps on your own.
+
+9
+00:00:38,590 --> 00:00:44,890
+Of course following along is also great and nice but you might learn a bit more if you also try things
+
+10
+00:00:44,890 --> 00:00:48,180
+on your own before you then compare your solution to mine.
+
+11
+00:00:48,310 --> 00:00:52,030
+And with that let's dive right in and practice working with typescript.

@@ -1,0 +1,251 @@
+1
+00:00:02,210 --> 00:00:08,090
+For that attached you find a starting project as you saw it multiple times in the course already a very
+
+2
+00:00:08,090 --> 00:00:13,530
+trivial project with a basically empty index H html file and an empty apt.
+
+3
+00:00:13,530 --> 00:00:14,480
+Yes file.
+
+4
+00:00:14,630 --> 00:00:20,370
+And here we're going to build a small little demo application a little project.
+
+5
+00:00:20,390 --> 00:00:27,350
+Now the the app we're going to build will not be too complex but it will be a nice application where
+
+6
+00:00:27,350 --> 00:00:35,150
+we essentially will be able to manage a couple of projects where a project essentially is as a goal
+
+7
+00:00:35,150 --> 00:00:41,690
+you could say is that we have lists of projects and we'll have two lists of projects an active list
+
+8
+00:00:41,720 --> 00:00:49,040
+and a finished list and we'll be able to drag and drop items from one list to the other and stuff like
+
+9
+00:00:49,040 --> 00:00:49,570
+that.
+
+10
+00:00:49,580 --> 00:00:56,060
+Now of course the application itself will be nice but the most important thing is that it will allow
+
+11
+00:00:56,060 --> 00:01:02,300
+us to practice many of the things we learned thus far and that's of course the goal of this module.
+
+12
+00:01:02,300 --> 00:01:09,710
+Now all the one important node for this module I'm going to write all the code in one single file in
+
+13
+00:01:09,710 --> 00:01:11,120
+this one single app.
+
+14
+00:01:11,150 --> 00:01:19,370
+Yes file in this day four will become a very very big file in the module after it is module.
+
+15
+00:01:19,390 --> 00:01:24,600
+I'll dive into that problem and show you how typescript allows us to split this fall.
+
+16
+00:01:24,650 --> 00:01:29,720
+But for the moment since we don't know this yet and thus far we had node size issues.
+
+17
+00:01:29,720 --> 00:01:37,360
+Let's focus on our demo application and for Dad we'll actually start by working on the Enigma HMO file
+
+18
+00:01:37,450 --> 00:01:44,310
+attached you find a new file downloaded and replace all the content in this starting index age html
+
+19
+00:01:44,360 --> 00:01:48,700
+file with that downloaded file and do the same for app CSX.
+
+20
+00:01:48,700 --> 00:01:50,380
+There we have no file yet.
+
+21
+00:01:50,410 --> 00:01:56,970
+Simply add the file which you find a teacher's lecture to your project next to index H.
+
+22
+00:01:57,040 --> 00:01:58,840
+Because dear we also import it.
+
+23
+00:01:59,500 --> 00:02:03,850
+So what's going on here in these files in the index age to metal file.
+
+24
+00:02:03,850 --> 00:02:10,990
+We're importing the app CSF file for some styling and the app J is file for some javascript logic.
+
+25
+00:02:10,990 --> 00:02:13,960
+Of course we're not going to write any javascript code like this.
+
+26
+00:02:13,960 --> 00:02:20,220
+We're going to write code an apt yes but that will get compiled to a javascript file of course.
+
+27
+00:02:20,380 --> 00:02:28,150
+Now in the body of that age html file you find a couple of template tax template tax are default H Tim
+
+28
+00:02:28,150 --> 00:02:35,410
+Al tax supported by modern browsers which allow us to specify some H T Mal code which is not loaded
+
+29
+00:02:35,470 --> 00:02:41,320
+immediately which is not visible immediately which is not rendered immediately so to say but instead
+
+30
+00:02:41,350 --> 00:02:48,700
+which can be reached via javascript then Dale for all the wire typescript to then render it when we
+
+31
+00:02:48,700 --> 00:02:55,360
+want to render it to control it with JavaScript and TypeScript and there you see I have a form with
+
+32
+00:02:55,600 --> 00:03:02,740
+free inputs where basically a title a description and a people input where we can decide what the title
+
+33
+00:03:02,740 --> 00:03:07,990
+of our project is what the description of our project is and how many people can be assigned to it or
+
+34
+00:03:07,990 --> 00:03:09,220
+should be assigned to it.
+
+35
+00:03:09,370 --> 00:03:11,510
+And then the ad project button.
+
+36
+00:03:11,830 --> 00:03:18,400
+Then we have a number template which just holds a list item that will be used to render a single project
+
+37
+00:03:18,490 --> 00:03:22,380
+in our list of projects which is then this template here.
+
+38
+00:03:22,390 --> 00:03:29,260
+There you see I have a header with age 2 section and then an unordered list and indeed that unordered
+
+39
+00:03:29,260 --> 00:03:36,340
+list will later hold multiple single projects based on this template which will render the data entered
+
+40
+00:03:36,340 --> 00:03:43,510
+here fruity form at the top and everything will then be appended with the help of typescript to this
+
+41
+00:03:43,670 --> 00:03:46,190
+day here with the IDF app now.
+
+42
+00:03:46,190 --> 00:03:50,820
+App CSA is just hold some see us as styles you can of course look through that.
+
+43
+00:03:50,830 --> 00:03:55,960
+I'll not focus on this here since that has nothing to do with TypeScript and now it's our job to write
+
+44
+00:03:55,960 --> 00:04:00,600
+some types of code which in the end fetches whatever the user enters here.
+
+45
+00:04:00,610 --> 00:04:07,510
+Well actually first of all which renders this form then fetches whatever the user enters validates what
+
+46
+00:04:07,510 --> 00:04:08,530
+the user enters.
+
+47
+00:04:08,530 --> 00:04:16,060
+So the title description and people has valid values listens to a click on this button or to the submission
+
+48
+00:04:16,060 --> 00:04:21,460
+of the form to be precise then creates a new project.
+
+49
+00:04:21,460 --> 00:04:27,880
+So a new javascript object in the end which is stored in some array probably where this array is then
+
+50
+00:04:27,880 --> 00:04:29,590
+rendered to this list.
+
+51
+00:04:29,590 --> 00:04:32,590
+And of course the entire list also needs to be added to the DOM.
+
+52
+00:04:32,580 --> 00:04:33,990
+So these are all the steps.
+
+53
+00:04:34,150 --> 00:04:36,770
+And of course these are quite a few steps.
+
+54
+00:04:36,820 --> 00:04:43,120
+Now if you're feeling very confident of course definitely take this as a chance to pause right now and
+
+55
+00:04:43,120 --> 00:04:45,130
+try implementing this on your own.
+
+56
+00:04:45,130 --> 00:04:50,590
+No matter how it looks in the end that you just have a setup where it is form is visible where users
+
+57
+00:04:50,590 --> 00:04:56,350
+can enter something dear and where for every project you enter something you render a list item in this
+
+58
+00:04:56,350 --> 00:05:00,940
+list which also should be visible if you reached at that's already amazing.
+
+59
+00:05:01,010 --> 00:05:04,330
+Of course we're all the implementers step by step together.
+
+60
+00:05:04,390 --> 00:05:06,390
+And they're off to once this is implemented.
+
+61
+00:05:06,400 --> 00:05:12,640
+We'll also make sure that we actually render two lists and we can switch projects between these lists
+
+62
+00:05:12,640 --> 00:05:15,380
+with drag and drop and so on.
+
+63
+00:05:15,490 --> 00:05:17,850
+So first things first though let's get started.

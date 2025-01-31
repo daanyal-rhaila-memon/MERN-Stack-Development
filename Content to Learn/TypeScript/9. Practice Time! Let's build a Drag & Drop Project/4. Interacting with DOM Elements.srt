@@ -1,0 +1,379 @@
+1
+00:00:02,440 --> 00:00:04,390
+So we rendered our first foreign.
+
+2
+00:00:04,390 --> 00:00:07,270
+But what you'll notice is that the styling is a bit off.
+
+3
+00:00:07,270 --> 00:00:13,180
+I mean the form looks OK but some distance between the edges of our screen at the forum would be nice
+
+4
+00:00:13,900 --> 00:00:20,050
+if you dive into the APC is as follows you will actually detect that there we have a user input I.D.
+
+5
+00:00:20,050 --> 00:00:25,660
+selector where we do add some margin padding so that doesn't sound too bad.
+
+6
+00:00:25,690 --> 00:00:28,040
+So actually what we can do is an apt yes.
+
+7
+00:00:28,090 --> 00:00:33,910
+When we create our element here or when we get access to it we can reach out to the element and add
+
+8
+00:00:33,910 --> 00:00:36,600
+an idea here which should be user dash input.
+
+9
+00:00:36,880 --> 00:00:42,010
+This will make sure that that rendered element has does idea and hence if this reloads does looks much
+
+10
+00:00:42,010 --> 00:00:47,410
+nicer if we inspect doesn't a browser daft rules we see the idea here and that's the reason for it is
+
+11
+00:00:47,410 --> 00:00:49,360
+better styling.
+
+12
+00:00:49,370 --> 00:00:54,020
+With that we're already doing the next step we're interacting with the element.
+
+13
+00:00:54,040 --> 00:00:58,720
+Now this is not the only interaction I want to do since we have a form here.
+
+14
+00:00:58,810 --> 00:01:04,420
+I want to get access to the different form inputs we have here so that we can read the values when the
+
+15
+00:01:04,420 --> 00:01:10,720
+form gets submitted and then we also then set about event listener here to the submission and validate
+
+16
+00:01:10,720 --> 00:01:12,120
+the user inputs.
+
+17
+00:01:12,190 --> 00:01:18,460
+So we need access to the button were to the form overall to listen for the submission and to all the
+
+18
+00:01:18,460 --> 00:01:25,440
+input elements to get the latest values from their for dad here before we attach everything.
+
+19
+00:01:25,450 --> 00:01:31,690
+But after I assigned my I.D. to the element here I want to get access to the different inputs in that
+
+20
+00:01:31,690 --> 00:01:33,360
+element in that forum.
+
+21
+00:01:33,700 --> 00:01:39,620
+And I want to store them as properties of this class so I'll add more fields up there.
+
+22
+00:01:39,880 --> 00:01:48,240
+And the first field could be a title input element field the type will be aged him l input element like
+
+23
+00:01:48,250 --> 00:01:52,720
+this and we'll not just needed once we need two ever similar fields.
+
+24
+00:01:52,840 --> 00:02:00,430
+We need a description input element field which is of type H HTML input element and we all need a people
+
+25
+00:02:00,580 --> 00:02:02,770
+input element field.
+
+26
+00:02:02,770 --> 00:02:09,690
+Now we can populate these fields here in the constructor with this tightly input element which has set
+
+27
+00:02:09,690 --> 00:02:11,550
+equal to this element.
+
+28
+00:02:11,550 --> 00:02:13,980
+So to our form element always keep in mind.
+
+29
+00:02:13,980 --> 00:02:22,440
+That's the form element here query selector and then query for the title element and if we again have
+
+30
+00:02:22,440 --> 00:02:28,410
+a look at index H CML we see in there we got the I.D. title on this element.
+
+31
+00:02:28,430 --> 00:02:30,400
+So we can query for that.
+
+32
+00:02:30,480 --> 00:02:37,920
+So an apt yes here to query selector we can use hashtag title to select 40 title I.D. element and stored
+
+33
+00:02:37,920 --> 00:02:39,790
+at entitled input element.
+
+34
+00:02:39,810 --> 00:02:46,470
+Now as you know just as with document get element by I.D. type has no chance of understanding that the
+
+35
+00:02:46,470 --> 00:02:50,160
+query selector is going to return input element here.
+
+36
+00:02:50,700 --> 00:02:57,000
+So to tell typescript I will again use costing and cost us to an input element and then we can repeat
+
+37
+00:02:57,000 --> 00:03:03,960
+the step twice and also assigned a description input element and the people input element look up the
+
+38
+00:03:03,960 --> 00:03:10,980
+appropriate I.D. in the index H2 file which are surprisingly a guest description and people and add
+
+39
+00:03:10,980 --> 00:03:12,240
+them to typescript.
+
+40
+00:03:12,240 --> 00:03:19,350
+So here we're searching for the description I.D. element and here for people and with that we got access
+
+41
+00:03:19,350 --> 00:03:22,690
+to all these elements inside of our class here.
+
+42
+00:03:22,710 --> 00:03:27,610
+We're inside of every object that is created based on the class.
+
+43
+00:03:27,640 --> 00:03:34,270
+Now we just need to add a listener to our element to our form for it at all.
+
+44
+00:03:34,330 --> 00:03:39,810
+Add another private method configure which you don't have to add.
+
+45
+00:03:39,820 --> 00:03:46,840
+But again I want to keep that separation where we basically do the selection and rough setup in the
+
+46
+00:03:46,840 --> 00:03:53,890
+constructor and then the insertion or defined tuning in separate methods and in the configure method
+
+47
+00:03:53,890 --> 00:03:56,990
+my idea is to setup an event listener.
+
+48
+00:03:57,040 --> 00:04:03,280
+So here we can reach out to this element which is to form and add an event listener Nelson's typescript
+
+49
+00:04:03,280 --> 00:04:09,520
+knows that element is a H2O form element it actually offers us auto completion when we want to listen
+
+50
+00:04:09,520 --> 00:04:12,310
+to the submit event here which is great.
+
+51
+00:04:12,310 --> 00:04:18,850
+Now we just need to bind this to a method and for that I'll add another private method private because
+
+52
+00:04:18,850 --> 00:04:25,210
+I'm never going to access this from outside of the class only from inside which no names submit handler
+
+53
+00:04:25,420 --> 00:04:26,970
+name is totally up to you.
+
+54
+00:04:27,010 --> 00:04:32,800
+This should be a method which receives an event object though because we'll bind it to this event listener.
+
+55
+00:04:32,800 --> 00:04:43,690
+So here we can point at this submit handler now we just need to make sure that before we attach I also
+
+56
+00:04:43,690 --> 00:04:46,780
+call configure and execute this private method.
+
+57
+00:04:46,780 --> 00:04:47,960
+Again it's private.
+
+58
+00:04:47,980 --> 00:04:53,700
+So from inside the class we can of course reach it from outside we would get a typescript error.
+
+59
+00:04:53,710 --> 00:05:01,260
+So now this method should trigger whenever the form is submitted in the submit handler.
+
+60
+00:05:01,350 --> 00:05:07,750
+I for want to get access to my different input values here and validate them.
+
+61
+00:05:07,750 --> 00:05:10,340
+And then of course do something with the inputs.
+
+62
+00:05:10,360 --> 00:05:16,120
+No we'll worry about the do something part later for now let's just get access to them for this first
+
+63
+00:05:16,120 --> 00:05:16,420
+of all.
+
+64
+00:05:16,450 --> 00:05:22,890
+I will call event prevent default to prevent the default form submission which would trigger an HBP
+
+65
+00:05:22,900 --> 00:05:23,910
+request to be sent.
+
+66
+00:05:23,920 --> 00:05:25,760
+Which I don't want here.
+
+67
+00:05:26,020 --> 00:05:33,250
+And then just to see where this works let's print console lock this title input element value to print
+
+68
+00:05:33,280 --> 00:05:39,130
+what's currently in the title input element if we save that you see it compiles with no errors.
+
+69
+00:05:39,130 --> 00:05:40,780
+So that's looking good.
+
+70
+00:05:40,780 --> 00:05:48,670
+And if we now go to the console here and enter Halo and click Add project good is that it didn't get
+
+71
+00:05:48,670 --> 00:05:49,480
+submitted.
+
+72
+00:05:49,480 --> 00:05:56,320
+Bad is that we get an error cannot read property value of undefined what's going wrong here.
+
+73
+00:05:57,790 --> 00:06:06,460
+The problem here is that this year the this keyword in submit handler does not point at the CLOs actually.
+
+74
+00:06:06,460 --> 00:06:07,810
+Why.
+
+75
+00:06:07,810 --> 00:06:14,770
+Well because of the way javascript and types of the works we bind the method here to the event listener.
+
+76
+00:06:14,770 --> 00:06:21,390
+And when we bind something to an event or with the help of an event listener then that's something.
+
+77
+00:06:21,390 --> 00:06:28,360
+So that method which is going to get executed will have this bound to something else in this case to
+
+78
+00:06:28,360 --> 00:06:31,090
+the current target of the event.
+
+79
+00:06:31,090 --> 00:06:38,470
+So this ends up this method will not point at the class when the method is triggered upon an event with
+
+80
+00:06:38,530 --> 00:06:40,390
+an event listener.
+
+81
+00:06:40,390 --> 00:06:48,130
+Now the work around or the solution is to actually call blind here on submit handler to pre configure
+
+82
+00:06:48,340 --> 00:06:53,000
+how it is function is going to execute when it executes in the future.
+
+83
+00:06:53,080 --> 00:07:00,310
+And the first argument we can pass to bind then is actually what the this keyword will refer to incite
+
+84
+00:07:00,400 --> 00:07:03,180
+off to to be executed function.
+
+85
+00:07:03,220 --> 00:07:04,750
+And here I pass this.
+
+86
+00:07:04,750 --> 00:07:13,930
+Which means this inside of subnet handler will refer to the same thing as this refers to in this context.
+
+87
+00:07:13,930 --> 00:07:20,700
+And since we call it in the context of configure here which we call with this configure this inside
+
+88
+00:07:20,710 --> 00:07:22,930
+of configure will refer to the class.
+
+89
+00:07:22,930 --> 00:07:29,370
+And thanks to bind it will therefore also refer to the class instead of to submit handler so if we now
+
+90
+00:07:29,380 --> 00:07:37,780
+save this year and we reload and then enter a helo here you now see hallow gets printed here when we
+
+91
+00:07:37,780 --> 00:07:38,740
+submit the form.
+
+92
+00:07:38,830 --> 00:07:43,660
+So now it is is solved and now we're dealing with this properly.
+
+93
+00:07:43,660 --> 00:07:52,030
+But maybe there is is a better way or an alternative way we all learn about maybe one using decorators.
+
+94
+00:07:52,030 --> 00:07:58,810
+So here's your chance to again posties and try solving this binding with decorators because that's something
+
+95
+00:07:58,810 --> 00:08:01,450
+we did learn about in the decorators section.

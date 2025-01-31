@@ -1,0 +1,615 @@
+1
+00:00:02,300 --> 00:00:08,610
+To get started here all run NPM start to bring up that development server which serves the to mail file
+
+2
+00:00:08,700 --> 00:00:14,640
+and then you tap TSC dash W to start typing copulation in watch mode.
+
+3
+00:00:14,730 --> 00:00:21,030
+So did our app javascript fall is continuously rebuilt and we can view it in the running application
+
+4
+00:00:21,780 --> 00:00:24,500
+right now of course our application doesn't look too fancy.
+
+5
+00:00:24,540 --> 00:00:30,260
+It's an empty page so to get started there are many ways of doing that.
+
+6
+00:00:30,300 --> 00:00:35,100
+Now I want to start with making this for visible.
+
+7
+00:00:35,100 --> 00:00:40,980
+And now there are many ways I will actually write this application in an object oriented approach which
+
+8
+00:00:40,980 --> 00:00:43,310
+is 100 percent optional.
+
+9
+00:00:43,320 --> 00:00:49,440
+But since we learned about classes and so on I want to actually show how it is works and therefore I
+
+10
+00:00:49,440 --> 00:00:51,180
+will use this approach.
+
+11
+00:00:51,180 --> 00:00:51,910
+So inapt.
+
+12
+00:00:51,930 --> 00:00:57,750
+Yes I'll add a new class and I'll name it project input though the class name of course is entirely
+
+13
+00:00:57,750 --> 00:01:06,240
+up to you now in this class our goal has to be to get access to this template into the form in it and
+
+14
+00:01:06,240 --> 00:01:11,750
+to get access to this div here and then render our template in that div in the end.
+
+15
+00:01:11,760 --> 00:01:19,290
+So the content off the template form in that damn debt has to be our goal now to achieve this here and
+
+16
+00:01:19,290 --> 00:01:21,050
+project input.
+
+17
+00:01:21,060 --> 00:01:27,180
+I'll add a constructor where I intend one to get access to my template and to the place where it should
+
+18
+00:01:27,180 --> 00:01:37,200
+be rendered and for this here I'll add two properties on the fly with this the template element property
+
+19
+00:01:37,560 --> 00:01:40,180
+and then also the host element property.
+
+20
+00:01:40,200 --> 00:01:42,910
+The names are 100 percent up to you in the end.
+
+21
+00:01:42,930 --> 00:01:48,960
+My ideas that host element holds a reference to the element where I want to render my template content
+
+22
+00:01:48,960 --> 00:01:49,580
+in the end.
+
+23
+00:01:49,710 --> 00:01:53,870
+And while template element gives me access to the template that holds this content.
+
+24
+00:01:54,090 --> 00:02:00,240
+Now to get access to that template let's have a look at index H.M. and see how we can identify the template
+
+25
+00:02:00,240 --> 00:02:01,640
+which holds the form.
+
+26
+00:02:01,920 --> 00:02:06,170
+While it has this project input ideas so that looks like a good strategy.
+
+27
+00:02:06,180 --> 00:02:11,790
+So here we can use document get element by I.D. project input.
+
+28
+00:02:11,790 --> 00:02:15,450
+This gives us access to this template element.
+
+29
+00:02:15,450 --> 00:02:21,650
+Now a couple of important things here we get an error that template element is a property which does
+
+30
+00:02:21,650 --> 00:02:23,890
+not exist on project input.
+
+31
+00:02:23,940 --> 00:02:31,800
+Now to get rid of this we actually should add it as a new field here directly in the class and then
+
+32
+00:02:31,800 --> 00:02:34,080
+we can safely assign to it.
+
+33
+00:02:34,080 --> 00:02:38,790
+Now here I also want to be clear about the type which will be stored in there and that will be a h to
+
+34
+00:02:38,790 --> 00:02:41,130
+Mal template element.
+
+35
+00:02:41,130 --> 00:02:44,570
+This type is globally available because entity is conflict.
+
+36
+00:02:44,580 --> 00:02:52,920
+J is fall I added the DOM as a lip and that adds all these Dom types all these H Tim l element types
+
+37
+00:02:52,980 --> 00:02:57,300
+as typescript types to the entire project.
+
+38
+00:02:57,320 --> 00:03:03,770
+Now this introduces a new error here however you see that in the end this could be null when we get
+
+39
+00:03:03,770 --> 00:03:04,820
+the element by I.D..
+
+40
+00:03:04,820 --> 00:03:10,850
+Of course we know that it won't fail but typescript has no chance of knowing this because it's not going
+
+41
+00:03:10,850 --> 00:03:17,330
+to analyze our H html file so maybe no element with this idea exists and they offer this would yield
+
+42
+00:03:17,330 --> 00:03:18,250
+null.
+
+43
+00:03:18,260 --> 00:03:25,070
+Now here we say we don't store a null in there we just store each l template element so to eliminate
+
+44
+00:03:25,080 --> 00:03:29,410
+distain or we have to tell typescript that this will never be null.
+
+45
+00:03:29,540 --> 00:03:31,250
+And you know how you can do this.
+
+46
+00:03:31,340 --> 00:03:33,510
+You can add exclamation mark here.
+
+47
+00:03:33,620 --> 00:03:40,550
+An alternative of course just to all to show this if you would not be sure is to store it as let's say
+
+48
+00:03:40,550 --> 00:03:46,890
+in a constant and then check if template element is the truth.
+
+49
+00:03:46,930 --> 00:03:51,500
+So if it's not now and then store it inside off that if check here.
+
+50
+00:03:51,520 --> 00:03:56,050
+Now we're still getting an error but that will be a different error which I'll come back to later for
+
+51
+00:03:56,050 --> 00:03:56,560
+now.
+
+52
+00:03:56,560 --> 00:03:59,870
+This would do the trick if we're not sure now.
+
+53
+00:03:59,950 --> 00:04:01,990
+Here however I am sure.
+
+54
+00:04:01,990 --> 00:04:06,010
+And by the way if you're not sure you should provide a fallback in the Ellis case of course.
+
+55
+00:04:06,010 --> 00:04:11,350
+But here I am sure that we'll get such element and therefore we can simply add exclamation mark thereafter
+
+56
+00:04:11,560 --> 00:04:13,750
+to tell typescript all good.
+
+57
+00:04:13,750 --> 00:04:16,720
+We will get access to an element with that I.D..
+
+58
+00:04:17,350 --> 00:04:22,910
+Now as I mentioned we still have a number error of though property content is missing in type H html
+
+59
+00:04:23,140 --> 00:04:24,300
+element.
+
+60
+00:04:24,310 --> 00:04:29,470
+The problem here is that we're telling typescript that we're going to store a template element which
+
+61
+00:04:29,470 --> 00:04:34,840
+is of type h him l template element and indeed Dad will be the case.
+
+62
+00:04:34,840 --> 00:04:41,170
+Now of course get element by I.D. doesn't know which element id will return eventually.
+
+63
+00:04:41,170 --> 00:04:46,690
+It just knows it will be some H to mail element but not the which specialized wording of it.
+
+64
+00:04:46,690 --> 00:04:52,840
+If it's a div a paragraph a button or like in this case a template element get element by I.D. has no
+
+65
+00:04:52,840 --> 00:04:54,600
+chance of knowing that.
+
+66
+00:04:54,640 --> 00:05:01,270
+So in order to tell typescript about the type which we of course also know with certainty we can use
+
+67
+00:05:01,270 --> 00:05:02,280
+typecasting.
+
+68
+00:05:02,290 --> 00:05:03,750
+You learned about this as well.
+
+69
+00:05:03,760 --> 00:05:08,560
+There are two syntax is you can use the angled brackets at the beginning and then to type.
+
+70
+00:05:08,560 --> 00:05:13,450
+You want to cost this too with Dad you were telling typescript hey the thing.
+
+71
+00:05:13,450 --> 00:05:15,810
+The expression coming after this year.
+
+72
+00:05:15,880 --> 00:05:17,560
+This will be of that type.
+
+73
+00:05:17,710 --> 00:05:23,110
+Or alternatively you add as h Tim l template element which is the approach I will use.
+
+74
+00:05:23,110 --> 00:05:29,200
+And with that you guaranteed to typescript that what you fetch here will not be null and will be of
+
+75
+00:05:29,200 --> 00:05:35,020
+this type a lot of talking about selecting this but it is a common task and it is important to get this
+
+76
+00:05:35,020 --> 00:05:44,200
+right now let's continue with the host element here we should also add host element as a field and we
+
+77
+00:05:44,200 --> 00:05:50,530
+know that the host element where we actually want to render our project input will in the end be this
+
+78
+00:05:50,610 --> 00:05:51,430
+day of year.
+
+79
+00:05:51,430 --> 00:05:54,020
+That's where I want to render my form.
+
+80
+00:05:54,070 --> 00:05:57,730
+So here we can say h HTML div element.
+
+81
+00:05:57,760 --> 00:06:00,310
+That's the type of element we're going to add this to.
+
+82
+00:06:00,310 --> 00:06:07,030
+We could also be a bit less specific and just say h html element because here I really don't care whether
+
+83
+00:06:07,030 --> 00:06:11,860
+it's a div or not but since we know it with certainty why not add it.
+
+84
+00:06:12,160 --> 00:06:17,800
+Now I want to get access to debt dev of course where this should be added and if we have a look at the
+
+85
+00:06:17,800 --> 00:06:21,820
+index each time l file we see we can identify this div by the idea.
+
+86
+00:06:21,820 --> 00:06:24,600
+Again the app idea in this case.
+
+87
+00:06:24,700 --> 00:06:31,300
+So now back and apt yes we can use document get element by D one more time and reach out to the element
+
+88
+00:06:31,330 --> 00:06:32,830
+with the IED app.
+
+89
+00:06:32,980 --> 00:06:35,100
+Now we have the same problems as before.
+
+90
+00:06:35,470 --> 00:06:37,820
+This can be now.
+
+91
+00:06:37,840 --> 00:06:44,880
+So we have to add the exclamation mark because again we know with certainty that it won't and get element
+
+92
+00:06:44,880 --> 00:06:51,160
+by a D doesn't know that this will be a h shemale div elements that we should cost this year as well.
+
+93
+00:06:51,300 --> 00:06:57,060
+And with that we're now fine and we get access to all the elements we need to do well that was a lot
+
+94
+00:06:57,060 --> 00:07:01,990
+of talking about that with that unfortunately we haven't achieved much.
+
+95
+00:07:02,010 --> 00:07:05,820
+We have access to these elements but we're not rendering anything there.
+
+96
+00:07:05,850 --> 00:07:13,170
+So let's continue with that for that we need to import the content of this template element so basically
+
+97
+00:07:13,170 --> 00:07:20,290
+import what's inside the template tax and rendered is to the DOM we can do this right here in the constructor.
+
+98
+00:07:20,290 --> 00:07:22,970
+Because my idea and of course that's just my idea.
+
+99
+00:07:22,990 --> 00:07:28,570
+You could set this up differently but my idea is that when we create a new instance of this class I
+
+100
+00:07:28,570 --> 00:07:31,790
+immediately want to render a form that belongs to this instance.
+
+101
+00:07:31,840 --> 00:07:34,440
+So we'll do it right in the constructor.
+
+102
+00:07:34,460 --> 00:07:42,210
+There we can get our imported node or import that H HTML content or however you want to name it which
+
+103
+00:07:42,250 --> 00:07:43,150
+you can get with.
+
+104
+00:07:43,150 --> 00:07:45,800
+Document import node.
+
+105
+00:07:45,940 --> 00:07:52,990
+And that is a method provided on the global document object and to import node you pass a pointer at
+
+106
+00:07:52,990 --> 00:07:54,460
+your template element.
+
+107
+00:07:54,460 --> 00:08:02,200
+So this template element in the end or to be precise not the element but dot content their content is
+
+108
+00:08:02,200 --> 00:08:05,590
+a property that exists on H2 and template elements.
+
+109
+00:08:05,590 --> 00:08:09,520
+And it simply gives a reference to the content of the template.
+
+110
+00:08:09,550 --> 00:08:16,510
+So to the H to note code between the template tax import node all takes a second argument which defines
+
+111
+00:08:16,510 --> 00:08:19,660
+whether it should import is with a deep clone or not.
+
+112
+00:08:19,660 --> 00:08:24,150
+So all levels of nesting inside of the template and I definitely want to do that.
+
+113
+00:08:24,280 --> 00:08:26,360
+So I will provide true here.
+
+114
+00:08:26,380 --> 00:08:32,350
+Now we have the imported node and as you see this is of type document fragment which typescript assumed
+
+115
+00:08:32,620 --> 00:08:34,880
+or inferred automatically.
+
+116
+00:08:34,960 --> 00:08:36,840
+Now we can use that imported node.
+
+117
+00:08:37,000 --> 00:08:41,560
+And of course I want to use it to render some content for that.
+
+118
+00:08:41,560 --> 00:08:45,160
+I will add a new method a private method which I'll name attach.
+
+119
+00:08:45,190 --> 00:08:46,360
+You don't need to do that.
+
+120
+00:08:46,450 --> 00:08:52,840
+I just want to split my selection and rendering logic instead of attach.
+
+121
+00:08:52,870 --> 00:08:58,990
+I will reach out to the host element so the place where I do want to render my content and call insert
+
+122
+00:08:59,050 --> 00:09:05,920
+adjacent element which is a default method provided by the browser in the end in javascript to insert
+
+123
+00:09:05,920 --> 00:09:12,550
+the HD hymnal element and insert adjacent element first of all takes a description of where to insert
+
+124
+00:09:12,550 --> 00:09:13,240
+it.
+
+125
+00:09:13,240 --> 00:09:17,860
+So there you can inserted after the beginning of the element you are targeting.
+
+126
+00:09:17,890 --> 00:09:24,070
+So right after the opening tag of host element before the beginning so before the opening tag before
+
+127
+00:09:24,070 --> 00:09:26,650
+the end tag or after the end tag.
+
+128
+00:09:27,280 --> 00:09:35,310
+And here I will go for ofter begin to insert it right at the beginning of the opening tag and then the
+
+129
+00:09:35,310 --> 00:09:39,110
+thing I want to insert is my imported note.
+
+130
+00:09:39,210 --> 00:09:43,960
+However first of all that's a constant only available in the constructor.
+
+131
+00:09:44,040 --> 00:09:48,280
+And second that's a document fragment we couldn't inserted like this.
+
+132
+00:09:48,300 --> 00:09:54,840
+Instead we need to get access to concrete H html element in there which we can store in another property
+
+133
+00:09:54,960 --> 00:10:01,410
+element which we also have to add as a field up there which can be of type H2 male element or in our
+
+134
+00:10:01,410 --> 00:10:07,920
+case actually we know it will be inside off the template here so it will be a form that's the first
+
+135
+00:10:07,920 --> 00:10:09,510
+element in that template.
+
+136
+00:10:09,510 --> 00:10:18,270
+So here we can say it will be a h Tim l form element and then here this element is equal import node
+
+137
+00:10:18,630 --> 00:10:25,560
+first element child and now we just have to tell typescript again that this will be a H.M. form element.
+
+138
+00:10:25,560 --> 00:10:31,060
+Now this element is now de concrete property that points at the node we want to insert.
+
+139
+00:10:31,170 --> 00:10:36,350
+So down there and insert adjacent element we insert this element here.
+
+140
+00:10:36,410 --> 00:10:42,300
+Now we just need to make sure that here in the constructor at the end of it we call attach.
+
+141
+00:10:42,300 --> 00:10:44,030
+So does private attach method.
+
+142
+00:10:44,340 --> 00:10:46,670
+So did this code also executes.
+
+143
+00:10:46,680 --> 00:10:51,200
+And now with auto formatting this is how my finished code looks like.
+
+144
+00:10:51,510 --> 00:10:58,290
+So that now is the project input class and fewer radically when we instantiated it should render to
+
+145
+00:10:58,290 --> 00:10:59,480
+form.
+
+146
+00:10:59,490 --> 00:11:01,080
+Now let's give it a try.
+
+147
+00:11:01,110 --> 00:11:06,740
+Below the class let's simply create a new constant perch.
+
+148
+00:11:06,750 --> 00:11:12,310
+Input for example name is up to you and call new project input like this.
+
+149
+00:11:12,490 --> 00:11:16,200
+And if we now save that it should recompile and reload.
+
+150
+00:11:16,200 --> 00:11:20,890
+And if you go back to the browser indeed you should see that form here.
+
+151
+00:11:20,890 --> 00:11:26,930
+That's pretty neat because with that we made our first very important step.
+
+152
+00:11:26,970 --> 00:11:33,050
+We have our four rendered and even though a lot is missing that's better than nothing.
+
+153
+00:11:33,060 --> 00:11:39,660
+This forum is coming from the index H to mail file and it's rendered with the help of our object oriented
+
+154
+00:11:39,690 --> 00:11:41,760
+typescript code up there.
