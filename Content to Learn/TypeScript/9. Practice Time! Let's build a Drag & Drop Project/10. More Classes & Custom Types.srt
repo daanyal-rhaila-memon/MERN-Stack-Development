@@ -1,0 +1,339 @@
+1
+00:00:02,260 --> 00:00:05,770
+As a next step I want to work on these types here.
+
+2
+00:00:05,800 --> 00:00:12,700
+The any type I'm using here for my assigned projects for the listeners here and also for the projects
+
+3
+00:00:12,700 --> 00:00:14,790
+in the project state.
+
+4
+00:00:15,040 --> 00:00:22,600
+Of course here I don't really want to work with any aid would make more sense to have a dedicated project
+
+5
+00:00:22,750 --> 00:00:32,770
+class or project type which we can use and indeed I will create a class for that project type simply
+
+6
+00:00:32,770 --> 00:00:40,720
+by using class project so that we have a way of building project objects which always have the same
+
+7
+00:00:40,720 --> 00:00:41,620
+structure.
+
+8
+00:00:41,620 --> 00:00:44,740
+Right now I'm doing it down there with the literal notation.
+
+9
+00:00:44,800 --> 00:00:46,810
+The downside of that of course is dead.
+
+10
+00:00:46,810 --> 00:00:52,870
+We have to remember that it's description and not desk that we need an I.D. which is a string and so
+
+11
+00:00:52,870 --> 00:00:53,460
+on.
+
+12
+00:00:53,530 --> 00:01:00,940
+So that's where custom type can help us and I'll create a class and not an interface or a custom type
+
+13
+00:01:00,940 --> 00:01:05,470
+with the type keyword because I want to be able to instantiate it.
+
+14
+00:01:05,500 --> 00:01:10,270
+So how should such a class look like or has such a project looked like to be precise.
+
+15
+00:01:10,750 --> 00:01:18,460
+Well I'll add a constructor and then use it is a shortcut of assigning arguments or parameters to the
+
+16
+00:01:18,460 --> 00:01:24,310
+constructor which then automatically become properties as well by adding the successor at the beginning
+
+17
+00:01:24,460 --> 00:01:29,490
+public in this case and then the name of the argument and property and then the type.
+
+18
+00:01:29,560 --> 00:01:32,870
+And here every project should have an idea.
+
+19
+00:01:33,160 --> 00:01:37,190
+Every project should have a title which also is a string just like DADT.
+
+20
+00:01:37,390 --> 00:01:39,970
+It should have a description which is a string.
+
+21
+00:01:39,970 --> 00:01:46,930
+It should have a people property which is a number that's the number of people assigned to a project
+
+22
+00:01:47,500 --> 00:01:54,010
+and one thing I also want to add which we didn't have thus far is actually a project status because
+
+23
+00:01:54,010 --> 00:01:58,710
+right now when we add a project here it appears in both lists.
+
+24
+00:01:58,720 --> 00:02:05,980
+Now I want to add a status to a project which of course can be changed so that we actually can filter
+
+25
+00:02:06,040 --> 00:02:11,510
+for active projects in the first box and finish projects in the second box.
+
+26
+00:02:11,530 --> 00:02:15,040
+So did we only show the right projects at every box.
+
+27
+00:02:15,040 --> 00:02:18,360
+So for that I'll add another public property here.
+
+28
+00:02:18,430 --> 00:02:24,490
+Status and not a question of course is which type should this status have.
+
+29
+00:02:24,580 --> 00:02:30,990
+Now we could use a union type with two literal types active and finished what we used early already.
+
+30
+00:02:31,180 --> 00:02:35,900
+But here I also want to introduce or reintroduce another type.
+
+31
+00:02:35,910 --> 00:02:42,010
+You learn about and that's the enum the E name is perfect here because we have exactly two options.
+
+32
+00:02:42,130 --> 00:02:48,520
+And here in the context of this project object we also don't need a text which makes sense to humans
+
+33
+00:02:48,790 --> 00:02:52,850
+which we store as a value but we really just need some identifier.
+
+34
+00:02:52,960 --> 00:03:03,070
+So here I'll add a new enum project status and I want to have two values steer active and finished and
+
+35
+00:03:03,070 --> 00:03:07,390
+then here is state as will be of type project status.
+
+36
+00:03:07,450 --> 00:03:10,300
+Just like that this is now my project.
+
+37
+00:03:10,300 --> 00:03:18,830
+Class with that here we can say that this is an array of projects using that project class and of course
+
+38
+00:03:18,890 --> 00:03:24,630
+when we create a project here we do that by using new project.
+
+39
+00:03:24,770 --> 00:03:26,640
+Project not project state.
+
+40
+00:03:26,810 --> 00:03:34,190
+And here to project we forward an idea in this case as mentioned before a random number which we convert
+
+41
+00:03:34,190 --> 00:03:35,420
+to a string.
+
+42
+00:03:35,420 --> 00:03:44,630
+Then the title then the description then the number of people here and then also of course Dad's status.
+
+43
+00:03:44,630 --> 00:03:45,130
+Right.
+
+44
+00:03:45,140 --> 00:03:53,180
+And one thing I want to have here in this application in this demo project is that every new project
+
+45
+00:03:53,180 --> 00:03:54,680
+by default is active.
+
+46
+00:03:54,890 --> 00:04:02,780
+So when we create a new project here we assign project status dot act of here as a value for the status.
+
+47
+00:04:03,020 --> 00:04:05,280
+With that we have the project which we add.
+
+48
+00:04:05,450 --> 00:04:10,550
+And now there's one other place where we need to project class and that is here and the project list
+
+49
+00:04:10,550 --> 00:04:11,260
+class.
+
+50
+00:04:11,270 --> 00:04:17,270
+There we have the signed projects property and of course that should all be an array of projects.
+
+51
+00:04:17,270 --> 00:04:19,580
+Now with that we're using better typing.
+
+52
+00:04:19,580 --> 00:04:26,420
+And one advantage is that here in render projects we now also get auto completion here for example.
+
+53
+00:04:26,420 --> 00:04:33,050
+And we would also get an error a compilation error if we tried to save that because now typescript understands
+
+54
+00:04:33,110 --> 00:04:35,390
+with which types we're working here.
+
+55
+00:04:35,420 --> 00:04:39,530
+So that's the project class and how we can use that project.
+
+56
+00:04:39,530 --> 00:04:41,020
+Class isn't the only class.
+
+57
+00:04:41,030 --> 00:04:44,040
+However we also have the listener here.
+
+58
+00:04:44,300 --> 00:04:50,340
+And for that I'll add a new custom type listener the name is of course up to you.
+
+59
+00:04:50,450 --> 00:04:58,310
+And I just use a type here because I want to basically encode a function type with one word.
+
+60
+00:04:58,310 --> 00:04:59,660
+So what do I mean with that.
+
+61
+00:04:59,660 --> 00:05:04,700
+Well of course a listener here in our application is just a function.
+
+62
+00:05:04,700 --> 00:05:05,380
+Right.
+
+63
+00:05:05,420 --> 00:05:08,910
+What we stored in the listeners array is just a bunch of functions.
+
+64
+00:05:08,990 --> 00:05:13,570
+Add listener pushes and you function and when something changes we execute that function.
+
+65
+00:05:14,240 --> 00:05:24,700
+So here a listener is really just a function but it is a function that receives our items certain items.
+
+66
+00:05:24,710 --> 00:05:30,410
+In our case an array of projects and that then does something with it.
+
+67
+00:05:30,450 --> 00:05:35,880
+Now to be precise here of course to define a function type we don't have curly braces here but instead
+
+68
+00:05:35,880 --> 00:05:42,090
+as you learned the return type and that will be white which means we don't care about any value that
+
+69
+00:05:42,090 --> 00:05:46,170
+listener function might return in the place where we work with listeners.
+
+70
+00:05:46,170 --> 00:05:48,000
+We don't need any return type.
+
+71
+00:05:48,000 --> 00:05:54,660
+We just want to ensure that whoever passes us such a listener expects to get some items when the listener
+
+72
+00:05:54,660 --> 00:05:55,770
+fires.
+
+73
+00:05:55,920 --> 00:06:02,580
+With that here we can say that listeners is an array of listener well functions in the end.
+
+74
+00:06:02,970 --> 00:06:08,910
+And here when I push listener function I need to make clear that it's not just any function but that
+
+75
+00:06:08,910 --> 00:06:12,330
+it's of type listener then everything works.
+
+76
+00:06:12,390 --> 00:06:18,420
+Now in the place where we use add listener which is down there we now all of course can enhance our
+
+77
+00:06:18,420 --> 00:06:23,440
+typing and make it clearer that here we will actually get a bunch of projects.
+
+78
+00:06:23,460 --> 00:06:32,110
+So now with that we set up our listener we had at the project type and that changes nothing here.
+
+79
+00:06:32,250 --> 00:06:39,450
+If we now add something that works and if I add a second item that still gets added besides the first
+
+80
+00:06:39,450 --> 00:06:45,300
+item being added again as well and we're not doing any filtering in any of the lists at all.
+
+81
+00:06:45,300 --> 00:06:51,810
+So before we continue working on other parts let's make sure we're not having this duplication here
+
+82
+00:06:52,020 --> 00:06:59,430
+inside of a single list and also not the publication across both boxes here but that instead only active
+
+83
+00:06:59,430 --> 00:07:06,000
+projects are showing up here and only finished projects and therefore initially no projects show up
+
+84
+00:07:06,000 --> 00:07:07,680
+here in finished projects.
+
+85
+00:07:08,040 --> 00:07:09,450
+So let's fix that.

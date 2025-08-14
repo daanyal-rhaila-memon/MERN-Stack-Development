@@ -1,0 +1,703 @@
+1
+00:00:02,360 --> 00:00:10,130
+So getting projects from A to B is now our goal to be precise when users create a new project when they
+
+2
+00:00:10,130 --> 00:00:11,800
+enter all data.
+
+3
+00:00:11,900 --> 00:00:19,430
+We want to create a new project object in the end which we DNA output in our project list class as part
+
+4
+00:00:19,430 --> 00:00:22,020
+of the unordered list which is rendered there.
+
+5
+00:00:22,040 --> 00:00:23,700
+That's the idea.
+
+6
+00:00:23,700 --> 00:00:29,690
+No of course a trivial way of implementing this could be to simply go to the place where the user input
+
+7
+00:00:29,750 --> 00:00:39,400
+is entered and then here use stock human get element by I.D. to reach out for Dad unordered list.
+
+8
+00:00:39,410 --> 00:00:44,470
+We rendered as part of our project list class which has this idea here.
+
+9
+00:00:44,480 --> 00:00:51,830
+So active dash projects list or finished dash projects list and then simply reach out to that and add
+
+10
+00:00:51,830 --> 00:00:52,680
+a new item to it.
+
+11
+00:00:52,760 --> 00:00:57,290
+But that's not really Dee's idea of how I want to build this application.
+
+12
+00:00:57,290 --> 00:01:04,340
+I want to build it in an object oriented way where we have our different classes that work to gather
+
+13
+00:01:04,340 --> 00:01:11,300
+in a in a reactive way where we create a new class and then something happens in the DOM where we call
+
+14
+00:01:11,330 --> 00:01:14,690
+a method of a class and then this class does something.
+
+15
+00:01:14,690 --> 00:01:17,010
+That's how I want these things to work.
+
+16
+00:01:17,030 --> 00:01:21,490
+Now of course we could add a method to the project list class.
+
+17
+00:01:21,590 --> 00:01:24,000
+Let's say I add project method.
+
+18
+00:01:24,170 --> 00:01:28,430
+That method should then be called when a project should be added and rendered.
+
+19
+00:01:28,430 --> 00:01:33,870
+And we would have to find some way of calling it from inside the project input to do that.
+
+20
+00:01:33,920 --> 00:01:40,130
+We could make sure that we actually pass references to our lists here to the project input constructor
+
+21
+00:01:40,380 --> 00:01:46,430
+so that from inside the project input class we can work with these concrete instances and call the methods
+
+22
+00:01:46,430 --> 00:01:51,710
+on these instances because dad is what we would have to do that would be a while.
+
+23
+00:01:51,710 --> 00:01:59,390
+Way definitely an approach you could take but I want to take an even more abstract approach even more
+
+24
+00:01:59,420 --> 00:02:07,470
+interesting approach in my opinion I will build a class which manages the state of our application so
+
+25
+00:02:07,470 --> 00:02:14,910
+to say a class which manages our projects or whichever state we might need to manage in the application
+
+26
+00:02:15,570 --> 00:02:21,720
+which also allows us to then set up listeners in the different parts of the app that are interested.
+
+27
+00:02:21,720 --> 00:02:27,890
+This is a pattern that might sound familiar to you if you work with frameworks like angular or library
+
+28
+00:02:27,890 --> 00:02:35,510
+is like react and read X that you have a global state management object and you just listen to change
+
+29
+00:02:35,510 --> 00:02:37,450
+as that is what I want to implement here.
+
+30
+00:02:37,560 --> 00:02:42,420
+Of course it's just one way of doing this but I think it's a quite interesting way which is why I want
+
+31
+00:02:42,420 --> 00:02:43,520
+to show it.
+
+32
+00:02:43,740 --> 00:02:52,230
+So at the top of the app yes fall I'll add a project state management class and I will simply name it
+
+33
+00:02:52,230 --> 00:02:54,850
+project state.
+
+34
+00:02:54,860 --> 00:02:57,450
+Sounds like a sensible name to me now.
+
+35
+00:02:57,470 --> 00:03:07,190
+The idea here is that in this class we have a property or a field a private field projects which holds
+
+36
+00:03:07,190 --> 00:03:08,840
+an array of projects.
+
+37
+00:03:08,840 --> 00:03:12,050
+Now we all need to define how a project should look like.
+
+38
+00:03:12,050 --> 00:03:13,370
+We'll do that in the next step.
+
+39
+00:03:13,370 --> 00:03:15,890
+For now I'll just say it's an array of anything.
+
+40
+00:03:15,890 --> 00:03:17,540
+Which of course is not perfect.
+
+41
+00:03:17,600 --> 00:03:22,190
+Not final but I want to focus on that state management solution for now.
+
+42
+00:03:22,280 --> 00:03:31,650
+So we have this list of projects here now my goal is that I want to add an item to that list whenever
+
+43
+00:03:31,650 --> 00:03:40,520
+we well click that at Project button here to make that work inside of the project state class I'll add
+
+44
+00:03:40,520 --> 00:03:48,140
+a add project method a public one and there I expect to get the title which should be a string the description
+
+45
+00:03:48,170 --> 00:03:54,940
+which should be a string and also the number of people working on the project which should be a number.
+
+46
+00:03:55,250 --> 00:04:02,090
+Then in here we can create a new project with the object literal notation for now where we should have
+
+47
+00:04:02,090 --> 00:04:09,080
+some I.D. for every project so that we can uniquely identify it and I'll generate an idea here by using
+
+48
+00:04:09,530 --> 00:04:14,970
+moth random to string now a random number is not really a unique idea.
+
+49
+00:04:14,990 --> 00:04:20,990
+You can generate the same number more than once but it's very unlikely and for our demo purposes here
+
+50
+00:04:21,110 --> 00:04:22,610
+it will do.
+
+51
+00:04:22,610 --> 00:04:28,370
+Now besides that every project should have a title and there will stored that title argument we're getting.
+
+52
+00:04:28,400 --> 00:04:37,530
+Same for description where I will store description and my people where I will store the number of people
+
+53
+00:04:39,700 --> 00:04:43,470
+this for now is the project I want to store.
+
+54
+00:04:43,480 --> 00:04:48,840
+So once we created it here we can reach out to the project's array and project state which is private
+
+55
+00:04:48,850 --> 00:04:54,790
+but from inside the class which this method is we can access it of course and they want to add this
+
+56
+00:04:54,790 --> 00:05:00,430
+new project and for that we can simply push our new project to it.
+
+57
+00:05:00,430 --> 00:05:07,480
+Now with that we are able to add a project but we still of course have a couple of unclear questions.
+
+58
+00:05:07,480 --> 00:05:15,130
+How do we call at Project from inside our class down data or what regather the user input from inside
+
+59
+00:05:15,130 --> 00:05:16,060
+the submit handler.
+
+60
+00:05:16,060 --> 00:05:24,460
+How do we call at project and how do we pass that updated list of projects when average changes to the
+
+61
+00:05:24,490 --> 00:05:25,720
+project list class.
+
+62
+00:05:25,720 --> 00:05:29,250
+These are the two issues we of course face at the moment.
+
+63
+00:05:29,260 --> 00:05:38,250
+Well one thing I will do here is I will create an instance of project state here a global instance which
+
+64
+00:05:38,250 --> 00:05:42,770
+we could use from the entire file and I'll do it right after we create that class.
+
+65
+00:05:42,810 --> 00:05:50,460
+So here I have my project state constant where I instantiate projects state like this.
+
+66
+00:05:50,460 --> 00:05:54,590
+This way does is a global concept that can be used anywhere in the file.
+
+67
+00:05:54,660 --> 00:05:58,050
+So talking to that class is now super simple.
+
+68
+00:05:58,050 --> 00:06:05,410
+You just have to use this global constant here we can even use a feature we all learn about the private
+
+69
+00:06:05,410 --> 00:06:12,100
+constructor to guarantee that this is a singleton class we can create a private constructor here and
+
+70
+00:06:12,100 --> 00:06:17,800
+then we have a never private property here instance which is of type project state self the same type
+
+71
+00:06:17,800 --> 00:06:28,290
+as classes off and we then add get instance method here a static method actually where we check if this
+
+72
+00:06:28,290 --> 00:06:30,080
+stored instance is a thing.
+
+73
+00:06:30,090 --> 00:06:36,390
+And for Dad this actually all that has to be a static instance a static property I mean if this is a
+
+74
+00:06:36,390 --> 00:06:42,250
+thing if it is we return this stored instance so we'd return our single instance we got.
+
+75
+00:06:42,300 --> 00:06:44,400
+Otherwise we create a new one.
+
+76
+00:06:44,640 --> 00:06:52,800
+So either wise this dot instance will be equal to new project state and then we return this stored instance
+
+77
+00:06:54,760 --> 00:07:03,590
+now is that we can call get instance down there like this project state get instance and we're guaranteed
+
+78
+00:07:03,590 --> 00:07:10,700
+to always work with the exact same object and we'll always only have one object of the type in the entire
+
+79
+00:07:10,700 --> 00:07:17,750
+application which is the idea here because I only want to have one state management object for our project
+
+80
+00:07:17,760 --> 00:07:22,740
+and Dad is this project state with this Singleton constructor now.
+
+81
+00:07:22,770 --> 00:07:25,870
+So now we have our project state constant.
+
+82
+00:07:25,950 --> 00:07:31,620
+Let's go down to the project input class day offer where we gathered a user input here we can now call
+
+83
+00:07:31,620 --> 00:07:39,360
+Project state app project and forward to title the description and the people we get back from.
+
+84
+00:07:39,360 --> 00:07:40,960
+Gather user input in yet.
+
+85
+00:07:41,040 --> 00:07:43,940
+So now this project should get created.
+
+86
+00:07:43,980 --> 00:07:51,930
+Now we just need to push that information that we have a new project to our project list class because
+
+87
+00:07:51,930 --> 00:07:57,790
+that's the class which is responsible for outputting something to the screen and for data want to set
+
+88
+00:07:57,790 --> 00:08:05,570
+up a subscription pattern in the end we're inside of our project state we manage a list of listeners.
+
+89
+00:08:05,760 --> 00:08:11,630
+So a list of functions in the end which should be called whenever something changes.
+
+90
+00:08:11,640 --> 00:08:14,140
+So for data all add up no private property here.
+
+91
+00:08:14,280 --> 00:08:19,070
+Listeners and listeners will be an empty array.
+
+92
+00:08:19,320 --> 00:08:27,270
+And for now again just an array of anything we will specified as in greater detail later now.
+
+93
+00:08:27,330 --> 00:08:35,550
+I also want to have a method here add listener where I get a listener function.
+
+94
+00:08:35,640 --> 00:08:39,200
+So this should be a function in the end here.
+
+95
+00:08:39,210 --> 00:08:41,390
+And I will then add this to my listener.
+
+96
+00:08:41,400 --> 00:08:46,510
+So we push the listener function here too well the listeners array.
+
+97
+00:08:46,560 --> 00:08:49,570
+Now what's the idea of having that listeners are right.
+
+98
+00:08:49,650 --> 00:08:53,130
+It's an array of functions of function references right.
+
+99
+00:08:53,130 --> 00:08:58,770
+The idea is that whenever something changes like here when we add a new project we call all listener
+
+100
+00:08:58,770 --> 00:08:59,720
+functions.
+
+101
+00:08:59,850 --> 00:09:04,770
+So we loop through all listeners of this listener.
+
+102
+00:09:04,770 --> 00:09:10,710
+So through all listener functions and then since these are function references we can execute this as
+
+103
+00:09:10,710 --> 00:09:18,580
+a function and queue that function we pass the thing that's relevant for it.
+
+104
+00:09:18,580 --> 00:09:23,320
+Based on the state we're managing which in this case of this clause of course is our projects list.
+
+105
+00:09:23,320 --> 00:09:34,480
+This is the state this class is responsible for so here I forward this project and I will call slice
+
+106
+00:09:34,540 --> 00:09:41,020
+on it to only return a copy off that array and not the original array so that it can't be added it from
+
+107
+00:09:41,020 --> 00:09:47,140
+the place where the listener functions coming from because I raise and objects are reference values
+
+108
+00:09:47,140 --> 00:09:48,050
+in javascript.
+
+109
+00:09:48,160 --> 00:09:54,520
+So if you would pass the original array we could added it from outside and also on the same hand if
+
+110
+00:09:54,520 --> 00:09:59,810
+we push something to it from inside this class it would already change everywhere else in the app.
+
+111
+00:09:59,830 --> 00:10:06,430
+But these places would not really notice that it changed so we could introduce strange bugs if we pass
+
+112
+00:10:06,490 --> 00:10:12,820
+around the original reference which is why I pass around the brand new copy a brand new Array here.
+
+113
+00:10:12,820 --> 00:10:19,390
+So now every listener function is getting executed and gets our copy our brand new copy of projects.
+
+114
+00:10:19,450 --> 00:10:23,740
+Now we just need to go to the places where we want to be informed about changes.
+
+115
+00:10:23,860 --> 00:10:31,280
+In our case the project list class here and set up such a listener so here in the constructor of the
+
+116
+00:10:31,280 --> 00:10:36,140
+project list class before we attach and render the content.
+
+117
+00:10:36,140 --> 00:10:42,920
+I will reach out to project state and call at listener here to basically register a listener function
+
+118
+00:10:42,920 --> 00:10:43,590
+here.
+
+119
+00:10:43,760 --> 00:10:50,330
+Now a listener as I said is a function so we have to pass a function to add listener because the listeners
+
+120
+00:10:50,330 --> 00:10:52,570
+were managing here in the project state.
+
+121
+00:10:52,640 --> 00:10:59,550
+That's just a list of functions which we will eventually call when something changes right so we need
+
+122
+00:10:59,550 --> 00:11:04,900
+to pass a function to my ADD listener function here.
+
+123
+00:11:05,040 --> 00:11:11,460
+Here in passing an anonymous arrow function and that function will get a list of projects when it is
+
+124
+00:11:11,460 --> 00:11:13,580
+called from inside project state.
+
+125
+00:11:14,460 --> 00:11:20,460
+So we get a list of projects we know that inside of this function body we can then use this list of
+
+126
+00:11:20,460 --> 00:11:21,520
+projects.
+
+127
+00:11:21,720 --> 00:11:29,880
+And here I will add a brand new field to the project list assigned projects maybe which is of type any
+
+128
+00:11:29,880 --> 00:11:30,330
+array.
+
+129
+00:11:30,360 --> 00:11:37,220
+So anything in an array an array of any values will of course also specify design greater detail later.
+
+130
+00:11:37,650 --> 00:11:43,230
+And then here we can say this assigned project is equal to projects so to the projects we're getting
+
+131
+00:11:44,270 --> 00:11:47,290
+now here to get rid of that implicit any type error.
+
+132
+00:11:47,300 --> 00:11:52,590
+I have to be clear that this will actually be an array of anything here.
+
+133
+00:11:52,650 --> 00:11:58,890
+So now I'm adding the projects which I get because something changed in my state here to my assigned
+
+134
+00:11:58,890 --> 00:12:04,830
+projects or I'm not adding it I'm overriding the assigned projects with the new projects and then my
+
+135
+00:12:04,830 --> 00:12:15,400
+ideas to render all these projects for that we can add a new method render projects for example which
+
+136
+00:12:15,430 --> 00:12:16,920
+I want to call from in here.
+
+137
+00:12:16,930 --> 00:12:20,220
+This render projects just like this.
+
+138
+00:12:22,200 --> 00:12:24,170
+It ends out of render projects.
+
+139
+00:12:24,170 --> 00:12:27,500
+I'll reach out to this list here.
+
+140
+00:12:27,500 --> 00:12:27,770
+Right.
+
+141
+00:12:27,770 --> 00:12:31,340
+We assign that I.D. when we render the content which we do here.
+
+142
+00:12:31,370 --> 00:12:36,590
+It looks like we do this after and our project is called but keep in mind that's instead of a function
+
+143
+00:12:36,680 --> 00:12:41,990
+which will only eventually be called once new projects are added so actually render the content will
+
+144
+00:12:41,990 --> 00:12:48,470
+run first and therefore in rendered projects we can rely on this idea being assigned to an unordered
+
+145
+00:12:48,470 --> 00:12:49,420
+list.
+
+146
+00:12:49,430 --> 00:12:58,970
+So here we can grab this and get our list element by using document get element by I.D. And then I just
+
+147
+00:12:58,970 --> 00:13:06,140
+pass in this idea identifier using the type of this concrete project list class and then also using
+
+148
+00:13:06,410 --> 00:13:12,780
+while the rest of this idea we generated and to that list or in that list I want to render all the projects
+
+149
+00:13:12,780 --> 00:13:22,070
+we have so I will go through all the project items of this assigned projects here and then for every
+
+150
+00:13:22,070 --> 00:13:25,370
+item I want to add something to the list and we'll refined this later.
+
+151
+00:13:25,370 --> 00:13:33,710
+For the moment I will just call append child here on my list element by the way here we should add an
+
+152
+00:13:33,710 --> 00:13:37,010
+exclamation mark to make it clear that this will not be null.
+
+153
+00:13:37,010 --> 00:13:44,220
+We can also cost us to an h t male U L list element to add to an unordered list element because dad
+
+154
+00:13:44,240 --> 00:13:49,790
+is what it will be and then we can append a child here and that should be a brand new list item.
+
+155
+00:13:49,790 --> 00:13:58,850
+So here we can create our list item with document create element l I add on that list item here I just
+
+156
+00:13:58,850 --> 00:14:07,040
+will set the text content equal to project item dot title every project item will be a project as we
+
+157
+00:14:07,180 --> 00:14:12,890
+created up there in the project state so it will be such an object and therefore it will have a title
+
+158
+00:14:14,360 --> 00:14:20,260
+with that if we go down there we have our list item which now is added here and with that we're almost
+
+159
+00:14:20,260 --> 00:14:22,330
+there remaining fixes here.
+
+160
+00:14:22,390 --> 00:14:29,060
+I set up that field but in the constructor I then never reference it only here in my listener function.
+
+161
+00:14:29,080 --> 00:14:32,700
+But as mentioned this does not run immediately in the constructor.
+
+162
+00:14:32,710 --> 00:14:41,720
+So what I'll do here is I will set this assigned projects equal to an empty array here initially so
+
+163
+00:14:41,720 --> 00:14:44,480
+that we're all happy and this is initialized.
+
+164
+00:14:44,510 --> 00:14:47,740
+Now if we save this it should compile without errors.
+
+165
+00:14:47,840 --> 00:14:50,300
+And now if we add something here.
+
+166
+00:14:50,500 --> 00:14:59,890
+Dust is work we indeed teams show up in our lists in both lists at the moment because we have no filtering
+
+167
+00:14:59,890 --> 00:15:00,820
+logic and so on.
+
+168
+00:15:01,210 --> 00:15:03,250
+And that is something we can fix later.
+
+169
+00:15:03,250 --> 00:15:06,210
+But it does work and that's the important thing.
+
+170
+00:15:06,250 --> 00:15:07,930
+Now you see we also have a box here.
+
+171
+00:15:07,930 --> 00:15:13,900
+However if I add a second element we duplicate the last element and add the new element.
+
+172
+00:15:13,900 --> 00:15:15,670
+So that's something we'll have to fix.
+
+173
+00:15:15,670 --> 00:15:17,950
+And these are all things we will tackle.
+
+174
+00:15:18,070 --> 00:15:22,220
+But now at least we're able to output something with that.
+
+175
+00:15:22,300 --> 00:15:27,900
+Let's dive into all the improvements like being clearer about the types we're using a widening that
+
+176
+00:15:27,900 --> 00:15:30,970
+duplicate output and many other things as well.
