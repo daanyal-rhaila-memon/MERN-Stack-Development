@@ -1,0 +1,687 @@
+1
+00:00:02,220 --> 00:00:06,120
+So what could we do about validation.
+
+2
+00:00:06,120 --> 00:00:10,450
+Well maybe let's start at the desired end result.
+
+3
+00:00:10,470 --> 00:00:17,190
+My idea is that we later have some validated function which doesn't exist yet but that we later have
+
+4
+00:00:17,190 --> 00:00:24,060
+it to which I pass to to enter title or actually a configuration object.
+
+5
+00:00:24,060 --> 00:00:27,800
+I'd say where the value is to enter title.
+
+6
+00:00:27,800 --> 00:00:36,210
+So the thing to be validated but where I then also have additional properties that tell the validate
+
+7
+00:00:36,360 --> 00:00:39,150
+function how to validated.
+
+8
+00:00:39,180 --> 00:00:46,950
+So for example that we have required such a true here Min length set to five to enforce five characters
+
+9
+00:00:47,430 --> 00:00:48,370
+and so on.
+
+10
+00:00:48,480 --> 00:00:54,690
+And then we do this here for all three inputs and validate is a function that returns true if it's valid
+
+11
+00:00:54,960 --> 00:00:56,730
+and false if it's not valid.
+
+12
+00:00:56,910 --> 00:01:04,860
+And in the end we could then have something like this for entered description and entered people that
+
+13
+00:01:04,860 --> 00:01:06,650
+would roughly be the idea.
+
+14
+00:01:06,840 --> 00:01:13,860
+Of course it's just one way of implementing this but it's a way which I like quite a lot for that at
+
+15
+00:01:13,970 --> 00:01:15,350
+top at the top of the file.
+
+16
+00:01:15,360 --> 00:01:19,370
+I will add some validation logic.
+
+17
+00:01:19,530 --> 00:01:22,410
+And again there are many ways of doing this.
+
+18
+00:01:22,440 --> 00:01:27,810
+I will first of all start by defining the structure of such a valid data bill object.
+
+19
+00:01:27,900 --> 00:01:34,590
+So if this object we pass to the validate function because of course does always needs to have a similar
+
+20
+00:01:34,590 --> 00:01:42,840
+structure with a certain amount of properties which can be there and certain types of properties so
+
+21
+00:01:42,840 --> 00:01:48,580
+that the validate function actually knows what it's working with and can correctly extract properties
+
+22
+00:01:48,580 --> 00:01:49,880
+and so on.
+
+23
+00:01:49,920 --> 00:01:52,890
+So I will start by defining an interface.
+
+24
+00:01:52,920 --> 00:01:58,740
+We could also go for a custom type totally up to you since all the flight and structure of an object.
+
+25
+00:01:58,740 --> 00:02:07,310
+I'm always a bigger fan of defining just as well an interface I'll name it valid date table here because
+
+26
+00:02:07,310 --> 00:02:15,830
+it describes a valid database object and it will have a value which is should be a string or also a
+
+27
+00:02:15,830 --> 00:02:17,330
+number.
+
+28
+00:02:17,470 --> 00:02:24,410
+Will have a required prop which will have a boolean value so true or false and then let's say we support
+
+29
+00:02:24,410 --> 00:02:31,160
+Min length validation which should be a number max length which should be a number and also in case
+
+30
+00:02:31,160 --> 00:02:38,090
+we're getting a number of men and a max value difference to mean length and max length is that this
+
+31
+00:02:38,270 --> 00:02:40,280
+checks the length of the string.
+
+32
+00:02:40,310 --> 00:02:45,810
+This the value of the number if it's above a certain number or below a certain maximum.
+
+33
+00:02:46,040 --> 00:02:50,410
+These are the properties I want to support now besides the value.
+
+34
+00:02:50,400 --> 00:02:57,380
+This should all be optional though which we can and forest by adding a question mark after the names
+
+35
+00:02:57,680 --> 00:03:02,740
+by the way the alternative to using a question mark is to allow for undefined values.
+
+36
+00:03:02,750 --> 00:03:04,810
+The question mark basically does the same.
+
+37
+00:03:04,940 --> 00:03:09,220
+It SAS is required is either a boolean or undefined.
+
+38
+00:03:09,410 --> 00:03:12,360
+So now we have to validate able interface.
+
+39
+00:03:12,650 --> 00:03:14,950
+What can we do with that.
+
+40
+00:03:14,980 --> 00:03:23,310
+Well now with that interface created we can create that function that validate function I'm looking
+
+41
+00:03:23,310 --> 00:03:32,390
+for that should get such a valid database object so valid data all input is of type validated Bill.
+
+42
+00:03:32,430 --> 00:03:33,470
+That's my idea here.
+
+43
+00:03:33,480 --> 00:03:40,890
+So it gets an object which has this structure and now in there we can check for all these properties
+
+44
+00:03:40,890 --> 00:03:43,920
+to exist and then do the appropriate validation.
+
+45
+00:03:44,840 --> 00:03:48,210
+Now what exactly do we do in the validate function day for.
+
+46
+00:03:48,230 --> 00:03:52,350
+Well in the end here I want to create a variable is valid which initially is true.
+
+47
+00:03:52,400 --> 00:03:55,500
+So the default assumption is what we get is true.
+
+48
+00:03:55,520 --> 00:04:01,420
+But it will set it to false as soon as at least one of our checks fails.
+
+49
+00:04:01,560 --> 00:04:03,500
+And now let's start with the first check.
+
+50
+00:04:03,500 --> 00:04:06,360
+Let's see if the valley database input here.
+
+51
+00:04:06,440 --> 00:04:13,310
+This argument we're getting if dad has required prop if that's not on the flight.
+
+52
+00:04:13,340 --> 00:04:20,000
+If this is set and if it is true therefore this means that the value is required and must not be empty.
+
+53
+00:04:20,690 --> 00:04:28,910
+So now in here we can set is valid equal to is valid and the way javascript works does ensures that
+
+54
+00:04:28,910 --> 00:04:31,550
+the new value of is valid will be false.
+
+55
+00:04:31,580 --> 00:04:37,790
+If the thing after and is false because if at least one of the two things is false the overall value
+
+56
+00:04:37,790 --> 00:04:38,670
+will be false.
+
+57
+00:04:38,720 --> 00:04:45,620
+Now is valid initially is true but if the thing after D logical and operator is false is valid will
+
+58
+00:04:45,620 --> 00:04:48,740
+be false and in the end that will return is valid.
+
+59
+00:04:48,740 --> 00:04:53,590
+So now what do we add after dy Q And percent symbol stage 4.
+
+60
+00:04:53,600 --> 00:04:57,350
+Well I want to check if validated label input value.
+
+61
+00:04:57,350 --> 00:05:02,300
+If that is empty and for that we can trim it and check the length.
+
+62
+00:05:02,300 --> 00:05:04,250
+Or can we.
+
+63
+00:05:04,250 --> 00:05:07,510
+Well the problem is we don't know if value is a string.
+
+64
+00:05:07,580 --> 00:05:09,110
+It's a string or a number.
+
+65
+00:05:09,110 --> 00:05:14,130
+So it's not guaranteed to be a string and therefore the trim method is not always available.
+
+66
+00:05:14,330 --> 00:05:17,500
+There are various ways of working around that.
+
+67
+00:05:17,600 --> 00:05:27,920
+We could add a type guard we could check if type of validated all input value equals string and only
+
+68
+00:05:27,920 --> 00:05:33,030
+perform this check if it is but actually that would be a bit redundant.
+
+69
+00:05:33,070 --> 00:05:36,030
+What we can do here is very simple.
+
+70
+00:05:36,160 --> 00:05:41,410
+We can simply say well converted to a string if it was a number now it's a string again.
+
+71
+00:05:41,410 --> 00:05:43,950
+If it was a string nothing changed.
+
+72
+00:05:44,230 --> 00:05:50,680
+And with that we're doing this now I just need to add my check here and check if that is sero or to
+
+73
+00:05:50,680 --> 00:05:51,690
+be precise.
+
+74
+00:05:51,790 --> 00:06:01,500
+If it's not 0 so if it is not 0 then this will return true and is valid stays true if it is 0.
+
+75
+00:06:01,540 --> 00:06:07,030
+So if it is of length 0 if it's empty desert return false and therefore is valid will become false and
+
+76
+00:06:07,030 --> 00:06:13,570
+we're only checking this if the required check is flecked with setting required to true.
+
+77
+00:06:13,570 --> 00:06:18,550
+That's the first check I want to perform here it's not the only one of course we can't continue and
+
+78
+00:06:18,550 --> 00:06:27,310
+check if valid data input Min length is set min length is set then this string which would get should
+
+79
+00:06:27,310 --> 00:06:32,350
+have a certain minimum length important the string should have a certain minimum length we don't care
+
+80
+00:06:32,350 --> 00:06:37,120
+about numbers here we're not checking for a minimum value of a number.
+
+81
+00:06:37,120 --> 00:06:45,720
+So here we can actually add a type card we can incorporate it into this check and check if type of validated
+
+82
+00:06:45,730 --> 00:06:48,360
+will input value is equal to string.
+
+83
+00:06:48,520 --> 00:06:53,340
+If it's not we don't need to go into does it check because then there is nothing to check if our value
+
+84
+00:06:53,340 --> 00:06:55,340
+is a number we don't care about this.
+
+85
+00:06:55,390 --> 00:07:01,610
+If we set a min length for a number we basically skipped his check because it doesn't make much sense.
+
+86
+00:07:01,960 --> 00:07:08,440
+If we do have a string though and middle length is set then I want to set is valid.
+
+87
+00:07:08,460 --> 00:07:10,400
+Equal to is valid.
+
+88
+00:07:10,460 --> 00:07:17,240
+And then again our check and the check here is whether validated.
+
+89
+00:07:17,290 --> 00:07:21,960
+Input dot value which we know is a string at this point here.
+
+90
+00:07:23,020 --> 00:07:31,720
+Length is greater than valid able input Min length so greater than the value which was defined here.
+
+91
+00:07:31,720 --> 00:07:36,790
+Now we have one potential problem here though and do see which one that could be.
+
+92
+00:07:37,060 --> 00:07:42,150
+This should generally work but it will fail if Min length is set to zero.
+
+93
+00:07:42,250 --> 00:07:49,780
+The intention of the developer setting it to zero is probably not to skip this check but to check whether
+
+94
+00:07:49,780 --> 00:07:51,920
+we do have the minimum length of zero.
+
+95
+00:07:52,030 --> 00:07:56,740
+Well arguably it's a redundant check because it's basically checking whether we do have anything at
+
+96
+00:07:56,740 --> 00:07:59,350
+all which we already do with the required check.
+
+97
+00:07:59,350 --> 00:08:01,290
+So it's not a huge problem.
+
+98
+00:08:01,390 --> 00:08:07,690
+Still if we want to be super secure here we should actually check if validate the input Min length is
+
+99
+00:08:07,690 --> 00:08:14,770
+not equal to undefined or not equal to null with one equals sign.
+
+100
+00:08:14,770 --> 00:08:17,110
+This includes now and undefined.
+
+101
+00:08:17,140 --> 00:08:18,910
+That's how Charlie's good works.
+
+102
+00:08:18,910 --> 00:08:23,010
+This is a bit safer because now we make sure we always run this check.
+
+103
+00:08:23,020 --> 00:08:27,300
+Even if Min length is set to zero which is a false value.
+
+104
+00:08:27,760 --> 00:08:32,890
+Again you could argue if it makes sense because it's basically the same check us as up there but still
+
+105
+00:08:32,950 --> 00:08:34,170
+here want to perform it.
+
+106
+00:08:34,990 --> 00:08:36,850
+So that's the min length.
+
+107
+00:08:36,850 --> 00:08:40,560
+Now I'll copy this and basically do the same for max length.
+
+108
+00:08:40,750 --> 00:08:48,090
+So max length here is also checked also here and also only 4 strings and of course he would just have
+
+109
+00:08:48,090 --> 00:08:55,020
+to revert as we want to make sure that the length of the value which is provided is below our max length
+
+110
+00:08:56,860 --> 00:09:02,350
+well and now we get two more checks left for a min and max value which only makes sense for a number
+
+111
+00:09:03,360 --> 00:09:11,150
+so here I will add an average check and check if validator will input Min is not equal to now.
+
+112
+00:09:11,150 --> 00:09:17,390
+Again I'm not just checking for truthiness because Dad would have problems with a value of zero and
+
+113
+00:09:17,390 --> 00:09:25,070
+then I'll check if the type of validated input value is equal to number because I see not much sense
+
+114
+00:09:25,070 --> 00:09:26,770
+in checking this for a string.
+
+115
+00:09:26,810 --> 00:09:30,950
+If you want to check it for a string of course you can't admit this then you just have to make sure
+
+116
+00:09:30,950 --> 00:09:36,830
+you convert the value to a number when you use it in the check we're about to write to check we're about
+
+117
+00:09:36,830 --> 00:09:42,620
+to write again uses the old value of is valid and combines it with a new check to then store it back
+
+118
+00:09:42,710 --> 00:09:49,460
+in is valid and the new check should now well incorporate our number and check whether it's bigger than
+
+119
+00:09:49,460 --> 00:09:50,740
+the min value.
+
+120
+00:09:50,780 --> 00:09:58,360
+So here I'd check if Valley database input value is greater than valid database input Min.
+
+121
+00:09:58,760 --> 00:10:02,050
+And now we can repeat does for Max.
+
+122
+00:10:02,060 --> 00:10:04,320
+So here we need Max.
+
+123
+00:10:04,370 --> 00:10:13,200
+And here we all need Max and we need to change this here to a smaller than symbol with that we're checking
+
+124
+00:10:13,260 --> 00:10:16,720
+all the different scenarios we could have here.
+
+125
+00:10:16,980 --> 00:10:24,460
+And we're returning is valid now we just need to create objects that adhere to this interface to then
+
+126
+00:10:24,550 --> 00:10:28,570
+send them to the validate function for that.
+
+127
+00:10:28,580 --> 00:10:34,000
+Let's go down to project input and there in gatherer user input.
+
+128
+00:10:34,010 --> 00:10:38,900
+I want to construct my validated objects side note besides an interface of course.
+
+129
+00:10:38,900 --> 00:10:40,870
+We could have also created a class here.
+
+130
+00:10:40,910 --> 00:10:46,100
+Then we could instantiated with the new keyword but all differ practice and demo purposes here.
+
+131
+00:10:46,100 --> 00:10:48,990
+I want to show how this works with an interface.
+
+132
+00:10:49,040 --> 00:10:55,670
+So here we have our tidal Valley data bill which should be of type validated bill and that of course
+
+133
+00:10:55,670 --> 00:11:01,070
+is an object which needs to have a value property and that's our entered title.
+
+134
+00:11:01,070 --> 00:11:06,780
+It doesn't need any other properties but I want to check whether it's well not empty.
+
+135
+00:11:06,800 --> 00:11:15,090
+So we'll set required to true and then we can copy that and repeat that for the description and for
+
+136
+00:11:15,120 --> 00:11:15,850
+people.
+
+137
+00:11:16,260 --> 00:11:20,690
+And here we have the description which Steve entered.
+
+138
+00:11:20,700 --> 00:11:26,250
+Description I mean here we have to entered people to be precise here one to have a number.
+
+139
+00:11:26,250 --> 00:11:32,310
+So I convert this to a number with a plus symbol all should be required but then also here let's say
+
+140
+00:11:32,320 --> 00:11:35,420
+the description should have a mean length of five characters.
+
+141
+00:11:35,580 --> 00:11:42,680
+And for the people the minimum should be 1 so that we have at least two people assigned by the way it's
+
+142
+00:11:42,680 --> 00:11:49,360
+up to you how you implement this of course in your validation logic you could also check for greater
+
+143
+00:11:49,370 --> 00:11:56,980
+equal smaller equal if you like to same forward a length of course greater equal smaller equal.
+
+144
+00:11:56,980 --> 00:11:58,630
+That's all the possible.
+
+145
+00:11:58,700 --> 00:12:00,540
+Actually I will keep these changes.
+
+146
+00:12:00,590 --> 00:12:06,140
+So now we have the minimum of one person assigned and a max of five.
+
+147
+00:12:06,140 --> 00:12:13,430
+Now we have these free validated all objects and now you're to the validate function we pass our title
+
+148
+00:12:13,550 --> 00:12:16,460
+validated all to the second function call.
+
+149
+00:12:16,460 --> 00:12:21,380
+I pass the description validated bill and to the third function call.
+
+150
+00:12:21,380 --> 00:12:29,500
+I pass people validate bill and now validate should return true if they're all valid and false otherwise.
+
+151
+00:12:29,510 --> 00:12:37,050
+So now I want to check if at least one of them fails by checking if these are all false by adding an
+
+152
+00:12:37,050 --> 00:12:43,710
+exclamation mark in front of it to check if D's fault or D's falls or desist falls and if at least one
+
+153
+00:12:43,710 --> 00:12:44,690
+of them is false.
+
+154
+00:12:44,790 --> 00:12:49,140
+So if at least one of the validate function calls returns fault we'll make it in there and show the
+
+155
+00:12:49,140 --> 00:12:54,890
+alert we'll end with that out of the way to all the tests.
+
+156
+00:12:54,910 --> 00:12:58,150
+I'll go to index H to M. because they're on the input for people.
+
+157
+00:12:58,270 --> 00:13:01,470
+I actually allow a maximum of 10 and a minimum of zero.
+
+158
+00:13:01,510 --> 00:13:07,300
+So in the input we technically can enter invalid values on purpose of course so that we can test our
+
+159
+00:13:07,300 --> 00:13:11,780
+logic and therefore for now let's save it all compiles without errors.
+
+160
+00:13:11,800 --> 00:13:17,470
+Let's now give it a try if I click at Project I get an error which is good.
+
+161
+00:13:17,470 --> 00:13:24,940
+Now let's enter test here still get an error let's enter test here and five here and I still get an
+
+162
+00:13:24,940 --> 00:13:26,870
+error because my description is too short.
+
+163
+00:13:26,920 --> 00:13:30,530
+If I enter one more character I do have them in length and I can create this.
+
+164
+00:13:31,240 --> 00:13:35,330
+So now let's enter let's say minus one people and.
+
+165
+00:13:35,410 --> 00:13:43,570
+Well OK H two doesn't support does but let's enter 0 or 6 and we get errors and only five entries something
+
+166
+00:13:43,570 --> 00:13:46,100
+between 1 and 5 it works.
+
+167
+00:13:46,150 --> 00:13:49,060
+So that seems to work as it should.
+
+168
+00:13:49,330 --> 00:13:50,310
+And that's pretty good.
+
+169
+00:13:50,380 --> 00:13:56,410
+And that's of course just one way of implementing validation but a way which actually is now quite reusable
+
+170
+00:13:56,500 --> 00:14:00,140
+could be used like this in different parts of the app as well.
+
+171
+00:14:00,160 --> 00:14:05,980
+And of course that takes advantage of TypeScript and offers us great support and type checking to a
+
+172
+00:14:05,980 --> 00:14:07,690
+white unnecessary mistakes.

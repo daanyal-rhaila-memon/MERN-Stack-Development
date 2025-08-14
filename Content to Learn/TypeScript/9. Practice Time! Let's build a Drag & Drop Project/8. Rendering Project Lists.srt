@@ -1,0 +1,523 @@
+1
+00:00:02,410 --> 00:00:08,620
+So now that we're able to fetch the user input and all to validate it with the help of our typescript
+
+2
+00:00:08,640 --> 00:00:11,290
+the driven validation logic here.
+
+3
+00:00:11,470 --> 00:00:17,590
+Let's move on and let's make sure we do more with that gathered user input than just output it in the
+
+4
+00:00:17,590 --> 00:00:23,110
+console because at the moment this of course is what we're doing right in the end I'm just printing
+
+5
+00:00:23,110 --> 00:00:26,200
+the things the information we gathered to the console.
+
+6
+00:00:26,200 --> 00:00:30,350
+And that's not our final goal in this application.
+
+7
+00:00:30,370 --> 00:00:37,330
+Instead the goal should be that we all are rendered is list of projects here based on this template
+
+8
+00:00:37,810 --> 00:00:45,650
+where every project item is based on this template here and we output the information we gathered here.
+
+9
+00:00:45,790 --> 00:00:48,510
+So that will be the next thing I want to work on.
+
+10
+00:00:48,550 --> 00:00:56,170
+Besides having our project input class here which is responsible for rendering the forum and gathering
+
+11
+00:00:56,170 --> 00:01:03,310
+the user input I want to have a number of class which is responsible for rendering a list of projects.
+
+12
+00:01:03,490 --> 00:01:10,060
+And actually I will split dad into two classes one class for the list and one class per project item
+
+13
+00:01:10,120 --> 00:01:11,230
+in the list.
+
+14
+00:01:11,500 --> 00:01:18,430
+And then we need to find some way of passing that gathered input here basically to our project list
+
+15
+00:01:18,550 --> 00:01:20,680
+and add a new item to it.
+
+16
+00:01:20,680 --> 00:01:26,950
+So let's tackle is step by step I'd say and let's start by adding a project list class.
+
+17
+00:01:26,950 --> 00:01:29,400
+Now the exact place where you added is up to you.
+
+18
+00:01:29,410 --> 00:01:35,710
+The order does not matter because JavaScript in the end will pass this entire file entirely before it
+
+19
+00:01:35,710 --> 00:01:36,460
+executes it.
+
+20
+00:01:36,460 --> 00:01:38,710
+So it will be aware of all classes.
+
+21
+00:01:38,920 --> 00:01:45,310
+Still I will added here above the project input class because I kind of for a lie on the project list
+
+22
+00:01:45,310 --> 00:01:48,810
+class which I'm about to build inside of the project input class.
+
+23
+00:01:48,820 --> 00:01:50,530
+But again it does really matter.
+
+24
+00:01:50,530 --> 00:01:59,230
+So here I'll have my project list class project list and the idea of this class here is a bit related
+
+25
+00:01:59,230 --> 00:02:04,930
+to what we did in a project input 1 to reach out to my template here and then render it in a certain
+
+26
+00:02:04,930 --> 00:02:11,680
+place off the application and they offer what we can do here is we can again add a constructor we can
+
+27
+00:02:11,680 --> 00:02:17,410
+add the fields we need and there will need the template element and the host element in the end so we
+
+28
+00:02:17,410 --> 00:02:25,240
+can add both here to our project list will also need the element itself.
+
+29
+00:02:25,240 --> 00:02:32,560
+I'd say so the concrete element which is getting rendered and the types will differ though the host
+
+30
+00:02:32,560 --> 00:02:39,040
+element will still be a diff because I want to render that list in that div here as well but the concrete
+
+31
+00:02:39,100 --> 00:02:45,940
+element which we do render of course is not a form element but if we have a look at our list template
+
+32
+00:02:45,940 --> 00:02:48,580
+here we see there is a section inside of it.
+
+33
+00:02:48,580 --> 00:02:54,400
+So we have a section element that turns out there is no element no section element.
+
+34
+00:02:54,460 --> 00:03:00,730
+So we'll just have a regular H html element because every element has this type here for some tax there
+
+35
+00:03:00,730 --> 00:03:02,560
+are more specialized types.
+
+36
+00:03:02,560 --> 00:03:05,100
+If they aren't we can just use H to meld hype.
+
+37
+00:03:05,770 --> 00:03:17,170
+So now of course we need to get access to these elements so we can copy this code here actually from
+
+38
+00:03:17,170 --> 00:03:23,390
+the constructor of the project input added to the constructor of project list and now adjust adjust
+
+39
+00:03:23,410 --> 00:03:24,710
+some things.
+
+40
+00:03:24,760 --> 00:03:30,940
+For example my template element of course now doesn't have an idea of project input that's now project
+
+41
+00:03:30,940 --> 00:03:32,200
+list instead.
+
+42
+00:03:32,200 --> 00:03:36,730
+So let's copy that and use this year to select the element.
+
+43
+00:03:36,730 --> 00:03:40,610
+I will still cost it and I still know with certainty that I get it.
+
+44
+00:03:40,630 --> 00:03:45,550
+So this doesn't change to host elements still as he did with the idea app.
+
+45
+00:03:45,550 --> 00:03:54,530
+So this does not change then I import my content and then I well store the first element of the import
+
+46
+00:03:54,630 --> 00:03:55,370
+template.
+
+47
+00:03:55,420 --> 00:04:01,000
+So basically the first element in the template which is the section I stored that in the element property
+
+48
+00:04:01,000 --> 00:04:01,660
+here.
+
+49
+00:04:01,660 --> 00:04:07,230
+However this is not a h HTML form element it's just an aged him out element here.
+
+50
+00:04:07,240 --> 00:04:14,500
+Now we also can assign an I.D. here and actually D I.D. should be dynamic not hardcoded because we'll
+
+51
+00:04:14,500 --> 00:04:22,120
+have more than one list of projects I want to have two lists in the final app one for the active projects
+
+52
+00:04:22,120 --> 00:04:29,320
+and one for the inactive projects and therefore I want to get some additional information that constructor
+
+53
+00:04:29,720 --> 00:04:37,060
+the the type of the project and I'll use that typescript short because you learn about where you can
+
+54
+00:04:37,060 --> 00:04:45,130
+add an excess or in front of the parameter private or public to automatically create a property of the
+
+55
+00:04:45,130 --> 00:04:51,790
+same name and stored the value that's passed in on this argument in that equally named property.
+
+56
+00:04:51,790 --> 00:04:55,100
+So now this class will have a property named type as well.
+
+57
+00:04:55,370 --> 00:04:58,830
+And now the question is what's the type of this type parameter.
+
+58
+00:04:58,990 --> 00:05:03,680
+And this should actually be a literal type and union type.
+
+59
+00:05:03,710 --> 00:05:07,270
+It's either active or finished.
+
+60
+00:05:07,280 --> 00:05:11,090
+We even have active projects or finished projects.
+
+61
+00:05:11,090 --> 00:05:15,860
+So that's an argument I expect to get when the project list is instantiated.
+
+62
+00:05:16,130 --> 00:05:18,940
+And with that we have to type property.
+
+63
+00:05:19,030 --> 00:05:21,920
+These ideas should be then be based on this.
+
+64
+00:05:21,920 --> 00:05:22,820
+It should be.
+
+65
+00:05:22,910 --> 00:05:25,070
+And for that I use a template literal here.
+
+66
+00:05:25,160 --> 00:05:33,650
+It should be type dash projects so ever active dash projects or finished dash projects.
+
+67
+00:05:33,650 --> 00:05:34,840
+That's my idea here.
+
+68
+00:05:34,850 --> 00:05:39,740
+You can always use this stored type so that typescript understands that we're using this property and
+
+69
+00:05:39,740 --> 00:05:41,960
+that it's not unused.
+
+70
+00:05:41,960 --> 00:05:48,980
+So with that we're getting access to all the core elements and we're adding an I.D. to the section which
+
+71
+00:05:48,980 --> 00:05:50,790
+we get out of our template.
+
+72
+00:05:50,840 --> 00:05:53,630
+Now of course we want to we want to render it right.
+
+73
+00:05:53,660 --> 00:05:54,530
+That's the idea.
+
+74
+00:05:55,760 --> 00:06:04,370
+For this I'll again add a private method attach just as we had it in the project input and in there
+
+75
+00:06:04,520 --> 00:06:05,720
+it's now the goal.
+
+76
+00:06:05,720 --> 00:06:14,610
+Q Well attached is to the DOM to now render dad list to the Don so instead of attach I will actually
+
+77
+00:06:14,610 --> 00:06:24,290
+do the same as I did and attach 4D project form so we can copy that line here and add it to attach.
+
+78
+00:06:24,290 --> 00:06:27,860
+I have my whole list element and I want to insert an adjacent element.
+
+79
+00:06:28,160 --> 00:06:33,360
+After the beginning and this should be the element we extracted from the template here.
+
+80
+00:06:33,360 --> 00:06:41,880
+However I actually don't want to do that after the beginning but instead before end which means before
+
+81
+00:06:41,880 --> 00:06:44,080
+the closing tag off the host element.
+
+82
+00:06:44,310 --> 00:06:51,180
+And then we can call attach here in the constructor of course to attach our created element here to
+
+83
+00:06:51,180 --> 00:06:53,860
+the Don.
+
+84
+00:06:53,890 --> 00:07:00,940
+No there is one important difference compared to the project input though for this list it's not done
+
+85
+00:07:00,940 --> 00:07:03,280
+with just adding the list to the DOM.
+
+86
+00:07:03,280 --> 00:07:07,120
+The input was finished right the form here was finished.
+
+87
+00:07:07,120 --> 00:07:08,680
+We had all the inputs there.
+
+88
+00:07:08,770 --> 00:07:12,290
+All we needed to do was set up an event listener.
+
+89
+00:07:12,460 --> 00:07:18,360
+Now for the list here we actually haven't had her with an empty H2 tag for example.
+
+90
+00:07:18,460 --> 00:07:27,670
+And I want to add some text there so I will add another new method to your private method render content
+
+91
+00:07:27,700 --> 00:07:29,070
+could be a fitting name.
+
+92
+00:07:29,200 --> 00:07:37,300
+And my idea here is to fill the the blank spaces in that template with some life here.
+
+93
+00:07:37,300 --> 00:07:41,610
+For that let's go to that render content method and done a couple of things I want to do.
+
+94
+00:07:41,620 --> 00:07:48,190
+One thing is that for that unordered list which is part of my project list here I want to add an idea
+
+95
+00:07:48,190 --> 00:07:48,680
+to it.
+
+96
+00:07:48,700 --> 00:07:52,990
+Of course you don't have to do that but I want to do that so that if we need to selected later we can
+
+97
+00:07:52,990 --> 00:07:54,220
+do that with these.
+
+98
+00:07:54,460 --> 00:07:59,680
+So I'll create a list idea here is stored in a constant and this will be a template literal so it will
+
+99
+00:07:59,680 --> 00:08:07,390
+be a string where we can inject dynamic content and I want to based is on the type of the surrounding
+
+100
+00:08:07,870 --> 00:08:08,820
+project list.
+
+101
+00:08:08,830 --> 00:08:15,240
+So off the surrounding section and then add projects list thereafter.
+
+102
+00:08:15,260 --> 00:08:22,340
+Now we can reach out to the unordered list which we get in our element which is that section here right
+
+103
+00:08:22,400 --> 00:08:28,550
+element is that section so to get the unordered list inside of there we can for example use a query
+
+104
+00:08:28,550 --> 00:08:34,610
+selector and search for the first and in this case only unordered list we know we will get one because
+
+105
+00:08:34,610 --> 00:08:38,240
+we know there will be one and then we can add an idea here which should be the list idea.
+
+106
+00:08:38,330 --> 00:08:40,200
+That's one thing which you'll want to do.
+
+107
+00:08:40,340 --> 00:08:48,930
+I also want to set the text content of that age to tag here and for this we can reach out to this element
+
+108
+00:08:48,930 --> 00:08:55,830
+query selector find the first and only H to tag we know we will find one hence the exclamation mark
+
+109
+00:08:55,830 --> 00:09:02,920
+to rule out dead no case and set the text content equal to this thought.
+
+110
+00:09:02,910 --> 00:09:10,530
+Type 2 uppercase remember distort type is either active we're finished with two opera case we convert
+
+111
+00:09:10,550 --> 00:09:15,480
+this to all caps plus projects.
+
+112
+00:09:15,480 --> 00:09:24,880
+So does it stand simply that they're heading for this section and now with that we're we're generally
+
+113
+00:09:24,880 --> 00:09:27,580
+done we have no items in that list yet.
+
+114
+00:09:27,580 --> 00:09:30,250
+We'll work on this later but we're generally done.
+
+115
+00:09:30,250 --> 00:09:37,240
+We can call this the render of content after we attached it to the DOM for example.
+
+116
+00:09:37,240 --> 00:09:42,640
+Now it would be nice to see that an action of course again list items ends on will be missing but it
+
+117
+00:09:42,640 --> 00:09:49,250
+would be nice to see something in action here well for that let's go to the bottom of the file where
+
+118
+00:09:49,250 --> 00:09:57,290
+we instantiate the project input and there we can now all instantiate our lists we have the active project
+
+119
+00:09:57,290 --> 00:10:03,920
+list which we instantiate by calling new project list and there we have to pass in that type argument
+
+120
+00:10:03,950 --> 00:10:09,320
+which is either active or finished here since I'm rendering the active list I of course pass in active
+
+121
+00:10:10,130 --> 00:10:16,590
+and then here we have the finished project list where I of course pass it finished if we now save that
+
+122
+00:10:16,590 --> 00:10:24,560
+it should compile without errors and hence what you should see if you go back are d to empty sections
+
+123
+00:10:24,560 --> 00:10:32,480
+here with the headings here and while the empty space where later items will be added project items
+
+124
+00:10:32,480 --> 00:10:37,410
+will be added now for the moment we have no such project items still.
+
+125
+00:10:37,490 --> 00:10:47,060
+So as a next step we should work on some way of making sure that when we click at project that we create
+
+126
+00:10:47,090 --> 00:10:54,920
+a new project in code so a new data structure which represents a project and that we then passed is
+
+127
+00:10:54,920 --> 00:11:03,020
+information about this new project to the active projects list here to this active projects section
+
+128
+00:11:03,050 --> 00:11:06,420
+because every new project should be active by default.
+
+129
+00:11:06,530 --> 00:11:07,930
+This will be our next goal.
+
+130
+00:11:07,930 --> 00:11:14,390
+And again there will be many different ways of implementing this we'll do it together with one way I
+
+131
+00:11:14,390 --> 00:11:16,310
+came up with in the next lecture.
