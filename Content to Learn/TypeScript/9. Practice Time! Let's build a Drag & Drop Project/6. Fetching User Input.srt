@@ -1,0 +1,463 @@
+1
+00:00:02,200 --> 00:00:07,450
+So we're able to gather our pile input value and print it to the console.
+
+2
+00:00:07,450 --> 00:00:10,210
+But of course that's not ultimately the idea.
+
+3
+00:00:10,210 --> 00:00:16,750
+Instead the ideas that we gather all our input values quickly validate them and then do something with
+
+4
+00:00:16,750 --> 00:00:17,760
+them.
+
+5
+00:00:17,920 --> 00:00:23,590
+For that I'll add yet another new method and no private method because I'm only going to call it from
+
+6
+00:00:23,650 --> 00:00:30,500
+inside the class and that's to gather user input method name is totally up to you.
+
+7
+00:00:30,520 --> 00:00:35,230
+My idea is that this method gets called here after we prevent the default.
+
+8
+00:00:35,230 --> 00:00:42,100
+This should basically reach out to all our inputs here gathered a user input they're validated and then
+
+9
+00:00:42,100 --> 00:00:43,120
+return it.
+
+10
+00:00:43,120 --> 00:00:51,190
+So Dad Here I got my user input which could be a tuple with the title the description and the people
+
+11
+00:00:51,460 --> 00:00:53,850
+as the free tuple values.
+
+12
+00:00:53,890 --> 00:00:55,320
+Actually I liked that idea.
+
+13
+00:00:55,570 --> 00:00:55,960
+So let's.
+
+14
+00:00:55,960 --> 00:00:57,820
+Already define a return type here.
+
+15
+00:00:57,850 --> 00:00:59,920
+The return type is a tuple.
+
+16
+00:00:59,920 --> 00:01:05,710
+Now do you remember how a tuple is defined how the type of a tuple is defined.
+
+17
+00:01:05,710 --> 00:01:08,640
+It's not the string square brackets.
+
+18
+00:01:08,650 --> 00:01:16,330
+That means you're returning an array of Strings instead I want to say that I return an array of exactly
+
+19
+00:01:16,600 --> 00:01:21,580
+x elements of exactly these three types.
+
+20
+00:01:21,580 --> 00:01:27,190
+And for that you set that a return type here to square brackets and then inside of the square brackets
+
+21
+00:01:27,190 --> 00:01:33,540
+you add the different elements and element types for example String string and number with Dad you're
+
+22
+00:01:33,550 --> 00:01:40,360
+saying this method here returns a tuple which has three elements where the first element is the string.
+
+23
+00:01:40,360 --> 00:01:41,840
+Second element is a string.
+
+24
+00:01:41,920 --> 00:01:44,170
+And third element is actually a number.
+
+25
+00:01:44,290 --> 00:01:48,520
+And now we can add some logic to this method to make that become true.
+
+26
+00:01:48,580 --> 00:01:57,620
+So for that let's first of all get the entered title from this title input element of value and we can
+
+27
+00:01:57,620 --> 00:01:58,370
+repeat that.
+
+28
+00:01:58,370 --> 00:02:06,590
+We all want the entered description of course from this description input element value and the entered
+
+29
+00:02:06,800 --> 00:02:12,290
+people amount or just entered people from this people input element.
+
+30
+00:02:12,350 --> 00:02:17,640
+Now I store does and constants so that I don't always have to repeat these longer expressions.
+
+31
+00:02:17,660 --> 00:02:24,790
+Now we can validate this a trivial validation would be to check if entered title trim.
+
+32
+00:02:24,890 --> 00:02:27,520
+So removing X is whitespace at the beginning an end.
+
+33
+00:02:27,650 --> 00:02:32,510
+Length is equal to zero or if entered.
+
+34
+00:02:32,570 --> 00:02:39,420
+Description trim length is equal to zero or if entered.
+
+35
+00:02:39,420 --> 00:02:44,420
+People trim length is equal to zero.
+
+36
+00:02:44,420 --> 00:02:48,680
+That would check that no input is empty now.
+
+37
+00:02:48,890 --> 00:02:50,360
+It does not check everything.
+
+38
+00:02:50,360 --> 00:02:57,140
+We might want to check though we are not checking whether entered people is let's say a positive number.
+
+39
+00:02:57,200 --> 00:03:00,100
+We're not able to set a minimum length.
+
+40
+00:03:00,200 --> 00:03:04,730
+We would have to add more and more conditions here and whilst we can do it as this would not really
+
+41
+00:03:04,730 --> 00:03:11,390
+be a scalable solution if we have our parts in the application where we also want to validate user input
+
+42
+00:03:11,600 --> 00:03:14,440
+we always have to repeat long if statements.
+
+43
+00:03:14,510 --> 00:03:22,010
+So I won't come up with a smarter validation solution or a more scalable validation solution soon.
+
+44
+00:03:22,010 --> 00:03:23,680
+For now we can leave it like this.
+
+45
+00:03:23,810 --> 00:03:30,500
+You can already think about this though and of course after this lecture here pause and think how you
+
+46
+00:03:30,500 --> 00:03:37,700
+could outsourced is into a separate validation function which is configurable and how types could help
+
+47
+00:03:37,700 --> 00:03:38,330
+you there.
+
+48
+00:03:38,360 --> 00:03:43,910
+There are definitely many possible approaches and I will share mine with you in the next lecture.
+
+49
+00:03:44,060 --> 00:03:49,520
+But before we make it there let's actually use this trivial approach here and do something.
+
+50
+00:03:49,520 --> 00:03:54,650
+If all these conditions are is satisfied now if we make it into the safe block we know at least one
+
+51
+00:03:54,650 --> 00:04:04,230
+validation failed and then we could throw an alert where we say invalid input please try again else
+
+52
+00:04:04,950 --> 00:04:11,370
+if we don't make it in there we know we do have a valid input else I want to return my tuple.
+
+53
+00:04:11,370 --> 00:04:20,000
+So here I want to return to enter to title the entered description and also entered people now as you
+
+54
+00:04:20,000 --> 00:04:26,210
+can tell though typescript is not happy because entered people should be a number not text and actually
+
+55
+00:04:26,220 --> 00:04:31,730
+everything you extract from the value property of an input element will be text by default.
+
+56
+00:04:32,390 --> 00:04:40,460
+So to turn this into a number we can call parse flowed for example or simply add a plus in front of
+
+57
+00:04:40,460 --> 00:04:47,480
+it and this will convert it to a number and still typescript is not happy because while we not always
+
+58
+00:04:47,480 --> 00:04:48,710
+return a tuple.
+
+59
+00:04:48,950 --> 00:04:50,850
+What about this part here.
+
+60
+00:04:50,900 --> 00:04:55,820
+If we make it into the F block we're showing an alert but we're not returning a tuple.
+
+61
+00:04:55,880 --> 00:04:59,660
+Well there are various things we could do instead.
+
+62
+00:04:59,870 --> 00:05:03,530
+We can just return nothing like this.
+
+63
+00:05:03,530 --> 00:05:09,560
+Alternatively we could throw an error then we would actually not return anything bad will throw an error
+
+64
+00:05:09,560 --> 00:05:11,100
+in that case.
+
+65
+00:05:11,150 --> 00:05:15,610
+Now I don't want to throw an error here because I don't really want to implement error handling.
+
+66
+00:05:15,620 --> 00:05:18,060
+So what I'll do is I'll just add a return statement.
+
+67
+00:05:18,120 --> 00:05:20,000
+But of course this is not a tuple.
+
+68
+00:05:20,150 --> 00:05:27,320
+So actually the return type up here is a tuple or it's actually on the find.
+
+69
+00:05:27,350 --> 00:05:32,600
+Now however as you've learned you shouldn't use undefined here as a return type on functions.
+
+70
+00:05:32,600 --> 00:05:34,100
+Instead use white.
+
+71
+00:05:34,100 --> 00:05:37,110
+It's almost the same but exclusive two functions.
+
+72
+00:05:37,220 --> 00:05:44,270
+And this tells typescript that this is a function which has at least a branch which does not return
+
+73
+00:05:44,390 --> 00:05:47,010
+any value like this one does.
+
+74
+00:05:47,030 --> 00:05:51,230
+Here we all of course use a union type because we have both possibilities.
+
+75
+00:05:51,290 --> 00:05:55,620
+We might return nothing or we actually return a tuple.
+
+76
+00:05:55,730 --> 00:06:02,180
+So now we have gatherer user input and user input therefore also is either on the find in the end or
+
+77
+00:06:02,300 --> 00:06:04,130
+it is that tuple.
+
+78
+00:06:04,190 --> 00:06:10,790
+So now before we move on and improve validation let's build up on that user input when we gather the
+
+79
+00:06:10,790 --> 00:06:12,500
+user input down there.
+
+80
+00:06:12,530 --> 00:06:17,090
+We now have that user input thing and now we can check if it is a tuple.
+
+81
+00:06:17,090 --> 00:06:22,600
+Now the problem is at runtime we have no way of checking whether it does a tuple.
+
+82
+00:06:22,640 --> 00:06:25,210
+There is no instance off we could use.
+
+83
+00:06:25,220 --> 00:06:27,560
+There is no tuple type.
+
+84
+00:06:27,560 --> 00:06:28,610
+We could check.
+
+85
+00:06:28,610 --> 00:06:38,920
+We can all and not check if type of user input is equal to tuple because that does not exist in vanilla
+
+86
+00:06:38,950 --> 00:06:46,420
+javascript string does exist for example but tuple is not a javascript type so to check whether it is
+
+87
+00:06:46,420 --> 00:06:52,930
+a tuple we have to remember that tuples in the end are just arrays there especially in typescript but
+
+88
+00:06:52,930 --> 00:06:59,980
+once we're in JavaScript land they're just arrays because the idea of a tuple where the number of elements
+
+89
+00:06:59,980 --> 00:07:04,540
+and the types of elements is fixed really only exists in typescript.
+
+90
+00:07:04,540 --> 00:07:11,530
+So during runtime all we need to check here is whether it's an array and for that we can use the array
+
+91
+00:07:11,530 --> 00:07:15,220
+object in JavaScript and there is array method.
+
+92
+00:07:15,220 --> 00:07:20,200
+That's a method built into an ELA javascript which allows us to check whether this here is an array.
+
+93
+00:07:20,320 --> 00:07:24,670
+We know it's even undefined or a tuple a tuple is an array.
+
+94
+00:07:24,670 --> 00:07:31,330
+So if this returns true we got the tuple and then here we can use to structuring for example to get
+
+95
+00:07:31,330 --> 00:07:37,780
+the title the description and the people out of user input and then do something with that input.
+
+96
+00:07:37,780 --> 00:07:45,990
+For example for now console log title description and people if we do all of that and we save it all
+
+97
+00:07:46,110 --> 00:07:52,560
+it compiles with no errors and if we go back here and I click Add project like this I get invalid input
+
+98
+00:07:53,130 --> 00:07:56,940
+if I enter Hello still get it because we got no description.
+
+99
+00:07:56,980 --> 00:08:03,210
+This is a description we still get it off course but if I now also enter something into people this
+
+100
+00:08:03,210 --> 00:08:05,270
+works and we print is here.
+
+101
+00:08:05,280 --> 00:08:09,190
+Now that's of course a nice step in the right direction.
+
+102
+00:08:09,360 --> 00:08:11,040
+We're not entirely there yet.
+
+103
+00:08:11,040 --> 00:08:13,380
+As I said we can improve validation.
+
+104
+00:08:13,380 --> 00:08:18,000
+Just one thing I want to do right away before we do that I want to clear all the inputs.
+
+105
+00:08:18,120 --> 00:08:22,310
+After we click Add project so I want to empty all the inputs again.
+
+106
+00:08:22,500 --> 00:08:28,530
+Now for that we can add a new private method clear input or clear inputs.
+
+107
+00:08:28,530 --> 00:08:36,920
+And there we can set this title input element which is thought value equal to an empty string and repeated
+
+108
+00:08:36,980 --> 00:08:39,020
+for the other inputs as well.
+
+109
+00:08:39,050 --> 00:08:41,990
+So here we have to be description input element.
+
+110
+00:08:41,990 --> 00:08:49,010
+And here we have the people input element and now we call this cleaner inputs here we should make sure
+
+111
+00:08:49,010 --> 00:08:51,740
+that the form is cleared once it is submitted.
+
+112
+00:08:51,770 --> 00:08:57,760
+So if we try this again enter something here you'll see it's printed here and the form is cleared.
+
+113
+00:08:57,760 --> 00:09:03,720
+And with that I'm generally happy with how we handled this but now I want improved validation and right
+
+114
+00:09:03,720 --> 00:09:06,980
+does in a more reusable scalable way.
+
+115
+00:09:07,040 --> 00:09:11,500
+As I mentioned definitely feel free to do this on your own first in the next lecture.
+
+116
+00:09:11,540 --> 00:09:12,560
+We'll do it together.
