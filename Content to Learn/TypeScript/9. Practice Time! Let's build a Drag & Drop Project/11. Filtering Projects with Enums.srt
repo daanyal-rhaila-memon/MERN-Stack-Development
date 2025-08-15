@@ -1,0 +1,283 @@
+1
+00:00:02,350 --> 00:00:03,970
+So we got two issues.
+
+2
+00:00:03,970 --> 00:00:10,450
+If we want to call them like that to fix now one to start with the issue dead projects show up in both
+
+3
+00:00:10,450 --> 00:00:18,580
+boxes I want to introduce some filtering and the best place to filter is of course our listener function.
+
+4
+00:00:19,000 --> 00:00:22,540
+If we go to the place where we register our listener
+
+5
+00:00:26,030 --> 00:00:32,750
+here in the project list class then here we get a list of projects right now.
+
+6
+00:00:32,750 --> 00:00:38,920
+That list of projects comprises all projects now inside of the project list class.
+
+7
+00:00:38,930 --> 00:00:43,100
+However we're only interested in active or finished projects.
+
+8
+00:00:43,190 --> 00:00:52,780
+Now here by the way we could also theoretically use our enum BUT ACTUALLY I NEED THE CONCRETE values
+
+9
+00:00:52,780 --> 00:00:56,560
+stored in the enum down there or in the type down there.
+
+10
+00:00:56,560 --> 00:01:02,070
+And therefore here I don't want to use it enum also because I want to show the string literal types.
+
+11
+00:01:02,230 --> 00:01:08,680
+So what we'll do here instead of our listener function is before we store the project and render them
+
+12
+00:01:08,710 --> 00:01:10,500
+we want to filter them.
+
+13
+00:01:10,540 --> 00:01:13,060
+So here we have our relevant projects.
+
+14
+00:01:13,060 --> 00:01:19,120
+You could say and that's of course projects filtered the filter method as a default method which exists
+
+15
+00:01:19,120 --> 00:01:21,430
+on any array in JavaScript.
+
+16
+00:01:21,460 --> 00:01:26,890
+This takes a function which then executes on every item in that projects array.
+
+17
+00:01:26,890 --> 00:01:33,550
+And when this function here returns true we keep the item in a newly created array which is then stored
+
+18
+00:01:33,580 --> 00:01:35,110
+in relevant projects.
+
+19
+00:01:35,110 --> 00:01:40,960
+If this function returns falls we dropped the item not from the original list but in the new list which
+
+20
+00:01:40,960 --> 00:01:44,260
+is generated in which is stored in relevant projects.
+
+21
+00:01:44,260 --> 00:01:48,960
+So in here we have to return true or false depending on whether we want to keep the project or not.
+
+22
+00:01:49,030 --> 00:01:55,870
+And for that of course we just need to look at the status project status is a enum and we want to check
+
+23
+00:01:56,080 --> 00:02:02,800
+whether project status is equal to Project Status Active.
+
+24
+00:02:02,800 --> 00:02:10,390
+If we're in an active project list so if the type property is active or if the project status is finished.
+
+25
+00:02:10,390 --> 00:02:16,540
+If we're in a finished list so here I'll actually write a real function body by wrapping this with curly
+
+26
+00:02:16,540 --> 00:02:23,370
+braces not using the arrow function shortcut and then we can check if this type is equal active.
+
+27
+00:02:23,590 --> 00:02:28,540
+Then I want to return the result of this check here.
+
+28
+00:02:29,910 --> 00:02:34,040
+Else and therefore simply offered as if statement.
+
+29
+00:02:34,180 --> 00:02:40,210
+I want to return the comparison to the finished project status.
+
+30
+00:02:40,210 --> 00:02:45,460
+With that we get our relevant project which we can now store here in assigned projects.
+
+31
+00:02:45,520 --> 00:02:47,100
+So let's now see whether that works.
+
+32
+00:02:47,110 --> 00:02:52,830
+If I reload and we add a project here does this work.
+
+33
+00:02:54,990 --> 00:03:00,060
+This works and you see it only is added to active projects not to finish projects.
+
+34
+00:03:00,060 --> 00:03:04,990
+However if I add a second project here we still have that duplication going on now.
+
+35
+00:03:05,030 --> 00:03:10,560
+That's related to how we render our projects instead of render projects.
+
+36
+00:03:10,560 --> 00:03:15,180
+We always go through all our project items and append them to the list.
+
+37
+00:03:15,180 --> 00:03:20,700
+Now the problem with that of course is that we already might have a project item rendered out onto the
+
+38
+00:03:20,700 --> 00:03:22,450
+screen now.
+
+39
+00:03:22,500 --> 00:03:29,280
+The best possible solution here would be to kind of run some comparison where you check what has already
+
+40
+00:03:29,280 --> 00:03:34,160
+been rendered and what you need to render to avoid unnecessary rendering.
+
+41
+00:03:34,170 --> 00:03:39,240
+However running this comparison by looking at the real Dom all the costs quite a bit of performance
+
+42
+00:03:39,750 --> 00:03:46,380
+for dis application here is there for perfectly fine to simply take our list element and clear all its
+
+43
+00:03:46,380 --> 00:03:52,800
+content by setting inter HD Himmel to an empty string which means we get rid of all list items and then
+
+44
+00:03:52,800 --> 00:03:53,730
+re render.
+
+45
+00:03:53,730 --> 00:03:59,430
+That means that whenever we add a new project we we render all projects but for the purpose of this
+
+46
+00:03:59,430 --> 00:04:03,000
+project here for does application here that is absolutely fine.
+
+47
+00:04:03,540 --> 00:04:07,080
+So now with that if we save that let's give it another try.
+
+48
+00:04:07,080 --> 00:04:10,600
+Does this work is the first project.
+
+49
+00:04:10,740 --> 00:04:14,540
+And now if I add another project here you see it gets added.
+
+50
+00:04:14,550 --> 00:04:19,010
+But the other project doesn't get added again whips.
+
+51
+00:04:19,020 --> 00:04:23,270
+And now here I got a malicious error because the description wasn't long enough.
+
+52
+00:04:23,580 --> 00:04:30,080
+So this now all works as you can tell and we're rendering these projects in the way they should be rendered
+
+53
+00:04:30,090 --> 00:04:32,170
+which of course is great.
+
+54
+00:04:32,220 --> 00:04:35,060
+And with that the application doesn't look too bad.
+
+55
+00:04:35,070 --> 00:04:41,640
+Now one thing that's missing is some drag and drop functionality or some way of getting projects from
+
+56
+00:04:41,640 --> 00:04:44,090
+this first list to the second list.
+
+57
+00:04:44,100 --> 00:04:46,950
+We're also not really outputting the other information we got.
+
+58
+00:04:46,950 --> 00:04:48,920
+Description A number of people.
+
+59
+00:04:48,930 --> 00:04:50,750
+So that's also not great.
+
+60
+00:04:50,820 --> 00:04:58,470
+And we also have a bit of code duplication when we actually have a look at project list at this class
+
+61
+00:04:58,470 --> 00:05:04,590
+here and that the project input class in both we have template element host element and element and
+
+62
+00:05:04,590 --> 00:05:07,020
+we have an attach method and so on.
+
+63
+00:05:07,020 --> 00:05:13,980
+So I want to improve the code here and reuse some code by using inheritance and using a base class enter
+
+64
+00:05:14,010 --> 00:05:20,340
+after I also want to create a dedicated class for every project item where we then just instantiate
+
+65
+00:05:20,370 --> 00:05:26,880
+that project item class instead of project list instead of appending a list item manually like this
+
+66
+00:05:27,210 --> 00:05:34,020
+and then inside of that to be created Project item class that appending part should happen and then
+
+67
+00:05:34,020 --> 00:05:38,940
+I always want to output more information about the project item including its description and the number
+
+68
+00:05:38,940 --> 00:05:39,900
+of people assigned.
+
+69
+00:05:40,590 --> 00:05:46,080
+So there is some work left to do and before we work on the project item in that forum in which I want
+
+70
+00:05:46,080 --> 00:05:53,910
+to have it let's actually make sure we first of all add some inheritance to make our project list and
+
+71
+00:05:53,910 --> 00:05:57,540
+project input or a certain parts of it more reusable.

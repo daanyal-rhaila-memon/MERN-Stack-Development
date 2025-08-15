@@ -1,0 +1,599 @@
+1
+00:00:02,190 --> 00:00:05,780
+With all our inheritance work out of the way.
+
+2
+00:00:05,960 --> 00:00:08,410
+Let's come back to rendering list items.
+
+3
+00:00:08,430 --> 00:00:10,580
+Let's render more details there.
+
+4
+00:00:10,650 --> 00:00:14,940
+And as I mentioned let's also make sure we render them differently.
+
+5
+00:00:14,940 --> 00:00:18,080
+Thus far we've followed an object oriented approach.
+
+6
+00:00:18,090 --> 00:00:22,380
+And for example for our project list we have a class.
+
+7
+00:00:22,470 --> 00:00:27,990
+And when we instantiate that class such a box gets rendered here and the same for the input.
+
+8
+00:00:27,990 --> 00:00:34,290
+We have a project input class and when we instantiate that this project input area here at the top gets
+
+9
+00:00:34,290 --> 00:00:34,860
+rendered.
+
+10
+00:00:34,920 --> 00:00:42,240
+Now why don't we do the same for a project item and then inside of project list and render projects
+
+11
+00:00:42,330 --> 00:00:45,060
+instead of creating a list item like this.
+
+12
+00:00:45,060 --> 00:00:52,380
+We would just instantiate our project item class and in the constructor of that project item class we
+
+13
+00:00:52,380 --> 00:00:55,050
+would then do all the initialization and so on.
+
+14
+00:00:55,140 --> 00:01:01,920
+That is my idea at least now as always you can pass the video here and tried as on your own first but
+
+15
+00:01:01,920 --> 00:01:10,460
+after a short break which should give you to pass the video if you want to we'll do it together so let's
+
+16
+00:01:10,460 --> 00:01:18,260
+do that together and for that above the project list class I will add the project item class and this
+
+17
+00:01:18,260 --> 00:01:22,970
+will be the class responsible for rendering a single project item.
+
+18
+00:01:22,970 --> 00:01:29,720
+Now the project item class should also extend the component because it will be a class that is responsible
+
+19
+00:01:29,720 --> 00:01:34,790
+for rendering something on the screen and that is what we have our component class for right.
+
+20
+00:01:34,790 --> 00:01:36,440
+That is what we built it for.
+
+21
+00:01:36,470 --> 00:01:40,160
+So did we pass a template a host element and so on.
+
+22
+00:01:40,160 --> 00:01:46,550
+So in Project item we of course need a constructor a constructor where we then also have to call super
+
+23
+00:01:47,090 --> 00:01:53,630
+and actually before we called super let's set these generic types for the base class for inheriting.
+
+24
+00:01:53,630 --> 00:01:58,100
+Keep in mind the first type we pass in there is the host element.
+
+25
+00:01:58,160 --> 00:02:00,310
+So where we want to render something.
+
+26
+00:02:00,440 --> 00:02:04,820
+The second generic type you pass in is the element we do render.
+
+27
+00:02:04,820 --> 00:02:11,630
+So in the case of the project item that means that the first element we pass in is since it's the place
+
+28
+00:02:11,690 --> 00:02:14,980
+where we want to render something is an H Tim L..
+
+29
+00:02:15,020 --> 00:02:21,860
+You list that unordered list because every project item will be rendered inside of a well unordered
+
+30
+00:02:21,860 --> 00:02:22,500
+list.
+
+31
+00:02:22,610 --> 00:02:28,550
+And the second element will be a h to l l I element so the concrete list item element which will be
+
+32
+00:02:28,550 --> 00:02:37,590
+created now to super we need to provide the I.D. of the element where the project items should be rendered
+
+33
+00:02:37,590 --> 00:02:47,530
+in and of course that I.D. is not fixed because we have to lists where the item could be rendered to.
+
+34
+00:02:47,540 --> 00:02:52,180
+So I expect to get that idea here in the constructor there.
+
+35
+00:02:52,190 --> 00:02:59,060
+I want to get the host I.D. let's say which should be a string and we can forward that to super.
+
+36
+00:02:59,180 --> 00:03:06,270
+However the first thing we forward to super is the template I.D. for a single list item and that is
+
+37
+00:03:06,270 --> 00:03:09,650
+DESC template here so we can just grab that.
+
+38
+00:03:09,650 --> 00:03:11,630
+Now of course that's a very simple template.
+
+39
+00:03:11,630 --> 00:03:13,590
+You could argue whether you really need that.
+
+40
+00:03:13,610 --> 00:03:18,920
+It's just a list item we could create that and code with document create element as well.
+
+41
+00:03:18,920 --> 00:03:25,340
+But in order to be able to reuse our component base class which relies on templates we will use this
+
+42
+00:03:25,340 --> 00:03:26,300
+approach.
+
+43
+00:03:26,300 --> 00:03:33,950
+So a single project this template I.T. host I.D. then SD idea one go forward to the base class constructor
+
+44
+00:03:34,550 --> 00:03:40,010
+then to answer the question whoever does should be rendered at the beginning or at the end.
+
+45
+00:03:40,070 --> 00:03:45,410
+Well every new list item should actually be added to the end of the list though that is totally up to
+
+46
+00:03:45,410 --> 00:03:45,680
+you.
+
+47
+00:03:45,680 --> 00:03:48,200
+You can also add it to the beginning if you want to.
+
+48
+00:03:48,470 --> 00:03:57,000
+But here all go with the end and therefore I will pass falls here and then forward a new element idea.
+
+49
+00:03:57,120 --> 00:04:03,480
+So the idea that should be assigned to the newly created element I expect to get that from outside as
+
+50
+00:04:03,480 --> 00:04:03,770
+well.
+
+51
+00:04:03,810 --> 00:04:09,920
+Because that will also differ for every project item we will render multiple such items after all.
+
+52
+00:04:09,930 --> 00:04:15,120
+So here I expect to get the idea which should all be a string on which I then just forward.
+
+53
+00:04:15,120 --> 00:04:18,480
+So that's now the constructor now.
+
+54
+00:04:18,500 --> 00:04:26,540
+It would also make sense to store the project that belongs to this project item in this project.
+
+55
+00:04:26,540 --> 00:04:33,800
+Item class and with project I mean the project based on our project class which we created up there.
+
+56
+00:04:33,830 --> 00:04:40,220
+This is basically what we work with the data we work with and I want a store to project which belongs
+
+57
+00:04:40,220 --> 00:04:42,880
+to this rendered project item in that project.
+
+58
+00:04:42,890 --> 00:04:49,310
+Item class so therefore here we can add a private property project for example which should be of type
+
+59
+00:04:49,670 --> 00:04:53,180
+project like this in the constructor.
+
+60
+00:04:53,180 --> 00:05:01,130
+We then you get the idea and we can simply change this to actually get the project here like this and
+
+61
+00:05:01,130 --> 00:05:05,200
+then simply say this project equal project and here.
+
+62
+00:05:05,240 --> 00:05:09,360
+Since every project has ideas property we just forward project ideas.
+
+63
+00:05:09,500 --> 00:05:12,200
+I think that set up makes a bit more sense.
+
+64
+00:05:12,380 --> 00:05:14,610
+Now we also need to add a couple of methods.
+
+65
+00:05:14,750 --> 00:05:22,580
+We need to add configure method of course we need to add render a content method that is required by
+
+66
+00:05:22,580 --> 00:05:30,170
+our base class which we're extending and it will also call configure and render content here at the
+
+67
+00:05:30,170 --> 00:05:32,020
+end of the constructor.
+
+68
+00:05:32,030 --> 00:05:37,460
+Now regarding the configuration there is nothing we need to do right now for the content we want to
+
+69
+00:05:37,460 --> 00:05:37,760
+render.
+
+70
+00:05:37,760 --> 00:05:40,100
+There definitely is work to do.
+
+71
+00:05:40,100 --> 00:05:45,500
+Now we have a very simple template here and we could actually changed this year in the index each time
+
+72
+00:05:45,500 --> 00:05:53,260
+outfall to be a bit more complex so that every project has a h to tak has a h free tag below that let's
+
+73
+00:05:53,270 --> 00:06:00,860
+say and also has a paragraph so we can output the title of the project the number of persons assigned
+
+74
+00:06:00,870 --> 00:06:06,950
+maybe and then the description and then here in Apt yes and render content we just need to reach out
+
+75
+00:06:06,980 --> 00:06:10,160
+to these different elements in our element.
+
+76
+00:06:10,190 --> 00:06:14,180
+So 2D H2 to tag and so on and then insert some content.
+
+77
+00:06:14,480 --> 00:06:21,130
+So there we can reach out to this element which is our rendered element so which is our rendered l I
+
+78
+00:06:21,140 --> 00:06:26,970
+element and in there we now need to select these different things so we can use query selector age 2
+
+79
+00:06:27,350 --> 00:06:28,960
+and set the text content here.
+
+80
+00:06:28,970 --> 00:06:34,070
+Let's say to this start project a title to render the title there.
+
+81
+00:06:34,400 --> 00:06:38,690
+Of course we should add an exclamation mark here to make it clear that we'll always get this element
+
+82
+00:06:39,050 --> 00:06:46,650
+which we know with certainty because it's part of our template well then actually we can just repeat
+
+83
+00:06:46,650 --> 00:06:48,100
+this but now look 48.
+
+84
+00:06:48,110 --> 00:06:49,740
+Free tack and there.
+
+85
+00:06:49,770 --> 00:06:55,610
+I want to output the number of persons however where people is the property name.
+
+86
+00:06:55,740 --> 00:06:58,080
+However all tweak does a little bit.
+
+87
+00:06:58,080 --> 00:07:01,770
+Number one this year is a number and this one's a string.
+
+88
+00:07:01,770 --> 00:07:05,780
+So actually I'll call to string here but that's not the main problem.
+
+89
+00:07:05,820 --> 00:07:12,030
+Actually I want to tweak this so that it outputs more than just a number here but I'll come back to
+
+90
+00:07:12,030 --> 00:07:14,830
+that.
+
+91
+00:07:14,970 --> 00:07:20,880
+First of all let's repeat this one more time and query forward a paragraph here and set does equal to
+
+92
+00:07:20,880 --> 00:07:22,560
+this project description.
+
+93
+00:07:23,850 --> 00:07:26,180
+Now again I will tweak this later for now.
+
+94
+00:07:26,190 --> 00:07:27,180
+Let's leave it as it is.
+
+95
+00:07:27,180 --> 00:07:31,980
+And with that we have a project item that should be rendered and that should then out all those set
+
+96
+00:07:31,980 --> 00:07:32,710
+its content.
+
+97
+00:07:33,540 --> 00:07:39,150
+So now we need to use to project item into place to use it as a project list because that renders the
+
+98
+00:07:39,150 --> 00:07:44,220
+list of projects and they are specifically and render projects.
+
+99
+00:07:44,220 --> 00:07:50,670
+This is where we need to make sure that we render our project items here we do go through all the project
+
+100
+00:07:50,700 --> 00:07:54,390
+items in assigned projects and assigned projects.
+
+101
+00:07:54,390 --> 00:07:58,990
+Is this property here which has a list of where an array of projects.
+
+102
+00:07:59,010 --> 00:08:05,880
+So now here in this loop instead of creating a list item manually and so on I will get rid of all of
+
+103
+00:08:05,880 --> 00:08:16,150
+that and simply say new project item here and now to project item we need to pass the idea of the host.
+
+104
+00:08:16,150 --> 00:08:22,770
+Now that of course is the I.D. that was set on our list item here.
+
+105
+00:08:22,780 --> 00:08:29,080
+So basically this stored element dot I.D. That's the idea of the host element because this element which
+
+106
+00:08:29,080 --> 00:08:36,490
+is the unordered list should be the host then second argument here is the project and that's purge item
+
+107
+00:08:36,490 --> 00:08:37,420
+here basically.
+
+108
+00:08:37,450 --> 00:08:44,650
+So this constant which we get inside of the loop and now the attachment will happen inside of project
+
+109
+00:08:44,680 --> 00:08:50,770
+item or inside of the base class of the component class which project item extends and instantiating
+
+110
+00:08:50,770 --> 00:08:52,780
+project items should be all we need to do.
+
+111
+00:08:53,620 --> 00:08:59,750
+So if we save that and we go back and we half this code here again.
+
+112
+00:08:59,750 --> 00:09:00,920
+Or we have to input again.
+
+113
+00:09:00,920 --> 00:09:04,370
+You see this gets rendered and this doesn't look too bad now.
+
+114
+00:09:04,400 --> 00:09:06,210
+There are two things which I don't like.
+
+115
+00:09:06,380 --> 00:09:13,820
+Of course that bullet point here not too fond of that and just having the free here all and not super
+
+116
+00:09:13,820 --> 00:09:15,610
+happy about this.
+
+117
+00:09:15,650 --> 00:09:22,500
+So how can we fix this now to fix the bullet point let's inspect our content and what we see there is
+
+118
+00:09:22,500 --> 00:09:28,080
+that the list item actually is rendered outside of the unordered list.
+
+119
+00:09:28,080 --> 00:09:29,640
+So it's not inside of it.
+
+120
+00:09:29,670 --> 00:09:35,500
+If it were inside then it would work properly but I can't drag it there.
+
+121
+00:09:35,580 --> 00:09:40,080
+So we need to make sure it gets rendered inside of the UN or a list so let's find out why.
+
+122
+00:09:40,110 --> 00:09:41,210
+That's not the case.
+
+123
+00:09:42,280 --> 00:09:50,860
+It's probably not the case because in Project item I pass falls here to the base class constructor and
+
+124
+00:09:51,220 --> 00:09:57,370
+passing false here means it's not getting inserted at the start and that in turn means that an attach
+
+125
+00:09:57,700 --> 00:10:02,740
+we have before and as a value here where it's getting inserted.
+
+126
+00:10:02,740 --> 00:10:05,670
+This is however what we want to have happen.
+
+127
+00:10:05,680 --> 00:10:08,380
+So that's probably not the problem.
+
+128
+00:10:08,410 --> 00:10:11,660
+Well the problem is still is dead.
+
+129
+00:10:11,680 --> 00:10:15,040
+Of course we're inserting it in the host element.
+
+130
+00:10:15,040 --> 00:10:19,390
+And now let's think again what's the host element of project list.
+
+131
+00:10:19,510 --> 00:10:20,920
+And that's in the end what matters here.
+
+132
+00:10:20,920 --> 00:10:28,720
+Because when we render our projects we create a new project item and a foreword forward the I.D. of
+
+133
+00:10:28,810 --> 00:10:34,210
+our element here of the rendered element in the project list to project item.
+
+134
+00:10:34,210 --> 00:10:38,100
+So Dad will then be the ideal of the host element of a single project item.
+
+135
+00:10:38,140 --> 00:10:40,780
+But what is this element here.
+
+136
+00:10:40,780 --> 00:10:43,720
+This element here is not the unordered list.
+
+137
+00:10:43,780 --> 00:10:47,410
+We have in that box it's the box itself it's our section.
+
+138
+00:10:47,410 --> 00:10:53,440
+If we inspect the template we see the section here is what actually gets rendered for our project list
+
+139
+00:10:53,440 --> 00:10:58,360
+class it's not just the list it's the section which also includes a header.
+
+140
+00:10:58,360 --> 00:11:03,130
+So we actually need to get access to the list inside of our element here and then get access to the
+
+141
+00:11:03,130 --> 00:11:08,720
+ideas off that list because here we do actually set an idea on that list.
+
+142
+00:11:08,770 --> 00:11:12,180
+So there will be an I.D. We just have to grab the right one.
+
+143
+00:11:12,280 --> 00:11:16,840
+So getting the idea off the element itself is simply not correct.
+
+144
+00:11:16,840 --> 00:11:24,670
+Instead here we should get the idea of the unordered list in our element and we know with certainty
+
+145
+00:11:24,670 --> 00:11:30,900
+that there will be an unordered list so we can skip the null check by adding the exclamation mark.
+
+146
+00:11:30,970 --> 00:11:38,020
+Now with that added If we add a new element here this looks better now to bullet point is gone because
+
+147
+00:11:38,050 --> 00:11:44,380
+now the proper styling is applied since the ally the list item is now really added inside of the unordered
+
+148
+00:11:44,380 --> 00:11:47,670
+list as you can see now that's one thing.
+
+149
+00:11:47,680 --> 00:11:53,010
+Now let's move on to that 5 because just outputting a 5 here is not really what I want to do.
+
+150
+00:11:53,020 --> 00:11:56,020
+How about putting a bit more useful information.

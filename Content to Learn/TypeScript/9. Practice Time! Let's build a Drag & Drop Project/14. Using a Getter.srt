@@ -1,0 +1,179 @@
+1
+00:00:02,320 --> 00:00:06,290
+To output more useful information about a single project item.
+
+2
+00:00:06,460 --> 00:00:07,560
+Let's go to the project.
+
+3
+00:00:07,570 --> 00:00:14,230
+Item class because that is where we render this and in the year when I set the content of the H free
+
+4
+00:00:14,240 --> 00:00:21,370
+tack which is dad a number of persons we could changed as to say number of persons which were out putting
+
+5
+00:00:21,370 --> 00:00:31,930
+here plus a signed so did we at least say if I rendered is five a signed but five assigned all day isn't
+
+6
+00:00:32,230 --> 00:00:39,480
+really a good wording right now we of course you could say five or whatever the number is persons assigned.
+
+7
+00:00:39,490 --> 00:00:50,320
+So if we say persons assigned here that is better whips testing test is work because now it is say is
+
+8
+00:00:50,610 --> 00:00:52,010
+five persons assigned.
+
+9
+00:00:52,020 --> 00:00:54,900
+Well that's better but it's still not optimal.
+
+10
+00:00:54,900 --> 00:00:57,740
+What if we only have a project with one person.
+
+11
+00:00:57,810 --> 00:01:01,890
+It still says persons and that doesn't make too much sense.
+
+12
+00:01:01,920 --> 00:01:02,810
+Now I gather.
+
+13
+00:01:02,820 --> 00:01:04,390
+Can help us there.
+
+14
+00:01:04,470 --> 00:01:11,640
+So instead of saying persons or person here I just say plus assigned but actually don't just one output
+
+15
+00:01:11,640 --> 00:01:14,000
+the number of people here.
+
+16
+00:01:14,100 --> 00:01:16,050
+I want to use a getter instead.
+
+17
+00:01:16,080 --> 00:01:18,840
+Which returns us a proper term.
+
+18
+00:01:18,840 --> 00:01:21,660
+So the right text basically.
+
+19
+00:01:21,720 --> 00:01:28,050
+So here I'll add a getter and convention not a must do but a convention you often see is to add getters
+
+20
+00:01:28,080 --> 00:01:30,630
+and setters right below your observe fields.
+
+21
+00:01:30,630 --> 00:01:34,370
+So I will add it here below my fields above the constructor.
+
+22
+00:01:34,380 --> 00:01:36,510
+Now I'll name it persons.
+
+23
+00:01:36,510 --> 00:01:38,440
+The name is totally up to you.
+
+24
+00:01:38,520 --> 00:01:42,660
+I'll name it persons here and a getter is basically like a function.
+
+25
+00:01:42,660 --> 00:01:46,180
+So you have to add parentheses here and then curly braces.
+
+26
+00:01:46,200 --> 00:01:48,960
+Now in there as you see you must return a value.
+
+27
+00:01:49,560 --> 00:01:55,620
+And here I want to return value which is basically some text based on the number of people I have in
+
+28
+00:01:55,620 --> 00:02:03,380
+my project here so you can check if this project people is equal to 1.
+
+29
+00:02:03,450 --> 00:02:10,330
+In that case I will return one person as a text here.
+
+30
+00:02:10,410 --> 00:02:13,170
+Else I know it's more than one or zero.
+
+31
+00:02:13,240 --> 00:02:17,240
+And in both cases I would say persons plural form.
+
+32
+00:02:17,410 --> 00:02:25,150
+I will return template literal actually simply because it's easier to write a text with injected content
+
+33
+00:02:25,150 --> 00:02:30,910
+with a template literal and there I'll say this project that people persons.
+
+34
+00:02:30,910 --> 00:02:34,080
+So now this is the text I return in this scenario.
+
+35
+00:02:34,180 --> 00:02:40,360
+So now we just have to use this getter to automatically get the right jargon the right text.
+
+36
+00:02:40,360 --> 00:02:47,320
+So down later instead of reaching out to this project people I will just say this person's assigned
+
+37
+00:02:47,800 --> 00:02:50,510
+and I exist is like a normal property.
+
+38
+00:02:50,590 --> 00:02:53,590
+So we're not calling this like a function with parentheses.
+
+39
+00:02:53,620 --> 00:02:59,110
+Instead we axis is like this but this will trigger this scatter because it is the same name.
+
+40
+00:02:59,140 --> 00:03:04,450
+So this will trigger the scatter run our logic there and then return the appropriate text.
+
+41
+00:03:04,450 --> 00:03:12,490
+So now if we try this again testing dust is work and I assign five we see five persons assigned.
+
+42
+00:03:12,490 --> 00:03:19,360
+Dust is really work for sure and I add one here we see one person assigned.
+
+43
+00:03:19,390 --> 00:03:22,500
+So now this works in the way I want it to work.
+
+44
+00:03:22,540 --> 00:03:28,660
+Now it is really outputs this properly and it shows a nice use case of a getter where it just helps
+
+45
+00:03:28,660 --> 00:03:30,910
+us transform data when we retrieve it.

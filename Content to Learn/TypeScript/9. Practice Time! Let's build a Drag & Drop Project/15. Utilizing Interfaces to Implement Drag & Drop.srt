@@ -1,0 +1,487 @@
+1
+00:00:02,240 --> 00:00:10,310
+So let's now come to the end of this project and that involves the possibility to drag and drop a project
+
+2
+00:00:10,340 --> 00:00:16,460
+which we have in one of the two boxes for example in the ACT projects box in the other box.
+
+3
+00:00:16,460 --> 00:00:22,820
+So to basically switch the project from being an act of project to being a finished project.
+
+4
+00:00:22,820 --> 00:00:25,450
+So it's also not just about the visual update.
+
+5
+00:00:25,460 --> 00:00:29,340
+It's not just about dragging and dropping it and updating the UI.
+
+6
+00:00:29,510 --> 00:00:36,230
+It's also about adjusting the data behind the scenes in our estate management class in the projects
+
+7
+00:00:36,230 --> 00:00:39,350
+state where we manage a list of projects in the end.
+
+8
+00:00:39,380 --> 00:00:45,470
+Keep in mind that every project does have a status property and we'll need to update that as well.
+
+9
+00:00:45,470 --> 00:00:52,580
+So two things we need to implement drag and drop and then also this behind the scenes state and data
+
+10
+00:00:52,660 --> 00:00:53,450
+date.
+
+11
+00:00:53,450 --> 00:01:00,710
+Now let's start with drag and drop and for that we will basically implement drag drop as we would do
+
+12
+00:01:00,710 --> 00:01:06,980
+it in vanilla javascript which you for example can learn about in my complete javascript guide.
+
+13
+00:01:06,980 --> 00:01:12,530
+Basically it's all about implementing a bunch of event listeners and of course you will see how it works
+
+14
+00:01:12,530 --> 00:01:17,320
+in this module in the next lectures but will implement it in typescript style.
+
+15
+00:01:17,390 --> 00:01:21,090
+So we'll enhance it by using some typescript features.
+
+16
+00:01:21,200 --> 00:01:22,460
+So let's get started.
+
+17
+00:01:22,460 --> 00:01:25,820
+And how do I want to enhance it with types of features.
+
+18
+00:01:25,820 --> 00:01:35,810
+Well I want to reuse interfaces here drag and drop interfaces but not just to define the structure of
+
+19
+00:01:35,810 --> 00:01:42,920
+some objects as we previously used interfaces but instead to really set up a contract which certain
+
+20
+00:01:42,920 --> 00:01:50,750
+classes can sign to force these classes to to basically implement certain methods that help us with
+
+21
+00:01:50,750 --> 00:01:52,990
+drag and drop to be precise.
+
+22
+00:01:53,000 --> 00:01:59,300
+I'm thinking about two interfaces and of course using these interfaces will be optional but this will
+
+23
+00:01:59,300 --> 00:02:06,500
+allow us to well basically provide some code that forces a class to implement everything it needs to
+
+24
+00:02:06,500 --> 00:02:13,670
+be Dragonball or to be a valid drop target which if we were building a bigger application could help
+
+25
+00:02:13,670 --> 00:02:18,970
+us write cleaner code and more understandable code especially when working in a team.
+
+26
+00:02:19,130 --> 00:02:21,730
+So which interfaces am I talking about.
+
+27
+00:02:21,800 --> 00:02:28,990
+I want to have one interface which I'll name Dragonball and I'll have a second interface which will
+
+28
+00:02:28,990 --> 00:02:31,090
+name direct target.
+
+29
+00:02:31,090 --> 00:02:36,940
+My idea here is that we can add the dragon will interface to any class that renders an element which
+
+30
+00:02:36,940 --> 00:02:39,400
+can be Dragonball in our example.
+
+31
+00:02:39,400 --> 00:02:45,730
+That would be the project item class the project item class is responsible for rendering well these
+
+32
+00:02:45,730 --> 00:02:53,370
+project items a D should be the Dragonball pieces and the boxes act of projects and finished projects.
+
+33
+00:02:53,380 --> 00:02:57,870
+So here our project list class should be direct targets.
+
+34
+00:02:57,910 --> 00:03:03,940
+Now what do these interfaces forests to be implemented or to be added to the class instead.
+
+35
+00:03:03,940 --> 00:03:06,360
+Let's start with Dragonball here.
+
+36
+00:03:06,370 --> 00:03:12,400
+We basically need cue event listeners and therefore to handlers for these events.
+
+37
+00:03:12,580 --> 00:03:19,570
+A drag start handler which will be a method and a drag and handler
+
+38
+00:03:22,040 --> 00:03:29,450
+because when implementing drag and drop the thing what you want to drag will require some listener that
+
+39
+00:03:29,450 --> 00:03:35,870
+listens to these start off that drag event and also potentially a listener that listens to the end of
+
+40
+00:03:35,870 --> 00:03:40,180
+the drag event so that you can do any kind of updates there which you want to do.
+
+41
+00:03:40,490 --> 00:03:45,830
+Now the drag start event handler will get an event object which will you have kite drag event.
+
+42
+00:03:45,950 --> 00:03:51,770
+That's a built in type type scholarships with because of our teams conflict setup and the lips we're
+
+43
+00:03:51,770 --> 00:03:58,490
+adding there and it will not return anything it will be a method which executes but which then just
+
+44
+00:03:58,490 --> 00:04:03,670
+does something configure is the drag event for example but does not return.
+
+45
+00:04:03,950 --> 00:04:07,010
+Notice the drag and handler gets a similar event.
+
+46
+00:04:07,010 --> 00:04:10,750
+It also gets a drag event and it also returns nothing.
+
+47
+00:04:10,760 --> 00:04:14,320
+Now of course you will see how we apply those in just a few seconds.
+
+48
+00:04:14,330 --> 00:04:17,330
+So bear with me now what about the drag target.
+
+49
+00:04:17,870 --> 00:04:19,680
+Well for the target.
+
+50
+00:04:19,680 --> 00:04:22,670
+So the box onto which we can drag something.
+
+51
+00:04:22,670 --> 00:04:32,580
+There are three event handlers that want to implement a drag over handler a drop handler and a drag
+
+52
+00:04:32,700 --> 00:04:34,320
+leave handler.
+
+53
+00:04:34,320 --> 00:04:36,800
+Now what do these things do now.
+
+54
+00:04:36,810 --> 00:04:42,840
+You need to implement a drag over a handler when implementing drag and drop in javascript to basically
+
+55
+00:04:42,840 --> 00:04:50,250
+signal the browser and javascript that the thing you're dragging something over is a valid drag target.
+
+56
+00:04:50,250 --> 00:04:56,430
+If you don't do the right thing in the drag over handler dropping will not be possible.
+
+57
+00:04:56,460 --> 00:05:00,720
+You need to drop handler then to react to the actual drop that happens.
+
+58
+00:05:00,810 --> 00:05:06,990
+So if the drag over handler will permit to drop with the drop handler will handle the drop and then
+
+59
+00:05:06,990 --> 00:05:13,890
+here we can update our data and UI for example and the drag leave handler can be useful if we're for
+
+60
+00:05:13,890 --> 00:05:19,910
+example giving some visual feedback to the user when he or she drag something over the box.
+
+61
+00:05:19,910 --> 00:05:22,230
+For example we change the background color.
+
+62
+00:05:22,260 --> 00:05:28,500
+Well if no drop happens and instead it's cancelled or the user removes the element away we can use the
+
+63
+00:05:28,500 --> 00:05:32,020
+drag leaf handler to revert our visual update.
+
+64
+00:05:32,220 --> 00:05:38,030
+Now all free handlers all the receive a drag event and don't return anything.
+
+65
+00:05:38,040 --> 00:05:41,310
+So let's update them appropriately like this
+
+66
+00:05:44,100 --> 00:05:52,050
+and also for this last handler here and now we configured some interfaces which on their own don't do
+
+67
+00:05:52,050 --> 00:05:52,720
+much.
+
+68
+00:05:52,830 --> 00:05:57,540
+But now we can use them and I want to start with the project item.
+
+69
+00:05:57,540 --> 00:06:00,400
+So let's find our project item class for this.
+
+70
+00:06:00,420 --> 00:06:05,700
+Here's the component here's a project item and now you might remember that an interface cannot just
+
+71
+00:06:05,700 --> 00:06:12,200
+be used to define a custom object type but that you can use it as a contract on a class.
+
+72
+00:06:12,360 --> 00:06:18,390
+You can call implements or add implements here after your class name and offer potential extensions
+
+73
+00:06:18,390 --> 00:06:24,330
+you're doing and then implement the interface in this case the Dragonball interface.
+
+74
+00:06:24,370 --> 00:06:29,630
+Now when you do so and I just formatted this to bring it in a new line to make it easier to read.
+
+75
+00:06:29,850 --> 00:06:31,410
+When you do so you get an error.
+
+76
+00:06:31,410 --> 00:06:38,400
+Now that the class here incorrectly implements the interface because that's Dragonball interface forces
+
+77
+00:06:38,400 --> 00:06:46,330
+us to add two methods if you remember so let's add them here maybe below the constructor.
+
+78
+00:06:46,330 --> 00:06:55,930
+Let's add a drag start handler which gets an event of type drag event and let's also add our drag and
+
+79
+00:06:55,930 --> 00:07:01,980
+handler which receives our drag event and now we have these two methods added.
+
+80
+00:07:02,070 --> 00:07:09,570
+Now that alone does not enable drag and drop it just helps us write Dragonball components or Dragonball
+
+81
+00:07:09,570 --> 00:07:11,940
+classes in a uniform way.
+
+82
+00:07:11,940 --> 00:07:18,450
+So if we add more and more classes which should be Dragonball we always will have these methods which
+
+83
+00:07:18,450 --> 00:07:23,490
+simply makes it easier to reason about our code and to work our code especially when working in a team
+
+84
+00:07:23,550 --> 00:07:27,870
+because everyone knows where to put in work for the drag start event.
+
+85
+00:07:27,870 --> 00:07:32,970
+Now what this does not do of course is listen to a drag start event.
+
+86
+00:07:32,970 --> 00:07:37,500
+That's something we can do in the configure method which you already have though we can reach out to
+
+87
+00:07:37,500 --> 00:07:43,920
+our rendered element and add an event listener to it and there that would be the drag start event.
+
+88
+00:07:43,920 --> 00:07:50,820
+The drag start event is one event one default browser Dom event you can listen to and the event handler
+
+89
+00:07:50,820 --> 00:07:59,060
+we want to trigger of course is the drag start handler at which we can point here.
+
+90
+00:07:59,130 --> 00:08:04,890
+Now we also want to be sure that instead of the drag start handler the this keyword refers to our class.
+
+91
+00:08:04,920 --> 00:08:08,390
+And as you learned with event listeners that would by default not be the case.
+
+92
+00:08:08,580 --> 00:08:11,850
+So we could use bind here and bind this.
+
+93
+00:08:11,850 --> 00:08:14,730
+That would be valid but we have a better way actually.
+
+94
+00:08:14,790 --> 00:08:21,250
+We added our auto bind decorator so I'm just going to add this here to the drag start handler.
+
+95
+00:08:21,270 --> 00:08:28,550
+Now we can all listen to the drag and event here and point that the drag and handler.
+
+96
+00:08:28,560 --> 00:08:33,510
+You can also add auto buying there if you plan on using the this keyword here for the moment.
+
+97
+00:08:33,510 --> 00:08:40,080
+I will just log drag end in here so that we see the triggered because here I actually have nothing specific
+
+98
+00:08:40,080 --> 00:08:45,960
+I want to do with it and day off for I will also blank this parameter and basically tell typescript
+
+99
+00:08:45,960 --> 00:08:51,720
+that I'm not using it here in drag start we will use event and for the moment I'll just lock the event
+
+100
+00:08:51,750 --> 00:08:53,760
+windows event occurs.
+
+101
+00:08:53,760 --> 00:08:55,580
+Now that alone won't do the trick though.
+
+102
+00:08:55,680 --> 00:09:01,470
+If you save everything and you add some project here you'll see that you can't really drag it right
+
+103
+00:09:01,500 --> 00:09:03,070
+if you try to drag it.
+
+104
+00:09:03,180 --> 00:09:11,100
+That will not work because you also need to change something in your h html file on this list item which
+
+105
+00:09:11,100 --> 00:09:16,590
+is getting rendered for every project which is the thing you want to drag you have to add the Dragonball
+
+106
+00:09:17,510 --> 00:09:21,040
+attribute and set this to true that is important.
+
+107
+00:09:21,050 --> 00:09:28,240
+This tells the browser that this will be Dragon Ball with that if you saved it and you re add a project
+
+108
+00:09:28,250 --> 00:09:30,410
+here you see now this indeed is Dragon Ball.
+
+109
+00:09:30,440 --> 00:09:34,800
+It now is stuck to my mouse and now we can really move it around.
+
+110
+00:09:34,820 --> 00:09:38,570
+You're just fine you also see on the right that a dragon fired.
+
+111
+00:09:38,570 --> 00:09:39,830
+When I started a dragon.
+
+112
+00:09:39,950 --> 00:09:43,910
+And if I let go you'll see the drag and event all the fires.
+
+113
+00:09:43,910 --> 00:09:48,220
+So our listeners are connected and we can drag.
+
+114
+00:09:48,320 --> 00:09:50,520
+Now we can work on the drop target.
+
+115
+00:09:50,570 --> 00:09:53,220
+So on the box where it is should be Dragon Ball 2.
+
+116
+00:09:53,250 --> 00:09:56,600
+To then add the project to that box.
+
+117
+00:09:56,600 --> 00:10:02,930
+One thing I will also do real quick is in the app C as s file on the list item.
+
+118
+00:10:02,930 --> 00:10:09,740
+So on projects l I I will add a background color of white somebody so that we can see this a bit better.
+
+119
+00:10:09,860 --> 00:10:16,520
+So your project will I added white so that when we do drag around the project here we do have the white
+
+120
+00:10:16,520 --> 00:10:17,420
+BRAC round here.
+
+121
+00:10:17,420 --> 00:10:20,860
+So this makes it a bit easier to see doesn't change our next step though.
+
+122
+00:10:20,870 --> 00:10:22,150
+We want to make this tropical.
