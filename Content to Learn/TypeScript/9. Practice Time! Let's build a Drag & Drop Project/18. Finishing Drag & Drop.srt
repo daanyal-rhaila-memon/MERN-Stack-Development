@@ -1,0 +1,331 @@
+1
+00:00:02,350 --> 00:00:05,250
+So of course our goal is not to just lock that idea.
+
+2
+00:00:05,290 --> 00:00:11,140
+Instead I want to extract de project ideas here in the log and the drop handler.
+
+3
+00:00:11,140 --> 00:00:18,940
+And with that the goal is to really move the project not where change to project status to be precise.
+
+4
+00:00:18,940 --> 00:00:21,130
+Now how can we do that.
+
+5
+00:00:21,430 --> 00:00:30,640
+Well in our state I would say in our project state where we currently have at Project method we all
+
+6
+00:00:30,660 --> 00:00:38,560
+need a move project method and the goal of this method will be to basically switch the status of a project
+
+7
+00:00:38,560 --> 00:00:42,800
+of course you could also the for name it switch project status or whatever you want.
+
+8
+00:00:42,970 --> 00:00:46,480
+But since we're doing drag and drop I'm calling it move project.
+
+9
+00:00:46,480 --> 00:00:53,850
+So in move project the goal is to move a project from the list that's currently in to a new list.
+
+10
+00:00:53,890 --> 00:00:59,320
+Now this doesn't always mean that we just have to flip the project status from active to finished and
+
+11
+00:00:59,320 --> 00:01:00,510
+the other way around.
+
+12
+00:01:00,550 --> 00:01:05,110
+After all a user could be doing this drag and drop in the same box.
+
+13
+00:01:05,110 --> 00:01:11,050
+So if we then always trigger a method that switches to status we would have an unexpected effect we're
+
+14
+00:01:11,050 --> 00:01:15,540
+dropping in the same box stills which is to project to the average box.
+
+15
+00:01:15,760 --> 00:01:23,290
+So instead and move project we really have to know which project to move and which box the new boxes
+
+16
+00:01:23,320 --> 00:01:25,960
+so which statist and youth status is.
+
+17
+00:01:25,990 --> 00:01:32,560
+So I expect to get the project ideas here which should be a string and then use status and the new status
+
+18
+00:01:32,560 --> 00:01:43,180
+here of course can be of type project status and then inside of move project I want to find a project
+
+19
+00:01:43,180 --> 00:01:46,870
+with that idea in my array of projects.
+
+20
+00:01:46,870 --> 00:01:51,730
+So here this array of projects and then flip it's status.
+
+21
+00:01:51,730 --> 00:01:58,900
+So for that we can reach out to this projects find a project in there and the find method is perfect
+
+22
+00:01:58,900 --> 00:01:59,500
+for that.
+
+23
+00:01:59,500 --> 00:02:04,000
+It runs on every element and is array gives us access to every element and then we have to return true
+
+24
+00:02:04,030 --> 00:02:05,890
+if it's the element we're looking for.
+
+25
+00:02:05,890 --> 00:02:11,110
+And I want to return true if the I.D. of the Element recurred to looking at is equal to the project
+
+26
+00:02:11,140 --> 00:02:17,450
+IDM getting as an argument here then we have to element which should change and they are on this element.
+
+27
+00:02:17,530 --> 00:02:21,130
+We just have to change the status to the new status.
+
+28
+00:02:21,130 --> 00:02:28,640
+Now this might be null so here all called is project stored is now a concept called Project and check
+
+29
+00:02:28,670 --> 00:02:37,460
+if project exists and if it exists then I want to set the status equal to the new status here.
+
+30
+00:02:37,460 --> 00:02:39,100
+Simple as that.
+
+31
+00:02:39,170 --> 00:02:48,050
+This will already changed the object India array and we're basically done with it of course however
+
+32
+00:02:48,080 --> 00:02:50,000
+we're not entirely done.
+
+33
+00:02:50,060 --> 00:02:56,390
+We now need to let everyone know all our listeners that something changed about our projects and that
+
+34
+00:02:56,390 --> 00:02:57,820
+they should re render.
+
+35
+00:02:57,920 --> 00:03:00,110
+So we have to go for all listeners again.
+
+36
+00:03:00,110 --> 00:03:06,290
+And since we would repeat code here I will outsource design a new private method update listeners could
+
+37
+00:03:06,290 --> 00:03:08,680
+be a viable name and endeavor.
+
+38
+00:03:08,690 --> 00:03:14,690
+I'll have these for loop where we go through all listeners and and do something and then we'll call
+
+39
+00:03:14,720 --> 00:03:21,340
+this update listeners both from the ad project and also from the move project method here.
+
+40
+00:03:21,350 --> 00:03:24,300
+Only if we did change something.
+
+41
+00:03:24,400 --> 00:03:26,110
+So now all listeners will be triggered.
+
+42
+00:03:26,170 --> 00:03:32,980
+And if you remember a listener in our app you're basically leads to the list to re render its items.
+
+43
+00:03:33,070 --> 00:03:37,990
+So that will work exactly as it should or it should work exactly as it should.
+
+44
+00:03:37,990 --> 00:03:42,190
+So now we have that move project method down there in a drop handler.
+
+45
+00:03:42,190 --> 00:03:43,680
+We can now use this.
+
+46
+00:03:43,750 --> 00:03:49,370
+There we can now use to project state call move project and pass on the project idea.
+
+47
+00:03:49,750 --> 00:03:57,930
+And now the new project status and the new project status the pens on the list on which we drop this.
+
+48
+00:03:57,940 --> 00:04:05,160
+So I want to auto bind my drop handler so that this keyword in the drop handler refers to the surrounding
+
+49
+00:04:05,160 --> 00:04:12,960
+class and this surrounding class as a project list which if you remember will have a type property here
+
+50
+00:04:13,020 --> 00:04:14,190
+we're storing it here.
+
+51
+00:04:14,220 --> 00:04:18,160
+We're having a type property and that is active or finished.
+
+52
+00:04:18,180 --> 00:04:22,320
+So now we just have to translate active or finished to our enum values.
+
+53
+00:04:22,680 --> 00:04:29,430
+So here I pass in this Start type and I check if it's equal to active in which case we pass in Project
+
+54
+00:04:29,430 --> 00:04:36,810
+Status dot active ask the new status of the project because that is the status of the list we move to
+
+55
+00:04:36,810 --> 00:04:38,090
+Project 2.
+
+56
+00:04:38,220 --> 00:04:46,600
+Otherwise we pass and project status start finished and let me reformat that to make it easier to read.
+
+57
+00:04:46,770 --> 00:04:48,150
+With that let's give it a try.
+
+58
+00:04:48,180 --> 00:04:56,880
+Let's save all and add a new project here and now drag it to finished projects and it switches and the
+
+59
+00:04:56,880 --> 00:04:58,280
+same if I move it back.
+
+60
+00:04:58,310 --> 00:05:02,320
+If a let go here an act of projects nothing changes.
+
+61
+00:05:02,370 --> 00:05:08,100
+Now you will see if you inspect the dam that technically it re renders which might not be ideal.
+
+62
+00:05:08,160 --> 00:05:14,820
+So we could think about coming up with some solution which checks whether the state is actually did
+
+63
+00:05:14,820 --> 00:05:17,430
+change it if it didn't we don't update.
+
+64
+00:05:17,430 --> 00:05:18,780
+That's something we can do.
+
+65
+00:05:18,900 --> 00:05:22,680
+But from a UI perspective it updates just as it should.
+
+66
+00:05:22,680 --> 00:05:29,310
+Now let's also add a second project and see if Dad destroys something if everything still works.
+
+67
+00:05:29,310 --> 00:05:31,770
+And I would say that looks decent.
+
+68
+00:05:31,770 --> 00:05:33,740
+That looks pretty good to me.
+
+69
+00:05:33,780 --> 00:05:36,540
+Everything seems to work exactly the way it should.
+
+70
+00:05:37,170 --> 00:05:43,140
+So dragging and dropping works just fine here but there is this one improvement I mentioned back in
+
+71
+00:05:43,140 --> 00:05:48,330
+the project state in move project when I called this update listeners.
+
+72
+00:05:48,330 --> 00:05:51,880
+We can actually check if we did really change the status.
+
+73
+00:05:51,960 --> 00:05:54,210
+So here we can check if project.
+
+74
+00:05:54,210 --> 00:06:02,000
+So if we did find one and if then project status is different from the new status and only then we changed
+
+75
+00:06:02,000 --> 00:06:07,710
+the status and update to listeners if the status is to say we don't do this and we are widened the unnecessary
+
+76
+00:06:07,710 --> 00:06:08,760
+rebrand or cycle.
+
+77
+00:06:09,360 --> 00:06:14,520
+So now with that if we save that and we quickly add a new project you will see if I inspect the elements
+
+78
+00:06:14,520 --> 00:06:20,700
+here and you watch yellow I and check whether this flashes which means it would re render it does not
+
+79
+00:06:20,700 --> 00:06:26,730
+flash here only probable flash as de CLOs which is added but the El eye does not flash if I drop in
+
+80
+00:06:26,730 --> 00:06:32,670
+the same box it only flashes if I move move it to a different box and it should flashed and because
+
+81
+00:06:32,670 --> 00:06:34,490
+then we really did move it.
+
+82
+00:06:34,500 --> 00:06:40,930
+So now we optimized does a bit and now we have working drag and drop here all built and powered with
+
+83
+00:06:40,930 --> 00:06:42,090
+and by typescript.

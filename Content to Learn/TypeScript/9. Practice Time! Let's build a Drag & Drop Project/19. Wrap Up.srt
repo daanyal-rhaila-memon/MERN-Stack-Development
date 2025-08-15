@@ -1,0 +1,67 @@
+1
+00:00:02,400 --> 00:00:05,790
+And this is it for this little demo project.
+
+2
+00:00:05,790 --> 00:00:08,410
+Now of course there's always more you could do.
+
+3
+00:00:08,590 --> 00:00:13,120
+But here we're already using a bunch of nice types good features.
+
+4
+00:00:13,230 --> 00:00:15,120
+You'll learn about wrote this course.
+
+5
+00:00:15,120 --> 00:00:22,620
+And with this project you hopefully have a better idea of when we use which feature why certain features
+
+6
+00:00:22,620 --> 00:00:30,680
+like decorators and interfaces exist how they can help us and how we can write type safe scalable code.
+
+7
+00:00:30,810 --> 00:00:37,080
+Now Definitely feel free to build up on this project add more features on your own explorer what you
+
+8
+00:00:37,080 --> 00:00:40,840
+could change there and simply practice working with typescript.
+
+9
+00:00:40,950 --> 00:00:47,820
+I'm happy with the current state and in the next module I now want to tackle a quite obvious problem.
+
+10
+00:00:47,850 --> 00:00:56,010
+We got one super huge file here so splitting this up into multiple files would really help us with managing
+
+11
+00:00:56,010 --> 00:01:00,130
+our code base because right now we want to change something somewhere.
+
+12
+00:01:00,150 --> 00:01:05,400
+We always have to scroll for the entire file and find the place where we want to make a change.
+
+13
+00:01:05,400 --> 00:01:06,980
+That's not ideal.
+
+14
+00:01:06,990 --> 00:01:10,530
+This already is quite a lot of code an even bigger project.
+
+15
+00:01:10,560 --> 00:01:12,780
+It would be totally unmanageable.
+
+16
+00:01:12,810 --> 00:01:18,420
+So in the next module we'll have a look at the features typescript gives us that help us with splitting
+
+17
+00:01:18,420 --> 00:01:20,280
+our code across multiple files.

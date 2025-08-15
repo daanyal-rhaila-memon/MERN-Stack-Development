@@ -1,0 +1,279 @@
+1
+00:00:02,360 --> 00:00:08,810
+To make it draw people we have to go to the class or to the component in our application which showed
+
+2
+00:00:08,810 --> 00:00:11,660
+in the end act as a drag target.
+
+3
+00:00:11,660 --> 00:00:16,640
+So here project list class is the right class and there we can implement our second interface which
+
+4
+00:00:16,640 --> 00:00:20,150
+we added the direct target interface.
+
+5
+00:00:20,180 --> 00:00:28,100
+Now just as the Dragonball interface this forces us to to add certain methods to be precise here we
+
+6
+00:00:28,100 --> 00:00:33,420
+need to add the drag over handler the drop handler and the drag leave handler.
+
+7
+00:00:33,560 --> 00:00:39,440
+So let's do that maybe all the right here below the constructor above configure but the exact place
+
+8
+00:00:39,440 --> 00:00:40,080
+is up to you.
+
+9
+00:00:40,100 --> 00:00:42,870
+The order of methods does not matter.
+
+10
+00:00:42,920 --> 00:00:49,620
+So here I will add the drag over a handler where we get our drag event.
+
+11
+00:00:49,790 --> 00:00:57,760
+I will then add the drop handler here where we also get our drag event and last but not least the drag
+
+12
+00:00:57,790 --> 00:01:02,320
+leave handler where we also get a drag event.
+
+13
+00:01:02,320 --> 00:01:05,420
+Now these events by the way hold different kinds of data.
+
+14
+00:01:05,440 --> 00:01:08,920
+They're all based on the same core event type.
+
+15
+00:01:08,960 --> 00:01:11,870
+Now we've got a couple of different things to do.
+
+16
+00:01:11,900 --> 00:01:17,180
+Let's start with the drag over a handler maybe in the drag over a handler.
+
+17
+00:01:17,180 --> 00:01:23,210
+I want to change the appearance of of my box or off the unordered list in there to visualize that this
+
+18
+00:01:23,210 --> 00:01:29,800
+is a draw public area because right now when we drag around element we get no clue of where we can drop
+
+19
+00:01:29,810 --> 00:01:30,230
+it right.
+
+20
+00:01:30,230 --> 00:01:35,960
+Nothing changes on the UI so I want to change this to change this I'll add a cert to see us as class
+
+21
+00:01:35,960 --> 00:01:41,180
+to the on order list which you find an app sees as the tropical class which will change the background
+
+22
+00:01:41,180 --> 00:01:48,840
+color and therefore in here for a start we just need to get access to our unordered list to element.
+
+23
+00:01:49,130 --> 00:01:57,080
+We can do so by reaching out to this element query selector you l and add an exclamation mark because
+
+24
+00:01:57,080 --> 00:01:59,080
+there will always be an unordered list there.
+
+25
+00:01:59,090 --> 00:02:05,950
+Even if it holds no elements yet we just have to make sure that the this keyword works here and we can
+
+26
+00:02:05,950 --> 00:02:12,760
+do so by auto binding this year to make sure that this keyword is bound to the surrounding class.
+
+27
+00:02:12,760 --> 00:02:19,570
+And then with the list element select it we can use the class list property of dom elements.
+
+28
+00:02:19,600 --> 00:02:26,080
+So does this vanilla javascript here in the end and called the add method dare to add the tropical class
+
+29
+00:02:26,080 --> 00:02:26,500
+to it.
+
+30
+00:02:27,600 --> 00:02:32,250
+Now with that we of course have to make sure that the drag over a handler actually is fired when we
+
+31
+00:02:32,250 --> 00:02:36,510
+drag something over it is element here over it is rendered.
+
+32
+00:02:36,540 --> 00:02:44,530
+Section and to do that in the configure method where we already have one listener here listening to
+
+33
+00:02:44,530 --> 00:02:50,320
+our state changes I will also register listeners on the element itself.
+
+34
+00:02:50,320 --> 00:02:56,710
+The first event listener dear of course is to drag over event and I'll bind this to drag over handler
+
+35
+00:02:56,740 --> 00:03:03,670
+unsurprisingly and then I'll repeat this because I also want to listen to the drag leaf event and bind
+
+36
+00:03:03,670 --> 00:03:09,490
+us to the drag leaf handler and to the drop event and bind this to the drop handler because we'll all
+
+37
+00:03:09,490 --> 00:03:11,620
+need that later.
+
+38
+00:03:11,620 --> 00:03:20,020
+So with that we get this drag over event listener and the drag over a handler connected but we also
+
+39
+00:03:20,020 --> 00:03:21,420
+get some errors in the code.
+
+40
+00:03:21,430 --> 00:03:24,670
+Now while that should be the unused event objects here.
+
+41
+00:03:24,670 --> 00:03:30,360
+So for the moment to satisfy typescript let's just blank them out we'll need them later.
+
+42
+00:03:30,390 --> 00:03:35,680
+But for the moment to make this work let's blank them out by using underscores here to tell typescript
+
+43
+00:03:35,800 --> 00:03:37,690
+we're fine not using them at the moment.
+
+44
+00:03:37,720 --> 00:03:44,590
+Now does compiles and now back in the project when we add a new project here in a directors you see
+
+45
+00:03:44,620 --> 00:03:51,530
+when I drag is over finished project the background here got a light blue here over project that got
+
+46
+00:03:51,530 --> 00:03:59,980
+light rows like a slight pink color just to show us again if a reload you see now we have white backgrounds
+
+47
+00:04:00,100 --> 00:04:02,420
+in the projects whips.
+
+48
+00:04:02,710 --> 00:04:08,530
+And as soon as they start dragging this here it gets light pink background and when I drag it over finished
+
+49
+00:04:08,530 --> 00:04:13,280
+project the project the box background changes to light blue.
+
+50
+00:04:13,390 --> 00:04:19,490
+Now it never changes back to white because we never remove that probable class but it is a first step.
+
+51
+00:04:19,540 --> 00:04:21,650
+Of course dropping still does not work.
+
+52
+00:04:21,730 --> 00:04:27,900
+Dropping it here does not add the project because how wooded we haven't added any logic for this.
+
+53
+00:04:28,240 --> 00:04:36,120
+So let's make sure to also update to styling when we stop when we leave the element.
+
+54
+00:04:36,130 --> 00:04:42,070
+So when we basically drag it over here and then go away make sure that the blue background goes away
+
+55
+00:04:42,070 --> 00:04:42,640
+in that case.
+
+56
+00:04:42,640 --> 00:04:45,190
+That's what I want to do next Friday.
+
+57
+00:04:45,210 --> 00:04:51,240
+We can use the drag leaf handler here because Dad will fire whenever we will leave this element with
+
+58
+00:04:51,240 --> 00:04:52,760
+our direct element.
+
+59
+00:04:53,040 --> 00:05:01,320
+And now there I of course also want to get access to my on or to list so I'll copy that code.
+
+60
+00:05:01,440 --> 00:05:10,530
+But then there I want to remove the drop a ball CLOs and we should not also auto bind is so that the
+
+61
+00:05:10,530 --> 00:05:17,720
+this keyword here refers to the surrounding CLOs if we save that we add a new element here.
+
+62
+00:05:17,790 --> 00:05:18,630
+Let's give it a try.
+
+63
+00:05:20,490 --> 00:05:27,160
+Start dragging you see we have our background here and if I leave it goes away.
+
+64
+00:05:27,160 --> 00:05:29,980
+So now the background really is updated.
+
+65
+00:05:29,980 --> 00:05:36,820
+You see some flickering here because the drag leave event all the fires if you go from having the mouse
+
+66
+00:05:36,820 --> 00:05:42,480
+cursor over to background to having it over a rendered element but that should be fine here.
+
+67
+00:05:42,490 --> 00:05:43,650
+It's no big deal here.
+
+68
+00:05:43,660 --> 00:05:50,980
+So actually we got the desired effect that would say so the UI is updated just the way it should now.
+
+69
+00:05:50,980 --> 00:05:54,690
+But of course we're not able to draw up and really transfer data.
+
+70
+00:05:54,730 --> 00:05:56,190
+So Dad will be the next step.
