@@ -1,0 +1,327 @@
+1
+00:00:02,340 --> 00:00:07,770
+So to tell where Peg what to do with tides good falls we need to add a new entry to the configuration
+
+2
+00:00:07,830 --> 00:00:12,390
+object here and that's the module property module.
+
+3
+00:00:12,390 --> 00:00:17,460
+Also takes a javascript object then configure it a module in the end it's just a file.
+
+4
+00:00:17,460 --> 00:00:22,870
+So here we tell webpage how to work with the files it finds like with the apt yes file and then all
+
+5
+00:00:22,870 --> 00:00:27,310
+the once it understands that file how to deal with all the inputs in that file.
+
+6
+00:00:27,360 --> 00:00:29,850
+So how should webpage deal with these files.
+
+7
+00:00:29,850 --> 00:00:35,760
+Well we tell web page by adding a rules array here because you can set up multiple rules that should
+
+8
+00:00:35,760 --> 00:00:37,440
+be applied to all the files.
+
+9
+00:00:37,470 --> 00:00:43,400
+Here we only need one but in more complex projects where you'll also want to use webpage to handle CSR
+
+10
+00:00:43,400 --> 00:00:46,070
+as files or images or anything like that.
+
+11
+00:00:46,170 --> 00:00:49,140
+You can add more rules for different types of files.
+
+12
+00:00:49,260 --> 00:00:54,620
+And as mentioned before the official docs are a great place to learn more about loaders which you Indians
+
+13
+00:00:54,650 --> 00:00:59,210
+used to teach webpage more about different files and to learn more about web pig in general.
+
+14
+00:00:59,760 --> 00:01:06,420
+So here we will add such a loader actually a loader is simply a package that tells where pick how to
+
+15
+00:01:06,420 --> 00:01:12,150
+deal of certain files and of course here we got the T as loader which helps us tell webpage how to deal
+
+16
+00:01:12,150 --> 00:01:18,240
+with types good files so we add a rule which is just a javascript object where we first of all add a
+
+17
+00:01:18,240 --> 00:01:19,710
+test property.
+
+18
+00:01:19,710 --> 00:01:24,570
+This describes a test where peg will perform on any file it finds.
+
+19
+00:01:24,720 --> 00:01:30,780
+To find out whether this rule here applies to that file or not and the test here is a regular expression
+
+20
+00:01:31,130 --> 00:01:31,650
+in there.
+
+21
+00:01:31,650 --> 00:01:38,100
+I want to tell webpage that any file which ends with Dot T S should be used or should be handled by
+
+22
+00:01:38,100 --> 00:01:45,010
+this rule a regular expression that checks where the file extension can use a backslash year and then
+
+23
+00:01:45,010 --> 00:01:47,590
+dot t s and then a dollar sign.
+
+24
+00:01:47,590 --> 00:01:53,200
+This is a regular expression which in the end tells webpage that you want to check for faults that end
+
+25
+00:01:53,200 --> 00:01:55,190
+with thought t s.
+
+26
+00:01:55,600 --> 00:02:01,900
+Then you also have to specify what webpage should do with those files and you do that with the use keyword
+
+27
+00:02:01,900 --> 00:02:03,420
+here and there.
+
+28
+00:02:03,430 --> 00:02:07,530
+You specified a loader webpage should use in my case T S dash loader.
+
+29
+00:02:07,630 --> 00:02:13,030
+So we tell webpage that any types could file it fines should be handled by the task of loader which
+
+30
+00:02:13,030 --> 00:02:15,970
+then in turn knows what to do with such a file.
+
+31
+00:02:16,030 --> 00:02:21,010
+The T is loader will automatically take the T as conflict chests and fall into account so we don't need
+
+32
+00:02:21,010 --> 00:02:23,320
+to specify any extra configuration here.
+
+33
+00:02:23,470 --> 00:02:26,110
+Just one configuration that never hurts.
+
+34
+00:02:26,110 --> 00:02:33,640
+Exclude node modules as a regular expression so that webpage also doesn't try to look into node modules
+
+35
+00:02:35,180 --> 00:02:41,060
+with that we need to add one extra configuration here after the module configuration and that's the
+
+36
+00:02:41,060 --> 00:02:49,740
+resolve key there we tell where peg which file extensions aid adds to the inputs it finds.
+
+37
+00:02:49,790 --> 00:02:56,210
+I said webpage would add extensions on its own and by default it will look for a dotted J as files.
+
+38
+00:02:56,220 --> 00:03:02,450
+Now here we want webpage to look for dot t as files and therefore here in resolve we can add extensions
+
+39
+00:03:02,840 --> 00:03:08,900
+property set does equal to an array and tell webpage that it should look for dot t as follows as well
+
+40
+00:03:08,900 --> 00:03:10,290
+as Dot J as files.
+
+41
+00:03:10,700 --> 00:03:16,760
+So now webpage will basically look for such files and then bundle all files that have these extensions
+
+42
+00:03:16,940 --> 00:03:20,890
+which you are importing together and that's our setup.
+
+43
+00:03:20,960 --> 00:03:26,590
+Almost finished for the moment our configuration file almost finished for the moment at least with dad
+
+44
+00:03:26,600 --> 00:03:33,080
+we just should go to t as config as well and there make sure that you set source map to true.
+
+45
+00:03:33,110 --> 00:03:37,170
+This will help us debug our code and webpage supports this as well.
+
+46
+00:03:37,180 --> 00:03:44,080
+There we now just also have to add an entry maybe here below output and it's a def tool key and they
+
+47
+00:03:44,080 --> 00:03:46,450
+are the value should be in line Dash.
+
+48
+00:03:46,460 --> 00:03:53,930
+Source map as a string this knee and tells where dad there will be generated source maps already which
+
+49
+00:03:53,930 --> 00:04:00,500
+it should extract and basically wire up correctly to the bundle it generates so that whilst we get such
+
+50
+00:04:00,500 --> 00:04:07,430
+a bundle we still have a great development experience now with that we can use weapons.
+
+51
+00:04:07,460 --> 00:04:14,620
+And the question is how do we use it a simple way of using it is to go to the package does Jason fall
+
+52
+00:04:14,770 --> 00:04:15,220
+in there.
+
+53
+00:04:15,220 --> 00:04:21,970
+Let's add a script for example build you can give it any name you want here in the scripts section and
+
+54
+00:04:21,970 --> 00:04:23,960
+there simply run webpage.
+
+55
+00:04:23,960 --> 00:04:25,470
+So just type of weapon.
+
+56
+00:04:25,510 --> 00:04:34,210
+Like this that's now all go to the dist folder and in the end remove everything that's in there and
+
+57
+00:04:34,210 --> 00:04:42,710
+with that save it and now run NPM run build and let's see whether that works and it fails.
+
+58
+00:04:45,510 --> 00:04:48,560
+The eyes and look at the type of wood that should not be deaf.
+
+59
+00:04:48,570 --> 00:04:49,130
+Tools.
+
+60
+00:04:49,140 --> 00:04:50,480
+But Deaf tool.
+
+61
+00:04:50,480 --> 00:04:53,840
+Here to change this to deaf tool in the configuration file.
+
+62
+00:04:53,850 --> 00:04:55,980
+And now let's repeat NPM run build
+
+63
+00:04:59,540 --> 00:05:02,660
+and with Dad you can ignore the warning you get here.
+
+64
+00:05:02,660 --> 00:05:08,180
+You will see that in the this file you have a bundle J.S. file and what you see in there also already
+
+65
+00:05:08,180 --> 00:05:14,120
+is quite unreadable code because we have this magnification in action here actually.
+
+66
+00:05:14,120 --> 00:05:17,770
+So this actually already is this optimized code as well.
+
+67
+00:05:18,720 --> 00:05:25,050
+Now before we see how we can also work with different configurations here let's actually go to the index
+
+68
+00:05:25,050 --> 00:05:31,980
+H html file and adjust our imports here and point at bundle J.S. and for the moment since we're not
+
+69
+00:05:31,980 --> 00:05:38,220
+using backpack death story yet let's run NPM start to bring up that index HMO file again.
+
+70
+00:05:38,550 --> 00:05:46,690
+And if you now reload this page you'll see this works if we enter something here.
+
+71
+00:05:46,690 --> 00:05:52,050
+Our project works the way it should and it imports the bundle jazz file here.
+
+72
+00:05:52,060 --> 00:05:59,170
+So only one file instead of all these individual files and that already is an enhancement.
+
+73
+00:05:59,200 --> 00:06:04,010
+Here we already have that bundle code which are what's all these unnecessary H.
+
+74
+00:06:04,030 --> 00:06:09,640
+If you requests and if you go to the sources tab by the way and you want to debug your code you will
+
+75
+00:06:09,640 --> 00:06:15,580
+find this webpage folder and in there a source folder in there you can go to your type of files and
+
+76
+00:06:15,670 --> 00:06:23,770
+for example here on project input you can also set a breakpoint here on gather user input.
+
+77
+00:06:23,770 --> 00:06:29,020
+And if you now press the button it pauses there and you can debug your code and that's the source maps
+
+78
+00:06:29,020 --> 00:06:34,070
+coming in which really help us developing and which make our life as a developer easier.
+
+79
+00:06:34,090 --> 00:06:40,690
+We got this optimized code but thanks to the source maps we can debug our original task of code here.
+
+80
+00:06:40,780 --> 00:06:46,320
+So we already have a pretty amazing setup which gives us a lot of optimizations already.
+
+81
+00:06:46,330 --> 00:06:53,050
+Now let's finish this and make sure we actually have the webpage depth server included and we then actually
+
+82
+00:06:53,050 --> 00:06:58,300
+have to workflows one for production and one for development.

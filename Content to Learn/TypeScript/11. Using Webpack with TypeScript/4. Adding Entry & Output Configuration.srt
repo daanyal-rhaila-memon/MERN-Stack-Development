@@ -1,0 +1,303 @@
+1
+00:00:02,240 --> 00:00:03,160
+To get started.
+
+2
+00:00:03,200 --> 00:00:08,600
+Let's first of all go to t is conflict or Jason File fall because there we need to make sure that certain
+
+3
+00:00:08,600 --> 00:00:10,640
+things are configured.
+
+4
+00:00:10,640 --> 00:00:15,600
+Make sure that the target here is actually set to ease five or yes six.
+
+5
+00:00:15,620 --> 00:00:21,350
+That is up to you it depends on which browsers you plan on supporting because in the end web bag and
+
+6
+00:00:21,350 --> 00:00:26,990
+the type of loader will use this target to determine how your code should be transformed.
+
+7
+00:00:26,990 --> 00:00:32,930
+Should your times good code be transformed to JavaScript code that runs an older browsers as well or
+
+8
+00:00:33,050 --> 00:00:37,920
+as with iOS 6 to code that only runs in more recent browsers.
+
+9
+00:00:38,180 --> 00:00:42,700
+Module then should be set to iOS 2015 or iOS 6.
+
+10
+00:00:42,710 --> 00:00:44,590
+So that setting is fine.
+
+11
+00:00:44,870 --> 00:00:50,380
+And in addition you also want to verify your output.
+
+12
+00:00:50,600 --> 00:00:56,840
+I will keep it to dist but you could change does if you want to compile your code to a different directory.
+
+13
+00:00:56,930 --> 00:01:03,080
+You don't need to root directory anymore though because webpages will take over there and webpage will
+
+14
+00:01:03,080 --> 00:01:05,710
+determine where your root files are.
+
+15
+00:01:05,720 --> 00:01:07,700
+So in general these settings should be fine.
+
+16
+00:01:07,700 --> 00:01:13,490
+We can always tweak them later if something doesn't work the way we wanted to work with that.
+
+17
+00:01:13,490 --> 00:01:19,840
+Let's add a new configuration file next to t content and that's the Web packed dot conflict such as
+
+18
+00:01:19,850 --> 00:01:25,010
+file and make sure you do read your name ID like this because this is a file webpage will automatically
+
+19
+00:01:25,010 --> 00:01:31,730
+look for it this will in the Intel web peg how to work with our project because webpage is a tool which
+
+20
+00:01:31,730 --> 00:01:34,940
+needs to be configured to work correctly here.
+
+21
+00:01:35,000 --> 00:01:40,790
+So what do we do in this webpage dot config file discontinuation consideration file uses javascript
+
+22
+00:01:41,090 --> 00:01:44,150
+and actually it uses node j as features.
+
+23
+00:01:44,150 --> 00:01:50,720
+So we want to use the notorious export syntax which looks like this to then export a javascript object
+
+24
+00:01:50,780 --> 00:01:54,040
+which will be the configuration object picked up by Westpac.
+
+25
+00:01:54,200 --> 00:01:56,110
+So in case you never saw that before.
+
+26
+00:01:56,180 --> 00:02:00,050
+This is how you export things in a node Chase environment.
+
+27
+00:02:00,050 --> 00:02:03,650
+And here we are exporting a javascript object.
+
+28
+00:02:03,650 --> 00:02:06,340
+Now webpage needs a couple of pieces of information.
+
+29
+00:02:06,350 --> 00:02:12,770
+Most importantly it needs to know with which file your entire project starts.
+
+30
+00:02:12,770 --> 00:02:17,360
+So where are your entry point is in our case that's the apt yes file.
+
+31
+00:02:17,360 --> 00:02:20,470
+This file should be executed first and what webpage.
+
+32
+00:02:20,480 --> 00:02:26,660
+Then we'll do is it will have a look at the imports in this file and go to these files and have a look
+
+33
+00:02:26,660 --> 00:02:27,780
+at their imports.
+
+34
+00:02:27,810 --> 00:02:33,680
+Empty imports of the imported files and so on until it knows all files your project uses in the end
+
+35
+00:02:34,220 --> 00:02:39,200
+and then it will go through the file contents like this contents here and all the content in all the
+
+36
+00:02:39,200 --> 00:02:44,870
+files and compiled them with the help of the T as loader package I mentioned.
+
+37
+00:02:44,870 --> 00:02:50,990
+Now to make webpage work correctly here you should actually now remove all the dot J S extensions in
+
+38
+00:02:50,990 --> 00:02:52,120
+all the imports.
+
+39
+00:02:52,340 --> 00:02:59,270
+We needed that before when we used the native browser built in is module functionality but with Westpac
+
+40
+00:02:59,300 --> 00:03:05,210
+You don't need these extensions because webpage will actually automatically look for dot jazz and certain
+
+41
+00:03:05,210 --> 00:03:09,290
+other extension files so you don't and you shouldn't add them here.
+
+42
+00:03:09,410 --> 00:03:14,600
+Otherwise webpage will look for files with a double extension which you don't want to remove.
+
+43
+00:03:14,630 --> 00:03:22,670
+Doc J.S. on all these imports here and once you did that save all these files to make sure you were
+
+44
+00:03:22,760 --> 00:03:24,740
+well changes are applied.
+
+45
+00:03:24,740 --> 00:03:32,660
+Now back to where picked up convict J.S. dear you now should add entry property in this exported object
+
+46
+00:03:32,960 --> 00:03:37,550
+and point at dot slash source slash app t s.
+
+47
+00:03:37,550 --> 00:03:38,750
+In our example.
+
+48
+00:03:38,750 --> 00:03:43,970
+So at the root entry file of your project next.
+
+49
+00:03:44,070 --> 00:03:50,730
+Add a output key here and output now actually is the object here where we first of all specify the file
+
+50
+00:03:50,730 --> 00:03:51,150
+name.
+
+51
+00:03:51,150 --> 00:03:55,530
+This will be the single JavaScript file which will be produced in the end.
+
+52
+00:03:55,530 --> 00:03:59,220
+And here it will name it bundled J.S. but you could name it whatever you want.
+
+53
+00:03:59,250 --> 00:04:00,590
+App jazz or whatever.
+
+54
+00:04:00,630 --> 00:04:08,250
+Well whatever you want you can also add dynamic parts here for example content hash to tell webpage
+
+55
+00:04:08,280 --> 00:04:14,000
+to automatically create a unique hash for every build which can help you with caching in the browser.
+
+56
+00:04:14,070 --> 00:04:17,130
+But again you can learn more about that in the webpage docs here.
+
+57
+00:04:17,130 --> 00:04:19,630
+We don't need that so we'll just name the file bundle.
+
+58
+00:04:19,640 --> 00:04:26,040
+J.S. in addition to the file name you also need to specify the path where the output should be written
+
+59
+00:04:26,040 --> 00:04:26,760
+to.
+
+60
+00:04:26,760 --> 00:04:30,060
+And of course statute matched a path you have in your team's conflict.
+
+61
+00:04:30,090 --> 00:04:37,500
+J.S. Jason File to avoid errors so that this folder now unlike in a t is conflict Jason File you shouldn't
+
+62
+00:04:37,500 --> 00:04:40,240
+write dot slash disk here.
+
+63
+00:04:40,240 --> 00:04:47,790
+Web Peg wants an absolute path here and to build one we can use a no chess module for Dad we can use
+
+64
+00:04:47,790 --> 00:04:54,210
+to know chess import syntax which uses that require a keyword and import the path module.
+
+65
+00:04:54,270 --> 00:04:56,380
+You don't need to install this as a library.
+
+66
+00:04:56,400 --> 00:05:00,060
+This is a core no chess module which you already have.
+
+67
+00:05:00,060 --> 00:05:06,090
+If you've got no chance installed which you do because we did that earlier in the course now you can
+
+68
+00:05:06,090 --> 00:05:12,700
+use path to call the resolve method there which allows you to build an absolute path to a certain folder.
+
+69
+00:05:12,930 --> 00:05:19,470
+For Dad we use a special constant the underscore underscore dir name constant which is available globally
+
+70
+00:05:19,560 --> 00:05:21,900
+in a node chess environment and webpage.
+
+71
+00:05:21,900 --> 00:05:28,660
+As I said uses node j asked to execute your files and then as a second argument dist in the end this
+
+72
+00:05:28,650 --> 00:05:34,890
+just constructs an absolute path to the dist folder which Westpac then uses to write your output there
+
+73
+00:05:35,760 --> 00:05:41,220
+well and with Dad you've got an entry point and an output point but you don't tell webpage what to do
+
+74
+00:05:41,220 --> 00:05:47,320
+with your types good files because by default webpage doesn't know that by default it's just a bundler.
+
+75
+00:05:47,490 --> 00:05:54,960
+Any extra functionality like compiling type 2 JavaScript has to be taught to Westpac we'll do that in
+
+76
+00:05:54,960 --> 00:05:55,800
+the next lecture.

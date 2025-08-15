@@ -1,0 +1,83 @@
+1
+00:00:02,230 --> 00:00:08,380
+So we added Webb pack a very important tool that allows us to bundle together our different files into
+
+2
+00:00:08,380 --> 00:00:09,700
+one bundle.
+
+3
+00:00:09,700 --> 00:00:16,530
+This really helps us decrease the amount of hp requests made and therefore can speed up our application.
+
+4
+00:00:16,570 --> 00:00:21,880
+If you find yourself working with a lot of individual files what you typically do in bigger projects
+
+5
+00:00:22,270 --> 00:00:27,670
+tools like pick are a must use and webpage is the most important and prominent tool that helps you with
+
+6
+00:00:27,670 --> 00:00:28,190
+that.
+
+7
+00:00:28,240 --> 00:00:31,090
+So therefore it's the tool I wanted to show here.
+
+8
+00:00:31,240 --> 00:00:36,670
+You see that webpage is highly configurable and as I mentioned multiple times the official docs of webpage
+
+9
+00:00:36,760 --> 00:00:42,610
+are the place to go to learn all about it about different loaders different other settings you can set
+
+10
+00:00:42,610 --> 00:00:44,830
+up and how it works in general.
+
+11
+00:00:44,830 --> 00:00:50,440
+So definitely dive into this documentation if you want to become a webpage monster and you want to have
+
+12
+00:00:50,440 --> 00:00:52,810
+a more elaborate setup.
+
+13
+00:00:52,810 --> 00:00:59,130
+Our basic set up here however already allows us to compile type files with the Web pack and then bundle
+
+14
+00:00:59,130 --> 00:01:06,370
+to gather all the output into one single bundle jazz file and we also set up a configuration for development
+
+15
+00:01:06,550 --> 00:01:13,120
+which makes debugging easier and gives us more helpful error messages and we get a production setup
+
+16
+00:01:13,300 --> 00:01:19,270
+which gives us a highly optimized code which we then could deploy to a server to ship as little code
+
+17
+00:01:19,450 --> 00:01:22,200
+as possible to it and that's it.
+
+18
+00:01:22,210 --> 00:01:28,420
+Web Peg really is a core tool and being able to use it and having a configuration that really just works
+
+19
+00:01:28,750 --> 00:01:30,180
+is super important.
+
+20
+00:01:30,310 --> 00:01:32,950
+So it is a must use in any modern project.
+
+21
+00:01:32,950 --> 00:01:38,620
+I would say and in this module you learned how you can get started with it in your types good projects.

@@ -1,0 +1,195 @@
+1
+00:00:02,170 --> 00:00:07,140
+We prepared our development workflow for Westpac here configuring it for the webpage.
+
+2
+00:00:07,150 --> 00:00:13,210
+Def server setting the mode to development and setting up source maps to improve our debugging experience
+
+3
+00:00:13,210 --> 00:00:16,600
+to give us better error messages and so on.
+
+4
+00:00:16,600 --> 00:00:18,120
+Now for production.
+
+5
+00:00:18,130 --> 00:00:23,890
+So when we want to prepare our code to upload it to a server where it then will be served to our end
+
+6
+00:00:23,890 --> 00:00:24,650
+users.
+
+7
+00:00:24,820 --> 00:00:30,030
+We typically want a different workflow and therefore I'll add a new config file where picked out conflict
+
+8
+00:00:30,030 --> 00:00:37,570
+up port dot J.S. This name is not up to you because webpage will not look for it by default will tell
+
+9
+00:00:37,570 --> 00:00:43,510
+it to look for it in a second though before we tell it let's actually copy all the development set up
+
+10
+00:00:43,510 --> 00:00:46,720
+here over to this conflict a pratfall.
+
+11
+00:00:46,750 --> 00:00:51,180
+But now let's find unit we can set mode to production for example.
+
+12
+00:00:51,220 --> 00:00:56,620
+This will tell where pick to do these optimizations modify our code and so on.
+
+13
+00:00:56,650 --> 00:00:58,910
+He would definitely want to set this here.
+
+14
+00:00:59,260 --> 00:01:04,870
+We'll leave entry and output we can get rid of the public path because Dad was required for the webpage.
+
+15
+00:01:04,870 --> 00:01:05,920
+Def server.
+
+16
+00:01:05,920 --> 00:01:11,560
+Now we will not use it here because for production we want to run the webpage script and generate our
+
+17
+00:01:11,560 --> 00:01:16,960
+output written to disk and not served temporarily on a locally running server.
+
+18
+00:01:16,960 --> 00:01:24,490
+We can set def tool to non to not generate any source maps here because in production we might not need
+
+19
+00:01:24,490 --> 00:01:26,020
+them.
+
+20
+00:01:26,170 --> 00:01:31,680
+Now the rest can stay as it is but we will add more at the bottom here.
+
+21
+00:01:31,690 --> 00:01:36,220
+I want to add a plug ins entry and set us to an array.
+
+22
+00:01:36,220 --> 00:01:41,050
+Plug ins are extra well extensions or well plug ins.
+
+23
+00:01:41,110 --> 00:01:46,720
+You can add to your webpage workflow which will basically be applied to the entire output to the entire
+
+24
+00:01:46,720 --> 00:01:47,760
+project.
+
+25
+00:01:47,860 --> 00:01:52,870
+Rules and modules specifically are applied on a per file level.
+
+26
+00:01:52,870 --> 00:01:57,150
+Plug ins are applied to the general workflow.
+
+27
+00:01:57,280 --> 00:02:02,980
+Here I want to add a plug in which automatically deletes everything in the disk folder before a new
+
+28
+00:02:03,070 --> 00:02:04,420
+output is written there.
+
+29
+00:02:04,420 --> 00:02:09,850
+So did we always just have the latest most recent output in the this folder for that.
+
+30
+00:02:09,850 --> 00:02:18,170
+I'll install a brand new package with dash dash save def and that's the clean dash web pack Dash.
+
+31
+00:02:18,170 --> 00:02:26,410
+Plug in and this will help us clean up the this folder in our case whenever we rebuild our project.
+
+32
+00:02:26,410 --> 00:02:29,850
+So with that installed let's import it here at the top.
+
+33
+00:02:29,860 --> 00:02:37,690
+I'll name it clean plug in and imported via require clean dash webpage dash plug in and with it installed
+
+34
+00:02:37,690 --> 00:02:39,790
+in the plugins array at the bottom.
+
+35
+00:02:39,850 --> 00:02:47,260
+We just call new clean plug in thought clean webpage plug in and instantiate this does as a constructor
+
+36
+00:02:47,260 --> 00:02:49,630
+function and now instantiate it.
+
+37
+00:02:49,690 --> 00:02:55,150
+This is all you need to do here and this will in the end tell where Peck dead before it writes something
+
+38
+00:02:55,150 --> 00:02:59,440
+to his output folder it will clear everything that is in there.
+
+39
+00:02:59,500 --> 00:03:05,320
+Now we got the finished production workflow now to use it let's go to package stuff Jason and there
+
+40
+00:03:05,340 --> 00:03:07,820
+lets a justice build script here.
+
+41
+00:03:07,870 --> 00:03:14,260
+I want to tell webpage to use this prod filed as production configuration file and we do so by adding
+
+42
+00:03:14,260 --> 00:03:21,130
+dash dash config and then Westpac DOD conflict port dot J.S. here.
+
+43
+00:03:21,130 --> 00:03:26,530
+This here should be whichever file name you chose and this instructs webpage to use disk configuration
+
+44
+00:03:26,530 --> 00:03:32,710
+file instead of the default webpage dot conflict dot choice file it normally looks for with that if
+
+45
+00:03:32,710 --> 00:03:38,620
+you now run NPM run build it will build your app for production which means it gives you this optimized
+
+46
+00:03:38,710 --> 00:03:45,520
+output so if you wait here we get the bundled J as file and this is now really optimized code built
+
+47
+00:03:45,520 --> 00:03:51,970
+for production and this together with your index H Tim l file and apps yes as file is what you would
+
+48
+00:03:51,970 --> 00:04:00,300
+put onto a server here if you want to deploy your application this is also the end of this module.
+
+49
+00:04:00,480 --> 00:04:01,940
+Now let me sum up what we learn.

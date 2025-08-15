@@ -1,0 +1,43 @@
+1
+00:00:02,210 --> 00:00:09,890
+In the previous modules we worked on a project and dear we ever had all our code in one file which made
+
+2
+00:00:09,890 --> 00:00:16,910
+it hard to manage or we actually split it into multiple files either by using name spaces or by using
+
+3
+00:00:16,910 --> 00:00:19,340
+these iOS 6 modules.
+
+4
+00:00:19,340 --> 00:00:26,630
+But when using iOS 6 modules whilst our code was more manageable we actually had another disadvantage
+
+5
+00:00:26,660 --> 00:00:33,200
+into which I'll dive again in this module again in this module will not also have a look at that disadvantage
+
+6
+00:00:33,200 --> 00:00:33,870
+again.
+
+7
+00:00:33,890 --> 00:00:37,660
+More importantly we'll have a look at a solution Westpac.
+
+8
+00:00:37,820 --> 00:00:45,170
+So in this module you will learn what exactly web Peg is and of course stand we'll also use it to get
+
+9
+00:00:45,260 --> 00:00:52,880
+a set up a project setup which gives us the best of all worlds actually where we can write code split
+
+10
+00:00:52,880 --> 00:00:56,550
+up into multiple files without that disadvantage.
+
+11
+00:00:56,630 --> 00:00:58,470
+Add which will have a look at now.

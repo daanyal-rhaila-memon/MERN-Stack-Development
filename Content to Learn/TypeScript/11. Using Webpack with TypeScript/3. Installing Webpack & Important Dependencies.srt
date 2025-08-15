@@ -1,0 +1,175 @@
+1
+00:00:02,200 --> 00:00:07,900
+So back in our project if you want to use web packed air I will first of all quit my compilation and
+
+2
+00:00:07,930 --> 00:00:13,890
+that current development server and instead make sure we can use Web pick their noses.
+
+3
+00:00:13,890 --> 00:00:17,140
+Does is already a file of the packaged dot Jason File.
+
+4
+00:00:17,140 --> 00:00:23,560
+We can use NPM to install more dependencies into this project so simply more third party libraries we
+
+5
+00:00:23,560 --> 00:00:24,570
+need in this project.
+
+6
+00:00:25,150 --> 00:00:31,090
+And here I don't mean third party libraries which provide us certain functionalities we use in our code
+
+7
+00:00:31,480 --> 00:00:38,020
+but instead third party libraries that help us set up a project workflow and configuration that makes
+
+8
+00:00:38,020 --> 00:00:40,410
+development very efficient for us.
+
+9
+00:00:40,480 --> 00:00:48,310
+We do this with npm install dash dash safe dash death to indicate that it's development only dependency
+
+10
+00:00:48,880 --> 00:01:00,670
+and then Westpac Westpac dash Seelye Westpac dash def dash server TypeScript and T as loader.
+
+11
+00:01:01,090 --> 00:01:04,800
+So that's a bunch of packages and I will say what they do in a second.
+
+12
+00:01:04,840 --> 00:01:09,940
+So let's first of all hit enter and make sure these are all now all getting installed into our project
+
+13
+00:01:09,940 --> 00:01:14,120
+here and there after we'll have a look at each package and see why we installed it.
+
+14
+00:01:14,140 --> 00:01:16,330
+So let's wait for this to finish.
+
+15
+00:01:16,330 --> 00:01:22,340
+So it did finish installing for me here and now with that let's analyze what we installed in package
+
+16
+00:01:22,340 --> 00:01:22,800
+store.
+
+17
+00:01:22,800 --> 00:01:28,870
+Jason the new def dependencies section or it already existed but now we have a lot of new packages there
+
+18
+00:01:28,870 --> 00:01:29,650
+I should say.
+
+19
+00:01:29,890 --> 00:01:31,320
+These packages were added.
+
+20
+00:01:31,330 --> 00:01:33,710
+Now what do all these packages do.
+
+21
+00:01:33,730 --> 00:01:37,560
+Let's start with Westpac where Peg is the tool I just talked about.
+
+22
+00:01:37,660 --> 00:01:44,740
+It's the heart of this entire setup we're now going to create it is a tool that allows us to plug in
+
+23
+00:01:44,740 --> 00:01:51,010
+certain functionalities to bomb lower code and also to transform our code and that transform our code
+
+24
+00:01:51,010 --> 00:01:52,540
+part is important.
+
+25
+00:01:52,540 --> 00:01:57,340
+We're having a typescript project here right now of course we could certainly use weapon to then bundle
+
+26
+00:01:57,370 --> 00:02:04,360
+together all the javascript output but it would be even nicer if webpage would do both transform our
+
+27
+00:02:04,360 --> 00:02:11,470
+types could code to JavaScript and then actually emit a bundled JavaScript file and webpage is able
+
+28
+00:02:11,470 --> 00:02:18,220
+to do that thankfully we need to WebEx seal I to run webpage commands in our project and the webpage
+
+29
+00:02:18,250 --> 00:02:25,620
+def server to have debt built in development server which starts Westpac under the hood which watches
+
+30
+00:02:25,630 --> 00:02:32,410
+our files for changes automatically triggers webpage to recompile when something changes and which then
+
+31
+00:02:32,410 --> 00:02:39,370
+also serves our page and then we got to typescript into types could lower the T S loader here.
+
+32
+00:02:39,490 --> 00:02:45,370
+Now we already installed typescript globally on our machine which is why we are able to run TSC dash
+
+33
+00:02:45,400 --> 00:02:53,440
+w now it is a good practice to also install a copy of typescript per project so that for this project
+
+34
+00:02:53,470 --> 00:02:59,830
+you get a specific typescript where's the advantages that if you ever change your global ties with working
+
+35
+00:03:00,100 --> 00:03:06,460
+you don't break your project whereas in your project setup if there were breaking changes in typescript
+
+36
+00:03:06,460 --> 00:03:07,210
+itself.
+
+37
+00:03:07,330 --> 00:03:11,470
+So we can lock in a specific word of typescript for a project.
+
+38
+00:03:11,470 --> 00:03:17,100
+That's why we install it separately here and the T as loader now is a package which will work together
+
+39
+00:03:17,110 --> 00:03:18,400
+with Westpac.
+
+40
+00:03:18,400 --> 00:03:25,690
+The T is loader is a package that tells where peg how to convert type code to JavaScript so did webpage
+
+41
+00:03:25,810 --> 00:03:32,410
+is able to do both compile our code with the help of types of loader which in turn of course uses the
+
+42
+00:03:32,410 --> 00:03:39,400
+types of compiler under the hood and then we pick all those able to bundle our emitted JavaScript files
+
+43
+00:03:39,790 --> 00:03:48,130
+into a bundle J.S. file into one bundled code file well and with that let us simply get started and
+
+44
+00:03:48,130 --> 00:03:53,080
+let's set up a webpage project so that we can use webpage for all these nice things.
