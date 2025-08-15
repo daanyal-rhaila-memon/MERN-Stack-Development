@@ -1,0 +1,235 @@
+1
+00:00:02,350 --> 00:00:04,270
+So we're using iOS modules.
+
+2
+00:00:04,270 --> 00:00:10,110
+Turns out there are some variations of that export and import syntax which you should be aware of.
+
+3
+00:00:10,150 --> 00:00:16,120
+For example you can bundle imports let's say here and project input where I'm importing two things from
+
+4
+00:00:16,120 --> 00:00:18,440
+the validation file here.
+
+5
+00:00:18,490 --> 00:00:26,230
+You might want to group that all into one object where you then can call dot validate Abel and Dot validate
+
+6
+00:00:26,650 --> 00:00:29,180
+so that you don't have to call validate like this.
+
+7
+00:00:29,200 --> 00:00:34,480
+Maybe you want to call it like this but if you had let's say a function of the same name in here or
+
+8
+00:00:34,480 --> 00:00:39,040
+anything like that and you want to a a name clash or you want to make it clear that this belongs to
+
+9
+00:00:39,040 --> 00:00:43,810
+some kind of package you could group that to group imports.
+
+10
+00:00:43,810 --> 00:00:49,930
+You don't import them like this with the curly braces but instead you use a star here which means import
+
+11
+00:00:50,050 --> 00:00:57,670
+everything from the file s and then any alias of your choice for example validation.
+
+12
+00:00:57,690 --> 00:01:03,600
+Now you have to go to the places where you use something from that file and use it like object validation
+
+13
+00:01:03,780 --> 00:01:10,110
+dot validate all so everything which is exported in that file which are now group under this name here
+
+14
+00:01:10,470 --> 00:01:12,750
+is access through the dot notation.
+
+15
+00:01:12,870 --> 00:01:18,820
+So validation dot validated Bill all the way and then all down there where we have to validate function.
+
+16
+00:01:18,870 --> 00:01:25,340
+It's of course validation dot validate validation dot validate and validation dot validate.
+
+17
+00:01:25,560 --> 00:01:29,930
+And with that you will see well validation works.
+
+18
+00:01:30,000 --> 00:01:37,080
+So grouping is one thing you can do that Alice thing here is also something you can do in general you're
+
+19
+00:01:37,080 --> 00:01:41,820
+not liking order bind like this you want to have a capital character at the beginning while you can
+
+20
+00:01:41,820 --> 00:01:46,830
+simply assign an alias with the s keyword here inside of the curly braces.
+
+21
+00:01:46,830 --> 00:01:48,030
+You can use it as well.
+
+22
+00:01:48,180 --> 00:01:54,180
+Then you rename this import and only dis import you don't rename it in your original file of course
+
+23
+00:01:54,420 --> 00:01:58,430
+it's only imported under a different name in this file here.
+
+24
+00:01:58,440 --> 00:02:04,470
+So now instead of using all the bind with a lowercase a here we now have to use our alias name with
+
+25
+00:02:04,470 --> 00:02:05,520
+the uppercase a.
+
+26
+00:02:05,850 --> 00:02:11,550
+So that can be a number nice feature to avoid name clashes if you had a number of thing named to bind
+
+27
+00:02:11,610 --> 00:02:20,840
+with a lowercase a in the same file for example you can also work with default exports if you have a
+
+28
+00:02:20,840 --> 00:02:25,080
+file which only exports one thing let's say base component.
+
+29
+00:02:25,160 --> 00:02:27,910
+Actually we have a lot of files that only export one thing.
+
+30
+00:02:28,040 --> 00:02:34,130
+But let's say here in this fall we don't want to export did like this a so-called named export because
+
+31
+00:02:34,130 --> 00:02:40,700
+we imported by name here in the curly braces we need to use the exact name we use here.
+
+32
+00:02:40,700 --> 00:02:45,200
+If you don't want to do that you simply add another keyword default.
+
+33
+00:02:45,200 --> 00:02:53,180
+And this tells javascript that this is the main well the default export office file you could still
+
+34
+00:02:53,180 --> 00:02:56,320
+have our named exports here.
+
+35
+00:02:56,570 --> 00:03:03,690
+That would be allowed whips for example a constant here that would be allowed you can if named and default
+
+36
+00:03:03,720 --> 00:03:09,840
+exports mixed in the same file but if you use a default export you can only have one default export
+
+37
+00:03:09,890 --> 00:03:11,440
+per file.
+
+38
+00:03:11,490 --> 00:03:15,400
+So here I have my default export and now in the files were imported.
+
+39
+00:03:15,510 --> 00:03:20,670
+You don't imported by name you can only import named exports by name for example.
+
+40
+00:03:20,670 --> 00:03:22,930
+That's something constant added.
+
+41
+00:03:23,040 --> 00:03:29,640
+Instead you import your default simply by choosing any name of your choice now which doesn't have to
+
+42
+00:03:29,640 --> 00:03:33,930
+match the name you used in the export that file so you don't have to use component.
+
+43
+00:03:33,930 --> 00:03:41,560
+Now you could you use just CFP for example here now and imported like this without curly braces.
+
+44
+00:03:41,640 --> 00:03:43,050
+There also is no star.
+
+45
+00:03:43,230 --> 00:03:47,320
+So I'm not importing everything I'm just importing the default.
+
+46
+00:03:47,320 --> 00:03:52,830
+Therefore this is only available if the file you're importing from has a default export because this
+
+47
+00:03:52,830 --> 00:04:00,300
+tells javascript hey I want to use the default export of that file then here I can name the CFP of course
+
+48
+00:04:00,560 --> 00:04:06,240
+or I have to use CFP of course now component is not allowed anymore because I'm not importing it by
+
+49
+00:04:06,240 --> 00:04:07,410
+that name.
+
+50
+00:04:07,410 --> 00:04:13,050
+Of course we now all need to tweet this and project item and project list we used to default export.
+
+51
+00:04:13,050 --> 00:04:17,820
+I will stick to component here but you don't have to as I just showed you could use any name you want
+
+52
+00:04:17,820 --> 00:04:21,820
+here but for simplicity I will use component here.
+
+53
+00:04:21,930 --> 00:04:25,790
+Default exports can be nice if you only have one thing per file.
+
+54
+00:04:25,800 --> 00:04:32,850
+I personally prefer named exports though because you get auto completion you enforce a clear naming
+
+55
+00:04:32,850 --> 00:04:33,610
+pattern.
+
+56
+00:04:33,660 --> 00:04:41,130
+If another developer imports your class or your export that thing he has to use your name which typically
+
+57
+00:04:41,130 --> 00:04:47,230
+is good because it allows you to enforce certain naming conventions across a team or organization.
+
+58
+00:04:47,310 --> 00:04:52,800
+And therefore I personally like named exports but of course you should be aware of the default export
+
+59
+00:04:52,800 --> 00:04:54,720
+as well which you can use like that.

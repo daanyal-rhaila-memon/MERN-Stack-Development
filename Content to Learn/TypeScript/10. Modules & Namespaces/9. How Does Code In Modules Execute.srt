@@ -1,0 +1,87 @@
+1
+00:00:02,580 --> 00:00:09,470
+Now besides these different imports and exports and taxes which are good to know there is one other
+
+2
+00:00:09,470 --> 00:00:17,230
+thing which you have to understand and know in Project state we're not just exporting a class or an
+
+3
+00:00:17,230 --> 00:00:23,200
+interface as we're doing it in all the other faults but we're actually exporting a constant project
+
+4
+00:00:23,200 --> 00:00:23,850
+state.
+
+5
+00:00:23,860 --> 00:00:28,690
+Now the thing is we're importing this constant in multiple our files.
+
+6
+00:00:28,690 --> 00:00:30,720
+We're importing it in the project list.
+
+7
+00:00:30,740 --> 00:00:35,320
+TSA file overalls importing it and the project input t file.
+
+8
+00:00:35,530 --> 00:00:38,520
+So we import from the same file multiple times.
+
+9
+00:00:38,530 --> 00:00:44,570
+The question is does this code in this file namely the creation of this constant here.
+
+10
+00:00:44,610 --> 00:00:52,240
+Does this run once or twice or how often does it run once per import statement or once for the entire
+
+11
+00:00:52,240 --> 00:00:53,280
+app.
+
+12
+00:00:53,290 --> 00:01:01,000
+Well turns out it runs once when the file is imported for the first time by any other file.
+
+13
+00:01:01,060 --> 00:01:07,340
+If a number of file then imports that same file again it does not run again.
+
+14
+00:01:07,390 --> 00:01:14,670
+We can all to validate this by adding a console log statement here running we'll see this only will
+
+15
+00:01:14,680 --> 00:01:16,030
+get printed ones.
+
+16
+00:01:16,240 --> 00:01:21,290
+Even though we're importing project status both here and the project list.
+
+17
+00:01:21,290 --> 00:01:25,150
+Yes file and then the project input yes file still.
+
+18
+00:01:25,240 --> 00:01:29,180
+This will only be printed to the console once you see it here running.
+
+19
+00:01:29,230 --> 00:01:33,750
+It will never be printed a second time no matter what we do.
+
+20
+00:01:33,760 --> 00:01:36,380
+So this only runs once.
+
+21
+00:01:36,400 --> 00:01:39,310
+This is how it behaves and this is just something you have to know.
+
+22
+00:01:39,430 --> 00:01:41,590
+So you can plan your app appropriately.

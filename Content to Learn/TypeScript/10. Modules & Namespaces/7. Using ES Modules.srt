@@ -1,0 +1,555 @@
+1
+00:00:02,460 --> 00:00:07,260
+Name spaces are pretty nice but they're not necessarily perfect.
+
+2
+00:00:07,290 --> 00:00:13,350
+We saw one problem in the last lecture where I manually added all dependencies to each file.
+
+3
+00:00:13,350 --> 00:00:18,780
+When I remove drag and drop from Project List Yes for example it still compiles without errors.
+
+4
+00:00:18,810 --> 00:00:20,380
+This is not ideal.
+
+5
+00:00:20,400 --> 00:00:26,550
+Now it might or might not work depending on whether some other file imports that drag drop model which
+
+6
+00:00:26,550 --> 00:00:27,600
+I indeed need here.
+
+7
+00:00:27,600 --> 00:00:29,130
+Which here would be the case.
+
+8
+00:00:29,160 --> 00:00:33,240
+So technically even after removing this it works here.
+
+9
+00:00:33,240 --> 00:00:34,440
+But this is not right.
+
+10
+00:00:34,440 --> 00:00:40,230
+This is pretty dangerous if we rely on the fact that some file will handle it for us.
+
+11
+00:00:40,410 --> 00:00:47,190
+Well if we then delete or change that file which saved our ass we suddenly changed something totally
+
+12
+00:00:47,190 --> 00:00:49,290
+unrelated and our app stops working.
+
+13
+00:00:49,290 --> 00:00:50,760
+We definitely don't want that.
+
+14
+00:00:51,480 --> 00:00:57,840
+So it would be nice if we had imports and exports that clearly state what we import from which file
+
+15
+00:00:58,260 --> 00:00:59,670
+and if we need something here.
+
+16
+00:00:59,670 --> 00:01:05,880
+Drag Target for example and we're not importing it explicitly we get an error that is basically what
+
+17
+00:01:05,880 --> 00:01:13,860
+we want and we get this behavior with iOS 6 modules now iOS 6 modules also exist outside of the types
+
+18
+00:01:13,860 --> 00:01:19,920
+of the world modern browsers support them natively where the browser will then basically download all
+
+19
+00:01:19,920 --> 00:01:25,980
+dependencies of a file when it executes but types and all the supports them and then gets the additional
+
+20
+00:01:25,980 --> 00:01:28,380
+type support when we use them.
+
+21
+00:01:28,380 --> 00:01:31,230
+Now how do iOS 6 modules work.
+
+22
+00:01:31,380 --> 00:01:33,470
+Let's again start with drag and drop.
+
+23
+00:01:33,660 --> 00:01:37,360
+Let's remove that namespace thing which is a pure times good feature.
+
+24
+00:01:37,410 --> 00:01:44,520
+Let's keep the export keyword though the export keyword is not just there to work with namespace it's
+
+25
+00:01:44,520 --> 00:01:49,860
+actually a default javascript syntax which is also supported by typescript.
+
+26
+00:01:49,860 --> 00:01:56,490
+It means that you export this interface and this one here as well from this file and you can then import
+
+27
+00:01:56,490 --> 00:01:58,310
+it into a number of file.
+
+28
+00:01:58,500 --> 00:02:03,030
+In our case here we need it in the project item and project list files.
+
+29
+00:02:03,030 --> 00:02:09,060
+Now let's start with the project item to import something from yes module.
+
+30
+00:02:09,060 --> 00:02:16,110
+So with that is module syntax you specify import at the top of the file or near the top of the file
+
+31
+00:02:16,140 --> 00:02:18,950
+before you start writing any actual code.
+
+32
+00:02:19,140 --> 00:02:27,350
+Import from and then you point at that file with a relative path from the file on in which you are importing.
+
+33
+00:02:27,360 --> 00:02:32,520
+So in this case we need to go up one level with two dots and a slash so that we are in a source folder
+
+34
+00:02:32,880 --> 00:02:37,260
+and then we need to go here to the models folder and import drag and drop.
+
+35
+00:02:37,500 --> 00:02:45,150
+Now important at DOT J as here because you need to import as if it is already were compiled because
+
+36
+00:02:45,180 --> 00:02:50,880
+this will be taken over into vanilla javascript and then it should look for JavaScript there.
+
+37
+00:02:50,880 --> 00:02:54,920
+So for JavaScript files so dot J needs to be added.
+
+38
+00:02:55,050 --> 00:03:01,140
+Now you import something from there and for Dad you add curly braces between which you specify what
+
+39
+00:03:01,140 --> 00:03:08,030
+you want to import from that file and their I already get auto completion I want to import Dragon Ball
+
+40
+00:03:08,480 --> 00:03:14,690
+now Dragon Ball is available here and typescript sees that this is no way lable and is happy now we
+
+41
+00:03:14,690 --> 00:03:17,930
+need to convert everything so that I can show does at runtime.
+
+42
+00:03:17,960 --> 00:03:22,670
+So let's get rid of the namespace here as well not the closing curly brace as well.
+
+43
+00:03:22,770 --> 00:03:25,040
+And so for example here now we get what we want.
+
+44
+00:03:25,040 --> 00:03:29,410
+We get errors we get a component error project this is all missing.
+
+45
+00:03:29,690 --> 00:03:31,820
+So let's export and import all these things.
+
+46
+00:03:31,910 --> 00:03:37,130
+For example in base component get rid of the namespace keep the export keyword as you learned get rid
+
+47
+00:03:37,130 --> 00:03:40,820
+of the closing curly brace and reformat and project input.
+
+48
+00:03:40,820 --> 00:03:45,220
+We can also get rid of the namespace and all of the references here.
+
+49
+00:03:45,230 --> 00:03:48,620
+You can actually delete all reference imports you have anywhere
+
+50
+00:03:51,330 --> 00:03:58,160
+get rid of all the namespace curly braces project list get rid of the namespace and the references get
+
+51
+00:03:58,160 --> 00:04:04,220
+rid of the closing curly brace down there in decorators get rid of the namespace at the closing curly
+
+52
+00:04:04,220 --> 00:04:06,550
+brace and drag and drop.
+
+53
+00:04:06,620 --> 00:04:12,800
+We already got rid of it project get rid of the namespace and the closing currently braise project state
+
+54
+00:04:12,830 --> 00:04:22,640
+unsurprisingly get rid of the namespace and the closing curly brace here we actually were relying on
+
+55
+00:04:22,640 --> 00:04:28,370
+project being imported by some high profile I didn't have references to it here so that was that dangerous
+
+56
+00:04:28,400 --> 00:04:33,620
+behavior I was talking about this could have failed if we wouldn't import or if we wouldn't reference
+
+57
+00:04:33,620 --> 00:04:39,590
+our project part in the namespace in some high profile so that definitely was not ideal but with that
+
+58
+00:04:39,590 --> 00:04:45,440
+let's continue our refactoring and validation here get rid of the namespace here and all of the closing
+
+59
+00:04:45,440 --> 00:04:50,780
+curly brace here at the bottom and last but the least an apt yes get rid of these imports and if the
+
+60
+00:04:50,780 --> 00:04:57,360
+namespace so now we got errors everywhere but now we can start over.
+
+61
+00:04:57,360 --> 00:04:59,580
+Now let's maybe start over in the base component.
+
+62
+00:04:59,580 --> 00:05:00,570
+This is looking good.
+
+63
+00:05:00,570 --> 00:05:04,970
+It's not complaining it seems to have everything at once project input.
+
+64
+00:05:05,040 --> 00:05:06,240
+Well it is complaining.
+
+65
+00:05:06,300 --> 00:05:08,360
+For example there we need to component.
+
+66
+00:05:08,520 --> 00:05:15,830
+So let's add a import at the top and let's import component from dot slash based component.
+
+67
+00:05:15,840 --> 00:05:20,010
+This is how you import relatively if something is in the same folder.
+
+68
+00:05:20,010 --> 00:05:21,440
+Dot slash at the beginning.
+
+69
+00:05:21,570 --> 00:05:24,010
+Then the file name and then all the important Dot.
+
+70
+00:05:24,020 --> 00:05:25,680
+J.S. don't forget the dot.
+
+71
+00:05:25,710 --> 00:05:35,150
+J.S. at the end we also need to validator bull interface here and to validate method order of mind and
+
+72
+00:05:35,150 --> 00:05:36,800
+project state.
+
+73
+00:05:36,800 --> 00:05:39,000
+So let's import all these things.
+
+74
+00:05:39,200 --> 00:05:48,410
+Let's import from dot slash or no go up one level that you till then validation dot J.S. let's import
+
+75
+00:05:48,410 --> 00:05:57,170
+from that file validate lable and the validate function and import order bind from going up on level
+
+76
+00:05:57,320 --> 00:06:02,590
+decorators all to bind J.S. and last but not least a project state.
+
+77
+00:06:02,640 --> 00:06:10,920
+Let's import from going up on level state projects state J.S. from there we can import the project state
+
+78
+00:06:11,010 --> 00:06:13,200
+constant that we export there.
+
+79
+00:06:13,290 --> 00:06:20,060
+Now these are all the imports we need here to make this file work so let's we want to project item now
+
+80
+00:06:20,530 --> 00:06:23,260
+in there we need all the blind we need component.
+
+81
+00:06:23,270 --> 00:06:25,000
+We need the project model.
+
+82
+00:06:25,220 --> 00:06:26,750
+So let's add all these things.
+
+83
+00:06:26,750 --> 00:06:38,020
+Let's for example import the project model from dot dot slash models project J.S. let's also add component
+
+84
+00:06:39,390 --> 00:06:41,020
+which lives in the same folder.
+
+85
+00:06:41,130 --> 00:06:53,150
+So import dot slash based component J.S. and all the bind let's import order bind from dot dot slash
+
+86
+00:06:53,240 --> 00:06:55,900
+decorators order blind J.S..
+
+87
+00:06:56,060 --> 00:07:01,250
+And now this file here also has everything it needs.
+
+88
+00:07:01,290 --> 00:07:04,770
+Now let's move onto project list here and project lists.
+
+89
+00:07:04,770 --> 00:07:12,540
+We also need the component and zones I will actually Copy that over here from Project item added to
+
+90
+00:07:12,540 --> 00:07:13,410
+project list.
+
+91
+00:07:13,410 --> 00:07:17,610
+Yes but we don't need Dragonball here but drag target instead.
+
+92
+00:07:17,610 --> 00:07:19,080
+So let's import that.
+
+93
+00:07:19,470 --> 00:07:23,970
+And in addition we need the project state project status.
+
+94
+00:07:24,590 --> 00:07:24,930
+Yeah.
+
+95
+00:07:24,960 --> 00:07:28,780
+These are the things we need and also the project item plus.
+
+96
+00:07:28,830 --> 00:07:32,760
+So from the project model file we can also import project status.
+
+97
+00:07:32,760 --> 00:07:37,830
+You can't import multiple export the things from one at the same filed by simply separating them with
+
+98
+00:07:37,830 --> 00:07:41,610
+a comma between these curly braces just as you were seeing it here.
+
+99
+00:07:41,790 --> 00:07:52,450
+We also import the project stayed constant from the State folder project state J.S. and all the import.
+
+100
+00:07:52,460 --> 00:07:56,910
+Last but not least here at the very bottom we need it the project item class.
+
+101
+00:07:57,170 --> 00:08:03,470
+So import project item from dot slash project item dot J.S.
+
+102
+00:08:06,850 --> 00:08:08,540
+so let's move on.
+
+103
+00:08:08,560 --> 00:08:13,240
+Order bind is fine project state is complaining there we need the project model.
+
+104
+00:08:13,660 --> 00:08:25,710
+So at the top let's import project from going up one level models project on J.S. we also are using
+
+105
+00:08:25,710 --> 00:08:27,320
+project state as in here.
+
+106
+00:08:27,330 --> 00:08:29,400
+So let's import dad from that same file
+
+107
+00:08:32,340 --> 00:08:40,050
+and was that last but not least we get the apt yes file there we need to import project input from dot
+
+108
+00:08:40,050 --> 00:08:53,770
+slash components project input J.S. and the project list from Project List J.S. we now safeties it should
+
+109
+00:08:53,770 --> 00:09:03,170
+compile without errors and now we are using iOS 6 modules to organize our imports and exports if we
+
+110
+00:09:03,650 --> 00:09:09,410
+have a look at the browser though we get an error not a reason for data is that if we check the dist
+
+111
+00:09:09,410 --> 00:09:17,520
+folder get our bundle jazz follow right now we need to switch his contact again for one here we shouldn't
+
+112
+00:09:17,520 --> 00:09:26,640
+use MMD now but instead e as 2015 that is basically the code word for iOS 6 which was the atmos script
+
+113
+00:09:26,640 --> 00:09:33,150
+working that introduced iOS modules so we're basically telling typescript don't transform our imports
+
+114
+00:09:33,150 --> 00:09:41,040
+to anything keep them as they are modern browsers will understand it so that's important also make sure
+
+115
+00:09:41,040 --> 00:09:47,900
+you have a target of iOS 6 or higher here you now also should comment out the outfall again because
+
+116
+00:09:47,930 --> 00:09:55,220
+that's not supported with iOS modules and with that what you get to the disk folder is basically a replication
+
+117
+00:09:55,280 --> 00:10:01,220
+of your source folder but with JavaScript files so now we also need to go back to the index HMO file
+
+118
+00:10:01,250 --> 00:10:07,710
+an import app J.S. again because we got to app J.S. file in a distant folder now and again this app
+
+119
+00:10:07,710 --> 00:10:12,380
+today is fall we'll have your import statements in there because as I mentioned this is supported by
+
+120
+00:10:12,380 --> 00:10:17,990
+a javascript by modern javascript engines and modern browsers and the browser will resolve these imports
+
+121
+00:10:17,990 --> 00:10:26,140
+for you therefore so we now reload this car we still get an error cannot use import statement outside
+
+122
+00:10:26,140 --> 00:10:32,960
+a module well modern browsers support this syntax but you have to tell them that you want to use it
+
+123
+00:10:33,440 --> 00:10:40,670
+and you do tell them by removing the fir here and instead on the script tag where you import a file
+
+124
+00:10:40,670 --> 00:10:51,300
+which has these import statements you use type equals module if you now save this you see this works
+
+125
+00:10:51,690 --> 00:10:57,570
+and now if we add something here we get the working application again now if you inspect the network
+
+126
+00:10:57,570 --> 00:11:05,750
+tab by the way you will see that if you reload there are a bunch of network requests going on if I sue
+
+127
+00:11:05,750 --> 00:11:11,940
+out of it we can see it better all our Java's good files are requested here they are requested automatically
+
+128
+00:11:11,940 --> 00:11:18,150
+by the browser when it encounters our import so it starts with app J.S. that it sees the import to project
+
+129
+00:11:18,150 --> 00:11:24,210
+input J.S. here and hence of course the next request goes to project input it also does the same for
+
+130
+00:11:24,210 --> 00:11:30,360
+Project List now in Project input for example it would seek input from base component J.S. which is
+
+131
+00:11:30,360 --> 00:11:36,480
+why it also imports prop based component J Yes so that's done by the browser here we take advantage
+
+132
+00:11:36,570 --> 00:11:43,080
+of it and now we have another way of splitting our files but with the additional advantage that we clearly
+
+133
+00:11:43,080 --> 00:11:50,190
+state what we need from each file and if we omit an import typescript yells at us which it didn't do
+
+134
+00:11:50,280 --> 00:11:55,200
+with the previous approach which is why this approach is actually my recommendation and why it is the
+
+135
+00:11:55,200 --> 00:11:58,380
+de facto standard way of importing and exporting.
+
+136
+00:11:58,920 --> 00:12:04,420
+Now if you've worked with types before in other projects let's say in an angular project you might all
+
+137
+00:12:04,420 --> 00:12:08,040
+be used to not having to specify a file extension here.
+
+138
+00:12:08,040 --> 00:12:13,410
+Well we'll also be able to admit that once we add web pack and a build tool as long as we don't have
+
+139
+00:12:13,410 --> 00:12:18,690
+that and we rely on the browser to import our files you need to add that extra extension.

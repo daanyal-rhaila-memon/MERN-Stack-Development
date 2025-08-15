@@ -1,0 +1,151 @@
+1
+00:00:02,410 --> 00:00:09,740
+And that's it for modules now using modules is a super useful and important feature because it allows
+
+2
+00:00:09,740 --> 00:00:12,460
+you to write more maintainable and manageable code.
+
+3
+00:00:12,500 --> 00:00:19,910
+Having it all in one file is a mess and really not an option for anything but very tiny projects using
+
+4
+00:00:19,970 --> 00:00:26,420
+either namespace or EA's modules is stale for a way better alternative since it makes sure that every
+
+5
+00:00:26,420 --> 00:00:30,890
+file on its own is relatively small and therefore stays manageable.
+
+6
+00:00:30,890 --> 00:00:34,740
+And still you end up with debt and higher bake application.
+
+7
+00:00:34,790 --> 00:00:36,520
+You want to have in the end.
+
+8
+00:00:36,690 --> 00:00:43,430
+Now when it comes to these two approaches name spaces and is modules the clear recommendation is is
+
+9
+00:00:43,430 --> 00:00:50,810
+modules because you get that extra type safety and you ensure that every file has to clearly specify
+
+10
+00:00:50,810 --> 00:00:53,550
+what it wants with name spaces.
+
+11
+00:00:53,570 --> 00:00:58,360
+It was enough if one file import that's something that a number of file also needs.
+
+12
+00:00:58,370 --> 00:01:04,010
+The downside is if that one file which imported the thing is removed that other file all the breaks
+
+13
+00:01:04,250 --> 00:01:09,140
+without you noticing at least without you noticing before you run the code.
+
+14
+00:01:09,140 --> 00:01:16,760
+So they offer you as EA's modules use namespace as in smaller projects or if for some reason you can't
+
+15
+00:01:16,790 --> 00:01:23,930
+use EA's modules and you can't use a number bundler which would translate such modules to non module
+
+16
+00:01:23,930 --> 00:01:30,380
+code which also works in older browsers but other than that really use modules is modules and what I
+
+17
+00:01:30,380 --> 00:01:32,150
+just said is important.
+
+18
+00:01:32,150 --> 00:01:38,810
+These modules here right now the way we used them only work in modern browsers because we rely on the
+
+19
+00:01:38,810 --> 00:01:41,710
+browser to basically import all these files.
+
+20
+00:01:41,720 --> 00:01:48,680
+Right now of course we want to build applications with typescript did all the run in older browsers
+
+21
+00:01:48,980 --> 00:01:52,730
+Internet Explorer 9 for example there.
+
+22
+00:01:52,730 --> 00:01:55,750
+This would not be supported this syntax is not supported there.
+
+23
+00:01:55,760 --> 00:01:57,450
+So the app would not run there.
+
+24
+00:01:57,470 --> 00:02:01,670
+We might also be using some other features that are not supported there but mainly this year is not
+
+25
+00:02:01,670 --> 00:02:03,560
+supported in all browsers.
+
+26
+00:02:03,890 --> 00:02:10,280
+So to make that work in all browsers we can use a bundling tool we can use Westpac for example to bundle
+
+27
+00:02:10,280 --> 00:02:16,790
+that together into one JavaScript file so that during development we have this multi file strong typing
+
+28
+00:02:16,790 --> 00:02:23,000
+experience but when we ship our code we actually have one file only and no advantage of shipping one
+
+29
+00:02:23,000 --> 00:02:29,240
+file instead of all these files we have here is that we also ensure that the browser doesn't have to
+
+30
+00:02:29,240 --> 00:02:35,540
+download that many files because every file that has to be downloaded is an extra hour round trip in
+
+31
+00:02:35,540 --> 00:02:40,940
+the Network tab of the daft words you can actually see that there you see this waterfall chart and you
+
+32
+00:02:40,940 --> 00:02:44,500
+see this little white box at the beginning of every block.
+
+33
+00:02:44,540 --> 00:02:48,870
+This is basically the setup time it takes to set up the HDP request.
+
+34
+00:02:49,070 --> 00:02:54,710
+So even though the files we are downloading are very small as you can tell this still takes some time
+
+35
+00:02:54,740 --> 00:02:59,050
+because of all that redundant extra setup for every HDTV request.
+
+36
+00:02:59,150 --> 00:03:04,670
+So doing less requests is a good idea anyways regardless of browser support.
+
+37
+00:03:04,670 --> 00:03:10,670
+So for these two reasons browsers support and less requests will have a look at bundling with Westpac
+
+38
+00:03:11,060 --> 00:03:12,320
+in the next course section.
