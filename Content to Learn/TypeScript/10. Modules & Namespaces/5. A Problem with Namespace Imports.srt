@@ -1,0 +1,123 @@
+1
+00:00:02,290 --> 00:00:08,500
+Now one important note by the way you might be wondering why auto bind works here and project list even
+
+2
+00:00:08,500 --> 00:00:11,890
+though I didn't add import to the auto bind decorator.
+
+3
+00:00:11,890 --> 00:00:18,850
+Well because an apt Yes I have all these imports now actually if I removed these import stare which
+
+4
+00:00:18,850 --> 00:00:25,420
+would be correct because in here I technically only use to project Input Project listings on we'll have
+
+5
+00:00:25,420 --> 00:00:33,250
+a problem you see if does reloads we have an error here even though we get no compilation error unfortunately
+
+6
+00:00:33,280 --> 00:00:39,190
+but we get a runtime error so we need to make sure we import everything we use in a file into that file
+
+7
+00:00:39,190 --> 00:00:40,080
+to be safe.
+
+8
+00:00:40,150 --> 00:00:45,850
+Technically we can import everything an apt Yes and since Project input and project list which for example
+
+9
+00:00:45,850 --> 00:00:51,580
+used the auto bind decorator come later the order by decorator will be available when they need it.
+
+10
+00:00:51,760 --> 00:00:54,340
+But this is not the cleanest possible way.
+
+11
+00:00:54,400 --> 00:01:00,250
+If you instead import everything a file needs from inside that file you have to guarantee that this
+
+12
+00:01:00,250 --> 00:01:04,960
+file will have it available when it needs it and you are not relying on some global file which imports
+
+13
+00:01:04,990 --> 00:01:09,610
+everything where you then might remove an import and suddenly everything breaks.
+
+14
+00:01:09,610 --> 00:01:11,440
+So what's the solution here.
+
+15
+00:01:11,440 --> 00:01:14,520
+Well let's go back to the files and import what they need.
+
+16
+00:01:14,560 --> 00:01:20,200
+For example Project input does not just need the base component it also needs the validation logic and
+
+17
+00:01:20,230 --> 00:01:21,310
+order bind.
+
+18
+00:01:21,310 --> 00:01:29,960
+So in here I will import by going up one level with two dots from decorators the order bind decorator
+
+19
+00:01:31,090 --> 00:01:32,740
+whips like this.
+
+20
+00:01:32,740 --> 00:01:39,800
+And from you till the validation t s file that is definitely needed in this file here.
+
+21
+00:01:39,820 --> 00:01:47,630
+I also need the project state in here so I will import slash state project state yes and I will grab
+
+22
+00:01:47,660 --> 00:01:53,600
+these imports and go to project item and there I don't need the project state and validation so we can
+
+23
+00:01:53,600 --> 00:01:58,760
+remove that but we will need to order by and decorator we also need the Dragonball interface and the
+
+24
+00:01:58,760 --> 00:02:10,040
+project model so we'll also go to the models folder you're an import Project T S and drag dropped yes
+
+25
+00:02:10,880 --> 00:02:17,570
+in project list we won't need validation but I do need to project state in order bind.
+
+26
+00:02:17,570 --> 00:02:26,280
+And in addition from the models folder I need to project yes file and the drag drop test file with that
+
+27
+00:02:26,280 --> 00:02:31,700
+does safes and compiles and now it is all the works again as you see now we've got no runtime errors
+
+28
+00:02:31,970 --> 00:02:38,030
+because now we got all these imports back in the files so it is the proper way of doing it every file
+
+29
+00:02:38,030 --> 00:02:44,120
+specifies what it needs and we can split our code and still end up with one file so we get the best
+
+30
+00:02:44,120 --> 00:02:44,800
+of both worlds.
+
+31
+00:02:44,810 --> 00:02:50,160
+We could say yet this is not necessarily the best possible way of doing it.

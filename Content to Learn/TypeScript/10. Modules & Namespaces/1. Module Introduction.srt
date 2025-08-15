@@ -1,0 +1,51 @@
+1
+00:00:02,310 --> 00:00:06,750
+This is the code we ended up with at the end of the last course section.
+
+2
+00:00:06,750 --> 00:00:14,100
+Our practice project a lot of code all in one file and this is arguably not a super complex project.
+
+3
+00:00:14,100 --> 00:00:20,010
+You can definitely ride way more elaborate projects and applications and you would end up with way more
+
+4
+00:00:20,010 --> 00:00:25,030
+code so putting it all into one file is probably not what you want to do.
+
+5
+00:00:25,050 --> 00:00:30,660
+So what you want to do instead is you want to write modular code which simply means you want to split
+
+6
+00:00:30,660 --> 00:00:37,560
+your code across multiple files so that each file on its own stays manageable and maintainable and you
+
+7
+00:00:37,560 --> 00:00:43,620
+then simply import and export from into these files and make sure that data for all these files are
+
+8
+00:00:43,620 --> 00:00:50,490
+connected but they're connected by typescript or by the browser or by some third party build tool and
+
+9
+00:00:50,490 --> 00:00:51,320
+not by you.
+
+10
+00:00:51,330 --> 00:00:54,430
+By merging them all into one file during development.
+
+11
+00:00:54,500 --> 00:01:00,570
+Now in this module we'll have a look at two main options that help us with organizing our code in multiple
+
+12
+00:01:00,570 --> 00:01:06,360
+files and we'll not just learn about them in theory but also in practice will of course apply these
+
+13
+00:01:06,360 --> 00:01:09,300
+different approaches and see how we can split our code.

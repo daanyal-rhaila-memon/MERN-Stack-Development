@@ -1,0 +1,575 @@
+1
+00:00:02,230 --> 00:00:06,870
+I want to start with the namespace feature not to show you how it works.
+
+2
+00:00:06,880 --> 00:00:11,420
+I will grab these two interfaces here to drag and drop interfaces.
+
+3
+00:00:11,500 --> 00:00:12,550
+Cut them from apt.
+
+4
+00:00:12,550 --> 00:00:18,750
+Yes and add a new file drag drop interfaces dot.
+
+5
+00:00:18,810 --> 00:00:21,120
+Yes for example.
+
+6
+00:00:21,330 --> 00:00:23,160
+Now we can paste it in there.
+
+7
+00:00:23,260 --> 00:00:32,120
+And now to use namespace as all we have to do is we have to add the keyword namespace and then curly
+
+8
+00:00:32,120 --> 00:00:33,680
+braces.
+
+9
+00:00:33,680 --> 00:00:35,930
+Now we also have to give this namespace a name.
+
+10
+00:00:35,930 --> 00:00:39,620
+And here are all named DDA interfaces for drag and drop.
+
+11
+00:00:39,620 --> 00:00:41,550
+The name is up to you though.
+
+12
+00:00:41,690 --> 00:00:45,220
+Now this year's types could feature not a javascript feature.
+
+13
+00:00:45,320 --> 00:00:50,150
+It is not compiled to vanilla javascript because there is no direct equivalent for it.
+
+14
+00:00:50,390 --> 00:00:54,890
+Instead types could will basically compile it to do an object.
+
+15
+00:00:54,890 --> 00:01:00,110
+You could say to an object where the things you will put into the namespace then are stored on properties
+
+16
+00:01:00,440 --> 00:01:07,250
+but you won't have to worry about that because all the resolving of access to these properties and that
+
+17
+00:01:07,280 --> 00:01:10,160
+everything works will be taken care of by typescript.
+
+18
+00:01:10,700 --> 00:01:16,190
+So now we can move these interfaces into the namespace and with that we're almost done.
+
+19
+00:01:16,190 --> 00:01:22,310
+Now we have one problem however these interfaces are now only available in this namespace.
+
+20
+00:01:22,310 --> 00:01:25,440
+By the way you can not just put interfaces into a namespace.
+
+21
+00:01:25,580 --> 00:01:33,890
+You can put anything in their classes concerns whatever you want whatever you want can be put in a namespace.
+
+22
+00:01:33,950 --> 00:01:39,410
+So basically you can wrap a namespace around any code you have but the problem we have is that these
+
+23
+00:01:39,410 --> 00:01:44,820
+features these interfaces here are now only available inside of that namespace.
+
+24
+00:01:44,840 --> 00:01:47,280
+Now as you see we have nothing else in there.
+
+25
+00:01:47,330 --> 00:01:52,310
+Now of course we could bring the code that depends on them back into this namespace but then again we
+
+26
+00:01:52,310 --> 00:01:56,980
+would bloat this because turns out we have quite long clauses.
+
+27
+00:01:56,990 --> 00:01:58,970
+That depends on these interfaces right.
+
+28
+00:01:58,970 --> 00:02:02,920
+We have the project list class and the project item class.
+
+29
+00:02:02,930 --> 00:02:06,680
+They depend on these interfaces so that would be a lot.
+
+30
+00:02:06,680 --> 00:02:13,220
+We have to add to that namespace data for what you can do is you can add to export keyword in front
+
+31
+00:02:13,220 --> 00:02:16,880
+of an interface to export a feature from a namespace.
+
+32
+00:02:16,880 --> 00:02:22,070
+Now what this means is that now these interfaces are a way lable instead of this namespace.
+
+33
+00:02:22,100 --> 00:02:27,950
+But also I would set off this file and we'll see how this works in a second but with that we make this
+
+34
+00:02:27,950 --> 00:02:30,740
+interface or whatever we are exporting.
+
+35
+00:02:30,740 --> 00:02:36,560
+This is not restricted to interfaces of course a way level outside of this file as well.
+
+36
+00:02:36,650 --> 00:02:43,940
+If we then basically import or use that namespace and of course again you can not just export interfaces
+
+37
+00:02:43,940 --> 00:02:46,040
+in a namespace but anything.
+
+38
+00:02:46,040 --> 00:02:51,560
+Now with that the question justice how do we import this namespace now back into apt.
+
+39
+00:02:51,590 --> 00:02:52,450
+Yes.
+
+40
+00:02:52,460 --> 00:02:56,140
+And for that typescript has a special syntax you can use.
+
+41
+00:02:56,240 --> 00:02:57,860
+Let's go back to the top of APT.
+
+42
+00:02:57,860 --> 00:02:58,180
+Yes.
+
+43
+00:02:58,200 --> 00:03:05,060
+And now here you add three forward slashes important free not just two because this is actually not
+
+44
+00:03:05,060 --> 00:03:06,170
+a normal comment.
+
+45
+00:03:06,170 --> 00:03:11,600
+What we're creating now this will actually be certain text picked up by typescript a Special Comment.
+
+46
+00:03:11,600 --> 00:03:19,190
+You could say type but understands if it starts with free slashes there you write self closing XOM l
+
+47
+00:03:19,190 --> 00:03:28,910
+tag so opening angle bracket then forward slash closing angle bracket and in their reference path equals
+
+48
+00:03:29,360 --> 00:03:32,410
+and then hear the name of the file you want to import.
+
+49
+00:03:32,420 --> 00:03:39,170
+In my case your drag drop interfaces dot t s.
+
+50
+00:03:39,390 --> 00:03:45,230
+Now this is understood and picked up by typescript because as I mentioned with the free starting slashes
+
+51
+00:03:45,230 --> 00:03:50,150
+as a special syntax type good understands just as it understands does reference thing.
+
+52
+00:03:50,150 --> 00:03:56,120
+This is not vanilla javascript vanilla javascript does not notice and this is not what it will look
+
+53
+00:03:56,120 --> 00:03:58,490
+like once it is compiled.
+
+54
+00:03:58,520 --> 00:04:01,470
+Now what does this achieve though this achieves that.
+
+55
+00:04:01,490 --> 00:04:07,510
+Now this namespace D.D. interfaces is a way lable in Apt yes.
+
+56
+00:04:07,580 --> 00:04:13,070
+However if you scroll down you see my editor still complains and if we tried to save as we also get
+
+57
+00:04:13,070 --> 00:04:16,430
+compilation errors so it doesn't seem to be available.
+
+58
+00:04:16,430 --> 00:04:19,620
+The Dragonball interface doesn't seem to be available here.
+
+59
+00:04:19,760 --> 00:04:25,890
+Well there is a special thing about name spaces you can use them to split your code.
+
+60
+00:04:25,880 --> 00:04:31,670
+And remember when I said earlier that what you have in a namespace can be used from anywhere in that
+
+61
+00:04:31,670 --> 00:04:32,420
+namespace.
+
+62
+00:04:32,960 --> 00:04:39,830
+Well it turns out you can split namespace across multiple files by exporting things in a namespace and
+
+63
+00:04:39,830 --> 00:04:46,310
+then using this special import syntax but you then have to put the things that want to use something
+
+64
+00:04:46,310 --> 00:04:51,960
+from that import namespace or from that imported file into the same namespace.
+
+65
+00:04:52,190 --> 00:04:55,100
+Hence maybe these interfaces is not the best name.
+
+66
+00:04:55,100 --> 00:04:57,980
+Maybe we just named as app.
+
+67
+00:04:58,040 --> 00:05:04,610
+Now if we named as app here we can go to apt yes and create a namespace of the same name here namespace
+
+68
+00:05:04,700 --> 00:05:05,690
+app.
+
+69
+00:05:05,690 --> 00:05:12,610
+And now for the moment let's put everything here into that namespace and now you see the error is gone
+
+70
+00:05:12,620 --> 00:05:14,270
+there are no red dots on the right.
+
+71
+00:05:14,330 --> 00:05:17,660
+However if I saved it I still get errors here.
+
+72
+00:05:17,900 --> 00:05:26,330
+For example that finished project list is not used well that is correct.
+
+73
+00:05:26,340 --> 00:05:28,050
+I am not using that.
+
+74
+00:05:28,250 --> 00:05:29,520
+I am not needing it either.
+
+75
+00:05:29,640 --> 00:05:33,210
+So we can simply remove these concerns here with Dad.
+
+76
+00:05:33,240 --> 00:05:41,960
+If we save this now it compiled without errors the question just is what's the result of this compilation.
+
+77
+00:05:41,960 --> 00:05:43,850
+Do we have one or two files now.
+
+78
+00:05:44,330 --> 00:05:46,370
+Well let's have a look at the list folder.
+
+79
+00:05:46,370 --> 00:05:53,330
+And there you see you've got a aptly as file and then some code here and a drag and drop interface J.S.
+
+80
+00:05:53,330 --> 00:05:53,810
+file.
+
+81
+00:05:54,020 --> 00:05:56,520
+So we've got two files as a result.
+
+82
+00:05:56,750 --> 00:06:02,300
+Now the drag and drop interface file actually is pretty empty because you learned that interfaces are
+
+83
+00:06:02,300 --> 00:06:04,400
+basically not compile to anything.
+
+84
+00:06:04,400 --> 00:06:07,350
+There is no javascript equivalent for an interface.
+
+85
+00:06:07,370 --> 00:06:09,130
+It's a pure type good feature.
+
+86
+00:06:09,320 --> 00:06:14,810
+So we can't import it with the type could soon tax year to use it and get all the type improvements
+
+87
+00:06:14,840 --> 00:06:15,860
+we learned.
+
+88
+00:06:15,860 --> 00:06:20,120
+But in production it doesn't matter if it's in a separate file or not.
+
+89
+00:06:20,120 --> 00:06:23,600
+So of course the question is What if we now put something.
+
+90
+00:06:23,710 --> 00:06:30,710
+Dad does exist in production that does exist in JavaScript as well into a separate file for example
+
+91
+00:06:30,710 --> 00:06:41,900
+does enum and the project class here I'll grab both create a new file project dash model T S and put
+
+92
+00:06:42,140 --> 00:06:46,100
+my project status enum and project class in there.
+
+93
+00:06:46,100 --> 00:06:50,580
+Now Justice before we can add a namespace here the name has to be app.
+
+94
+00:06:50,600 --> 00:06:56,340
+So it has to be done namespace where we then also want to use it and we have to exploit these features
+
+95
+00:06:56,340 --> 00:07:00,470
+in there so that we can use them in our files in the same namespace.
+
+96
+00:07:00,480 --> 00:07:02,670
+But in other files as well.
+
+97
+00:07:02,670 --> 00:07:05,900
+Now back in app yes we have to import that second fall.
+
+98
+00:07:05,910 --> 00:07:13,830
+So I'll duplicate this import and also import project dash model T S if I save that it now is compiled
+
+99
+00:07:13,830 --> 00:07:19,500
+and we see a project model JavaScript file and India we see some code.
+
+100
+00:07:19,500 --> 00:07:23,420
+The question is does our application now work for that.
+
+101
+00:07:23,730 --> 00:07:25,400
+Let's reloaded.
+
+102
+00:07:25,560 --> 00:07:27,970
+Let's try adding a project here.
+
+103
+00:07:27,990 --> 00:07:29,780
+You see we get an error.
+
+104
+00:07:29,790 --> 00:07:34,010
+Cannot read property active on the find.
+
+105
+00:07:34,170 --> 00:07:40,850
+The reason for Dad simply is that our files are compiled stand alone namespace as existent types with
+
+106
+00:07:40,850 --> 00:07:41,430
+the world.
+
+107
+00:07:41,460 --> 00:07:44,620
+As I said there is no javascript equivalence for it.
+
+108
+00:07:44,700 --> 00:07:49,500
+So the problem we have here instead and type the world everything is great because typescript is able
+
+109
+00:07:49,500 --> 00:07:51,600
+to find all the things we need.
+
+110
+00:07:51,660 --> 00:07:57,750
+For example when I say project here when I reference the project type here on the project state class
+
+111
+00:07:58,170 --> 00:08:02,780
+this project type this project class is defined in the project model.
+
+112
+00:08:02,880 --> 00:08:09,450
+Now typescript does not complain during compilation because we import that model but import here really
+
+113
+00:08:09,450 --> 00:08:13,960
+just means we tell types where to find that type.
+
+114
+00:08:14,010 --> 00:08:18,160
+Once it is compiled to JavaScript disconnection is basically destroyed.
+
+115
+00:08:18,210 --> 00:08:24,330
+So in Javascript code when does executes and when we then try to create a new project by instantiating
+
+116
+00:08:24,330 --> 00:08:25,030
+project.
+
+117
+00:08:25,140 --> 00:08:31,680
+Javascript doesn't find this project class or a constructor function so we have to make sure we carry
+
+118
+00:08:31,680 --> 00:08:32,900
+over disconnection.
+
+119
+00:08:33,030 --> 00:08:39,440
+And for that we can go to the T as config and they are set as our file option.
+
+120
+00:08:39,690 --> 00:08:43,980
+We can comment this in the idea behind the out file is dead.
+
+121
+00:08:44,070 --> 00:08:51,330
+You tell typescript that it should concatenate name spaces so these references which it has during compilation
+
+122
+00:08:51,810 --> 00:08:56,910
+into one single job is good file instead of compiling multiple JavaScript files.
+
+123
+00:08:57,030 --> 00:09:03,780
+So here for outfall we can say we want to have a file in the dist folder which we named maybe bundle
+
+124
+00:09:03,810 --> 00:09:08,520
+dot J.S. and if we do that and save that we'll actually get an error here.
+
+125
+00:09:09,690 --> 00:09:17,230
+We'll get an error that only AMG and system modules are supported alongside outfall.
+
+126
+00:09:17,290 --> 00:09:19,530
+Now we don't need to understand everything here.
+
+127
+00:09:19,570 --> 00:09:26,860
+There basically are different ways of loading or bundling different jobs good files into one for historic
+
+128
+00:09:26,860 --> 00:09:31,510
+reasons and how it is all developed and you can learn more about these different bundle types in an
+
+129
+00:09:31,510 --> 00:09:33,680
+attached resource if you want to.
+
+130
+00:09:33,710 --> 00:09:35,330
+You don't need to though.
+
+131
+00:09:35,380 --> 00:09:39,880
+So basically what we need to do here is we need to set a module which is already highlighted as an error
+
+132
+00:09:39,880 --> 00:09:48,080
+here not too common J.S. but 2 a.m. D for example if we do that if compiled without issues even though
+
+133
+00:09:48,080 --> 00:09:51,850
+it still complains here but didn't pick up that I changed it.
+
+134
+00:09:52,360 --> 00:09:56,480
+And now what happens is actually that there is a new bundle js file in dist.
+
+135
+00:09:56,660 --> 00:10:04,730
+If I remove all JavaScript files in the disk folder and I restart my TSC dash we process.
+
+136
+00:10:04,730 --> 00:10:10,910
+So the compiler you see only that until Jess follows generated this file will hold all our code in the
+
+137
+00:10:10,940 --> 00:10:15,410
+compiled and translated version and they'll for now an index a simple.
+
+138
+00:10:15,440 --> 00:10:23,840
+We just have to import bundled J.S. here instead of arpeggios and if we do so and we reload here we
+
+139
+00:10:23,840 --> 00:10:29,180
+have a working application again where we can use drag and drop and everything because now it's all
+
+140
+00:10:29,180 --> 00:10:34,240
+in one file but only in the final result during development.
+
+141
+00:10:34,240 --> 00:10:40,310
+We have these namespace is here which is one step in the right direction because it is already is a
+
+142
+00:10:40,310 --> 00:10:41,910
+bit more manageable.
+
+143
+00:10:42,020 --> 00:10:47,160
+Now let's split this into even more files before we then have a look at the average splitting option.
+
+144
+00:10:47,180 --> 00:10:48,110
+Yes modules.

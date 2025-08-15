@@ -1,0 +1,171 @@
+1
+00:00:02,220 --> 00:00:06,480
+So what are our options when we want to split code into multiple files.
+
+2
+00:00:06,480 --> 00:00:10,580
+Now actually we have three options for that.
+
+3
+00:00:10,620 --> 00:00:16,710
+The first option would be to simply write multiple code files multiple types good files types good will
+
+4
+00:00:16,710 --> 00:00:23,670
+then automatically compile all code files in the source directory and manually import to compiled JavaScript
+
+5
+00:00:23,670 --> 00:00:24,990
+files into H2 Mel.
+
+6
+00:00:25,020 --> 00:00:28,680
+That is an option and for some projects this might be just right.
+
+7
+00:00:28,980 --> 00:00:35,100
+But you would have to manage all these imports manually which can be cumbersome and error prone and
+
+8
+00:00:35,100 --> 00:00:39,030
+when using certain types of features you also give up type support.
+
+9
+00:00:39,030 --> 00:00:46,000
+If some type is defined in file a and you use it in file B and type doesn't know about this connection.
+
+10
+00:00:46,050 --> 00:00:49,250
+That's why this is not really a great option for bigger projects.
+
+11
+00:00:49,320 --> 00:00:52,530
+Instead for bigger projects we have two main options.
+
+12
+00:00:52,530 --> 00:00:55,490
+We have namespace and file bundling for example.
+
+13
+00:00:55,530 --> 00:01:02,310
+Now namespace is a type could feature a syntax feature you can add special code to your code to use
+
+14
+00:01:02,310 --> 00:01:11,150
+this feature and it allows you to basically group CODE TO GATHER below a namespace and then import namespace
+
+15
+00:01:11,220 --> 00:01:16,080
+into other files so you can have a namespace per file for example.
+
+16
+00:01:16,080 --> 00:01:22,350
+Import a number file into yet the number of file and tap into that namespace which lives in a number
+
+17
+00:01:22,350 --> 00:01:28,560
+of file from that importing file and we'll see that in practice in case that's not entirely clear typescript
+
+18
+00:01:28,560 --> 00:01:30,050
+does not only support that.
+
+19
+00:01:30,090 --> 00:01:34,110
+It also bundles the files together into one file.
+
+20
+00:01:34,200 --> 00:01:42,040
+So Dad you India and write code in multiple files which are compiled but they are then imported into
+
+21
+00:01:42,120 --> 00:01:47,880
+Java so that you have less imports to manage and you don't need to manually manage different imports
+
+22
+00:01:47,880 --> 00:01:50,070
+and then h html file.
+
+23
+00:01:50,070 --> 00:01:57,060
+Now an alternative to name basis and arguably the more important and modern alternative is to use iOS
+
+24
+00:01:57,120 --> 00:02:06,150
+6 imports and exports also known as iOS 6 modules because it turns out that totally detached from typescript
+
+25
+00:02:06,510 --> 00:02:12,000
+modern JavaScript has a solution for this problem as well because you have this problem not just in
+
+26
+00:02:12,000 --> 00:02:15,870
+types of projects but in any bigger javascript project.
+
+27
+00:02:15,870 --> 00:02:22,800
+Modern Java stripped out of the box supports import and export statements which allows to stay to which
+
+28
+00:02:22,800 --> 00:02:28,800
+file depends on which other file and then you have all these individual files but you don't need to
+
+29
+00:02:28,800 --> 00:02:31,800
+manage imports manually instead browsers.
+
+30
+00:02:31,800 --> 00:02:37,950
+Modern browsers do that they understand it and automatically download and run files a number of file
+
+31
+00:02:37,950 --> 00:02:43,910
+depends on you use the import export syntax for that and typescript all the supports this so therefore
+
+32
+00:02:44,010 --> 00:02:49,920
+you can use different types good without any issues you will compile per file but you only need one
+
+33
+00:02:49,920 --> 00:02:56,280
+script import because as I just mentioned modern browsers know how to then fetch all our dependencies
+
+34
+00:02:56,580 --> 00:03:00,730
+and you'll also see dad in action in this core section here.
+
+35
+00:03:00,750 --> 00:03:06,720
+Now one important note here with Dad we technically will end up with multiple files still and whilst
+
+36
+00:03:06,720 --> 00:03:13,200
+we won't have to manage the imports manually the script imports we still have some disadvantages because
+
+37
+00:03:13,200 --> 00:03:18,770
+of that because every failure depending on needs to be downloaded separately which means more HDTV requests
+
+38
+00:03:18,770 --> 00:03:25,080
+hands on and therefore you can bundle files together to work on multiple files during development but
+
+39
+00:03:25,080 --> 00:03:29,490
+ship a single file for production but you need third party tools for that.
+
+40
+00:03:29,490 --> 00:03:35,730
+For example Westpac and I will show you how that works as well but in a separate section where we will
+
+41
+00:03:35,730 --> 00:03:39,530
+have a look at Westpac and typescript and why we use it and how we use it.
+
+42
+00:03:39,540 --> 00:03:46,500
+So for now let's use these two approaches in their basic form and let's see how we can improve our code
+
+43
+00:03:46,530 --> 00:03:48,720
+by splitting it across multiple files.
