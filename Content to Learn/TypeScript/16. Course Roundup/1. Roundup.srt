@@ -1,0 +1,151 @@
+1
+00:00:02,150 --> 00:00:03,110
+So you did it.
+
+2
+00:00:03,110 --> 00:00:06,710
+You'll finish this course and you learn a lot about typescript.
+
+3
+00:00:06,740 --> 00:00:12,310
+I can only encourage you to keep on practicing and working with it and use all the cool features you'll
+
+4
+00:00:12,310 --> 00:00:13,220
+learn about.
+
+5
+00:00:13,250 --> 00:00:17,370
+Now of course there also are Thurber resources which might be interesting to you.
+
+6
+00:00:17,420 --> 00:00:20,290
+Most importantly the official typescript web page.
+
+7
+00:00:20,480 --> 00:00:27,020
+There you can learn all about the niche features nitty gritty details and of course all the latest features
+
+8
+00:00:27,110 --> 00:00:31,520
+as well though to be honest we covered basically everything you find in there as well.
+
+9
+00:00:31,520 --> 00:00:35,540
+But if you want to dive deeper want to learn more or want to have a written guide.
+
+10
+00:00:35,540 --> 00:00:38,830
+This is a great resource to also learn about key concepts.
+
+11
+00:00:38,840 --> 00:00:41,590
+I also covered for all this course.
+
+12
+00:00:41,660 --> 00:00:47,390
+So this is one resource I would recommend dare you all to find a playground where you can quickly check
+
+13
+00:00:47,390 --> 00:00:53,220
+out some typescript scripts and run them here in the browser without any local setup.
+
+14
+00:00:53,220 --> 00:01:01,190
+Now as a next step I also recommend that you have a look at some types of projects and add some examples.
+
+15
+00:01:01,190 --> 00:01:08,870
+For example angular angular is a browser site framework that uses typescript that is built up on typescript
+
+16
+00:01:08,870 --> 00:01:13,970
+so to say it embraces TypeScript and therefore learning angular can be a great idea.
+
+17
+00:01:13,970 --> 00:01:18,080
+Now I've got a complete course on angular if you're interested but even if you don't do you want to
+
+18
+00:01:18,080 --> 00:01:24,710
+work with angular debt much checking out their open source code base could be interesting as well just
+
+19
+00:01:24,710 --> 00:01:30,590
+to learn how they are using TypeScript and to give you some ideas on how you could use it in your future
+
+20
+00:01:30,590 --> 00:01:32,030
+projects.
+
+21
+00:01:32,030 --> 00:01:33,260
+It's similar for Nest.
+
+22
+00:01:33,270 --> 00:01:41,540
+J.S. I showed this Andy node module nest J.S. also has a framework that embraces typescript but unlike
+
+23
+00:01:41,630 --> 00:01:48,530
+angular which is for the browser side nest J.S. is based on no tree s and is for the service site side
+
+24
+00:01:48,890 --> 00:01:55,250
+nest J as is also a really cool framework that uses tons of amazing types of features and it can be
+
+25
+00:01:55,250 --> 00:02:01,400
+interesting if you want to build a node application with typescript or even if you don't want to do
+
+26
+00:02:01,400 --> 00:02:08,150
+that justice with angular you can check out their code base to get some ideas on how to use typescript
+
+27
+00:02:08,150 --> 00:02:12,900
+how to use certain features and how to build cool things with typescript.
+
+28
+00:02:13,220 --> 00:02:19,340
+And last but not least if you need some inspiration did some other tutorials and guides maybe you can
+
+29
+00:02:19,340 --> 00:02:25,400
+of course use Google for example Google for typescript examples to find more articles on what you can
+
+30
+00:02:25,400 --> 00:02:32,570
+do with typescript find some example projects simply so that you get more and more used to the language
+
+31
+00:02:32,780 --> 00:02:38,030
+and get used to how to work with that language and how to build certain features with that language
+
+32
+00:02:38,660 --> 00:02:39,590
+and with that.
+
+33
+00:02:39,590 --> 00:02:44,690
+And of course with this course which you can also use as a reference to which you can come back whenever
+
+34
+00:02:44,690 --> 00:02:45,830
+you need to.
+
+35
+00:02:45,830 --> 00:02:52,510
+You have plenty of resources that should ensure that you can become a real typescript master.
+
+36
+00:02:52,550 --> 00:02:53,770
+I wish you all the best.
+
+37
+00:02:53,990 --> 00:02:57,680
+And if you build something awesome definitely share it with me.
+
+38
+00:02:57,680 --> 00:03:01,640
+I'm super excited to see what you're building with help of discourse.
