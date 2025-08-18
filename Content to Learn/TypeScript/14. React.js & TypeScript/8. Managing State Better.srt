@@ -1,0 +1,71 @@
+1
+00:00:02,230 --> 00:00:04,330
+So how should we update the state instead.
+
+2
+00:00:04,330 --> 00:00:10,000
+Well we can use our spread operator here and spread all our existing to do is into disarray and then
+
+3
+00:00:10,000 --> 00:00:13,500
+just add the new to do as a new item at the end.
+
+4
+00:00:13,540 --> 00:00:16,350
+This works but it's not the cleanest way of updating this.
+
+5
+00:00:16,360 --> 00:00:22,720
+It will most likely work in all scenarios we have in this app but theoretically react schedules state
+
+6
+00:00:22,720 --> 00:00:28,690
+updates and data for what's it are to do is value here might not necessarily be the latest state when
+
+7
+00:00:28,690 --> 00:00:34,770
+this update is performed to guarantee this we can pass a function to the state updating function or
+
+8
+00:00:34,780 --> 00:00:39,700
+though a function which gets our previous to do this and which then returns to new state.
+
+9
+00:00:39,700 --> 00:00:45,580
+This also is supported by react dysfunction will all be called by react for us and then we can rely
+
+10
+00:00:45,580 --> 00:00:52,260
+on prefer to do is inside of this function to really be the latest state snapshot.
+
+11
+00:00:52,270 --> 00:00:58,930
+Now with that we update our to do with with the Ulta dos and the new one and now we have a function
+
+12
+00:00:58,930 --> 00:01:01,610
+near where we should be able to add new to do this.
+
+13
+00:01:01,900 --> 00:01:09,310
+So if we now save all of that and we go back to the application and enter finish the course here does
+
+14
+00:01:09,310 --> 00:01:10,330
+works.
+
+15
+00:01:10,330 --> 00:01:15,690
+And if I enter finish it in one month here this is also added.
+
+16
+00:01:15,700 --> 00:01:21,190
+So this not all works the missing functionality now is that we can also delete them.
+
+17
+00:01:21,220 --> 00:01:26,470
+We'll do this in the next lecture but more importantly than that you now also learn how to manage state
+
+18
+00:01:26,470 --> 00:01:31,570
+with react and typescript which besides props of course is a number a core concept.

@@ -1,0 +1,211 @@
+1
+00:00:02,160 --> 00:00:06,540
+First of all we can start our development server here with NPM start.
+
+2
+00:00:06,540 --> 00:00:11,030
+And this is a process we should keep on running because this will watch our files for changes.
+
+3
+00:00:11,040 --> 00:00:12,380
+And if something changes.
+
+4
+00:00:12,390 --> 00:00:18,660
+So if you save a change specifically it will recompile the typescript code to JavaScript recompile J
+
+5
+00:00:18,660 --> 00:00:20,220
+as X to JavaScript.
+
+6
+00:00:20,220 --> 00:00:26,190
+And in the end then build your react application and serve it on local host three thousand where at
+
+7
+00:00:26,190 --> 00:00:27,620
+the moment you don't see much.
+
+8
+00:00:27,630 --> 00:00:31,860
+You just can seed here in the def console that it seems to work because of that output here.
+
+9
+00:00:31,860 --> 00:00:36,650
+You don't see much of course because we're not rendering anything here in app TSX at the moment.
+
+10
+00:00:36,720 --> 00:00:38,110
+That of course will change.
+
+11
+00:00:38,580 --> 00:00:44,790
+And with that up and running Let's now write some code or let's analyze what we got in index TSX.
+
+12
+00:00:44,820 --> 00:00:46,770
+We don't have anything special right.
+
+13
+00:00:46,770 --> 00:00:54,210
+This is regular javascript code in app TSX we see disk type assignment though and they are what we can
+
+14
+00:00:54,210 --> 00:00:57,890
+see it is that we assigned this strange type to app.
+
+15
+00:00:58,050 --> 00:01:01,890
+Now if we ignore that type for a second what's actually stored in app.
+
+16
+00:01:02,490 --> 00:01:08,430
+Well a function an arrow function but that's still a regular function day for Vice this type here not
+
+17
+00:01:08,430 --> 00:01:12,130
+function or why is does not one of our function types we learn about.
+
+18
+00:01:12,630 --> 00:01:16,500
+Well it is under the hood but this is a type provided by react.
+
+19
+00:01:16,500 --> 00:01:21,150
+And now important of course provided by the react types package.
+
+20
+00:01:21,150 --> 00:01:28,590
+If you go into node modules we see these at types folder here and in India we see a lot of types and
+
+21
+00:01:28,590 --> 00:01:32,560
+we all do severe react types here all of the react Dom types.
+
+22
+00:01:32,730 --> 00:01:38,460
+And in the end this type is implicitly automatically imported from that react types folder you could
+
+23
+00:01:38,460 --> 00:01:39,390
+say.
+
+24
+00:01:39,390 --> 00:01:44,530
+Now what is this type FC simply stands for a function component.
+
+25
+00:01:44,550 --> 00:01:47,600
+There also is a longer form of this which you could use instead.
+
+26
+00:01:47,610 --> 00:01:49,260
+That's exactly the same type.
+
+27
+00:01:49,260 --> 00:01:51,240
+The other one is just a shortcut.
+
+28
+00:01:51,240 --> 00:01:57,750
+And this simply defines that what we store here in app has to be a function but a function that qualifies
+
+29
+00:01:57,810 --> 00:02:00,600
+as a function component in react.
+
+30
+00:02:00,600 --> 00:02:05,100
+You also kind of course write class based components and hence you have a classic component here as
+
+31
+00:02:05,100 --> 00:02:05,850
+well.
+
+32
+00:02:05,850 --> 00:02:09,320
+And then you would have to store a class in there instead of a function.
+
+33
+00:02:09,480 --> 00:02:12,790
+But we will go with function components here in this course.
+
+34
+00:02:12,790 --> 00:02:18,870
+Now this is a function component because it is a function that returns J is X and that is how a function
+
+35
+00:02:18,870 --> 00:02:20,730
+component is created and react.
+
+36
+00:02:20,910 --> 00:02:26,850
+If I would remove his return statement temporarily we hence would get an error here all do I tried to
+
+37
+00:02:26,880 --> 00:02:28,700
+safeties and it wants to compile it.
+
+38
+00:02:28,830 --> 00:02:34,800
+We would get an error because now we tell typescript that here we want to store a function component
+
+39
+00:02:35,190 --> 00:02:41,640
+and all we store is a normal function not a function that returns J is X or anything else that qualifies
+
+40
+00:02:41,670 --> 00:02:43,560
+as a react element in the F word.
+
+41
+00:02:43,560 --> 00:02:45,860
+This would be invalid and we would have to fix it.
+
+42
+00:02:45,870 --> 00:02:50,380
+So here we can already see how typescript improves our project a little bit.
+
+43
+00:02:50,430 --> 00:02:56,970
+It gives us extra type safety and make sure we can't run in a situation where we for example build a
+
+44
+00:02:57,060 --> 00:02:59,110
+invalid component.
+
+45
+00:02:59,240 --> 00:03:05,370
+Side note if it might seem unrealistic Dad you would ever forget this return statement.
+
+46
+00:03:05,400 --> 00:03:11,080
+Consider that you're building a bigger component with multiple if statements and different return statements.
+
+47
+00:03:11,130 --> 00:03:16,500
+You might forget one in one branch of your if statement and then typescript can definitely save your
+
+48
+00:03:16,500 --> 00:03:22,170
+ass and give you that warning a little bit earlier than during runtime where it otherwise might crash
+
+49
+00:03:22,170 --> 00:03:23,750
+in some situations.
+
+50
+00:03:23,760 --> 00:03:28,920
+So this is type of doing something but with that enough about the talking let's build something and
+
+51
+00:03:29,190 --> 00:03:35,100
+I want to build a relatively simple app here a to do app pretty classic but a to do app which allows
+
+52
+00:03:35,100 --> 00:03:41,070
+us to therefore practice some core concepts of react with TypeScript and therefore in the next lectures
+
+53
+00:03:41,310 --> 00:03:44,190
+let's actually start our first custom components.

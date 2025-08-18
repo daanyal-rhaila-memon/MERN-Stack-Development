@@ -1,0 +1,67 @@
+1
+00:00:02,280 --> 00:00:07,770
+So in this module we had a look at react and TypeScript and as you see typescript here again can add
+
+2
+00:00:07,770 --> 00:00:16,040
+a lot of nice extra features and checks that make sure that we write clear an error free code.
+
+3
+00:00:16,050 --> 00:00:22,770
+Now I did show you a couple of very important pattern stare and a couple of very important react features
+
+4
+00:00:22,770 --> 00:00:25,980
+like props and state and how to use them with typescript.
+
+5
+00:00:26,430 --> 00:00:33,620
+I also showed you how you should think about adding other functionalities like redux which we didn't
+
+6
+00:00:33,630 --> 00:00:35,430
+use in this module.
+
+7
+00:00:35,580 --> 00:00:41,010
+And as I also mentioned at the end of the last lecture don't forget about all the other things you learn
+
+8
+00:00:41,010 --> 00:00:46,920
+about in this course all the types you learn about and all the things you can do with typescript including
+
+9
+00:00:47,250 --> 00:00:53,420
+the configuration here everything you learned applies to this react plus types could project as well.
+
+10
+00:00:53,610 --> 00:00:59,940
+Just because we had a nice configuration out of the box here does not mean that you can't tweak it you
+
+11
+00:00:59,940 --> 00:01:05,460
+can tweak it and you can use everything you've learned in this course here in this project because after
+
+12
+00:01:05,460 --> 00:01:13,800
+all even though we're writing some reactive code and we can use J as X we're still writing javascript
+
+13
+00:01:13,830 --> 00:01:19,560
+or specifically typescript code and data for everything you'll learn from this course is valid here
+
+14
+00:01:19,590 --> 00:01:20,360
+as well.
+
+15
+00:01:20,370 --> 00:01:23,810
+It's easy to forget that so always keep it in mind.
+
+16
+00:01:23,970 --> 00:01:28,560
+And with that consider creating your next react project with typescript.
+
+17
+00:01:28,620 --> 00:01:31,940
+You know certainly know how to get started and how it works.

@@ -1,0 +1,355 @@
+1
+00:00:02,280 --> 00:00:08,250
+So we got our first component added let's add a second one new to dodge.
+
+2
+00:00:08,280 --> 00:00:14,910
+He is X is a file name in there of course we import react from react and you could of course also build
+
+3
+00:00:14,910 --> 00:00:16,200
+class based components.
+
+4
+00:00:16,200 --> 00:00:22,350
+This is also fully supported but I will use this modern functional components only style.
+
+5
+00:00:22,470 --> 00:00:28,680
+So here again we have a function which will make up our component later and I export new to do as my
+
+6
+00:00:28,680 --> 00:00:34,080
+default and let's add a type assignment and let's make it clear that this will be of type function component
+
+7
+00:00:34,500 --> 00:00:38,280
+and therefore of course here we are missing some returned J is X code.
+
+8
+00:00:38,280 --> 00:00:43,310
+So here I will return a form where I want to add all the controls I need to allow the user to add and
+
+9
+00:00:43,340 --> 00:00:45,090
+you to dos.
+
+10
+00:00:45,090 --> 00:00:48,620
+Now let's add does new to do component in the app component.
+
+11
+00:00:48,690 --> 00:00:56,420
+So in here we can import new to do from dot slash components new to do and simply added here instead
+
+12
+00:00:56,420 --> 00:01:03,110
+of to comment new to do as a self closing component because right now we are not passing anything between
+
+13
+00:01:03,110 --> 00:01:04,670
+the opening and closing tax.
+
+14
+00:01:04,820 --> 00:01:09,140
+And we also don't have any props here at the moment at least.
+
+15
+00:01:10,190 --> 00:01:16,100
+So instead of does component we can now add a input and also thereafter a button.
+
+16
+00:01:16,250 --> 00:01:22,450
+So add a diff here actually in which I want to have a label with aged him out for attributes to point
+
+17
+00:01:22,460 --> 00:01:32,030
+at let's say to do text does all just mark up here where I say to text and then input element of type
+
+18
+00:01:33,050 --> 00:01:40,100
+text with an idea of to do text so the label and the input are connected correctly semantically and
+
+19
+00:01:40,100 --> 00:01:45,950
+below that if you're inside of the form I'll add a button where I say add to do and that button should
+
+20
+00:01:45,950 --> 00:01:52,100
+be of type submit so that it well submits the form this is now a very basic form which we can use to
+
+21
+00:01:52,160 --> 00:01:54,410
+add a new to do.
+
+22
+00:01:54,620 --> 00:02:00,050
+Now let's make sure that this works and for this we actually have a couple of different steps we need
+
+23
+00:02:00,050 --> 00:02:07,910
+to apply we need to get whatever the user entered here and we then need to forward what the user enters
+
+24
+00:02:07,910 --> 00:02:13,350
+here to the app component because that is where we will manage our to dos later.
+
+25
+00:02:13,380 --> 00:02:17,960
+So first of all let's react to a form submission maybe we can add a new function.
+
+26
+00:02:18,090 --> 00:02:20,310
+So a function in the functional component.
+
+27
+00:02:20,340 --> 00:02:28,240
+But dad will now be a regular function which will name to dos submit handler any name you want.
+
+28
+00:02:28,260 --> 00:02:34,140
+This is a function which should fire whenever this form is submitted so we can bind it to the on submit
+
+29
+00:02:34,170 --> 00:02:40,050
+prop here in the end to do is submit handler don't execute it just point at it so that it's executed
+
+30
+00:02:40,050 --> 00:02:43,860
+for us whenever this form is submitted.
+
+31
+00:02:43,860 --> 00:02:52,020
+Now in here we get an event object and the event object is of type react stored form event now dear
+
+32
+00:02:52,050 --> 00:02:57,960
+I want to call event prevent default to prevent debt default which is to send a real request to the
+
+33
+00:02:57,960 --> 00:02:59,340
+server that's serving this app.
+
+34
+00:02:59,340 --> 00:03:01,510
+That's of course not what I want to happen.
+
+35
+00:03:01,620 --> 00:03:08,370
+I want to handle this request only here in JavaScript and therefore does browser default has to be prevented.
+
+36
+00:03:08,400 --> 00:03:13,890
+Now with that prevented we can get whatever the user entered into the input and for this we got two
+
+37
+00:03:13,890 --> 00:03:21,570
+different ways we can ever manage to State of the input here kind of with two way binding or we use
+
+38
+00:03:21,570 --> 00:03:26,700
+a ref a reference to extract what the user entered here when the form is submitted.
+
+39
+00:03:26,700 --> 00:03:31,320
+I will go for the latter approach because we'll see state management in action in the app component
+
+40
+00:03:31,470 --> 00:03:32,040
+in a second.
+
+41
+00:03:32,040 --> 00:03:34,590
+Anyways ways to set up such a ref.
+
+42
+00:03:34,590 --> 00:03:41,220
+We import the use ref hook from react and hooks are in special functions which you can execute and function
+
+43
+00:03:41,220 --> 00:03:45,360
+components to add certain functionalities to the component.
+
+44
+00:03:45,360 --> 00:03:53,880
+And when we execute use ref here what we get back is a ref object which we can store in a constant and
+
+45
+00:03:53,880 --> 00:03:55,140
+I'll name it.
+
+46
+00:03:55,290 --> 00:04:02,280
+Text input ref actually and we can for example use such a reference to assign it to a DOM element and
+
+47
+00:04:02,280 --> 00:04:06,540
+then interact with that DOM element from insert our code up here.
+
+48
+00:04:06,540 --> 00:04:13,930
+So for example when that form gets submitted we set up such a connection by adding the special ref prop
+
+49
+00:04:14,020 --> 00:04:20,260
+to any H2 male element of your choice and point at that object we created up here so add text input
+
+50
+00:04:20,260 --> 00:04:23,320
+ref this creates a connection here.
+
+51
+00:04:23,580 --> 00:04:31,470
+However you see already again typescript doesn't like this because use ref turns out to be a generic
+
+52
+00:04:31,950 --> 00:04:33,270
+function as well.
+
+53
+00:04:33,280 --> 00:04:35,270
+Now which type could we pass to it.
+
+54
+00:04:35,280 --> 00:04:37,380
+What would be interesting to know here.
+
+55
+00:04:37,380 --> 00:04:42,120
+Well it would be interesting to know which kind of data will be stored inside of that ref.
+
+56
+00:04:42,120 --> 00:04:48,410
+And since you point at the input element will have a h to male input element stored in their now we
+
+57
+00:04:48,410 --> 00:04:53,200
+all just have to provide a default value to the ref when it's getting setup and data will provide null
+
+58
+00:04:53,210 --> 00:04:58,010
+because then the component gets rendered for the very first time when this code executes of course does
+
+59
+00:04:58,010 --> 00:04:59,480
+hasn't been rendered down there.
+
+60
+00:04:59,510 --> 00:05:01,640
+So then this will not point at anything.
+
+61
+00:05:01,640 --> 00:05:07,280
+Once this has been rendered however the connection will be established and then this ref will work.
+
+62
+00:05:07,280 --> 00:05:15,500
+And now here in the to do submit handler we can get the entered text by using text input ref dot current.
+
+63
+00:05:15,500 --> 00:05:21,980
+That's always something you need to enter when you work with a ref dot value of course here because
+
+64
+00:05:21,980 --> 00:05:24,590
+we work with the H team l input element.
+
+65
+00:05:24,590 --> 00:05:27,950
+However here the problem is that this could be null.
+
+66
+00:05:27,980 --> 00:05:29,660
+It's a problem we know already.
+
+67
+00:05:29,660 --> 00:05:34,400
+We had this early in the course as well when we selected something in a dorm and we have it here as
+
+68
+00:05:34,400 --> 00:05:38,840
+well because types who can't know with certainty that disconnection is established.
+
+69
+00:05:38,840 --> 00:05:39,740
+We know it.
+
+70
+00:05:39,740 --> 00:05:44,750
+We wrote to code but typescript unfortunately doesn't understand that we do establish a connection down
+
+71
+00:05:44,750 --> 00:05:45,400
+there.
+
+72
+00:05:46,360 --> 00:05:51,520
+So to fix this we can add exclamation mark here to again tell typescript that this will be fine that
+
+73
+00:05:51,520 --> 00:05:56,200
+this will be set and we're good by the way it what is correct.
+
+74
+00:05:56,200 --> 00:06:01,840
+If we would call to do submit handler here this would be called the Ford as was rendered for the first
+
+75
+00:06:01,840 --> 00:06:05,050
+time and then indeed this wouldn't be initialized yet.
+
+76
+00:06:05,050 --> 00:06:09,880
+We only know that it will be initialized with certainty because we know this will only be called when
+
+77
+00:06:09,880 --> 00:06:15,550
+the form is submitted and that can only happen after this has been rendered so we know the way our code
+
+78
+00:06:15,550 --> 00:06:16,110
+works.
+
+79
+00:06:16,150 --> 00:06:22,690
+This will never be null if there would be some other possibility you would have to use it if check here
+
+80
+00:06:22,810 --> 00:06:27,990
+to check if text input ref thought current is null and if it is do something else but here.
+
+81
+00:06:28,000 --> 00:06:28,880
+This can't happen.
+
+82
+00:06:29,590 --> 00:06:34,540
+So with that we're extracting value and we can console locked us here to see where it works.
+
+83
+00:06:34,660 --> 00:06:38,470
+But of course this is not the final set up then so let's save this.
+
+84
+00:06:38,710 --> 00:06:39,940
+Let's enter here.
+
+85
+00:06:40,920 --> 00:06:47,940
+Finish it in one month and add to do and we see it here in the console logs.
+
+86
+00:06:47,970 --> 00:06:50,220
+That is working the way it should.
+
+87
+00:06:50,340 --> 00:06:51,920
+And with it working the way it should.
+
+88
+00:06:51,960 --> 00:06:55,430
+Let's now make sure we get that value to the app component.
+
+89
+00:06:55,530 --> 00:07:00,810
+If you know some react definitely try it on your own first we'll do it together in the next lecture.

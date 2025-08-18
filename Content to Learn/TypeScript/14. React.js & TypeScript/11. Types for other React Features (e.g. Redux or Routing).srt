@@ -1,0 +1,195 @@
+1
+00:00:02,160 --> 00:00:09,300
+Now of course in bigger react applications you work with more than just use ref and use state to understand
+
+2
+00:00:09,330 --> 00:00:10,990
+how you use typescript there.
+
+3
+00:00:11,010 --> 00:00:15,240
+It's really always helpful to simply hover over the functions you're calling.
+
+4
+00:00:15,240 --> 00:00:17,030
+So the other hooks you're working with.
+
+5
+00:00:17,130 --> 00:00:23,160
+For example if you would needs to use effect here in the new to do component for whatever reason then
+
+6
+00:00:23,340 --> 00:00:29,670
+you can call it and simply hover over it thereafter to understand with which types it works for example
+
+7
+00:00:29,670 --> 00:00:35,250
+that the first argument is an effect callback which is a special function where types will warn you
+
+8
+00:00:35,250 --> 00:00:41,400
+if you set it up incorrectly that the second argument is either nothing or an array of anything.
+
+9
+00:00:41,520 --> 00:00:42,290
+Things like that.
+
+10
+00:00:42,310 --> 00:00:47,640
+This will always help you you also learn that use effect doesn't return anything for example and on
+
+11
+00:00:47,640 --> 00:00:53,010
+use state where I mentioned that you always get back in array with exactly two elements while you also
+
+12
+00:00:53,010 --> 00:00:56,370
+see that here use state returns an array.
+
+13
+00:00:56,370 --> 00:01:01,790
+That's what we see here opening and closing bracket where the first element is of your generic type.
+
+14
+00:01:01,800 --> 00:01:05,160
+So list off to do this because that is your state snapshot.
+
+15
+00:01:05,250 --> 00:01:09,390
+And the second element is a react dispatch function here in the end.
+
+16
+00:01:09,390 --> 00:01:11,280
+That's what's happening here.
+
+17
+00:01:11,430 --> 00:01:12,650
+So that can be useful.
+
+18
+00:01:12,720 --> 00:01:15,540
+Maybe you're also working with redux.
+
+19
+00:01:15,540 --> 00:01:22,650
+Well thankfully if you dive into their documentation you also will find instructions about using redux
+
+20
+00:01:22,830 --> 00:01:29,790
+with typescript here under recipes you find usage with TypeScript and there you can learn how you can
+
+21
+00:01:29,910 --> 00:01:35,610
+add types to your actions and to your reducer is into your state management with redux.
+
+22
+00:01:35,610 --> 00:01:38,630
+It's really straightforward not complex at all.
+
+23
+00:01:38,700 --> 00:01:45,810
+And it as a lot of type safety there maybe you're also using the react router package.
+
+24
+00:01:45,810 --> 00:01:51,780
+This package here there you don't find specific typescript notations there.
+
+25
+00:01:52,080 --> 00:01:57,510
+Well of course you can install this into your project as well with npm install dash dash save react
+
+26
+00:01:57,500 --> 00:02:02,820
+dash router dash Dom which is the command you would typically use to install this package into a react
+
+27
+00:02:02,820 --> 00:02:03,780
+project.
+
+28
+00:02:03,780 --> 00:02:11,940
+So this will add direct router Dom package but this package has no special pipe instructions on its
+
+29
+00:02:11,940 --> 00:02:16,560
+page here you don't find anything typescript specific there at least at the point of time I'm recording
+
+30
+00:02:16,560 --> 00:02:22,470
+this nonetheless of course we can use as it and type could project as well and we can get good type
+
+31
+00:02:22,470 --> 00:02:30,020
+support there now with it installed you will notice that if I import from react router Dom I don't really
+
+32
+00:02:30,030 --> 00:02:31,770
+have great type support there.
+
+33
+00:02:31,920 --> 00:02:35,180
+For example if I tried to import something here I already get a warning.
+
+34
+00:02:35,280 --> 00:02:41,550
+Dad could not find a declaration for module react ruder Dom so that it didn't find any type information
+
+35
+00:02:41,550 --> 00:02:48,050
+here to fix that of course we can do something we did before NPM installed dash dash save dash death
+
+36
+00:02:48,500 --> 00:02:56,090
+at types slash react as router dash Dom so we can simply add such types here and we're good again this
+
+37
+00:02:56,090 --> 00:03:01,670
+is a trick you already learn about early and of course and of course there's no need to forget about
+
+38
+00:03:01,670 --> 00:03:07,260
+it just because we have a project where a lot already works with typescript out of the box if we don't
+
+39
+00:03:07,340 --> 00:03:12,990
+add something which does not work with typescript like this one we can add like this and now it's aware
+
+40
+00:03:13,020 --> 00:03:17,330
+of root it's aware of all the other features from this package as well.
+
+41
+00:03:17,330 --> 00:03:23,000
+So this is how easy you can add support for this as well and that's how you should generally approach
+
+42
+00:03:23,000 --> 00:03:23,610
+this.
+
+43
+00:03:23,630 --> 00:03:29,300
+Have a look at the official docs check if you see instructions about usage with typescript there if
+
+44
+00:03:29,300 --> 00:03:34,970
+not to install it and see if it has built in type support so that you at least get good order completion
+
+45
+00:03:35,510 --> 00:03:42,290
+and compilation support and if that also does not exist installer types package as we did it here and
+
+46
+00:03:42,290 --> 00:03:48,290
+that really is a four does module and this is how you can utilize TypeScript and all its amazing features
+
+47
+00:03:48,440 --> 00:03:49,820
+in a react app.
+
+48
+00:03:50,000 --> 00:03:55,310
+And of course everything you'll learn from this course applies to a reactive as well you can use all
+
+49
+00:03:55,310 --> 00:03:58,970
+the times good features you'll learn about from this course in a react project.

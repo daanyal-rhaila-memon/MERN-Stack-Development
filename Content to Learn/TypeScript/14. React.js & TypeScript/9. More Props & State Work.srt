@@ -1,0 +1,195 @@
+1
+00:00:02,150 --> 00:00:08,150
+So in this little dummy application I also want to ensure that we can delete to dos and to implement
+
+2
+00:00:08,150 --> 00:00:14,570
+that let's make sure that in the To Do list in our list item we don't just have to to do text but that
+
+3
+00:00:14,570 --> 00:00:17,750
+we maybe have that inside of a span.
+
+4
+00:00:17,750 --> 00:00:25,040
+And then besides that in the same list item we have a button as well a button where we say delete.
+
+5
+00:00:25,250 --> 00:00:26,690
+Just like that.
+
+6
+00:00:26,690 --> 00:00:31,770
+And when that button is pressed I well want to delete this to do so on click here.
+
+7
+00:00:31,790 --> 00:00:38,090
+I want to do something that gets rid of that to do now since we managed to to dos here in the app component.
+
+8
+00:00:38,090 --> 00:00:44,990
+We need a new function here to do delete handler which is triggered and which then clears this to do
+
+9
+00:00:44,990 --> 00:00:46,490
+from that list.
+
+10
+00:00:46,490 --> 00:00:52,190
+So here as our argument I expect to get you to do I.D. which is a string because in order to do model
+
+11
+00:00:52,280 --> 00:00:59,020
+an I.D. is a string and then in there we again call set to dos.
+
+12
+00:00:59,020 --> 00:01:04,750
+But now to remove it to do for it is all again use this function for him because we have a state update
+
+13
+00:01:04,780 --> 00:01:06,820
+which depends on the previous state.
+
+14
+00:01:07,030 --> 00:01:14,170
+And in there I will return a new array and that will basically be my old array but filtered filter is
+
+15
+00:01:14,170 --> 00:01:20,110
+a built in method in JavaScript which returns a new array of data and this new Array will basically
+
+16
+00:01:20,110 --> 00:01:27,700
+be the old array minus anything you filter out filter takes a function which is executed on every item
+
+17
+00:01:27,700 --> 00:01:28,650
+in the old array.
+
+18
+00:01:28,750 --> 00:01:35,260
+And when that function you pass and returns true the item is kept and added to the new array if it returns
+
+19
+00:01:35,260 --> 00:01:37,250
+false it will be dropped.
+
+20
+00:01:37,390 --> 00:01:39,830
+So it will run on all the to do as we already have.
+
+21
+00:01:39,940 --> 00:01:46,060
+And now we need to have some logic that returns false if you do I.D. we were looking at is equal to
+
+22
+00:01:46,060 --> 00:01:52,150
+the ID to do I.D. we're getting here so that if the two dos are equal there get it's getting dropped.
+
+23
+00:01:52,150 --> 00:01:57,670
+So we need faults here not true and hence let's inverse as an addict and add an exclamation mark with
+
+24
+00:01:57,670 --> 00:02:03,760
+that we keep all to DOS but the to do where the idea is equal to the idea we're getting here because
+
+25
+00:02:03,790 --> 00:02:08,770
+that is the idea we want to drop because it is easy to do we want to delete.
+
+26
+00:02:08,770 --> 00:02:14,340
+Now we need to make sure that to do delete handler can be called from inside the To Do list.
+
+27
+00:02:14,770 --> 00:02:21,340
+And again we can use props for this and add the on the lead to do prop here and point at the to do delete
+
+28
+00:02:21,340 --> 00:02:22,540
+handler.
+
+29
+00:02:22,540 --> 00:02:28,000
+But of course typescript isn't too happy about that because on the to do list props we're not saying
+
+30
+00:02:28,090 --> 00:02:33,060
+anything about this on delete to do prop here.
+
+31
+00:02:33,190 --> 00:02:39,970
+Let's change this in to do list TSX let's add on the lead to do as a prop and this will now point at
+
+32
+00:02:39,970 --> 00:02:40,570
+a function.
+
+33
+00:02:40,570 --> 00:02:47,740
+So we need a function type here a function which eventually returns nothing so wide but which gets the
+
+34
+00:02:47,740 --> 00:02:51,430
+idea of that to be deleted to do as a parameter.
+
+35
+00:02:51,430 --> 00:02:57,220
+Now the error in the app component is gone and now as an adjustment we need to make sure that this function
+
+36
+00:02:57,220 --> 00:03:03,310
+is getting called when this button is getting clicked for that we can point at props on the lead to
+
+37
+00:03:03,310 --> 00:03:09,580
+do and not execute this but instead just point at it so that this function of a receiving on this prop
+
+38
+00:03:09,670 --> 00:03:12,950
+will be called when I click on this button occurs.
+
+39
+00:03:12,970 --> 00:03:20,700
+The only problem with this approach of course is that here on this function we expect to get the to
+
+40
+00:03:20,710 --> 00:03:22,820
+do idea as a parameter.
+
+41
+00:03:23,010 --> 00:03:28,760
+Now to ensure that this works we can simply use bind here.
+
+42
+00:03:28,800 --> 00:03:34,380
+I don't care about the this keyword in the to be called function so I'll set it to null but this second
+
+43
+00:03:34,410 --> 00:03:40,530
+argument we pass to bind will be the first parameter received in on the lead to do and that should be
+
+44
+00:03:40,530 --> 00:03:46,100
+the idea of the to do so to do dot I.D. here with that it should work.
+
+45
+00:03:46,140 --> 00:03:57,020
+We now safeties and I add finish the course and finish it in one month if I click on delete here that's
+
+46
+00:03:57,020 --> 00:03:57,980
+gone and that's gone.
+
+47
+00:03:57,980 --> 00:03:59,750
+So this not all works.
+
+48
+00:03:59,750 --> 00:04:05,480
+Now I just want to polish this add a little bit of a nicer styling to it and here after we're done with
+
+49
+00:04:05,480 --> 00:04:07,190
+this basic application here.

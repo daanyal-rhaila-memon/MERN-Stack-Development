@@ -1,0 +1,335 @@
+1
+00:00:02,200 --> 00:00:07,270
+So the goal is to build a To Do List component and hence here in the source folder I'll add a new sub
+
+2
+00:00:07,270 --> 00:00:13,750
+folder components in there a To Do List dot t is x file which should hold my To Do List component.
+
+3
+00:00:13,750 --> 00:00:17,080
+Now to build a react component we need to import react from react.
+
+4
+00:00:17,080 --> 00:00:23,650
+Otherwise J as X will not work in this file and then I create my To Do List constant which stores an
+
+5
+00:00:23,650 --> 00:00:24,580
+arrow function.
+
+6
+00:00:24,580 --> 00:00:29,770
+And of course this doesn't have to be an arrow function you could also use a function with the function
+
+7
+00:00:29,770 --> 00:00:33,180
+keyword and it will export this.
+
+8
+00:00:33,190 --> 00:00:40,000
+Now let's use our extra types good features now and let's set the type of this to react FC to indicate
+
+9
+00:00:40,000 --> 00:00:43,860
+that this should not be a regular function but a functional component.
+
+10
+00:00:44,020 --> 00:00:49,830
+Hence we get an error because we are not returning something that qualifies as a react element.
+
+11
+00:00:49,840 --> 00:00:55,360
+So in here we should return let's say a unordered list because I want to render a list you're returning
+
+12
+00:00:55,360 --> 00:00:57,940
+a unordered list for now makes sense.
+
+13
+00:00:58,060 --> 00:01:02,800
+Now on that unordered list I want to output a list items.
+
+14
+00:01:02,800 --> 00:01:09,610
+So in here we could expect to get our let's say two dos and that's an array and in that array we have
+
+15
+00:01:09,610 --> 00:01:17,810
+an object where every item has an idea let's say 2 1 4 2 2 1 and a text like finish the course.
+
+16
+00:01:17,920 --> 00:01:22,720
+And this is only one item but of course you could have multiple such objects in this array in here in
+
+17
+00:01:22,720 --> 00:01:30,290
+our list we can then dynamically output to dos and map them into a list of list items.
+
+18
+00:01:30,310 --> 00:01:32,770
+So here we go through all the to dos.
+
+19
+00:01:32,770 --> 00:01:38,500
+This is a built in javascript function of course to map function and we return a list item for every
+
+20
+00:01:38,620 --> 00:01:46,540
+element in disarray and in that list item I set to do dot text as content on the list item and add this
+
+21
+00:01:46,600 --> 00:01:52,000
+special key prop which react actually once on repeated elements sitting next to each other.
+
+22
+00:01:52,300 --> 00:01:57,590
+And here we should pick something unique and these ideas should qualify as a unique identifier.
+
+23
+00:01:57,760 --> 00:02:03,490
+With that we're rendering a list of to dos let's now integrate the to do list component into the app
+
+24
+00:02:03,490 --> 00:02:04,480
+component.
+
+25
+00:02:04,480 --> 00:02:10,060
+And for this we can of course go to the app component import to do list from dot slash components to
+
+26
+00:02:10,060 --> 00:02:15,970
+do list like this the dot t is X extension will be added automatically by to build workflow we're using
+
+27
+00:02:16,000 --> 00:02:22,630
+under the hood here and then here instead of our div we can render to do lists like that if we now safeties
+
+28
+00:02:22,750 --> 00:02:28,270
+and we go back to the running page we see this one to do here styling is awful and we can add a better
+
+29
+00:02:28,270 --> 00:02:31,720
+styling later but for the moment that would be fine.
+
+30
+00:02:31,720 --> 00:02:38,980
+Now this however is not really realistic when we're building this to do list app I later want to be
+
+31
+00:02:38,980 --> 00:02:44,530
+able to add new to dos with a separate component which we don't have yet and we will probably manage
+
+32
+00:02:44,530 --> 00:02:52,210
+to to dos here and as app component because here in this place we will have a component that adds to
+
+33
+00:02:52,210 --> 00:02:58,990
+dos and that component will be able to talk back to this app component in here we then manage our array
+
+34
+00:02:58,990 --> 00:03:05,140
+off to do is and we add to do is to that array or we delete tattoos from that array and Q to do list
+
+35
+00:03:05,170 --> 00:03:06,970
+we would then passed at a rate.
+
+36
+00:03:06,970 --> 00:03:12,550
+So even though we're not managing it yet we would probably have that to do is array not in the To Do
+
+37
+00:03:12,550 --> 00:03:18,970
+list but in the app component that's more realistic that this array will later end up here so we can
+
+38
+00:03:18,970 --> 00:03:20,810
+already move it here.
+
+39
+00:03:20,950 --> 00:03:25,590
+Now we need to pass it to to do list and for this of course we can use props.
+
+40
+00:03:25,690 --> 00:03:31,420
+So on the to do list we could have items prop the name is of course up to us because we are defining
+
+41
+00:03:31,420 --> 00:03:38,140
+this component we can define how it's prop should be named and we can feed in our to dos array now we
+
+42
+00:03:38,140 --> 00:03:43,900
+already see that the idea e doesn't like this and if I tried to save this we also got a compilation
+
+43
+00:03:44,020 --> 00:03:50,400
+error we got a compilation error because property items does not exist on type whatever.
+
+44
+00:03:50,500 --> 00:03:56,890
+So it basically does not exist on this intersection type here which in the end defines the structure
+
+45
+00:03:56,890 --> 00:04:03,610
+of the props received by to do list because when using typescript with react you have to be clear about
+
+46
+00:04:03,610 --> 00:04:09,340
+the types you're working with and that does not just mean that you tell typescript that this is a special
+
+47
+00:04:09,340 --> 00:04:16,180
+kind of function no it also means that if you rely on props in some component you tell typescript how
+
+48
+00:04:16,180 --> 00:04:19,070
+these props should look like how they are structured.
+
+49
+00:04:19,450 --> 00:04:23,850
+So in the To Do List component we receive props here right.
+
+50
+00:04:23,860 --> 00:04:31,410
+That's regular react and on the props we probably have items prop property.
+
+51
+00:04:31,480 --> 00:04:35,170
+So we have a prop named items and that is indeed what I set up here.
+
+52
+00:04:35,170 --> 00:04:36,900
+I have these items prop.
+
+53
+00:04:37,180 --> 00:04:42,760
+The problem though is this technically would work but typescript is not a board yet we didn't really
+
+54
+00:04:42,760 --> 00:04:50,740
+tell typescript dead our props should have items property here to tell it we can use the fact that this
+
+55
+00:04:50,740 --> 00:04:57,820
+function component type here is actually a generic type a generic type where we can define all extra
+
+56
+00:04:57,820 --> 00:05:04,070
+props besides the default prop of children which every computer it has which we expect here so we can
+
+57
+00:05:04,070 --> 00:05:11,090
+add our angular brackets here and add our object that describes the structure of this props object we're
+
+58
+00:05:11,090 --> 00:05:14,690
+getting here or to keep our code leaner.
+
+59
+00:05:14,690 --> 00:05:18,320
+We do it as an extra interface here and that's totally optional.
+
+60
+00:05:18,320 --> 00:05:20,610
+So here we could have our To Do List props.
+
+61
+00:05:20,720 --> 00:05:23,890
+And this describes how our props look like in here.
+
+62
+00:05:23,900 --> 00:05:31,160
+I expect to get our items key where we have an array of objects where every object has an I.D. which
+
+63
+00:05:31,160 --> 00:05:34,390
+is a string and has a text which is a string right.
+
+64
+00:05:34,400 --> 00:05:36,110
+That's the data we're managing here.
+
+65
+00:05:36,110 --> 00:05:40,730
+We have an array of objects with an I.D. string and text string.
+
+66
+00:05:40,730 --> 00:05:44,450
+That is what I expect to get here as props and array of such objects.
+
+67
+00:05:44,520 --> 00:05:50,840
+And if we're here we can now point at this to do list props interface and now everything is fine.
+
+68
+00:05:50,840 --> 00:05:57,950
+Now typescript understands that here we will get props where we will have items prop and that does items
+
+69
+00:05:57,950 --> 00:06:02,410
+prob will be an array where we have an I.D. key and a text key on every array element.
+
+70
+00:06:02,420 --> 00:06:06,510
+So now he's safe does it compiles and we get the working output again.
+
+71
+00:06:06,890 --> 00:06:10,020
+So again this is typescript being used with react.
+
+72
+00:06:10,070 --> 00:06:15,980
+We don't just use it to tell react or to tell typescript that this is a functional component but also
+
+73
+00:06:16,100 --> 00:06:22,250
+about the properties component eventually gets and this helps us a lot with type safety in a way it's
+
+74
+00:06:22,250 --> 00:06:24,920
+that I hear accidentally think that its name to dos.
+
+75
+00:06:24,970 --> 00:06:30,350
+No this is not supported we get an error it is items you all will see I'm getting all the completion
+
+76
+00:06:30,350 --> 00:06:30,710
+here.
+
+77
+00:06:30,740 --> 00:06:36,530
+So coding gets a lot easier when we're OK with typescript here and that of course is the whole advantage
+
+78
+00:06:36,530 --> 00:06:37,160
+of typescript.
+
+79
+00:06:37,250 --> 00:06:44,150
+It simplifies coding it a whites unnecessary mistakes and as you can see it also does so in a reactive.
+
+80
+00:06:44,150 --> 00:06:48,460
+Now of course we're not finished though at the moment our to do is here.
+
+81
+00:06:48,500 --> 00:06:49,540
+Never change.
+
+82
+00:06:49,700 --> 00:06:51,020
+And I want to change that.
+
+83
+00:06:51,040 --> 00:06:54,450
+I wanted a component which allows us to add new tattoos.
+
+84
+00:06:54,500 --> 00:06:55,760
+So let's work on that next.

@@ -1,0 +1,219 @@
+1
+00:00:02,260 --> 00:00:07,810
+Time for some state management in the app component because when we update the array like this component
+
+2
+00:00:07,810 --> 00:00:08,890
+wouldn't be rendered.
+
+3
+00:00:08,890 --> 00:00:11,710
+That's how react works in our function component.
+
+4
+00:00:11,710 --> 00:00:18,400
+We can manage state with the use state hook and again if you don't know this sort of state or function
+
+5
+00:00:18,400 --> 00:00:21,080
+components or hooks doesn't tell you anything.
+
+6
+00:00:21,130 --> 00:00:26,480
+Definitely check out some dedicated react resources like my react The Complete Guide course.
+
+7
+00:00:26,530 --> 00:00:29,890
+So now I want to manage my two dos here with state.
+
+8
+00:00:29,920 --> 00:00:35,740
+And for that I'll clear that dummy to do with which I started and instead initialize the state by calling
+
+9
+00:00:35,740 --> 00:00:36,490
+you state.
+
+10
+00:00:36,490 --> 00:00:42,880
+Add to that however I can pass my empty array as a starting state value so did initially my state is
+
+11
+00:00:42,880 --> 00:00:50,560
+an empty array no use state always returns an array with exactly two elements The first element is the
+
+12
+00:00:50,560 --> 00:00:56,650
+latest state snapshot for this render cycle and the second argument The second element in the array
+
+13
+00:00:56,770 --> 00:01:02,980
+is a function to update that state and re render the component we can use a radius structuring about
+
+14
+00:01:02,980 --> 00:01:09,390
+which we learned earlier in the course to pull out these two elements and stored them in separate constants.
+
+15
+00:01:09,430 --> 00:01:16,080
+And then here we have the two dos and let's say a function named set to dos with that we still get our
+
+16
+00:01:16,080 --> 00:01:22,720
+to do as array and now in here in the to do add handler I want to call set to dos and set my to do is
+
+17
+00:01:22,720 --> 00:01:27,530
+array to a new array which has a new to do text added to it.
+
+18
+00:01:28,300 --> 00:01:38,760
+Now for that we can of course pass in the new array and add a new object let's say with an idea where
+
+19
+00:01:38,760 --> 00:01:42,540
+we create a random idea with moth random to string.
+
+20
+00:01:42,540 --> 00:01:47,670
+It's not really unique but good enough here and where we then also have our text which is that text
+
+21
+00:01:47,670 --> 00:01:48,680
+value I'm getting here.
+
+22
+00:01:48,750 --> 00:01:54,960
+But strangely enough I'm getting an error here and the error we're getting is that this argument is
+
+23
+00:01:54,960 --> 00:02:01,770
+not a sizable well basically into something which expects to have an array of nothing.
+
+24
+00:02:02,010 --> 00:02:03,630
+And that's of course not what we want here.
+
+25
+00:02:03,630 --> 00:02:06,030
+We don't want to have an array of nothing as our state.
+
+26
+00:02:06,030 --> 00:02:07,800
+Why is this happening.
+
+27
+00:02:07,980 --> 00:02:14,550
+Because here when I initialize use state with an empty array typescript infers how our state will look
+
+28
+00:02:14,550 --> 00:02:17,040
+like if I would initialize this to a string.
+
+29
+00:02:17,050 --> 00:02:22,440
+Types could would infer that my state is a string so if I temporarily removed this and I pass in some
+
+30
+00:02:22,440 --> 00:02:24,000
+text it would be accepted.
+
+31
+00:02:25,230 --> 00:02:30,750
+If I pass in an array typescript expects that it's an array but not an array of anything but always
+
+32
+00:02:30,750 --> 00:02:33,480
+basically an empty array so an array of nothing.
+
+33
+00:02:33,480 --> 00:02:39,900
+Which of course I don't want here to fix does we have to tell react how our state will look like over
+
+34
+00:02:39,900 --> 00:02:40,680
+time.
+
+35
+00:02:40,680 --> 00:02:47,190
+And for that we can again use that you state is a generic function because we can pass in the structure
+
+36
+00:02:47,190 --> 00:02:54,480
+of our estate so which type of data our state is off and there we can pass in that our state should
+
+37
+00:02:54,480 --> 00:03:02,010
+be an array of objects to be precise in the array of objects where we have an I.D. property which is
+
+38
+00:03:02,010 --> 00:03:04,910
+a string and a text property which is a string.
+
+39
+00:03:04,920 --> 00:03:11,010
+And now this state update is allowed now writing this here is of course fine but since we'll need it
+
+40
+00:03:11,010 --> 00:03:16,350
+in different places in the app I'll actually create a new file and named as to do dot model dot t s
+
+41
+00:03:16,740 --> 00:03:18,240
+the file name is up to you.
+
+42
+00:03:18,330 --> 00:03:23,850
+And here I want to export basically an interface name to do where I just want to describe how a to do
+
+43
+00:03:23,850 --> 00:03:29,160
+item should look like in my app that I want to have an idea of type String and a text property of type
+
+44
+00:03:29,160 --> 00:03:30,300
+String.
+
+45
+00:03:30,300 --> 00:03:35,940
+And with this export it here in the app component we can import this.
+
+46
+00:03:35,940 --> 00:03:46,700
+So here we can import to do from dot slash to do model and here we simply then have an array of to dos
+
+47
+00:03:46,730 --> 00:03:49,620
+which is of course shorter and easier to read.
+
+48
+00:03:49,700 --> 00:03:54,740
+And now our state update still works but this is a bit cleaner at this as you see is really important
+
+49
+00:03:54,740 --> 00:03:55,100
+here.
+
+50
+00:03:55,160 --> 00:04:00,680
+When working with something like an array where types who can't infer which type of data you want to
+
+51
+00:04:00,680 --> 00:04:06,320
+store it eventually if you initialize it with an empty array with this however it works.
+
+52
+00:04:06,320 --> 00:04:11,450
+The downside of course is that our estate updating logic here is not correct because right now I always
+
+53
+00:04:11,810 --> 00:04:18,020
+overwrite deep existing array of tattoos with a new array that only has exactly one element and instead
+
+54
+00:04:18,020 --> 00:04:23,780
+I want to overwrite it with a new array that has all the old elements as well as the new element.
+
+55
+00:04:23,780 --> 00:04:26,450
+So let's adjust this logic in the next lecture.

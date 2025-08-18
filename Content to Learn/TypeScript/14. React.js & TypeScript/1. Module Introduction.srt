@@ -1,0 +1,51 @@
+1
+00:00:02,170 --> 00:00:08,680
+In this course will obviously learned a lot about TypeScript and you'll all learn how to work with TypeScript
+
+2
+00:00:08,770 --> 00:00:11,650
+and third party libraries like lo Dash.
+
+3
+00:00:11,650 --> 00:00:16,930
+Now there is a very popular third party library which you might be interested in using to gather with
+
+4
+00:00:16,930 --> 00:00:20,110
+TypeScript and that is react react.
+
+5
+00:00:20,110 --> 00:00:27,610
+J.S. is a extremely popular javascript library for building amazing user interfaces and you can use
+
+6
+00:00:27,610 --> 00:00:29,390
+it with typescript as well.
+
+7
+00:00:29,410 --> 00:00:32,380
+It's not the default in most react projects.
+
+8
+00:00:32,380 --> 00:00:36,250
+You don't work with typescript but you can absolutely do that.
+
+9
+00:00:36,250 --> 00:00:39,460
+And in this course module you will learn how it works.
+
+10
+00:00:39,550 --> 00:00:45,660
+Now a little disclaimer at this point this is not a react course I will not teach react here.
+
+11
+00:00:45,670 --> 00:00:51,850
+This module is for you if you already know react and you want to learn how to use TypeScript and react
+
+12
+00:00:52,090 --> 00:00:57,220
+not if you don't know react and you want to learn both TypeScript and react to gather.
+
+13
+00:00:57,340 --> 00:01:02,680
+But with that let's dive right in and let's see how we can build a reactor up with typescript.

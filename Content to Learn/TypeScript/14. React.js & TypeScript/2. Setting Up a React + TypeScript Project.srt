@@ -1,0 +1,251 @@
+1
+00:00:02,100 --> 00:00:08,140
+Now when it comes to building a reactor with typescript we of course need a project setup which is capable
+
+2
+00:00:08,140 --> 00:00:16,080
+of both handling our ReACT code so things like J.S. X for example and which compile stays and optimizes
+
+3
+00:00:16,120 --> 00:00:23,890
+our ReACT code and which at the same time is capable of understanding TypeScript and of compiling typescript
+
+4
+00:00:23,890 --> 00:00:30,260
+to JavaScript setting up such a project on our own can be pretty difficult and therefore it's good dad.
+
+5
+00:00:30,280 --> 00:00:37,060
+Create react app a tool managed by the REACT team which we can use to create react projects supports
+
+6
+00:00:37,060 --> 00:00:43,000
+typescript out of the box you can simply google for create react app type script and you should find
+
+7
+00:00:43,000 --> 00:00:49,150
+this entry on the official create react app documentation there you'll learn how you can add typescript
+
+8
+00:00:49,150 --> 00:00:55,900
+to either an existing project here these steps or how you can create a new project with create react
+
+9
+00:00:55,900 --> 00:01:02,920
+app and TypeScript and here you see a command which you can just copy to create a new react project
+
+10
+00:01:03,070 --> 00:01:10,420
+which also supports typescript now I will use this here and here I already am in a folder which I want
+
+11
+00:01:10,420 --> 00:01:16,300
+to use does is simply the project folder I want to use for this project and I will just paste in this
+
+12
+00:01:16,300 --> 00:01:21,010
+command and in this case because I want to use the folder I am already in.
+
+13
+00:01:21,010 --> 00:01:26,770
+Also here in my terminal I will replace the project name with a dot so that it doesn't create a new
+
+14
+00:01:26,780 --> 00:01:31,780
+sub folder and creates the project in that but that instead it uses this folder.
+
+15
+00:01:31,780 --> 00:01:33,790
+This is of course optional.
+
+16
+00:01:33,790 --> 00:01:38,030
+I also want to say that I noticed that this comment doesn't always work.
+
+17
+00:01:38,110 --> 00:01:42,570
+Sometimes it creates a regular javascript project to fix that.
+
+18
+00:01:42,640 --> 00:01:49,490
+You can install create reactive globally on your machine something you can simply do by running npm
+
+19
+00:01:49,490 --> 00:01:56,090
+install dash G create dash react dash app on Mac and Linux you might need to add a pseudo in front of
+
+20
+00:01:56,090 --> 00:01:56,600
+this.
+
+21
+00:01:56,750 --> 00:02:02,810
+And with this installed on your machine you can't actually run this command here but without any specs
+
+22
+00:02:03,050 --> 00:02:05,950
+just like this and Dan it should definitely work.
+
+23
+00:02:05,960 --> 00:02:07,210
+So that's what I will do here.
+
+24
+00:02:07,280 --> 00:02:12,980
+But normally it should also work without installing it by just using the NDP X tool which is part of
+
+25
+00:02:12,980 --> 00:02:18,890
+the NPM tool we already installed to gather with node J.S. earlier in the course.
+
+26
+00:02:18,890 --> 00:02:25,490
+So if now it entered this scaffolds a new project into this folder here and in that project it will
+
+27
+00:02:25,490 --> 00:02:31,130
+set up our ReACT application where we can all write all our code with typescript.
+
+28
+00:02:31,130 --> 00:02:34,310
+So let's wait for this to finish and let's see what this gives us.
+
+29
+00:02:34,670 --> 00:02:35,990
+And it finished.
+
+30
+00:02:36,050 --> 00:02:37,850
+So let's have a look at what we got.
+
+31
+00:02:38,000 --> 00:02:43,310
+We got a folder which you might recognize it's basically the same structure you have when you create
+
+32
+00:02:43,310 --> 00:02:49,450
+a reactive without typescript but we can already see the T is conflict or Jason File by the way.
+
+33
+00:02:49,460 --> 00:02:52,970
+You can also edit this file and fine tune unit to your needs.
+
+34
+00:02:53,000 --> 00:02:58,250
+You learned how to tweak this configuration earlier in the course after all the default configuration
+
+35
+00:02:58,250 --> 00:03:01,180
+should be fine for most use cases though.
+
+36
+00:03:01,190 --> 00:03:06,080
+Now if we explored the source folder which is where we will write our source code we all will find a
+
+37
+00:03:06,080 --> 00:03:12,440
+bunch of t s x files in there now thus far in the course we didn't work with t s x files but only with
+
+38
+00:03:12,440 --> 00:03:19,460
+T S files t s x simply as you chose chosen here because these are files where you can not just write
+
+39
+00:03:19,460 --> 00:03:26,360
+typescript code but all the J is X code which just is special react javascript syntax where you write
+
+40
+00:03:26,450 --> 00:03:32,500
+H Tim Allen markup inside of your javascript or in this case typescript code.
+
+41
+00:03:32,900 --> 00:03:36,520
+That is what we get here now in these files.
+
+42
+00:03:36,530 --> 00:03:39,890
+We can already see some types crude syntax for example here.
+
+43
+00:03:39,890 --> 00:03:41,540
+We got a type assignment.
+
+44
+00:03:41,540 --> 00:03:47,300
+I will have a closer look at this type later but for now we just can't immediately see that we obviously
+
+45
+00:03:47,390 --> 00:03:49,320
+use typescript here.
+
+46
+00:03:49,340 --> 00:03:54,890
+With that let me just clean up this starting folder structure a bit and then let's build a very simple
+
+47
+00:03:54,890 --> 00:04:00,980
+react up together and whilst we're doing that let's explore how we can use typescript with react.
+
+48
+00:04:01,070 --> 00:04:07,790
+So let's first focus on the cleanup here in apt he has X I will remove the logo import and remove all
+
+49
+00:04:07,790 --> 00:04:10,850
+the content in my div here and just keep that Dave.
+
+50
+00:04:10,880 --> 00:04:18,470
+Therefore I will also remove the app CSX import get rid of the apps use this file in the app test dot
+
+51
+00:04:18,500 --> 00:04:26,400
+TSX file as well as the logo SPG and the service worker dot test files remove all of those indexed he
+
+52
+00:04:26,410 --> 00:04:31,460
+has X I will remove this service book or import because we're not going to work with service brokers
+
+53
+00:04:31,460 --> 00:04:32,000
+here.
+
+54
+00:04:32,150 --> 00:04:40,430
+Remove that code down there and end up with this setup and in index CSR as I will clear all of this
+
+55
+00:04:40,820 --> 00:04:47,180
+and just setup some HQ alt style where I want to set a fun family of send serif and then a body style
+
+56
+00:04:47,210 --> 00:04:54,260
+where I want to get rid of the margin just like this very simple styling and with that we got a starting
+
+57
+00:04:54,260 --> 00:04:56,090
+setup with which I want to work now.
+
+58
+00:04:56,090 --> 00:04:57,370
+Again I did mention it.
+
+59
+00:04:57,380 --> 00:05:03,080
+But if this all doesn't tell you anything if there's a syntax you've never seen before then definitely
+
+60
+00:05:03,080 --> 00:05:05,630
+dive into some react resources first.
+
+61
+00:05:05,630 --> 00:05:08,160
+This is not what we will focus on in this module.
+
+62
+00:05:08,180 --> 00:05:14,020
+You're not going to learn or react in this module but with that let's save all our changes and now continue.
+
+63
+00:05:14,180 --> 00:05:19,610
+And let's start to write some react and type of code and learn how these two things work together.
