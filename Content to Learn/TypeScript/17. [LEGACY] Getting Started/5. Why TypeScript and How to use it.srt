@@ -1,0 +1,234 @@
+1
+
+00:00:01,550  -->  00:00:05,320
+So we had to look at the what, we also briefly saw the why,
+
+2
+
+00:00:05,540  -->  00:00:13,610
+well now let's have a look at why in a greater detail and also see how. I'm on typescriptlang.org which
+
+3
+
+00:00:13,610  -->  00:00:15,630
+is the official web page of TypeScript
+
+4
+
+00:00:15,770  -->  00:00:21,620
+and there, you may click on playground which is a great resource to really play around with TypeScript
+
+5
+
+00:00:21,820  -->  00:00:26,540
+and actually, a lot of the examples shown in this course may be recreated here.
+
+6
+
+00:00:26,900  -->  00:00:34,670
+So here we have this left box which holds our TypeScript code and we have the right box which holds the compiled
+
+7
+
+00:00:34,730  -->  00:00:39,020
+Javascript code because remember, TypeScript compiles to Javascript.
+
+8
+
+00:00:39,020  -->  00:00:41,240
+Now here you may select classic Javascript
+
+9
+
+00:00:41,240  -->  00:00:47,390
+if you don't see that code here by default and this actually is really just Javascript. It happens
+
+10
+
+00:00:47,390  -->  00:00:52,700
+to be ES6 version with the let keyword here but it's Javascript, it's not really TypeScript,
+
+11
+
+00:00:52,710  -->  00:00:58,790
+what we're using here, though we could use any TypeScript code here in the left box since it will get compiled
+
+12
+
+00:00:58,790  -->  00:01:02,710
+to the right box. Therefore the right box is very equal to the left box
+
+13
+
+00:01:02,710  -->  00:01:05,740
+since again, we already have Javascript here.
+
+14
+
+00:01:05,750  -->  00:01:09,710
+Now what happens here is a greeter constructor function is created,
+
+15
+
+00:01:09,860  -->  00:01:14,200
+then we extend it with this prototype and add the greet method
+
+16
+
+00:01:14,510  -->  00:01:19,760
+and then we basically instantiate this object, create a new button on the document which you can then
+
+17
+
+00:01:19,760  -->  00:01:23,340
+click to execute the greet method on this object.
+
+18
+
+00:01:23,480  -->  00:01:29,120
+We can see this code in action by clicking on run here which opens a new tab, gives us this button and
+
+19
+
+00:01:29,120  -->  00:01:30,410
+shows us this alert
+
+20
+
+00:01:30,560  -->  00:01:36,030
+and here we already see an issue, we're seeing hello object object.
+
+21
+
+00:01:36,140  -->  00:01:37,670
+So let's have a look at that code,
+
+22
+
+00:01:37,670  -->  00:01:39,090
+why does this happen?
+
+23
+
+00:01:39,500  -->  00:01:46,340
+Well we create this prototype or we extend the prototype, add the greet method and there we say return
+
+24
+
+00:01:46,340  -->  00:01:46,870
+Hello
+
+25
+
+00:01:46,910  -->  00:01:48,430
+and then this greeting,
+
+26
+
+00:01:48,470  -->  00:01:55,580
+so whatever this greeting is equal to. Now in the constructor, we pass something to this constructor
+
+27
+
+00:01:55,580  -->  00:01:58,280
+which is then actually assigned to this greeting
+
+28
+
+00:01:58,430  -->  00:02:03,680
+and the thing we pass happens to be an object and not just a string.
+
+29
+
+00:02:03,680  -->  00:02:10,720
+Now the issue with normal Javascript is that here, we're not getting any warnings or errors,
+
+30
+
+00:02:10,760  -->  00:02:17,550
+this is code which is perfectly valid but which will give us an undesired result when we run it
+
+31
+
+00:02:17,600  -->  00:02:25,640
+as you saw before. Now we can easily enhance this with TypeScript by simply specifying that greeting
+
+32
+
+00:02:25,640  -->  00:02:28,130
+here should be of type string
+
+33
+
+00:02:28,160  -->  00:02:32,610
+and we do this by adding a colon and then simply string.
+
+34
+
+00:02:32,630  -->  00:02:37,920
+Now all of a sudden with this simple change, you see that now we get some error here
+
+35
+
+00:02:38,090  -->  00:02:45,110
+and if we hover over it, we see that the argument of type this here is not assignable to parameter
+
+36
+
+00:02:45,110  -->  00:02:51,040
+of type string, so that basically we may not pass an object here because we're expecting a string.
+
+37
+
+00:02:51,320  -->  00:02:57,170
+So in order to make it work, I have to remove the object part and change this to a string,
+
+38
+
+00:02:57,200  -->  00:03:05,150
+the error is gone and if I now hit run and click the button, we see hello world and that is really what
+
+39
+
+00:03:05,210  -->  00:03:09,520
+TypeScript is, why we like might want to use it and how it works.
+
+40
+
+00:03:09,560  -->  00:03:16,190
+We simply mix our TypeScript code with Javascript code as you see here, there is any degree of mixture
+
+41
+
+00:03:16,190  -->  00:03:17,660
+possible
+
+42
+
+00:03:17,660  -->  00:03:25,020
+and then we get the benefits from using TypeScript by simply getting this extra check for the type here
+
+43
+
+00:03:25,100  -->  00:03:32,360
+and making sure that not somewhere in our code, we're kind of introducing a bug because us using a wrong
+
+44
+
+00:03:32,360  -->  00:03:36,060
+type for example. Now types are only one,
+
+45
+
+00:03:36,090  -->  00:03:40,030
+though also the most important but only one of the many features TypeScript offers
+
+46
+
+00:03:40,160  -->  00:03:45,650
+and throughout this course we're going to learn about a lot of other features too and see how to use them and
+
+47
+
+00:03:45,650  -->  00:03:46,550
+how they help us.

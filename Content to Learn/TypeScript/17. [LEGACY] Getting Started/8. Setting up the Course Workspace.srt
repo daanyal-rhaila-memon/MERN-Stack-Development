@@ -1,0 +1,335 @@
+1
+00:00:02,020 --> 00:00:03,940
+Now the set up from the last videos will work
+
+2
+00:00:03,960 --> 00:00:06,630
+and allows you to use TypeScript on your machine.
+
+3
+00:00:06,630 --> 00:00:12,350
+Now for the rest of this course, I will have a specific folder structure which I will always keep and
+
+4
+00:00:12,380 --> 00:00:19,290
+a little helper which makes the TypeScript development a little more convenient and makes these examples a
+
+5
+00:00:19,290 --> 00:00:23,540
+little bit more enjoyable and it's also required for some of these modules,
+
+6
+00:00:23,730 --> 00:00:30,330
+I'll install a very lightweight little server which will run automatically, a NodeJS server that is,
+
+7
+00:00:30,750 --> 00:00:33,330
+which will host our index.html file.
+
+8
+00:00:33,570 --> 00:00:40,260
+Well right before we executed it by double clicking on it, which works fine for this basic example but
+
+9
+00:00:40,260 --> 00:00:46,070
+once we reached a point where we use modules and multiple files, we need a little server able to serve
+
+10
+00:00:46,080 --> 00:00:46,870
+these files,
+
+11
+00:00:46,950 --> 00:00:53,160
+our default file protocol which is used when we double-click on a file will not suffice in this case,
+
+12
+00:00:53,160 --> 00:00:58,230
+also you might be interested in seeing a bit more of a realistic setup.
+
+13
+00:00:58,350 --> 00:01:02,580
+So I'm here in Web Storm which is just my IDE I'm using for development,
+
+14
+00:01:02,580 --> 00:01:10,320
+you may use any other editor like Sublime or Atom and as you can see here I opened a folder which holds
+
+15
+00:01:10,500 --> 00:01:16,620
+an index.html file which looks like the one before basically, which already has this script import, of course
+
+16
+00:01:16,620 --> 00:01:19,260
+you may place it also at the end of the body section here,
+
+17
+00:01:19,260 --> 00:01:25,050
+doesn't really matter for this course and that I got the app.ts file which only prints console
+
+18
+00:01:25,050 --> 00:01:25,390
+log
+
+19
+00:01:25,410 --> 00:01:26,080
+it works.
+
+20
+00:01:26,130 --> 00:01:27,760
+So no TypeScript code at all
+
+21
+00:01:27,810 --> 00:01:31,020
+but as I already said before, you can mix it with Javascript,
+
+22
+00:01:31,050 --> 00:01:33,170
+there is no pure TypeScript code,
+
+23
+00:01:33,180 --> 00:01:36,860
+it is Javascript code plus some extra features in the end.
+
+24
+00:01:36,990 --> 00:01:43,470
+So with these two files of course, the job is or the task is to set this folder up in a way that we can
+
+25
+00:01:43,470 --> 00:01:45,780
+use it throughout this course.
+
+26
+00:01:46,030 --> 00:01:51,180
+Now I can do this by simply going to the command line and that's just the normal terminal window here
+
+27
+00:01:51,180 --> 00:01:54,650
+in the bottom just included in my IDE already
+
+28
+00:01:54,810 --> 00:02:02,040
+and the first thing I want to do is I want to put this project here, this folder under control of npm,
+
+29
+00:02:02,040 --> 00:02:03,600
+this package manager of Node 
+
+30
+00:02:03,840 --> 00:02:06,520
+and the reason for this is that throughout this course
+
+31
+00:02:06,540 --> 00:02:13,950
+and also in this video, I'm going to add a few packages to this folder, to this project. I simply
+
+32
+00:02:13,950 --> 00:02:15,890
+do set this under control of
+
+33
+00:02:15,900 --> 00:02:20,390
+npm by running npm init inside of his folder.
+
+34
+00:02:20,400 --> 00:02:25,560
+Now that prompts me a couple of questions here and I just hit enter all the time since the defaults
+
+35
+00:02:25,620 --> 00:02:30,660
+are fine for me and it will create this package.json file here.
+
+36
+00:02:30,840 --> 00:02:33,730
+Now once you open that file, it should look something like that
+
+37
+00:02:33,990 --> 00:02:40,620
+and while it's really lean, you get the dependencies in-depth, dependencies nodes here which will basically
+
+38
+00:02:40,620 --> 00:02:43,790
+save all the dependencies you will use in your project
+
+39
+00:02:44,040 --> 00:02:46,390
+and one dependency and that means package
+
+40
+00:02:46,410 --> 00:02:55,230
+I am using or I will use is lite-server. I can install it by running npm install lite-server, don't
+
+41
+00:02:55,230 --> 00:03:00,140
+use the -g flag here because we don't want to install it globally, we just want to install it
+
+42
+00:03:00,150 --> 00:03:07,080
+locally in this project, by adding --save-dev, I'm making sure that this gets added as a development
+
+43
+00:03:07,110 --> 00:03:08,150
+only dependency,
+
+44
+00:03:08,160 --> 00:03:14,480
+it's not needed for whenever you shipped as code on a server or to any of your websites.
+
+45
+00:03:14,580 --> 00:03:20,660
+So this will download lite-server which again is just a very lightweight server which hosts the index.html
+
+46
+00:03:20,670 --> 00:03:25,390
+file and will also automatically updated whenever we change our Javascript code,
+
+47
+00:03:25,470 --> 00:03:31,830
+so really just convenient to have an easier workflow and not have to hit reload all the time and
+
+48
+00:03:31,830 --> 00:03:32,690
+so on.
+
+49
+00:03:33,060 --> 00:03:40,320
+So with that, you see the dependency was added here in this file and then I can write a convenient script to quickly
+
+50
+00:03:40,320 --> 00:03:47,770
+start the server by adding in the scripts section here, in the package.json file start and then
+
+51
+00:03:47,770 --> 00:03:48,300
+the command
+
+52
+00:03:48,300 --> 00:03:52,480
+I want to run here is simply lite-server, the package I just installed.
+
+53
+00:03:52,500 --> 00:04:00,080
+What this will do is that once I run npm start just like that, it will open up a new tab in the browser
+
+54
+00:04:01,120 --> 00:04:07,540
+here, typically at localhost:3000 but it will search for a free port automatically and serve your index.html
+
+55
+00:04:07,540 --> 00:04:12,400
+file, as you can see if I type hello here and save this,
+
+56
+00:04:12,610 --> 00:04:17,680
+it automatically reloaded without me having to hit reload and displays the content of the index.html
+
+57
+00:04:17,680 --> 00:04:18,570
+file.
+
+58
+00:04:18,700 --> 00:04:19,750
+So that's why I'm using it,
+
+59
+00:04:19,750 --> 00:04:26,190
+it's really convenient. Now the last piece missing here is that right now we got the index.html file,
+
+60
+00:04:26,200 --> 00:04:32,290
+we can compile our TypeScript files by running tsc, as a side note keep that server running, don't close
+
+61
+00:04:32,290 --> 00:04:35,550
+it, open up a new tab for running additional commands.
+
+62
+00:04:35,620 --> 00:04:37,250
+So I can compile app.ts 
+
+63
+00:04:37,350 --> 00:04:43,750
+by running tsc app.ts but it would be more convenient if I could only run tsc and it would
+
+64
+00:04:43,750 --> 00:04:47,500
+automatically look for all the TypeScript files and compile them.
+
+65
+00:04:47,500 --> 00:04:54,340
+I can do this by first running tsc --init to not only put this folder under control
+
+66
+00:04:54,340 --> 00:05:00,550
+of npm which we did before with npm init but now also to put it under control of TypeScript so to say.
+
+67
+00:05:01,420 --> 00:05:08,790
+This will in the end create a tsconfig.json file which tells TypeScript, hey this folder here is
+
+68
+00:05:09,580 --> 00:05:12,610
+of TypeScript project by running tsc,
+
+69
+00:05:12,610 --> 00:05:18,160
+please compile all TypeScript files and you can see this hold some options on or for the TypeScript
+
+70
+00:05:18,160 --> 00:05:23,820
+compiler and I will come back that is in the module, the TypeScript compiler which is following after the
+
+71
+00:05:23,820 --> 00:05:25,050
+next module
+
+72
+00:05:25,120 --> 00:05:31,840
+but right now, keep this file as it is, the default configuration here is fine and well what we now can
+
+73
+00:05:31,840 --> 00:05:34,780
+do is we can simply run tsc without 
+
+74
+00:05:34,810 --> 00:05:35,430
+app.ts,
+
+75
+00:05:35,560 --> 00:05:43,210
+so just tsc and this will search for all TypeScript files, in this case only app.ts and compile them
+
+76
+00:05:43,480 --> 00:05:46,840
+to the Javascript file as you can see here.
+
+77
+00:05:46,930 --> 00:05:56,130
+Now with that, if we now open up the console here and reload this page for once, we see it works.
+
+78
+00:05:56,290 --> 00:05:57,750
+That's the base set up
+
+79
+00:05:57,760 --> 00:06:02,540
+I'm going to use throughout this course and you can also find it attached to this video of course
+
+80
+00:06:02,770 --> 00:06:06,520
+and as you saw, it was really easy to get started with that
+
+81
+00:06:06,520 --> 00:06:07,970
+and that's also a setup
+
+82
+00:06:08,050 --> 00:06:11,500
+you may want to use for your own basic project.
+
+83
+00:06:11,710 --> 00:06:12,970
+Enough of setting up,
+
+84
+00:06:12,970 --> 00:06:14,820
+let's get started in the next module.

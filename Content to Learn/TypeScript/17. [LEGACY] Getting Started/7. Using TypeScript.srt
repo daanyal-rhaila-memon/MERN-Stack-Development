@@ -1,0 +1,151 @@
+1
+00:00:02,040 --> 00:00:07,000
+So with TypeScript installed, in order to use it, you may create an example project like this one here,
+
+2
+00:00:07,090 --> 00:00:11,420
+simply an index.html file and a script.ts file.
+
+3
+00:00:11,440 --> 00:00:17,140
+Now ts is important, that's just the extension because it's TypeScript not Javascript, .ts is the file
+
+4
+00:00:17,140 --> 00:00:24,640
+extension then. So I open both in Sublime here or use any text editor of your choice of course, including
+
+5
+00:00:24,640 --> 00:00:30,850
+very basic ones like Notepad, so whatever you like and as you can see my index.html has really just a
+
+6
+00:00:30,850 --> 00:00:34,540
+basic HTML5 skeleton with doctype, head and so on,
+
+7
+00:00:34,600 --> 00:00:36,270
+no extra code
+
+8
+00:00:36,350 --> 00:00:37,740
+whatsoever
+
+9
+00:00:38,170 --> 00:00:40,920
+and the script.ts file is completely void.
+
+10
+00:00:41,290 --> 00:00:47,430
+So with that, let's head over to the playground and fetch the code we use there to stay with that example.
+
+11
+00:00:48,720 --> 00:00:50,970
+Back in the script.ts file,
+
+12
+00:00:50,970 --> 00:00:54,790
+I'm going to paste it in because I can use it as it is there,
+
+13
+00:00:54,840 --> 00:01:02,100
+I got my index.html file where I'll add the button later on and in order to use this file there, I of
+
+14
+00:01:02,100 --> 00:01:07,020
+course need to import it. So I'm doing this at the end of the body section here by adding script tags
+
+15
+00:01:07,410 --> 00:01:13,470
+and now I'm not importing script.ts even though that's the only file we have right now
+
+16
+00:01:13,680 --> 00:01:16,260
+but instead I want to use script.js
+
+17
+00:01:16,260 --> 00:01:20,080
+because remember it's Javascript code which runs in the browser, not TypeScript.
+
+18
+00:01:20,130 --> 00:01:25,960
+It will get compiled to Javascript code and this .js file will get created by TypeScript.
+
+19
+00:01:26,160 --> 00:01:31,230
+So I'll make this a relative import by adding ./ at the beginning here.
+
+20
+00:01:31,290 --> 00:01:37,470
+Now of course if I simply double-click index.html and view it in the browser,
+
+21
+00:01:37,530 --> 00:01:39,770
+you see nothing happening,
+
+22
+00:01:39,990 --> 00:01:41,570
+well that's going to change.
+
+23
+00:01:41,790 --> 00:01:47,100
+Let's get back to the command line and navigate into this TypeScript folder which has the script.ts file
+
+24
+00:01:47,150 --> 00:01:49,320
+and the index.html file.
+
+25
+00:01:49,350 --> 00:01:56,760
+Let's now finally compile our file by navigating into this folder which holds the script.ts file and
+
+26
+00:01:56,760 --> 00:02:03,420
+then run tsc which is a command available once we install TypeScript as we did before which runs the
+
+27
+00:02:03,420 --> 00:02:03,800
+TypeScript
+
+28
+00:02:03,790 --> 00:02:07,500
+compiler and then passing the file we want to compile,
+
+29
+00:02:07,590 --> 00:02:13,290
+in this case it's script.ts. With that command we're telling TypeScript,
+
+30
+00:02:13,290 --> 00:02:17,350
+please take this script.ts file and compile it to Javascript.
+
+31
+00:02:17,550 --> 00:02:18,740
+So once I hit enter,
+
+32
+00:02:18,780 --> 00:02:20,250
+well we're not seeing any errors,
+
+33
+00:02:20,280 --> 00:02:26,590
+we would see any compilation errors at this step in this console and once we did this,
+
+34
+00:02:26,760 --> 00:02:32,910
+you can see we now got the script.js file here as well which was created by the compiler and
+
+35
+00:02:32,910 --> 00:02:36,990
+which will hold our compiled Javascript code.
+
+36
+00:02:36,990 --> 00:02:42,390
+Now with that in place, if I now reload this page and click the button, you get the same effect as in the
+
+37
+00:02:42,390 --> 00:02:42,960
+playground
+
+38
+00:02:42,960 --> 00:02:44,610
+but now on our local machine.
