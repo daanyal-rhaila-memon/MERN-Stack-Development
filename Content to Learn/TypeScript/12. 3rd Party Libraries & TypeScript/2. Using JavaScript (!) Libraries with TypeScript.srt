@@ -1,0 +1,455 @@
+1
+00:00:02,150 --> 00:00:06,870
+Now we'll start with a very popular utility library low Dash.
+
+2
+00:00:06,870 --> 00:00:13,220
+Now what you learn here basically acts as an example of any javascript library you want to use.
+
+3
+00:00:13,280 --> 00:00:17,480
+No matter if that's load dash Jake worry or anything else.
+
+4
+00:00:17,480 --> 00:00:23,780
+Now a little side note at this point if you're interested in how to work with react and typescript or
+
+5
+00:00:23,780 --> 00:00:31,160
+let's say note J.S. and express and typescript I have dedicated modules on that later down in the course
+
+6
+00:00:31,370 --> 00:00:37,760
+because there you will learn a bit more than just adding them with typescript but for is simpler libraries
+
+7
+00:00:37,760 --> 00:00:39,310
+like load ash like J.
+
+8
+00:00:39,310 --> 00:00:43,060
+Query ends on here is an approach that will work.
+
+9
+00:00:43,070 --> 00:00:48,500
+So we want to use load ash in our project load Ash of course is a javascript library.
+
+10
+00:00:48,500 --> 00:00:50,810
+We don't need typescript to use it.
+
+11
+00:00:50,840 --> 00:00:57,710
+We can use it in any javascript project and we can install it as you basically learn here all load dash
+
+12
+00:00:57,770 --> 00:00:59,270
+official docs.
+
+13
+00:00:59,270 --> 00:01:04,160
+If you're using NPM which we are you can run NPM I or pip install.
+
+14
+00:01:04,160 --> 00:01:07,770
+That's just a short form dash dash save load ash.
+
+15
+00:01:07,790 --> 00:01:13,340
+So here in this example Project which uses Westpac without a production workflow though just a development
+
+16
+00:01:13,370 --> 00:01:18,960
+workflow there we can add does library by just running npm install dash dash save load ash.
+
+17
+00:01:18,980 --> 00:01:25,070
+This will now install it into this project and thanks to our webpage setup we can just imported into
+
+18
+00:01:25,070 --> 00:01:27,870
+our code files and utilize it dear.
+
+19
+00:01:27,890 --> 00:01:32,200
+Dad would be the same in any webpage powered javascript project.
+
+20
+00:01:32,330 --> 00:01:37,760
+If you're not using web pack then of course you could also simply use to CDMA and so on.
+
+21
+00:01:37,760 --> 00:01:43,670
+However what I will show you in the next steps a little bit later in this module will only work in a
+
+22
+00:01:43,670 --> 00:01:45,120
+webpage setup.
+
+23
+00:01:45,170 --> 00:01:47,710
+So here we have a webpage setup we now installed load ash.
+
+24
+00:01:47,730 --> 00:01:55,430
+And now if you want to use it we can simply import it here we can import let's say underscore from load
+
+25
+00:01:55,430 --> 00:01:55,730
+Ash.
+
+26
+00:01:55,730 --> 00:01:59,920
+Dad is a syntax which should be available with load dish installed.
+
+27
+00:02:00,020 --> 00:02:03,130
+However this now already gives us an error.
+
+28
+00:02:03,140 --> 00:02:09,260
+Could not find a declaration file for module load ash and we'll have another problem if we want to use
+
+29
+00:02:09,260 --> 00:02:12,170
+load Ash for example to shuffle in an array.
+
+30
+00:02:12,290 --> 00:02:19,670
+Well we could console log underscore shuffle and then pass let's say a simple array to just shuffle
+
+31
+00:02:19,670 --> 00:02:25,820
+method to shuffle method is a method load Ash supports we can learn this in your official documentation
+
+32
+00:02:25,820 --> 00:02:31,700
+of load ash there if you search for shuffle you'll learn that you can shuffle an array with this method
+
+33
+00:02:32,420 --> 00:02:39,390
+so it kind of should work but it really doesn't work this way as you can tell.
+
+34
+00:02:39,560 --> 00:02:46,850
+If I now start my webpage server here we will see that doesn't yet gives us an error and again it tells
+
+35
+00:02:46,850 --> 00:02:50,770
+us that it can't find a declaration file for module load ash.
+
+36
+00:02:50,990 --> 00:02:54,430
+So this is not really working in the way it should.
+
+37
+00:02:54,770 --> 00:03:02,270
+Now the problem with data is that load Ash is a simple javascript library it's built with vanilla javascript
+
+38
+00:03:02,300 --> 00:03:05,210
+and it's built for vanilla javascript.
+
+39
+00:03:05,210 --> 00:03:11,180
+We can verify this if we go to node modules where we have a lot of dependencies because we have a lot
+
+40
+00:03:11,180 --> 00:03:14,170
+of dependencies of where Peg and its dependencies there.
+
+41
+00:03:14,240 --> 00:03:21,320
+But here if we search for a load ash here it is and we expand as we see there are a bunch of JavaScript
+
+42
+00:03:21,320 --> 00:03:22,830
+files in there right.
+
+43
+00:03:22,880 --> 00:03:25,080
+And that's and all of load Ash.
+
+44
+00:03:25,100 --> 00:03:30,060
+Source Code bunch of javascript code but certainly no typescript code.
+
+45
+00:03:30,080 --> 00:03:31,790
+Now what's the problem with that.
+
+46
+00:03:31,790 --> 00:03:38,950
+The problem is typescript doesn't understand what's in this package it doesn't understand which methods
+
+47
+00:03:38,950 --> 00:03:40,900
+load Ash exports.
+
+48
+00:03:41,060 --> 00:03:46,520
+Now you will see that it actually works if we go to the T S config Jason File and we make sure that
+
+49
+00:03:46,520 --> 00:03:48,780
+we do emit an output upon an error.
+
+50
+00:03:48,800 --> 00:03:55,650
+So if we switch no emit on error to false so that we do emit new output if something errors out.
+
+51
+00:03:55,820 --> 00:04:02,180
+For now start to say again it in the end will give us that same error so we'll still see that.
+
+52
+00:04:02,180 --> 00:04:07,150
+But if I reload this page here you actually will get an output here.
+
+53
+00:04:07,160 --> 00:04:12,610
+You can ignore the error at the bottom here you will see an output which is the shuffled array.
+
+54
+00:04:12,620 --> 00:04:15,140
+You see it looks different every time I reload.
+
+55
+00:04:15,140 --> 00:04:16,610
+And that's very interesting.
+
+56
+00:04:16,610 --> 00:04:18,890
+It proves that load Ash works.
+
+57
+00:04:18,890 --> 00:04:24,920
+It proves that this code is correct but unfortunately typescript does not understand it and it can't
+
+58
+00:04:24,920 --> 00:04:28,560
+because load as uses javascript not typescript.
+
+59
+00:04:28,760 --> 00:04:32,320
+Now the problem is there is no hives of where's Nova followed ash.
+
+60
+00:04:32,330 --> 00:04:34,010
+So we have to live with that.
+
+61
+00:04:34,190 --> 00:04:37,180
+And that's a scenario you will encounter quite a bit.
+
+62
+00:04:37,250 --> 00:04:43,130
+You want to use a certain third party library and it's only built for JavaScript and hence you get errors
+
+63
+00:04:43,130 --> 00:04:44,270
+like that.
+
+64
+00:04:44,270 --> 00:04:50,060
+This is annoying because in theory we can of course use it typescript builds up on javascript we can
+
+65
+00:04:50,060 --> 00:04:53,140
+use any javascript library in a type of project.
+
+66
+00:04:53,210 --> 00:04:58,890
+We just have to translate it to typescript and dad thankfully is possible.
+
+67
+00:04:58,910 --> 00:05:02,510
+So let me turn on this setting here.
+
+68
+00:05:02,510 --> 00:05:03,410
+No limit on error.
+
+69
+00:05:03,410 --> 00:05:04,310
+True.
+
+70
+00:05:04,310 --> 00:05:12,390
+Let me show you how we can tell typescript about load ash and about what it offers you can install the
+
+71
+00:05:12,390 --> 00:05:18,360
+so-called types of a third party library if you search for a load and types.
+
+72
+00:05:18,360 --> 00:05:24,180
+You will find a NPM package which here is called at types slash load ash.
+
+73
+00:05:24,180 --> 00:05:30,030
+There you also see a install command which will run in a second but if you go down to details you also
+
+74
+00:05:30,030 --> 00:05:32,280
+find a link to get up repository.
+
+75
+00:05:32,280 --> 00:05:39,720
+It links to definitely typed which is a huge repository with tons of translations for all kinds of third
+
+76
+00:05:39,720 --> 00:05:40,890
+party libraries.
+
+77
+00:05:40,890 --> 00:05:46,610
+Here we are in a load Ash folder and there you find so called Dot D.T. s files.
+
+78
+00:05:46,620 --> 00:05:49,920
+So not just dot yes but dot d t s.
+
+79
+00:05:50,190 --> 00:05:56,700
+These are so-called declaration files which means they don't contain any actual logic but if we have
+
+80
+00:05:56,700 --> 00:06:03,770
+a look at the shuffle details file they contain instructions to typescript they basically tell typescript
+
+81
+00:06:03,780 --> 00:06:11,070
+how something works and what's included in this package and you can explore different files here also
+
+82
+00:06:11,070 --> 00:06:14,310
+in different sub folders to learn more about that.
+
+83
+00:06:14,340 --> 00:06:22,200
+So in the end these files simply provide a translation from plain javascript to typescript they don't
+
+84
+00:06:22,200 --> 00:06:25,380
+contain any logic that runs but they did find the types.
+
+85
+00:06:25,380 --> 00:06:31,440
+Does library works with data find the types you use the types you get back when you call a method and
+
+86
+00:06:31,440 --> 00:06:32,550
+so on.
+
+87
+00:06:32,550 --> 00:06:36,840
+You can also write such details files on your own and do your official title.
+
+88
+00:06:36,840 --> 00:06:42,210
+Docs provide a guide on that if that's what you're interested in but for your own type of project you
+
+89
+00:06:42,210 --> 00:06:47,370
+don't have to do that because of your writing type food code only types would of course understands
+
+90
+00:06:47,370 --> 00:06:47,940
+that.
+
+91
+00:06:48,120 --> 00:06:54,090
+But if you're working with a third party library written in Javascript without any type good code or
+
+92
+00:06:54,090 --> 00:07:00,840
+without built in dot details files which some third party libraries ship by the way even if they are
+
+93
+00:07:00,840 --> 00:07:03,960
+written in Javascript loaded dash doesn't show.
+
+94
+00:07:04,020 --> 00:07:09,240
+So if you're working with a library that does not contain built in translation files and that is not
+
+95
+00:07:09,300 --> 00:07:15,300
+natively written in typescript then using such a types package is the solution.
+
+96
+00:07:15,810 --> 00:07:23,970
+So here we then run npm install dash dash save at times slash low dash you can actually also run save
+
+97
+00:07:24,000 --> 00:07:30,370
+death because dad is a dependency that's really only required during development because then the code
+
+98
+00:07:30,370 --> 00:07:32,500
+is compiled to JavaScript anyways.
+
+99
+00:07:32,760 --> 00:07:39,720
+And this now installs this translation for types to understand it and you'll see as soon as this is
+
+100
+00:07:39,720 --> 00:07:42,550
+installed this error is gone.
+
+101
+00:07:42,670 --> 00:07:48,290
+And if I now restart NPM start you will see the error won't come back here either.
+
+102
+00:07:48,330 --> 00:07:55,170
+So you see now this works without any errors both in the compilation as well as in the browser.
+
+103
+00:07:55,200 --> 00:08:01,920
+Technically you'd work before as well but now with the translation we also can utilize typescript for
+
+104
+00:08:01,920 --> 00:08:02,360
+example.
+
+105
+00:08:02,360 --> 00:08:05,520
+Now we also get all completion here in the idea.
+
+106
+00:08:05,550 --> 00:08:09,970
+If I type a dot here I see the load edge methods I can use.
+
+107
+00:08:10,110 --> 00:08:13,900
+This therefore is a very important piece of knowledge.
+
+108
+00:08:13,980 --> 00:08:20,610
+Something you definitely have to be aware of which allows you to use regular normal vanilla javascript
+
+109
+00:08:20,610 --> 00:08:29,010
+libraries in a type of project and still get great support great auto completion and avoid errors with
+
+110
+00:08:29,010 --> 00:08:33,090
+the help of these translation types packages.
+
+111
+00:08:33,090 --> 00:08:40,890
+You could say and these packages which are always named at types and then the package name.
+
+112
+00:08:40,890 --> 00:08:46,710
+These basically exist for any popular third party library you can find out there.
+
+113
+00:08:46,770 --> 00:08:53,280
+You can always search for library name and then types for example Jake types and you should find such
+
+114
+00:08:53,280 --> 00:08:59,220
+an entry so that is how you can work with types and vanilla javascript libraries.

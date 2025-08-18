@@ -1,0 +1,95 @@
+1
+00:00:02,190 --> 00:00:05,520
+And that is already it for this module.
+
+2
+00:00:05,520 --> 00:00:10,180
+Now obviously there are tons of third party libraries out there you could use.
+
+3
+00:00:10,180 --> 00:00:16,160
+There also is more you can explore on the class validator and class transformer packages.
+
+4
+00:00:16,260 --> 00:00:21,380
+But the idea here is not so much to dive and do all the features of these packages.
+
+5
+00:00:21,480 --> 00:00:24,190
+I rather leave that up to you to explore.
+
+6
+00:00:24,360 --> 00:00:28,560
+The idea is that you get a feeling for two important things.
+
+7
+00:00:28,560 --> 00:00:36,150
+The first thing is Dad with typescript you can use regular javascript packages like low dash without
+
+8
+00:00:36,150 --> 00:00:36,980
+issues.
+
+9
+00:00:37,200 --> 00:00:39,350
+You might get errors initially.
+
+10
+00:00:39,360 --> 00:00:41,900
+Keep in mind that technically it works though.
+
+11
+00:00:42,120 --> 00:00:47,560
+But you can also work around these compilation errors then by importing the right types.
+
+12
+00:00:47,560 --> 00:00:54,150
+The right translation from javascript to typescript in the end and such translation packages exist for
+
+13
+00:00:54,240 --> 00:00:59,780
+all major and popular and even a lot of small javascript libraries.
+
+14
+00:00:59,820 --> 00:01:04,510
+You also might be working with javascript libraries which have these translation files.
+
+15
+00:01:04,510 --> 00:01:07,040
+These DTA s files built in already.
+
+16
+00:01:07,140 --> 00:01:11,420
+They are of course you don't need to install such translations thereafter.
+
+17
+00:01:11,610 --> 00:01:17,430
+Well and besides these vanilla javascript libraries which might need translations you also might have
+
+18
+00:01:17,430 --> 00:01:24,300
+libraries like class transformer which work fine in vanilla javascript in modern vanilla javascript
+
+19
+00:01:24,310 --> 00:01:29,960
+at least where you also have classes but which all the work without any extra translations and types
+
+20
+00:01:29,960 --> 00:01:31,590
+of projects.
+
+21
+00:01:31,650 --> 00:01:38,790
+And then we have packages like CLOs the validator they really embrace typescript specific features and
+
+22
+00:01:38,790 --> 00:01:44,890
+give you a brand new way of thinking about your project and of solving certain problems.
+
+23
+00:01:44,910 --> 00:01:51,660
+In this case here by utilizing decorators knowing all these things is super important and gives you
+
+24
+00:01:51,750 --> 00:01:55,110
+all the flexibility you need for your future projects.

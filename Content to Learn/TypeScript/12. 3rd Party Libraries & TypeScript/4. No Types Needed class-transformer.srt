@@ -1,0 +1,375 @@
+1
+00:00:02,340 --> 00:00:08,230
+So we had a look at lode Ash third party library that's filled with JavaScript for JavaScript.
+
+2
+00:00:08,310 --> 00:00:15,360
+You also find certain third party libraries that really embrace TypeScript and types features and give
+
+3
+00:00:15,360 --> 00:00:21,270
+you a brand new way of writing code that works because you are working with typescript.
+
+4
+00:00:21,270 --> 00:00:27,270
+One example is class transformer an even better example is class validator and we'll have a look at
+
+5
+00:00:27,270 --> 00:00:31,410
+both here and let's start with class transformer.
+
+6
+00:00:31,410 --> 00:00:38,460
+Let's say in our project here I actually have a model a data model let's name it product and I'll name
+
+7
+00:00:38,460 --> 00:00:43,860
+it product dot model dot t s but you can named as follows whatever you want.
+
+8
+00:00:43,860 --> 00:00:49,440
+My idea is that in this file I define a class for a product.
+
+9
+00:00:49,460 --> 00:00:52,200
+So I describe how our product should look like.
+
+10
+00:00:52,200 --> 00:00:58,040
+For example that it has a title which is a string and a price which is a number.
+
+11
+00:00:58,380 --> 00:01:02,160
+And then I have a constructor function where both can be initialized.
+
+12
+00:01:02,160 --> 00:01:07,080
+So string and price and that I said this title equal to T.
+
+13
+00:01:07,260 --> 00:01:13,350
+And this price equal to P and of course we could have used the shortcut initialization where we only
+
+14
+00:01:13,350 --> 00:01:15,770
+used to constructor.
+
+15
+00:01:16,190 --> 00:01:25,640
+Then let's say we also have a method get information where I return an array let's say where the first
+
+16
+00:01:25,640 --> 00:01:34,400
+element is the title and the second element actually is a string where I have a dollar sign and then
+
+17
+00:01:34,790 --> 00:01:43,040
+injected into this string this price so a very simple model here a very simple class.
+
+18
+00:01:43,200 --> 00:01:46,530
+And now we can of course use this class if you want to an apt.
+
+19
+00:01:46,530 --> 00:01:47,450
+Yes.
+
+20
+00:01:47,520 --> 00:01:56,190
+So there I will get rid of load ash and instead import product from thought slash product model.
+
+21
+00:01:56,240 --> 00:02:01,820
+Now for Dad you need to make sure that in product model you actually export this class otherwise you
+
+22
+00:02:01,820 --> 00:02:02,920
+can't imported.
+
+23
+00:02:02,960 --> 00:02:09,080
+And here we have to export product like this because I'm using unnamed export here by adding the export
+
+24
+00:02:09,110 --> 00:02:11,990
+keyword right in front of the class.
+
+25
+00:02:12,020 --> 00:02:21,200
+So now you of course we can create a new product book which costs twelve ninety nine.
+
+26
+00:02:21,440 --> 00:02:28,130
+And thereafter I can console log P1 get information and we should actually locked as a rate.
+
+27
+00:02:28,220 --> 00:02:35,270
+So if we now run NPM start here our webpage def store restarts up and we should see does nice array
+
+28
+00:02:35,270 --> 00:02:37,330
+with information about this book.
+
+29
+00:02:37,370 --> 00:02:39,460
+So if I reload here here it is.
+
+30
+00:02:40,660 --> 00:02:44,940
+Now that's not too fancy of course that works but that's nothing new.
+
+31
+00:02:44,980 --> 00:02:51,070
+Now a common scenario in bigger apps is that you might be downloading some data let's say from a server
+
+32
+00:02:51,220 --> 00:02:56,860
+you're fetching data from a back and server and that server then the end returns you some Jason data
+
+33
+00:02:56,890 --> 00:03:01,330
+which you pass and which then might be a list of products.
+
+34
+00:03:01,630 --> 00:03:10,890
+So here we might have products which we get from the server where we then have a title carpet and a
+
+35
+00:03:10,890 --> 00:03:15,170
+prize twenty nine or ninety nine and where we then also have this book.
+
+36
+00:03:15,180 --> 00:03:22,880
+So title book and the price of ten ninety nine let's say.
+
+37
+00:03:22,890 --> 00:03:27,730
+So that's a very simple array of data which mean the end got from the back end.
+
+38
+00:03:27,790 --> 00:03:33,700
+Now these are of course JavaScript objects but they're not instances of our product model.
+
+39
+00:03:33,860 --> 00:03:37,290
+And that is a typical scenario when you get data as Jason.
+
+40
+00:03:37,290 --> 00:03:43,320
+It has no attached data like to which constructor function in your front code it belongs your server
+
+41
+00:03:43,320 --> 00:03:44,520
+doesn't know that.
+
+42
+00:03:44,520 --> 00:03:49,740
+And Jason also is a format that just transmits basic data.
+
+43
+00:03:49,740 --> 00:03:56,360
+You don't have rich metadata to your objects attach there or at least you would have to do this manually.
+
+44
+00:03:56,370 --> 00:04:03,370
+So in other words the products we get here are objects which don't have a get information method.
+
+45
+00:04:03,370 --> 00:04:10,920
+Now traditionally if you now want to convert dat in two instances of your model you would have to do
+
+46
+00:04:10,920 --> 00:04:12,720
+that manually.
+
+47
+00:04:12,720 --> 00:04:22,990
+You could have you were loaded products which then let's say uses products calls the map method and
+
+48
+00:04:23,080 --> 00:04:25,580
+on every product into there Ray.
+
+49
+00:04:25,720 --> 00:04:34,330
+We then return new product for product title and port dot price.
+
+50
+00:04:34,430 --> 00:04:40,520
+And there after we would have an array full of real product constructor function instances.
+
+51
+00:04:40,520 --> 00:04:48,850
+And then we could actually loop through that loaded products and then India for example console log
+
+52
+00:04:50,230 --> 00:04:52,210
+project get information.
+
+53
+00:04:52,210 --> 00:04:59,830
+This is how we could manually transform an array or although a single no name vanilla javascript object
+
+54
+00:05:00,130 --> 00:05:04,860
+into an instance of a specific constructor function and hence you would get this output.
+
+55
+00:05:05,020 --> 00:05:06,990
+Now doing this manually is cumbersome.
+
+56
+00:05:07,300 --> 00:05:09,250
+It's a bunch of extra steps here.
+
+57
+00:05:09,370 --> 00:05:12,540
+And this is only a simple transformation of course.
+
+58
+00:05:12,760 --> 00:05:16,620
+That's where the class transformer package can help us.
+
+59
+00:05:16,750 --> 00:05:19,760
+It makes that very very simple there.
+
+60
+00:05:19,810 --> 00:05:23,560
+We also define a class in typescript in our case here.
+
+61
+00:05:23,620 --> 00:05:30,520
+Then we might be getting some data let's say from a server and then we actually can call a simple convenience
+
+62
+00:05:30,520 --> 00:05:39,100
+method and it will automatically convert our data into the right models now for that.
+
+63
+00:05:39,320 --> 00:05:45,020
+Let's first of all run npm install class transformer dash dash save like this.
+
+64
+00:05:45,890 --> 00:05:51,890
+And once it is finished let's run npm install reflect metadata dash dash safe a package.
+
+65
+00:05:51,890 --> 00:05:54,480
+This package in the end depends on.
+
+66
+00:05:54,500 --> 00:05:56,670
+So here let's import this too.
+
+67
+00:05:56,870 --> 00:06:02,580
+And then as it all instructs us here in the setup instructions here.
+
+68
+00:06:02,930 --> 00:06:10,850
+Import reflect metadata in your root entry files on my case here in Apt Yes I import this third party
+
+69
+00:06:10,850 --> 00:06:15,020
+library we just installed as a dependency of our library.
+
+70
+00:06:15,020 --> 00:06:19,640
+Now that actually word the notorious steps and therefore we can skip this one in the browser we still
+
+71
+00:06:19,640 --> 00:06:25,990
+have to install the same packages though and adding this import here is fine because we are using web
+
+72
+00:06:26,000 --> 00:06:30,290
+Peg and therefore now we actually are good to go.
+
+73
+00:06:30,290 --> 00:06:40,230
+And now we can import something from class transformer and that something is the plain two class method.
+
+74
+00:06:40,230 --> 00:06:44,790
+This package also has a couple of other methods you can learn more about them here in the official docs
+
+75
+00:06:45,180 --> 00:06:55,590
+but plain two clauses the main method you can use it here to set your loaded products for example instead
+
+76
+00:06:55,590 --> 00:07:01,740
+of doing this manually here as we did before we can set loaded products equal to plain to class and
+
+77
+00:07:01,740 --> 00:07:03,750
+now pass in to arguments here.
+
+78
+00:07:03,810 --> 00:07:11,760
+The first argument is the class we want to convert it to in my case your product and I don't instantiate
+
+79
+00:07:11,760 --> 00:07:12,720
+it or call it.
+
+80
+00:07:12,720 --> 00:07:15,210
+I just point at that class.
+
+81
+00:07:15,570 --> 00:07:19,470
+The second argument is the data we want to transform.
+
+82
+00:07:19,500 --> 00:07:23,240
+So in my case here that is products.
+
+83
+00:07:23,610 --> 00:07:30,360
+And now what this package will do is it will go over it is array and transform every plain vanilla javascript
+
+84
+00:07:30,390 --> 00:07:34,080
+object here in the end to an instance of this class.
+
+85
+00:07:34,140 --> 00:07:41,160
+So if we now save this and run NPM start again the webpage def server boots up again and it should build
+
+86
+00:07:41,160 --> 00:07:43,290
+this project without errors.
+
+87
+00:07:43,300 --> 00:07:49,290
+Now if I reload the page I get the same output as before but of course with less code from our side
+
+88
+00:07:49,560 --> 00:07:55,020
+because we are using this package and the amazing thing about this package is that it works that well
+
+89
+00:07:55,020 --> 00:08:01,350
+here because it builds up on TypeScript and in the end utilizes typescript it utilizes the fact that
+
+90
+00:08:01,350 --> 00:08:08,760
+we have a class here at which we can point but to also be honest this package works particularly well
+
+91
+00:08:08,760 --> 00:08:15,330
+with typescript but it doesn't use a typescript specific feature classes for example also exist in vanilla
+
+92
+00:08:15,360 --> 00:08:16,680
+javascript.
+
+93
+00:08:16,680 --> 00:08:24,210
+So whilst this is developed primarily for typescript it actually also works in vanilla javascript that
+
+94
+00:08:24,210 --> 00:08:26,490
+will not be true for the next package though.

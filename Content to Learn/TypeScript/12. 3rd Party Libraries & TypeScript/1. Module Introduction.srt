@@ -1,0 +1,55 @@
+1
+00:00:02,420 --> 00:00:07,970
+In modern web development we typically also work with third party libraries.
+
+2
+00:00:07,970 --> 00:00:10,970
+We don't write all the code of our projects on our own.
+
+3
+00:00:11,390 --> 00:00:17,540
+Instead typically we utilize third party libraries so that we don't always have to reinvent the wheel
+
+4
+00:00:17,540 --> 00:00:24,620
+on our own but can add certain functionalities to our projects and then just focus on our core business
+
+5
+00:00:24,620 --> 00:00:25,630
+logic.
+
+6
+00:00:25,640 --> 00:00:32,030
+Now in this module we will have a look at third party libraries and how you can add them to your typescript
+
+7
+00:00:32,030 --> 00:00:39,530
+project and specifically we'll have a look at two types of libraries and what working with them in a
+
+8
+00:00:39,600 --> 00:00:46,190
+typescript project means we'll have a look at normal libraries which you could use in regular jobs good
+
+9
+00:00:46,190 --> 00:00:52,420
+projects as well and you will learn how you can use them in typescript and get the most out of them.
+
+10
+00:00:52,490 --> 00:00:57,900
+But then we will also have a look at some typescript specific libraries.
+
+11
+00:00:57,920 --> 00:01:05,210
+The difference will be that these are libraries that really utilize and embrace certain types of features
+
+12
+00:01:05,600 --> 00:01:10,710
+to give you a brand new way of working with them to give you a certain functionalities.
+
+13
+00:01:10,760 --> 00:01:15,510
+You can't build like this with vanilla javascript so let's have a look at both.
+
+14
+00:01:15,620 --> 00:01:16,430
+In this module.
