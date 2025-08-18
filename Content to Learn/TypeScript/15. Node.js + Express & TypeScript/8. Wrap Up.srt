@@ -1,0 +1,87 @@
+1
+00:00:02,360 --> 00:00:08,690
+So that's it for this module you learned how you can use typescript in a node express application that
+
+2
+00:00:08,690 --> 00:00:15,230
+you can install extra types for Express and for node for example to get great types of support in your
+
+3
+00:00:15,230 --> 00:00:21,800
+files that you write the application like you would always write it but that for example your import
+
+4
+00:00:21,800 --> 00:00:28,340
+and export some text differs and that you can of course use types and also any other type could feature
+
+5
+00:00:28,340 --> 00:00:35,690
+you learn about you could use interfaces you could use decorators you could use in arms and tuples and
+
+6
+00:00:35,750 --> 00:00:42,260
+everything that's typed exclusive that all works here because we're writing a regular typescript application
+
+7
+00:00:42,260 --> 00:00:49,040
+here and it gets compiled with the normal types of compiler to regular javascript code javascript code
+
+8
+00:00:49,190 --> 00:00:52,490
+which then is executed with node J.S..
+
+9
+00:00:52,790 --> 00:00:58,340
+Now if you want to have more examples on how to work with TypeScript and Node express you can of course
+
+10
+00:00:58,340 --> 00:01:04,610
+from one simply google for node express typescript to find more examples but I can also strongly recommend
+
+11
+00:01:04,610 --> 00:01:05,870
+that you check out nest.
+
+12
+00:01:05,870 --> 00:01:12,590
+J.S. it's a notorious framework which embraces typescript whilst you can make note express work with
+
+13
+00:01:12,590 --> 00:01:15,340
+typescript as you solve for out this module.
+
+14
+00:01:15,350 --> 00:01:22,040
+This is a framework which gives you project node projects with Python support out of the box and it
+
+15
+00:01:22,040 --> 00:01:29,870
+embraces all these types of features like decorators and so on with Nestlé as you can build node web
+
+16
+00:01:29,870 --> 00:01:37,130
+applications rest api but all the applications where you render views or graph to LAPD you can build
+
+17
+00:01:37,130 --> 00:01:44,880
+that all with no choice but also with TypeScript and this project heavily uses features like decorators
+
+18
+00:01:44,960 --> 00:01:46,980
+interfaces and so on.
+
+19
+00:01:47,000 --> 00:01:53,530
+So definitely check out Nestlé s if you want to build service side web applications with node and typescript.
+
+20
+00:01:53,660 --> 00:02:00,380
+It's a great framework really fun to use and uses all the cool features types has to offer.
+
+21
+00:02:00,410 --> 00:02:05,980
+So no custom type installation work arounds or anything like that is needed here.
+
+22
+00:02:06,020 --> 00:02:08,750
+You get great types could support out of the box.

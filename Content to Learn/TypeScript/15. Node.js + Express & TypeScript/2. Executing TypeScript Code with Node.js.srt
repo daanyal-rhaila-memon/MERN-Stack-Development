@@ -1,0 +1,207 @@
+1
+00:00:02,270 --> 00:00:08,300
+So let's get started with a typescript and note J S and for that I'm essentially in an empty new folder
+
+2
+00:00:08,300 --> 00:00:08,630
+here.
+
+3
+00:00:08,660 --> 00:00:11,630
+Just some configuration files there and let's start.
+
+4
+00:00:11,630 --> 00:00:14,980
+Very simple let's add an app dot Tia's file in here.
+
+5
+00:00:15,080 --> 00:00:17,410
+You can name it however you want of course.
+
+6
+00:00:17,450 --> 00:00:22,120
+And in there let's write some code which we want to execute with node J.S..
+
+7
+00:00:22,190 --> 00:00:28,850
+But where we want to use typescript as simple script could be that we just console logs something.
+
+8
+00:00:28,940 --> 00:00:33,060
+This works in the browser but does all the works with node J.S..
+
+9
+00:00:33,380 --> 00:00:38,330
+Now make sure you got node J.S. installed which you definitely should have if you followed through that
+
+10
+00:00:38,330 --> 00:00:45,170
+course because we used it and NPM with web Pag and with many other tools and libraries we installed
+
+11
+00:00:45,170 --> 00:00:46,640
+with NPM already.
+
+12
+00:00:46,760 --> 00:00:52,460
+So you should have no chance installed it if you got it installed you could execute this file if you
+
+13
+00:00:52,460 --> 00:00:54,080
+compile it to javascript.
+
+14
+00:00:54,140 --> 00:00:56,090
+So if you run TSC apt dot.
+
+15
+00:00:56,150 --> 00:00:56,960
+Yes.
+
+16
+00:00:57,050 --> 00:01:04,340
+And I produce my apt or James file they offer I can execute this with node and I print something here
+
+17
+00:01:06,600 --> 00:01:12,810
+no when I delete the app dot J.S. file and I try to execute app dot yes with node you'll see something
+
+18
+00:01:12,810 --> 00:01:13,730
+strange.
+
+19
+00:01:13,860 --> 00:01:14,820
+This also works.
+
+20
+00:01:15,120 --> 00:01:18,050
+So is node capable of executing typescript.
+
+21
+00:01:18,060 --> 00:01:19,110
+No it is not.
+
+22
+00:01:19,110 --> 00:01:20,420
+And that's really important.
+
+23
+00:01:20,460 --> 00:01:26,670
+It just doesn't care about the file extension but whatever it finds in the file it treats as a regular
+
+24
+00:01:26,670 --> 00:01:27,500
+javascript.
+
+25
+00:01:27,540 --> 00:01:31,330
+And this year doesn't use any types of features so it works.
+
+26
+00:01:31,380 --> 00:01:37,440
+That changes if we add different content here let's say instead we have a h variable which is a number.
+
+27
+00:01:37,440 --> 00:01:42,270
+And then here I set this to 30 and then a console log H here.
+
+28
+00:01:42,270 --> 00:01:47,520
+This of course is valid typescript code but if we tried to execute this with node you will see we get
+
+29
+00:01:47,520 --> 00:01:48,450
+an error.
+
+30
+00:01:48,450 --> 00:01:55,260
+So node is not capable of parsing and compiling typescript it just treats every file you execute with
+
+31
+00:01:55,260 --> 00:01:56,940
+it as javascript.
+
+32
+00:01:57,030 --> 00:02:02,490
+And if you're not using any type good features in the file yes then it does work but if you do it won't
+
+33
+00:02:02,490 --> 00:02:03,000
+work.
+
+34
+00:02:03,000 --> 00:02:08,580
+You always have to compile the file to JavaScript first then in order to then execute the javascript
+
+35
+00:02:08,580 --> 00:02:11,300
+file which has only valid Charlotte code in it.
+
+36
+00:02:11,400 --> 00:02:13,020
+That's really important to understand.
+
+37
+00:02:13,050 --> 00:02:15,730
+Node does not execute typescript.
+
+38
+00:02:15,930 --> 00:02:24,180
+Now you can actually install a package t s dash node which in the end gives you dad types of compiler.
+
+39
+00:02:24,180 --> 00:02:31,110
+Combined with the node executable you could say so that you can install a tool globally which you can
+
+40
+00:02:31,110 --> 00:02:34,050
+use to run times good files just like that.
+
+41
+00:02:34,170 --> 00:02:39,510
+But behind the scenes it will then just do the compilation for you and execute the compiled code.
+
+42
+00:02:39,510 --> 00:02:43,810
+So it basically combines the TSC and the node step into one step.
+
+43
+00:02:43,920 --> 00:02:46,050
+So it is a package you could use.
+
+44
+00:02:46,050 --> 00:02:53,070
+But whilst this might be nice for development for production for really serving your files on some web
+
+45
+00:02:53,070 --> 00:03:00,300
+server on some web host This is probably not ideal because having this extra compilation step every
+
+46
+00:03:00,300 --> 00:03:06,070
+time your code gets executed simply adds a bit of extra overhead which is fine during development.
+
+47
+00:03:06,150 --> 00:03:11,100
+But what you probably don't want when your code is production ready and you really want to serve it
+
+48
+00:03:11,100 --> 00:03:11,980
+somewhere.
+
+49
+00:03:12,120 --> 00:03:17,430
+Therefore in this module will not use ti as known and will not try to execute any types code files with
+
+50
+00:03:17,430 --> 00:03:18,100
+node.
+
+51
+00:03:18,150 --> 00:03:25,920
+Instead I will show you a setup we can use to build a node Express Web application or rest api here
+
+52
+00:03:26,190 --> 00:03:31,200
+with just TypeScript and the types of compiler and vanilla node J.S..

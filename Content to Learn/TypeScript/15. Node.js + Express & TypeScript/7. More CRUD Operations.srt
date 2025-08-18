@@ -1,0 +1,515 @@
+1
+00:00:02,210 --> 00:00:06,100
+So we added our first post request were capable of creating a to do.
+
+2
+00:00:06,170 --> 00:00:07,270
+Now we've got more routes.
+
+3
+00:00:07,280 --> 00:00:10,190
+We also got a route to serve all the Jews we created.
+
+4
+00:00:10,220 --> 00:00:15,320
+Now please be aware that you're to do this will reset every time you change and save your code because
+
+5
+00:00:15,320 --> 00:00:18,980
+that restarts your server and that loses everything that was stored in memory.
+
+6
+00:00:18,980 --> 00:00:21,350
+And we're only managing our to do this in memory.
+
+7
+00:00:21,350 --> 00:00:25,510
+That's simply something we have here and the dummy app in a real app you would of course stored is in
+
+8
+00:00:25,520 --> 00:00:30,070
+a real database feature from there and so on and therefore it would survive.
+
+9
+00:00:30,320 --> 00:00:37,790
+Nonetheless here we can create a new function get to dos and this will be a request handler here.
+
+10
+00:00:38,060 --> 00:00:44,420
+So if we don't have to set the types on all the parameters individually and then in there I simply want
+
+11
+00:00:44,420 --> 00:00:50,900
+to return a response where I returns up Jason data where I have my tattoos and there I just want to
+
+12
+00:00:50,900 --> 00:00:56,990
+reach out to my to dos array and send that back to the client that already can be all of course you
+
+13
+00:00:56,990 --> 00:01:01,940
+could tweak this maybe you want to have a different logic maybe you want to sort the to dos first or
+
+14
+00:01:01,940 --> 00:01:06,700
+anything like that but this in its simplest form already is all we need here.
+
+15
+00:01:06,740 --> 00:01:08,580
+It returns our tattoos.
+
+16
+00:01:08,750 --> 00:01:11,510
+So a very simple function in tattoos roots.
+
+17
+00:01:11,510 --> 00:01:13,160
+We now just need to connect this.
+
+18
+00:01:13,280 --> 00:01:20,360
+So let's import get to dos from our controller as well and connect it here with this route.
+
+19
+00:01:20,720 --> 00:01:25,240
+And with that if we now safeties we can see it in action already.
+
+20
+00:01:25,310 --> 00:01:35,610
+If you go back and we create a new request a GET request to H to the IP slash local host three thousand
+
+21
+00:01:37,160 --> 00:01:42,880
+two dos slash nothing and we centers but we get back an empty array.
+
+22
+00:01:42,880 --> 00:01:44,440
+Now why is that.
+
+23
+00:01:44,440 --> 00:01:49,780
+Well I said that the to dos would be cleared whenever we change the code and the server therefore restarts.
+
+24
+00:01:49,810 --> 00:01:55,340
+So we should create a new to do now without restarting the server in between now and if we created that
+
+25
+00:01:55,340 --> 00:02:03,370
+to do and we now get our to dos we see that created to do with the idea 0 9 8 1 1 and so on here as
+
+26
+00:02:03,370 --> 00:02:04,420
+well.
+
+27
+00:02:04,420 --> 00:02:09,760
+So that's already working now since we're on it let's also work on Patch and delete and of course feel
+
+28
+00:02:09,760 --> 00:02:13,170
+free to come up with some logic there on your own in the end.
+
+29
+00:02:13,180 --> 00:02:18,050
+Now you have all the building blocks you need for that of course will now all do it together although
+
+30
+00:02:19,450 --> 00:02:27,970
+So here now on the patch request let's add a new controller function export const update to do which
+
+31
+00:02:27,970 --> 00:02:33,570
+is of type request handler and should hold a function in this format.
+
+32
+00:02:33,570 --> 00:02:40,590
+We already know and in there the goal is to extract data about the new to do from the incoming request
+
+33
+00:02:40,770 --> 00:02:44,190
+and then update the to do with that new data.
+
+34
+00:02:44,190 --> 00:02:48,880
+Now please note that as part of our route here we have a dynamic segment.
+
+35
+00:02:48,960 --> 00:02:51,210
+We have this I.D. segment.
+
+36
+00:02:51,210 --> 00:02:56,790
+So that's something we will be able to extract from the U.R.L. a concrete value for this dynamic segment
+
+37
+00:02:56,790 --> 00:02:58,770
+can be extracted.
+
+38
+00:02:58,800 --> 00:03:08,700
+So you're on our incoming request we can get it to do I.D. from our request perms dot I.D. dot I.D.
+
+39
+00:03:09,000 --> 00:03:11,700
+because that's the name I chose here.
+
+40
+00:03:11,700 --> 00:03:15,860
+If you chose a different name here you have to use a different name there.
+
+41
+00:03:15,870 --> 00:03:17,940
+Now we don't get type support here.
+
+42
+00:03:17,940 --> 00:03:18,380
+Right.
+
+43
+00:03:18,380 --> 00:03:25,500
+Parents is of type any now because typescript can't parse this string and understand what's in there.
+
+44
+00:03:25,500 --> 00:03:32,070
+So to get better types of support we can actually utilize that the request handler here is a generic
+
+45
+00:03:32,070 --> 00:03:38,470
+type and we can add angle brackets and basically tell type to which parameters will have we simply set
+
+46
+00:03:38,470 --> 00:03:39,320
+this to an object.
+
+47
+00:03:39,330 --> 00:03:43,870
+And there we now have a key value map of all our parents we have in the U R L.
+
+48
+00:03:43,890 --> 00:03:48,570
+So for example that we have an I.D. parameter which in the end holds a string.
+
+49
+00:03:48,660 --> 00:03:53,850
+That's something we can add here and now you'll see we get auto completion and Ty Cobb knows that this
+
+50
+00:03:53,850 --> 00:03:55,180
+will be a string.
+
+51
+00:03:55,550 --> 00:03:58,660
+So that's better using this generic type.
+
+52
+00:03:58,680 --> 00:04:04,610
+Now we have the I.D. we also need something from the request body to be precise.
+
+53
+00:04:04,710 --> 00:04:08,160
+We need the new text from the request body.
+
+54
+00:04:08,160 --> 00:04:11,760
+So the updated text can be retrieved from request body.
+
+55
+00:04:11,760 --> 00:04:17,550
+And now again let's use typecasting here to make it clear that there will be text property in the body
+
+56
+00:04:17,610 --> 00:04:24,990
+and that this will be of type String and let's retrieve the text thereafter and now we can update the
+
+57
+00:04:24,990 --> 00:04:27,450
+to do in our to dos array up there.
+
+58
+00:04:27,750 --> 00:04:33,930
+For that let's find the index of the to do we want to update to index by reaching out to deduce and
+
+59
+00:04:33,930 --> 00:04:39,610
+with find index we can run some logic on every item in the DOS array and there we're looking at average
+
+60
+00:04:39,610 --> 00:04:44,370
+to do and if to do I.D. is equal to the to ideas we have here.
+
+61
+00:04:44,370 --> 00:04:51,000
+We know that's easy to do we want to update now if that for some reason should be minus one it means
+
+62
+00:04:51,000 --> 00:04:58,720
+we didn't find a to do so if that is smaller than zero essentially we know something went wrong.
+
+63
+00:04:58,870 --> 00:05:06,130
+And in this case I'll throw a new error whereas say could not find to do and that shouldn't trigger
+
+64
+00:05:06,220 --> 00:05:09,890
+our default error handling middleware here.
+
+65
+00:05:09,900 --> 00:05:15,930
+Now if we do make it past the safe check we did find that to do and then we can simply update the to
+
+66
+00:05:15,930 --> 00:05:23,090
+do at this index in our to dos array to be a new to do where we keep the old I.D..
+
+67
+00:05:23,310 --> 00:05:30,360
+So where we access to dos to do index dot I.D. and we access the old I.D. and stored it but the text
+
+68
+00:05:30,360 --> 00:05:36,630
+here which I set whips and of course we don't assign it like this but the text here which we set is
+
+69
+00:05:36,630 --> 00:05:38,570
+now the updated text.
+
+70
+00:05:38,760 --> 00:05:46,080
+This replaces to to do here and thereafter we can sent back a response with a message of updated for
+
+71
+00:05:46,080 --> 00:05:54,730
+example and where we then also append the updated to do to the outgoing response and set as equal to
+
+72
+00:05:55,150 --> 00:05:59,070
+well to dos to do index which now holds the new value.
+
+73
+00:05:59,140 --> 00:06:04,660
+This is something we could do here in our updating logic of course some dummy code because we're still
+
+74
+00:06:04,660 --> 00:06:09,970
+working with this in memory to dos array but it shows how we use typescript here and that's the main
+
+75
+00:06:09,970 --> 00:06:11,070
+thing.
+
+76
+00:06:11,140 --> 00:06:16,260
+So let's try does update functional for that we can go back to postman and in the end.
+
+77
+00:06:16,270 --> 00:06:23,050
+Now I want to send patch request because in the roots were waiting for this patch request to this route
+
+78
+00:06:23,500 --> 00:06:28,760
+and speaking off that we should maybe also connect this route to this controller function first.
+
+79
+00:06:28,900 --> 00:06:36,250
+So let's go to the roots file an import update to do and establish this connection here and thereafter
+
+80
+00:06:36,250 --> 00:06:38,600
+we can proceed and send this request.
+
+81
+00:06:38,600 --> 00:06:45,730
+So now back to postman patches what we want to send and then it's HP local host three thousand slash
+
+82
+00:06:45,730 --> 00:06:51,200
+to dos and now the idea of the to do which we want to update as part of the you are.
+
+83
+00:06:51,460 --> 00:06:56,410
+Now since we saved something since we saved some changes our server restarted.
+
+84
+00:06:56,410 --> 00:06:58,790
+So all to dos will be lost anyways.
+
+85
+00:06:58,930 --> 00:07:02,370
+So let's first of all recent that post request to create a new to do.
+
+86
+00:07:02,590 --> 00:07:04,990
+And then here we got the idea of that to do.
+
+87
+00:07:05,230 --> 00:07:11,920
+Now we can add this idea here to this U.R.L. and then also add a body which should be of type Jason
+
+88
+00:07:12,340 --> 00:07:15,560
+Ruby's set does new data we want to send to the server.
+
+89
+00:07:15,610 --> 00:07:21,970
+Now keep in mind in our update controller I am looking for a field named text in the incoming request
+
+90
+00:07:21,970 --> 00:07:22,960
+body.
+
+91
+00:07:22,960 --> 00:07:29,470
+So we should again provide this here in the Jason data we're sending finished a course in one month.
+
+92
+00:07:29,470 --> 00:07:35,150
+This may be our new text and we now centers we see it was updated.
+
+93
+00:07:35,280 --> 00:07:40,840
+And if I now get all to dos we also see there's still only is one to do but there we simply changed
+
+94
+00:07:40,900 --> 00:07:42,940
+the text.
+
+95
+00:07:42,990 --> 00:07:46,530
+So now this is working we're always able to update it to do.
+
+96
+00:07:46,530 --> 00:07:51,750
+Let's all check what happens if I have an I.D. which does not exist for example by deleting the last
+
+97
+00:07:51,750 --> 00:07:56,850
+digit here that I get could not find to do in my error response of type 500.
+
+98
+00:07:57,720 --> 00:08:00,980
+So this all is looking good as a last step.
+
+99
+00:08:01,020 --> 00:08:08,100
+Let's add a function to delete it to do so in the controllers folder I'll export a constant named delete
+
+100
+00:08:08,280 --> 00:08:11,550
+to do which is of type request handler.
+
+101
+00:08:11,550 --> 00:08:18,690
+And again we get our request our response and then the next function here and end here.
+
+102
+00:08:18,710 --> 00:08:21,410
+Now I went to find the to do and simply remove it.
+
+103
+00:08:22,420 --> 00:08:29,800
+For that we can actually copy this code where we get the I.D. of the to do and then the index just get
+
+104
+00:08:29,800 --> 00:08:34,840
+rid of that line where we extract the updated text because for a delete request there will be no request
+
+105
+00:08:34,840 --> 00:08:41,440
+body but we need the idea of the to do which is part of our route of the U R L and then we find the
+
+106
+00:08:41,440 --> 00:08:48,580
+index and once we got a index we can go to introduce called a splice method and removed it to do at
+
+107
+00:08:48,580 --> 00:08:51,670
+the to do index and only that to do.
+
+108
+00:08:51,680 --> 00:08:59,390
+And thereafter we can send back a response where we say to do delete it just like that.
+
+109
+00:08:59,410 --> 00:09:01,750
+This could be our deletion logic.
+
+110
+00:09:01,810 --> 00:09:03,170
+Now it's time to connect this.
+
+111
+00:09:03,190 --> 00:09:09,790
+So in the routes folder let's import delete to do from controllers to dos and connect it down their
+
+112
+00:09:11,170 --> 00:09:14,190
+end with this connected if we now save this.
+
+113
+00:09:14,410 --> 00:09:18,940
+Again we need to add it to do because all tattoos are cleared with every server restart.
+
+114
+00:09:18,940 --> 00:09:20,360
+So here it is.
+
+115
+00:09:20,560 --> 00:09:22,230
+Copy that I.D..
+
+116
+00:09:22,750 --> 00:09:25,030
+And let's now send that delete request.
+
+117
+00:09:25,030 --> 00:09:27,360
+So a new delete request here.
+
+118
+00:09:27,470 --> 00:09:32,740
+Aged dippy low closed three thousand slash to do slashed his I.D..
+
+119
+00:09:32,830 --> 00:09:34,790
+No body needs to be added.
+
+120
+00:09:34,900 --> 00:09:37,190
+Click Send and it works.
+
+121
+00:09:37,210 --> 00:09:42,880
+If I send it again we get D could not find error because we just deleted it and if we get all to do
+
+122
+00:09:42,880 --> 00:09:45,610
+it that should be an empty array and it is.
+
+123
+00:09:45,610 --> 00:09:51,310
+So this is now working and this is basically a corrupt functionality added with typescript here in this
+
+124
+00:09:51,310 --> 00:09:52,970
+simple node an express app.
+
+125
+00:09:52,990 --> 00:09:58,930
+No of course that's a fairly trivial application here but it already shows us some usage of typescript.
+
+126
+00:09:58,930 --> 00:10:03,730
+It shows us that we write code that should look familiar to you if you work your way through the rest
+
+127
+00:10:03,730 --> 00:10:09,190
+of this course and that we're using all the features you learn there and justice and you react section
+
+128
+00:10:09,190 --> 00:10:14,410
+that's all important you can use anything you learn about typescript here as well because it is getting
+
+129
+00:10:14,410 --> 00:10:17,950
+compiled to regular javascript code in the end which would then serve.

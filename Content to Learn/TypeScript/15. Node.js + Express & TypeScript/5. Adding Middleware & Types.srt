@@ -1,0 +1,267 @@
+1
+00:00:02,270 --> 00:00:08,130
+So we got this basic dummy server up and running but this server is not doing anything useful of course.
+
+2
+00:00:08,420 --> 00:00:14,210
+Now I said I want to build a very simple REST API and for that I will actually create a new sub folder
+
+3
+00:00:14,300 --> 00:00:17,420
+in the source folder which will name roots in there.
+
+4
+00:00:17,450 --> 00:00:22,510
+I will add a file that should handle a certain set of roots of this REST API.
+
+5
+00:00:22,800 --> 00:00:25,730
+And now it's up to you which kind of API you want to build.
+
+6
+00:00:25,760 --> 00:00:28,520
+I will build to do API here.
+
+7
+00:00:28,580 --> 00:00:30,770
+If you took do you react and typescript section.
+
+8
+00:00:30,770 --> 00:00:34,470
+That sounds familiar to you because dear we built a to do app too.
+
+9
+00:00:34,520 --> 00:00:39,200
+This is totally detached from that section though it will not work to gather with react of course you
+
+10
+00:00:39,200 --> 00:00:41,170
+could connect it though on your own.
+
+11
+00:00:41,240 --> 00:00:47,300
+But here I will build such a simple to do API simply so that we see how typescript works with node and
+
+12
+00:00:47,300 --> 00:00:54,750
+express the application we're building is not too complex but it will contain a lot of interesting concepts.
+
+13
+00:00:54,800 --> 00:01:02,580
+So here it will add my two to routes by adding a to dos dot t as file in the root folder and in there.
+
+14
+00:01:02,600 --> 00:01:10,030
+I now want to use Express J S to register some roots for Dad I'll import something from Express and
+
+15
+00:01:10,040 --> 00:01:13,570
+that something is now actually the router.
+
+16
+00:01:13,730 --> 00:01:21,130
+Now that common J S syntax where dad typically is that you import express by using require express and
+
+17
+00:01:21,130 --> 00:01:27,260
+then in a new line you off the C code where we do this here right now.
+
+18
+00:01:27,280 --> 00:01:28,200
+That's something you can do.
+
+19
+00:01:28,210 --> 00:01:34,970
+But here I'll just import like that now this gives us a router and we can simply call a router here
+
+20
+00:01:35,300 --> 00:01:38,350
+as a function and this allows us to register middleware.
+
+21
+00:01:38,360 --> 00:01:45,560
+So in the end routes and points for incoming requests where we then execute some logic upon these requests.
+
+22
+00:01:45,560 --> 00:01:52,310
+Now for the to do app I want to register some basic routes opposed rout at slash nothing where we can
+
+23
+00:01:52,370 --> 00:01:59,270
+add a new to do so here we'll need some code some function which then adds a to do somewhere for now
+
+24
+00:01:59,270 --> 00:02:01,230
+I'll just specify no code at all.
+
+25
+00:02:01,250 --> 00:02:07,670
+Just set up the route in general here so we have to post request then a get request to get all to dos
+
+26
+00:02:07,670 --> 00:02:15,530
+let's say then also let's say patch request to update it to do and dare I expect to get the idea.
+
+27
+00:02:15,800 --> 00:02:22,760
+Dynamic segment into you are L and then here also a delete request to delete a to do by I.D..
+
+28
+00:02:22,760 --> 00:02:28,670
+These are my routes and now we can export the configured router as a default in this file.
+
+29
+00:02:28,670 --> 00:02:30,980
+Now nothing will happen on these routes right.
+
+30
+00:02:30,980 --> 00:02:36,530
+I haven't set up any function that would execute when a request reaches these end points but we at least
+
+31
+00:02:36,560 --> 00:02:41,710
+now know which routes we want we'll add the functions in a second step later.
+
+32
+00:02:41,780 --> 00:02:47,200
+For now let's just connect the router here to configured routes to our running server here in Apt.
+
+33
+00:02:47,210 --> 00:02:56,050
+Yes and to do that we just import our let's say to do routes from dot slash routes to do this.
+
+34
+00:02:56,090 --> 00:03:00,580
+So we're importing that export router into DOS into apt.
+
+35
+00:03:00,590 --> 00:03:01,530
+Yes.
+
+36
+00:03:01,700 --> 00:03:08,830
+And now here we need to connect it to our running express application by using app use and then let's
+
+37
+00:03:08,830 --> 00:03:14,650
+say we want to forward all requests that start with Slash to dos to our two routes.
+
+38
+00:03:14,650 --> 00:03:18,830
+So requests targeting a different you or l will not be handled there.
+
+39
+00:03:19,960 --> 00:03:26,230
+Speaking of handling in the Express middleware set up here which we're using we can also set up a middleware
+
+40
+00:03:26,260 --> 00:03:32,590
+that will handle errors so any errors that might be thrown anywhere in our code and we do this with
+
+41
+00:03:32,590 --> 00:03:39,070
+app use and then we set up such a typical middleware function here where we get the request response
+
+42
+00:03:39,160 --> 00:03:40,770
+and a next function.
+
+43
+00:03:40,780 --> 00:03:48,880
+And again this all requires you to know some express J S and to know no J.S. I'll not dive into exactly
+
+44
+00:03:48,880 --> 00:03:53,000
+how middleware works and express and what Middleware is right.
+
+45
+00:03:53,020 --> 00:03:58,180
+So that's a regular middleware function here as you should know it from Express J.S. and you probably
+
+46
+00:03:58,180 --> 00:04:04,990
+also know that there is an alternative to debt function a function that takes for Ramírez where the
+
+47
+00:04:04,990 --> 00:04:11,290
+first parameter is a potential error and now it is is a error handling middleware function which will
+
+48
+00:04:11,290 --> 00:04:13,480
+be fired automatically by express.
+
+49
+00:04:13,600 --> 00:04:18,310
+If in any of our middleware prior to this one you have an error.
+
+50
+00:04:18,790 --> 00:04:24,580
+So this my error handling middleware function and you see we got a bunch of errors here bunch of errors
+
+51
+00:04:24,610 --> 00:04:26,280
+because this is all of type any.
+
+52
+00:04:26,320 --> 00:04:29,090
+And we're also not using all these values.
+
+53
+00:04:29,140 --> 00:04:32,940
+Let me make it clear which kind of types we have here.
+
+54
+00:04:32,980 --> 00:04:35,500
+This will be of type error.
+
+55
+00:04:35,500 --> 00:04:44,560
+This will be of type expressed on request or you simply import request here as an extra named import
+
+56
+00:04:44,560 --> 00:04:50,140
+from expressed is also works if you've got the Express types installed which we do then here we also
+
+57
+00:04:50,140 --> 00:04:56,230
+got the response and a next function here and then we can adjust our types here.
+
+58
+00:04:56,230 --> 00:04:57,830
+This is now of type request.
+
+59
+00:04:57,850 --> 00:05:04,090
+This is of type response and this is this next function which we can execute to let the request continue
+
+60
+00:05:04,090 --> 00:05:06,670
+its journey to the next middleware in line.
+
+61
+00:05:06,700 --> 00:05:08,640
+Now that's our error handling middleware.
+
+62
+00:05:08,650 --> 00:05:13,990
+It will fire whenever we have an error in one of our other Middleware is in the here we could send back
+
+63
+00:05:13,990 --> 00:05:20,780
+a response with let's say Jason data where we have a message which is error message and where we may
+
+64
+00:05:20,780 --> 00:05:28,550
+be also set error message I mean and where we may be also set a status code of 500.
+
+65
+00:05:28,560 --> 00:05:34,030
+And of course you can have a more elaborate error handling functionality than I do have it here.
+
+66
+00:05:34,300 --> 00:05:40,690
+But with that we added our roots we added our error handling middleware why don't we add some logic
+
+67
+00:05:40,690 --> 00:05:42,910
+to this API now in the next lecture.

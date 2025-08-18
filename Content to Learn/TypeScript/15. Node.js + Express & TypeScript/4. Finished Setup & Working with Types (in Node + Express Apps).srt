@@ -1,0 +1,247 @@
+1
+00:00:02,220 --> 00:00:03,360
+So let's get started.
+
+2
+00:00:03,480 --> 00:00:06,380
+As I mentioned here I will create a very basic REST API.
+
+3
+00:00:06,390 --> 00:00:13,170
+But of course he could build any node application with or without express and in any kind of way with
+
+4
+00:00:13,230 --> 00:00:13,800
+typescript.
+
+5
+00:00:13,800 --> 00:00:15,580
+So this is just an example.
+
+6
+00:00:15,630 --> 00:00:20,830
+You're not restricted to this specific application in the source folder or ETA app.
+
+7
+00:00:20,850 --> 00:00:21,180
+Yes.
+
+8
+00:00:21,180 --> 00:00:28,710
+File which will be the root entry point where we spin up that server and there I want to import something
+
+9
+00:00:28,710 --> 00:00:32,980
+from Express from this Express framework.
+
+10
+00:00:33,000 --> 00:00:39,080
+Now you probably know how we can add express here and set up a web server with Express we import express
+
+11
+00:00:39,090 --> 00:00:48,300
+with this syntax here and then here we can execute express as a function we get back up to app object
+
+12
+00:00:48,660 --> 00:00:53,100
+on which we can call listen to listen on a certain port for incoming requests.
+
+13
+00:00:53,790 --> 00:00:59,850
+Now this would work in normal javascript but you already see I'm getting an error here now.
+
+14
+00:00:59,860 --> 00:01:06,280
+I also get a suggestion why I might be getting this error here because require actually is a function
+
+15
+00:01:06,280 --> 00:01:10,100
+that exists in node J.S. but not in the browser side.
+
+16
+00:01:10,150 --> 00:01:12,370
+Now in t is conflict of Jason File.
+
+17
+00:01:12,590 --> 00:01:15,380
+I'm not using any special lips that would support.
+
+18
+00:01:15,390 --> 00:01:21,580
+No it's J.S. so indeed typescript is not aware of this general function which exists in a notorious
+
+19
+00:01:21,580 --> 00:01:22,930
+environment.
+
+20
+00:01:22,930 --> 00:01:30,370
+Now to make this work we need to inspect all extra type with npm install dash dash save dash death we
+
+21
+00:01:30,370 --> 00:01:36,350
+can install at types node to install all the types we need to work with node j us.
+
+22
+00:01:36,700 --> 00:01:39,480
+So let's run this command and see if that helps us.
+
+23
+00:01:39,520 --> 00:01:46,390
+Yeah it's done and does error is gone but maybe you also saw that on app I didn't get any auto completion
+
+24
+00:01:46,750 --> 00:01:52,430
+it also doesn't error out but if we hover over app we see that typescript doesn't know what's in there.
+
+25
+00:01:52,480 --> 00:01:54,250
+It's of type any.
+
+26
+00:01:54,250 --> 00:02:01,120
+So we probably should install more types and also install at types slash express to install express
+
+27
+00:02:01,180 --> 00:02:02,590
+specific types.
+
+28
+00:02:02,590 --> 00:02:07,480
+And that's a pattern you already know we had a look at that and a third party libraries section and
+
+29
+00:02:07,480 --> 00:02:13,630
+of course there I always showed you how you can install types packages to get better support in your
+
+30
+00:02:13,630 --> 00:02:15,250
+typescript scripts.
+
+31
+00:02:15,250 --> 00:02:19,960
+So with this type added without any extra configuration huh.
+
+32
+00:02:20,140 --> 00:02:22,030
+It still doesn't work.
+
+33
+00:02:22,090 --> 00:02:25,360
+Well the reason for that is to import syntax we're using here.
+
+34
+00:02:25,360 --> 00:02:30,460
+This is the regular common js import syntax which notorious uses by default.
+
+35
+00:02:30,460 --> 00:02:36,310
+But here we're actually in an environment in typescript where we can use a different import syntax we
+
+36
+00:02:36,310 --> 00:02:44,420
+can use the same imports index we know from E as modules in the browser so we can use import Express
+
+37
+00:02:44,810 --> 00:02:46,710
+from Express for example.
+
+38
+00:02:46,790 --> 00:02:50,540
+And if we do that and then hover over app you see now it's off type Express.
+
+39
+00:02:50,540 --> 00:02:52,990
+So now we got types support.
+
+40
+00:02:53,060 --> 00:03:00,770
+Now one important note in note J.S. There also exists a syntax which is similar to this one.
+
+41
+00:03:00,860 --> 00:03:06,200
+Now it's under an experimental flag and it's been under that flag for a very long time.
+
+42
+00:03:06,230 --> 00:03:12,710
+So using common J.S. and no chance is by far the default and most common way of adding imports and exports
+
+43
+00:03:13,180 --> 00:03:19,730
+are a syntax looking like this one is supported if you set this experimental flag but here in this code
+
+44
+00:03:20,030 --> 00:03:24,500
+we're actually not using this experimental note J as syntax.
+
+45
+00:03:24,500 --> 00:03:31,130
+Instead we're using typescript once we compiled it to JavaScript this will change and I can actually
+
+46
+00:03:31,130 --> 00:03:38,780
+show this to you so that we can also execute this if we run t us see here maybe TSC dash W to already
+
+47
+00:03:38,780 --> 00:03:45,170
+enter watch mode you see this starts compilation it creates a dist folder and in there we now have an
+
+48
+00:03:45,170 --> 00:03:49,980
+app J.S. file and in here this now looks different.
+
+49
+00:03:50,090 --> 00:03:56,990
+You see there it now doesn't set up that import the way we have it here it look it uses a different
+
+50
+00:03:56,990 --> 00:03:58,740
+syntax instead.
+
+51
+00:03:58,940 --> 00:04:05,360
+So here does this code which actually will get executed and we can execute this with node one with this
+
+52
+00:04:05,360 --> 00:04:11,930
+tool that automatically restarts the server if our code changes by opening a new tab here in the terminal
+
+53
+00:04:12,260 --> 00:04:17,690
+keep the other tab open because that's our typescript compilation process and in that new tab we want
+
+54
+00:04:17,690 --> 00:04:23,450
+to start our server with the help of node Mun for that let's go to the package dot Jason File and add
+
+55
+00:04:23,450 --> 00:04:32,330
+a new script a start script maybe where we say node mourn this slash app J.S. so that node 1 executes
+
+56
+00:04:32,330 --> 00:04:36,210
+this file in the dist folder and starts our server with that.
+
+57
+00:04:36,500 --> 00:04:42,410
+And with that added and the package not Jason files saved we can run NPM start to speed up our development
+
+58
+00:04:42,410 --> 00:04:49,610
+server and now it is serving this this aptly as file now that's the general setup we have and that's
+
+59
+00:04:49,660 --> 00:04:55,170
+typescript already doing some work here we also have type support and here you see an app.
+
+60
+00:04:55,190 --> 00:05:01,610
+Yes we can write code that looks very familiar to us with the import export syntax we already know but
+
+61
+00:05:01,610 --> 00:05:09,600
+what we get as an output is in the end regular javascript node J.S. code and that is extremely useful.
+
+62
+00:05:09,680 --> 00:05:14,870
+Now with that let's do more useful things than just starting up a server that does nothing.

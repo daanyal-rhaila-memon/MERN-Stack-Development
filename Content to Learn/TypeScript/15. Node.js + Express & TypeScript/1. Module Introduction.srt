@@ -1,0 +1,63 @@
+1
+00:00:02,480 --> 00:00:08,810
+In this course you'll learn a lot about TypeScript and there is one particular use case one scenario
+
+2
+00:00:08,810 --> 00:00:12,320
+where you could all use typescript which we hadn't had a look at.
+
+3
+00:00:12,320 --> 00:00:19,160
+Thus far we primarily focused on using typescript to write browser side JavaScript code in the end.
+
+4
+00:00:19,160 --> 00:00:25,070
+And that is totally fine and might be the most common use case of working with typescript but it's not
+
+5
+00:00:25,070 --> 00:00:25,880
+the only one.
+
+6
+00:00:25,880 --> 00:00:28,440
+You can also use typescript to build.
+
+7
+00:00:28,440 --> 00:00:34,690
+Note J.S. applications although of course in conjunction with the popular express J as framework.
+
+8
+00:00:34,880 --> 00:00:41,450
+Now while notorious on its own is not capable of executing typescript In this module you will learn
+
+9
+00:00:41,450 --> 00:00:49,160
+how you can still use typescript to write notorious scripts and we will build a very simple web application
+
+10
+00:00:49,160 --> 00:00:57,020
+a very simple REST API here where we also utilize typescript on the server side with no trace and express
+
+11
+00:00:57,350 --> 00:00:58,880
+just as in the react section.
+
+12
+00:00:58,880 --> 00:01:05,540
+Here's a little disclaimer for this section this section here requires node and expressed knowledge.
+
+13
+00:01:05,540 --> 00:01:10,350
+It's about using typescript with node Express it's not teaching node from the ground up.
+
+14
+00:01:10,400 --> 00:01:15,830
+So if you never heard about node and express before definitely take some dedicated resources like my
+
+15
+00:01:15,830 --> 00:01:20,510
+node J.S. to complete guide course first before you explore this section.
+
+16
+00:01:20,630 --> 00:01:21,440
+So let's dive in.

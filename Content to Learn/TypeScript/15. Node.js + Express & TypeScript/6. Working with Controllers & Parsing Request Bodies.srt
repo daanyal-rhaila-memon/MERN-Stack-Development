@@ -1,0 +1,475 @@
+1
+00:00:02,220 --> 00:00:03,870
+So now did we resist or some roots.
+
+2
+00:00:03,870 --> 00:00:05,670
+Let's add some logic for these roots.
+
+3
+00:00:05,670 --> 00:00:07,740
+For that I'll add a controllers folder.
+
+4
+00:00:07,770 --> 00:00:08,810
+That's not a must do.
+
+5
+00:00:08,820 --> 00:00:14,220
+But I want to split my logic here into the controllers and the routes into the routes folder and in
+
+6
+00:00:14,220 --> 00:00:14,980
+controllers.
+
+7
+00:00:15,050 --> 00:00:20,010
+All they had to do is start t s file and that will now hold the controller functions we want to point
+
+8
+00:00:20,010 --> 00:00:22,050
+at from inside our routes.
+
+9
+00:00:22,050 --> 00:00:27,780
+So in here I need a function which will export and I'll all created as a Erol function which is not
+
+10
+00:00:27,780 --> 00:00:32,220
+a must do though and all named is create to do.
+
+11
+00:00:32,520 --> 00:00:38,010
+And it is a function which will receive these typical parameters you get an every middleware function
+
+12
+00:00:38,010 --> 00:00:41,640
+and express a request a response and the next function.
+
+13
+00:00:41,640 --> 00:00:49,470
+And we just saw where we can get the types from we can import request response and next function from
+
+14
+00:00:49,500 --> 00:00:54,930
+Express at this imports as those types we can then add them here.
+
+15
+00:00:54,930 --> 00:01:00,330
+Now always adding all these types here as we did it in the error handling middleware as well can be
+
+16
+00:01:00,330 --> 00:01:03,730
+cumbersome though it works but it can be annoying.
+
+17
+00:01:03,780 --> 00:01:08,140
+So there is a shortcut instead of setting the types on all these parameters.
+
+18
+00:01:08,280 --> 00:01:13,980
+We can all just tell typescript which kind of function we want to store in this create to do constant
+
+19
+00:01:14,650 --> 00:01:21,630
+we can then simply import the request handler type from Express and then we set this here create to
+
+20
+00:01:21,630 --> 00:01:24,200
+do to type request handler.
+
+21
+00:01:24,390 --> 00:01:31,930
+And now you see types knows that here we got a request here we got a response and here we get this next
+
+22
+00:01:31,930 --> 00:01:35,670
+function because a request handler is defined to look like this.
+
+23
+00:01:35,800 --> 00:01:40,140
+It is a function with free parameters where the first parameter is the request.
+
+24
+00:01:40,180 --> 00:01:44,860
+The second parameters the response and the third parameter is the next function.
+
+25
+00:01:44,860 --> 00:01:51,360
+So this can simplify this setup here requests handler of course also is available because we installed
+
+26
+00:01:51,360 --> 00:01:55,270
+the types for Express and therefore we can add this import here.
+
+27
+00:01:55,270 --> 00:01:57,900
+Be aware that this import will always be gone.
+
+28
+00:01:58,000 --> 00:02:03,550
+Once this compiles to JavaScript because we're just importing a type here this is not importing any
+
+29
+00:02:03,550 --> 00:02:08,660
+code that would execute it's just importing a type and data for during compilation.
+
+30
+00:02:08,710 --> 00:02:14,200
+It will be removed because it doesn't add anything that would be required when this runs in regular
+
+31
+00:02:14,200 --> 00:02:16,320
+javascript with that.
+
+32
+00:02:16,330 --> 00:02:23,110
+However I got to create to do function and now why don't we add a two dos array here to manage some
+
+33
+00:02:23,110 --> 00:02:29,860
+to dos in memory only of course this will be gone whenever our server restarts because it's just a constant
+
+34
+00:02:29,860 --> 00:02:35,290
+in JavaScript in the end you could of course imagine talking to a database here as well but I want to
+
+35
+00:02:35,290 --> 00:02:41,170
+keep this simple because it's about JavaScript and TypeScript and not so much about database connections
+
+36
+00:02:42,440 --> 00:02:42,820
+so here.
+
+37
+00:02:42,830 --> 00:02:47,630
+I got to dos and now you don't want to create a new to do here.
+
+38
+00:02:47,630 --> 00:02:52,880
+When we got an incoming request and that should be a new object and why don't we create a blueprint
+
+39
+00:02:53,030 --> 00:02:55,460
+for it as object a model.
+
+40
+00:02:55,460 --> 00:03:02,900
+So I'll add a model's folder and in that models folder I'll add a dot to do dot t is file an export
+
+41
+00:03:03,950 --> 00:03:10,220
+class here which will name to do where I define how to do should look like there are we can add a constructor
+
+42
+00:03:10,460 --> 00:03:18,110
+and all we used is typescript shortcut where we can add an axis modifier like public and then a property
+
+43
+00:03:18,110 --> 00:03:25,120
+name like I.D. which is of type String let's say and text which is all of type String and then types
+
+44
+00:03:25,200 --> 00:03:32,750
+will automatically add fields properties with equal names and assigned values who pass to the constructor
+
+45
+00:03:32,750 --> 00:03:37,040
+to those fields whenever we instantiate debt to do class.
+
+46
+00:03:37,280 --> 00:03:42,290
+So I'll use this index here and you'll learn about this syntax earlier in the course already and now
+
+47
+00:03:42,290 --> 00:03:50,970
+introduced yes here in the controller we can of course import to do from going up when level models
+
+48
+00:03:53,150 --> 00:03:56,570
+to do and use this type and class.
+
+49
+00:03:56,570 --> 00:04:03,230
+Now here in our file and it's both a type and a class because well obviously it's a class and every
+
+50
+00:04:03,230 --> 00:04:05,780
+class automatically also acts as a type.
+
+51
+00:04:05,780 --> 00:04:08,600
+That's also what you solve for this course.
+
+52
+00:04:08,600 --> 00:04:14,710
+So now here we can first of all say that to do this here will be an array of to do is this extra annotation
+
+53
+00:04:14,720 --> 00:04:15,450
+doesn't hurt.
+
+54
+00:04:15,530 --> 00:04:17,110
+So did we get proper support.
+
+55
+00:04:17,120 --> 00:04:23,000
+Once we start adding to DOS or start working with the dos in this array and here when I create a new
+
+56
+00:04:23,000 --> 00:04:30,620
+to do I now created by instantiating this class and we have to pass an idea and here I'll create a random
+
+57
+00:04:30,680 --> 00:04:34,050
+pseudo unique idea with moth random to string.
+
+58
+00:04:34,070 --> 00:04:39,700
+This is not really unique but good enough here and now for the value here there.
+
+59
+00:04:39,740 --> 00:04:45,400
+I of course want to set some text which I expect to get in my incoming request body.
+
+60
+00:04:45,590 --> 00:04:55,110
+So I expect to get my text here basically on request body dot text so that I can then set text as a
+
+61
+00:04:55,110 --> 00:04:56,290
+value here.
+
+62
+00:04:56,340 --> 00:05:02,430
+Notice works but please see that this only works because typescript sees that this is of type any It
+
+63
+00:05:02,430 --> 00:05:08,610
+does not notice this is a string and it can't know because how would typescript know which data will
+
+64
+00:05:08,610 --> 00:05:11,130
+be part of our incoming requests.
+
+65
+00:05:11,160 --> 00:05:12,420
+It's not clear to it.
+
+66
+00:05:12,450 --> 00:05:17,500
+We're never stating anywhere what will be instead of the requests we receive.
+
+67
+00:05:17,670 --> 00:05:19,260
+Now how can we improve this.
+
+68
+00:05:19,320 --> 00:05:25,470
+Well we can use typecasting for example typecasting is always a great solution if you know about a specific
+
+69
+00:05:25,470 --> 00:05:27,420
+type but type doesn't.
+
+70
+00:05:27,420 --> 00:05:33,480
+So here on request body before we access text we can typecast this to be an object where we have a text
+
+71
+00:05:33,480 --> 00:05:39,360
+property which is a string because we we are building this app we know what we expect to be on our incoming
+
+72
+00:05:39,360 --> 00:05:40,820
+requests so it isn't.
+
+73
+00:05:40,830 --> 00:05:46,080
+We know that there will be a text property on the incoming request body we can cost it to be such an
+
+74
+00:05:46,080 --> 00:05:51,540
+object and now here we get proper TypeScript and also I.T. support.
+
+75
+00:05:51,540 --> 00:05:53,560
+So with that we add new to do.
+
+76
+00:05:53,610 --> 00:05:58,380
+Now we can reach out to to dos and pushed in you to do onto this array.
+
+77
+00:05:58,380 --> 00:06:00,300
+And again this will of course only store it here.
+
+78
+00:06:00,310 --> 00:06:06,570
+This constant and therefore only in memory because working with a database is not really directly related
+
+79
+00:06:06,570 --> 00:06:11,220
+to node or typescript but well to the database.
+
+80
+00:06:11,220 --> 00:06:14,190
+So with that we got to create to do function here.
+
+81
+00:06:14,190 --> 00:06:19,110
+Now let's go to the to dos roots and import this controller function.
+
+82
+00:06:19,110 --> 00:06:26,670
+So import from the controllers folder from the to dos file in there and import that create to do function
+
+83
+00:06:26,700 --> 00:06:35,030
+and point at this function here on the post root so that any request which targets slash to dos slash
+
+84
+00:06:35,040 --> 00:06:39,540
+nothing reaches de create to do function don't execute it here.
+
+85
+00:06:39,570 --> 00:06:45,750
+Just point at it it will be executed for you by node and express in your running web server later.
+
+86
+00:06:46,950 --> 00:06:49,550
+So now we get this function here.
+
+87
+00:06:49,680 --> 00:06:52,350
+We're not done though in the controller.
+
+88
+00:06:52,350 --> 00:06:54,420
+We all just should return our response.
+
+89
+00:06:54,420 --> 00:07:00,720
+So here we can send a response for example in Jason format with the Jason method where we say message
+
+90
+00:07:01,100 --> 00:07:09,450
+created dad to do or whatever you want and we have created to do Qi maybe where we forewarned you to
+
+91
+00:07:09,450 --> 00:07:15,750
+do that was added on the server side so that on the client we could also use that and maybe also set
+
+92
+00:07:15,750 --> 00:07:22,640
+a status code of 200 one year to indicate that we were successful and that a resource was created.
+
+93
+00:07:22,740 --> 00:07:28,430
+Now we just have to make sure that the body we're trying to extract here actually exists.
+
+94
+00:07:28,560 --> 00:07:35,970
+And for Dad an apt yes we need to parse de bodies of incoming requests for that we can import from the
+
+95
+00:07:35,970 --> 00:07:46,050
+body parts or package we old installed and from that package we can import the Jason method like this
+
+96
+00:07:46,620 --> 00:07:51,390
+and then here you can register dis execute it as a middleware.
+
+97
+00:07:51,390 --> 00:07:57,300
+So does this middleware provide by a third party package which will pass the bodies of all incoming
+
+98
+00:07:57,300 --> 00:08:05,250
+requests and extract any Jason data it finds in there to then populate the body key on this request
+
+99
+00:08:05,310 --> 00:08:07,990
+object with that past Jason data.
+
+100
+00:08:08,010 --> 00:08:15,230
+That's what this Jason middleware from the body parts or package does and with that we should have a
+
+101
+00:08:15,230 --> 00:08:21,320
+server that is capable of creating new to do is save all files and ensure that a recompile is without
+
+102
+00:08:21,380 --> 00:08:22,160
+errors.
+
+103
+00:08:22,250 --> 00:08:28,940
+Make sure node man is still serving the aptly as file and now we need to send a post request and with
+
+104
+00:08:28,940 --> 00:08:35,780
+the browser we can't do that but we can use a tool for that postman you can simply search for it and
+
+105
+00:08:35,780 --> 00:08:42,310
+then install the postman app on your system it's free to use once you got it installed you can start
+
+106
+00:08:42,310 --> 00:08:46,990
+it and you should see a screen that looks something like this if you see a modal overlay you can simply
+
+107
+00:08:46,990 --> 00:08:53,200
+close that and here you can now create a new request by clicking on that plus choosing the request type
+
+108
+00:08:53,200 --> 00:08:59,500
+in this case a post request entering the you are L here it's local hosted three thousand three thousand
+
+109
+00:08:59,500 --> 00:09:06,170
+because that's the port I chose here and then we need to send the request to slash to dos slash nothing.
+
+110
+00:09:06,370 --> 00:09:09,800
+So here to slash tattoos slash nothing.
+
+111
+00:09:10,030 --> 00:09:14,050
+We want to attach a body to the request and that should be a raw body.
+
+112
+00:09:14,050 --> 00:09:19,510
+Jason here to send some Jason data and now what do we need to send here.
+
+113
+00:09:19,510 --> 00:09:24,610
+Well what we extract in the middleware functions though in this case we should have a text property
+
+114
+00:09:24,610 --> 00:09:27,450
+as part of our Jason data we're sending.
+
+115
+00:09:27,460 --> 00:09:33,050
+So yea let's add text as a name and then any text of your choice like finish the course.
+
+116
+00:09:33,280 --> 00:09:38,990
+And if you now click send this sends the request and here's the response and this looks good.
+
+117
+00:09:39,010 --> 00:09:43,580
+We got the created to do back we see the I.D. It was generated and the text.
+
+118
+00:09:43,660 --> 00:09:49,240
+So our back and clearly works here and we wrote it all with typescript but we're serving it as regular
+
+119
+00:09:49,240 --> 00:09:51,040
+javascript that's the entire trick.

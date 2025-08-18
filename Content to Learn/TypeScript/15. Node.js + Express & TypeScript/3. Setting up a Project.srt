@@ -1,0 +1,195 @@
+1
+00:00:02,340 --> 00:00:06,150
+So let's get started with our note typescript application.
+
+2
+00:00:06,150 --> 00:00:12,390
+Now you might think that we need a complex set up with Webb pack and so on now but we actually don't.
+
+3
+00:00:12,420 --> 00:00:18,840
+We'll just use the T as C command to compile our files and then we can use the node command to execute
+
+4
+00:00:18,870 --> 00:00:19,890
+our compiled files.
+
+5
+00:00:19,890 --> 00:00:21,750
+That's all we need here.
+
+6
+00:00:21,750 --> 00:00:27,950
+Still I will set up a project here with NPM in it simply so that we get a package start.
+
+7
+00:00:27,960 --> 00:00:34,560
+Jason File because since we'll create a normal node application here will install some third party packages
+
+8
+00:00:34,620 --> 00:00:41,110
+like express J S and I also want to install one extra tool that simplifies our development process to
+
+9
+00:00:41,130 --> 00:00:44,670
+run NPM and it here in any empty folder of your choice.
+
+10
+00:00:44,670 --> 00:00:48,240
+You can confirm all the default settings here if you want.
+
+11
+00:00:48,240 --> 00:00:52,690
+And thereafter you will have a package not Jason File which should look something like this.
+
+12
+00:00:52,800 --> 00:00:53,780
+Now all the runs.
+
+13
+00:00:53,800 --> 00:00:59,430
+Yes see dash dash in it in here to all initialize this project as a type of project.
+
+14
+00:00:59,430 --> 00:01:06,140
+So did you get this t is conflict or Jason File which you now confined you to your requirements and
+
+15
+00:01:06,140 --> 00:01:06,450
+there.
+
+16
+00:01:06,460 --> 00:01:13,490
+I already got the first adjustment I want to make the target here can easily be set to iOS 2018 for
+
+17
+00:01:13,490 --> 00:01:19,100
+example depending on the Node words you're using but if you're using the latest one does modern javascript
+
+18
+00:01:19,100 --> 00:01:21,440
+syntax should definitely be supported.
+
+19
+00:01:21,440 --> 00:01:29,010
+Module can stay at common J.S. but then I also want to add module resolution here and set this to node.
+
+20
+00:01:29,030 --> 00:01:36,960
+This simply tells typescript how your different files and imports will work together and we need to
+
+21
+00:01:36,960 --> 00:01:40,070
+set this to know to make sure that everything works correctly.
+
+22
+00:01:40,080 --> 00:01:47,460
+I will also set my outer here comment this instead of two disks and my router to source because I want
+
+23
+00:01:47,460 --> 00:01:53,010
+to separate my typescript source code and then the output which will be the actual JavaScript files
+
+24
+00:01:53,220 --> 00:01:56,580
+we can execute with help of node.
+
+25
+00:01:56,580 --> 00:02:01,710
+Other than that I'm fine with strict mode but of course you can find through this all to your personal
+
+26
+00:02:01,710 --> 00:02:06,350
+needs and likings you learned all about that throughout this course after all.
+
+27
+00:02:06,390 --> 00:02:08,850
+And with that we can save this configuration.
+
+28
+00:02:08,850 --> 00:02:14,040
+You all also find this very basic starting setup attached by the way you can save this configuration
+
+29
+00:02:14,280 --> 00:02:19,890
+and I'll also create a source folder where we will write our source code our typescript source code
+
+30
+00:02:20,520 --> 00:02:27,000
+and that's the part where I now want to dive in we'll build our application with typescript in the source
+
+31
+00:02:27,000 --> 00:02:32,870
+folder now and since we'll build a simple web server and we also want to use Express J.S. there.
+
+32
+00:02:32,950 --> 00:02:39,690
+I will first of all install some dependencies here with npm install dash dash save I want to install
+
+33
+00:02:39,780 --> 00:02:45,710
+express here which is the express framework for node J.S. which you of course don't always need.
+
+34
+00:02:45,720 --> 00:02:51,300
+But here I want to build a node express application and it will install the body dash parser package
+
+35
+00:02:51,540 --> 00:02:58,060
+which helps us parse incoming request bodies for now it's it's regarding my production dependencies
+
+36
+00:02:58,240 --> 00:03:00,160
+we might add more later.
+
+37
+00:03:00,160 --> 00:03:07,600
+So let's hit Enter here and with that installed let's have a look at the development dependencies.
+
+38
+00:03:07,600 --> 00:03:13,960
+I'll install those with npm install dash dash save dash death and Area 1 to install node on a tool which
+
+39
+00:03:13,960 --> 00:03:19,840
+allows us to execute a file with node but which then watches the file and the folder to file this in
+
+40
+00:03:19,870 --> 00:03:26,050
+as well as all sub folders for changes and whenever a file changes it will restart the node server.
+
+41
+00:03:26,050 --> 00:03:31,240
+This will simply speed up development because it will automatically restart our node application server
+
+42
+00:03:31,510 --> 00:03:33,550
+every time we change the source code.
+
+43
+00:03:33,550 --> 00:03:38,830
+We need to restart the server when the code changes because otherwise our server still runs on the old
+
+44
+00:03:38,830 --> 00:03:41,380
+code but manually restarting is annoying.
+
+45
+00:03:41,380 --> 00:03:50,420
+So we can speed this up with Node 1 and for the moment that's actually it so lets it enter here and
+
+46
+00:03:50,430 --> 00:03:52,430
+install this development dependency.
+
+47
+00:03:52,430 --> 00:03:56,720
+It will not be the last one we need in this course but for the moment we're fine.
+
+48
+00:03:56,720 --> 00:04:01,970
+So let's wait for this to finish so installation did finish And now let's start writing and creating
+
+49
+00:04:01,970 --> 00:04:04,790
+a very basic node express application.
