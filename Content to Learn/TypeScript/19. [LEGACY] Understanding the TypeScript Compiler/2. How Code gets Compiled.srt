@@ -1,0 +1,139 @@
+1
+
+00:00:01,950  -->  00:00:04,460
+In order to understand how the compiler works,
+
+2
+
+00:00:04,480  -->  00:00:06,910
+here's a very very very very basic code,
+
+3
+
+00:00:06,990  -->  00:00:08,710
+just two variables.
+
+4
+
+00:00:09,000  -->  00:00:11,140
+Let's compile them with tsc
+
+5
+
+00:00:11,580  -->  00:00:13,680
+and this creates this app.js file,
+
+6
+
+00:00:13,680  -->  00:00:15,440
+now let's have a look at this file.
+
+7
+
+00:00:15,750  -->  00:00:18,030
+Well it doesn't show anything you wouldn't know yet,
+
+8
+
+00:00:18,030  -->  00:00:23,340
+of course it converted the left keyword to var and it remove the types here since
+
+9
+
+00:00:23,370  -->  00:00:28,290
+Javascript does have types but no strong typings, no explicit types.
+
+10
+
+00:00:28,290  -->  00:00:30,960
+So this is what you already saw,
+
+11
+
+00:00:30,960  -->  00:00:33,530
+now let's get to the first interesting part.
+
+12
+
+00:00:33,750  -->  00:00:40,920
+If I try to set my name equal to 30, which clearly is wrong because my name should be a string and now I'm
+
+13
+
+00:00:40,920  -->  00:00:47,610
+setting it to a number, let's run tsc, we get an error here, type number is not assignable to type
+
+14
+
+00:00:47,610  -->  00:00:48,610
+string.
+
+15
+
+00:00:49,050  -->  00:00:52,070
+Let's have a look at the app.js file.
+
+16
+
+00:00:52,080  -->  00:00:57,860
+Now what we see here is that even though we got a compilation error, it was assigned here,
+
+17
+
+00:00:57,900  -->  00:00:59,400
+so why is it compiling
+
+18
+
+00:00:59,400  -->  00:01:06,540
+if we got an error? Simply because it's the default behavior. The TypeScript compiler warns you, it gives you an
+
+19
+
+00:01:06,540  -->  00:01:07,140
+error
+
+20
+
+00:01:07,380  -->  00:01:08,990
+but it compiles it nonetheless
+
+21
+
+00:01:09,030  -->  00:01:16,080
+to give you a chance to run your code nonetheless because maybe it was wrong, maybe there is something,
+
+22
+
+00:01:16,340  -->  00:01:23,190
+so an import or you have another dependency in the index.html file through another script import which TypeScript
+
+23
+
+00:01:23,190  -->  00:01:28,610
+is not able to know about but your code still works after it has been compiled.
+
+24
+
+00:01:28,830  -->  00:01:36,300
+So then you are still not writing a really TypeScript friendly application, as you're deliberately passing
+
+25
+
+00:01:36,300  -->  00:01:42,630
+on on some of the advantages it gives you but TypeScript won't keep you from executing your code, so that's
+
+26
+
+00:01:42,630  -->  00:01:45,050
+not actually a bad behavior.
+
+27
+
+00:01:45,060  -->  00:01:51,570
+You can suppress it though, the tsconfig.json file allows you to define some compiler app options
+
+28
+
+00:01:52,050  -->  00:01:54,410
+and we'll have a look at this file in the next lecture.

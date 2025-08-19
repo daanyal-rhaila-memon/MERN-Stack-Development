@@ -1,0 +1,29 @@
+1
+
+00:00:01,630  -->  00:00:09,340
+So now that you're familiar with the basics of TypeScript and using types, it's time to take a step back and actually
+
+2
+
+00:00:09,430  -->  00:00:14,640
+understand a bit better how the compiler works, what the compiler actually does.
+
+3
+
+00:00:14,830  -->  00:00:20,800
+We had a brief look at this in the last module when we saw that the type assignments don't actually
+
+4
+
+00:00:20,800  -->  00:00:22,710
+get compiled to Javascript.
+
+5
+
+00:00:22,930  -->  00:00:29,800
+Well let's dive into this a little bit more in this module where I'll briefly consider the TypeScript compiler,
+
+6
+
+00:00:29,830  -->  00:00:32,100
+how it works and how we may configure it.

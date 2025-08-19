@@ -1,0 +1,23 @@
+1
+00:00:01,720 --> 00:00:08,090
+So after finishing this module, you do know that you can configure the compiler and how it generally works.
+
+2
+00:00:08,110 --> 00:00:14,580
+Now there are tons of options you can specify on the compiler and there are a lot of options
+
+3
+00:00:14,590 --> 00:00:16,830
+you don't use that often.
+
+4
+00:00:16,840 --> 00:00:23,560
+You saw where to find out more about this in this module and you should now be confident about using
+
+5
+00:00:23,560 --> 00:00:30,410
+this compiler, compiling your TypeScript code and understand what actually happens behind the scenes.
+
+6
+00:00:30,430 --> 00:00:31,680
+So let's move on.

@@ -1,0 +1,159 @@
+1
+00:00:02,370 --> 00:00:07,890
+With the release of TypeScript 2.0, the compiler also gets a little bit smarter,
+
+2
+00:00:08,310 --> 00:00:11,160
+let's consider the following example here.
+
+3
+00:00:11,610 --> 00:00:19,230
+I get a function, controlMe which takes a parameter, isTrue which is a boolean and then I have my results
+
+4
+00:00:19,230 --> 00:00:23,750
+which is a number, I check if isTrue is true, in which case I assign
+
+5
+00:00:23,790 --> 00:00:27,240
+result be 12 and then I return result.
+
+6
+00:00:27,390 --> 00:00:32,490
+If I compile this code here, we don't get an error
+
+7
+00:00:32,790 --> 00:00:40,800
+but actually this code does have a problem, result might not be initialized here when we return it but
+
+8
+00:00:40,890 --> 00:00:49,620
+it is implicitly null here because it should be of type number and if we never initialize it, well then
+
+9
+00:00:49,620 --> 00:00:51,960
+it is like null.
+
+10
+00:00:51,990 --> 00:00:57,930
+Now if we add the compiler option you saw at the end of last module, the strict 
+
+11
+00:00:57,960 --> 00:01:00,620
+null checks and set this to true,
+
+12
+00:01:00,930 --> 00:01:02,930
+if I now compile the code,
+
+13
+00:01:03,120 --> 00:01:04,970
+you see we now get an error here
+
+14
+00:01:05,040 --> 00:01:13,110
+that result is used before it is signed because the TypeScript compiler now finds out that isTrue might
+
+15
+00:01:13,110 --> 00:01:19,770
+be false and therefore we never initialize this and therefore we never assign a value to result which
+
+16
+00:01:19,770 --> 00:01:24,200
+keep this in mind should be a number and not null or anything like that,
+
+17
+00:01:24,210 --> 00:01:27,950
+this is one of the things where the compiler got smarter.
+
+18
+00:01:28,020 --> 00:01:31,360
+It now analyzes the flow of your code better,
+
+19
+00:01:31,410 --> 00:01:36,840
+it analyzes which parts of your code you actually can reach and so on
+
+20
+00:01:36,870 --> 00:01:43,230
+and of course there would be other examples and it's not really something which you use but it is something
+
+21
+00:01:43,230 --> 00:01:47,130
+which provides an advantage to you because the compiler is smarter,
+
+22
+00:01:47,130 --> 00:01:49,650
+that should lead to less mistakes.
+
+23
+00:01:49,650 --> 00:01:55,120
+Now with TypeScript 2.0, there is another nice addition which allows you to create cleaner code
+
+24
+00:01:55,560 --> 00:01:58,110
+and that's a specific compiler option,
+
+25
+00:01:58,110 --> 00:01:59,810
+I will show you how it works.
+
+26
+00:01:59,820 --> 00:02:03,400
+Let me first add a new parameter to this function,
+
+27
+00:02:03,420 --> 00:02:06,270
+something else which should be a boolean.
+
+28
+00:02:06,270 --> 00:02:12,900
+Now I don't use this parameter anywhere here but if I compile my code, I don't get an error of course.
+
+29
+00:02:12,900 --> 00:02:19,800
+I added the result equals 33 here to get rid of the error from my function here, where I was
+
+30
+00:02:19,800 --> 00:02:22,740
+returning results even though it might not have been initialized,
+
+31
+00:02:22,740 --> 00:02:26,700
+so just that you're not wondering why this error is gone now.
+
+32
+00:02:26,700 --> 00:02:30,700
+So with a new option I can add, I can change the current behavior.
+
+33
+00:02:30,960 --> 00:02:36,000
+I can add no unused parameters here and by default if we don't add it,
+
+34
+00:02:36,020 --> 00:02:39,620
+this is false but if I do add it and set it to true,
+
+35
+00:02:39,780 --> 00:02:47,080
+if I now recompile my code, I suddenly get an error that something else is declared but never used
+
+36
+00:02:47,100 --> 00:02:48,660
+which is absolutely true.
+
+37
+00:02:48,690 --> 00:02:50,400
+I never use something else,
+
+38
+00:02:50,400 --> 00:02:58,200
+so by adding this no unused parameters option here, I can avoid having functions like this which
+
+39
+00:02:58,200 --> 00:03:00,070
+have parameters I don't need.
+
+40
+00:03:00,210 --> 00:03:07,080
+So if your goal is cleaner code, you might think about adding this new option which TypeScript 2 introduced.

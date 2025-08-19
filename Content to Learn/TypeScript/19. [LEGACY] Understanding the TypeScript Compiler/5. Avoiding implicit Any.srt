@@ -1,0 +1,87 @@
+1
+00:00:01,840 --> 00:00:04,350
+Now what's this noImplicitAny thing here?
+
+2
+00:00:04,760 --> 00:00:10,820
+Well you might be able to guess this, if I go back to the app.ts file and I create a new variable,
+
+3
+00:00:11,180 --> 00:00:12,290
+anything
+
+4
+00:00:12,640 --> 00:00:16,990
+and I set anything equal to 12, that is valid TypeScript code
+
+5
+00:00:17,210 --> 00:00:25,870
+and if I go to my console and I comment out the erroneous code here and I compile this, you'll see it
+
+6
+00:00:25,910 --> 00:00:27,860
+compiled without an error.
+
+7
+00:00:28,400 --> 00:00:35,090
+Now this of course is of type any but it's not of type any because we set it to type any but because
+
+8
+00:00:35,090 --> 00:00:36,470
+we didn't set anything,
+
+9
+00:00:36,530 --> 00:00:39,640
+so it was implicitly set to type any.
+
+10
+00:00:39,650 --> 00:00:45,270
+Now with that, it should be pretty clear what happens if I set noImplicitAny to true.
+
+11
+00:00:45,380 --> 00:00:52,280
+If I do this and run my compiler, now I get an error that the variable anything implicitly has an any
+
+12
+00:00:52,280 --> 00:00:53,240
+type
+
+13
+00:00:53,480 --> 00:00:59,720
+and this is simply again a warning or combined with the other option I showed you before, even a reason
+
+14
+00:00:59,720 --> 00:01:04,820
+why your code won't be compiled at all because you're using this implicitly.
+
+15
+00:01:04,820 --> 00:01:11,980
+So it's really a good warning which kind of reminds you, hey maybe you want to assign a type here,
+
+16
+00:01:12,020 --> 00:01:12,700
+no?
+
+17
+00:01:12,860 --> 00:01:15,720
+So it might get you to write better code
+
+18
+00:01:16,130 --> 00:01:18,160
+but of course you don't have to use it
+
+19
+00:01:18,260 --> 00:01:24,900
+and in a default tsconfig file, it is set to false but again, you may of course use it.
+
+20
+00:01:25,130 --> 00:01:31,620
+And keep in mind if you set it to true, you're still allowed to explicitly set this to any, with that
+
+21
+00:01:31,670 --> 00:01:33,950
+this code compiles without issues.
+
+22
+00:01:33,950 --> 00:01:39,980
+It's only this implicit any which is not allowed, so I'm going to set this to false.

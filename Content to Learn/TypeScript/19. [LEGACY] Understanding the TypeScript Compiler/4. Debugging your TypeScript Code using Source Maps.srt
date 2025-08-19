@@ -1,0 +1,99 @@
+1
+00:00:01,680 --> 00:00:06,100
+Now as you might be able to imagine, there are a lot of options you can define here
+
+2
+00:00:06,310 --> 00:00:13,630
+and to be honest, a lot of them are options you'll rarely if never use. Two options you order to see here
+
+3
+00:00:13,690 --> 00:00:20,530
+which are created by default is the noImplicitAny option which is set to false and the sourceMap option, which is
+
+4
+00:00:20,530 --> 00:00:21,780
+also set to false.
+
+5
+00:00:21,970 --> 00:00:29,690
+Now the sourceMap option should be pretty clear, if you set that to true and then compile your project,
+
+6
+00:00:29,870 --> 00:00:37,460
+then you see that not only does the Javascript file get created, we also get this .map file which
+
+7
+00:00:37,460 --> 00:00:39,410
+is the sourceMap for this file.
+
+8
+00:00:39,410 --> 00:00:41,920
+Now what's the advantage of the sourceMap?
+
+9
+00:00:41,990 --> 00:00:45,280
+Let's have a look at our running application, so I'll quickly
+
+10
+00:00:45,290 --> 00:00:50,990
+start my live server and then let's head over there and of course we don't see anything but if we click
+
+11
+00:00:50,990 --> 00:00:57,500
+on sources here in the Chrome developer tools, we see the app.js file of course which gets imported
+
+12
+00:00:57,980 --> 00:01:02,240
+and we also see the app.ts file.
+
+13
+00:01:02,240 --> 00:01:08,540
+So even though we are running the Javascript file of course because that's the file we're importing
+
+14
+00:01:08,540 --> 00:01:10,350
+in the index.html file,
+
+15
+00:01:10,490 --> 00:01:15,470
+we got access to the ts file and we can even click into it,
+
+16
+00:01:15,470 --> 00:01:19,480
+set a breakpoint here in the developer tools and if I now reload this page,
+
+17
+00:01:22,400 --> 00:01:25,270
+we're actually pausing at that breakpoint
+
+18
+00:01:25,730 --> 00:01:32,660
+and then of course we can still continue code execution, so we can debug our TypeScript code directly
+
+19
+00:01:32,660 --> 00:01:35,450
+in the browser directly in the TypeScript file.
+
+20
+00:01:35,450 --> 00:01:38,110
+We don't have to debug in the Javascript file,
+
+21
+00:01:38,150 --> 00:01:45,290
+we can do this in the TypeScript file which of course is a great addition and a great and very important feature
+
+22
+00:01:45,380 --> 00:01:52,790
+which makes finding our errors much easier and that is achieved by setting this sorceMap option to true
+
+23
+00:01:52,850 --> 00:01:58,220
+which is not the default and I will turn it back to false here to have one less file being created
+
+24
+00:01:58,310 --> 00:02:03,740
+but if you are developing in a project, you probably might want to do this or might want to turn this
+
+25
+00:02:03,740 --> 00:02:09,850
+to true as it will give you source maps and make your production or your developer life really easier.

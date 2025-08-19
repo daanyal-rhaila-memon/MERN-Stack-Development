@@ -1,0 +1,154 @@
+1
+
+00:00:01,930  -->  00:00:07,910
+So in this tsconfig.json file, you can configure how your compiler should behave
+
+2
+
+00:00:08,260  -->  00:00:14,960
+and this is a default file as it gets created once you run tsc init,
+
+3
+
+00:00:14,990  -->  00:00:17,910
+what we did in the first module of this course.
+
+4
+
+00:00:17,930  -->  00:00:20,200
+Now let's have a look at the base options we see here
+
+5
+
+00:00:20,330  -->  00:00:25,440
+and let me also mention that in a later module of this course when we talk about the workflows, I'll also
+
+6
+
+00:00:25,460  -->  00:00:26,900
+come back to this file
+
+7
+
+00:00:27,260  -->  00:00:32,210
+but the base options are that we don't want to compile anything into node_modules folder because that
+
+8
+
+00:00:32,210  -->  00:00:38,100
+is not our code, that we want to resolve our modules to be CommonJS format
+
+9
+
+00:00:38,120  -->  00:00:43,190
+and I'll come back to this in the namespace in modules folder, that the target version to which we
+
+10
+
+00:00:43,190  -->  00:00:45,280
+want to compile is ES5
+
+11
+
+00:00:45,290  -->  00:00:51,620
+and you could change this to ES3 or ES6 but ES5 as the default as it runs in pretty much all
+
+12
+
+00:00:51,620  -->  00:00:52,600
+browsers
+
+13
+
+00:00:53,210  -->  00:00:56,630
+and then these two options. Now I'll come back to that,
+
+14
+
+00:00:56,690  -->  00:00:58,280
+these options in a second,
+
+15
+
+00:00:58,370  -->  00:01:04,820
+now let's first try to fix this behavior if we don't want it of TypeScript compiling code if it has
+
+16
+
+00:01:04,910  -->  00:01:10,870
+errors. We can add a new key here which is named noEmitOnError
+
+17
+
+00:01:12,020  -->  00:01:17,020
+and we can set this to true which is not the default, the default is false which is why it is not included
+
+18
+
+00:01:17,030  -->  00:01:17,730
+here.
+
+19
+
+00:01:18,170  -->  00:01:21,690
+So noEmitOnError is that
+
+20
+
+00:01:21,710  -->  00:01:26,220
+now we shouldn't get this app.js file if we have a compilation error.
+
+21
+
+00:01:26,360  -->  00:01:30,440
+So I just deleted it and now I try to run tsc again.
+
+22
+
+00:01:30,440  -->  00:01:31,800
+Now we get the error
+
+23
+
+00:01:32,180  -->  00:01:37,090
+as you can see, no js file to be found.
+
+24
+
+00:01:37,550  -->  00:01:42,790
+So if you want that behavior, that your file doesn't get created in case of any errors, you can force
+
+25
+
+00:01:42,790  -->  00:01:46,170
+it with this simple option here.
+
+26
+
+00:01:46,250  -->  00:01:50,630
+If you don't want this behavior, so if you want the default behavior of the Javascript file getting
+
+27
+
+00:01:50,630  -->  00:01:56,300
+created nonetheless, simply remove this option and you're back to the default where you get these
+
+28
+
+00:01:56,300  -->  00:02:01,610
+files and you have to handle these errors more like a it's a warning way.
+
+29
+
+00:02:01,640  -->  00:02:05,060
+It's no hard error preventing your project from running,
+
+30
+
+00:02:05,060  -->  00:02:10,580
+it's just a warning that there might be something which is wrong or that you might be making some mistake
+
+31
+
+00:02:10,600  -->  00:02:10,800
+.
