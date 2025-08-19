@@ -1,0 +1,167 @@
+1
+00:00:01,640 --> 00:00:05,670
+Now that we had a look at these basic types, let's have a look at
+
+2
+00:00:05,690 --> 00:00:12,610
+a type you certainly know but which is a bit more advanced, the array type or @arrays.
+
+3
+00:00:13,160 --> 00:00:19,550
+Let's say I would have some hobbies even though I state it to be false, if hobbies is an array of let's
+
+4
+00:00:19,550 --> 00:00:27,410
+say cooking and sports, then this is obviously my array
+
+5
+00:00:27,610 --> 00:00:30,190
+and I could log an item
+
+6
+00:00:30,260 --> 00:00:34,970
+to the console, so like hobbies 0.
+
+7
+00:00:35,090 --> 00:00:41,950
+Now to actually see that being logged to the console, I'll open a new window here and I'll run npm start
+
+8
+00:00:41,980 --> 00:00:47,620
+to start my lite server which we set up in one of the earlier videos and head over there, open up my
+
+9
+00:00:47,620 --> 00:00:48,260
+console,
+
+10
+00:00:48,280 --> 00:00:49,740
+we see cooking of course.
+
+11
+00:00:49,960 --> 00:00:59,480
+So far, so not very spectacular but let's see, which type does this hobbies variable have? Well we can
+
+12
+00:00:59,480 --> 00:01:04,830
+check this by printing typeOf hobbies.
+
+13
+00:01:05,000 --> 00:01:09,860
+If I save this and then recompile my code here,
+
+14
+00:01:10,110 --> 00:01:12,100
+now we see object here.
+
+15
+00:01:12,120 --> 00:01:17,240
+Now that's not very surprising because obviously an array is an object.
+
+16
+00:01:17,250 --> 00:01:20,860
+The interesting part comes if we try to do something else,
+
+17
+00:01:20,910 --> 00:01:27,940
+if I take my hobbies variable here and I try to set this equal to a new array which holds one number,
+
+18
+00:01:27,960 --> 00:01:28,730
+100
+
+19
+00:01:28,950 --> 00:01:31,290
+and now I try to compile this,
+
+20
+00:01:31,290 --> 00:01:32,300
+I get an error,
+
+21
+00:01:32,430 --> 00:01:38,400
+the error is type number or array of numbers is not assignable to type array of strings.
+
+22
+00:01:38,400 --> 00:01:45,540
+Now that might be a bit surprising but if you think about it, it's not, TypeScript infers the types automatically
+
+23
+00:01:45,570 --> 00:01:51,990
+and since we initialize this hobbies variable with an array of strings, it thinks that this should only
+
+24
+00:01:51,990 --> 00:01:53,270
+be an array of strings,
+
+25
+00:01:53,280 --> 00:01:56,420
+it doesn't allow any other types in this array.
+
+26
+00:01:56,520 --> 00:02:03,600
+So if we then set it equal to an array of numbers, we therefore get an error, as soon as I change this to a
+
+27
+00:02:03,600 --> 00:02:09,370
+string again, the error is gone and I can then recompile this without any issues.
+
+28
+00:02:09,540 --> 00:02:14,580
+So that's important to keep in mind, using a number here will give us an error because TypeScript infers
+
+29
+00:02:14,580 --> 00:02:16,990
+this to be an array of strings.
+
+30
+00:02:17,010 --> 00:02:20,700
+Now we can overwrite this by assigning a type explicitly.
+
+31
+00:02:20,790 --> 00:02:26,060
+If I assign a type and set this to be an array of anything,
+
+32
+00:02:26,250 --> 00:02:28,530
+well now you see my IDE error is gone
+
+33
+00:02:28,560 --> 00:02:34,320
+and as soon as I recompile thsi, we see this error is gone too. The reason for this of course is that now I'm
+
+34
+00:02:34,350 --> 00:02:38,220
+overwriting the type TypeScript infers and I'm telling it 
+
+35
+00:02:38,220 --> 00:02:45,620
+no that's not only an array of strings, it may hold any item and I increase the flexibility of that
+
+36
+00:02:45,620 --> 00:02:45,900
+array
+
+37
+00:02:45,900 --> 00:02:49,440
+therefore. It still has to be an array of anything,
+
+38
+00:02:49,590 --> 00:02:56,370
+so setting hobbies to just 100 will still give us an error because that is just a number and not an
+
+39
+00:02:56,370 --> 00:02:56,970
+array.
+
+40
+00:02:57,150 --> 00:03:00,630
+So I only overwrote the types of the items in the array,
+
+41
+00:03:00,660 --> 00:03:02,150
+not that this is an array,
+
+42
+00:03:02,160 --> 00:03:04,850
+I set this by adding the square brackets here.

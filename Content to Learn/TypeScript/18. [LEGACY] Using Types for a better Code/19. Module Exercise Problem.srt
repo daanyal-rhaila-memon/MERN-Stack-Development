@@ -1,0 +1,34 @@
+1
+
+00:00:01,930  -->  00:00:08,400
+Exercise time. Here, we have some TypeScript code though it's really just Javascript
+
+2
+
+00:00:08,410  -->  00:00:13,840
+if you leave away the let keyword, which would also be available in ES6 Javascript.
+
+3
+
+00:00:13,840  -->  00:00:16,650
+So the basic thing is, we're not using types here.
+
+4
+
+00:00:16,930  -->  00:00:24,460
+Now your goal is to take this code and be as explicit as possible regarding the types.
+
+5
+
+00:00:24,670  -->  00:00:32,620
+I want you to rework this code so that you're assigning types wherever it is possible and be as well, explicit
+
+6
+
+00:00:32,800  -->  00:00:41,290
+as you can be, to represent this code. So a rather short and quick challenge here but one that will really
+
+7
+
+00:00:41,290  -->  00:00:45,600
+allow you to use the knowledge you learned before and take it into practice.

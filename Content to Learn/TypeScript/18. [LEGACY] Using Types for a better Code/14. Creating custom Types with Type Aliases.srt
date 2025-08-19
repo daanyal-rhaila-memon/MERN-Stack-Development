@@ -1,0 +1,164 @@
+1
+
+00:00:01,680  -->  00:00:08,790
+Complex types like these lead us to an issue though. Imagine we would have another property or another
+
+2
+
+00:00:08,820  -->  00:00:09,810
+variable here,
+
+3
+
+00:00:09,810  -->  00:00:16,360
+complex2 and to keep it simple, complex2 should just be the same object here,
+
+4
+
+00:00:16,360  -->  00:00:21,650
+so I'm just copying it. Technically behind the scenes, it's of course a new object but yes, it has the
+
+5
+
+00:00:21,650  -->  00:00:23,400
+same content.
+
+6
+
+00:00:23,420  -->  00:00:26,840
+Now I would like to assign the same type, so I can assign,
+
+7
+
+00:00:26,840  -->  00:00:30,820
+I can copy the type here too. Do you see the problem?
+
+8
+
+00:00:30,950  -->  00:00:32,620
+I have to copy that.
+
+9
+
+00:00:32,660  -->  00:00:38,640
+Now suddenly I decide oh that should actually be a mixed array here with any and not just numbers
+
+10
+
+00:00:38,750  -->  00:00:40,950
+and I have to edit it in two places,
+
+11
+
+00:00:41,180  -->  00:00:42,900
+certainly not what I want.
+
+12
+
+00:00:43,370  -->  00:00:51,830
+So a better approach would be to kind of have a way to store this type here, to put it into one word
+
+13
+
+00:00:51,830  -->  00:00:53,970
+which you then can reuse.
+
+14
+
+00:00:54,530  -->  00:01:00,740
+Well of course later on in this course, we will learn about classes which allow us to create objects
+
+15
+
+00:01:00,740  -->  00:01:07,880
+or blueprints of which we can create objects but we can also use a type alias if we just want to store
+
+16
+
+00:01:07,880  -->  00:01:09,320
+a type.
+
+17
+
+00:01:09,320  -->  00:01:11,390
+How does a type alias look?
+
+18
+
+00:01:11,780  -->  00:01:18,170
+Well let's see. We create a type alias with the type keyword,
+
+19
+
+00:01:18,250  -->  00:01:20,470
+that's all, that basically tells TypeScript
+
+20
+
+00:01:20,530  -->  00:01:25,090
+create a new type and then we can give it any name of our choice,
+
+21
+
+00:01:25,150  -->  00:01:32,560
+for example complex and this is then assigned to the type we want to use.
+
+22
+
+00:01:32,660  -->  00:01:36,380
+So I'm just copying this, like that.
+
+23
+
+00:01:36,380  -->  00:01:38,110
+Now here's an important thing,
+
+24
+
+00:01:38,300  -->  00:01:45,230
+even though we're now on the right side of the equals sign and on the left one, this is a still type
+
+25
+
+00:01:45,230  -->  00:01:51,130
+creation and it's only like this because we have the type keyword in front,
+
+26
+
+00:01:51,250  -->  00:01:58,440
+otherwise in TypeScript and Javascript, the rule always is on the right side of this equal sign,
+
+27
+
+00:01:58,490  -->  00:02:04,040
+you defined type, you set the type of a variable, of a property, of whatever.
+
+28
+
+00:02:04,040  -->  00:02:06,810
+Now we're here, we're not creating a variable or a property,
+
+29
+
+00:02:06,830  -->  00:02:12,040
+we're creating a type and therefore on the right side, we set up this type.
+
+30
+
+00:02:12,110  -->  00:02:19,700
+Now with this complex type created, we can make it easier and simply set this to be of type complex.
+
+31
+
+00:02:19,730  -->  00:02:25,800
+Now it's still the same type as before but it's much more reusable, if we want to change it, we change
+
+32
+
+00:02:25,800  -->  00:02:26,740
+it in one place, if
+
+33
+
+00:02:26,780  -->  00:02:29,230
+we want to use it, we simply use complex here

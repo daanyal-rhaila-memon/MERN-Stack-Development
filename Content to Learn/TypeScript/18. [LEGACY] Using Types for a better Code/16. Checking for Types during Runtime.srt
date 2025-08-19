@@ -1,0 +1,134 @@
+1
+
+00:00:01,700  -->  00:00:07,690
+The final thing I want to show you is how to check types. Earlier,
+
+2
+
+00:00:07,700  -->  00:00:13,380
+I already showed the typeOf command and we can use this.
+
+3
+
+00:00:13,760  -->  00:00:17,010
+Let's say we have some final value here
+
+4
+
+00:00:17,240  -->  00:00:20,280
+and finalValue is a string
+
+5
+
+00:00:20,420  -->  00:00:26,750
+as it turns out. Now I only want to execute some code if it is a string and not if it is, let's say a
+
+6
+
+00:00:26,750  -->  00:00:27,590
+number.
+
+7
+
+00:00:27,860  -->  00:00:33,450
+So I can use an if statement and say typeOf, this typeOf keyword here,
+
+8
+
+00:00:33,650  -->  00:00:36,990
+finalValue and then check which type it is.
+
+9
+
+00:00:37,130  -->  00:00:43,010
+I do this with the equal sign and now very important, not with equals string,
+
+10
+
+00:00:43,040  -->  00:00:44,750
+this does not work here,
+
+11
+
+00:00:44,750  -->  00:00:47,870
+instead it has to be in quotation marks string.
+
+12
+
+00:00:48,170  -->  00:00:54,230
+So you always use a string here, so quotation marks and then between quotation marks, you put the type.
+
+13
+
+00:00:54,680  -->  00:00:59,020
+The types then are the same as before - number, string, boolean and so on
+
+14
+
+00:00:59,150  -->  00:01:02,150
+but just between quotation marks in this case.
+
+15
+
+00:01:02,240  -->  00:01:11,630
+So if I check for this being a number and only in this case do I want to log finalValue is a number,
+
+16
+
+00:01:12,740  -->  00:01:17,020
+well if I compile this, we don't get an error and
+
+17
+
+00:01:17,170  -->  00:01:23,680
+if I then run my application, we don't see this output because of course it is no number,
+
+18
+
+00:01:23,690  -->  00:01:24,850
+it is a string.
+
+19
+
+00:01:25,250  -->  00:01:33,020
+So only once I change this to be any number and recompile my code and have a look at my application
+
+20
+
+00:01:33,020  -->  00:01:36,150
+again, we do see finalValue is a number.
+
+21
+
+00:01:36,380  -->  00:01:39,290
+So this is how we can check the type of a variable
+
+22
+
+00:01:39,290  -->  00:01:40,330
+in our code
+
+23
+
+00:01:40,610  -->  00:01:46,940
+and you would use this for example in let's say some function or some code where you're not really sure
+
+24
+
+00:01:47,210  -->  00:01:49,260
+what values you are getting
+
+25
+
+00:01:49,550  -->  00:01:52,750
+and you just want to do something upon certain types,
+
+26
+
+00:01:52,760  -->  00:01:57,350
+for example for a calculation, you only want to perform made when you're getting numbers
+
+27
+
+00:01:57,350  -->  00:02:03,350
+and with this check, you can make sure that the values you are using are indeed of type number

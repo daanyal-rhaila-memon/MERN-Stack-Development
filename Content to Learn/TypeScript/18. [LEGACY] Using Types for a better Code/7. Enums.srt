@@ -1,0 +1,224 @@
+1
+
+00:00:01,920  -->  00:00:10,820
+Another new type added with TypeScript are enums. Now enums are a cool feature to make numbers
+
+2
+
+00:00:11,270  -->  00:00:12,930
+more expressive.
+
+3
+
+00:00:13,160  -->  00:00:17,630
+So consider this case, you get a couple of callers and you want
+
+4
+
+00:00:18,080  -->  00:00:21,680
+to check in a switch statement which one was chosen.
+
+5
+
+00:00:21,680  -->  00:00:27,880
+Now you could have a switch statement where you check for strings being green or red or blue,
+
+6
+
+00:00:28,040  -->  00:00:31,500
+so you have a string representing the color, that would work
+
+7
+
+00:00:31,910  -->  00:00:38,750
+but in code that would really be well, it's just occupying more memory for information your computer doesn't
+
+8
+
+00:00:38,750  -->  00:00:39,800
+really care about,
+
+9
+
+00:00:39,980  -->  00:00:47,310
+you could also just have zero, one, two, three, each number standing for one color.
+
+10
+
+00:00:47,330  -->  00:00:51,160
+So that would be how you could normalize this
+
+11
+
+00:00:51,260  -->  00:00:53,610
+which also has some other advantages,
+
+12
+
+00:00:53,630  -->  00:00:57,740
+saves you the danger of making typos and so on.
+
+13
+
+00:00:57,950  -->  00:01:04,770
+So that would be a good thing but it is of course a bit harder to remember which
+
+14
+
+00:01:04,850  -->  00:01:09,780
+value one stands for, was that green, was that blue?
+
+15
+
+00:01:09,800  -->  00:01:17,360
+So in order to make this easier, you can use an enum. We create an enum by using the enum keyword and then
+
+16
+
+00:01:17,360  -->  00:01:21,090
+the name we want to give to this enum, for example color,
+
+17
+
+00:01:21,250  -->  00:01:26,850
+this will basically create a new type we can use later on and you'll see this in action soon.
+
+18
+
+00:01:27,020  -->  00:01:36,070
+So now I created my color enum here and then I simply add curly braces to fill it with some values,
+
+19
+
+00:01:36,080  -->  00:01:44,630
+now I could add gray, green and blue here for example, that would be three possible values.
+
+20
+
+00:01:44,640  -->  00:01:51,040
+Now these values behind the scenes stand for some integers or some numbers.
+
+21
+
+00:01:51,440  -->  00:01:53,680
+So now if I create a new variable,
+
+22
+
+00:01:53,690  -->  00:02:00,930
+let's say myColor and set this of type color, I can use my new enum here as a type,
+
+23
+
+00:02:01,310  -->  00:02:06,920
+I can set this equal to color.green for example.
+
+24
+
+00:02:06,920  -->  00:02:14,630
+Now if I console log my color, what do you expect to see in the console?
+
+25
+
+00:02:15,780  -->  00:02:18,830
+I'll compile it and then head over to it.
+
+26
+
+00:02:18,930  -->  00:02:24,230
+We see one, we don't see green, we see one,
+
+27
+
+00:02:24,240  -->  00:02:30,330
+the reason for that is that behind the scenes, numbers are assigned to that automatically.
+
+28
+
+00:02:30,420  -->  00:02:32,160
+This receives the number 0,
+
+29
+
+00:02:32,160  -->  00:02:36,510
+the second item receives the number 1 and the third item receives the number 2
+
+30
+
+00:02:36,660  -->  00:02:37,640
+and so on,
+
+31
+
+00:02:37,710  -->  00:02:40,600
+so this simply continues
+
+32
+
+00:02:40,600  -->  00:02:47,440
+and this is how you can add multiple values to this enum and then refer to them here.
+
+33
+
+00:02:47,440  -->  00:02:52,780
+Now you might also have some applications where you want to overwrite the default values taken here.
+
+34
+
+00:02:52,900  -->  00:03:01,390
+Maybe you want this to be 100 and not one but then this should again be two maybe. Well you can do this
+
+35
+
+00:03:01,390  -->  00:03:03,510
+by simply assigning a value here,
+
+36
+
+00:03:03,520  -->  00:03:05,340
+you can set this to 100
+
+37
+
+00:03:05,440  -->  00:03:13,190
+and now if we print my color, so first we compile this and print it, we see 100.
+
+38
+
+00:03:13,230  -->  00:03:17,960
+Now what would you expect to see if I set this to blue?
+
+39
+
+00:03:18,120  -->  00:03:22,410
+Will it be 2 or 101?
+
+40
+
+00:03:22,650  -->  00:03:27,980
+Well let's recompile and see, it's 101,
+
+41
+
+00:03:27,980  -->  00:03:34,150
+so it continues incrementing with the latest number, with the number of the item prior to this one.
+
+42
+
+00:03:34,340  -->  00:03:40,010
+So if we want this to be 2, we have to set it to 2, the next item will then be 3 though,
+
+43
+
+00:03:40,100  -->  00:03:43,700
+so it will always refer to the last item in front of it.
+
+44
+
+00:03:44,090  -->  00:03:50,870
+This is how you can enums to encode some numbers into more user-friendly values which you can use during
+
+45
+
+00:03:50,870  -->  00:03:51,360
+coding.

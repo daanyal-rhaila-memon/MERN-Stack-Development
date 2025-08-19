@@ -1,0 +1,259 @@
+1
+
+00:00:02,040  -->  00:00:04,010
+Now here's an interesting thing,
+
+2
+
+00:00:04,050  -->  00:00:07,180
+functions are types on their own.
+
+3
+
+00:00:07,410  -->  00:00:14,730
+So we not only have the types we expect to get back or we expect our arguments to have, this whole function
+
+4
+
+00:00:14,740  -->  00:00:17,560
+here is a type and I'm going to show you,
+
+5
+
+00:00:17,910  -->  00:00:20,820
+so let's have a look at function types.
+
+6
+
+00:00:20,820  -->  00:00:24,910
+Let me create a new variable which I'll call myMultiply.
+
+7
+
+00:00:25,350  -->  00:00:31,470
+Now myMultiply should really just take the multiply function later on
+
+8
+
+00:00:31,590  -->  00:00:39,150
+but right now, I don't want to initialize it, which leads to the behavior that I can set myMultiply equal
+
+9
+
+00:00:39,150  -->  00:00:39,740
+to
+
+10
+
+00:00:39,810  -->  00:00:48,180
+sayHello and that I can set it equal to multiply, without parentheses all the time because I don't want
+
+11
+
+00:00:48,180  -->  00:00:53,870
+to set it equal to the return value of these functions but instead to the functions themselves.
+
+12
+
+00:00:54,180  -->  00:01:00,360
+So I can call myMultiply here and then I can also call it down here again
+
+13
+
+00:01:00,540  -->  00:01:09,900
+and if I compile all this code and then have a look at my console, clearing it to make it a bit better
+
+14
+
+00:01:10,030  -->  00:01:10,860
+to read,
+
+15
+
+00:01:11,230  -->  00:01:18,160
+we we see hello here and we don't see anything from this call here simply because you would have
+
+16
+
+00:01:18,160  -->  00:01:19,750
+to console log it
+
+17
+
+00:01:20,050  -->  00:01:29,200
+and then also pass some values like five and two, save it, compile it and then have a look at the new console
+
+18
+
+00:01:29,200  -->  00:01:31,290
+here, we see 10.
+
+19
+
+00:01:31,330  -->  00:01:35,580
+So this is how I can call these functions and how I can assign it
+
+20
+
+00:01:35,920  -->  00:01:41,740
+but it looks kind of wrong to be able to assign myMultiply to sayHello,
+
+21
+
+00:01:42,250  -->  00:01:48,610
+maybe it would be great if you could say this should only be able to take functions of this format or
+
+22
+
+00:01:48,610  -->  00:01:53,170
+type here and not of this type.
+
+23
+
+00:01:53,170  -->  00:02:02,200
+Now to get an idea of how we could tell it, let's see what makes up this function and what makes up this function.
+
+24
+
+00:02:03,100  -->  00:02:04,200
+Here
+
+25
+
+00:02:04,220  -->  00:02:12,400
+the specific characteristics are that we have no arguments and that we return nothing,
+
+26
+
+00:02:12,400  -->  00:02:19,060
+here we have two arguments where both arguments are numbers and we return a number.
+
+27
+
+00:02:19,420  -->  00:02:22,630
+So it would be great if we could set the type to be something like
+
+28
+
+00:02:22,650  -->  00:02:26,740
+yes please have two arguments which are both numbers and return a number,
+
+29
+
+00:02:26,740  -->  00:02:28,470
+turns out we can do this.
+
+30
+
+00:02:28,580  -->  00:02:36,610
+We can set a type here with colon and then to set a function type, we use parentheses, then the arrow to
+
+31
+
+00:02:36,610  -->  00:02:39,820
+follow the ES6 arrow function syntax
+
+32
+
+00:02:40,090  -->  00:02:42,220
+and then what this function should return.
+
+33
+
+00:02:42,550  -->  00:02:44,780
+So that's the general setup.
+
+34
+
+00:02:44,890  -->  00:02:52,180
+Now here in our case, we want to have a value which is a number and then another value which is also a
+
+35
+
+00:02:52,330  -->  00:02:55,410
+number and then we want to return a number
+
+36
+
+00:02:55,810  -->  00:02:57,310
+and this is a function type.
+
+37
+
+00:02:57,310  -->  00:02:57,990
+Important,
+
+38
+
+00:02:58,030  -->  00:02:59,060
+it's not a function,
+
+39
+
+00:02:59,140  -->  00:03:04,200
+you won't be able to execute this and we're assigning it as a type as you can see by the colon here
+
+40
+
+00:03:04,870  -->  00:03:11,150
+but it indicates which functions this variable will be able to hold.
+
+41
+
+00:03:11,170  -->  00:03:14,640
+Also notice that now we're getting an error here
+
+42
+
+00:03:14,680  -->  00:03:19,390
+and if I compile this, I do get the error here too, that type
+
+43
+
+00:03:19,450  -->  00:03:25,620
+no arguments return void is not assignable to type, two arguments both numbers return a number.
+
+44
+
+00:03:25,960  -->  00:03:28,610
+We don't get an argument for this assignment here,
+
+45
+
+00:03:28,720  -->  00:03:36,450
+so multiply seems to satisfy this type here, even though and that's important to note, here
+
+46
+
+00:03:36,460  -->  00:03:41,100
+I have val1 and val2 and here I have value and value2,
+
+47
+
+00:03:41,110  -->  00:03:45,740
+so the name of the arguments is totally ignored,
+
+48
+
+00:03:45,790  -->  00:03:48,580
+that could be a and b, the types here,
+
+49
+
+00:03:48,610  -->  00:03:49,930
+that is the important part
+
+50
+
+00:03:50,020  -->  00:03:51,890
+and of course that type here too.
+
+51
+
+00:03:52,420  -->  00:03:58,890
+So with this set up, we're able to define which types of functions very well may hold
+
+52
+
+00:03:59,020  -->  00:04:01,570
+and we're using these function types here.

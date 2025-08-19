@@ -1,0 +1,39 @@
+1
+
+00:00:01,840  -->  00:00:08,160
+Now after learning what TypeScript is, why we might want to use it, how we generally use it
+
+2
+
+00:00:08,320  -->  00:00:14,500
+and after setting up our basic workspace, it's time to get started and learn about the most important
+
+3
+
+00:00:14,500  -->  00:00:18,640
+feature of TypeScript, types. In this module, 
+
+4
+
+00:00:18,640  -->  00:00:22,340
+you're going to learn how to use types, why they are awesome,
+
+5
+
+00:00:22,480  -->  00:00:27,330
+how to be flexible about types and keep the best of both worlds,
+
+6
+
+00:00:27,370  -->  00:00:34,690
+dynamic types of Javascript and strongly types or strong typings of TypeScript. You will learn which
+
+7
+
+00:00:34,690  -->  00:00:38,410
+types exist and how you create your own types.
+
+8
+
+00:00:38,440  -->  00:00:44,300
+So with that, enough of the introduction, let's get started and see how that all works.

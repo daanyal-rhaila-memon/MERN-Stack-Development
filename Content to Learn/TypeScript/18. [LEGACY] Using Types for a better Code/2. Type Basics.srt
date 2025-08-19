@@ -1,0 +1,123 @@
+1
+00:00:02,090 --> 00:00:06,560
+So let's have a look at the feature which gives TypeScript its name, types.
+
+2
+00:00:07,010 --> 00:00:08,570
+Which types do we have,
+
+3
+00:00:08,570 --> 00:00:12,380
+how do we use them and what are their benefits?
+
+4
+00:00:12,380 --> 00:00:20,750
+You saw it in theory a bit, now it's time to have a look at it in practice. Types also exist in Javascript,
+
+5
+00:00:20,840 --> 00:00:23,710
+we do have strings and we do have numbers there.
+
+6
+00:00:23,930 --> 00:00:27,650
+The issue with Javascript simply is, we're not explicit about them,
+
+7
+00:00:27,710 --> 00:00:30,590
+when we create a variable, we're not explicit about the type
+
+8
+00:00:30,590 --> 00:00:37,110
+this variable could have, should have or may have. In TypeScript, we can be explicit,
+
+9
+00:00:37,280 --> 00:00:40,130
+so which types do we have in TypeScript
+
+10
+00:00:40,130 --> 00:00:48,740
+and also at least the basic types in Javascript? We do have strings. A string is simply some text between
+
+11
+00:00:48,740 --> 00:00:52,820
+quotation marks and you can of course assign this to a variable.
+
+12
+00:00:52,850 --> 00:00:55,210
+Now here I'm using let to create a variable,
+
+13
+00:00:55,220 --> 00:01:01,700
+let is just ES6 syntax to create variables and in the next module, we'll have a look at the ES6 syntax
+
+14
+00:01:01,710 --> 00:01:03,280
+supported by TypeScript,
+
+15
+00:01:03,290 --> 00:01:05,810
+here is a brief sneak peek
+
+16
+00:01:05,810 --> 00:01:07,510
+kind of. So let
+
+17
+00:01:07,550 --> 00:01:13,940
+and then let's say we want to assign it to a variable named myName and if I assign Max to this, then
+
+18
+00:01:13,940 --> 00:01:20,120
+this variable obviously holds a string but there is more than that happening behind the scenes, TypeScript
+
+19
+00:01:20,210 --> 00:01:27,940
+recognizes that I assign a string here and therefore automatically saves this information,
+
+20
+00:01:28,100 --> 00:01:32,780
+it keeps in mind that this variable here should be of type string.
+
+21
+00:01:33,050 --> 00:01:40,680
+So if I now try to reassign this variable to be a number and run my TypeScript compiler by running tsc
+
+22
+00:01:40,770 --> 00:01:47,090
+in the command line at the bottom here, you will see that my command line or the compiler gives me a number,
+
+23
+00:01:47,180 --> 00:01:50,040
+that type number is not assignable to type string.
+
+24
+00:01:50,390 --> 00:01:57,320
+So TypeScript recognized that this here should be a string because we assigned one initially and therefore,
+
+25
+00:01:57,320 --> 00:02:00,080
+we're not able to overwrite this with a number.
+
+26
+00:02:00,080 --> 00:02:05,780
+Now that's the big difference to Javascript. In Javascript, we won't be able to do this because Javascript
+
+27
+00:02:06,110 --> 00:02:07,850
+has dynamic types
+
+28
+00:02:07,970 --> 00:02:10,520
+and here, we do have kind of static types.
+
+29
+00:02:10,520 --> 00:02:18,350
+We define them once, either explicitly which you will see in a few seconds or like this implicitly, letting
+
+30
+00:02:18,350 --> 00:02:19,880
+TypeScript infer it,
+
+31
+00:02:20,300 --> 00:02:21,770
+so this gives us an error.

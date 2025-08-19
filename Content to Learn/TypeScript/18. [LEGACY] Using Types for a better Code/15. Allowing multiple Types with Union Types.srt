@@ -1,0 +1,123 @@
+1
+00:00:01,840 --> 00:00:08,320
+We're nearing the end but there are two other important concepts about types which make your life really
+
+2
+00:00:08,320 --> 00:00:09,230
+easier.
+
+3
+00:00:09,880 --> 00:00:13,510
+Thus far, we always had the decision between
+
+4
+00:00:13,510 --> 00:00:15,120
+be explicit about the type,
+
+5
+00:00:15,130 --> 00:00:16,090
+use a number,
+
+6
+00:00:16,090 --> 00:00:22,100
+use a string or use any, well sometimes you need the in-between solution.
+
+7
+00:00:22,120 --> 00:00:29,230
+You know that your type could be a string or a number but it certainly will not be a boolean
+
+8
+00:00:29,320 --> 00:00:32,670
+and right now, you may think well then I have to use any
+
+9
+00:00:32,680 --> 00:00:37,240
+even though I know it will only be one of these two types and not any type.
+
+10
+00:00:37,240 --> 00:00:39,730
+Turns out TypeScript can help you with that
+
+11
+00:00:39,730 --> 00:00:48,520
+with union types. Coming back to the example I just talked about, let's say I want to redefine 
+
+12
+00:00:48,580 --> 00:00:56,780
+myRealRealAge here and this should be either 27 or 27,
+
+13
+00:00:56,870 --> 00:01:04,520
+both works for example here. Now right now, I would have to use any to be able to be flexible about it
+
+14
+00:01:04,720 --> 00:01:10,620
+and then reassign this to be 27, right?
+
+15
+00:01:10,870 --> 00:01:13,700
+If I do this and compile this, we don't get an error.
+
+16
+00:01:14,260 --> 00:01:16,900
+Now it certainly can't be true though
+
+17
+00:01:17,170 --> 00:01:21,640
+and that would still work without giving us an error here which is kind of bad because that's not what
+
+18
+00:01:21,640 --> 00:01:22,520
+I want.
+
+19
+00:01:22,960 --> 00:01:25,450
+So what I can do is I can use a union type,
+
+20
+00:01:25,720 --> 00:01:33,860
+I can set this to be of type number and now comes the interesting part or that's a single pipe character,
+
+21
+00:01:34,640 --> 00:01:35,900
+string,
+
+22
+00:01:36,380 --> 00:01:42,920
+which means this may be either a number or a string but certainly not boolean whatever.
+
+23
+00:01:43,310 --> 00:01:46,160
+It's not like we're excluding types,
+
+24
+00:01:46,160 --> 00:01:48,630
+we're just being explicit about which types it may be,
+
+25
+00:01:48,710 --> 00:01:50,540
+so number or string.
+
+26
+00:01:50,540 --> 00:01:52,060
+So with that, that works
+
+27
+00:01:52,190 --> 00:01:59,910
+but trying to assign this to true will, as you see when I run tsc, result in an error here.
+
+28
+00:02:00,020 --> 00:02:02,160
+We can't assign this to be true,
+
+29
+00:02:02,210 --> 00:02:03,830
+it's not a boolean,
+
+30
+00:02:03,830 --> 00:02:05,410
+it may be a number or a string,
+
+31
+00:02:05,600 --> 00:02:06,870
+so let me comment this out.

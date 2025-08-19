@@ -1,0 +1,31 @@
+1
+00:00:02,210 --> 00:00:10,400
+You took a huge first step, this first module was extremely important because types really are the meat
+
+2
+00:00:10,550 --> 00:00:11,550
+of TypeScript.
+
+3
+00:00:11,780 --> 00:00:17,930
+Yes, it offers a lot of other cool features and you will learn about them throughout this course but types
+
+4
+00:00:18,410 --> 00:00:27,500
+are what give TypeScript their name and what make your programs much more safe or better. You will prevent
+
+5
+00:00:27,560 --> 00:00:33,620
+a lot of nasty bugs or errors happening where you don't get an error message to begin with
+
+6
+00:00:33,830 --> 00:00:40,680
+just by making sure that you are using the right types and not messing something up during development.
+
+7
+00:00:40,970 --> 00:00:47,120
+So with this foundation laid out, let's continue with the next features and other cool things TypeScript
+
+8
+00:00:47,270 --> 00:00:47,870
+offers you.

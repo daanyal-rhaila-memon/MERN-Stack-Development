@@ -1,0 +1,335 @@
+1
+00:00:01,610 --> 00:00:09,950
+Probably a more interesting addition are non-nullable types, which means you shouldn't be able to assign
+
+2
+00:00:10,010 --> 00:00:15,290
+null to types except for if you explicitly state that you want to do this,
+
+3
+00:00:15,350 --> 00:00:22,990
+let's have a look at this. By default and this is still true for TypeScript 2.0, if we create a new variable,
+
+4
+00:00:23,030 --> 00:00:28,690
+let's say let canBeNull and set this to 12,
+
+5
+00:00:28,770 --> 00:00:30,440
+this is inferred to be a number
+
+6
+00:00:30,800 --> 00:00:37,230
+but in the very next step, we can set this to null, which means we kind of want to remove the value,
+
+7
+00:00:37,230 --> 00:00:46,310
+we want to clear this value. As a side note if we initialize a new variable, canAlsoBeNull and don't
+
+8
+00:00:46,310 --> 00:00:47,330
+assign a value,
+
+9
+00:00:47,360 --> 00:00:50,680
+it is of course of type any by default, we learned that
+
+10
+00:00:51,020 --> 00:00:54,900
+but it also has the value undefined.
+
+11
+00:00:55,100 --> 00:01:02,160
+So like we have the value 12 up here and null here, this variable by default is undefined,
+
+12
+00:01:02,210 --> 00:01:08,600
+that's just true for all uninitialized Javascript and therefore also TypeScript variables like this
+
+13
+00:01:08,600 --> 00:01:09,390
+one.
+
+14
+00:01:09,410 --> 00:01:17,390
+So both variables here, canBeNull and canAlsoBeNull are initialized with non-null values, 12 and
+
+15
+00:01:17,540 --> 00:01:18,510
+undefined
+
+16
+00:01:18,740 --> 00:01:24,200
+but we can assign null to them thereafter, like this. This is no problem,
+
+17
+00:01:24,200 --> 00:01:29,240
+this is something you might already use a lot in your code if you want to reset a value, if you want
+
+18
+00:01:29,240 --> 00:01:30,880
+to clear a value.
+
+19
+00:01:30,890 --> 00:01:38,210
+The issue with this is that this can also lead to problems because you might have null in a place where
+
+20
+00:01:38,210 --> 00:01:43,940
+you want to use this variable, do a calculation or imagine it's not a simple number but a more complex
+
+21
+00:01:44,000 --> 00:01:47,690
+object and you try to access a property on this object
+
+22
+00:01:47,930 --> 00:01:54,410
+and since it may be null, you may run into problems there because if it is null, you can't access
+
+23
+00:01:54,410 --> 00:01:55,460
+the property.
+
+24
+00:01:55,580 --> 00:01:58,930
+So you always have to check first if it is null or not
+
+25
+00:01:58,940 --> 00:02:02,380
+or find some other workaround. With TypeScript 2.0,
+
+26
+00:02:02,390 --> 00:02:08,150
+there is another way, you can also be explicit about which may be null and which should never be
+
+27
+00:02:08,150 --> 00:02:09,110
+null,
+
+28
+00:02:09,140 --> 00:02:16,190
+you can indeed force this behavior by going into the tsconfig and adding a new field to the compiler
+
+29
+00:02:16,190 --> 00:02:18,560
+option which is called strictNullChecks.
+
+30
+00:02:18,560 --> 00:02:26,420
+Now by default if it is not added, this is set to false, so that your code still works because
+
+31
+00:02:26,450 --> 00:02:33,320
+otherwise that would be a breaking change because you never before assigned a variable to be allowed
+
+32
+00:02:33,320 --> 00:02:34,030
+to be null,
+
+33
+00:02:34,040 --> 00:02:35,760
+all variables were allowed to be null,
+
+34
+00:02:35,810 --> 00:02:37,670
+so you may use them like this
+
+35
+00:02:38,000 --> 00:02:47,060
+but if we set this to true and now we execute our code here, let's see what happens. If I compile this
+
+36
+00:02:47,060 --> 00:02:47,420
+code
+
+37
+00:02:47,420 --> 00:02:52,460
+here, we see an error, type null is not assignable to type number,
+
+38
+00:02:52,700 --> 00:02:55,890
+it's referring to line 116 here.
+
+39
+00:02:56,210 --> 00:03:04,250
+So the issue here is since we just added this compiler flag here, this compiler option, now TypeScript gives
+
+40
+00:03:04,250 --> 00:03:10,120
+us an error because we try to assign null here, again prior to TypeScript 2.0,
+
+41
+00:03:10,130 --> 00:03:11,570
+this was perfectly fine,
+
+42
+00:03:11,600 --> 00:03:14,610
+this compiler option I just used didn't even exist.
+
+43
+00:03:14,690 --> 00:03:18,010
+Now it exists and if we add it, we can avoid this,
+
+44
+00:03:18,170 --> 00:03:24,410
+we can now make sure that we don't accidentally assign null somewhere in our code to a variable which
+
+45
+00:03:24,680 --> 00:03:27,550
+theoretically should only hold numbers.
+
+46
+00:03:27,560 --> 00:03:34,370
+Also notice that canAlsoBeNull doesn't give us an error because it is undefined by default
+
+47
+00:03:34,370 --> 00:03:36,260
+and this is kind of an exception,
+
+48
+00:03:36,350 --> 00:03:43,310
+if your variable is undefined, it may also be null since null and undefined are these two special values
+
+49
+00:03:43,310 --> 00:03:44,520
+in Javascript.
+
+50
+00:03:44,870 --> 00:03:51,680
+So only the first case or any case where we have a specific type other than undefined will not allow
+
+51
+00:03:51,680 --> 00:03:53,850
+us to assign null thereafter.
+
+52
+00:03:54,340 --> 00:03:56,150
+Now maybe we want this check,
+
+53
+00:03:56,150 --> 00:04:02,600
+we want this extra layer of protection but we still want to assign null to this specific property or
+
+54
+00:04:02,630 --> 00:04:07,710
+variable here, in such a case, you can simply use a union type here.
+
+55
+00:04:07,940 --> 00:04:11,730
+So when assigning types here, you could say of course it should be a number
+
+56
+00:04:12,110 --> 00:04:14,230
+or it should be null.
+
+57
+00:04:14,270 --> 00:04:20,900
+Now it is allowed to be null again and if I now recompile this, you see it finishes without an error
+
+58
+00:04:20,930 --> 00:04:25,650
+because now I made this type here nullable which means it can be null
+
+59
+00:04:25,730 --> 00:04:28,160
+but by default since I added this flag
+
+60
+00:04:28,180 --> 00:04:31,210
+here, types are not allowed to be null.
+
+61
+00:04:31,220 --> 00:04:34,130
+There is one other important takeaway,
+
+62
+00:04:34,130 --> 00:04:42,990
+if I create yet another variable, canThisBeAny and I set this to null initially which is perfectly fine,
+
+63
+00:04:42,990 --> 00:04:48,000
+if I now compile this code, you see that it compiles without an error because this is inferred
+
+64
+00:04:48,000 --> 00:04:53,710
+to be of type nullable since I assign null initially. Again, using null is not forbidden,
+
+65
+00:04:53,730 --> 00:04:55,440
+it's just a protection if I theoretically
+
+66
+00:04:55,440 --> 00:04:59,370
+want to use another type which will be pretty common.
+
+67
+00:04:59,550 --> 00:05:01,560
+But here, I assign null initially,
+
+68
+00:05:01,560 --> 00:05:03,540
+therefore this doesn't give us an error
+
+69
+00:05:04,080 --> 00:05:13,130
+though what do you think will now happen if I can set canThisBeAny to 12? If I now run the compiler,
+
+70
+00:05:14,320 --> 00:05:20,260
+you see we get an error, that number is not assignable to type null, the type is not widened
+
+71
+00:05:20,260 --> 00:05:28,510
+automatically. This here is not inferred to be of type any, it is inferred to be of type null since
+
+72
+00:05:28,510 --> 00:05:30,020
+we assign null initially,
+
+73
+00:05:30,040 --> 00:05:37,750
+so null got like it's own type now and since I set this to null, this can now only be null. Now of course this
+
+74
+00:05:37,750 --> 00:05:44,500
+may not be very useful and you may think about assigning null initially anyways because if you don't
+
+75
+00:05:44,500 --> 00:05:48,770
+want to initialize it, just leave it like this in which case it would be any
+
+76
+00:05:49,120 --> 00:05:56,170
+but if you set it equal to null initially, then it will be only of type null, at least if you have this
+
+77
+00:05:56,170 --> 00:05:57,480
+option turned on.
+
+78
+00:05:57,490 --> 00:06:03,160
+If this is set to false, then it would still be widened to any as it was before in TypeScript
+
+79
+00:06:03,160 --> 00:06:04,050
+1.8.
+
+80
+00:06:04,360 --> 00:06:06,090
+So that's something to be aware of,
+
+81
+00:06:06,250 --> 00:06:12,220
+if you initialize a value with null, it is not assumed to be of type any, you would have to overwrite this
+
+82
+00:06:12,220 --> 00:06:13,070
+like this
+
+83
+00:06:13,300 --> 00:06:16,530
+or of course set this to number or null again,
+
+84
+00:06:16,630 --> 00:06:22,620
+this would also work. All other things or all other code variations would give you errors.

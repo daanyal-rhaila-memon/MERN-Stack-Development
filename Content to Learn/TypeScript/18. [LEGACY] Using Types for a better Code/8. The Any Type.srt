@@ -1,0 +1,114 @@
+1
+
+00:00:01,960  -->  00:00:07,960
+The last basic type I have here is the any type. We already had a look at that and it's not really
+
+2
+
+00:00:07,960  -->  00:00:15,730
+that surprising. If I have a car and set it to type any, I can assign a string to it, BMW and then I can
+
+3
+
+00:00:15,730  -->  00:00:23,080
+take my car object and log it to the console and thereafter, I can simply overwrite it to suddenly be
+
+4
+
+00:00:23,080  -->  00:00:26,620
+an object where my brand now is BMW
+
+5
+
+00:00:26,980  -->  00:00:33,960
+and I have the series with number three let's say and I can log this again.
+
+6
+
+00:00:34,250  -->  00:00:40,940
+Now with this approach, I'm basically taking my car variable, set it to a string and then I set it to an
+
+7
+
+00:00:40,940  -->  00:00:42,110
+object.
+
+8
+
+00:00:42,110  -->  00:00:49,460
+Now if I wouldn't set any here like this, then I would get an error if I try to compile this. The reason for
+
+9
+
+00:00:49,460  -->  00:00:51,150
+that error being that
+
+10
+
+00:00:51,170  -->  00:00:55,130
+well it is a string, TypeScript infers this to be of type string
+
+11
+
+00:00:55,490  -->  00:00:58,490
+and once we set it to an object, we get an error.
+
+12
+
+00:00:58,940  -->  00:01:00,900
+So therefore, I'm setting it to type any
+
+13
+
+00:01:00,950  -->  00:01:02,930
+and I showed you this earlier,
+
+14
+
+00:01:03,100  -->  00:01:03,550
+any
+
+15
+
+00:01:03,570  -->  00:01:08,840
+is the most flexible type you have in TypeScript and therefore, you should really carefully use
+
+16
+
+00:01:08,840  -->  00:01:09,270
+it,
+
+17
+
+00:01:09,290  -->  00:01:13,080
+it should really be an exception that you use any. Try to be explicit,
+
+18
+
+00:01:13,160  -->  00:01:14,290
+try to avoid it,
+
+19
+
+00:01:14,450  -->  00:01:21,800
+try to really find out which type you want to use and only if you really can't tell and need all the
+
+20
+
+00:01:21,800  -->  00:01:29,180
+flexibility, then use any because any basically gives up all the features or all the advantages TypeScript
+
+21
+
+00:01:29,180  -->  00:01:31,990
+offers you related to types.
+
+22
+
+00:01:32,000  -->  00:01:38,870
+So with this set up, if I head over to the window, you see BMW and then this object,
+
+23
+
+00:01:39,020  -->  00:01:41,990
+so with type any, this is a valid code and it works.

@@ -1,0 +1,67 @@
+1
+00:00:01,770 --> 00:00:03,640
+We can take this a step further,
+
+2
+00:00:03,750 --> 00:00:05,740
+here's an advanced object.
+
+3
+00:00:05,850 --> 00:00:12,480
+While it might look extremely strange and dangerous but it's really just putting together all of the
+
+4
+00:00:12,480 --> 00:00:15,110
+things we saw thus far.
+
+5
+00:00:15,390 --> 00:00:22,640
+We have a variable named complex which should be an object as we can tell by the outer curly braces,
+
+6
+00:00:22,680 --> 00:00:31,750
+this one and this one. Now the object should have two properties, a data property and an output property.
+
+7
+00:00:31,750 --> 00:00:38,650
+The data property should be an array of numbers and the output property is actually a function as we
+
+8
+00:00:38,650 --> 00:00:40,380
+can tell by this type here.
+
+9
+00:00:40,840 --> 00:00:47,950
+It has a function where we only have one argument which has the argument all but again, the name is
+
+10
+00:00:47,950 --> 00:00:50,470
+not relevant but it should be of type boolean,
+
+11
+00:00:50,500 --> 00:00:54,100
+that's important and it should give us back a number
+
+12
+00:00:54,120 --> 00:01:00,580
+array, so an array of numbers. This would be using all the things we saw before and I'm throwing it into
+
+13
+00:01:00,580 --> 00:01:07,720
+here to show you how to combine these types and how to build more complex objects with them while to
+
+14
+00:01:07,720 --> 00:01:11,100
+be honest, it still stays really easy to read
+
+15
+00:01:11,100 --> 00:01:18,130
+once you're into it and it makes sure that we can't assign this to a simpler object, like for example
+
+16
+00:01:18,520 --> 00:01:21,630
+an empty one to go with that very basic example again.
+
+17
+00:01:21,850 --> 00:01:28,570
+So if I try to compile this, we of course get an error that this does not satisfy this more complex type.

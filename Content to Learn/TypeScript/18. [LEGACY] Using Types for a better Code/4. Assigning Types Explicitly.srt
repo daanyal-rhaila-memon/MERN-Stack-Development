@@ -1,0 +1,131 @@
+1
+00:00:02,040 --> 00:00:06,780
+These were some basic types and how we can use them and what gives us errors
+
+2
+00:00:06,870 --> 00:00:11,700
+but how can we actually be more explicit about the types we want to assign?
+
+3
+00:00:11,700 --> 00:00:14,440
+Right now, we're always inferring them
+
+4
+00:00:14,700 --> 00:00:23,340
+but what if I want to assign types on my own because maybe I want to create a variable, myRealAge and
+
+5
+00:00:23,350 --> 00:00:25,430
+don't want to initialize it right away?
+
+6
+00:00:25,470 --> 00:00:30,750
+Now if I do it like this, I can set this to be 27
+
+7
+00:00:30,780 --> 00:00:34,830
+but then I can also overwrite it to be 27 as a string.
+
+8
+00:00:34,830 --> 00:00:42,750
+Now if I now compile this with tsc, I don't get an error because since I don't assign a type here, TypeScript
+
+9
+00:00:42,750 --> 00:00:45,580
+treats this as type any.
+
+10
+00:00:45,680 --> 00:00:47,350
+This is a special type in TypeScript,
+
+11
+00:00:47,370 --> 00:00:51,130
+I will come back to it and it basically means what the name implies,
+
+12
+00:00:51,180 --> 00:00:54,870
+this could be any type, we're back in Javascript world.
+
+13
+00:00:55,020 --> 00:01:00,080
+Now the issue with type any of course is that we don't have any of the advantages
+
+14
+00:01:00,090 --> 00:01:01,650
+TypeScript offer us,
+
+15
+00:01:01,770 --> 00:01:06,380
+we're not getting the compilation check if we're trying to assign a wrong type,
+
+16
+00:01:06,420 --> 00:01:09,080
+we don't get IDE support, here
+
+17
+00:01:09,120 --> 00:01:13,870
+we're really back in the world of Javascript where we don't know which type this has.
+
+18
+00:01:13,920 --> 00:01:19,530
+In order to fix this if we know that this should be a number for example, we can be explicit about the
+
+19
+00:01:19,530 --> 00:01:21,540
+type, when creating the variable,
+
+20
+00:01:21,540 --> 00:01:26,130
+we can assign a type by writing colon and then the type.
+
+21
+00:01:26,130 --> 00:01:27,990
+Now here we get a couple of possible types,
+
+22
+00:01:27,990 --> 00:01:29,450
+right now it is type any,
+
+23
+00:01:29,490 --> 00:01:33,660
+that's the default but we can set it to type number.
+
+24
+00:01:33,690 --> 00:01:35,400
+Now note, this is no string,
+
+25
+00:01:35,400 --> 00:01:36,940
+we don't have quotation marks here,
+
+26
+00:01:36,960 --> 00:01:40,380
+it's just a word number. As soon as I do this,
+
+27
+00:01:40,380 --> 00:01:47,160
+if I rerun my compilation, now I again get an error for this line here where I try to assign a string.
+
+28
+00:01:47,420 --> 00:01:50,150
+So I'll comment this out again to get my code working
+
+29
+00:01:50,280 --> 00:01:53,190
+and this is how we can explicitly assign types.
+
+30
+00:01:53,190 --> 00:01:58,020
+Now with that information, we can also assign them here, though we don't need to because TypeScript
+
+31
+00:01:58,080 --> 00:02:02,600
+did infer it but just to show you what the types would be,
+
+32
+00:02:02,610 --> 00:02:09,300
+well this is how you could be explicit about assigning them. Again, not necessary but also not bad or
+
+33
+00:02:09,300 --> 00:02:10,070
+not wrong.

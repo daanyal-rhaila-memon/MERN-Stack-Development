@@ -1,0 +1,114 @@
+1
+
+00:00:01,790  -->  00:00:05,690
+Speaking of numbers, that's of course another basic type we got available.
+
+2
+
+00:00:05,810  -->  00:00:13,880
+So if I were to save my age here and put this to 27, then this would be a number
+
+3
+
+00:00:13,880  -->  00:00:18,410
+and now of course, it would give me an error if I try to assign a string.
+
+4
+
+00:00:18,410  -->  00:00:20,150
+So this also doesn't work
+
+5
+
+00:00:20,270  -->  00:00:23,670
+and that's the other basic or one of the other basic types we have.
+
+6
+
+00:00:23,720  -->  00:00:25,800
+Important to know regarding numbers,
+
+7
+
+00:00:25,850  -->  00:00:28,150
+these can also be floating point numbers,
+
+8
+
+00:00:28,190  -->  00:00:28,820
+that's also a 
+
+9
+
+00:00:28,830  -->  00:00:35,340
+valid number. TypeScript doesn't differ or doesn't care about the type of the number,
+
+10
+
+00:00:35,360  -->  00:00:42,200
+if it is an integer or a float, that is both type number, there is no differentiation between that,
+
+11
+
+00:00:42,230  -->  00:00:45,020
+that's important to understand and to keep in mind.
+
+12
+
+00:00:45,170  -->  00:00:47,480
+Now the third basic type we do have
+
+13
+
+00:00:47,510  -->  00:00:53,830
+in both TypeScript and Javascript is the boolean. A boolean is simply true or false,
+
+14
+
+00:00:53,870  -->  00:01:01,340
+so if we want to check if I do have some hobbies and surprisingly I do, well then I could set this to true,
+
+15
+
+00:01:01,910  -->  00:01:05,330
+if I were to change my mind, I can set it to false.
+
+16
+
+00:01:05,330  -->  00:01:13,160
+Now of course, the interesting question is what happens if I now reassign hasHobbies to let's say
+
+17
+
+00:01:13,190  -->  00:01:14,380
+one?
+
+18
+
+00:01:15,020  -->  00:01:17,890
+Well, the IDE is already not liking it,
+
+19
+
+00:01:17,900  -->  00:01:21,680
+if I run tsc in the console, you see I get an error.
+
+20
+
+00:01:21,950  -->  00:01:27,830
+So even though one could be cast to a boolean, you could say that one means true,
+
+21
+
+00:01:27,980  -->  00:01:35,300
+it still gives me an error because one is a number and hasHobbies is a boolean and/or likes to have
+
+22
+
+00:01:35,300  -->  00:01:37,120
+booleans and not numbers.
+
+23
+
+00:01:37,310  -->  00:01:40,380
+So this gives me an error, even though you can cast it.

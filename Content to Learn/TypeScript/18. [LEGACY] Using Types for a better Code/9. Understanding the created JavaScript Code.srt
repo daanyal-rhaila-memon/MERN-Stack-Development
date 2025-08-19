@@ -1,0 +1,91 @@
+1
+00:00:01,610 --> 00:00:08,120
+Now before I continue to put more advanced topics about types, like using them with functions and using
+
+2
+00:00:08,120 --> 00:00:12,760
+them in objects and so on, I want to answer one important question,
+
+3
+00:00:12,860 --> 00:00:17,200
+what does all this code actually get compiled to?
+
+4
+00:00:17,230 --> 00:00:19,200
+We use all these types here
+
+5
+00:00:19,280 --> 00:00:21,820
+and how does this look in Javascript code?
+
+6
+00:00:22,280 --> 00:00:24,820
+Well the best answer is to simply have a look.
+
+7
+00:00:24,920 --> 00:00:30,070
+We can have a look at our app.js file which is the result of all these tsc commands I'm running
+
+8
+00:00:30,070 --> 00:00:31,700
+here, the compiled code
+
+9
+00:00:32,650 --> 00:00:35,620
+and as you see, all the types here are gone
+
+10
+00:00:35,740 --> 00:00:41,670
+and that's not really that surprising because Javascript doesn't have types in this way,
+
+11
+00:00:41,830 --> 00:00:43,360
+we can't assign types
+
+12
+00:00:43,360 --> 00:00:49,480
+therefore it's simply stripped out. The role of TypeScript is to be aware of the types and warn you at
+
+13
+00:00:49,480 --> 00:00:54,630
+compilation time, once the code has made it to Javascript code,
+
+14
+00:00:54,850 --> 00:00:55,930
+well you're done and
+
+15
+00:00:55,930 --> 00:00:58,670
+the only thing you're getting then are runtime errors again.
+
+16
+00:00:58,720 --> 00:01:00,960
+So types are no longer available there
+
+17
+00:01:01,150 --> 00:01:05,020
+but it was the job of TypeScript to make sure you wouldn't assign anything wrong
+
+18
+00:01:05,020 --> 00:01:12,030
+before we get to that step, before we actually compile the code. Therefore you don't see any types here,
+
+19
+00:01:12,040 --> 00:01:18,010
+the only thing you do see is the enum here which is kind of constructed with this self-executed function
+
+20
+00:01:18,070 --> 00:01:19,900
+and this color object here.
+
+21
+00:01:20,110 --> 00:01:27,580
+So the enum is actually created in code here too, so that we have this mapping then and we actually do
+
+22
+00:01:27,580 --> 00:01:33,440
+print a number instead of the name we assigned. But that's the only thing,
+
+23
+00:01:33,460 --> 00:01:38,590
+all the other types are not really converted to Javascript because you can do this.

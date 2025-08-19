@@ -1,0 +1,259 @@
+1
+00:00:01,970 --> 00:00:06,850
+Now with functions, we had one advanced type or topic,
+
+2
+00:00:07,070 --> 00:00:10,220
+now let's have a look at objects.
+
+3
+00:00:10,220 --> 00:00:13,500
+Objects are of course extremely important in the Javascript world
+
+4
+00:00:13,670 --> 00:00:19,400
+and so are they in TypeScript and throughout this course, you will learn about different ways of creating such
+
+5
+00:00:19,400 --> 00:00:21,120
+objects for example
+
+6
+00:00:21,170 --> 00:00:25,160
+but here, let's talk about objects and types.
+
+7
+00:00:25,160 --> 00:00:32,180
+I can create a new object holding some user data for example, like this. It might hold a name which since
+
+8
+00:00:32,180 --> 00:00:36,360
+I like my name is Max but of course you're totally free to use yours
+
+9
+00:00:36,650 --> 00:00:39,010
+and then it might hold my age,
+
+10
+00:00:39,230 --> 00:00:42,180
+so that could be my user data.
+
+11
+00:00:42,200 --> 00:00:47,600
+Now the issue with that is, of course the good thing is TypeScript infers,
+
+12
+00:00:47,750 --> 00:00:51,280
+now what does happen when I write this code?
+
+13
+00:00:51,340 --> 00:00:56,480
+Now you might say nothing because I'm not printing it or so but actually, something happens behind the
+
+14
+00:00:56,480 --> 00:01:00,550
+scenes. TypeScript infers the type
+
+15
+00:01:00,620 --> 00:01:08,900
+this variable should have, it infers the type to be an object with a name field which is of type string
+
+16
+00:01:09,500 --> 00:01:12,680
+and an age field which is of type 27,
+
+17
+00:01:12,950 --> 00:01:18,150
+I can prove this by trying to reassign user data to an empty object.
+
+18
+00:01:19,110 --> 00:01:27,840
+If I now run tsc, I get an error that the empty object is not assignable to the type as I just
+
+19
+00:01:27,840 --> 00:01:30,420
+said name, string and age should be a number,
+
+20
+00:01:30,780 --> 00:01:38,550
+so this whole object is turned into a type here and here, that's also important to note, the names of
+
+21
+00:01:38,550 --> 00:01:40,650
+the properties are important.
+
+22
+00:01:41,010 --> 00:01:54,300
+So if I create a new object here where I have a to be hello and b to be 22 and try to compile this,
+
+23
+00:01:57,280 --> 00:02:00,990
+I still get an error because yes the types do match,
+
+24
+00:02:01,000 --> 00:02:05,980
+we do have a string and a number but the names of the properties don't match.
+
+25
+00:02:06,220 --> 00:02:12,640
+So where the names didn't matter here in the function, only the types and the order of the types did matter,
+
+26
+00:02:13,070 --> 00:02:14,010
+here
+
+27
+00:02:14,230 --> 00:02:15,700
+the names do matter
+
+28
+00:02:15,760 --> 00:02:21,280
+and the reason for this is, in the function, the order is the important thing.
+
+29
+00:02:21,310 --> 00:02:22,960
+The first argument should be a number,
+
+30
+00:02:22,960 --> 00:02:24,810
+the second argument should be a number.
+
+31
+00:02:25,120 --> 00:02:32,080
+Now in an object, the order isn't clear, the order may change behind the scenes so we can't say the first
+
+32
+00:02:32,080 --> 00:02:33,510
+property should be a string,
+
+33
+00:02:33,520 --> 00:02:37,380
+the second property should be a number, instead
+
+34
+00:02:37,540 --> 00:02:45,220
+the names of the properties, so name and age are important to really identify the properties we're talking
+
+35
+00:02:45,220 --> 00:02:45,810
+about.
+
+36
+00:02:45,850 --> 00:02:47,510
+So this gives us an error,
+
+37
+00:02:47,530 --> 00:02:49,640
+this is not a valid type here.
+
+38
+00:02:49,780 --> 00:02:57,010
+Of course we can also be explicit about such an object type and we can assign it here, again with a colon.
+
+39
+00:02:57,010 --> 00:03:01,580
+Now how could such an object type look like? For functions we had
+
+40
+00:03:01,580 --> 00:03:03,530
+this syntax here,
+
+41
+00:03:03,790 --> 00:03:05,320
+for objects we use the
+
+42
+00:03:05,380 --> 00:03:09,550
+very object similar syntax with curly braces,
+
+43
+00:03:09,550 --> 00:03:12,910
+now this would mean should be an empty object.
+
+44
+00:03:12,910 --> 00:03:20,360
+So since we don't want that, the syntax will be or the type will be name and an age of course
+
+45
+00:03:20,500 --> 00:03:26,120
+but now what are the values of these property-like looking things here?
+
+46
+00:03:26,500 --> 00:03:31,500
+Well this certainly isn't Max because the type should not be that this is always Max,
+
+47
+00:03:31,510 --> 00:03:40,440
+instead this here is string and for the second property here, age, it is number.
+
+48
+00:03:40,560 --> 00:03:46,300
+Now with that, if I recompile this, it works because we do satisfy this type
+
+49
+00:03:46,410 --> 00:03:49,440
+but here's an important thing to understand.
+
+50
+00:03:49,700 --> 00:03:51,220
+In the value,
+
+51
+00:03:51,410 --> 00:03:58,310
+so the real object after the equal sign here, we do have key-value pairs where the key is the property
+
+52
+00:03:58,320 --> 00:04:05,450
+name and the value is the value of that property and they are separated by colons and not equal signs,
+
+53
+00:04:05,460 --> 00:04:09,420
+that's just how Javascript and also TypeScript works.
+
+54
+00:04:09,420 --> 00:04:11,550
+Now here before the equals sign
+
+55
+00:04:11,550 --> 00:04:17,210
+but after the colon after the variable name, we have the type definition,
+
+56
+00:04:17,250 --> 00:04:19,700
+this is not the value, it's the type.
+
+57
+00:04:19,740 --> 00:04:25,530
+Therefore here we also have key-value pairs but it's not really like properties and their values,
+
+58
+00:04:26,070 --> 00:04:30,670
+instead it's just properties and the types these properties should have.
+
+59
+00:04:30,750 --> 00:04:32,770
+That's just important to keep in mind,
+
+60
+00:04:32,840 --> 00:04:34,360
+that's kind of the blueprint,  
+
+61
+00:04:34,350 --> 00:04:37,320
+that's kind of the plan for this object.
+
+62
+00:04:37,820 --> 00:04:41,970
+Right on the right side of this equals sign is the real object
+
+63
+00:04:42,260 --> 00:04:48,410
+and just because both use colons to separate properties and values doesn't mean that they do the same
+
+64
+00:04:48,410 --> 00:04:49,030
+thing.
+
+65
+00:04:49,130 --> 00:04:51,950
+Here we assign types, here we assign the values

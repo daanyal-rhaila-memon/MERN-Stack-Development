@@ -1,0 +1,247 @@
+1
+00:00:02,270 --> 00:00:07,400
+So after having a look at these types, let's have a look at more advanced types or questions,
+
+2
+00:00:07,580 --> 00:00:10,890
+let's have a look at functions and types.
+
+3
+00:00:10,990 --> 00:00:17,770
+Now functions can of course also take advantage of types, let's say I have the function returnMyName
+
+4
+00:00:17,770 --> 00:00:23,020
+here and with this function surprisingly, I want to returnMyName,
+
+5
+00:00:23,020 --> 00:00:24,850
+who would have guessed that?
+
+6
+00:00:24,850 --> 00:00:34,020
+Now if I call this function here and log it to the console, so console log returnMyName and I compile
+
+7
+00:00:34,020 --> 00:00:36,070
+this, we shouldn't get an error
+
+8
+00:00:36,420 --> 00:00:37,900
+and we should see Max here,
+
+9
+00:00:37,950 --> 00:00:41,450
+I'm just reloading and cleaning this so we can clearly see this,
+
+10
+00:00:41,520 --> 00:00:43,180
+here you see Max.
+
+11
+00:00:43,710 --> 00:00:51,270
+So this is what this function does, not really that surprising. What this function also does is, it gives
+
+12
+00:00:51,270 --> 00:00:54,740
+us back a string, so we can be explicit about this,
+
+13
+00:00:54,810 --> 00:01:01,170
+we can also add a colon after the function name and the parentheses here and then assign a type to it.
+
+14
+00:01:01,170 --> 00:01:05,270
+Now this type here always refers to the return value,
+
+15
+00:01:05,730 --> 00:01:08,730
+so not to the values of any possible arguments, I'll
+
+16
+00:01:08,760 --> 00:01:14,370
+come back to this soon but instead only to what the value of what the return should be.
+
+17
+00:01:14,700 --> 00:01:17,270
+So now that I stated this to be of type string,
+
+18
+00:01:17,340 --> 00:01:25,410
+if I instead use my age and try to compile this, I get an error that I can't use number here because
+
+19
+00:01:25,410 --> 00:01:27,490
+we're expecting to return a string,
+
+20
+00:01:27,690 --> 00:01:30,250
+so let me quickly change this back.
+
+21
+00:01:30,480 --> 00:01:36,630
+Now a special type regarding the return function or the return type here is the void type.
+
+22
+00:01:37,050 --> 00:01:44,100
+If I would have another function which simply is named sayHello and all it does is print hello to the
+
+23
+00:01:44,100 --> 00:01:45,300
+console,
+
+24
+00:01:45,570 --> 00:01:47,670
+well then this function doesn't return anything,
+
+25
+00:01:47,670 --> 00:01:49,780
+it doesn't have a return statement.
+
+26
+00:01:50,220 --> 00:01:56,730
+Now I can be explicit about this by adding a type here too and the type would be void which means nothing,
+
+27
+00:01:56,750 --> 00:01:56,940
+there
+
+28
+00:01:56,930 --> 00:01:58,820
+is nothing to be returned,
+
+29
+00:01:59,220 --> 00:02:04,570
+what this does is it gives me an error if I actually do try to return something.
+
+30
+00:02:04,590 --> 00:02:09,430
+So here again if I compile this, I get the error that string is not void,
+
+31
+00:02:09,480 --> 00:02:12,840
+so no I can't return something here.
+
+32
+00:02:13,230 --> 00:02:18,510
+So this is another useful type especially in conjunction with functions
+
+33
+00:02:18,510 --> 00:02:23,020
+where you want to be clear that this function should not return anything.
+
+34
+00:02:23,040 --> 00:02:28,410
+Now of course it's nice to know what a function returns but often times you'll have a function with some
+
+35
+00:02:28,470 --> 00:02:35,070
+arguments and you want to be sure that these arguments have specific type so that your function is
+
+36
+00:02:35,070 --> 00:02:36,760
+able to work correctly.
+
+37
+00:02:37,110 --> 00:02:39,960
+So we will have a look at argument types here.
+
+38
+00:02:40,080 --> 00:02:44,930
+Now argument types are really just the types of your function arguments guess what
+
+39
+00:02:45,120 --> 00:02:46,520
+but it looks like this.
+
+40
+00:02:46,590 --> 00:02:52,820
+If I have a function multiply and here let's say I have a value 1 and a value 2
+
+41
+00:02:52,990 --> 00:03:01,120
+and I know this should return a number and then here I simply return value 1 times value 2. If I
+
+42
+00:03:01,120 --> 00:03:02,790
+now console log
+
+43
+00:03:02,920 --> 00:03:05,390
+a function call to this function here,
+
+44
+00:03:06,850 --> 00:03:12,860
+multiply and I pass 2 and then Max,
+
+45
+00:03:12,860 --> 00:03:14,660
+now if I compile this,
+
+46
+00:03:14,660 --> 00:03:19,800
+what do you expect to see? We don't get an error
+
+47
+00:03:19,830 --> 00:03:24,860
+because this can be converted to a number but let's see which number.
+
+48
+00:03:25,060 --> 00:03:28,360
+If I reload this page, we see it's this number,
+
+49
+00:03:28,360 --> 00:03:32,190
+it's not a number which is a special type of Javascript to indicate
+
+50
+00:03:32,190 --> 00:03:34,610
+yes we were expecting a number but it isn't.
+
+51
+00:03:34,900 --> 00:03:42,040
+So we're performing our arithmetic calculation here but it doesn't give us back a number because we
+
+52
+00:03:42,040 --> 00:03:44,380
+can't multiply a string.
+
+53
+00:03:44,380 --> 00:03:50,410
+Now we could have avoided this problem if we knew that this function should only take numbers and hence
+
+54
+00:03:50,420 --> 00:03:56,860
+would get a warning at a time we tried to compile this code. So I can assign types to my arguments
+
+55
+00:03:56,860 --> 00:03:57,670
+here too,
+
+56
+00:03:57,700 --> 00:04:02,500
+again with colon and then the type, like number here.
+
+57
+00:04:02,620 --> 00:04:09,250
+Now with this if I try to compile it, I do get an error that now this doesn't work because the string
+
+58
+00:04:09,250 --> 00:04:14,780
+is not a number, it can't be used as such and therefore I am not able to call this function in this way,
+
+59
+00:04:14,800 --> 00:04:16,020
+it doesn't work.
+
+60
+00:04:16,270 --> 00:04:22,510
+This of course is great because it prevents me from doing this mistake and I can comment this out and
+
+61
+00:04:22,510 --> 00:04:27,960
+simply replace it with a function call which actually does work, like 10 times 2
+
+62
+00:04:28,330 --> 00:04:35,670
+which of course if I compile it now and run the code gives me 20 here at the very bottom.

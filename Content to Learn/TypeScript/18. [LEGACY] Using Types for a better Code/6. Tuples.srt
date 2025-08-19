@@ -1,0 +1,159 @@
+1
+
+00:00:01,740  -->  00:00:07,660
+Staying in your world of arrays, we get a new type with TypeScript which isn't available in Javascript,
+
+2
+
+00:00:07,770  -->  00:00:09,390
+tuples. Now
+
+3
+
+00:00:09,390  -->  00:00:17,000
+tuples are really just arrays with mixed types and a limited number of items.
+
+4
+
+00:00:17,040  -->  00:00:19,470
+So let's say I want to store my address and
+
+5
+
+00:00:19,500  -->  00:00:25,630
+no, this is not my actual address and I would have this format, Superstreet.
+
+6
+
+00:00:25,950  -->  00:00:28,570
+and then the house number, 99.
+
+7
+
+00:00:28,650  -->  00:00:31,500
+That's just a normal array with a string and a number,
+
+8
+
+00:00:31,500  -->  00:00:32,480
+nothing wrong with that,
+
+9
+
+00:00:32,480  -->  00:00:35,130
+we could compile this, no error.
+
+10
+
+00:00:35,160  -->  00:00:40,020
+Now if I'm sure that this array will always have this format, two items,
+
+11
+
+00:00:40,020  -->  00:00:41,340
+first item is a string,
+
+12
+
+00:00:41,340  -->  00:00:43,360
+second item is a number,
+
+13
+
+00:00:43,380  -->  00:00:50,040
+then I could be explicit about this because right now, it's just assumed to be this type, an array
+
+14
+
+00:00:50,040  -->  00:00:52,350
+of any item or any type.
+
+15
+
+00:00:52,500  -->  00:00:59,910
+So I could assign this to be a tuple by adding a colon and then square brackets and here, string and
+
+16
+
+00:00:59,910  -->  00:01:00,540
+number
+
+17
+
+00:01:00,540  -->  00:01:02,540
+in this case, so two items,
+
+18
+
+00:01:02,550  -->  00:01:03,740
+first one is a string,
+
+19
+
+00:01:03,750  -->  00:01:06,010
+second one is a number,
+
+20
+
+00:01:06,040  -->  00:01:12,910
+this is how I set up my tuple. And if I now were to reverse the order here, have the first item be a number
+
+21
+
+00:01:12,910  -->  00:01:14,760
+and the second one be a string,
+
+22
+
+00:01:15,040  -->  00:01:22,600
+well if I try to compile this, I now get an error because the order is important, a tuple really has
+
+23
+
+00:01:22,600  -->  00:01:23,270
+to be that
+
+24
+
+00:01:23,290  -->  00:01:24,930
+format, two items,
+
+25
+
+00:01:24,940  -->  00:01:28,440
+first one being a string, second one being a number,
+
+26
+
+00:01:28,450  -->  00:01:32,990
+all other combinations or values like this one here are not valid.
+
+27
+
+00:01:33,280  -->  00:01:40,360
+So I have to revert this back to 99 at the second position to be able to compile this without any
+
+28
+
+00:01:40,360  -->  00:01:41,500
+issues again.
+
+29
+
+00:01:41,500  -->  00:01:42,730
+Now you see it works
+
+30
+
+00:01:42,730  -->  00:01:50,220
+and this is how you can tuples if you've got some data object or some array which has one single way
+
+31
+
+00:01:50,230  -->  00:01:55,270
+it may look like, if you get an array which has a fixed value format,
+
+32
+
+00:01:55,300  -->  00:01:56,140
+to put it like that.
