@@ -1,0 +1,49 @@
+1
+
+00:00:01,670  -->  00:00:08,030
+So we had a look at some of the most important ES6 changes or syntax changes and how we may use them
+
+2
+
+00:00:08,030  -->  00:00:15,200
+with TypeScript. That already allows you to write much better code and much leaner code and use many
+
+3
+
+00:00:15,200  -->  00:00:17,050
+of the cool new features.
+
+4
+
+00:00:17,060  -->  00:00:22,590
+Now as I mentioned in the intro video, this is no ES6 course, TypeScript supports more features
+
+5
+
+00:00:22,630  -->  00:00:25,950
+ES6 offers than the ones you saw in this module.
+
+6
+
+00:00:26,000  -->  00:00:31,940
+Basically, you should reach out to a dedicated ES6 course to learn more about that and then have a
+
+7
+
+00:00:31,940  -->  00:00:37,760
+look at this compatibility chart to see if the feature you want to use is supported by TypeScript, in
+
+8
+
+00:00:37,760  -->  00:00:40,700
+which case you're good to go.
+
+9
+
+00:00:40,700  -->  00:00:43,470
+Now with that, definitely have a look to
+
+10
+
+00:00:43,640  -->  00:00:49,780
+dedicated ES6 resources to unleash the full power of TypeScript combined with ES6.

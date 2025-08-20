@@ -1,0 +1,59 @@
+1
+
+00:00:01,890  -->  00:00:04,010
+Now there are a couple of other additions
+
+2
+
+00:00:04,020  -->  00:00:12,200
+ES6 offers you and TypeScript covers too, for example symbols, iterators or generators
+
+3
+
+00:00:12,510  -->  00:00:20,880
+and I deliberately cut them out here because these are more advanced concepts and they have nothing
+
+4
+
+00:00:20,880  -->  00:00:22,210
+to do with TypeScript,
+
+5
+
+00:00:22,240  -->  00:00:25,840
+they're ES6 features supported by TypeScript
+
+6
+
+00:00:26,040  -->  00:00:32,580
+but again, this is no ES6 course, it's about learning TypeScript and I showed all these features because
+
+7
+
+00:00:32,640  -->  00:00:40,110
+these things here are things you'll probably often use in your TypeScript programs and therefore, it's key
+
+8
+
+00:00:40,110  -->  00:00:43,230
+to understand how they work and that they exist.
+
+9
+
+00:00:43,620  -->  00:00:49,910
+Now symbols, iterators and generators are probably something you don't need to use every day
+
+10
+
+00:00:50,010  -->  00:00:57,120
+and therefore, I think the best solution here is if you will learn about them in dedicated ES6 resources
+
+11
+
+00:00:57,480  -->  00:01:04,140
+and then you can remember this section here and know that you can use them in the exact
+
+12
+
+00:01:04,140  -->  00:01:07,180
+same way in a TypeScript program.

@@ -1,0 +1,187 @@
+1
+00:00:02,320 --> 00:00:09,010
+I want to start with one of the most important changes probably, definitely some syntax you will use
+
+2
+00:00:09,010 --> 00:00:14,020
+all the time in TypeScript and which is introduced with ES6,
+
+3
+00:00:14,110 --> 00:00:19,930
+it's let and const, so these two new ways to create
+
+4
+00:00:19,930 --> 00:00:27,810
+variables or constants. You already know that you can create a variable with var keywords, so like
+
+5
+00:00:27,830 --> 00:00:33,740
+var variable could be well anything, like test for example
+
+6
+00:00:33,910 --> 00:00:39,340
+and that would work but with ES6 we also got the let keyword to create a variable.
+
+7
+00:00:39,340 --> 00:00:46,560
+Now you might wonder what the difference is and the difference is the scope of the variable, the let keyword
+
+8
+00:00:46,660 --> 00:00:48,470
+creates a block scope variable,
+
+9
+00:00:48,490 --> 00:00:52,630
+which means it's contained in the block in which you define this variable
+
+10
+00:00:52,660 --> 00:00:59,620
+and I'll give you an example for this in a second. The var keyword creates a global scoped variable which
+
+11
+00:00:59,620 --> 00:01:04,850
+then sits on the global scope and doesn't have a block scope, again
+
+12
+00:01:04,870 --> 00:01:09,800
+you'll get an example for this block scope thing in just a second.
+
+13
+00:01:09,880 --> 00:01:12,220
+So from now on
+
+14
+00:01:12,250 --> 00:01:17,710
+or as you already saw in the first module with TypeScript, you're going to create your variables
+
+15
+00:01:17,710 --> 00:01:24,070
+with the let keyword which is the preferred way and better than the var keyword since it only has advantages
+
+16
+00:01:24,100 --> 00:01:26,080
+and no disadvantages.
+
+17
+00:01:26,140 --> 00:01:33,260
+So this is used as a normal variable and you saw all of that, I can console log this and I will run 
+
+18
+00:01:33,280 --> 00:01:42,610
+tsc -w to go into watch mode and then we see tests here in the console, so that prints out as
+
+19
+00:01:42,610 --> 00:01:44,350
+expected.
+
+20
+00:01:44,350 --> 00:01:53,980
+Of course I can then go ahead and reassign this to another value and log this, again to the console, like this
+
+21
+00:01:54,220 --> 00:02:00,820
+and if I save this, we now see test and then another value here and that of course is possible because
+
+22
+00:02:00,970 --> 00:02:02,380
+let creates a variable.
+
+23
+00:02:02,380 --> 00:02:05,620
+The only difference is the scope where this variable sits on
+
+24
+00:02:05,770 --> 00:02:09,980
+but it is a variable, in the end therefore, you can of course change the value
+
+25
+00:02:10,180 --> 00:02:16,270
+but you have to keep in mind that the type of course has to be equal the type this variable had before
+
+26
+00:02:16,390 --> 00:02:18,870
+as it automatically inferred the type here
+
+27
+00:02:19,000 --> 00:02:26,050
+upon declaration. That of course is true generally for values in TypeScript.
+
+28
+00:02:26,050 --> 00:02:30,970
+You can't change the types, you declare the types at the beginning,
+
+29
+00:02:30,970 --> 00:02:32,380
+that is what TypeScript is about,
+
+30
+00:02:32,380 --> 00:02:34,640
+you saw that in the first module.
+
+31
+00:02:34,690 --> 00:02:36,500
+So that's the let keyword,
+
+32
+00:02:36,520 --> 00:02:38,530
+we also have the const keyword
+
+33
+00:02:38,540 --> 00:02:40,440
+to create a constant.
+
+34
+00:02:40,540 --> 00:02:47,830
+For example we might have the maximum levels we have in let's say a game and this could be 100.
+
+35
+00:02:47,860 --> 00:02:59,110
+Now of course, I can print this to the console like so and we see 100 here but if I go back here and then
+
+36
+00:02:59,200 --> 00:03:08,260
+I try to change max levels to let's say 99, I already get an IDE error and if I save this, let's see
+
+37
+00:03:08,260 --> 00:03:11,780
+what happens in the TypeScript console here.
+
+38
+00:03:12,080 --> 00:03:17,460
+You see we got an error here too, left hand side of assignment expression cannot be a constant
+
+39
+00:03:17,530 --> 00:03:22,710
+and the reason for this error is that we're trying to reassign a constant which doesn't work, a constant
+
+40
+00:03:22,720 --> 00:03:27,200
+like name implies has a constant value, we can't change this.
+
+41
+00:03:27,400 --> 00:03:34,280
+So that's a definitely important addition which allows us to create immutable data structures or data
+
+42
+00:03:34,660 --> 00:03:40,950
+variables in the end and they're not the variables after that of course, they're constants. When
+
+43
+00:03:40,950 --> 00:03:43,090
+would you use the const keyword?
+
+44
+00:03:43,270 --> 00:03:49,300
+Well it's a good practice to use it whenever you know that a value is not going to change because then
+
+45
+00:03:49,300 --> 00:03:55,570
+you make this clear in your code and you also get compilation support and you get warnings or errors
+
+46
+00:03:55,870 --> 00:04:01,170
+if you do indeed try to change it even though you did not want to do so.
+
+47
+00:04:01,550 --> 00:04:07,690
+So I'm commenting this out because this as you saw won't work

@@ -1,0 +1,131 @@
+1
+00:00:01,780 --> 00:00:09,420
+Now destructuring is not only available for arrays. I could also have an object let's say, userData
+
+2
+00:00:09,430 --> 00:00:17,850
+like this and my userData should have let's say a username which might be Max and should then also
+
+3
+00:00:17,850 --> 00:00:20,930
+have an age, 27.
+
+4
+00:00:20,970 --> 00:00:29,460
+Now again, I could fetch these values, userName like this, userData, userName and then I could also fetch
+
+5
+00:00:29,460 --> 00:00:33,010
+the age which would be userData and then age
+
+6
+00:00:33,300 --> 00:00:38,550
+and then of course I can print userName and age, something like that,
+
+7
+00:00:38,570 --> 00:00:46,470
+save this, if we go to the console, we see Max and 27 which of course matches the values I have
+
+8
+00:00:46,470 --> 00:00:50,070
+here in my object. So far, so traditional,
+
+9
+00:00:50,100 --> 00:00:53,190
+that is how you know how to access the values.
+
+10
+00:00:53,580 --> 00:01:00,990
+Now if the goal is to simply extract the values of my object and assign them to new variables or constants
+
+11
+00:01:01,110 --> 00:01:04,790
+and of course destructuring does work with the let keyword too,
+
+12
+00:01:05,190 --> 00:01:12,840
+well then I have a shorter syntax here available too. Since I'm using an object, I'm not using
+
+13
+00:01:12,840 --> 00:01:14,330
+square brackets here,
+
+14
+00:01:14,430 --> 00:01:20,460
+that is the syntax for destructuring an array. For destructuring an object, I'm using,
+
+15
+00:01:20,490 --> 00:01:23,940
+well you guessed it, curly braces.
+
+16
+00:01:23,940 --> 00:01:30,890
+Then I assign the values I want to extract, userName and age
+
+17
+00:01:31,110 --> 00:01:39,000
+and it's important that the name here matches the key name in the object, otherwise TypeScript and the
+
+18
+00:01:39,000 --> 00:01:46,400
+same is true for ES6 has no chance of knowing which key you want to assign to which variable or
+
+19
+00:01:46,410 --> 00:01:50,210
+constant here because the order doesn't really matter here
+
+20
+00:01:50,310 --> 00:01:56,310
+and the order is something you can't rely on, just because you wrote it in this order doesn't mean that
+
+21
+00:01:56,310 --> 00:02:00,600
+this will be the order the object has internally once your code runs.
+
+22
+00:02:00,840 --> 00:02:03,120
+So the naming here is important
+
+23
+00:02:03,480 --> 00:02:06,150
+and then of course I set this equal to userData.
+
+24
+00:02:06,150 --> 00:02:09,330
+So now it works really similar to the array
+
+25
+00:02:09,450 --> 00:02:19,050
+and I can save this and see that I'm still extracting Max and 27 through object destructuring. As a side note,
+
+26
+00:02:19,350 --> 00:02:23,090
+if you want to use different names for your constants,
+
+27
+00:02:23,190 --> 00:02:32,580
+you can assign them with a colon, like myName and then myAge and then you can use
+
+28
+00:02:38,350 --> 00:02:48,680
+myName and myAge here and that will again work and print Max and 27 here because I'm using these aliases here.
+
+29
+00:02:48,770 --> 00:02:53,990
+Notice that I no longer can access userName and age though because the variables or the constants
+
+30
+00:02:53,990 --> 00:02:58,160
+created are named myName and myAge, not userName or age.
+
+31
+00:02:58,430 --> 00:03:01,160
+So that is the alternative syntax you have available
+
+32
+00:03:01,250 --> 00:03:03,570
+but this is purely optional as you saw before,
+
+33
+00:03:03,600 --> 00:03:07,430
+you don't have to assign aliases or different names.

@@ -1,0 +1,179 @@
+1
+00:00:01,880 --> 00:00:09,530
+With that, we had an extensive look at functions and this was important because these arrow functions
+
+2
+00:00:09,560 --> 00:00:13,150
+as well as default parameters are some huge additions
+
+3
+00:00:13,160 --> 00:00:18,710
+ES6 brought to Javascript and it's great that we can use them in TypeScript too.
+
+4
+00:00:18,790 --> 00:00:21,800
+Another big addition which is very useful
+
+5
+00:00:21,950 --> 00:00:30,170
+are some new operators, specifically the rest and spread operators. In this video and the next videos,
+
+6
+00:00:30,170 --> 00:00:37,490
+I want to show how they work and what they offer us, so rest and spread is the topic we're going to talk
+
+7
+00:00:37,490 --> 00:00:38,330
+about now.
+
+8
+00:00:38,600 --> 00:00:45,820
+Basically the rest and spread parameters do kind of similar things or they are closely related,
+
+9
+00:00:46,130 --> 00:00:50,750
+they allow you to work with arrays and lists of data
+
+10
+00:00:51,020 --> 00:00:56,310
+and the difference of course is an array is kind of an object where you store multiple values whereas
+
+11
+00:00:56,330 --> 00:01:01,000
+a list of values is just well, a list of values, that's all.
+
+12
+00:01:01,010 --> 00:01:08,150
+So to be more precise, we could have an array, numbers for example where you have 1, 10, 99 and
+
+13
+00:01:08,150 --> 00:01:15,860
+let's say -5 and a list of numbers would just be 3, 2, 1 and that of course doesn't work like
+
+14
+00:01:15,860 --> 00:01:16,580
+this
+
+15
+00:01:16,580 --> 00:01:21,500
+but you pass a list of numbers to functions like the math.max function.
+
+16
+00:01:21,710 --> 00:01:29,190
+So if you have something like this, math.max to get the maximum number, then you don't pass
+
+17
+00:01:29,190 --> 00:01:31,650
+an array as the argument, that won't work,
+
+18
+00:01:31,690 --> 00:01:34,180
+you pass a list of numbers you want to check,
+
+19
+00:01:34,330 --> 00:01:39,460
+so like 33, 99, 10 or/and -3,
+
+20
+00:01:39,640 --> 00:01:43,590
+so that is how you would use the max function on the math object here.
+
+21
+00:01:43,630 --> 00:01:44,880
+Now again, this is no array,
+
+22
+00:01:44,890 --> 00:01:47,140
+this is just a list of numbers.
+
+23
+00:01:47,200 --> 00:01:54,550
+So if I save this and go back to the console, we see 99 here because 99 clearly is the biggest number
+
+24
+00:01:54,550 --> 00:01:56,130
+in this list of numbers
+
+25
+00:01:56,440 --> 00:02:04,880
+but what if we wanted to check these numbers array? As I just showed, passing numbers won't work
+
+26
+00:02:04,930 --> 00:02:11,090
+and we do get a compilation error here because we can't assign a number array to
+
+27
+00:02:11,240 --> 00:02:16,640
+this function which just expects numbers, a list of numbers.
+
+28
+00:02:16,650 --> 00:02:18,030
+The solution is the
+
+29
+00:02:18,090 --> 00:02:21,400
+spread operator which looks like this,
+
+30
+00:02:21,620 --> 00:02:24,770
+three dots. Now that might look strange
+
+31
+00:02:24,790 --> 00:02:33,220
+but basically what this does and the name spread implies it, it spreads out this array into single values.
+
+32
+00:02:33,340 --> 00:02:38,960
+So it turns this array into a list of values, kind of like removing the square brackets,
+
+33
+00:02:39,070 --> 00:02:40,370
+of course that won't work,
+
+34
+00:02:40,390 --> 00:02:45,730
+I can't assign such a list to a variable but this is what the rest parameter or the rest operator, excuse
+
+35
+00:02:45,730 --> 00:02:47,980
+me, does behind the scenes.
+
+36
+00:02:47,980 --> 00:02:56,440
+So it passes this max function here, a list of numbers based on this array of numbers where it basically
+
+37
+00:02:56,440 --> 00:03:01,900
+just fetches all the list items or all the array items here.
+
+38
+00:03:01,900 --> 00:03:10,090
+With that if I save this, we see 99 twice and the first 99 of course stems from this console log
+
+39
+00:03:10,090 --> 00:03:12,160
+which I wrote a few seconds ago
+
+40
+00:03:12,400 --> 00:03:19,960
+but the second 99 here of course is the 99 in my array here, which I'll spread out with the spread operator
+
+41
+00:03:19,960 --> 00:03:20,980
+here.
+
+42
+00:03:20,980 --> 00:03:23,360
+So that is what is the spread operator does
+
+43
+00:03:23,380 --> 00:03:30,050
+and the spread operator is really useful therefore because it allows you to flexibly transform your
+
+44
+00:03:30,050 --> 00:03:34,780
+arrays without having to write any complicated loops or something like that,
+
+45
+00:03:34,780 --> 00:03:38,410
+instead you just add three dots and you're good to go.

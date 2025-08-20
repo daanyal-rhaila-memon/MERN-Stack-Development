@@ -1,0 +1,169 @@
+1
+
+00:00:01,720  -->  00:00:04,120
+Now what's this block scope thing?
+
+2
+
+00:00:04,120  -->  00:00:07,700
+We saw let and const but what is this block scope
+
+3
+
+00:00:07,960  -->  00:00:12,030
+thing I was talking about? Well let's have a look at it.
+
+4
+
+00:00:12,100  -->  00:00:20,560
+I will create a new function here and I will name it reset and this function should basically then also
+
+5
+
+00:00:20,560  -->  00:00:25,950
+create a variable with the let keyword and now this sets it the same name as this variable
+
+6
+
+00:00:25,940  -->  00:00:27,050
+up here has.
+
+7
+
+00:00:27,310  -->  00:00:33,800
+So that variable should be null and then I try to log variable here
+
+8
+
+00:00:36,340  -->  00:00:40,350
+and I will log variable after calling this function.
+
+9
+
+00:00:40,350  -->  00:00:41,520
+I'm not calling it yet,
+
+10
+
+00:00:41,530  -->  00:00:45,070
+I'll implement the call here, like this.
+
+11
+
+00:00:45,190  -->  00:00:46,690
+So saving this,
+
+12
+
+00:00:46,780  -->  00:00:51,180
+let's have a look at the console, I'm going to reload this so that we can see all the values.
+
+13
+
+00:00:51,400  -->  00:01:00,520
+Well these three values are from up here but then, we got console log variable here in the reset function
+
+14
+
+00:01:00,610  -->  00:01:03,630
+which gives me null since I set it equal to null
+
+15
+
+00:01:03,940  -->  00:01:09,940
+but after calling this function, I log variable again and I get another value again and that is
+
+16
+
+00:01:09,940  -->  00:01:16,810
+what block scoping is. This let variable here is contained in this function context here, which means
+
+17
+
+00:01:16,810  -->  00:01:22,440
+the fact that I set this variable to null doesn't overwrite the variable outside of this function.
+
+18
+
+00:01:22,450  -->  00:01:26,790
+They have the same name but technically, there are two different variables
+
+19
+
+00:01:26,890  -->  00:01:30,460
+and therefore I can't set their values independently.
+
+20
+
+00:01:30,580  -->  00:01:35,770
+I can even try to log variable here in the function before declaring it,
+
+21
+
+00:01:35,770  -->  00:01:40,610
+my IDE is already complaining and if I do this, you see I get undefined here.
+
+22
+
+00:01:40,720  -->  00:01:48,210
+The reason for that of course is that again, the variable I try to access here is defined outside of
+
+23
+
+00:01:48,210  -->  00:01:49,420
+this function,
+
+24
+
+00:01:49,420  -->  00:01:52,110
+therefore I don't have access to it inside of my function,
+
+25
+
+00:01:52,120  -->  00:01:55,300
+I would have to pass it as a parameter to the function.
+
+26
+
+00:01:55,300  -->  00:01:59,460
+That's the behavior you probably know from a lot of different or other languages
+
+27
+
+00:01:59,530  -->  00:02:05,880
+and now we finally have this with Javascript or TypeScript here as well
+
+28
+
+00:02:06,310  -->  00:02:12,670
+and this is just ES6 syntax of course but it is available on TypeScript too and therefore using let and
+
+29
+
+00:02:12,670  -->  00:02:14,880
+const definitely is the way to go.
+
+30
+
+00:02:14,920  -->  00:02:19,270
+Going to comment this out here even though it wouldn't give me an error or way to work
+
+31
+
+00:02:19,280  -->  00:02:27,590
+but yes, now I just have clean code here again which gives me these values.
+
+32
+
+00:02:27,820  -->  00:02:37,880
+So that has been let and const, now that I have this, I'll just add a message here that we can always see
+
+33
+
+00:02:37,880  -->  00:02:38,980
+where we were at.
+
+34
+
+00:02:39,200  -->  00:02:41,480
+Let's go on to the next topic.

@@ -1,0 +1,91 @@
+1
+00:00:02,020 --> 00:00:06,400
+Of course you could also have arrow functions which don't need arguments,
+
+2
+00:00:06,400 --> 00:00:11,260
+for example you could have the greet function which would look like this.
+
+3
+00:00:11,290 --> 00:00:13,590
+You need to pass an empty pair of parentheses,
+
+4
+00:00:13,610 --> 00:00:16,060
+that is required if you have no argument,
+
+5
+00:00:16,090 --> 00:00:21,140
+again the only exception would be if you only have one argument, then you could leave out the parentheses
+
+6
+00:00:21,250 --> 00:00:26,860
+but for zero arguments or more than one, you need parentheses and if you have no argument, well then
+
+7
+00:00:26,860 --> 00:00:30,700
+you just call your function body like that for example
+
+8
+00:00:30,700 --> 00:00:34,960
+and then I could just log hello to the console
+
+9
+00:00:35,080 --> 00:00:43,300
+and again if I call the greet function thereafter and have a look at the console and I will reload my
+
+10
+00:00:43,300 --> 00:00:46,980
+page so that you can clearly see this, we see Hello here.
+
+11
+00:00:47,230 --> 00:00:52,810
+So as you see, this works fine too and you don't have to pass arguments to arrow functions to have them
+
+12
+00:00:52,810 --> 00:00:56,940
+work correctly. To also give an example for this one parameter case
+
+13
+00:00:56,950 --> 00:01:04,510
+I was talking about, if you have greetFriend here and you want to greet a friend, then you could
+
+14
+00:01:04,510 --> 00:01:08,180
+have the friend name and now notice,
+
+15
+00:01:08,200 --> 00:01:11,680
+I'm not assigning the type of friend here which I should do
+
+16
+00:01:11,830 --> 00:01:15,000
+but this syntax here would give me errors.
+
+17
+00:01:15,040 --> 00:01:21,480
+So I have to leave away the type declaration if I want to use this no parentheses syntax
+
+18
+00:01:21,550 --> 00:01:27,840
+but keep in mind, declaring the type or explicitly stating which type this is is always better.
+
+19
+00:01:28,390 --> 00:01:33,910
+But this would be kind of the shortest way I could write this console log friend and then I could call
+
+20
+00:01:33,910 --> 00:01:38,200
+greetFriend and could call Manu or greet
+
+21
+00:01:38,230 --> 00:01:39,330
+Manu here.
+
+22
+00:01:39,370 --> 00:01:46,300
+So if I save this and go back to the application, you see that I greeted Manu here at the very bottom
+
+23
+00:01:46,300 --> 00:01:46,960
+of the page.

@@ -1,0 +1,155 @@
+1
+00:00:02,140 --> 00:00:11,980
+The final important or bigger change to the syntax I want to talk about is about template literals. Now
+
+2
+00:00:11,980 --> 00:00:22,420
+what are template literals? Template literals are kind of extended strings or strings with more features.
+
+3
+00:00:22,420 --> 00:00:31,270
+Consider this, I have a normal string, myName which is Max and I already use myName in the destructuring
+
+4
+00:00:31,270 --> 00:00:32,390
+as I just saw,
+
+5
+00:00:32,530 --> 00:00:36,000
+so I'm naming this userName now
+
+6
+00:00:37,860 --> 00:00:45,120
+and then I want to have a more complex string, like in the template of let's say a server-side rendered
+
+7
+00:00:45,120 --> 00:00:47,460
+language or something like that.
+
+8
+00:00:47,490 --> 00:00:51,970
+Now in a normal string, I could print my name like this,
+
+9
+00:00:52,170 --> 00:01:01,840
+Hello I'm and then simply concatenate userName with the plus operator here and then I can print the
+
+10
+00:01:02,650 --> 00:01:05,350
+greeting here to the console of course
+
+11
+00:01:05,590 --> 00:01:12,000
+and if I save this and go back to the console, we see that I print Hello, I'm Max.
+
+12
+00:01:12,190 --> 00:01:19,390
+So this works but it really gets troublesome if I want to use it in this username in multiple places
+
+13
+00:01:19,390 --> 00:01:24,820
+in the string because each time I have to skip out of the string with a plus and then thereafter, I have
+
+14
+00:01:24,820 --> 00:01:31,020
+to re-enter and type whatever I wanted to type
+
+15
+00:01:31,420 --> 00:01:37,810
+and I also can't write multi-line strings, so that really is kind of cumbersome and not always the best
+
+16
+00:01:37,810 --> 00:01:44,110
+choice. If I want to store a more complex text in my greeting constant here,
+
+17
+00:01:44,380 --> 00:01:51,250
+I could use a template literal instead and I create one with the back ticks. Back ticks,
+
+18
+00:01:51,250 --> 00:01:57,640
+these are the signs or characters you probably never use before, you can find them on your keyboard
+
+19
+00:01:57,700 --> 00:01:58,370
+though
+
+20
+00:01:58,810 --> 00:02:04,770
+and back ticks allow you to create more complex strings, including multi-line strings,
+
+21
+00:02:04,870 --> 00:02:08,000
+so I can simply write over multiple lines here.
+
+22
+00:02:08,170 --> 00:02:15,300
+I could then write this is a heading, skip into a new line and write
+
+23
+00:02:15,340 --> 00:02:17,170
+I'm Max.
+
+24
+00:02:17,270 --> 00:02:26,360
+Now I don't have to skip out of the template literal here with this plus this, even though I could, the
+
+25
+00:02:26,360 --> 00:02:28,900
+shorter way is to write dollar sign and
+
+26
+00:02:29,730 --> 00:02:39,810
+then curly braces to output a variable inside this template literal here.
+
+27
+00:02:39,950 --> 00:02:43,270
+So I'm Max, this is cool, like so.
+
+28
+00:02:45,800 --> 00:02:53,340
+If I save this and print this result, you see we get a multi-line string here with my heading, then I'm
+
+29
+00:02:53,350 --> 00:03:00,980
+Max, so Max is entered dynamically and is entered correctly and then we get a new line again.
+
+30
+00:03:01,430 --> 00:03:08,840
+So template literals allow you to write more complex strings and they allow you to easily output variables
+
+31
+00:03:08,900 --> 00:03:14,390
+in your string with that dollar sign curly brace syntax here.
+
+32
+00:03:14,390 --> 00:03:20,750
+Now as always, if you want to learn more about template literals and so on, definitely have a look at
+
+33
+00:03:20,750 --> 00:03:23,550
+some dedicated ES6 resources,
+
+34
+00:03:23,630 --> 00:03:29,380
+that is the quick overview over this feature and how to use it in TypeScript,
+
+35
+00:03:29,480 --> 00:03:36,530
+the usage is the same as you would use it with any other ES6 compiler or transpiler. If you do
+
+36
+00:03:36,530 --> 00:03:44,480
+have say an Angular 2 background and you took some Angular 2 courses, this back tick notation is probably
+
+37
+00:03:44,480 --> 00:03:51,580
+something you're familiar with from the Angular 2 inline templates, so templates you write in a file
+
+38
+00:03:52,010 --> 00:03:59,790
+and indeed, that or these templates use exactly this notation and this notation is nothing too specific,
+
+39
+00:03:59,870 --> 00:04:04,820
+it's something TypeScript offers you as ES6 will offer it to you.

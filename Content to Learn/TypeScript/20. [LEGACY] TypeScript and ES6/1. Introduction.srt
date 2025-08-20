@@ -1,0 +1,87 @@
+1
+00:00:02,110 --> 00:00:08,290
+Welcome to the next module in this course. Now that we know what types are and how we can use them,
+
+2
+00:00:08,560 --> 00:00:11,650
+let's have a look at another cool feature or
+
+3
+00:00:11,710 --> 00:00:19,540
+key advantage TypeScript offers you. TypeScript gives you access to a lot of the ES6 features, so of next
+
+4
+00:00:19,540 --> 00:00:23,580
+generation Javascript and that it does today.
+
+5
+00:00:23,770 --> 00:00:30,700
+So your code, since it will compile to ES5 will run in all browsers, even though you're using
+
+6
+00:00:30,700 --> 00:00:31,710
+ES6 features,
+
+7
+00:00:31,720 --> 00:00:33,580
+how cool is that?
+
+8
+00:00:33,590 --> 00:00:37,920
+Advantages TypeScript offers plus ES6 equals awesome.
+
+9
+00:00:38,230 --> 00:00:40,090
+Well, there's one thing to keep in mind,
+
+10
+00:00:40,210 --> 00:00:44,790
+Typescript doesn't support all features of ES6 yet
+
+11
+00:00:45,040 --> 00:00:47,930
+and to find out which features are supported,
+
+12
+00:00:48,040 --> 00:00:53,020
+have a look at this compatibility chart to which you'll find a link in the next lecture.
+
+13
+00:00:53,020 --> 00:01:00,760
+Here, you get this TypeScript row and you can learn which features of ES6 you may safely use with TypeScript.
+
+14
+00:01:01,340 --> 00:01:06,880
+Now as you see, that basically are a lot but there are also some features which are not supported, which may
+
+15
+00:01:06,880 --> 00:01:11,800
+not be important to you but it's important to know what you may use and what you may not use.
+
+16
+00:01:12,520 --> 00:01:14,140
+Throughout this module,
+
+17
+00:01:14,140 --> 00:01:19,240
+I'll give you a brief introduction to some of the core features of ES6.
+
+18
+00:01:19,270 --> 00:01:26,650
+This is no ES6 course though, so don't expect to get a full ES6 introduction here, again just to some of
+
+19
+00:01:26,650 --> 00:01:32,890
+the core new additions or syntax changes like arrow functions or the let and const keywords.
+
+20
+00:01:32,890 --> 00:01:39,980
+If you want to learn more about ES6, have a look at a dedicated ES6 course. As it turns out, I also do
+
+21
+00:01:40,000 --> 00:01:42,890
+have such a course, might be interesting to you.
+
+22
+00:01:43,090 --> 00:01:46,420
+Well enough of the advertising, let's dive into this module.

@@ -1,0 +1,619 @@
+1
+00:00:01,720 --> 00:00:07,930
+I hope you had fun with the exercises. In case you didn't do them, definitely consider solving them
+
+2
+00:00:07,990 --> 00:00:11,420
+on your own, you'll learn a lot whilst doing so
+
+3
+00:00:11,620 --> 00:00:17,130
+but nonetheless, here are some possible solutions for these exercises.
+
+4
+00:00:17,130 --> 00:00:21,420
+Now these are just the exercises again in one single Javascript file
+
+5
+00:00:21,730 --> 00:00:28,390
+and now I'm going to create a new file which I'll name solutions.ts which will contain all the
+
+6
+00:00:28,390 --> 00:00:29,070
+solutions
+
+7
+00:00:29,140 --> 00:00:33,070
+and of course you find this file attached to this lecture.
+
+8
+00:00:33,130 --> 00:00:43,810
+So here, I will skip out of my compiler for now and I will go to my index.html page and simply
+
+9
+00:00:43,810 --> 00:00:44,600
+replace
+
+10
+00:00:44,600 --> 00:00:55,790
+app.js here with solutions.js which will be created for me by the compiler and this will allow
+
+11
+00:00:55,790 --> 00:00:58,790
+me to then show you the solutions.
+
+12
+00:00:59,060 --> 00:01:07,170
+I will therefore compile the solutions files standalone and manually by typing tsc solutions.ts,
+
+13
+00:01:07,180 --> 00:01:13,940
+like this and then I can navigate into the browser, reload and currently we don't see anything but
+
+14
+00:01:13,940 --> 00:01:15,990
+here we will then see the solutions.
+
+15
+00:01:16,250 --> 00:01:23,180
+If you download the source code attached to this module, make sure that you have app.js here to
+
+16
+00:01:23,180 --> 00:01:26,300
+see the real app and not just the solutions.
+
+17
+00:01:26,360 --> 00:01:30,860
+So with that out of the way, let's have a look at the first exercise.
+
+18
+00:01:30,860 --> 00:01:37,740
+The goal here is to rewrite this part here with TypeScript,
+
+19
+00:01:37,790 --> 00:01:39,320
+so what are we doing here?
+
+20
+00:01:39,590 --> 00:01:48,890
+Well, we have a function where we basically double a value and the goal was to rewrite this as an arrow
+
+21
+00:01:48,890 --> 00:01:50,060
+function.
+
+22
+00:01:50,450 --> 00:01:52,800
+Well that shouldn't be too hard,
+
+23
+00:01:53,210 --> 00:01:54,920
+I will do it here,
+
+24
+00:01:54,920 --> 00:01:56,750
+Exercise 1 -
+
+25
+00:01:57,110 --> 00:01:59,330
+As Arrow Function.
+
+26
+00:01:59,690 --> 00:02:01,550
+So I will create this function here,
+
+27
+00:02:01,550 --> 00:02:10,310
+double, it will get the value which is of type number and it will return me value times two,
+
+28
+00:02:10,490 --> 00:02:19,650
+just like that and then I can simply call double 10.
+
+29
+00:02:20,020 --> 00:02:27,570
+With that, I can run the compiler on my solutions file and if I go back to the browser, we see 20 here,
+
+30
+00:02:27,660 --> 00:02:35,240
+which of course is the right result because we pass 10 as a parameter and we double it with our function.
+
+31
+00:02:35,370 --> 00:02:36,620
+So that's really all, that's
+
+32
+00:02:36,630 --> 00:02:38,940
+the solution to the first exercise,
+
+33
+00:02:38,940 --> 00:02:41,250
+rewriting it as an arrow function.
+
+34
+00:02:41,250 --> 00:02:44,360
+Now you might say that was very simple and yes it was
+
+35
+00:02:44,490 --> 00:02:50,580
+but it's important to understand this arrow function syntax and especially that we don't need a return
+
+36
+00:02:50,580 --> 00:02:57,390
+keyword here, that we don't need curly braces if we only have one line here and that it's important
+
+37
+00:02:57,390 --> 00:03:00,360
+or advisable to define the type here.
+
+38
+00:03:00,690 --> 00:03:09,000
+With that, let's go onto the next exercise, Exercise 2. Here the goal was to create a function which
+
+39
+00:03:09,000 --> 00:03:16,290
+has a default parameter, with vanilla Javascript you see that this is rather difficult or complicated
+
+40
+00:03:16,680 --> 00:03:24,630
+because default Javascript, ES5 Javascript doesn't have default parameters, so it always expects to
+
+41
+00:03:24,630 --> 00:03:25,550
+get a name
+
+42
+00:03:25,740 --> 00:03:31,050
+and if we call the function without a name, well we have to handle this case where I check if name is
+
+43
+00:03:31,050 --> 00:03:34,900
+undefined and where I then set name to some default value.
+
+44
+00:03:35,160 --> 00:03:40,520
+Yes, this is possible but it would be nice if we could leave out this line with default parameters.
+
+45
+00:03:40,710 --> 00:03:45,810
+So back in the solutions file, let's write the solution for this case here,
+
+46
+00:03:46,080 --> 00:03:50,280
+so Exercise 2 - Default Params.
+
+47
+00:03:50,460 --> 00:04:00,600
+I will create my greet function here and this expects to get a name and I'll set this name to the default of Max,
+
+48
+00:04:00,600 --> 00:04:03,350
+that is how I use default parameters after all
+
+49
+00:04:03,900 --> 00:04:07,630
+and then I will, in this case here, use curly braces,
+
+50
+00:04:07,830 --> 00:04:10,050
+I will simply log
+
+51
+00:04:12,460 --> 00:04:17,480
+hello and then name to the console, like this.
+
+52
+00:04:19,070 --> 00:04:22,120
+With that, I can then call greet without any arguments,
+
+53
+00:04:22,130 --> 00:04:24,630
+I should see Hello Max in this case
+
+54
+00:04:24,950 --> 00:04:28,500
+or I could call it with Anna being passed as a name,
+
+55
+00:04:28,610 --> 00:04:30,170
+in which case I should see
+
+56
+00:04:30,270 --> 00:04:31,850
+Hello Anna.
+
+57
+00:04:32,360 --> 00:04:35,190
+So I'll quickly recompile this,
+
+58
+00:04:35,360 --> 00:04:41,250
+head over to my browser and I see Hello Max and Hello Anna,
+
+59
+00:04:41,270 --> 00:04:45,800
+so this does work. On to Exercise 3,
+
+60
+00:04:45,830 --> 00:04:54,530
+here we have an array of numbers and the goal was to call the math.min function without having to use
+
+61
+00:04:54,590 --> 00:04:55,290
+apply
+
+62
+00:04:55,310 --> 00:04:59,780
+which is kind of the ES5 way of passing an
+
+63
+00:04:59,870 --> 00:05:07,620
+an array as parameter to a function which expects to get a list of values because what
+
+64
+00:05:07,620 --> 00:05:16,040
+apply will do is it will basically apply this math.min function here to all the values in the array
+
+65
+00:05:16,040 --> 00:05:22,360
+but of course keep in mind which value then in the end is the smallest available value,
+
+66
+00:05:22,370 --> 00:05:25,170
+so kind of a more difficult way to do this.
+
+67
+00:05:25,220 --> 00:05:27,270
+Of course we know better,
+
+68
+00:05:27,290 --> 00:05:37,180
+so let's tackle Exercise 3 with the help of the spread operator.
+
+69
+00:05:37,360 --> 00:05:40,460
+So I'll create my numbers array here
+
+70
+00:05:40,760 --> 00:05:46,380
+and of course choose any numbers you like, I'll use these ones here
+
+71
+00:05:46,850 --> 00:05:55,130
+and then I want to simply get the smallest number. So I will call math.min and then I can also or simply
+
+72
+00:05:55,130 --> 00:05:56,440
+pass numbers
+
+73
+00:05:56,510 --> 00:06:00,490
+but of course that won't work because an array is not what this function wants
+
+74
+00:06:00,500 --> 00:06:06,970
+but I can use the spread parameter to spread out this array and get a list of numbers instead.
+
+75
+00:06:07,100 --> 00:06:16,150
+With that, if I compile this and then go back to my console, we see -3 as the result
+
+76
+00:06:16,160 --> 00:06:24,110
+which of course is correct because -3 is the smallest value in this array here.
+
+77
+00:06:24,230 --> 00:06:29,920
+Let's have a look at Exercise 4 which gives us another chance to use the spread operator.
+
+78
+00:06:30,300 --> 00:06:37,620
+I do have a new array with two elements inside of it and I want to push my numbers array onto this new
+
+79
+00:06:37,620 --> 00:06:38,760
+array.
+
+80
+00:06:38,760 --> 00:06:43,270
+Now the issue is with the traditional new array push method,
+
+81
+00:06:43,440 --> 00:06:46,290
+I can't push an array,
+
+82
+00:06:46,290 --> 00:06:48,580
+I can just push values,
+
+83
+00:06:48,780 --> 00:06:58,050
+so we need the operator, the spread operator to basically create a list of values of these numbers array.
+
+84
+00:06:58,800 --> 00:06:59,250
+So
+
+85
+00:06:59,250 --> 00:07:05,610
+this is the vanilla Javascript way of handling this case here with the array prototype
+
+86
+00:07:05,610 --> 00:07:10,200
+push method and then applying this on new array and the numbers
+
+87
+00:07:10,380 --> 00:07:13,330
+but of course we got a better way to do this,
+
+88
+00:07:13,470 --> 00:07:23,610
+so let's have a look at Exercise 4 which is again about the spread operator. So we have my new
+
+89
+00:07:23,610 --> 00:07:31,170
+array here, which has like let's say these two numbers and I want to push the old numbers array, 
+
+90
+00:07:31,210 --> 00:07:38,480
+this one here onto this array, kind of concatenate these values so that the new array has these two values
+
+91
+00:07:38,590 --> 00:07:44,870
+and all these values. Well I can simply do this by taking new array,
+
+92
+00:07:44,890 --> 00:07:48,940
+so my new array I just created and then use the push method.
+
+93
+00:07:48,940 --> 00:07:50,790
+Now again, the push method
+
+94
+00:07:50,800 --> 00:07:55,430
+expects some values like 1, 5, 10,
+
+95
+00:07:55,510 --> 00:07:57,260
+it doesn't expect an array.
+
+96
+00:07:57,550 --> 00:08:05,740
+So I can use the spread operator, the three dots to take my numbers array and create a list of values
+
+97
+00:08:05,770 --> 00:08:07,590
+instead of using this array.
+
+98
+00:08:07,930 --> 00:08:17,540
+With that if I then log my new array to the console, save this and compile it, you'll see my new array
+
+99
+00:08:17,540 --> 00:08:20,890
+holds 66 and 2 which are the two values
+
+100
+00:08:20,890 --> 00:08:24,020
+of the new array before pushing the numbers on it
+
+101
+00:08:24,750 --> 00:08:28,410
+and then it has all the values my numbers array has.
+
+102
+00:08:28,500 --> 00:08:35,340
+So that is a convenient way and that's why I'm showing this as a separate exercise to push an array
+
+103
+00:08:35,340 --> 00:08:42,060
+of items onto an existing array, something which is a bit more complicated with vanilla Javascript.
+
+104
+00:08:42,330 --> 00:08:48,270
+Let's have a look at Exercise 5, here we also have an array of numbers and then I'm extracting
+
+105
+00:08:48,270 --> 00:08:52,250
+the individual numbers here and I'm logging them to the console.
+
+106
+00:08:52,350 --> 00:08:54,040
+Well that shouldn't be too difficult,
+
+107
+00:08:54,080 --> 00:08:57,120
+what we need here is destructuring, right?
+
+108
+00:08:57,210 --> 00:08:59,260
+So let's do this,
+
+109
+00:09:02,690 --> 00:09:08,460
+Exercise 5 is about destructuring arrays.
+
+110
+00:09:11,260 --> 00:09:19,510
+I'll create my test results array here which should just hold a couple of test results and of course
+
+111
+00:09:19,510 --> 00:09:23,600
+the values are totally up to you, like this
+
+112
+00:09:23,920 --> 00:09:30,250
+and then I want to destructure this, so I'll use square brackets on the left side of the equals sign, 
+
+113
+00:09:30,250 --> 00:09:31,350
+that's important
+
+114
+00:09:31,600 --> 00:09:36,610
+and in the square brackets, I list the variable or constant names
+
+115
+00:09:36,610 --> 00:09:37,540
+I want to create,
+
+116
+00:09:37,540 --> 00:09:44,320
+so for all the constants I want to create in this case here. So result1, result2 and result3
+
+117
+00:09:44,360 --> 00:09:47,020
+and these names are of course up to you.
+
+118
+00:09:47,020 --> 00:09:56,040
+I set this equal to test result to basically tell TypeScript or the same would be true for ES6, that
+
+119
+00:09:56,080 --> 00:10:01,250
+I want to take this test result array and assign the first element to
+
+120
+00:10:01,290 --> 00:10:02,530
+result1,
+
+121
+00:10:02,530 --> 00:10:04,840
+the second element to result2
+
+122
+00:10:04,990 --> 00:10:08,000
+and the third element to result3.
+
+123
+00:10:08,220 --> 00:10:12,570
+With that, I can then simply log them like this,
+
+124
+00:10:12,570 --> 00:10:17,890
+result1, result2 and result3.
+
+125
+00:10:17,910 --> 00:10:25,590
+So if I save this, compile the file and have a look at the log, well we see these three individual values.
+
+126
+00:10:25,590 --> 00:10:27,690
+Notice that this isn't an array,
+
+127
+00:10:27,720 --> 00:10:36,480
+I'm just logging three individual values. Though of course what I could do is, I could create an array
+
+128
+00:10:36,570 --> 00:10:42,710
+of these items by simply enclosing them in square brackets again and
+
+129
+00:10:44,460 --> 00:10:49,470
+if I now save this, log this to the console, well we see we got an array again,
+
+130
+00:10:49,580 --> 00:10:56,990
+so nothing was gained by destructuring here and that is just a small example to again show you how these
+
+131
+00:10:56,990 --> 00:10:58,760
+values all relate to each other.
+
+132
+00:11:00,410 --> 00:11:08,030
+Time to have a look at the last exercise, Exercise 6. Now Exercise 6 is also about destructuring,
+
+133
+00:11:08,210 --> 00:11:14,400
+I got my scientist which has a first name and some experience and this is a Javascript object here.
+
+134
+00:11:14,480 --> 00:11:21,070
+Now in vanilla Javascript, we would extract these values by accessing them with dot notation,
+
+135
+00:11:21,110 --> 00:11:22,530
+these properties here
+
+136
+00:11:22,670 --> 00:11:27,600
+and then we could assign them to variables and then we could log these variables.
+
+137
+00:11:27,860 --> 00:11:36,510
+Now with TypeScript and ES6 features, we got some other ways of doing this or a nicer way of doing
+
+138
+00:11:36,510 --> 00:11:37,040
+this,
+
+139
+00:11:37,050 --> 00:11:46,590
+so we're talking about destructuring objects. I'll create my scientist here
+
+140
+00:11:46,960 --> 00:11:56,390
+and my scientist will be a Javascript object of course who has first name of Will and experience
+
+141
+00:11:56,390 --> 00:12:00,020
+of whatever, 12 years or what it could be
+
+142
+00:12:00,020 --> 00:12:06,670
+and then I destructure it by using curly braces, that is important because we're destructuring an object
+
+143
+00:12:06,700 --> 00:12:09,780
+here, not an array, so use curly braces
+
+144
+00:12:10,310 --> 00:12:18,590
+and I want to extract the first name and the experience and as explained before earlier in this module, these
+
+145
+00:12:18,590 --> 00:12:26,120
+names here have to match the property names otherwise TypeScript and the same is true for ES6, has
+
+146
+00:12:26,120 --> 00:12:33,260
+no chance of knowing which property you want to assign to this constant and which property you want
+
+147
+00:12:33,260 --> 00:12:35,660
+to assign to this constant,
+
+148
+00:12:35,660 --> 00:12:38,420
+so definitely make sure to match these names.
+
+149
+00:12:38,540 --> 00:12:42,450
+You learned about assigning aliases if you want to do this
+
+150
+00:12:42,560 --> 00:12:48,310
+but the assignment here is definitely important and otherwise, nothing will work.
+
+151
+00:12:49,210 --> 00:12:56,800
+So I set this equal to scientists and that I can log the first name and I can log the experience
+
+152
+00:12:56,800 --> 00:13:00,430
+like this. If I now compile this file
+
+153
+00:13:01,880 --> 00:13:07,850
+and have a look at the result, we see Will and we see 12.
+
+154
+00:13:08,090 --> 00:13:15,160
+So this is how destructuring objects works, how you learned it throughout this module and how it hopefully also
+
+155
+00:13:15,170 --> 00:13:17,360
+looked in your solution.

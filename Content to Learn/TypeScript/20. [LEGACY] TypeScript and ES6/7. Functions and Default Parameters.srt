@@ -1,0 +1,167 @@
+1
+00:00:02,330 --> 00:00:11,270
+ES6 also added another function or function change, Default Parameters. With default parameters,
+
+2
+00:00:11,440 --> 00:00:19,420
+I can assign some default parameters to functions or I could set some defaults to certain
+
+3
+00:00:19,420 --> 00:00:25,720
+parameters in my function. This works both on the arrow syntax or the arrow function syntax you
+
+4
+00:00:25,720 --> 00:00:32,060
+just saw, as well as the old kind of old syntax which is still valid of course with the function keyword.
+
+5
+00:00:32,470 --> 00:00:37,120
+So to show how the full parameters work, I'll use an arrow function here
+
+6
+00:00:37,120 --> 00:00:41,780
+but again, it will work for the function keyword, function too,
+
+7
+00:00:41,800 --> 00:00:52,090
+so here I will create a function which I call countdown and I want to then have a start
+
+8
+00:00:52,110 --> 00:00:53,010
+which should be a number
+
+9
+00:00:58,050 --> 00:00:59,840
+and I will return nothing
+
+10
+00:01:00,300 --> 00:01:07,020
+and then what I want to do here is, I want to create a little countdown. So we should say as long as
+
+11
+00:01:07,020 --> 00:01:09,710
+start is greater than zero,
+
+12
+00:01:09,750 --> 00:01:13,150
+I want to decrement start
+
+13
+00:01:13,410 --> 00:01:23,900
+and once I am at zero, I will log something like done and the start value to prove that it is now zero.
+
+14
+00:01:24,330 --> 00:01:35,090
+So that is a very simple function, if I call countdown with let's say 10, see what happens, we see done
+
+15
+00:01:35,180 --> 00:01:36,960
+and zero at the bottom here.
+
+16
+00:01:39,140 --> 00:01:40,430
+So that works
+
+17
+00:01:40,580 --> 00:01:50,880
+but what if I call countdown like this? You see I got undefined, we're still seeing done because we exit
+
+18
+00:01:50,880 --> 00:01:52,650
+out of this while loop immediately
+
+19
+00:01:52,860 --> 00:01:54,760
+but this certainly is not the behavior
+
+20
+00:01:54,840 --> 00:02:03,210
+and actually we got an error here in the compilation too or in the compiler too and the error of course is
+
+21
+00:02:03,210 --> 00:02:07,650
+something we get because this is wrong, we're calling this function wrong,
+
+22
+00:02:07,650 --> 00:02:10,650
+we expect a parameter and we're not passing one.
+
+23
+00:02:10,800 --> 00:02:16,860
+Now we can set a default parameter to provide a default value for cases like these.
+
+24
+00:02:17,160 --> 00:02:25,690
+If I set this to 10 in the parameter list here, then you see the error disappeared here in my IDE.
+
+25
+00:02:25,890 --> 00:02:30,590
+If I save this, you also see that it compiles without any issues
+
+26
+00:02:30,810 --> 00:02:35,320
+and the reason for that is that it now has this default value it uses.
+
+27
+00:02:35,340 --> 00:02:42,330
+So if I save this and go back, we see done and zero again, instead of done and undefined as we did before.
+
+28
+00:02:43,320 --> 00:02:53,050
+If I do pass a value, like 20, I can prove that this value gets passed by logging it here before starting
+
+29
+00:02:53,050 --> 00:02:57,040
+the loop, like this,
+
+30
+00:02:57,070 --> 00:03:01,150
+you see we see 20 here and thereafter we see done
+
+31
+00:03:01,210 --> 00:03:06,710
+and if I delete 20 again, we see 10 which is the default value and then done.
+
+32
+00:03:06,760 --> 00:03:09,950
+So that is how we can set the full parameters
+
+33
+00:03:10,150 --> 00:03:17,680
+and you do need to watch out that these default parameters here follow some rules and you can learn
+
+34
+00:03:17,680 --> 00:03:20,590
+more about these rules in the ES6
+
+35
+00:03:20,620 --> 00:03:23,090
+courses or resources,
+
+36
+00:03:23,170 --> 00:03:31,550
+basically some rules are for example if you would have something like an end parameter here as well which
+
+37
+00:03:31,550 --> 00:03:36,490
+should be a number, then you could set this equal to start -5 for example,
+
+38
+00:03:36,490 --> 00:03:44,910
+that would work but it would not work if you would have it before start, like that.
+
+39
+00:03:45,160 --> 00:03:50,730
+That won't work because at this point of time here, start is not known yet,
+
+40
+00:03:50,740 --> 00:03:54,930
+so the order here matters and that's just one example here,
+
+41
+00:03:54,940 --> 00:04:00,630
+so really some things I think you should be able to sort out with some common sense anyway.
+
+42
+00:04:00,640 --> 00:04:09,220
+But generally, the ES6 rules which apply to default parameters also apply here in the TypeScript syntax.

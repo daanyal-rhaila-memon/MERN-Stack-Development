@@ -1,0 +1,167 @@
+1
+00:00:02,180 --> 00:00:08,940
+Another important ES6 feature or syntax change are arrow functions,
+
+2
+00:00:09,170 --> 00:00:11,630
+so I'll have a look at them here too.
+
+3
+00:00:12,550 --> 00:00:17,550
+I'll first print out something so that we can always see where we are at in the console,
+
+4
+00:00:20,020 --> 00:00:21,310
+and then let's have a look at
+
+5
+00:00:21,340 --> 00:00:28,240
+arrow functions, what they are and how we use them. I'll first click create a traditional function, I'll
+
+6
+00:00:28,240 --> 00:00:36,050
+call it addNumbers and this will be a function and this function then
+
+7
+00:00:36,050 --> 00:00:41,000
+and of course I could have used the other syntax to declare this function as well,
+
+8
+00:00:41,000 --> 00:00:48,830
+so this function here will get number1 which is a number or of type number and then I will get another
+
+9
+00:00:48,830 --> 00:00:53,210
+number which is of type number and it should return me a number,
+
+10
+00:00:53,210 --> 00:00:55,010
+lots of numbers here.
+
+11
+00:00:55,010 --> 00:01:01,140
+So then what it should do is basically do is return me number1 plus number2, like that.
+
+12
+00:01:01,280 --> 00:01:10,220
+That is a traditional function as you know it and if I call this addNumbers function and I pass 10
+
+13
+00:01:10,520 --> 00:01:17,820
+and let's say 3 to it as arguments and I save this and go back to my application, reload the page here,
+
+14
+00:01:17,990 --> 00:01:23,480
+you see we're now here at arrow functions, you see 13 here as the result which of course makes sense
+
+15
+00:01:23,480 --> 00:01:25,690
+and is the result of this addition.
+
+16
+00:01:26,030 --> 00:01:30,420
+So that is functions as we know them. Now
+
+17
+00:01:30,530 --> 00:01:37,370
+an arrow function would look like this, I'll create a function, multiplyNumbers and for an arrow function,
+
+18
+00:01:37,400 --> 00:01:39,660
+we don't have the function keyword.
+
+19
+00:01:39,860 --> 00:01:44,330
+We start with the list of parameters, still in parentheses,
+
+20
+00:01:44,510 --> 00:01:48,200
+the only exception here would be if you only have one argument,
+
+21
+00:01:48,200 --> 00:01:53,450
+then you don't need the parentheses around it, though you will need it if you also want to declare the
+
+22
+00:01:53,450 --> 00:01:54,790
+type which you should.
+
+23
+00:01:55,010 --> 00:01:58,930
+So here, I'll have two arguments, number1 which should be a number
+
+24
+00:01:59,180 --> 00:02:05,230
+and number2 which should be a number and then they're called arrow functions because we use this arrow,
+
+25
+00:02:05,230 --> 00:02:11,660
+the equals sign and the greater than sign to then point to the function body.
+
+26
+00:02:11,690 --> 00:02:19,790
+Now if you only return one or if you only have one line and want to return something, then I could simply
+
+27
+00:02:19,790 --> 00:02:24,340
+write number1 times number2
+
+28
+00:02:24,470 --> 00:02:33,230
+and while this still does look strange, this short syntax here is basically the same as this one, with
+
+29
+00:02:33,290 --> 00:02:35,020
+curly braces around it.
+
+30
+00:02:35,360 --> 00:02:40,760
+So if you only have one line of code and you want to return this one line because the return statement
+
+31
+00:02:40,760 --> 00:02:43,040
+will be added automatically,
+
+32
+00:02:43,100 --> 00:02:49,060
+then you could change this code to look like this, like before.
+
+33
+00:02:49,110 --> 00:02:57,240
+Now with that, I can also log this to the console and I can call multiplyNumbers 10 and 3 here and
+
+34
+00:02:57,240 --> 00:03:01,440
+we should expect to see 30 here, and indeed we do as
+
+35
+00:03:01,440 --> 00:03:04,090
+you can see here at the very bottom of the page.
+
+36
+00:03:04,370 --> 00:03:10,820
+So that is how we can create a function using this arrow function syntax.
+
+37
+00:03:11,070 --> 00:03:16,410
+Now if you want to learn more about arrow functions and especially which other big advantage they have
+
+38
+00:03:16,410 --> 00:03:22,320
+concerning the this keyword, you should definitely check out some ES6 sources because again, that's not a
+
+39
+00:03:22,320 --> 00:03:23,520
+TypeScript feature at all,
+
+40
+00:03:23,520 --> 00:03:29,880
+it's an ES6 feature but it is important to understand that TypeScript offers this feature as it offers
+
+41
+00:03:29,880 --> 00:03:36,540
+quite a lot of features and arrow functions is one of the important changes you're probably going
+
+42
+00:03:36,540 --> 00:03:37,830
+to use a lot.

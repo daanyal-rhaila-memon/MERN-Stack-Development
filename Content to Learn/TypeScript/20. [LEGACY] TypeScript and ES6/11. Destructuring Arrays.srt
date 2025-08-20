@@ -1,0 +1,155 @@
+1
+00:00:01,760 --> 00:00:11,480
+So after rest and spread, there are two other important changes I want to talk about in more detail here.
+
+2
+00:00:11,510 --> 00:00:15,330
+The first one is destructuring,
+
+3
+00:00:15,350 --> 00:00:21,650
+that's another great addition or important addition that came with ES6 and that is also available in
+
+4
+00:00:21,650 --> 00:00:22,650
+TypeScript.
+
+5
+00:00:22,670 --> 00:00:28,880
+Again, check the compatibility chart to learn more about which ES6 features are available in
+
+6
+00:00:28,880 --> 00:00:29,480
+TypeScript
+
+7
+00:00:29,490 --> 00:00:35,310
+overall. So destructuring is the next topic here.
+
+8
+00:00:37,360 --> 00:00:39,520
+What is destructuring all about?
+
+9
+00:00:39,940 --> 00:00:44,830
+Well, consider you have an array which looks like this,
+
+10
+00:00:45,170 --> 00:00:51,560
+that could be myHobbies and well, my hobbies are cooking, not cookies,
+
+11
+00:00:51,580 --> 00:00:52,940
+oh cookies are also great
+
+12
+00:00:52,960 --> 00:00:56,900
+but cooking and let's say sports. So
+
+13
+00:00:56,920 --> 00:00:58,470
+these are my hobbies
+
+14
+00:00:58,690 --> 00:01:05,570
+and then I wanted to print out the individual hobbies. So I could print myHobbies and
+
+15
+00:01:05,580 --> 00:01:07,350
+then the first element
+
+16
+00:01:07,510 --> 00:01:16,050
+and then of course also the second element, like this. If I save this, you see I print cookies,
+
+17
+00:01:16,600 --> 00:01:20,380
+well I really have it with the cookies, I probably should eat some,
+
+18
+00:01:20,380 --> 00:01:25,800
+so cooking and sports. Well that of course is great
+
+19
+00:01:25,810 --> 00:01:28,320
+and that is the way you know how to do this
+
+20
+00:01:28,660 --> 00:01:37,900
+and if you want to store them in variables, like let's say const hobby1 could be myHobbies
+
+21
+00:01:38,080 --> 00:01:45,800
+and then of course the index 0 is and and hobby2 could look like that
+
+22
+00:01:46,010 --> 00:01:53,610
+and then you can simply print out hobby1 here and here would be hobby2
+
+23
+00:01:53,750 --> 00:02:00,760
+and that would give us the very same output as we saw before, cooking and sports. Yes, that will work
+
+24
+00:02:00,770 --> 00:02:08,810
+but then we have to write quite a lot of lines for that and we can have a shorter syntax available with ES6
+
+25
+00:02:08,870 --> 00:02:14,790
+and it is also supported in TypeScript, destructuring. Destructuring works like this,
+
+26
+00:02:14,810 --> 00:02:19,430
+we create new constants and then we use this array notation
+
+27
+00:02:19,490 --> 00:02:27,960
+but on the left side of the equals sign. On the right side, we assign this array which we want to destructure,
+
+28
+00:02:28,010 --> 00:02:36,020
+so of which we want to get elements out of it and then we have hobby1 and hobby2 here in the kind
+
+29
+00:02:36,020 --> 00:02:39,440
+of array on the left side of the equals sign.
+
+30
+00:02:39,440 --> 00:02:46,140
+So while this does look strange, what it will do in the end is it will do the exact same thing as before,
+
+31
+00:02:46,280 --> 00:02:54,710
+it will create two new constants, hobby1 and hobby2 and they will assign the values of this array
+
+32
+00:02:54,950 --> 00:03:00,990
+by the position of these values here in this kind of array on the left side of the equals side.
+
+33
+00:03:01,070 --> 00:03:08,060
+So hobby1 will receive the cooking value and hobby2 will receive the sports value.
+
+34
+00:03:08,060 --> 00:03:11,530
+That is what destructuring does and if I save this,
+
+35
+00:03:11,690 --> 00:03:17,970
+we still see cooking and sports being printed out and they are stored in two different constants here
+
+36
+00:03:18,200 --> 00:03:24,590
+but I have this one liner of creating these constants and also fetching the values from myHobbies
+
+37
+00:03:24,590 --> 00:03:31,850
+array without having to manually type which index I want to fetch or using multiple lines or something
+
+38
+00:03:31,850 --> 00:03:32,720
+like that.
+
+39
+00:03:32,720 --> 00:03:38,670
+So really a clever and neat syntax to easily get the values out of an array.
