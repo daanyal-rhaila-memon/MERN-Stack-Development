@@ -1,0 +1,144 @@
+1
+
+00:00:02,100  -->  00:00:07,380
+Now when working with namespaces, one important note I want to make this you can also have namespaces
+
+2
+
+00:00:07,400  -->  00:00:09,260
+in namespaces.
+
+3
+
+00:00:09,420  -->  00:00:15,930
+So here in MyMath, I could also have another namespace called circle, since this is the circle related
+
+4
+
+00:00:15,930  -->  00:00:16,850
+math,
+
+5
+
+00:00:16,890  -->  00:00:20,340
+then I put all my logic into this circle namespace,
+
+6
+
+00:00:20,360  -->  00:00:23,840
+I of course also need to export that namespace now
+
+7
+
+00:00:24,250  -->  00:00:30,060
+and with this set up, what I can do is I can go back to my app.ts file, that won't work anymore as my
+
+8
+
+00:00:30,060  -->  00:00:34,770
+IDE correctly shows me and I would have to access circle on that.
+
+9
+
+00:00:34,770  -->  00:00:41,520
+Now if I save this and compile again into one single file, clear the console and reload,
+
+10
+
+00:00:41,520  -->  00:00:43,010
+you'll see it's working again
+
+11
+
+00:00:43,110  -->  00:00:46,430
+but now we got some nested namespace as if you would need that.
+
+12
+
+00:00:46,440  -->  00:00:52,800
+But of course make sure to not overdo it because you want to keep it somehow manageable in the
+
+13
+
+00:00:52,800  -->  00:00:56,470
+end and not have 10 levels of namespace nesting,
+
+14
+
+00:00:56,490  -->  00:00:59,570
+at least I assume that's not what you're interested in.
+
+15
+
+00:01:01,170  -->  00:01:08,070
+If you then want to still access everything on MyMath in the app.ts file for example, one thing you
+
+16
+
+00:01:08,070  -->  00:01:16,170
+could do is you could add a special keyword, the import keyword that is, like so
+
+17
+
+00:01:16,560  -->  00:01:21,870
+and we're not using the ES6 syntax for importing here but what you can do here is you can simply say
+
+18
+
+00:01:21,870  -->  00:01:26,560
+CircleMath and set this equal to MyMath.Circle,
+
+19
+
+00:01:27,930  -->  00:01:29,430
+like that
+
+20
+
+00:01:29,670  -->  00:01:34,520
+and then you can simply say CircleMath on that,
+
+21
+
+00:01:34,680  -->  00:01:38,870
+compile everything here and it still works.
+
+22
+
+00:01:38,880  -->  00:01:45,990
+So with that, you're just setting up an alias here where you use the nested namespace and assign it to
+
+23
+
+00:01:45,990  -->  00:01:47,040
+one single
+
+24
+
+00:01:47,040  -->  00:01:50,580
+alias in the end which you then can use.
+
+25
+
+00:01:50,580  -->  00:01:57,870
+So that's just some advanced techniques on namespaces but that is in general how you use namespaces,
+
+26
+
+00:01:57,870  -->  00:02:04,740
+very important to make sure to bundle them into one single file or import all the files here with
+
+27
+
+00:02:04,740  -->  00:02:14,400
+script tags and also make sure to add the right order of imports here in your main file or manually add
+
+28
+
+00:02:14,430  -->  00:02:19,180
+all the files with the tsc command here when compiling it
+
+29
+
+00:02:19,440  -->  00:02:23,790
+but always make sure that you're not forgetting any necessary imports here.

@@ -1,0 +1,307 @@
+1
+00:00:02,440 --> 00:00:09,560
+So I'm in a brand new project here again with the files you already know, app.ts, index.html, 
+
+2
+00:00:09,590 --> 00:00:14,940
+package.json and so on and I want to start with namespaces.
+
+3
+00:00:14,980 --> 00:00:19,950
+Of course, it's also important to understand what the difference between modules and namespaces is
+
+4
+00:00:20,020 --> 00:00:22,350
+and I will come back to that question later on
+
+5
+00:00:22,510 --> 00:00:27,640
+but first, I want to start with showing what both do and how they work.
+
+6
+00:00:28,150 --> 00:00:36,850
+Well why could we need namespaces or why would we need to kind of structure our code or improve the
+
+7
+00:00:36,850 --> 00:00:38,270
+structure of our code?
+
+8
+00:00:38,620 --> 00:00:40,650
+Well let's consider this example,
+
+9
+00:00:40,840 --> 00:00:48,770
+we want to kind of build a couple of tools we can work with regarding mathematical operations.
+
+10
+00:00:48,820 --> 00:00:56,980
+So let's say we want to have a constant called PI which is 3.14 because we might use that
+
+11
+00:00:57,280 --> 00:01:07,950
+and then we have something like a function which is called calculateCircumference, like that
+
+12
+00:01:08,140 --> 00:01:13,530
+and here we then of course want to be able to calculate the circumference of a circle,
+
+13
+00:01:13,540 --> 00:01:23,130
+so here we would expect to get a diameter which is of type number and we would then simply return diameter
+
+14
+00:01:23,140 --> 00:01:28,440
+times PI, something like that.
+
+15
+00:01:28,460 --> 00:01:35,120
+Now since we not only want to be able to calculate this, we also want to have a function called calculateRectangle
+
+16
+00:01:36,150 --> 00:01:43,980
+as you would get a width and a length and I'm just making up some arbitrary mathematical or
+
+17
+00:01:43,980 --> 00:01:46,000
+geometrical functions here,
+
+18
+00:01:46,080 --> 00:01:47,590
+choose whatever you want,
+
+19
+00:01:47,590 --> 00:01:50,720
+it's not really about math here as you might be able to tell,
+
+20
+00:01:51,000 --> 00:01:54,120
+so then we would return that and so on.
+
+21
+00:01:54,120 --> 00:02:00,090
+So we have these things here, the two functions, the constants here and they all kind of belong to the
+
+22
+00:02:00,090 --> 00:02:08,040
+mathematical area or we can kind of group them mentally as having them all related to
+
+23
+00:02:08,040 --> 00:02:08,710
+math.
+
+24
+00:02:08,820 --> 00:02:12,230
+So we might want to create a namespace and
+
+25
+00:02:12,270 --> 00:02:19,050
+here we have the first of the two concepts we're talking about in this module where we want to group
+
+26
+00:02:19,170 --> 00:02:21,240
+all these mathematical things
+
+27
+00:02:21,510 --> 00:02:23,810
+because consider our application,
+
+28
+00:02:23,850 --> 00:02:32,220
+we then want to use all these things and we might want to create a new rectangle and then calculate
+
+29
+00:02:32,220 --> 00:02:39,080
+something or we might simply want to log calculateRectangle 10 and 20
+
+30
+00:02:39,450 --> 00:02:46,770
+and that can quickly get a bit too big and unstructured because consider we not only have two functions,
+
+31
+00:02:46,770 --> 00:02:53,070
+let's say width 10 and a couple of constants and then it can get quite messy to work with all these functions
+
+32
+00:02:53,070 --> 00:03:00,230
+here, recall them and make sure to not use duplicate names or something like that.
+
+33
+00:03:00,300 --> 00:03:09,690
+Therefore, we could then introduce a namespace and we use the namespace keyword for that, then we simply
+
+34
+00:03:09,840 --> 00:03:13,290
+give this namespace a name and we might name it
+
+35
+00:03:13,290 --> 00:03:17,950
+MyMath here to not interfere with the default math object
+
+36
+00:03:17,970 --> 00:03:22,500
+Javascript offers us and then we use curly braces.
+
+37
+00:03:22,500 --> 00:03:26,150
+So it is kind of a Javascript object we have here,
+
+38
+00:03:26,430 --> 00:03:31,300
+then we take all the things you want to have in this namespace and just put them in there.
+
+39
+00:03:31,410 --> 00:03:37,590
+Now as you already can see, my IDE turned this function call red because this function does no longer
+
+40
+00:03:37,590 --> 00:03:38,760
+exist,
+
+41
+00:03:38,850 --> 00:03:41,780
+it's no longer registered on the global scope
+
+42
+00:03:41,790 --> 00:03:43,730
+and that's exactly what the namespace is
+
+43
+00:03:43,740 --> 00:03:47,680
+there for, we don't want to pollute our global scope,
+
+44
+00:03:47,760 --> 00:03:54,300
+instead I would have to access it at MyMath namespace, like that with dot notation.
+
+45
+00:03:54,300 --> 00:04:00,720
+Now as you can see, it still wouldn't work because when we're using such a namespace here, we also have
+
+46
+00:04:00,720 --> 00:04:03,230
+to export the things, mark
+
+47
+00:04:03,270 --> 00:04:06,740
+the things we want to make available outside of the namespace.
+
+48
+00:04:06,840 --> 00:04:11,100
+So PI for example would still only be available within the namespace
+
+49
+00:04:11,400 --> 00:04:18,240
+but all the functions can be used from outside, which then allows me to log MyMath and
+
+50
+00:04:18,530 --> 00:04:25,470
+then also calculate the circumference, like that because PI will be accessible inside the namespace but
+
+51
+00:04:25,560 --> 00:04:27,420
+I can't access it from outside
+
+52
+00:04:27,540 --> 00:04:32,400
+but since this calculateCircumference function is accessible from outside,
+
+53
+00:04:32,520 --> 00:04:35,070
+this should work without any errors.
+
+54
+00:04:35,100 --> 00:04:44,570
+So with that, if I then run tsc to compile the file and go to my project here and in the console, you
+
+55
+00:04:44,580 --> 00:04:47,210
+see that we got 200
+
+56
+00:04:47,250 --> 00:04:50,850
+which clearly is the rectangle size 
+
+57
+00:04:50,850 --> 00:04:53,080
+here, 10 times 20
+
+58
+00:04:53,280 --> 00:04:59,480
+and then we also see a result from the calculateCircumference method call here.
+
+59
+00:04:59,760 --> 00:05:07,920
+And that is how we reorganized our mathematical functions here and so on in its separate namespace and
+
+60
+00:05:07,920 --> 00:05:12,010
+make sure that we're not polluting the global namespace.
+
+61
+00:05:12,090 --> 00:05:20,010
+So of course, we would now be able to create another constant called PI and give it some other value
+
+62
+00:05:20,010 --> 00:05:21,530
+which clearly is wrong
+
+63
+00:05:21,570 --> 00:05:24,270
+and as you can see, I'm not getting any errors here
+
+64
+00:05:24,540 --> 00:05:33,270
+and if I do log this to the console and then of course I have to rerun the compilation step here on
+
+65
+00:05:33,270 --> 00:05:34,300
+TypeScript,
+
+66
+00:05:34,590 --> 00:05:41,070
+well if you go back to the console, you see we're logging 2.99, so our new PI constant
+
+67
+00:05:41,100 --> 00:05:47,150
+and we're not getting any errors because this PI constant here is registered on the global scope
+
+68
+00:05:47,330 --> 00:05:54,240
+whereas this constant here isn't, it's contained in this namespace which in the end is like a Javascript
+
+69
+00:05:54,270 --> 00:06:01,410
+object. And we can see this if we have a look at the compiled Javascript file, that indeed it is defined
+
+70
+00:06:01,470 --> 00:06:02,300
+as a variable,
+
+71
+00:06:02,340 --> 00:06:05,960
+MyMath and then we have this self-executing function
+
+72
+00:06:06,150 --> 00:06:12,730
+and there we register all these things which allows us to then use them on this MyMath object.
+
+73
+00:06:13,320 --> 00:06:16,480
+So that's the cool thing about namespaces,
+
+74
+00:06:16,590 --> 00:06:19,010
+we can split up our code
+
+75
+00:06:19,020 --> 00:06:25,050
+and of course we can have multiple namespaces and we can therefore restructure our code and make sure
+
+76
+00:06:25,050 --> 00:06:31,770
+that not everything is registered on our global scope which tends to get polluted pretty quickly on
+
+77
+00:06:31,770 --> 00:06:35,480
+Javascript since everything is registered there by default.

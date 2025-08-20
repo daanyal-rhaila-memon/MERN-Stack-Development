@@ -1,0 +1,255 @@
+1
+00:00:02,320 --> 00:00:08,270
+Now with our current set up, we still have the problem that all our logic lives in one single file
+
+2
+00:00:08,530 --> 00:00:15,080
+and while this is certainly fine for this little program here, consider your MyMath namespace
+
+3
+00:00:15,220 --> 00:00:16,950
+has many many functions,
+
+4
+00:00:16,950 --> 00:00:23,990
+imagine that you would have a much bigger MyMath namespace, then you might want to split it up.
+
+5
+00:00:24,040 --> 00:00:30,790
+You might even want to split up the namespace declaration because you might have some functions which
+
+6
+00:00:31,210 --> 00:00:38,600
+are related to circles and other functions which are related to rectangles. So let's simulate this, I'll
+
+7
+00:00:38,610 --> 00:00:46,930
+create a new file and this file will be the, let's call it
+
+8
+00:00:46,990 --> 00:00:57,590
+rectangleMath file, so rectangleMath.ts and then another file which is the circleMath.ts
+
+9
+00:00:57,620 --> 00:00:59,230
+file.
+
+10
+00:00:59,240 --> 00:01:06,830
+Now clearly we want to take this namespace here, cut it out of our app.ts file and put it into our
+
+11
+00:01:06,830 --> 00:01:07,600
+circleMath file
+
+12
+00:01:07,610 --> 00:01:13,730
+but of course the calculateRectangle function shouldn't be in there. Instead
+
+13
+00:01:13,730 --> 00:01:17,810
+that function will go into the rectangleMath.ts file
+
+14
+00:01:18,020 --> 00:01:25,940
+but here of course I also want to use the namespace, the MyMath namespace that is, like so and then put
+
+15
+00:01:25,940 --> 00:01:27,350
+it in here.
+
+16
+00:01:27,350 --> 00:01:35,210
+So now you can see I got namespace MyMath in the rectangleMath file and in the circleMath file and
+
+17
+00:01:35,210 --> 00:01:38,470
+we're referring to the same namespace here of course.
+
+18
+00:01:38,480 --> 00:01:45,770
+Now if I go back to my app.ts file and I run the compiler and then we go back to console, you see that
+
+19
+00:01:45,770 --> 00:01:48,840
+we get this error, that MyMath is not defined
+
+20
+00:01:49,040 --> 00:01:55,340
+and that makes sense because in our app.ts file, I no longer have access to MyMath, it's not
+
+21
+00:01:55,340 --> 00:01:57,230
+included in this file right
+
+22
+00:01:57,260 --> 00:02:01,170
+and yes all the files get compiled to Javascript
+
+23
+00:02:01,190 --> 00:02:06,510
+but if we have a look at our browser here, to the sources tab in the developer tools, 
+
+24
+00:02:06,740 --> 00:02:08,720
+well we're only importing the app.js
+
+25
+00:02:08,740 --> 00:02:12,610
+file, all the other files are not imported
+
+26
+00:02:12,800 --> 00:02:16,640
+and why would they, because in the index.html, we are only importing app.js
+
+27
+00:02:16,650 --> 00:02:19,310
+and not the other files.
+
+28
+00:02:19,850 --> 00:02:23,500
+So we get two possible ways of solving this,
+
+29
+00:02:23,510 --> 00:02:31,260
+the first one is we can duplicate this import and also import circleMath.js though
+
+30
+00:02:31,610 --> 00:02:34,750
+and then the rectangleMath.js file
+
+31
+00:02:34,880 --> 00:02:41,200
+and if I save this, now you see it's working again, I'll just reload to show this clearly.
+
+32
+00:02:41,450 --> 00:02:46,940
+So now we get this working because now we're manually importing all the individually compiled files
+
+33
+00:02:47,240 --> 00:02:53,000
+and we do have our namespace in there, the namespaces are automatically combined since they share the
+
+34
+00:02:53,000 --> 00:02:53,720
+same name,
+
+35
+00:02:53,720 --> 00:02:55,070
+MyMath
+
+36
+00:02:55,280 --> 00:03:01,100
+but the downside of course is we have to import all these files and as you might imagine, that can get
+
+37
+00:03:01,100 --> 00:03:06,410
+very cumbersome if you have a lot of files and then we add a new one, you always have to think about
+
+38
+00:03:06,470 --> 00:03:07,550
+adding it here,
+
+39
+00:03:07,730 --> 00:03:12,000
+so that's not really the most convenient way when working with multiple files,
+
+40
+00:03:12,170 --> 00:03:14,720
+so let's see if we can improve that a little bit.
+
+41
+00:03:15,320 --> 00:03:22,520
+Well, the possible improvement is that TypeScript, the TypeScript compiler allows us to automatically bundle
+
+42
+00:03:22,550 --> 00:03:28,440
+all our files together into one single file if you want it to behave like that.
+
+43
+00:03:28,940 --> 00:03:31,720
+Now how do we bundle it all into one file?
+
+44
+00:03:31,790 --> 00:03:40,160
+Well going down to the console here, I can simply run the TypeScript compile command, tsc and then add the
+
+45
+00:03:40,250 --> 00:03:42,590
+outFile command,
+
+46
+00:03:42,740 --> 00:03:45,520
+this means create one single file,
+
+47
+00:03:45,620 --> 00:03:53,230
+then I specify the file name I want to create and I'll name it app.js since this is the file I'll import
+
+48
+00:03:53,240 --> 00:03:54,580
+in the index.html
+
+49
+00:03:54,890 --> 00:04:01,520
+and then I can specify all the files I want to bundle together and the order here is the order by which
+
+50
+00:04:01,520 --> 00:04:03,960
+they will be added into this bundle file.
+
+51
+00:04:03,980 --> 00:04:10,100
+So that might be important depending on how would your code interacts with each other and what
+
+52
+00:04:10,100 --> 00:04:12,150
+needs to get executed first.
+
+53
+00:04:12,170 --> 00:04:18,080
+So here, I'll implement the circleMath.ts file, then the rectangleMath.ts file and then
+
+54
+00:04:18,080 --> 00:04:19,940
+the app.ts file.
+
+55
+00:04:20,240 --> 00:04:28,250
+If I hit enter and then go back to the application and reload, you'll see it's now working again
+
+56
+00:04:28,340 --> 00:04:31,320
+even though I'm only importing the app.js
+
+57
+00:04:31,490 --> 00:04:35,010
+but in the browser if we have a look at this app.js,
+
+58
+00:04:35,060 --> 00:04:40,620
+we see that now all the code has been bundled together into this single file here
+
+59
+00:04:41,000 --> 00:04:44,470
+and that is exactly what outFile does, it bundles everything together.
+
+60
+00:04:44,690 --> 00:04:46,220
+So that certainly is an improvement,
+
+61
+00:04:46,220 --> 00:04:50,070
+we don't need to adjust our index.html file all the time
+
+62
+00:04:50,270 --> 00:04:57,330
+but the downside still is that we need to list all the files we want to bundle together in the
+
+63
+00:04:57,340 --> 00:04:59,470
+TypeScript compiler command here.
+
+64
+00:04:59,480 --> 00:05:02,160
+We certainly can improve that too, can't we?

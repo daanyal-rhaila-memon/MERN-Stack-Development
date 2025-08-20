@@ -1,0 +1,23 @@
+1
+00:00:01,860 --> 00:00:06,040
+You are now really prepared to write bigger TypeScript applications,
+
+2
+00:00:06,270 --> 00:00:13,650
+you now know how to use namespaces or modules and when to use what. You are prepared to set up your
+
+3
+00:00:13,650 --> 00:00:21,030
+project in a way that you split up your code over multiple files, as well as logical modules, each containing
+
+4
+00:00:21,030 --> 00:00:25,910
+their own code or piece of your application.
+
+5
+00:00:25,920 --> 00:00:34,590
+You then also learned how to put it all back together and make it run in your browser or in your application.
+
+6
+00:00:34,590 --> 00:00:36,850
+Time to move on to the next module.

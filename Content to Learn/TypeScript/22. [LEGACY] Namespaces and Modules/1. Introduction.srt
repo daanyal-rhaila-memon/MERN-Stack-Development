@@ -1,0 +1,54 @@
+1
+
+00:00:01,850  -->  00:00:07,980
+Welcome to this module. You might have had the case that you had a Javascript project which really grew
+
+2
+
+00:00:07,990  -->  00:00:09,430
+quite big
+
+3
+
+00:00:09,720  -->  00:00:17,790
+and in the past already, we used some loaders, module loaders to modularize our Javascript projects and
+
+4
+
+00:00:17,790  -->  00:00:20,380
+split it up over multiple files.
+
+5
+
+00:00:20,430  -->  00:00:27,930
+Now turns out that TypeScript really supports modular code and it has two concepts it offers you to
+
+6
+
+00:00:27,930  -->  00:00:31,820
+manage your project and split it up into different files
+
+7
+
+00:00:31,830  -->  00:00:38,310
+but not only files but also logical modules, namespaces and modules,
+
+8
+
+00:00:38,340  -->  00:00:40,370
+it's just called modules.
+
+9
+
+00:00:40,560  -->  00:00:47,910
+So we will learn about both concepts in this section of the course as you went to use each and how they
+
+10
+
+00:00:47,910  -->  00:00:48,610
+work,
+
+11
+
+00:00:48,780  -->  00:00:50,010
+so let's dive into that.

@@ -1,0 +1,191 @@
+1
+00:00:01,970 --> 00:00:10,520
+So let's work with modules now and I will stick to a comparable example as I used with namespaces.
+
+2
+00:00:10,520 --> 00:00:16,430
+I will add a new folder to this project and I'll call this folder math and in this folder,
+
+3
+00:00:16,430 --> 00:00:19,600
+I'll add a new file called circle.ts
+
+4
+00:00:19,910 --> 00:00:30,620
+and I'll add another file which I'll call rectangle.ts. So I'll start with the rectangle file here
+
+5
+00:00:30,740 --> 00:00:44,010
+and in here, I'll again create my calculateRectangle function here and I want to have a width which is
+
+6
+00:00:44,010 --> 00:00:47,080
+a number and a length which is a number, so like before
+
+7
+00:00:47,090 --> 00:00:51,270
+very basic here of course, return the width times the length,
+
+8
+00:00:51,280 --> 00:00:58,640
+that's what I want to do here and in my circle, I'll again have PI which is 3.14 and then
+
+9
+00:00:58,640 --> 00:01:07,650
+I'll have my function, calcCircumference or let's name it calculateCircumference
+
+10
+00:01:07,730 --> 00:01:19,090
+where I then also of course will need to get my diameter number and then I want to return
+
+11
+00:01:21,470 --> 00:01:25,260
+diameter times PI, like so.
+
+12
+00:01:25,630 --> 00:01:30,070
+So far, that is pretty much the same we saw before,
+
+13
+00:01:30,070 --> 00:01:38,740
+now what I want to do here is, I want to kind of import that code into the app.ts again, so that I'm able
+
+14
+00:01:38,740 --> 00:01:40,240
+to console log
+
+15
+00:01:40,420 --> 00:01:46,150
+the circumference and the rectangle and maybe also PI.
+
+16
+00:01:46,540 --> 00:01:48,280
+So that would be the three things
+
+17
+00:01:48,280 --> 00:01:50,460
+I want to log here.
+
+18
+00:01:50,650 --> 00:01:56,730
+Now how can I import all that? Before we used namespaces and of course, I could use that again
+
+19
+00:01:56,740 --> 00:02:04,060
+but what I want to do is I want to use the modules TypeScript supports. Now modules are pretty
+
+20
+00:02:04,060 --> 00:02:12,760
+much the syntax you might know if you use ES6 or if you are into ES6 already. In a file, like my circle.ts
+
+21
+00:02:12,760 --> 00:02:13,910
+file here,
+
+22
+00:02:14,110 --> 00:02:19,000
+I can simply export a constant, a variable, a function, a class,
+
+23
+00:02:19,000 --> 00:02:25,540
+basically all the objects by adding the export keyword in front of it, the same therefore is true
+
+24
+00:02:25,540 --> 00:02:27,090
+for this function.
+
+25
+00:02:27,100 --> 00:02:34,480
+Now the constant here and the function in the circle.ts file are both made available outside of this
+
+26
+00:02:34,480 --> 00:02:35,520
+file,
+
+27
+00:02:35,530 --> 00:02:39,250
+I can therefore go to my app.ts file and import them.
+
+28
+00:02:39,490 --> 00:02:41,920
+Now the import syntax looks like that,
+
+29
+00:02:42,130 --> 00:02:44,400
+import from
+
+30
+00:02:44,530 --> 00:02:49,960
+and then I have to specify the path which is relative with ./ at the beginning,
+
+31
+00:02:49,960 --> 00:02:52,920
+then math and then circle.
+
+32
+00:02:53,110 --> 00:02:57,640
+Now here, you may leave out or you should leave out the .ts at the end,
+
+33
+00:02:57,850 --> 00:03:05,810
+Typescript will automatically resolve that, it will automatically look for .ts, .tsx or .dts
+
+34
+00:03:05,940 --> 00:03:06,660
+files
+
+35
+00:03:06,940 --> 00:03:08,380
+and I come back to 
+
+36
+00:03:08,530 --> 00:03:08,980
+.tts
+
+37
+00:03:08,980 --> 00:03:11,670
+and TSX files in the future of this course.
+
+38
+00:03:12,160 --> 00:03:15,180
+But it will automatically look for this extension
+
+39
+00:03:15,280 --> 00:03:20,710
+and since we specify this relative path, it also knows where to look and it then is able to import
+
+40
+00:03:20,710 --> 00:03:22,470
+from this file.
+
+41
+00:03:22,480 --> 00:03:24,290
+Now here, what may we import? 
+
+42
+00:03:24,410 --> 00:03:31,220
+Well we may import PI and we may import the calculateCircumference function here.
+
+43
+00:03:31,240 --> 00:03:39,850
+This allows me to log PI and that will just be constant or to log the result of calculateCircumference
+
+44
+00:03:40,180 --> 00:03:43,370
+where I need to pass a diameter of let's say 10.
+
+45
+00:03:43,390 --> 00:03:51,970
+Now if I comment out the last console log here and save this and then run tsc, well let's see what happens
+
+46
+00:03:52,000 --> 00:03:56,410
+if we go to the console, uncaught reference error,
+
+47
+00:03:56,440 --> 00:03:58,940
+Require is not defined.
+
+48
+00:03:59,020 --> 00:04:00,380
+What's happening here?

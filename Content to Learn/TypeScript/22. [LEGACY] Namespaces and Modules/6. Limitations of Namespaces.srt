@@ -1,0 +1,104 @@
+1
+
+00:00:01,760  -->  00:00:09,230
+And when we are at the disadvantage of namespaces. Now our little example here is quite manageable
+
+2
+
+00:00:09,230  -->  00:00:09,520
+right,
+
+3
+
+00:00:09,530  -->  00:00:10,980
+because here
+
+4
+
+00:00:11,150  -->  00:00:17,660
+we only get a couple of namespaces or a couple of files which we import here and which we then
+
+5
+
+00:00:17,660  -->  00:00:18,390
+use here
+
+6
+
+00:00:18,500  -->  00:00:23,060
+but we already have to watch out that we're not forgetting anything and that we're keeping the right
+
+7
+
+00:00:23,120  -->  00:00:24,230
+order.
+
+8
+
+00:00:24,230  -->  00:00:31,910
+The problem is that our modules if we want to call it like that, that our files are not very declarative
+
+9
+
+00:00:31,910  -->  00:00:40,220
+about what they need. Let's say our circleMath here would need another namespace, then we would need
+
+10
+
+00:00:40,250  -->  00:00:45,030
+to add the import either here or in the app.ts too
+
+11
+
+00:00:45,230  -->  00:00:51,080
+but since we can add it anywhere where we want as long as we make sure that everything gets bundled
+
+12
+
+00:00:51,080  -->  00:00:54,190
+into one file, it can be kind of hard to
+
+13
+
+00:00:54,800  -->  00:00:59,400
+clearly see which file has which dependencies
+
+14
+
+00:00:59,690  -->  00:01:04,350
+and it's not really that manageable for bigger projects.
+
+15
+
+00:01:04,400  -->  00:01:12,260
+It has some disadvantages compared to the ES6 modules which are very declarative about which file
+
+16
+
+00:01:12,260  -->  00:01:20,540
+or which module has which dependency and which also makes sure that each module, each ES6 module has
+
+17
+
+00:01:20,540  -->  00:01:25,970
+its own scope and doesn't pollute the global scope.
+
+18
+
+00:01:25,970  -->  00:01:34,490
+So whilst namespaces here are a great tool for smaller applications, you probably want to fallback
+
+19
+
+00:01:34,490  -->  00:01:37,570
+to ES6 modules or modules in general
+
+20
+
+00:01:37,610  -->  00:01:40,570
+when working on medium-sized to large projects.
+
+21
+
+00:01:40,580  -->  00:01:42,770
+So let's have a look at modules next.

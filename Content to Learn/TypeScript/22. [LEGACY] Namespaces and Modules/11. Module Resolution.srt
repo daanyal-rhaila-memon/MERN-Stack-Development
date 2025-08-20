@@ -1,0 +1,139 @@
+1
+
+00:00:01,890  -->  00:00:08,850
+Now there is another important thing I need to talk about when we're talking about modules and module
+
+2
+
+00:00:08,850  -->  00:00:13,210
+imports here, the way TypeScript resolves the files.
+
+3
+
+00:00:13,470  -->  00:00:20,210
+As I already said, we don't set the file extension as TypeScript will figure that out automatically
+
+4
+
+00:00:20,310  -->  00:00:24,030
+but actually, that is not all it will figure out automatically,
+
+5
+
+00:00:24,030  -->  00:00:25,780
+there are two other things
+
+6
+
+00:00:25,800  -->  00:00:29,080
+it will figure out for us.
+
+7
+
+00:00:29,130  -->  00:00:34,990
+One is that we can have different paths of imports here.
+
+8
+
+00:00:35,010  -->  00:00:39,900
+Notice that here, we're setting a relative path to ./math/circle,
+
+9
+
+00:00:40,200  -->  00:00:47,700
+well if you're coming from Angular 2 for example, you might know imports like this one, import component
+
+10
+
+00:00:48,210  -->  00:00:52,450
+from @angular/core.
+
+11
+
+00:00:52,450  -->  00:00:56,980
+Now of course that won't work here because I'm not importing Angular in this project but that would
+
+12
+
+00:00:56,980  -->  00:00:57,670
+be how this
+
+13
+
+00:00:57,680  -->  00:01:00,860
+imort looks in Angular 2.
+
+14
+
+00:01:00,910  -->  00:01:06,880
+Now you might notice that this clearly is no relative path because in your Angular 2 project, you wouldn't
+
+15
+
+00:01:06,880  -->  00:01:11,030
+have @angular in your root project folder.
+
+16
+
+00:01:11,030  -->  00:01:19,450
+So TypeScript is very clever when resolving imports, it sees if you're using a relative path or an
+
+17
+
+00:01:19,450  -->  00:01:26,250
+absolute path. The absolute path will always be locked up in the node_modules folder by default
+
+18
+
+00:01:26,380  -->  00:01:34,980
+or if you have an ambient typings definitions file, something to which I'll come back in a future module,
+
+19
+
+00:01:35,380  -->  00:01:39,890
+it will fetch it from there. Put in other maybe simpler words,
+
+20
+
+00:01:40,030  -->  00:01:45,910
+you can set up global exports which kind of are available in your whole project and which can be
+
+21
+
+00:01:45,910  -->  00:01:49,780
+imported like that or if you want to call it like that,
+
+22
+
+00:01:49,780  -->  00:01:57,050
+local exports which have a clear position like in this file which you import by pointing to that file.
+
+23
+
+00:01:57,070  -->  00:02:04,630
+And again, I'll come back to these type definition files which allow you to set up typings which are
+
+24
+
+00:02:04,630  -->  00:02:11,400
+applicable for your whole project in a future module which is dedicated to these files.
+
+25
+
+00:02:11,410  -->  00:02:16,990
+I just wanted to highlight that you have these two different import syntaxes and you don't really have
+
+26
+
+00:02:16,990  -->  00:02:18,150
+to worry about it,
+
+27
+
+00:02:18,250  -->  00:02:23,530
+Typescript will figure out everything for you but it is important to understand what's happening behind
+
+28
+
+00:02:23,530  -->  00:02:24,450
+the scenes. 

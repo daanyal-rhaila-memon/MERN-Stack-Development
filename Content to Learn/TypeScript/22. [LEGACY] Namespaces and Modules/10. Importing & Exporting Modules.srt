@@ -1,0 +1,119 @@
+1
+00:00:01,850 --> 00:00:04,940
+With that, we can of course also add our rectangle file. Here
+
+2
+00:00:04,950 --> 00:00:10,910
+I first have to add the export keyword so that we're actually exporting something in this file and then
+
+3
+00:00:10,910 --> 00:00:15,020
+I can import from this file as well,
+
+4
+00:00:15,020 --> 00:00:22,850
+so from and then math and then rectangle and then here of course, I want to import the calculateRectangle
+
+5
+00:00:22,850 --> 00:00:23,740
+function.
+
+6
+00:00:23,750 --> 00:00:30,980
+Now I can comment out this console log statement here and actually calculate the rectangle of 20 and 50
+
+7
+00:00:30,980 --> 00:00:36,280
+let's say, save this, compile everything with the tsc command,
+
+8
+00:00:36,350 --> 00:00:43,400
+load our app and we see 1000 there at the bottom which of course is the result of this rectangle calculation.
+
+9
+00:00:43,700 --> 00:00:46,290
+So with that, we got all the imports and exports set up
+
+10
+00:00:46,370 --> 00:00:53,630
+and now regarding the styles of imports and exports or how you can use these imports and exports, pretty
+
+11
+00:00:53,630 --> 00:00:57,530
+much all the things you can learn about ES6 imports apply.
+
+12
+00:00:57,710 --> 00:01:06,590
+So to give some hints, since my circle class here or circle file has two exports, PI and calculateCircumference,
+
+13
+00:01:06,590 --> 00:01:12,710
+I could also use this syntax with a star to import everything and then assign it an alias,
+
+14
+00:01:12,710 --> 00:01:15,620
+so as circle for example
+
+15
+00:01:15,620 --> 00:01:22,940
+and then I can access it on circle.PI and circle.calculateCircumference.
+
+16
+00:01:22,940 --> 00:01:28,670
+So that would also work as you can see once I compile this, clear my console, reload the app,
+
+17
+00:01:28,670 --> 00:01:30,200
+it still works,
+
+18
+00:01:30,200 --> 00:01:36,920
+so that is one possible syntax. Since my rectangle file only exports one function,
+
+19
+00:01:36,990 --> 00:01:40,280
+it would make sense to make this the default export.
+
+20
+00:01:40,400 --> 00:01:46,680
+So by adding the default keyword, I'm telling TypeScript or the same is true for ES6 Javascript
+
+21
+00:01:46,700 --> 00:01:53,630
+then that this should be the default you import whenever you try to import this file.
+
+22
+00:01:53,900 --> 00:01:58,810
+So here, I can then and I have to get rid of this syntax with the curly braces,
+
+23
+00:01:58,940 --> 00:02:04,420
+instead I can choose whatever name I want to use because this file only exports one thing anyways,
+
+24
+00:02:04,460 --> 00:02:06,290
+so it's uniquely identified,
+
+25
+00:02:06,320 --> 00:02:08,820
+the name I specify here doesn't matter,
+
+26
+00:02:08,900 --> 00:02:13,080
+so I can just name this calc and then use calc here
+
+27
+00:02:13,250 --> 00:02:17,690
+and this will still refer to my calculateRectangle function here,
+
+28
+00:02:17,690 --> 00:02:21,310
+I'm just assigning a different name in the app.ts file.
+
+29
+00:02:21,410 --> 00:02:28,330
+So if I then compile this and reload my application, we still see everything is working fine.
+
+30
+00:02:28,460 --> 00:02:34,560
+So that's just a different syntax and just an alternative to the syntaxes you saw before.

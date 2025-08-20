@@ -1,0 +1,95 @@
+1
+00:00:02,170 --> 00:00:08,680
+So in this module, you learned what namespaces are, what modules are and how both work and how you
+
+2
+00:00:08,680 --> 00:00:12,450
+can make them work and how you write the code to use them.
+
+3
+00:00:12,850 --> 00:00:17,310
+Now I already also shortly explained what the differences are
+
+4
+00:00:17,320 --> 00:00:19,280
+but let me summarize this again.
+
+5
+00:00:19,510 --> 00:00:26,010
+Get namespaces and modules and namespaces are great as they allow us to organize our application with
+
+6
+00:00:26,050 --> 00:00:30,300
+Javascript objects in the end, with this namespace keyword.
+
+7
+00:00:30,520 --> 00:00:35,670
+We can split them up over multiple files and we don't need a module loader to then load everything
+
+8
+00:00:35,680 --> 00:00:43,510
+if we use the outFile flag on the compiler. A downside is that dependencies get difficult to manage in
+
+9
+00:00:43,510 --> 00:00:50,800
+bigger applications as it is not strictly declarative, so we don't necessarily know which file has which
+
+10
+00:00:50,800 --> 00:00:55,850
+dependencies, in the end it's only important to have the right order of files being imported
+
+11
+00:00:56,020 --> 00:01:01,420
+and we could do this without specifying any import statements at all, just by inserting the script tags
+
+12
+00:01:01,420 --> 00:01:08,380
+in the index.html on ourselves. When using modules, we organize our application with real modules,
+
+13
+00:01:08,380 --> 00:01:15,040
+so we're not proxying this behavior by sticking all our stuff into different Javascript objects but instead,
+
+14
+00:01:15,070 --> 00:01:20,400
+we have real modules with their own scope, possibly living in their own files if we want that,
+
+15
+00:01:20,470 --> 00:01:24,120
+so we can split up our application over multiple files here too
+
+16
+00:01:24,340 --> 00:01:31,300
+but we do need a module loader to load them since modules are not natively supported yet by all browsers
+
+17
+00:01:31,720 --> 00:01:35,260
+and some formats like CommonJS never works,
+
+18
+00:01:35,260 --> 00:01:38,580
+so there we always need a module loader.
+
+19
+00:01:39,100 --> 00:01:43,250
+But the big advantage is that we have an explicit dependency declaration,
+
+20
+00:01:43,300 --> 00:01:47,380
+so we clearly know which file has which dependencies
+
+21
+00:01:47,560 --> 00:01:53,920
+and we don't need to worry about making sure that we're importing all the files in the right order or
+
+22
+00:01:53,920 --> 00:01:59,450
+that we need to change something because we added a file and so on, we can be very explicit here
+
+23
+00:01:59,530 --> 00:02:06,220
+and that is a great advantage which makes them much more manageable and nicer to use in medium-sized
+
+24
+00:02:06,220 --> 00:02:08,060
+to big applications.

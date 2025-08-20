@@ -1,0 +1,119 @@
+1
+00:00:01,940 --> 00:00:06,840
+Of course we can and the improvement actually is to go to the app.ts file again
+
+2
+00:00:07,070 --> 00:00:10,330
+and here, we can simply specify some imports
+
+3
+00:00:10,550 --> 00:00:16,490
+and now with imports, it's important to understand I'm not talking about imports like you might know
+
+4
+00:00:16,490 --> 00:00:19,680
+them from the ES6 syntax
+
+5
+00:00:19,700 --> 00:00:27,050
+if you already dived into that, so we won't import it with import from something but TypeScript has its
+
+6
+00:00:27,110 --> 00:00:30,010
+own import syntax for namespaces,
+
+7
+00:00:30,020 --> 00:00:33,830
+I'll come back to the other syntax when talking about modules,
+
+8
+00:00:33,830 --> 00:00:41,620
+remember we're talking about namespaces here. So namespaces are imported by using three forward
+
+9
+00:00:41,660 --> 00:00:42,460
+slashes,
+
+10
+00:00:42,470 --> 00:00:43,510
+so like a comment
+
+11
+00:00:43,520 --> 00:00:50,280
+but then one extra forward slash, then like an HTML tag reference,
+
+12
+00:00:50,300 --> 00:00:57,980
+so with smaller than sign at the beginning then a closing tag at the end, so forward slash and greater
+
+13
+00:00:57,980 --> 00:01:06,130
+than sign and then we also need to add the path attribute if you want to call it like that
+
+14
+00:01:06,140 --> 00:01:11,710
+and that points to the file we want to import here which holds the namespace we want to import here.
+
+15
+00:01:11,780 --> 00:01:13,940
+So that would be circleMath.ts
+
+16
+00:01:14,090 --> 00:01:23,240
+and I will duplicate that because I also want to implement or import rectangleMath.ts.
+
+17
+00:01:23,280 --> 00:01:31,080
+Now with these two imports in place here, I'm telling TypeScript please add these two files, circleMath
+
+18
+00:01:31,140 --> 00:01:35,010
+and rectangleMath in this order to this file.
+
+19
+00:01:35,010 --> 00:01:41,370
+So then, I can compile with just tsc or even just tsc and then app.ts again
+
+20
+00:01:41,370 --> 00:01:45,820
+and if I run this and we have a look at the resulting app.js file,
+
+21
+00:01:45,870 --> 00:01:47,380
+nothing changed.
+
+22
+00:01:47,760 --> 00:01:51,100
+Well we still have to add the outFile command,
+
+23
+00:01:51,150 --> 00:01:57,720
+so outFile and then the name of the file we want to create, app.js for example. If we now check app.js
+
+24
+00:01:57,720 --> 00:02:03,870
+again, we see that now everything has been added into the file again in the order by which we specify it
+
+25
+00:02:03,870 --> 00:02:06,110
+here with the reference paths
+
+26
+00:02:06,540 --> 00:02:12,660
+and therefore if we go back to the browser, clear the console and reload the page, you see it's working
+
+27
+00:02:12,660 --> 00:02:20,040
+again but now with the minimal possible amount of work necessary because we're specifying all our dependencies
+
+28
+00:02:20,040 --> 00:02:27,620
+up here, all our imports up here and then we just compile everything into one file with the outFile command.
+
+29
+00:02:27,930 --> 00:02:34,230
+And with that, we have a better structure we're structuring our code and we're making sure that everything
+
+30
+00:02:34,500 --> 00:02:39,020
+gets added into a single file in the order it needs to get added.
