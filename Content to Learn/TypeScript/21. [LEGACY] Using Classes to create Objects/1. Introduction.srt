@@ -1,0 +1,29 @@
+1
+
+00:00:02,120  -->  00:00:05,170
+So now that we had a look at ES6 in the last video,
+
+2
+
+00:00:05,220  -->  00:00:12,090
+there's one feature ES6 also introduces which makes working with objects a lot easier or cleaner,
+
+3
+
+00:00:12,280  -->  00:00:19,850
+classes. Now TypeScript also offers classes and it turns out that TypeScript's classes are even more
+
+4
+
+00:00:19,850  -->  00:00:22,310
+powerful than ES6 classes.
+
+5
+
+00:00:22,370  -->  00:00:28,830
+So time to get back to school and take the classes class and learn more about classes in this module
+
+6
+
+00:00:28,840  -->  00:00:29,110
+.

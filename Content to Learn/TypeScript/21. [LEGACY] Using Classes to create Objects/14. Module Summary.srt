@@ -1,0 +1,35 @@
+1
+00:00:01,420 --> 00:00:07,510
+So in this module, we had a look at how to use the class keyword or use classes in TypeScript, how to
+
+2
+00:00:07,510 --> 00:00:15,270
+use inheritance and how classes make your code really much cleaner, leaner and object usage easier.
+
+3
+00:00:15,630 --> 00:00:18,320
+This is a powerful feature of TypeScript
+
+4
+00:00:18,430 --> 00:00:25,780
+and don't mistake TypeScript classes with ES6 classes, TypeScript classes are really more powerful than
+
+5
+00:00:25,780 --> 00:00:27,090
+that.
+
+6
+00:00:27,130 --> 00:00:33,430
+Now with that being said, it's time to move onto the next module where we will learn how to split up
+
+7
+00:00:33,430 --> 00:00:37,990
+our code over multiple files and modularize our project,
+
+8
+00:00:38,050 --> 00:00:45,620
+something you really want to use especially when using classes but in any bigger project as well.
+
+9
+00:00:45,670 --> 00:00:48,180
+So let's have a look at this in the next module.

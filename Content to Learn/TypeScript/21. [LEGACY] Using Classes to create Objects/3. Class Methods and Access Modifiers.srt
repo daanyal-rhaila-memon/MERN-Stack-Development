@@ -1,0 +1,183 @@
+1
+00:00:02,580 --> 00:00:09,240
+I already said that I can't access type and age from outside but what sense does this make to set up
+
+2
+00:00:09,240 --> 00:00:11,100
+properties like this then?
+
+3
+00:00:11,640 --> 00:00:19,650
+Well let's add a method to this person class because we can add methods too and let's say we have one
+
+4
+00:00:19,650 --> 00:00:27,710
+which is called printAge and this is how we set up a method, like a function without the function keyword
+
+5
+00:00:27,720 --> 00:00:29,860
+and printAge
+
+6
+00:00:29,920 --> 00:00:34,630
+should simply give me this age.
+
+7
+00:00:34,720 --> 00:00:42,490
+Now here, I can access age because I'm inside of this class or later on, inside of this object and private
+
+8
+00:00:42,490 --> 00:00:45,080
+means accessible from inside,
+
+9
+00:00:45,100 --> 00:00:52,860
+so I have no problem with accessing it. If I also want to set a protected or private property from outside,
+
+10
+00:00:53,110 --> 00:00:56,290
+I could create the setType method, of course
+
+11
+00:00:56,300 --> 00:01:03,520
+the name is up to you, pass a type which should be a string since the type property also is a string and
+
+12
+00:01:03,520 --> 00:01:07,650
+then set this type equal to type,
+
+13
+00:01:07,880 --> 00:01:17,270
+I can thereafter print this type to see that this worked. With these changes in place, I can call person
+
+14
+00:01:17,300 --> 00:01:29,510
+printAge and I can call console log person or no, I don't have to console log, I can just call person setType
+
+15
+00:01:29,530 --> 00:01:35,260
+cool guy because that's what I am.
+
+16
+00:01:35,330 --> 00:01:43,550
+So printAge and of course we would see undefined since age isn't set up, so I can initialize it up there,
+
+17
+00:01:43,550 --> 00:01:45,060
+that also works.
+
+18
+00:01:45,110 --> 00:01:51,280
+I can initialize properties right after or right when declaring them here,
+
+19
+00:01:51,320 --> 00:01:54,410
+I don't have to initialize them through the constructor,
+
+20
+00:01:54,410 --> 00:01:55,940
+I can do it up here
+
+21
+00:01:55,940 --> 00:02:04,420
+too. With that if I save this, it gets compiled automatically while you still see Max max, then you see my age,
+
+22
+00:02:04,460 --> 00:02:13,960
+so the initialization worked as did the try to access a private property inside of this class or object
+
+23
+00:02:14,240 --> 00:02:17,240
+and you see that setType also worked
+
+24
+00:02:17,240 --> 00:02:25,530
+since I see cool guy here and I printed this type after assigning it here in the setType method.
+
+25
+00:02:25,970 --> 00:02:30,490
+So this is how you initialize properties right
+
+26
+00:02:30,500 --> 00:02:38,000
+when declaring them, how you create methods which you may access from outside and how you can access
+
+27
+00:02:38,000 --> 00:02:42,320
+private properties inside your person class.
+
+28
+00:02:42,320 --> 00:02:48,720
+Now one important thing to know is that methods can also be private or protected
+
+29
+00:02:49,190 --> 00:02:53,950
+which serves the same purpose as private and protected properties serve.
+
+30
+00:02:54,290 --> 00:02:59,960
+You can't access them from outside but you can use them inside of your class.
+
+31
+00:03:00,200 --> 00:03:09,010
+So if you set setType to private for example, well then we could say that we want to access it whenever
+
+32
+00:03:09,110 --> 00:03:18,050
+we print the age and we want to set it to old guy. With that,
+
+33
+00:03:18,200 --> 00:03:27,990
+I of course have to remove or comment out this line here cause it won't work with private method and
+
+34
+00:03:28,180 --> 00:03:38,350
+if I save this, we now see Max max 27 and then old guy because I'm setting a type of old guy here and
+
+35
+00:03:38,350 --> 00:03:46,420
+I call this setType whenever I print the age. Also important, you have to use this if you want to access properties
+
+36
+00:03:46,420 --> 00:03:54,220
+or methods of an object when you are inside of it, like here in the constructor or here when we print the age or
+
+37
+00:03:54,340 --> 00:03:58,160
+here when we assign the type or here when we print the age.
+
+38
+00:03:58,240 --> 00:04:06,040
+That was a lot of talking about this relatively simple yet complex class keyword and how to create and
+
+39
+00:04:06,040 --> 00:04:08,890
+use classes. As you saw,
+
+40
+00:04:08,950 --> 00:04:16,180
+it really makes creating such blueprints of which you can create new object simple and with the
+
+41
+00:04:16,290 --> 00:04:18,610
+private and protected modifiers
+
+42
+00:04:18,610 --> 00:04:25,750
+here, you get powerful ways of controlling who is able to access your properties and methods in a class.
+
+43
+00:04:25,760 --> 00:04:34,990
+Another very important concept added with ES6 as well as with TypeScript is that your classes can also
+
+44
+00:04:34,990 --> 00:04:40,260
+inherit from each other, so you may extend classes and implement inheritance.
+
+45
+00:04:40,480 --> 00:04:41,180
+How?
+
+46
+00:04:41,230 --> 00:04:42,430
+Well, let's have a look.

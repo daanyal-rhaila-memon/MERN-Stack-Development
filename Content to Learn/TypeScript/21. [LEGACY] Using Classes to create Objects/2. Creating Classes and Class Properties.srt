@@ -1,0 +1,424 @@
+1
+
+00:00:02,090  -->  00:00:03,590
+So let's create a class,
+
+2
+
+00:00:03,590  -->  00:00:08,490
+we do this with the class keyword and then we can pick whatever name we want,
+
+3
+
+00:00:08,500  -->  00:00:10,080
+let's say person.
+
+4
+
+00:00:10,160  -->  00:00:12,630
+This will give us a person class
+
+5
+
+00:00:12,920  -->  00:00:22,040
+and if you are familiar with ES6 features, so far that's the same way how you create a class in ES6
+
+6
+
+00:00:22,190  -->  00:00:29,840
+and for this module of course, it really helps to know about object-oriented programming
+
+7
+
+00:00:29,990  -->  00:00:37,910
+and if you already know some other languages which use classes. I'm not going to dive super deep into
+
+8
+
+00:00:38,390  -->  00:00:42,600
+explaining what classes are and what you use them for,
+
+9
+
+00:00:42,650  -->  00:00:50,720
+basically they allow you to prepare some kind of blueprints for objects, so you can later on create objects
+
+10
+
+00:00:50,720  -->  00:00:59,060
+based on a class to then make sure that this object already has some properties or methods which again
+
+11
+
+00:00:59,060  -->  00:01:02,120
+you define in this class we're setting up here
+
+12
+
+00:01:02,390  -->  00:01:10,310
+but if that is all new to you, definitely check out some tutorials on object-oriented programming and
+
+13
+
+00:01:10,310  -->  00:01:12,070
+classes in general
+
+14
+
+00:01:12,230  -->  00:01:17,310
+and it probably is a good idea to also have a look at ES6 classes.
+
+15
+
+00:01:17,420  -->  00:01:23,990
+So enough of talking. I'm creating a class here to create such a blueprint and I could give this class
+
+16
+
+00:01:24,000  -->  00:01:31,730
+a property, name for example, which should be of type string and that already is one important difference
+
+17
+
+00:01:31,730  -->  00:01:34,040
+to ES6 classes.
+
+18
+
+00:01:34,130  -->  00:01:37,910
+You create properties just like that in TypeScript,
+
+19
+
+00:01:37,910  -->  00:01:42,540
+you don't have to set them up with the this keyword in the constructor of a class,
+
+20
+
+00:01:42,650  -->  00:01:45,310
+you assign them directly in the class body
+
+21
+
+00:01:45,590  -->  00:01:53,150
+as you might know it from other languages, like again C# or Java. You could prefix or prepend this
+
+22
+
+00:01:53,210  -->  00:02:04,160
+name property here with a public keyword and that would make this property available to
+
+23
+
+00:02:04,190  -->  00:02:09,680
+whoever wants to access it but I can leave it out since the default is public,
+
+24
+
+00:02:09,680  -->  00:02:14,490
+so this property will be public which means accessible from outside.
+
+25
+
+00:02:14,900  -->  00:02:22,250
+So I created the property on this class and I can add another one, let's say type but let's say that
+
+26
+
+00:02:22,250  -->  00:02:30,500
+I want type to be a private property, which means you can only access it from inside of this class
+
+27
+
+00:02:30,500  -->  00:02:33,230
+or later on whichever object you create
+
+28
+
+00:02:33,230  -->  00:02:39,300
+based on this class. So you can't set or read it from outside of this
+
+29
+
+00:02:39,470  -->  00:02:47,480
+and that also is a major addition because Javascript, no matter if we're talking about ES5 or ES6, doesn't
+
+30
+
+00:02:47,600  -->  00:02:52,860
+offer this kind of support or these kinds of properties,
+
+31
+
+00:02:52,880  -->  00:02:58,730
+it doesn't know private and public properties, everything is public there and you have to use some kind
+
+32
+
+00:02:58,730  -->  00:03:03,930
+of hacks or workarounds to create kind of private properties.
+
+33
+
+00:03:05,060  -->  00:03:12,440
+So here in TypeScript, I create a private property type like this and I assign a type of string to this
+
+34
+
+00:03:12,440  -->  00:03:14,000
+property.
+
+35
+
+00:03:14,060  -->  00:03:16,990
+I can also create a protected property
+
+36
+
+00:03:17,240  -->  00:03:26,900
+and what's different because protected and private? Private properties are only available or accessible
+
+37
+
+00:03:27,230  -->  00:03:32,780
+from the object you base or you create based on this person class,
+
+38
+
+00:03:32,810  -->  00:03:37,550
+so only within this object. Protected properties
+
+39
+
+00:03:37,550  -->  00:03:39,610
+also meet this definition
+
+40
+
+00:03:39,710  -->  00:03:49,040
+but additionally, they're also accessible from any objects or classes which inherit from this class.
+
+41
+
+00:03:49,220  -->  00:03:55,730
+So if we were to inherit from this person class and I will come back to inheritance later on, then
+
+42
+
+00:03:55,730  -->  00:04:03,350
+the child class which inherited from person would also have access to a protected property but not
+
+43
+
+00:04:03,380  -->  00:04:05,330
+to a private one,
+
+44
+
+00:04:05,360  -->  00:04:12,350
+so let's say we have the protected property age which should be a number here. That was quite a lot of
+
+45
+
+00:04:12,350  -->  00:04:19,310
+talk about properties but it is important to understand how you can modify them to make them available
+
+46
+
+00:04:19,340  -->  00:04:26,180
+only inside or outside of this class and it is important to understand that you set them up directly
+
+47
+
+00:04:26,180  -->  00:04:29,540
+in the class body and not in the constructor.
+
+48
+
+00:04:29,540  -->  00:04:37,400
+That being said, you can provide a constructor function which may take some arguments, like name and which
+
+49
+
+00:04:37,400  -->  00:04:44,710
+then allows you to assign this name to the name property,
+
+50
+
+00:04:44,780  -->  00:04:52,310
+so this name here refers to the property of this class, whereas this name refers to the argument passed
+
+51
+
+00:04:52,310  -->  00:04:55,650
+to the constructor. As a side note,
+
+52
+
+00:04:55,760  -->  00:05:02,720
+there is a quick shortcut TypeScript offers you for setting up a property which you also want to
+
+53
+
+00:05:02,720  -->  00:05:04,870
+set in the constructor.
+
+54
+
+00:05:04,880  -->  00:05:11,790
+Imagine we have something like a username, so we have this name and we also have a username,
+
+55
+
+00:05:12,180  -->  00:05:17,800
+then we could also say public username of type string.
+
+56
+
+00:05:17,810  -->  00:05:20,630
+Notice the public keyword here,
+
+57
+
+00:05:20,780  -->  00:05:27,350
+with that I'm telling TypeScript not only expect to get a username argument in the constructor function
+
+58
+
+00:05:27,800  -->  00:05:33,840
+but also automatically create a public property in this person class
+
+59
+
+00:05:33,980  -->  00:05:40,790
+and this could be private or protected too and assign the argument you get passed into the constructor
+
+60
+
+00:05:41,070  -->  00:05:42,730
+to this property.
+
+61
+
+00:05:42,800  -->  00:05:51,830
+So this expression here basically is a shortcut for creating a property up here, getting the argument
+
+62
+
+00:05:52,130  -->  00:05:55,470
+and then assigning the argument, put it in other words,
+
+63
+
+00:05:55,550  -->  00:06:02,640
+I could also write public name, rid of this, get rid of this and it will still work the same
+
+64
+
+00:06:03,020  -->  00:06:10,580
+but I will leave this kind of mixed set up to have a good example of both possible ways of creating
+
+65
+
+00:06:10,580  -->  00:06:14,350
+and assigning properties. Now before going more into detail,
+
+66
+
+00:06:14,360  -->  00:06:22,310
+let's use this class and I do use a class by instantiating it, which means I create an object based on
+
+67
+
+00:06:22,310  -->  00:06:31,700
+this class. I will store this object, make it a const, in this person constant here and I instantiate it
+
+68
+
+00:06:31,880  -->  00:06:34,430
+with the new keyword,
+
+69
+
+00:06:34,640  -->  00:06:37,810
+so I create a new person like this, new person.
+
+70
+
+00:06:37,820  -->  00:06:43,130
+Now of course the person here expects to get two arguments since the constructor expects to get two
+
+71
+
+00:06:43,130  -->  00:06:48,550
+arguments, as we call the constructor with this new person call here.
+
+72
+
+00:06:48,980  -->  00:06:56,180
+So I pass Max as my name and the username might be max with a lower case M,
+
+73
+
+00:06:56,210  -->  00:06:59,090
+very very creative here, I know.
+
+74
+
+00:06:59,240  -->  00:07:06,200
+So I created my person and I can then log this person to the console and I will save this and then
+
+75
+
+00:07:06,200  -->  00:07:14,120
+let's have a look at the console. You see my person here, it is of type person as you can see, it has the
+
+76
+
+00:07:14,120  -->  00:07:20,500
+username max with a lowercase m and the real name is Max with an uppercase M.
+
+77
+
+00:07:20,510  -->  00:07:29,210
+So as you can see, this uses the constructor function, it is able to assign the username here with
+
+78
+
+00:07:29,310  -->  00:07:36,760
+this shorter setup syntax as well as the name with the longer setup syntax here
+
+79
+
+00:07:36,950  -->  00:07:44,110
+and to prove this, I can also access name and username like this.
+
+80
+
+00:07:44,950  -->  00:07:54,760
+Notice that my IDE doesn't offer me type or age because both are private or protected, which means not
+
+81
+
+00:07:54,790  -->  00:07:56,430
+accessible from outside,
+
+82
+
+00:07:56,440  -->  00:08:00,460
+I can only use them inside of this person object,
+
+83
+
+00:08:00,460  -->  00:08:06,110
+I can't access them from outside like I'm doing with name or username. If I save
+
+84
+
+00:08:06,160  -->  00:08:12,740
+this, I see Max and max here because I access the name and the username
+
+85
+
+00:08:12,760  -->  00:08:16,680
+and this again proves that this shorter syntax here works too.

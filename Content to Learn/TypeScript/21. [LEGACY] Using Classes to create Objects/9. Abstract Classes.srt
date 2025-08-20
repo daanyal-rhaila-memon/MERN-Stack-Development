@@ -1,0 +1,255 @@
+1
+00:00:01,920 --> 00:00:07,740
+I'll conclude this class module with a look at abstract classes.
+
+2
+00:00:07,750 --> 00:00:10,930
+Now what are abstract classes? Abstract
+
+3
+00:00:10,950 --> 00:00:19,450
+classes are marked with the abstract keyword, so thereafter we have this normal class declaration and
+
+4
+00:00:19,600 --> 00:00:24,730
+abstract classes cannot be instantiated directly.
+
+5
+00:00:24,790 --> 00:00:28,080
+So what is the sense of abstract classes then?
+
+6
+00:00:28,360 --> 00:00:32,020
+Well, we have to inherit from them, always,
+
+7
+00:00:32,020 --> 00:00:36,510
+they're basically just there to be inherited from.
+
+8
+00:00:36,880 --> 00:00:43,740
+And why would you want to create a class which you can't instantiate, which needs to be extended?
+
+9
+00:00:44,110 --> 00:00:52,110
+Well maybe because this class never needs to be instantiated but only provide some basic setup other
+
+10
+00:00:52,120 --> 00:00:57,020
+more specialized classes which then will be instantiated need.
+
+11
+00:00:57,070 --> 00:01:01,020
+So let's say we have this project abstract class,
+
+12
+00:01:01,060 --> 00:01:04,760
+it might have a project name which is of type string,
+
+13
+00:01:04,870 --> 00:01:10,790
+it might have a budget which is a number and you may even assign values,
+
+14
+00:01:10,840 --> 00:01:18,850
+so project name might be default, something like that by default. You can also add some methods like
+
+15
+00:01:18,910 --> 00:01:22,910
+calcBudget which does whatever it needs to do,
+
+16
+00:01:22,920 --> 00:01:33,260
+let's say here it simply returns this budget times two and you can also create abstract methods, like
+
+17
+00:01:33,270 --> 00:01:43,800
+so, abstract keyword in front of the method name, changeName which then also may take an argument but and
+
+18
+00:01:43,850 --> 00:01:47,100
+that's important, here we don't have the curly braces,
+
+19
+00:01:47,130 --> 00:01:51,560
+we then don't have the function body, we just say what it should return,
+
+20
+00:01:51,570 --> 00:01:57,850
+so we only define how the function should look like, how the function type should look like
+
+21
+00:01:58,140 --> 00:02:00,630
+but we're not implementing any logic.
+
+22
+00:02:00,690 --> 00:02:05,150
+That's the difference to calcBudget for example where we do implement the logic.
+
+23
+00:02:05,670 --> 00:02:12,440
+So abstract on a class means this class needs to be extended and abstract on a method
+
+24
+00:02:12,480 --> 00:02:13,970
+then means
+
+25
+00:02:14,160 --> 00:02:20,880
+well once we extended this class, we need to implement a changeName method, we are required to do
+
+26
+00:02:20,880 --> 00:02:28,420
+so but we will have to write the logic which is executed by changeName in the child class.
+
+27
+00:02:29,380 --> 00:02:35,050
+So that's the difference to calcBudget which will also be available in the child class of course but
+
+28
+00:02:35,140 --> 00:02:37,490
+which doesn't need to be overwritten,
+
+29
+00:02:37,610 --> 00:02:42,510
+changeName needs to be overwritten or implemented in the first place.
+
+30
+00:02:42,670 --> 00:02:45,460
+So that's my abstract class
+
+31
+00:02:45,760 --> 00:02:48,900
+and with that, I can create a more specialized class,
+
+32
+00:02:48,910 --> 00:02:55,360
+let's say ITProject. An ITProject extends project,
+
+33
+00:02:55,430 --> 00:02:58,910
+project needs to be extended after all, it's abstract
+
+34
+00:02:59,210 --> 00:03:02,490
+and then here I get an error by my IDE.
+
+35
+00:03:02,810 --> 00:03:07,000
+The reason is this right now, I don't implement changeName,
+
+36
+00:03:07,010 --> 00:03:10,460
+you get the same error if you try to compile your code.
+
+37
+00:03:10,610 --> 00:03:18,080
+You'll see that your non-abstract class ITProject does not implement the inherit abstract member changeName,
+
+38
+00:03:18,080 --> 00:03:20,690
+so that's a pretty clear error message,
+
+39
+00:03:20,690 --> 00:03:23,420
+we need to implement changeName.
+
+40
+00:03:23,930 --> 00:03:30,860
+So I will add the changeName method and of course, I have to use the function type setup here, so it
+
+41
+00:03:30,860 --> 00:03:38,480
+will receive a name of type string and shouldn't return anything, so what it will do is it will set
+
+42
+00:03:38,570 --> 00:03:44,120
+this project name equal to name and of course, you would have been able to set this up in your base
+
+43
+00:03:44,120 --> 00:03:50,570
+class here already but I want to show how to create abstract members as well.
+
+44
+00:03:50,570 --> 00:03:59,570
+With that, my ITProject is set up and I can create a new project, which is a new, well project wouldn't
+
+45
+00:03:59,570 --> 00:04:00,270
+work,
+
+46
+00:04:00,320 --> 00:04:08,080
+ITProject because again, project can't be instantiated and if you try to do so and then try to compile,
+
+47
+00:04:08,180 --> 00:04:14,530
+you also get the error, cannot create an instance of the abstract class project.
+
+48
+00:04:14,930 --> 00:04:24,400
+So we have to instead instantiate ITProject and then we can log the console or use console log
+
+49
+00:04:24,500 --> 00:04:28,300
+new project to have a look at it,
+
+50
+00:04:28,680 --> 00:04:38,760
+then we can call new project changeName and change it to Super IT Project and
+
+51
+00:04:38,920 --> 00:04:42,360
+then we can simply log new project again.
+
+52
+00:04:42,430 --> 00:04:50,690
+Well let's have a look at all of that. As you see, the first console log which is here right after instantiating
+
+53
+00:04:50,690 --> 00:04:57,380
+it gives me a project name of default and that's the only property this project has,
+
+54
+00:04:57,380 --> 00:04:58,080
+right.
+
+55
+00:04:58,430 --> 00:05:05,930
+If I were to initialize budget up here to let's say 1000 and rerun this, then you see we now also have
+
+56
+00:05:05,930 --> 00:05:06,680
+budget,
+
+57
+00:05:06,740 --> 00:05:10,050
+we didn't see it before because it wasn't initialized yet.
+
+58
+00:05:10,700 --> 00:05:17,390
+Now the second thing we see in the console of course comes from this console log which is called after
+
+59
+00:05:17,390 --> 00:05:22,970
+calling changeName, which is why the name changed to Super IT Project,
+
+60
+00:05:22,970 --> 00:05:26,620
+the budget still is untouched, it's still 1000.
+
+61
+00:05:27,080 --> 00:05:31,640
+So again, an abstract class needs to be inherited,
+
+62
+00:05:31,700 --> 00:05:38,490
+it provides a base class in cases where you know that you will need such a general blueprint but that you
+
+63
+00:05:38,630 --> 00:05:46,210
+will never use this blueprint on its own, that you instead need some specialized versions of that blueprint
+
+64
+00:05:46,640 --> 00:05:54,440
+but that you want you bundle some general functionality or logic in this abstract base class.

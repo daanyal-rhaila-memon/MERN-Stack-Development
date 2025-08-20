@@ -1,0 +1,119 @@
+1
+00:00:02,410 --> 00:00:12,220
+So let's have a look at inheritance next. Let's say I have my person class and I want to create a specific
+
+2
+00:00:12,310 --> 00:00:20,480
+Max class of this person, just because well I like my name so much. So I create a class, Max
+
+3
+00:00:20,500 --> 00:00:25,540
+and you probably should read one matching your first name or whatever you like
+
+4
+00:00:25,540 --> 00:00:28,780
+and I want to use this person class,
+
+5
+00:00:28,870 --> 00:00:31,000
+I just want to fine tune it a little bit.
+
+6
+00:00:31,000 --> 00:00:33,960
+I want to have the printAge and the setType
+
+7
+00:00:34,010 --> 00:00:40,450
+method, I want to have all these properties but I want name to be Max by default.
+
+8
+00:00:40,450 --> 00:00:47,620
+Now rewriting this whole class would be not what I want because well I duplicate all the code and it
+
+9
+00:00:47,620 --> 00:00:51,040
+makes my code less reusable and so on,
+
+10
+00:00:51,340 --> 00:00:59,800
+so instead I extend the person class with extends keyword, I extend person, like this.
+
+11
+00:00:59,800 --> 00:01:08,020
+What this means is take this person class, use all of the code inside of it and now whatever I specify
+
+12
+00:01:08,020 --> 00:01:10,710
+in here gets either appended
+
+13
+00:01:10,820 --> 00:01:15,960
+if it isn't included in the person class or overwritten if it was included.
+
+14
+00:01:16,360 --> 00:01:25,720
+So if I were to say name should be equal to Max, then this will overwrite the name property in my person
+
+15
+00:01:25,720 --> 00:01:35,920
+class, which means that if I now create a new person or a new Max to be precise, a new Max, like this
+
+16
+00:01:36,670 --> 00:01:37,570
+and I print Max,
+
+17
+00:01:41,640 --> 00:01:47,910
+well then you see I would get an error because the constructor here still expects two arguments because
+
+18
+00:01:47,910 --> 00:01:50,460
+I'm still using this constructor. Again
+
+19
+00:01:50,580 --> 00:02:02,400
+Max, this class has all the content of the person class plus or overwritten, whatever I define here.
+
+20
+00:02:02,400 --> 00:02:05,200
+So I still have to use the constructor,
+
+21
+00:02:05,220 --> 00:02:10,300
+so let's actually see what happens if I pass
+
+22
+00:02:10,590 --> 00:02:16,680
+Anna here as a name and then lowercase max as a username,
+
+23
+00:02:16,710 --> 00:02:17,880
+let's see what happens.
+
+24
+00:02:19,900 --> 00:02:29,620
+You see the name is still Max, even though I passed Anna to the constructor which sets this name equal
+
+25
+00:02:29,620 --> 00:02:30,230
+to
+
+26
+00:02:30,440 --> 00:02:37,270
+Anna in this case, it gets overwritten by this property definition here in the Max class.
+
+27
+00:02:37,270 --> 00:02:46,330
+So the content defined in the main class here always overwrites the content of your superclass, of your
+
+28
+00:02:46,330 --> 00:02:47,690
+parent class,
+
+29
+00:02:47,890 --> 00:02:54,790
+so it doesn't matter that I pass Anna here. Nonetheless, I might have solved this issue by adding a constructor
+
+30
+00:02:54,790 --> 00:02:58,570
+here and I will come back to constructors in the next lecture.

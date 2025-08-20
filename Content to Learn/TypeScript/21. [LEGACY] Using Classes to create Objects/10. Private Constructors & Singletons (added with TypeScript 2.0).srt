@@ -1,0 +1,194 @@
+1
+
+00:00:01,740  -->  00:00:06,630
+TypeScript 2.0 also gives us some nice new features regarding classes.
+
+2
+
+00:00:06,700  -->  00:00:13,110
+The first feature I want to show here is about private constructors,
+
+3
+
+00:00:13,180  -->  00:00:15,200
+now this certainly might sound strange,
+
+4
+
+00:00:15,250  -->  00:00:16,630
+let's have a look at it.
+
+5
+
+00:00:16,640  -->  00:00:24,070
+I added a class here and this class uses a static property instance here which is private, which is
+
+6
+
+00:00:24,070  -->  00:00:27,200
+the first thing which might look strange since
+
+7
+
+00:00:27,310  -->  00:00:30,640
+what's the sense of a static property which is private,
+
+8
+
+00:00:30,640  -->  00:00:32,260
+we can't access it from outside,
+
+9
+
+00:00:32,260  -->  00:00:33,340
+right?
+
+10
+
+00:00:33,390  -->  00:00:37,220
+The second and even more confusing thing is the constructor here,
+
+11
+
+00:00:37,330  -->  00:00:38,860
+it's also private
+
+12
+
+00:00:39,130  -->  00:00:45,850
+and now this really makes no sense at all because how can we use a class if we can't construct it, if
+
+13
+
+00:00:45,850  -->  00:00:48,340
+we can't create an instance of it
+
+14
+
+00:00:48,370  -->  00:00:54,020
+and we need a constructor for that. In all the code above when we use the new keyword like here,
+
+15
+
+00:00:54,190  -->  00:00:57,100
+we were using our class or/and the constructor
+
+16
+
+00:00:57,100  -->  00:01:04,360
+each class has to create a copy of that blueprint this class provides us. Well turns out here we're having
+
+17
+
+00:01:04,360  -->  00:01:07,080
+a pattern which is called a singleton class,
+
+18
+
+00:01:07,210  -->  00:01:11,950
+you could already create this before, without these private accessors, like that.
+
+19
+
+00:01:11,950  -->  00:01:13,270
+That was possible before
+
+20
+
+00:01:13,330  -->  00:01:19,680
+and this allows you to set up a class where you only want to have one instance during runtime.
+
+21
+
+00:01:19,710  -->  00:01:24,280
+This pattern is something you see in a lot of languages, it's nothing TypeScript specific,
+
+22
+
+00:01:24,280  -->  00:01:30,940
+a lot of or all object-oriented languages offer this pattern and it might be useful if you know
+
+23
+
+00:01:31,090  -->  00:01:37,990
+well I want to have an instance of this class and not a static class but I only need one instance because
+
+24
+
+00:01:38,020  -->  00:01:43,930
+I want to have, let's say an array of data in this class and this array has to be the same in my
+
+25
+
+00:01:43,960  -->  00:01:45,200
+whole application.
+
+26
+
+00:01:45,430  -->  00:01:47,350
+So that would be where you use such a singleton
+
+27
+
+00:01:47,380  -->  00:01:52,720
+and again, you could create this before but now since you can mark constructors as private,
+
+28
+
+00:01:52,720  -->  00:01:59,860
+you can force this class to only be used as a singleton, which means you can't instantiate this class
+
+29
+
+00:01:59,860  -->  00:02:01,330
+from outside anymore.
+
+30
+
+00:02:01,540  -->  00:02:08,350
+Indeed if I run tsc here, you'll see that I get an error that the constructor of class OnlyOne is
+
+31
+
+00:02:08,350  -->  00:02:12,100
+private and only accessible within the class declaration.
+
+32
+
+00:02:12,100  -->  00:02:15,370
+So this code here leads to an error,
+
+33
+
+00:02:15,370  -->  00:02:21,820
+the code I need to use to create an instance can be found inside of this class in this public static
+
+34
+
+00:02:21,820  -->  00:02:24,490
+method, getInstance, which I'm calling here.
+
+35
+
+00:02:24,520  -->  00:02:31,180
+So when I call this method here, I checked if I already have such an instance, so it that if it has been instantiated
+
+36
+
+00:02:31,180  -->  00:02:37,250
+this one time I want to instantiate it and if it has been instantiated, then I simply return this instance,
+
+37
+
+00:02:37,660  -->  00:02:44,740
+otherwise I create a new instance and thereafter, no more instances will be created and I can control
+
+38
+
+00:02:44,740  -->  00:02:52,330
+this since no instances can be created from outside too due to this private accessor here added to the
+
+39
+
+00:02:52,330  -->  00:02:53,210
+constructor.

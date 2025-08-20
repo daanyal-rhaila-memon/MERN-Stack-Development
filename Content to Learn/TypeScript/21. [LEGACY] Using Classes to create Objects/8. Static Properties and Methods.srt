@@ -1,0 +1,184 @@
+1
+
+00:00:02,030  -->  00:00:09,270
+Typescript also allows you to define static properties or methods in a class,
+
+2
+
+00:00:09,500  -->  00:00:18,090
+so static properties and methods and I will show this here. I'll create a new class which I'll name helpers
+
+3
+
+00:00:18,780  -->  00:00:24,870
+and this class should bundle some helper properties or methods I can use throughout my application for
+
+4
+
+00:00:24,870  -->  00:00:26,050
+example.
+
+5
+
+00:00:26,490  -->  00:00:29,920
+Let's say I want to get access to pi,
+
+6
+
+00:00:30,000  -->  00:00:35,810
+so this mathematical symbol to calculate the diameter for example.
+
+7
+
+00:00:36,210  -->  00:00:41,670
+Now actually, the built-in math object already offers such a property we can access 
+
+8
+
+00:00:41,670  -->  00:00:49,350
+but let's say that would not be there. Then I could create a new property called pi and this would be
+
+9
+
+00:00:49,350  -->  00:00:54,380
+of type number of course and it's something like 3.14 and so on.
+
+10
+
+00:00:55,620  -->  00:01:03,130
+Now if I defined it like this, the only way I can access it is by instantiating this helper,
+
+11
+
+00:01:03,780  -->  00:01:07,760
+however I don't always want to instantiate it.
+
+12
+
+00:01:07,830  -->  00:01:14,440
+Consider I have this calculation where I just want to calculate two times pi,
+
+13
+
+00:01:14,460  -->  00:01:17,120
+now I couldn't access helpers.pi,
+
+14
+
+00:01:17,130  -->  00:01:24,020
+that does not work because helpers is the class and not an instance of that class.
+
+15
+
+00:01:24,120  -->  00:01:26,160
+So that is annoying,
+
+16
+
+00:01:26,160  -->  00:01:27,550
+that won't work,
+
+17
+
+00:01:27,570  -->  00:01:30,170
+so that is a non-working code here.
+
+18
+
+00:01:30,660  -->  00:01:38,280
+I can make this pi property here accessible outside of this class without needing others to instantiate
+
+19
+
+00:01:38,280  -->  00:01:41,800
+the class by adding the static keyword.
+
+20
+
+00:01:41,880  -->  00:01:50,370
+That means you may always use this property, even if you don't instantiate this helper class and helper
+
+21
+
+00:01:50,370  -->  00:01:56,570
+classes actually are a good example for use cases where you would use the static keyword.
+
+22
+
+00:01:56,700  -->  00:02:00,310
+Of course, I can also provide a static method,
+
+23
+
+00:02:00,690  -->  00:02:07,870
+so we use the static keyword and then let's say I have the calcCircumference
+
+24
+
+00:02:08,340  -->  00:02:14,610
+method here which gives me the circumference of a circle.
+
+25
+
+00:02:14,760  -->  00:02:18,510
+I pass the diameter as an argument which should be a number
+
+26
+
+00:02:18,720  -->  00:02:28,820
+and of course I return a number here and in here, I return this pi, accessing this pi property here
+
+27
+
+00:02:28,820  -->  00:02:29,530
+of course,
+
+28
+
+00:02:35,910  -->  00:02:41,610
+times diamter. With this, I can do two things,
+
+29
+
+00:02:41,660  -->  00:02:45,260
+first I can call helpers.pi
+
+30
+
+00:02:45,320  -->  00:02:49,320
+if I just need pi or I could also log
+
+31
+
+00:02:53,490  -->  00:03:01,160
+helpers.calcCircumference and then pass some arbitrary diameter. Both will work as you will see if I save
+
+32
+
+00:03:01,160  -->  00:03:02,930
+this and have a look at the console,
+
+33
+
+00:03:03,950  -->  00:03:17,850
+you see 6.28 for this first console log where I simply double pi and then you see 25.12 for this calculation
+
+34
+
+00:03:17,850  -->  00:03:21,330
+here where I pass 8 as the diameter.
+
+35
+
+00:03:21,420  -->  00:03:25,440
+So that is how you create static methods and properties
+
+36
+
+00:03:25,440  -->  00:03:33,330
+and again, mostly useful for some helper classes which bundles some helper tools you want to create
+
+37
+
+00:03:33,330  -->  00:03:36,810
+for your application or any other application which uses this.

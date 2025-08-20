@@ -1,0 +1,154 @@
+1
+
+00:00:01,730  -->  00:00:03,980
+In the example from the last video,
+
+2
+
+00:00:04,020  -->  00:00:10,820
+notice that I use these shortcuts to create a property, a public property named name which I instantly
+
+3
+
+00:00:10,820  -->  00:00:12,980
+initialized here in the constructor.
+
+4
+
+00:00:12,980  -->  00:00:22,060
+So what I can do is of course, I can simply log right name since this is a public property available
+
+5
+
+00:00:22,310  -->  00:00:26,690
+and right here refers to this single instance which was created.
+
+6
+
+00:00:26,690  -->  00:00:29,440
+Now what I also can do is I can set
+
+7
+
+00:00:29,470  -->  00:00:29,990
+right
+
+8
+
+00:00:29,990  -->  00:00:35,130
+name equal to something else because it is a public property,
+
+9
+
+00:00:35,150  -->  00:00:37,570
+therefore I can access it from outside
+
+10
+
+00:00:37,640  -->  00:00:42,350
+and that not only means reading, like I do here but also setting it.
+
+11
+
+00:00:42,350  -->  00:00:49,990
+Now what if I want to make sure that I only can set it in the constructor here but not at any other
+
+12
+
+00:00:50,000  -->  00:00:50,460
+place,
+
+13
+
+00:00:50,480  -->  00:00:54,390
+so not from outside? I want to make it readable though.
+
+14
+
+00:00:54,860  -->  00:00:57,410
+Well there are two ways to achieve this,
+
+15
+
+00:00:57,470  -->  00:01:03,440
+one would be using a getter. We already learned about getters before, here.
+
+16
+
+00:01:03,620  -->  00:01:06,870
+If you don't specify a setter but only a getter,
+
+17
+
+00:01:06,890  -->  00:01:12,530
+so if we would remove this part here, then we would make this property readonly.
+
+18
+
+00:01:12,920  -->  00:01:19,530
+Well if that is our goal, we can take a shorter route and simply add readonly in front of it.
+
+19
+
+00:01:19,580  -->  00:01:26,150
+Now my IDE doesn't recognize this but this is valid code as you see if I compile this. If I do compile it,
+
+20
+
+00:01:26,630  -->  00:01:30,660
+I get an error that in line 112 which is here,
+
+21
+
+00:01:30,950  -->  00:01:35,170
+I want to assign something to a readonly property.
+
+22
+
+00:01:35,180  -->  00:01:42,200
+Now if you want to avoid nasty IDE errors like these, you can also simply take the long form of setting
+
+23
+
+00:01:42,200  -->  00:01:42,850
+this up,
+
+24
+
+00:01:42,890  -->  00:01:50,950
+so by adding it up, public name which is a string like this and then simply assigning this name equals
+
+25
+
+00:01:50,970  -->  00:01:51,970
+name here
+
+26
+
+00:01:52,190  -->  00:01:54,300
+and now if you add readonly here,
+
+27
+
+00:01:54,380  -->  00:01:57,150
+well at least my IDE doesn't complain anymore
+
+28
+
+00:01:57,230  -->  00:01:59,930
+but again, the first code also worked
+
+29
+
+00:01:59,990  -->  00:02:07,730
+and as you can see we get the same error here that we can't assign a value in this line because we're
+
+30
+
+00:02:07,760  -->  00:02:09,710
+having a readonly property.
+
+31
+
+00:02:09,710  -->  00:02:12,780
+So that's another neat addition with TypeScript 2.0.

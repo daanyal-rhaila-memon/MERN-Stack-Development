@@ -1,0 +1,231 @@
+1
+00:00:01,970 --> 00:00:09,030
+Another cool feature you might know from other languages are getters and setters and vanilla
+
+2
+00:00:09,030 --> 00:00:17,570
+Javascript also has some ways to create getters and setters but TypeScript makes it really easy. I'll
+
+3
+00:00:17,570 --> 00:00:19,470
+create a new class for this,
+
+4
+00:00:19,520 --> 00:00:27,200
+it won't inherit from any class, it's a normal class here and I'll set up a private property called
+
+5
+00:00:27,200 --> 00:00:30,370
+_species which should be of type string.
+
+6
+00:00:30,380 --> 00:00:35,490
+Now generally, you shouldn't prefix your private properties with an underscore,
+
+7
+00:00:35,690 --> 00:00:38,700
+that's the style guide for TypeScript
+
+8
+00:00:38,960 --> 00:00:45,500
+but in this case I'll make an exception and you'll see why in a second because I don't want to be able
+
+9
+00:00:45,500 --> 00:00:49,790
+to access this species property from outside
+
+10
+00:00:50,330 --> 00:00:56,120
+but I want to offer a controlled access, which means through a getter or a setter which allow me to execute
+
+11
+00:00:56,120 --> 00:01:00,540
+some code before actually returning or setting the value.
+
+12
+00:01:00,560 --> 00:01:09,140
+So let's say whenever I try to set this value, I want to check if the string provided is longer than,
+
+13
+00:01:09,160 --> 00:01:11,110
+let's say at least three characters,
+
+14
+00:01:11,300 --> 00:01:17,130
+so I don't want to set species to anything which has only three characters or less.
+
+15
+00:01:17,840 --> 00:01:24,980
+So I can create a setter for that which allows me to execute some code whenever I try to set a value
+
+16
+00:01:25,160 --> 00:01:29,560
+and I do it with the set keyword and then species.
+
+17
+00:01:29,570 --> 00:01:36,500
+Now this name is up to you but this will be the property name accessible from outside later on.
+
+18
+00:01:36,980 --> 00:01:41,150
+I do add parentheses here but I will not call it like a method from outside,
+
+19
+00:01:41,150 --> 00:01:42,940
+that's important to understand,
+
+20
+00:01:43,010 --> 00:01:48,650
+I will call it like a property but I set it up like a method because again, I can execute some code
+
+21
+00:01:48,650 --> 00:02:00,180
+here, like a method which gets called. It will actually also get a parameter of type string and TypeScript
+
+22
+00:02:00,180 --> 00:02:06,240
+will pass this parameter for me kind of. In the end, it will be Javascript code which looks differently
+
+23
+00:02:06,280 --> 00:02:14,550
+anyways but you can think of this value being passed to this kind of only theoretically existent method
+
+24
+00:02:14,550 --> 00:02:16,650
+here automatically.
+
+25
+00:02:16,650 --> 00:02:20,830
+So again, I will and you will see this, only call this like a property
+
+26
+00:02:20,940 --> 00:02:26,330
+but behind the scenes it will give me the value I want to assign as an argument to this method that
+
+27
+00:02:26,330 --> 00:02:28,860
+it will execute automatically.
+
+28
+00:02:28,860 --> 00:02:37,080
+So here, I then want to check if the length of value is greater than 3, if that is the case,
+
+29
+00:02:37,080 --> 00:02:48,720
+I want to assign this species to this value, otherwise I will assign this species to default, something
+
+30
+00:02:48,720 --> 00:02:49,670
+like that
+
+31
+00:02:50,140 --> 00:02:54,540
+and I can also set it to this value up here, default value.
+
+32
+00:02:55,020 --> 00:03:01,890
+So that is why I have this underscore because I want to use this species name and therefore, I have
+
+33
+00:03:01,890 --> 00:03:05,550
+to make sure we have a different name for my private property.
+
+34
+00:03:05,910 --> 00:03:07,760
+Now that allows me to set it
+
+35
+00:03:07,890 --> 00:03:10,100
+but I also want to be able to read it.
+
+36
+00:03:10,290 --> 00:03:18,260
+For this, I'll set up a getter, so I'll use the get keyword with species here, again like method here
+
+37
+00:03:18,270 --> 00:03:24,190
+but with this time without an argument and then here, I decide what I want to return.
+
+38
+00:03:24,210 --> 00:03:30,990
+I do have to return something because I try to get something in the end but I could also return hello
+
+39
+00:03:31,410 --> 00:03:39,270
+and then I would always see hello when I try to access species, that would work fine but I can also return
+
+40
+00:03:39,300 --> 00:03:46,140
+this species or transform it before showing it, whatever I want to do. With that,
+
+41
+00:03:46,140 --> 00:03:57,550
+I set up some getters and setters and then I can create a new plant based on that and I can first log
+
+42
+00:03:57,830 --> 00:04:06,940
+plant.species, notice how I act species without the underscore, that refers to this
+
+43
+00:04:07,020 --> 00:04:11,990
+species property here which is called like a property, not like a function.
+
+44
+00:04:12,060 --> 00:04:23,040
+If I save this, it gets compiled and we see default here, which makes sense because we have default
+
+45
+00:04:23,070 --> 00:04:32,100
+as a default value. Next, if I try to set species to let's say AB,
+
+46
+00:04:32,190 --> 00:04:38,950
+so only two characters and then I log plant.species again,
+
+47
+00:04:39,940 --> 00:04:42,160
+well let's see what we now see in the console.
+
+48
+00:04:43,590 --> 00:04:45,410
+Well we see default twice,
+
+49
+00:04:45,600 --> 00:04:53,640
+so the first default here of course stems from this console log but the second default comes from this
+
+50
+00:04:53,640 --> 00:04:54,840
+console log.
+
+51
+00:04:55,080 --> 00:05:02,170
+So species wasn't set to AB because it didn't make it through this validation here,
+
+52
+00:05:02,370 --> 00:05:09,190
+therefore we set it to default and we did not set the value.
+
+53
+00:05:09,340 --> 00:05:18,540
+Now if I copy that code and set species to green plant and I save this,
+
+54
+00:05:18,640 --> 00:05:21,870
+well let's have a look at the console now,
+
+55
+00:05:21,880 --> 00:05:27,770
+now we see green plant being printed because it makes it through this check here
+
+56
+00:05:27,970 --> 00:05:33,630
+and therefore we assigned this species the new value which would be green plant in this case.
+
+57
+00:05:33,880 --> 00:05:39,670
+So that is a convenient way to use getters and setters to control access to your properties and make
+
+58
+00:05:39,670 --> 00:05:45,400
+sure that certain criteria are met before assigning a value or returning a value.

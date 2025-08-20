@@ -1,0 +1,79 @@
+1
+00:00:01,730 --> 00:00:06,350
+Now what if I wanted to change the age of my
+
+2
+00:00:09,010 --> 00:00:10,080
+person here?
+
+3
+00:00:10,250 --> 00:00:16,000
+Notice that age is protected, which means it's available in child classes too.
+
+4
+00:00:16,000 --> 00:00:17,950
+I wouldn't have access to type
+
+5
+00:00:18,220 --> 00:00:27,310
+but age is something I can access and I can access it with the this keyword and then set this equal to
+
+6
+00:00:27,320 --> 00:00:38,140
+31 for example. If I save this, we see that now my age is 31 because I can use age with the this keyword
+
+7
+00:00:38,270 --> 00:00:47,150
+as again all the content from here is also available on my Max class, though that is not true for the
+
+8
+00:00:47,150 --> 00:00:51,950
+type which is private, which means it doesn't get inherited,
+
+9
+00:00:51,950 --> 00:00:55,510
+it stays in the super, in the parent class.
+
+10
+00:00:55,640 --> 00:01:04,770
+So if I try to log this type here, you already see I get an error here
+
+11
+00:01:04,940 --> 00:01:11,450
+and I also get a compilation error here because type is private and only accessible within the class
+
+12
+00:01:11,450 --> 00:01:14,610
+person and not by any child classes.
+
+13
+00:01:14,660 --> 00:01:22,970
+So I get undefined here as an error because I don't have access to that, so definitely have to get
+
+14
+00:01:22,970 --> 00:01:29,360
+rid of that and here you see the difference between protected and private. I can access protected properties but
+
+15
+00:01:29,360 --> 00:01:31,130
+not private ones.
+
+16
+00:01:31,130 --> 00:01:35,560
+And of course, you can adjust this Max class to whatever you want,
+
+17
+00:01:35,560 --> 00:01:42,700
+you can add methods, properties, just always keep in mind you inherit everything from your base class
+
+18
+00:01:42,950 --> 00:01:51,140
+except for private name or methods and properties marked as private and then you can extend it by
+
+19
+00:01:51,140 --> 00:01:57,100
+writing your own logic or overwrite it if you happen to define a method called printAge
+
+20
+00:01:57,110 --> 00:02:02,210
+in this case here or a property called name as you saw earlier in this module.
