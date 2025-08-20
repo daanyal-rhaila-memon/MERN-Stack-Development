@@ -1,0 +1,89 @@
+1
+
+00:00:01,530  -->  00:00:09,460
+Speaking of arrays, you can also assign a generic type to be an array for example.
+
+2
+
+00:00:09,480  -->  00:00:10,460
+What do I mean with that?
+
+3
+
+00:00:10,470  -->  00:00:18,660
+Well let's have a look at this function, printAll which also is a generic function and which takes some arguments
+
+4
+
+00:00:18,750  -->  00:00:24,240
+and then I could of course also say that the arguments I want are an array of the type I use in this
+
+5
+
+00:00:24,240  -->  00:00:25,300
+function
+
+6
+
+00:00:25,530  -->  00:00:32,310
+and with that, I could then call forEach because TypeScript knows that the arguments I get will be an
+
+7
+
+00:00:32,310  -->  00:00:37,800
+array since I'm specifying that here, it doesn't know the type of the elements in that array but it knows
+
+8
+
+00:00:37,800  -->  00:00:39,150
+that it will be an array
+
+9
+
+00:00:39,570  -->  00:00:41,790
+and then I can just say element
+
+10
+
+00:00:45,220  -->  00:00:51,310
+console log element, so just the fat arrow function here with the built-in forEach method on that array.
+
+11
+
+00:00:51,310  -->  00:01:02,710
+With that, I can then call printAll, pass an array of let's say apples and here I want that banana,
+
+12
+
+00:01:04,240  -->  00:01:05,420
+close that array
+
+13
+
+00:01:05,620  -->  00:01:11,920
+and that would be fine but I can also be more explicit and also tell TypeScript that this will be of
+
+14
+
+00:01:11,920  -->  00:01:13,040
+type string array
+
+15
+
+00:01:13,060  -->  00:01:21,480
+excuse me, string because just string, not string array because the argument here is of type than of
+
+16
+
+00:01:21,520  -->  00:01:23,230
+array of strings.
+
+17
+
+00:01:23,230  -->  00:01:25,290
+So with that, if I save this,
+
+18
+
+00:01:25,330  -->  00:01:29,330
+well we see apple and banana down here being printed to the console.

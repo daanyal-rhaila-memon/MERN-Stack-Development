@@ -1,0 +1,31 @@
+1
+00:00:01,370 --> 00:00:08,850
+We're staying in a world of new features and this module has a look at a very cool new features, generic
+
+2
+00:00:09,320 --> 00:00:13,820
+and this module has a look at the very cool new feature, generics.
+
+3
+00:00:13,820 --> 00:00:23,360
+Generics as you will learn are a powerful tool to write really dynamic code, flexible code and use
+
+4
+00:00:23,360 --> 00:00:31,320
+both the power of TypeScript and the fact that it needs to know what type a certain property or variable
+
+5
+00:00:31,400 --> 00:00:39,680
+for example has whilst also giving you a lot of flexibility and writing certain functions which can
+
+6
+00:00:39,680 --> 00:00:45,510
+work with a lot of types whilst at the same time making sure they're getting the right type.
+
+7
+00:00:45,680 --> 00:00:47,010
+How does that make sense?
+
+8
+00:00:47,090 --> 00:00:49,210
+Let's have a look at it in this module.

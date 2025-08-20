@@ -1,0 +1,143 @@
+1
+00:00:02,130 --> 00:00:11,190
+I can make it more useful by explicitly stating that T should extend something.
+
+2
+00:00:11,220 --> 00:00:17,760
+Now with the extends keyword here in the generic type declaration and the same is true for generic methods,
+
+3
+00:00:17,790 --> 00:00:19,910
+you could use the same syntax,
+
+4
+00:00:19,950 --> 00:00:23,120
+I can tell which base types should be allowed.
+
+5
+00:00:23,280 --> 00:00:25,320
+So this is a generic constraint,
+
+6
+00:00:25,350 --> 00:00:29,130
+I'm constraining which types can be used in this generic class.
+
+7
+00:00:29,280 --> 00:00:36,150
+I can constrain this to number and you could argue if that makes that much sense because now
+
+8
+00:00:36,480 --> 00:00:44,380
+I could just say that this class should only be able to use numbers but if I do it like this, I can go
+
+9
+00:00:44,400 --> 00:00:48,830
+down to my SimpleMath class, enter number here and save this
+
+10
+00:00:48,870 --> 00:00:54,850
+and now if I try to add something here as a parameter,
+
+11
+00:00:55,050 --> 00:01:00,270
+now you see I'm getting an error because string clearly is not of type number.
+
+12
+00:01:00,300 --> 00:01:06,670
+So with this set up, I'm still getting not a number here but I'm getting this compilation error,
+
+13
+00:01:06,840 --> 00:01:10,400
+so I will have to fallback to number.
+
+14
+00:01:10,500 --> 00:01:14,340
+Now I could use a string because this would work,
+
+15
+00:01:14,340 --> 00:01:16,750
+this can be cast to a number.
+
+16
+00:01:17,100 --> 00:01:23,370
+So if I know yes you should be able to enter strings and those strings will always be castable,
+
+17
+00:01:23,400 --> 00:01:26,600
+so always be numbers just as a string,
+
+18
+00:01:26,910 --> 00:01:32,350
+I could also extend multiple values, so I could say, or multiple types.
+
+19
+00:01:32,520 --> 00:01:36,920
+So I could say T should be of type number or string,
+
+20
+00:01:37,440 --> 00:01:44,160
+so here I can now tell that this should be of type string, of course 20 then also has to be a string because
+
+21
+00:01:44,250 --> 00:01:52,740
+all the values here use T, right and with that, I wouldn't get an error any more and it would work,
+
+22
+00:01:52,780 --> 00:02:00,400
+I would get 200 again. Yes if I enter something here, I would also not get a compilation error but not
+
+23
+00:02:00,400 --> 00:02:01,440
+a number again
+
+24
+00:02:01,480 --> 00:02:02,830
+but that's not really an issue,
+
+25
+00:02:02,830 --> 00:02:08,530
+all I wanted to show here is that you can create a generic class, that you have
+
+26
+00:02:08,530 --> 00:02:15,750
+this extends keyword here and that with that, you can control which values can be passed,
+
+27
+00:02:15,760 --> 00:02:20,560
+for example you will never be able to pass a boolean here.
+
+28
+00:02:20,740 --> 00:02:31,380
+So if I try to create a generic class with booleans and I assign true or false and I compile this,
+
+29
+00:02:32,490 --> 00:02:38,510
+well now I get the error that type boolean does not satisfy the constraint number or string.
+
+30
+00:02:38,880 --> 00:02:45,060
+So while my IDE doesn't actually give me any errors, TypeScript will and that's just what I can control
+
+31
+00:02:45,060 --> 00:02:45,490
+here.
+
+32
+00:02:45,660 --> 00:02:51,470
+As a matter of fact, boolean could be cast to a number but that's not really what this example is about,
+
+33
+00:02:51,480 --> 00:02:51,740
+right,
+
+34
+00:02:51,750 --> 00:02:58,860
+it's just about how you can constrain your generic type here and how you can create a generic class
+
+35
+00:02:58,900 --> 00:02:59,720
+in
+
+36
+00:02:59,990 --> 00:03:00,650
+the end.

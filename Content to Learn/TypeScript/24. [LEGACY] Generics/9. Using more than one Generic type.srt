@@ -1,0 +1,127 @@
+1
+00:00:01,960 --> 00:00:09,160
+Now for this example, you could say that it's a little bit annoying that if we assign this of type string,
+
+2
+00:00:09,220 --> 00:00:16,980
+that both values have to be a string, that we can't say OK base value is a string of 10 and multiply value
+
+3
+00:00:17,170 --> 00:00:22,170
+is a number, 20. It would be nice if we could be more flexible here
+
+4
+00:00:22,330 --> 00:00:27,960
+and we can because we can use multiple types here in the generic type declaration.
+
+5
+00:00:28,390 --> 00:00:32,950
+So I get my T type here and I will change this to U
+
+6
+00:00:33,070 --> 00:00:36,160
+and that's just a convention, if you use multiple types, then you have T
+
+7
+00:00:36,160 --> 00:00:39,310
+and U, just the alphabetical order.
+
+8
+00:00:39,340 --> 00:00:44,600
+So I'll add a new type T and I'll leave U, U still extends this
+
+9
+00:00:44,890 --> 00:00:51,550
+and now with T, I also want to extend number or a string because I want to be able or I want to give the
+
+10
+00:00:51,550 --> 00:00:54,770
+user the chance to use two different types, 
+
+11
+00:00:54,790 --> 00:01:00,640
+so multiply value will be of type U which is a number or a string and base value is T, which could
+
+12
+00:01:00,640 --> 00:01:02,020
+be anything at the moment.
+
+13
+00:01:02,350 --> 00:01:06,200
+If I also want to restrict T to be of type number or string,
+
+14
+00:01:06,400 --> 00:01:15,310
+well then I could either say extends number or string like I did before or I actually say it should extend
+
+15
+00:01:15,310 --> 00:01:16,270
+U.
+
+16
+00:01:16,330 --> 00:01:26,080
+Important to know is though if I do it like this, then I'm not saying that T should have the
+
+17
+00:01:26,080 --> 00:01:27,690
+same constraints as U,
+
+18
+00:01:27,700 --> 00:01:31,300
+it means T has to be the same type as U.
+
+19
+00:01:31,570 --> 00:01:36,560
+So if I pick number as a type for U, then T also has to be a number.
+
+20
+00:01:36,760 --> 00:01:43,540
+So in order to be able to really mix them, I have to add this constraint instead, that allows me to say
+
+21
+00:01:43,540 --> 00:01:49,000
+down here that the first type should be of type string and the second should be of type number.
+
+22
+00:01:49,300 --> 00:01:57,010
+So to wrap this all up and stop the confusion, what I'm saying here is this generic class has two types
+
+23
+00:01:57,010 --> 00:01:59,180
+which can be set up by the user,
+
+24
+00:01:59,200 --> 00:02:06,200
+the first type which is used internally should be a number or a string and it's used for base value
+
+25
+00:02:06,520 --> 00:02:12,920
+and the second type, U here also should be a number or a string and is used for the multiply value
+
+26
+00:02:13,240 --> 00:02:18,550
+and then here when using or instantiating the class, I'm saying the first value,
+
+27
+00:02:18,670 --> 00:02:21,350
+so T should be a string
+
+28
+00:02:21,430 --> 00:02:29,500
+in this case here and the second value, U should be a number and therefore I'm using two or I'm able
+
+29
+00:02:29,500 --> 00:02:31,650
+to mix the values here.
+
+30
+00:02:31,870 --> 00:02:38,720
+Now if I save this, you'll see it finishes without an error here and going back to the browser and reloading
+
+31
+00:02:38,740 --> 00:02:41,290
+it, we see 200 again
+
+32
+00:02:41,290 --> 00:02:42,360
+and this works fine.

@@ -1,0 +1,163 @@
+1
+00:00:01,610 --> 00:00:07,370
+Besides generic functions and types, we also have generic classes,
+
+2
+00:00:07,550 --> 00:00:12,710
+so let's have a look at them. Generic classes are a very important construct
+
+3
+00:00:12,710 --> 00:00:19,170
+you will often use, probably if you use generics, it will oftentimes be a generic class.
+
+4
+00:00:19,400 --> 00:00:28,270
+So we could create the SimpleMath class here and I will make it non-generic to begin with,
+
+5
+00:00:28,280 --> 00:00:35,120
+so let's just open the curly braces to go to the class body and let's say the SimpleMath class should
+
+6
+00:00:35,120 --> 00:00:43,730
+have a basic value and it should have a multiply value property and I'm deliberately not assigning types
+
+7
+00:00:43,730 --> 00:00:44,870
+right now.
+
+8
+00:00:44,870 --> 00:00:56,230
+It then has the calculate method here which will simply return me this space value times this multiply
+
+9
+00:00:56,230 --> 00:00:56,940
+value,
+
+10
+00:00:57,190 --> 00:00:57,850
+OK.
+
+11
+00:00:58,000 --> 00:01:07,750
+I can of course use this class to create let's say a simpleMath constant which uses this SimpleMath
+
+12
+00:01:07,750 --> 00:01:20,240
+class where I then can assign the base value to be 10 and the multiply value to be 20 let's say
+
+13
+00:01:20,350 --> 00:01:29,420
+and then I can call or I can log the result of my call to simpleMath.calculate.
+
+14
+00:01:29,440 --> 00:01:35,230
+So with that if I save this, go to the console, I'll reload so that we can see everything,
+
+15
+00:01:35,360 --> 00:01:39,540
+I get 200 which clearly is the result of 10 times 20.
+
+16
+00:01:39,560 --> 00:01:46,580
+Now the issue I got here is if I change this to something, so a string,
+
+17
+00:01:46,910 --> 00:01:49,120
+I'm not getting any compilation errors
+
+18
+00:01:49,130 --> 00:01:56,930
+as you can tell but of course here, I get not a number as a result because I can't multiply a string
+
+19
+00:01:57,740 --> 00:02:00,340
+with the content of something with 20.
+
+20
+00:02:00,710 --> 00:02:09,980
+So we should probably make this more generic, to make sure that we actually can use it in a generic way.
+
+21
+00:02:10,310 --> 00:02:13,460
+So I will continuously improve this class
+
+22
+00:02:13,460 --> 00:02:19,970
+but let's start simple and make it a generic class first by using the same syntax as for the function,
+
+23
+00:02:20,270 --> 00:02:26,120
+just telling TypeScript hey this is a generic class and the user should specify the type which will
+
+24
+00:02:26,120 --> 00:02:33,670
+then be stored in this T type if you want to call it like this, this internal type which can be used in
+
+25
+00:02:33,670 --> 00:02:35,120
+this class
+
+26
+00:02:35,140 --> 00:02:41,260
+and then I can tell the class that the base value should be T and that the multiply values should
+
+27
+00:02:41,260 --> 00:02:48,370
+be type T and the calculate result actually should always be a number here.
+
+28
+00:02:48,520 --> 00:02:52,930
+Now with that if I save this and have a look at the compiler,
+
+29
+00:02:53,110 --> 00:02:59,530
+now we see we get some errors that the left-hand side of the arithmetic operation must be of type any
+
+30
+00:02:59,530 --> 00:03:09,100
+number or enum and the right-hand side too. So the issue TypeScript has with my setup here is that
+
+31
+00:03:09,130 --> 00:03:16,120
+well I can enter any type and it recognizes this and it recognizes that this could be a type which does not
+
+32
+00:03:16,120 --> 00:03:17,810
+really match this.
+
+33
+00:03:17,860 --> 00:03:25,470
+So if I change this to 10 here, well that does not change it because the general problem still persists,
+
+34
+00:03:25,480 --> 00:03:31,070
+Typescript knows that T could be a value which can not be used in this calculation.
+
+35
+00:03:31,360 --> 00:03:38,420
+Therefore I will explicitly cast these values to a number by adding a plus in front of them, saving this
+
+36
+00:03:38,470 --> 00:03:41,220
+and now you see the errors have gone away,
+
+37
+00:03:41,410 --> 00:03:43,720
+so now everything works.
+
+38
+00:03:43,720 --> 00:03:47,600
+Now if I go back to the console, we still see 200
+
+39
+00:03:48,010 --> 00:03:55,720
+but the problem which persists is if I enter something here, we're not getting an error but we're still
+
+40
+00:03:55,720 --> 00:03:58,880
+getting not a number. I will come back to this
+
+41
+00:03:58,900 --> 00:04:05,330
+but for now we generated a generic class even though it's not that useful yet.

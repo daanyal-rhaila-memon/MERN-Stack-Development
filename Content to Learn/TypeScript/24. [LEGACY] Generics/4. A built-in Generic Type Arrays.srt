@@ -1,0 +1,104 @@
+1
+
+00:00:01,750  -->  00:00:05,650
+Now in TypeScript, there also are some built-in generics,
+
+2
+
+00:00:05,650  -->  00:00:07,510
+so let's have a look at them,
+
+3
+
+00:00:08,560  -->  00:00:13,750
+the most prominent built-in generic probably is the array.
+
+4
+
+00:00:13,750  -->  00:00:19,660
+So let's say we have some test results and they are stored in an array.
+
+5
+
+00:00:19,660  -->  00:00:23,780
+Now of course we can simply create this array
+
+6
+
+00:00:23,830  -->  00:00:28,310
+like so, for example I'll have two values in that array
+
+7
+
+00:00:28,780  -->  00:00:29,710
+and that would work
+
+8
+
+00:00:29,800  -->  00:00:34,720
+and there's nothing wrong with that but in the back,
+
+9
+
+00:00:34,720  -->  00:00:43,060
+this is a generic type. So we can assign a type to this test results array and the type would be array
+
+10
+
+00:00:43,510  -->  00:00:49,460
+and then assign which types this array should be able to hold.
+
+11
+
+00:00:49,750  -->  00:00:59,920
+So now if I push a new item on that array, that works but if I try to push let's say a string,
+
+12
+
+00:01:00,190  -->  00:01:04,540
+well my IDE is already complaining and so is TypeScript
+
+13
+
+00:01:04,540  -->  00:01:06,640
+if I try to compile this.
+
+14
+
+00:01:06,820  -->  00:01:15,040
+So by explicitly setting this type here, I'm getting the compiler support which makes sure that I'm not
+
+15
+
+00:01:15,040  -->  00:01:18,670
+accidentally pushing something on that array which doesn't work.
+
+16
+
+00:01:19,150  -->  00:01:23,280
+So with that, I can of course log that array and that will just work
+
+17
+
+00:01:23,350  -->  00:01:27,830
+but now I explicitly set which values this array will be able to hold.
+
+18
+
+00:01:27,910  -->  00:01:33,280
+Normally you can mix strings, numbers and whatever you want but if you want to be explicit and don't
+
+19
+
+00:01:33,280  -->  00:01:34,540
+want to have them mixed,
+
+20
+
+00:01:34,600  -->  00:01:42,130
+well this is how you would do that and with that, if I could go to the console, print it out, you see my
+
+21
+
+00:01:42,130  -->  00:01:49,360
+array here with all numbers because I assigned it as this. So array is a generic type by default.

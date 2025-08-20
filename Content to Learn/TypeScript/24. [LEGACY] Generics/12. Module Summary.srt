@@ -1,0 +1,54 @@
+1
+
+00:00:01,830  -->  00:00:08,590
+So we're done on generics. Now generics are a really cool feature but you're probably not using them
+
+2
+
+00:00:08,620  -->  00:00:15,190
+all over the place simply because they're a really specific feature and oftentimes, you don't need to
+
+3
+
+00:00:15,190  -->  00:00:22,990
+use them but you will know when to use them and then they really add extra flexibility and make your
+
+4
+
+00:00:22,990  -->  00:00:25,890
+code more flexible or for you as a developer
+
+5
+
+00:00:25,900  -->  00:00:29,800
+more flexibility. If you want to learn more about generics,
+
+6
+
+00:00:29,950  -->  00:00:38,530
+well unfortunately the greatest hint or advice I can give to you is simply googling for generics because
+
+7
+
+00:00:38,560  -->  00:00:42,670
+it's a concept not exclusively introduced by TypeScript,
+
+8
+
+00:00:42,700  -->  00:00:49,200
+you will also find it in other languages and the idea behind it is always the same.
+
+9
+
+00:00:49,210  -->  00:00:55,480
+So any article diving deeper into generics might be a great starting point to learn more about the theory
+
+10
+
+00:00:55,480  -->  00:00:57,820
+behind them if you're interested in that.
+
+11
+
+00:00:58,000  -->  00:01:00,750
+Well now with that, let's continue with the course.

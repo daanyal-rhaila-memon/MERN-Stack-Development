@@ -1,0 +1,134 @@
+1
+
+00:00:01,910  -->  00:00:08,820
+Now so far we had generic functions but we can also have generic types,
+
+2
+
+00:00:08,990  -->  00:00:13,430
+so generic types is not this thing between the opening and closing tag
+
+3
+
+00:00:13,450  -->  00:00:18,050
+here or the smaller and greater sign but a generic type would be the following.
+
+4
+
+00:00:18,050  -->  00:00:23,320
+I have a constant and I'll just name it echo2
+
+5
+
+00:00:23,840  -->  00:00:27,920
+and this would be of type generic, then a function
+
+6
+
+00:00:30,710  -->  00:00:38,630
+where we get data as an input and then return this type and I can assign my echo function.
+
+7
+
+00:00:38,630  -->  00:00:41,520
+Now that looks extremely cryptic, I believe,
+
+8
+
+00:00:41,630  -->  00:00:44,790
+so let me tell what I am or explain what I'm doing here.
+
+9
+
+00:00:45,140  -->  00:00:49,990
+So I'm creating a new constant, that should be fairly clear and then I'm assigning a type here.
+
+10
+
+00:00:50,120  -->  00:00:55,610
+Remember everything after the colon but before the equal sign is a type assignment,
+
+11
+
+00:00:55,610  -->  00:01:02,870
+so this is a type. It's a generic type as you can tell because I'm using this type set up here with the
+
+12
+
+00:01:03,140  -->  00:01:06,000
+strange generic syntax you already know
+
+13
+
+00:01:06,200  -->  00:01:08,770
+and then it's a function type thereafter,
+
+14
+
+00:01:08,810  -->  00:01:16,460
+so I'm just telling TypeScript that this constant will hold a function where the input is one argument
+
+15
+
+00:01:16,700  -->  00:01:21,510
+of type, of this type the user specifies
+
+16
+
+00:01:21,650  -->  00:01:28,080
+and all this function will do is it will return something of that that input type.
+
+17
+
+00:01:28,220  -->  00:01:34,520
+So I could assign any function but here I'm assigning the echo function from the beginning because this
+
+18
+
+00:01:34,520  -->  00:01:40,790
+function actually does exactly what I want and the betterEcho function would even be better because
+
+19
+
+00:01:40,790  -->  00:01:42,950
+this function does exactly fit
+
+20
+
+00:01:42,980  -->  00:01:52,910
+this set up. It takes an argument of a type specified here, a generic function it is and returns
+
+21
+
+00:01:53,000  -->  00:01:56,860
+data which also fits this input type.
+
+22
+
+00:01:56,970  -->  00:02:05,070
+With that, I can then simply call echo2 and pass something, a string for example and I can be more explicit
+
+23
+
+00:02:05,100  -->  00:02:11,950
+and also tell TypeScript that this will be a string and maybe also enter console log here
+
+24
+
+00:02:11,970  -->  00:02:16,900
+now that I think about it, well with that at least it should work,
+
+25
+
+00:02:16,920  -->  00:02:19,100
+yes here we see something.
+
+26
+
+00:02:19,170  -->  00:02:25,920
+So I'm just reusing the betterEcho function but I'm assigning this whole generic thing here, the generic function
+
+27
+
+00:02:25,920  -->  00:02:30,370
+type to a normal constant, making this a type assignment.

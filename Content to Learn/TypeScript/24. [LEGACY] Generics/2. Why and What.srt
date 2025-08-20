@@ -1,0 +1,191 @@
+1
+00:00:01,920 --> 00:00:08,930
+So back I am in the well-known set up here with my app.ts file, I get my server running as always
+
+2
+00:00:09,330 --> 00:00:17,700
+and now let's look at these generics. Now in order to understand what they do, why they are useful,
+
+3
+00:00:17,730 --> 00:00:25,260
+let's start with a very simple generic here, so just a little example of what could be a generic
+
+4
+00:00:25,260 --> 00:00:26,650
+or why this might be useful.
+
+5
+00:00:26,910 --> 00:00:34,920
+So I'll create a function here and I'll simply name it echo, it gets data of any type which obviously
+
+6
+00:00:34,920 --> 00:00:36,960
+makes this function very generic
+
+7
+00:00:37,230 --> 00:00:39,210
+and then I return this data.
+
+8
+00:00:39,390 --> 00:00:46,320
+Now you might think or rightfully ask which sense does this function make if it simply returns what we
+
+9
+00:00:46,410 --> 00:00:47,210
+input there.
+
+10
+00:00:47,340 --> 00:00:53,390
+Well it's kind of like an echo command and we will reach more complicated functions later on
+
+11
+00:00:53,460 --> 00:00:59,550
+but in order to understand generics, it's really helpful to start very basic here.
+
+12
+00:00:59,550 --> 00:01:01,440
+So I got my echo function
+
+13
+00:01:01,590 --> 00:01:09,690
+and with that I can then log this to the console for example, calling echo, inputting Max and and doing
+
+14
+00:01:09,690 --> 00:01:17,940
+the same, inputting 27 and doing it again and this time inputting an object where my name is Max and
+
+15
+00:01:17,940 --> 00:01:20,570
+my age is 27.
+
+16
+00:01:20,610 --> 00:01:27,750
+So with all that being input, if I then go to a new console window and compile everything with
+
+17
+00:01:27,750 --> 00:01:36,250
+the tsc command, I can then switch over to my running project, open up the console and we see Max 27 and
+
+18
+00:01:36,250 --> 00:01:37,470
+the object.
+
+19
+00:01:37,710 --> 00:01:43,620
+Now I could understand if you're not super impressed right now because it's not really that strange
+
+20
+00:01:43,620 --> 00:01:50,490
+what is happening here or not that great but the important thing to realize here is this function here
+
+21
+00:01:50,850 --> 00:01:59,400
+is kind of a generic function because we have this any type here but we do have a big disadvantage with
+
+22
+00:01:59,400 --> 00:02:05,610
+this any type, you see I get back any data I enter here.
+
+23
+00:02:05,880 --> 00:02:14,670
+So since I enter a string in this first echo call, I could not only log the data I enter but I could
+
+24
+00:02:14,760 --> 00:02:21,660
+also enter let's say length because a string, like an array, has a length, the number of characters.
+
+25
+00:02:21,690 --> 00:02:24,530
+If I save this and
+
+26
+00:02:24,680 --> 00:02:25,050
+yes
+
+27
+00:02:25,100 --> 00:02:26,740
+compiling also help, so if I
+
+28
+00:02:26,750 --> 00:02:34,650
+save this and compile the code, we see three here because Max has three characters. Now what's the
+
+29
+00:02:34,740 --> 00:02:36,370
+issue I got here?
+
+30
+00:02:36,720 --> 00:02:43,860
+Well it's pretty clear or it becomes pretty clear if I just entered the dot here, my IDE is not offering
+
+31
+00:02:43,860 --> 00:02:45,270
+this length.
+
+32
+00:02:45,450 --> 00:02:51,280
+Yes I can type it and then it appears but it's not fatly written here
+
+33
+00:02:51,420 --> 00:02:56,010
+which means my IDE doesn't know that we're getting back a string here. Now
+
+34
+00:02:56,030 --> 00:02:58,320
+OK you might say IDE magic,
+
+35
+00:02:58,320 --> 00:03:03,520
+not really that important but maybe the problem becomes clearer with the next example.
+
+36
+00:03:03,600 --> 00:03:11,250
+If I go to this echo function and enter length here, I can do this right, now I can run the TypeScript compiler
+
+37
+00:03:12,110 --> 00:03:13,460
+and then go to the console
+
+38
+00:03:13,470 --> 00:03:15,610
+and now I get undefined here.
+
+39
+00:03:16,110 --> 00:03:22,780
+So the issue I got here is a number doesn't have a length which is why I get undefined and that 
+
+40
+00:03:22,800 --> 00:03:26,950
+has a certain problem to it.
+
+41
+00:03:26,980 --> 00:03:33,790
+If I do the same on the object here, compile and have a look,
+
+42
+00:03:33,790 --> 00:03:40,130
+now I'm getting undefined too and just entering watch mode so I don't have to compile if I handle the kind.
+
+43
+00:03:40,240 --> 00:03:47,950
+So the issue here clearly is that we don't know the type you're in, would be nice if we get a compilation
+
+44
+00:03:47,980 --> 00:03:55,180
+error, if we try to access length here on this number but we can't get this because the data type
+
+45
+00:03:55,270 --> 00:03:59,780
+is any and therefore, TypeScript doesn't know any better than we do
+
+46
+00:03:59,980 --> 00:04:07,300
+if this data actually has a length property for example. So we might want a generic function like this
+
+47
+00:04:07,300 --> 00:04:14,110
+which can handle all kinds of data but once we get back the data, it would be nice if TypeScript would
+
+48
+00:04:14,110 --> 00:04:17,560
+be aware of the exact data type and not of type any.
