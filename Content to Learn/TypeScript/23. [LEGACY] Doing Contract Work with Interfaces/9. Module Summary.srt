@@ -1,0 +1,14 @@
+1
+
+00:00:01,990  -->  00:00:09,820
+So throughout this module, you learned what interfaces are, how they can help you writing better
+
+2
+
+00:00:09,820  -->  00:00:18,130
+code, knowing what to expect in certain classes or functions and making sure that your dynamic code is
+
+3
+
+00:00:18,130  -->  00:00:25,680
+able to work together just fine and always know which functions or types to expect and not to expect.

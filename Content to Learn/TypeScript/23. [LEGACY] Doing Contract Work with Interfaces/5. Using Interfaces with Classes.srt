@@ -1,0 +1,159 @@
+1
+00:00:01,700 --> 00:00:08,310
+Now since we set up everything here, we not only can create objects like that, we could also create a
+
+2
+00:00:08,310 --> 00:00:09,660
+class,
+
+3
+00:00:09,660 --> 00:00:17,910
+so this class person could also implement the NamedPerson and that would require me to implement all
+
+4
+00:00:17,910 --> 00:00:22,000
+the things I require in this interface in my class here too,
+
+5
+00:00:22,050 --> 00:00:25,660
+of course except the optional things.
+
+6
+00:00:25,710 --> 00:00:34,870
+Now the greet method here of course also needs to implement a body here and simply should log the same
+
+7
+00:00:34,870 --> 00:00:36,160
+as here,
+
+8
+00:00:36,160 --> 00:00:43,960
+so I'm just copying this code for now and that allows me to then create a new person, so const new or
+
+9
+00:00:44,000 --> 00:00:54,130
+my person here, it could be a new person and then I could set my person name or first name it is equal
+
+10
+00:00:54,130 --> 00:00:55,880
+to Maximillian
+
+11
+00:00:56,410 --> 00:01:00,260
+and then of course here, I can also call the greet method, pass my person.
+
+12
+00:01:00,400 --> 00:01:08,050
+So here with greet just to remember you, I'm calling not the greet method in the person here, so maybe
+
+13
+00:01:08,050 --> 00:01:14,290
+we should rename this to greet me but I'm leaving it like this for now. Here, I'm calling the greet
+
+14
+00:01:14,290 --> 00:01:20,670
+method up here, this one and I'm passing my person to it and thereafter I'm calling myPerson.greet.
+
+15
+00:01:20,710 --> 00:01:26,320
+So now this is the greet method inside the person where I need to add the last name.
+
+16
+00:01:26,320 --> 00:01:34,310
+So again if I compile this and reload this application, we see these two outputs which are from the old code
+
+17
+00:01:34,360 --> 00:01:37,880
+but then we see Hello Maximillian and Hi, I am Maximillian anything,
+
+18
+00:01:38,020 --> 00:01:41,860
+so we see the code based on the class we created here.
+
+19
+00:01:41,860 --> 00:01:48,040
+So not only the objects we create can be of that type, we can also create a class which implements
+
+20
+00:01:48,130 --> 00:01:51,410
+an interface, here the implements keyword is important
+
+21
+00:01:51,730 --> 00:01:58,000
+and then we need of course, we can make sure that we actually implement all the methods and properties
+
+22
+00:01:58,030 --> 00:02:02,020
+as defined in the interface, the required ones at least.
+
+23
+00:02:02,020 --> 00:02:03,990
+We might also implement age
+
+24
+00:02:04,360 --> 00:02:10,090
+and what happens if we implement something else which isn't set up in the interface?
+
+25
+00:02:10,090 --> 00:02:15,030
+So if I also would have let's say a last name here of type string.
+
+26
+00:02:16,900 --> 00:02:26,950
+Well, let's try this by setting the myPerson.lastName here too, set it to anything here too and then maybe
+
+27
+00:02:26,980 --> 00:02:28,190
+even pass it here,
+
+28
+00:02:28,210 --> 00:02:36,130
+myPerson.lastName, if I compile this, it compiles without an error and it still runs fine.
+
+29
+00:02:36,460 --> 00:02:44,140
+So this will work and we may of course also add new properties to our class, just as we were able to
+
+30
+00:02:44,140 --> 00:02:50,740
+use extra properties when creating the object in a constant, remember the only very strict
+
+31
+00:02:50,950 --> 00:02:57,580
+check happened when we were directly passing an object literal to the function which requires a certain
+
+32
+00:02:57,580 --> 00:02:59,020
+interface.
+
+33
+00:02:59,020 --> 00:03:06,640
+So again, just to reinforce this or to make this really clear, the interface is a contract which can be
+
+34
+00:03:06,640 --> 00:03:13,930
+signed or which can be used as a type and which then makes sure all the conditions set up in the interface,
+
+35
+00:03:13,990 --> 00:03:20,860
+so that property being a required one, that being an optional one and the method here being required
+
+36
+00:03:20,860 --> 00:03:24,730
+with that exact argument and return type,
+
+37
+00:03:24,730 --> 00:03:29,680
+all these conditions have to be fulfilled by whatever
+
+38
+00:03:29,740 --> 00:03:37,370
+is of this type, for example each argument passed to the greet method or this class here.
+
+39
+00:03:37,450 --> 00:03:42,110
+That is what interfaces are there for, these are or this is the power
+
+40
+00:03:42,130 --> 00:03:43,630
+this contract offer you.

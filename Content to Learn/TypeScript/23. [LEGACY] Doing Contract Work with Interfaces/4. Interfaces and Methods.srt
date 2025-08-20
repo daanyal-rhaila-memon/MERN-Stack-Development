@@ -1,0 +1,114 @@
+1
+
+00:00:02,160  -->  00:00:08,460
+Well so far we only considered properties here on our interface but that's not all we can do,
+
+2
+
+00:00:08,460  -->  00:00:17,630
+we could also add a method. So let's say our NamedPerson should be able to also greet itself,
+
+3
+
+00:00:17,670  -->  00:00:25,120
+so we might have a greet method on our person. Now setting up a method is actually pretty easy too. We
+
+4
+
+00:00:25,380  -->  00:00:33,300
+just write it like we write method in a class, like so, greet, then we might have any inputs we want,
+
+5
+
+00:00:33,300  -->  00:00:39,840
+in this case this might be none but if we need let's say something or let's say we have the lastName
+
+6
+
+00:00:39,840  -->  00:00:45,590
+as a input which would be a string and then we specify what should be returned by this function.
+
+7
+
+00:00:45,600  -->  00:00:47,560
+So void if we here want to
+
+8
+
+00:00:47,610  -->  00:00:51,890
+console log in the method or whatever type you need.
+
+9
+
+00:00:52,320  -->  00:00:59,380
+Well with this, we get errors here because our person is not really implementing this greet method.
+
+10
+
+00:00:59,790  -->  00:01:05,520
+So actually I can set this NamedPerson type here already so that we're getting the errors
+
+11
+
+00:01:05,520  -->  00:01:06,430
+here too
+
+12
+
+00:01:06,900  -->  00:01:13,240
+and I can fix it by adding the greet method to it, like so.
+
+13
+
+00:01:13,370  -->  00:01:25,550
+Now here of course, I need to get lastName as the input and then I can simply log I am and then
+
+14
+
+00:01:25,640  -->  00:01:36,660
+just log this .firstName plus and then an empty space, lastName like so.
+
+15
+
+00:01:36,660  -->  00:01:39,570
+Now what that allows me to do of course is here,
+
+16
+
+00:01:39,570  -->  00:01:45,380
+this will not work anymore because here I don't have that method, so I will just comment it
+
+17
+
+00:01:45,390  -->  00:01:45,970
+out
+
+18
+
+00:01:46,410  -->  00:01:57,350
+but here I can then call person.greet and enter any lastName, then compile my code
+
+19
+
+00:01:57,830  -->  00:02:01,880
+and if we have a look at our console, well then we see
+
+20
+
+00:02:01,890  -->  00:02:02,760
+Hello Anna,
+
+21
+
+00:02:02,810  -->  00:02:09,170
+Hi I'm Anna anything because I'm changing the first name here with changeName and then I'm calling
+
+22
+
+00:02:09,170  -->  00:02:10,780
+greet anything.
+
+23
+
+00:02:10,790  -->  00:02:18,900
+So that's how you set up the requirement that your object here also has this greet method.

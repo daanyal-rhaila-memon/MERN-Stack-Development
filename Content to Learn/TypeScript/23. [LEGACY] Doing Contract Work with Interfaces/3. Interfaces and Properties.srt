@@ -1,0 +1,235 @@
+1
+00:00:02,460 --> 00:00:09,960
+So to fix this, I'll set this back or change this back to firstName and next, I want to show something which
+
+2
+00:00:10,050 --> 00:00:17,450
+might look strange. You see that here, my person, if I change it back to that, everything compiles fine.
+
+3
+00:00:17,580 --> 00:00:25,020
+Now if I pass an object that it'll direct without assigning it to a constant first and here, I'll add
+
+4
+00:00:25,050 --> 00:00:30,200
+the first name, also set to Max and set the age to 27,
+
+5
+00:00:31,050 --> 00:00:34,730
+it's exactly the same as this person which I just passed a second ago.
+
+6
+00:00:34,860 --> 00:00:43,530
+If I compile this, now I suddenly get an error where I get that the object literal may only specify known
+
+7
+00:00:43,530 --> 00:00:47,990
+properties and age does not exist in type NamedPerson.
+
+8
+00:00:48,150 --> 00:00:51,050
+That's a special check TypeScript performs
+
+9
+00:00:51,210 --> 00:00:58,680
+when directly passing object literals like this. Even though I'm doing almost the same here when assigning
+
+10
+00:00:58,680 --> 00:01:06,730
+this object literal to a constant first, this does not get checked as strictly as this does.
+
+11
+00:01:06,900 --> 00:01:11,970
+So once you pass an object literal directly, it's checked much more
+
+12
+00:01:12,090 --> 00:01:19,610
+strictly and here TypeScript recognizes that this age property here isn't defined in the interface.
+
+13
+00:01:19,660 --> 00:01:24,440
+So whilst this extra property is no problem here in our constant,
+
+14
+00:01:24,450 --> 00:01:28,300
+it is a problem here and that's just important to know,
+
+15
+00:01:28,410 --> 00:01:35,610
+you either want to make sure that you're not passing object literals directly or even better, that you
+
+16
+00:01:35,850 --> 00:01:39,420
+create your interfaces as explicit as possible.
+
+17
+00:01:39,420 --> 00:01:47,100
+So if you want to make sure that an age property is possible but not required, you can add age which should
+
+18
+00:01:47,100 --> 00:01:48,110
+be a number
+
+19
+00:01:48,480 --> 00:01:54,900
+and then you add a questionmark after age, which means it's an optional argument.
+
+20
+00:01:55,200 --> 00:01:57,460
+So now this will work again
+
+21
+00:01:57,720 --> 00:01:58,970
+and of course that would have worked
+
+22
+00:01:58,980 --> 00:02:05,600
+also if this weren't an optional argument but it allows me to also pass let's say person here still
+
+23
+00:02:05,690 --> 00:02:09,320
+where we don't have the age because age is optional.
+
+24
+00:02:09,420 --> 00:02:12,250
+So now that all still works
+
+25
+00:02:12,540 --> 00:02:13,940
+but now I'm not getting any errors
+
+26
+00:02:13,950 --> 00:02:20,440
+if I have the age and I could also have a person which doesn't have the age because age is optional.
+
+27
+00:02:20,550 --> 00:02:28,500
+Again, I could also make this non-optional, change this back to also have an age of 27 and now or whatever
+
+28
+00:02:28,500 --> 00:02:29,220
+number you like
+
+29
+00:02:29,220 --> 00:02:31,260
+and now everything would work again too.
+
+30
+00:02:31,530 --> 00:02:35,160
+So that's just so that you know that such optional arguments exist,
+
+31
+00:02:35,170 --> 00:02:40,830
+I'm just changing it back to use this optional argument again and this is also very important and not
+
+32
+00:02:40,830 --> 00:02:47,190
+directly connected to optional arguments, that object literals getting passed as an argument directly
+
+33
+00:02:47,490 --> 00:02:49,310
+are checked much more strictly
+
+34
+00:02:49,310 --> 00:02:52,380
+than if you are assign them to a constant first.
+
+35
+00:02:52,500 --> 00:02:57,860
+Now what if you have an interface and you want to set up the type like this
+
+36
+00:02:58,140 --> 00:03:05,190
+but then you might have some properties where you don't know the name of the properties in advance?
+
+37
+00:03:05,220 --> 00:03:10,710
+You know there might be some properties but you don't want to get any errors just because you don't
+
+38
+00:03:10,770 --> 00:03:13,590
+know the name of them yet.
+
+39
+00:03:13,650 --> 00:03:18,840
+Now for such a case, TypeScript has a special notation you may use,
+
+40
+00:03:19,020 --> 00:03:22,420
+you can use square brackets here as a key name,
+
+41
+00:03:22,440 --> 00:03:25,650
+this is not an array, that's just a special notation,
+
+42
+00:03:25,830 --> 00:03:29,110
+then you use any name you want, propName for example
+
+43
+00:03:29,130 --> 00:03:32,380
+but that is up to you, then of type string
+
+44
+00:03:32,400 --> 00:03:42,210
+since Javascript object keys can be written as strings too, right. So of type string and then that should
+
+45
+00:03:42,210 --> 00:03:49,380
+be of type any if you don't know the type this alternative property or properties might have.
+
+46
+00:03:49,380 --> 00:03:57,300
+Now the difference to the optional property here of course is that here, we clearly state the name and
+
+47
+00:03:57,300 --> 00:04:01,750
+also the type of the value, name of the key and type of the value
+
+48
+00:04:01,820 --> 00:04:04,230
+whereas here we don't know the name of the key yet
+
+49
+00:04:04,380 --> 00:04:08,790
+and in this case, we also don't state the type of the value, though we could do that if we know it might
+
+50
+00:04:08,790 --> 00:04:15,600
+only be a number for example. So with that, we're able to add something else to person,
+
+51
+00:04:15,600 --> 00:04:19,570
+let's say hobbies and then this is just an array is just a coincidence,
+
+52
+00:04:19,570 --> 00:04:20,960
+it doesn't have to be an array,
+
+53
+00:04:20,970 --> 00:04:25,000
+again these square brackets don't have anything to do with an array,
+
+54
+00:04:25,050 --> 00:04:29,110
+it's just the TypeScript notation for setting up a flexible key name.
+
+55
+00:04:29,130 --> 00:04:38,930
+So hobbies might be cooking and sports and with that if I compile this, it would also work because
+
+56
+00:04:39,020 --> 00:04:46,870
+I have this chance of setting up a new property which is neither age nor first nor firstName as long as
+
+57
+00:04:47,060 --> 00:04:51,740
+I match this type here, any is pretty easy to match though.
+
+58
+00:04:51,980 --> 00:04:59,540
+So that's just to give you more flexibility with your interfaces and allow you to set up dynamic
+
+59
+00:04:59,540 --> 00:05:05,560
+properties where you don't know how they might be named at the time you create your interface.

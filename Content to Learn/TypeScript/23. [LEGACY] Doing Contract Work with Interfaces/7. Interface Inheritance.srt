@@ -1,0 +1,114 @@
+1
+
+00:00:01,910  -->  00:00:13,430
+Now to get to an end of this lecture, I'll also want to talk about interface inheritance. So we can inherit
+
+2
+
+00:00:13,520  -->  00:00:20,600
+from classes or we can extend classes with classes as you learned in the class module and we can do
+
+3
+
+00:00:20,600  -->  00:00:32,320
+the same for interfaces. So I can also use my, let's say NamedPerson from up here, this NamedPerson, create
+
+4
+
+00:00:32,320  -->  00:00:41,740
+a new interface which I'll name AgedPerson which extends the NamedPerson interface, so it will require
+
+5
+
+00:00:41,830  -->  00:00:45,100
+all the methods and properties as set up in this interface
+
+6
+
+00:00:45,220  -->  00:00:47,300
+but I can add additional ones,
+
+7
+
+00:00:47,440  -->  00:00:51,140
+in this case I want to set the age to be required.
+
+8
+
+00:00:51,240  -->  00:00:53,770
+It is optional in the NamedPerson,
+
+9
+
+00:00:53,770  -->  00:01:04,080
+now it is required. If I now create an old person here which should be of type AgedPerson,
+
+10
+
+00:01:04,590  -->  00:01:09,630
+well then I need to implement of course the age but that's not enough,
+
+11
+
+00:01:09,630  -->  00:01:16,440
+I also need to implement the firstName which should be Max for example and I need to have the greet
+
+12
+
+00:01:16,440  -->  00:01:23,990
+method remember that, here I need to get my lastName and then simply do something like console log and
+
+13
+
+00:01:24,000  -->  00:01:27,330
+here I'll keep it simple and just say hello.
+
+14
+
+00:01:28,440  -->  00:01:34,410
+So with that, if I then console log my old person
+
+15
+
+00:01:34,700  -->  00:01:37,070
+to the console, print it out,
+
+16
+
+00:01:37,070  -->  00:01:38,060
+compile this,
+
+17
+
+00:01:38,060  -->  00:01:45,440
+it finishes without an error and you see this is our object here, you get the age, first name and the greet function
+
+18
+
+00:01:45,680  -->  00:01:51,020
+and the most important thing is we're using the interface, AgedPerson which extends another interface
+
+19
+
+00:01:51,290  -->  00:01:58,430
+and therefore this person needs to have all the properties of the AgedPerson interface as well as all
+
+20
+
+00:01:58,430  -->  00:02:02,400
+the properties and methods from the NamedPerson interface.
+
+21
+
+00:02:02,480  -->  00:02:09,740
+We don't need that one because this is a flexible one and age was an optional one but now in this case
+
+22
+
+00:02:09,800  -->  00:02:11,000
+is a required one
+
+23
+
+00:02:11,030  -->  00:02:17,840
+since AgedPerson overwrites the optionality of the age property.

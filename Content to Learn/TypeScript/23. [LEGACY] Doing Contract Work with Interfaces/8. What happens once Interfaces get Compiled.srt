@@ -1,0 +1,79 @@
+1
+00:00:01,990 --> 00:00:06,820
+So we really learned a lot about interfaces and with that, you have all the core tools you will need to work
+
+2
+00:00:06,820 --> 00:00:11,260
+with them and to use them in production and your applications. Now there is
+
+3
+00:00:11,260 --> 00:00:15,790
+one interesting thing I want to show you with all that code
+
+4
+00:00:16,300 --> 00:00:22,830
+but if we have a look at the app.js file, there is something interesting you will see.
+
+5
+00:00:23,340 --> 00:00:30,700
+We see the function changeName, we see the person, we see all our function calls here of course and
+
+6
+00:00:30,700 --> 00:00:33,730
+this file is much shorter than the app.ts file
+
+7
+00:00:33,760 --> 00:00:37,460
+and that's not just because of the empty lines I have in here.
+
+8
+00:00:37,750 --> 00:00:39,660
+Where is this interface code,
+
+9
+00:00:39,670 --> 00:00:43,210
+how does this get compiled to Javascript?
+
+10
+00:00:43,510 --> 00:00:45,120
+Yes, here is the greet function,
+
+11
+00:00:45,130 --> 00:00:51,220
+so it should be before the greet function but this file starts with the greet function.
+
+12
+00:00:51,670 --> 00:00:56,980
+Well the very simple answer is interfaces get not compiled at all,
+
+13
+00:00:56,980 --> 00:01:00,160
+they're just there to check your code
+
+14
+00:01:00,340 --> 00:01:04,200
+during compilation to give you compilation errors.
+
+15
+00:01:04,210 --> 00:01:09,580
+Javascript doesn't know explicit types, it doesn't know interfaces therefore,
+
+16
+00:01:09,790 --> 00:01:18,640
+so interfaces get totally ignored when transforming your code to Javascript. In this Javascript code,
+
+17
+00:01:18,670 --> 00:01:24,660
+you see no trace of any interface and they're only there to give you errors
+
+18
+00:01:24,700 --> 00:01:32,770
+if you make an error at development time when working with TypeScript before or during compiling
+
+19
+00:01:32,770 --> 00:01:38,980
+it. That's the time when you will get errors and when interfaces matter, thereafter they're just left
+
+20
+00:01:38,980 --> 00:01:39,450
+out.

@@ -1,0 +1,255 @@
+1
+00:00:02,440 --> 00:00:08,890
+So now it's the time to talk about interfaces, what interfaces are and how interfaces can be useful to
+
+2
+00:00:08,890 --> 00:00:09,640
+us.
+
+3
+00:00:09,680 --> 00:00:15,460
+I'll start with a very simple example which hopefully shows why interfaces are useful.
+
+4
+00:00:15,490 --> 00:00:18,510
+Consider we have this function greet
+
+5
+00:00:19,180 --> 00:00:25,760
+and this takes a person which we want to greet, so person and let's say it's of type
+
+6
+00:00:25,810 --> 00:00:33,520
+any for now. In this function here, what I want to do is I want to say console log or I want to print
+
+7
+00:00:33,520 --> 00:00:40,800
+something to the console and I want to print hello and then person.name.
+
+8
+00:00:41,410 --> 00:00:51,580
+Now if I call this function here, greet and I pass in a Javascript object which I will create here, constant
+
+9
+00:00:52,300 --> 00:00:55,720
+Max or let's name it person
+
+10
+00:00:56,170 --> 00:01:05,580
+and this will just be a Javascript object which has a name, which is Max and it maybe has an age, 27, something
+
+11
+00:01:05,580 --> 00:01:11,640
+like that and then I pass this person to the greet method here, like so.
+
+12
+00:01:12,420 --> 00:01:19,130
+Well let me compile this code and go to my webpage and you see Hello Max,
+
+13
+00:01:19,140 --> 00:01:21,850
+everything is working fine, isn't it?
+
+14
+00:01:22,200 --> 00:01:29,320
+Now let me change something, I'll set this to be firstName and I'll compile this again,
+
+15
+00:01:29,730 --> 00:01:33,050
+I'm not getting any compilation errors but here I get
+
+16
+00:01:33,060 --> 00:01:34,390
+Hello, undefined
+
+17
+00:01:34,650 --> 00:01:39,720
+and the reason is pretty clear I hope because we're accessing person.name but person doesn't have
+
+18
+00:01:39,720 --> 00:01:41,390
+a name anymore.
+
+19
+00:01:41,430 --> 00:01:51,150
+So for situations like these when we have a function in this case here or whatever code which needs
+
+20
+00:01:51,150 --> 00:02:00,840
+to know that what it uses has a certain property or method or whatever, then we might need an interface
+
+21
+00:02:01,020 --> 00:02:08,730
+because an interface basically is a contract signed by an object which says I guarantee you that I have
+
+22
+00:02:08,730 --> 00:02:17,050
+a certain property, function, whatever. So our greet function here would require that person object
+
+23
+00:02:17,050 --> 00:02:20,050
+to have signed such a contract,
+
+24
+00:02:20,050 --> 00:02:23,790
+now let's create the necessary contract. I'll set
+
+25
+00:02:23,800 --> 00:02:32,050
+or I change the type here from type any to type object and to type object which has a name which then
+
+26
+00:02:32,110 --> 00:02:33,540
+is of type string.
+
+27
+00:02:33,820 --> 00:02:39,400
+So while this might look cryptic, all I'm saying here is that the person argument should be an object
+
+28
+00:02:39,760 --> 00:02:43,920
+which has this name field where the value is a string.
+
+29
+00:02:43,930 --> 00:02:47,280
+It might have more fields than that by the way,
+
+30
+00:02:47,290 --> 00:02:53,200
+this does not mean that it only should have a name but it needs to at least have a name.
+
+31
+00:02:53,200 --> 00:03:02,260
+With that if I now compile this, I get an error and the error tells me that or the argument I'm passing
+
+32
+00:03:02,260 --> 00:03:08,310
+to the function here, my person, doesn't have a name but the function requires this to have a name,
+
+33
+00:03:08,500 --> 00:03:12,440
+so now we're getting warrant at compile time and not
+
+34
+00:03:12,460 --> 00:03:20,200
+once our application runs. So I can fix this by changing this back to name, running the compiler again,
+
+35
+00:03:20,200 --> 00:03:24,570
+this time it finishes without an error and our application runs fine
+
+36
+00:03:24,580 --> 00:03:26,370
+as you can see here.
+
+37
+00:03:26,710 --> 00:03:29,740
+So that is basically what an interface is,
+
+38
+00:03:29,800 --> 00:03:35,330
+we define a type where we want to make sure that a certain field is available.
+
+39
+00:03:35,410 --> 00:03:41,980
+Now since this definition here is pretty annoying because we might have a different function which
+
+40
+00:03:41,980 --> 00:03:49,030
+might be changeName where we also want to get a person where we have the name which is a string and
+
+41
+00:03:49,030 --> 00:03:54,370
+where we then simply want to set person.name equal to Anna,
+
+42
+00:03:59,620 --> 00:04:05,990
+well this would use the same interface if you want to call it like that but we had to define it twice
+
+43
+00:04:06,170 --> 00:04:09,330
+and if we change it, we need to change it in two places.
+
+44
+00:04:09,500 --> 00:04:17,070
+So while this will work, I can greet this person, greet again and in between, call change name on person,
+
+45
+00:04:17,310 --> 00:04:20,970
+so this will work without any issues as you will see,
+
+46
+00:04:21,080 --> 00:04:23,560
+Hello Max and then Hello Anna,
+
+47
+00:04:23,570 --> 00:04:29,180
+it is annoying because we have to change it in two places, if we want to change everything to use
+
+48
+00:04:29,180 --> 00:04:29,770
+firstName,
+
+49
+00:04:29,940 --> 00:04:36,310
+well then we have to change it all over the place here, which is pretty annoying, right?
+
+50
+00:04:36,320 --> 00:04:44,870
+So the better way is to actually create an interface with the interface keyword here. With that, I can
+
+51
+00:04:44,870 --> 00:04:51,210
+set up an interface which I'll name NamedPerson or whatever, this name is totally up to you,
+
+52
+00:04:51,290 --> 00:04:59,210
+then you have curly braces and in here, you define how this contract should look like, what your requirements
+
+53
+00:04:59,210 --> 00:05:00,640
+are.
+
+54
+00:05:00,710 --> 00:05:08,020
+My requirement here is that in this case now, I have a first name of type string.
+
+55
+00:05:08,030 --> 00:05:13,580
+Now with that, I can change this person type here to be of type name,
+
+56
+00:05:13,670 --> 00:05:14,900
+NamedPerson
+
+57
+00:05:14,930 --> 00:05:16,430
+and the same is true down here,
+
+58
+00:05:16,430 --> 00:05:25,340
+this should also be of type NamedPerson. With that if I compile this and I'll reload the application,
+
+59
+00:05:25,410 --> 00:05:27,440
+we see it's working again,
+
+60
+00:05:27,440 --> 00:05:34,800
+we didn't get a compilation error but we will get one if I change this to name and I try to compile this
+
+61
+00:05:34,800 --> 00:05:35,790
+now,
+
+62
+00:05:35,790 --> 00:05:42,000
+now we get a bunch of errors all telling me that I'm not fulfilling the contract this interface here requires
+
+63
+00:05:42,000 --> 00:05:43,310
+me to fulfill.
+
+64
+00:05:43,530 --> 00:05:51,810
+So interfaces are a way to guarantee your code that certain properties or methods or whatever are available.

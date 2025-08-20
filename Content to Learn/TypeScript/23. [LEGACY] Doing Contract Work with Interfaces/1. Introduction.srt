@@ -1,0 +1,49 @@
+1
+
+00:00:01,780  -->  00:00:08,040
+Until now, we already learned a lot about TypeScript, we learned about a lot of the core features.
+
+2
+
+00:00:08,050  -->  00:00:15,730
+Now it's time to also come to some features which are brand new, brand new introduced by TypeScript, something
+
+3
+
+00:00:15,760  -->  00:00:22,610
+we didn't really know before from the Javascript world because modules, classes and so on,
+
+4
+
+00:00:22,660  -->  00:00:28,600
+these are all things we already knew from Javascript even though we might have had some different approaches
+
+5
+
+00:00:28,600  -->  00:00:29,540
+of getting there
+
+6
+
+00:00:29,620  -->  00:00:31,990
+but it's not brand new. Now
+
+7
+
+00:00:32,020  -->  00:00:40,180
+this module looks at interfaces which really is a concept you didn't know before in Javascript.
+
+8
+
+00:00:40,180  -->  00:00:42,480
+Now I'm not going to spoil the fun,
+
+9
+
+00:00:42,490  -->  00:00:45,600
+what are interfaces and why would we use them?
+
+10
+
+00:00:45,730  -->  00:00:48,250
+Let's have a look at that in the next lectures.

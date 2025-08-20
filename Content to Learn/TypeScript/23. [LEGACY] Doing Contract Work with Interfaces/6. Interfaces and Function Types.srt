@@ -1,0 +1,169 @@
+1
+
+00:00:02,590  -->  00:00:11,680
+So we covered interfaces which defined properties and methods and how to use them on objects and classes
+
+2
+
+00:00:12,310  -->  00:00:17,820
+or here as a type for our argument which gets passed to the greet function.
+
+3
+
+00:00:17,830  -->  00:00:20,830
+These are the most common use cases after all
+
+4
+
+00:00:20,980  -->  00:00:25,090
+but you can also create interfaces for function types.
+
+5
+
+00:00:25,090  -->  00:00:31,800
+So I'll just add this little separator so that the code stays clear to or easy to be read,
+
+6
+
+00:00:31,960  -->  00:00:35,890
+I'm just keeping all the old code so that you have it there for reference
+
+7
+
+00:00:36,220  -->  00:00:44,310
+but now I want to create a new interface which I'll name DoubleValueFunc,
+
+8
+
+00:00:45,040  -->  00:00:47,380
+then again curly braces as before
+
+9
+
+00:00:47,560  -->  00:00:57,880
+but now I'm not setting up any property or a method like before but instead, I'll use parentheses to
+
+10
+
+00:00:57,880  -->  00:01:06,040
+kind of set up a function type here and here, I will have a number one which will be a number and number
+
+11
+
+00:01:06,040  -->  00:01:10,370
+two which should also be of type number and it will return a number.
+
+12
+
+00:01:10,660  -->  00:01:13,610
+So that is a function type as you learned it
+
+13
+
+00:01:13,840  -->  00:01:20,640
+and this interface basically says whatever uses this interface must be a function of this type.
+
+14
+
+00:01:20,650  -->  00:01:24,480
+So now I can create myDoubleFunction,
+
+15
+
+00:01:24,490  -->  00:01:33,160
+so myDoubleFunction maybe here like that and this should be of type DoubleValueFunc.
+
+16
+
+00:01:33,220  -->  00:01:40,280
+Now with that, I can say myDoubleFunction equals function
+
+17
+
+00:01:40,830  -->  00:01:46,350
+and of course this has to be let so that I can change it after creating it.
+
+18
+
+00:01:46,350  -->  00:01:50,730
+So here, I can then say or of course I also need to add the arguments here,
+
+19
+
+00:01:50,730  -->  00:01:59,550
+so number one which should be a number and number two which should be a number and you could use different
+
+20
+
+00:01:59,790  -->  00:02:00,540
+names here,
+
+21
+
+00:02:00,560  -->  00:02:06,140
+so I'll just rename this to value to show that this is allowed as long as the types match the
+
+22
+
+00:02:06,150  -->  00:02:08,630
+types from your interface
+
+23
+
+00:02:09,120  -->  00:02:13,720
+and then here, I will just return value1 plus
+
+24
+
+00:02:13,740  -->  00:02:16,390
+value2 times two
+
+25
+
+00:02:16,410  -->  00:02:19,410
+and of course we need some parentheses around that to
+
+26
+
+00:02:19,650  -->  00:02:30,240
+give us the right result and then I can call myDoubleFunction, pass 10 and 20,
+
+27
+
+00:02:30,240  -->  00:02:38,340
+so we should get back 60 I assume, compile everything, don't get an error, clear the console, reload and
+
+28
+
+00:02:38,340  -->  00:02:40,220
+see 60 down here.
+
+29
+
+00:02:40,740  -->  00:02:49,380
+So with that, I'm creating an interface which just says the type should be a function which gets two arguments
+
+30
+
+00:02:49,650  -->  00:02:51,300
+where both arguments are numbers
+
+31
+
+00:02:51,300  -->  00:02:56,860
+in this case and which returns a number which clearly is the case for this function
+
+32
+
+00:02:57,360  -->  00:03:06,520
+and if I change this here to be a string let's say and then I try to compile this, as you see, I get an
+
+33
+
+00:03:06,520  -->  00:03:11,430
+error that this is not the right type basically.
+
+34
+
+00:03:11,500  -->  00:03:17,490
+So that is where you can also use interfaces to set the type of functions.
