@@ -1,0 +1,59 @@
+1
+
+00:00:02,140  -->  00:00:06,500
+Now you can not only add one decorator, you can also add multiple.
+
+2
+
+00:00:06,500  -->  00:00:14,060
+So let's say I also want to log this class, so I could use my logging decorator I pass through for example
+
+3
+
+00:00:14,150  -->  00:00:20,810
+to then, as again this is a factory attach the logged function here as a decorator
+
+4
+
+00:00:20,820  -->  00:00:21,740
+in the end
+
+5
+
+00:00:22,050  -->  00:00:25,880
+and if I save this and reload my page,
+
+6
+
+00:00:26,330  -->  00:00:32,670
+well now you see that yes we have the plant being printed here by the printable function
+
+7
+
+00:00:32,810  -->  00:00:39,950
+but before that, we see the log logging the constructor function to the console and that stems from this
+
+8
+
+00:00:40,340  -->  00:00:43,400
+logging decorator here.
+
+9
+
+00:00:43,970  -->  00:00:48,080
+If I change this to false, the log decorator will not get attached
+
+10
+
+00:00:48,320  -->  00:00:54,650
+and therefore if I reload this, we only see the plant printing itself due to the printable decorator but
+
+11
+
+00:00:54,650  -->  00:00:58,860
+we don't see the constructor function being printed to the console before that
+
+12
+
+00:00:59,180  -->  00:01:03,210
+and that's just because the logged decorator is not attached here.

@@ -1,0 +1,163 @@
+1
+00:00:02,100 --> 00:00:10,140
+So that's a decorator, it's a function attached to something with the @ sign and you can not only attach
+
+2
+00:00:10,230 --> 00:00:12,100
+a function like this,
+
+3
+00:00:12,240 --> 00:00:16,620
+you could also create something which is called a factory.
+
+4
+00:00:16,620 --> 00:00:26,790
+Now sounds difficult but it isn't. I'll create a new class which I'll name car and this class doesn't
+
+5
+00:00:26,790 --> 00:00:30,210
+have any implementation because I want to keep this simple
+
+6
+00:00:30,480 --> 00:00:39,490
+and now let's say you still want to add kind of this logged decorator but you want to be able to either decide
+
+7
+00:00:39,510 --> 00:00:43,610
+and or to decide if this should be logged or not.
+
+8
+00:00:43,620 --> 00:00:44,610
+So I want to pass
+
+9
+00:00:44,610 --> 00:00:46,260
+true or false like this, so
+
+10
+00:00:46,260 --> 00:00:52,770
+true false. True means print it to the console, false means don't print it.
+
+11
+00:00:52,770 --> 00:00:58,740
+So I can't do it up here because this log function only gets the constructor as a function and I can't
+
+12
+00:00:58,760 --> 00:00:59,120
+add
+
+13
+00:00:59,130 --> 00:01:04,320
+true or false but I can use a factory to get the behavior here.
+
+14
+00:01:04,320 --> 00:01:07,250
+I'll create a new function which I'll name logging,
+
+15
+00:01:07,260 --> 00:01:09,170
+again nothing special about this function,
+
+16
+00:01:09,180 --> 00:01:11,160
+it's a normal function.
+
+17
+00:01:11,170 --> 00:01:14,450
+It gets a value which is of type boolean,
+
+18
+00:01:14,460 --> 00:01:19,470
+that's something I decide, has nothing to do with TypeScript or where you attach this function,
+
+19
+00:01:19,470 --> 00:01:22,570
+this can be decided by you. Now
+
+20
+00:01:22,610 --> 00:01:33,420
+importantly, this function has to return a function which can be used as a decorator. So it returns depending
+
+21
+00:01:33,420 --> 00:01:35,480
+on if value is true or false,
+
+22
+00:01:35,490 --> 00:01:42,040
+if it is true, it returns the logged function, otherwise it returns null, so it returns nothing,
+
+23
+00:01:42,150 --> 00:01:44,710
+so nothing gets attached then.
+
+24
+00:01:44,950 --> 00:01:52,740
+Now I can attach this logging decorator here but now I'm calling it like a function with parentheses
+
+25
+00:01:53,190 --> 00:01:59,910
+and I pass true and that's important because in the end of course, I can only attach this function because
+
+26
+00:02:00,000 --> 00:02:01,830
+it gets the constructor,
+
+27
+00:02:01,830 --> 00:02:05,330
+logging is not really the decorator attached,
+
+28
+00:02:05,370 --> 00:02:13,410
+I am attaching the logging result since I'm executing the logging function here and the result or whatever
+
+29
+00:02:13,410 --> 00:02:20,820
+this function returns is the logged function which again is a valid function to be used as a class decorator
+
+30
+00:02:21,030 --> 00:02:23,980
+because it gets this constructor argument.
+
+31
+00:02:24,210 --> 00:02:30,790
+So if I save this, it compiles without an error and if I then have a look at the console, let's clear it,
+
+32
+00:02:30,810 --> 00:02:42,620
+reload, you see function car here gets logged but if I switch this to false here, save it again, reload,
+
+33
+00:02:42,800 --> 00:02:48,300
+you see now I'm only getting the log of function person which stems from this decorator here but I'm
+
+34
+00:02:48,300 --> 00:02:51,440
+not logging the car anymore because this is false,
+
+35
+00:02:51,450 --> 00:02:55,250
+therefore yes this function gets executed but it returns null,
+
+36
+00:02:55,260 --> 00:03:01,170
+so in the end nothing is attached to the class because again and I'm just stressing this because it is
+
+37
+00:03:01,170 --> 00:03:02,510
+so important,
+
+38
+00:03:02,530 --> 00:03:09,800
+keep this in mind, @logging means attach the result of this function for execution which is null
+
+39
+00:03:09,810 --> 00:03:11,570
+if we set it to false,
+
+40
+00:03:11,640 --> 00:03:15,840
+so then no metadata works, excuse me, no decorator is attached.
+
+41
+00:03:15,870 --> 00:03:23,160
+So changing this to true again to have the log and with that, you see how we can use decorators here.

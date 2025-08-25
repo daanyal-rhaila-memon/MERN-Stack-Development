@@ -1,0 +1,59 @@
+1
+
+00:00:01,580  -->  00:00:06,650
+With interfaces and generics, we had a look at two new features introduced by TypeScript.
+
+2
+
+00:00:07,310  -->  00:00:10,900
+TypeScript actually has a couple of new features,
+
+3
+
+00:00:10,910  -->  00:00:13,670
+one of them being decorators,
+
+4
+
+00:00:13,820  -->  00:00:21,380
+that is what we're going to have a look at it in this module. Basically decorators are functions you
+
+5
+
+00:00:21,380  -->  00:00:28,190
+can attach to classes, to methods, to properties and then work with these classes,
+
+6
+
+00:00:28,190  -->  00:00:30,980
+methods, properties or transform them.
+
+7
+
+00:00:31,190  -->  00:00:38,220
+So it's kind of a bit of metaprogramming and you will see how all of that works throughout this module.
+
+8
+
+00:00:38,220  -->  00:00:45,980
+Decorators basically gave you the chance of extending a class, of adding an extra functionality simply
+
+9
+
+00:00:45,980  -->  00:00:52,430
+by adding a little thing which you will see in this module to it and then all of a sudden, introducing
+
+10
+
+00:00:52,430  -->  00:01:01,250
+a whole lot of new functionality to a class for example or to a property simply by adding this
+
+11
+
+00:01:01,370  -->  00:01:03,140
+thing, this decorator.
+
+12
+
+00:01:03,380  -->  00:01:08,240
+Well let's leave the world of theory here and see it in action in the next lectures.

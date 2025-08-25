@@ -1,0 +1,215 @@
+1
+00:00:01,880 --> 00:00:08,550
+Now I want to conclude this module here with another type of decorator, a parameter decorator,
+
+2
+00:00:08,570 --> 00:00:13,640
+so decorators attached to parameters passed to methods.
+
+3
+00:00:14,060 --> 00:00:20,390
+So for that I'm creating yet another class here, I'll name it course, this should have a name,
+
+4
+00:00:20,510 --> 00:00:26,600
+it will get a constructor by me where this name is also passed to the constructor and yes, I could use
+
+5
+00:00:26,600 --> 00:00:33,620
+the shorter way of initialising this, I just like to be explicit here and then I'll have method,
+
+6
+00:00:33,720 --> 00:00:42,650
+printStudentsNumbers let's say where I have the printAll boolean to know if I should print all the students
+
+7
+00:00:42,890 --> 00:00:50,270
+and let's also add a mode property which is a string or a mode parameter, excuse me.
+
+8
+00:00:50,690 --> 00:00:52,740
+And then here, I'll totally ignore the mode,
+
+9
+00:00:52,790 --> 00:00:59,300
+you will soon see why I added it and then I'm going to just check if printAll,
+
+10
+00:00:59,390 --> 00:01:08,870
+so if we want to print all students in which case I'll log let's say 10000 and otherwise let's say
+
+11
+00:01:08,870 --> 00:01:14,500
+we're not printing all the students, so then I'll only print 2000.
+
+12
+00:01:14,630 --> 00:01:18,310
+Now I can simply instantiate this course,
+
+13
+00:01:18,330 --> 00:01:22,590
+so course equals new course
+
+14
+00:01:23,660 --> 00:01:31,460
+and then I can call course.printStudentsNumbers, mode is anything because I'm
+
+15
+00:01:31,460 --> 00:01:33,010
+ignoring it anyways,
+
+16
+00:01:33,050 --> 00:01:34,620
+anything here
+
+17
+00:01:35,430 --> 00:01:43,940
+and I set this to true and then do it just one more time, set this to false and of course, course should
+
+18
+00:01:43,940 --> 00:01:45,960
+have a name like this.
+
+19
+00:01:46,010 --> 00:01:53,660
+So saving this if I reload my page, we see 10000 and 2000 as expected.
+
+20
+00:01:53,660 --> 00:01:59,990
+Now I want to annotate this parameter here or I want to add a decorator to it and I just want to print
+
+21
+00:01:59,990 --> 00:02:03,890
+some information about this parameter for now.
+
+22
+00:02:04,160 --> 00:02:09,430
+So I'll name it printInfo and this will not be a factory,
+
+23
+00:02:09,440 --> 00:02:14,390
+it will be the decorator itself, though of course you can create a factory, that is true for all kinds
+
+24
+00:02:14,390 --> 00:02:16,420
+of decorators and here,
+
+25
+00:02:16,430 --> 00:02:23,420
+I'll have the target as a property, as a parameter I get passed to this function here and target as before
+
+26
+00:02:23,450 --> 00:02:30,110
+will either be the constructor of the class or the prototype, depending on whether it's a static class
+
+27
+00:02:30,110 --> 00:02:31,380
+or not,
+
+28
+00:02:31,640 --> 00:02:39,170
+then I have the name of the method on which this parameter or where this parameter is used, so not the
+
+29
+00:02:39,170 --> 00:02:41,450
+parameter name but the name of the method.
+
+30
+00:02:41,720 --> 00:02:43,880
+So I'll name it method name here
+
+31
+00:02:45,200 --> 00:02:47,280
+and then I have the param index,
+
+32
+00:02:47,300 --> 00:02:53,300
+so the index of the parameter or put in other words, which position this parameter has in the list
+
+33
+00:02:53,300 --> 00:02:56,150
+of arguments passed to this method here.
+
+34
+00:02:56,150 --> 00:02:59,420
+So this parameter here would have the position
+
+35
+00:02:59,600 --> 00:03:04,030
+whereas the second parameter but as this starts at 0
+
+36
+00:03:04,030 --> 00:03:08,800
+like in an array it has the position of one but you will see this in a second.
+
+37
+00:03:08,810 --> 00:03:09,830
+So in this function,
+
+38
+00:03:09,830 --> 00:03:14,240
+all I want to do is I want to print some info and of course, you cannot only print things there, you can
+
+39
+00:03:14,300 --> 00:03:17,500
+execute whatever logic you want to execute in this decorator,
+
+40
+00:03:17,690 --> 00:03:20,250
+I just want to show what we're getting here.
+
+41
+00:03:20,600 --> 00:03:28,790
+So I'll print the target like so, I'll then also print the method name here
+
+42
+00:03:33,240 --> 00:03:36,150
+and I will print the key index on the param,
+
+43
+00:03:36,150 --> 00:03:40,170
+so which position we indeed do have here,
+
+44
+00:03:40,320 --> 00:03:45,030
+so like this, the param index.
+
+45
+00:03:45,040 --> 00:03:49,590
+Now with that, I can go down to my printStudentsNumbers method here
+
+46
+00:03:49,810 --> 00:03:54,650
+and I want to attach it to printAll and I simply do it by adding @printInfo,
+
+47
+00:03:54,790 --> 00:03:56,750
+so the same syntax you already know.
+
+48
+00:03:56,890 --> 00:03:58,570
+Important, no parentheses,
+
+49
+00:03:58,600 --> 00:04:00,200
+this is no factory here,
+
+50
+00:04:00,220 --> 00:04:03,900
+that's the function I want to attach as a decorator itself.
+
+51
+00:04:04,300 --> 00:04:09,820
+So if I save this and reload my page here, you see the target,
+
+52
+00:04:09,970 --> 00:04:13,680
+then also the method name and the index of the parameter, 1
+
+53
+00:04:13,680 --> 00:04:16,300
+because as I said, it starts counting at zero,
+
+54
+00:04:16,330 --> 00:04:20,870
+so since this is the second argument, it has the index of one.

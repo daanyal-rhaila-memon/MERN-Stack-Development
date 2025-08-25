@@ -1,0 +1,195 @@
+1
+00:00:02,170 --> 00:00:10,480
+Just like you can assign method decorators, you can also add property decorators and I'm just going to
+
+2
+00:00:10,510 --> 00:00:12,520
+bundle that together here.
+
+3
+00:00:12,520 --> 00:00:18,030
+Now a property decorator, as the name implies, can be added to a property.
+
+4
+00:00:18,130 --> 00:00:23,950
+You might think it looks pretty similar to a method decorator because there is not that
+
+5
+00:00:23,950 --> 00:00:27,970
+much difference between a method like this and a property like that,
+
+6
+00:00:27,970 --> 00:00:35,560
+unfortunately there is a difference because due to some technical reasons, TypeScript can't access properties
+
+7
+00:00:35,620 --> 00:00:38,230
+in the same way it can access methods.
+
+8
+00:00:38,540 --> 00:00:46,590
+Therefore, if we wanted to make this project name for example uneditable, we might get unexpected results
+
+9
+00:00:46,600 --> 00:00:48,220
+but see for yourself.
+
+10
+00:00:48,730 --> 00:00:57,610
+I can add another function and I'll name it overwritable to not reuse the editable name and this should
+
+11
+00:00:57,620 --> 00:01:03,430
+always be factory where the user decides if that should be the case or not
+
+12
+00:01:03,580 --> 00:01:10,480
+and then here we also return a function which will serve as the actual decorator or annotation to that
+
+13
+00:01:10,480 --> 00:01:17,230
+property where we are going to add it. Now this function also takes target as the input,
+
+14
+00:01:17,230 --> 00:01:24,640
+following the same logic as with the editable method here, so target is either the constructor function
+
+15
+00:01:24,730 --> 00:01:30,580
+in a static class or the prototype in an instantiated one,
+
+16
+00:01:30,580 --> 00:01:35,430
+then we have the property name which is a string and then that's it.
+
+17
+00:01:35,620 --> 00:01:41,150
+So we don't have the property descriptor unfortunately because TypeScript can't access it
+
+18
+00:01:41,560 --> 00:01:50,140
+but important to know, this function here can return the property descriptor, so we can set the descriptor
+
+19
+00:01:50,410 --> 00:01:53,520
+but we can't access the old one or the existing one.
+
+20
+00:01:54,650 --> 00:02:03,380
+So what we can do here is we can create a new descriptor, like so, of type property descriptor should
+
+21
+00:02:03,380 --> 00:02:05,090
+be an object then
+
+22
+00:02:05,300 --> 00:02:09,790
+and here we can set for example writable to value.
+
+23
+00:02:10,220 --> 00:02:14,940
+Now if we do this and then we have to return the new descriptor,
+
+24
+00:02:15,290 --> 00:02:23,710
+if we do that, we can of course go to the project name and assign overwritable and set this to false.
+
+25
+00:02:23,720 --> 00:02:25,910
+Now in order to see what this does,
+
+26
+00:02:25,940 --> 00:02:28,820
+I print the whole project here
+
+27
+00:02:29,690 --> 00:02:34,230
+so that we can have a look at that
+
+28
+00:02:34,470 --> 00:02:40,070
+and now here's something interesting, we get an empty project here.
+
+29
+00:02:40,680 --> 00:02:47,730
+Well the reason for this empty project is or this empty project we see here is that with our overwritable
+
+30
+00:02:47,730 --> 00:02:51,370
+metadata here, I'm setting writable to false
+
+31
+00:02:51,380 --> 00:02:56,560
+in this case and that prevents every writing access to this method or
+
+32
+00:02:56,700 --> 00:03:00,570
+excuse me, to this property including the one here in the constructor,
+
+33
+00:03:00,600 --> 00:03:08,970
+so no value get set at any point and that is why we get this undesired result of not seeing anything
+
+34
+00:03:08,970 --> 00:03:10,030
+here.
+
+35
+00:03:10,050 --> 00:03:19,780
+So by the way if you return the descriptor here, you should add any here to just let TypeScript know
+
+36
+00:03:19,780 --> 00:03:23,010
+that you're planning on returning something here
+
+37
+00:03:23,220 --> 00:03:30,960
+but again, this won't really change this. It's hard to use that descriptor, this property descriptor here
+
+38
+00:03:30,990 --> 00:03:38,400
+because of the fact that for example changing the writable state will pretty much lock up this property
+
+39
+00:03:38,400 --> 00:03:40,220
+for your whole code.
+
+40
+00:03:40,530 --> 00:03:46,430
+However of course, you could use some other logic here which might be more suitable
+
+41
+00:03:46,440 --> 00:03:52,410
+or you might want to change the enumerability or the configurability of that property, then this
+
+42
+00:03:52,410 --> 00:03:54,460
+might be fine, otherwise
+
+43
+00:03:54,490 --> 00:04:02,790
+this decorator on a property should mostly be used to read values and react based on that,
+
+44
+00:04:02,840 --> 00:04:08,510
+so as a listener kind of which then does things when you attach it to a property.
+
+45
+00:04:08,690 --> 00:04:13,760
+However I wanted to show this very important piece of information that you can return a new descriptor,
+
+46
+00:04:13,760 --> 00:04:18,140
+a new property descriptor, that you then should add the any return type,
+
+47
+00:04:18,140 --> 00:04:19,600
+otherwise return void
+
+48
+00:04:19,610 --> 00:04:26,870
+if you're not planning on returning something but that you have to be aware of the potential issues
+
+49
+00:04:26,870 --> 00:04:33,460
+we're facing with this and that simply as I said due to some technical limitations TypeScript faces here.

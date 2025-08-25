@@ -1,0 +1,131 @@
+1
+00:00:01,750 --> 00:00:06,070
+Now we can also create a more useful decorator,
+
+2
+00:00:06,180 --> 00:00:12,200
+so I'm calling this in advanced. Let's create a new function which I want to use as a decorator and I'll
+
+3
+00:00:12,210 --> 00:00:14,130
+name it printable,
+
+4
+00:00:14,130 --> 00:00:20,220
+this will of course get my constructor function as an input since I want to pass it to or attach it
+
+5
+00:00:20,340 --> 00:00:27,750
+to a class and in here what I want to do is, I will take the prototype of the constructor function and
+
+6
+00:00:27,750 --> 00:00:34,800
+keep in mind then that's just the prototype of any object created based on this class or based on the
+
+7
+00:00:34,830 --> 00:00:35,920
+constructor function, in the
+
+8
+00:00:35,940 --> 00:00:38,490
+end that's just how Javascript script works,
+
+9
+00:00:38,820 --> 00:00:39,630
+print,
+
+10
+00:00:39,810 --> 00:00:44,790
+so add a new method to the prototype, function.
+
+11
+00:00:44,810 --> 00:00:52,370
+So with this, I can then console log this which should basically do the following,
+
+12
+00:00:52,370 --> 00:01:02,450
+each object created or instantiated based on a class which has the printable decorator will automatically
+
+13
+00:01:02,450 --> 00:01:03,920
+receive the print method
+
+14
+00:01:03,980 --> 00:01:11,420
+because I'm adding it to the prototype here and this print method allows this object to
+
+15
+00:01:11,420 --> 00:01:13,660
+print itself to the console,
+
+16
+00:01:13,970 --> 00:01:15,690
+so let's see it in action.
+
+17
+00:01:15,770 --> 00:01:24,160
+I'll create a new class, plant and here I'll set up a name which is just green plant by default, so a
+
+18
+00:01:24,350 --> 00:01:32,690
+name property and then I want to add my printable decorator without parentheses because here, I'm not
+
+19
+00:01:32,690 --> 00:01:33,810
+having a factory,
+
+20
+00:01:33,830 --> 00:01:38,710
+this is the decorator itself or the function which I want to use as a decorator.
+
+21
+00:01:38,840 --> 00:01:49,700
+So with printable in place, I can then create a new plant here, new plant and with this, I can call plant print.
+
+22
+00:01:49,720 --> 00:01:57,420
+Now unfortunately, I have to explicitly cast this to type any otherwise
+
+23
+00:01:57,460 --> 00:02:03,190
+TypeScript doesn't really recognize that this print function does exist even though it does,
+
+24
+00:02:03,220 --> 00:02:05,830
+so that's just a little bug as it seems.
+
+25
+00:02:05,830 --> 00:02:14,270
+But if I save this now, no errors and if I go to the console, you see plant, green plant at the bottom.
+
+26
+00:02:14,470 --> 00:02:22,540
+So this object here, this plant object which I created based on this plant class just printed itself and
+
+27
+00:02:22,540 --> 00:02:28,870
+again for that, it's important to keep in mind that the class or the decorator attached to the class
+
+28
+00:02:28,870 --> 00:02:33,260
+gets the constructor function which basically is this blueprint here.
+
+29
+00:02:33,340 --> 00:02:38,470
+That's just how Javascript works, the class is just syntactic sugar, we have a constructor function in the
+
+30
+00:02:38,470 --> 00:02:42,990
+background and then on the prototype of this constructor function,
+
+31
+00:02:43,000 --> 00:02:52,040
+so kind of the parent class of all objects, I add the print method which allows again this object to print
+
+32
+00:02:52,120 --> 00:02:53,160
+itself.
+
+33
+00:02:54,220 --> 00:03:01,150
+So with that, I add a little bit of more useful decorator to the class to show what you can do with decorators.

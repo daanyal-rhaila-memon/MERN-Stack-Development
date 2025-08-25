@@ -1,0 +1,84 @@
+1
+
+00:00:01,820  -->  00:00:03,770
+So that were decorators. 
+
+2
+
+00:00:03,770  -->  00:00:10,460
+Decorators are really an interesting feature and they're in development, so we may see some additions
+
+3
+
+00:00:10,490  -->  00:00:12,790
+or changes to them in the future,
+
+4
+
+00:00:13,010  -->  00:00:17,010
+something of course I will inform you about in this course.
+
+5
+
+00:00:17,030  -->  00:00:25,310
+Basically, decorators give you the ability to transform certain classes or add new data to it or add
+
+6
+
+00:00:25,310  -->  00:00:26,680
+new information to it
+
+7
+
+00:00:26,690  -->  00:00:34,430
+as you saw in this course or in this module. Decorators may also be used in conjunction with metadata
+
+8
+
+00:00:35,120  -->  00:00:40,730
+and now metadata is something not really related to TypeScript, not introduced by TypeScript which is
+
+9
+
+00:00:40,730  -->  00:00:46,550
+why I don't cover it specifically here but if you want to learn more about metadata and decorators
+
+10
+
+00:00:46,550  -->  00:00:53,300
+and how you may use them together, definitely have a look at the official TypeScript webpage,
+
+11
+
+00:00:53,300  -->  00:00:54,660
+typescriptlang.org 
+
+12
+
+00:00:54,860  -->  00:00:58,720
+and there under documentation, handbook
+
+13
+
+00:00:59,230  -->  00:01:06,900
+and here the decorators part. At the very bottom, you will learn more about how to add metadata with
+
+14
+
+00:01:06,900  -->  00:01:13,780
+a decorator which might be interesting to you in your project too, just as what you could do next
+
+15
+
+00:01:13,790  -->  00:01:14,640
+otherwise.
+
+16
+
+00:01:14,880  -->  00:01:15,820
+Well with that,
+
+17
+
+00:01:15,880  -->  00:01:18,380
+let's have a look at the next module in this course.

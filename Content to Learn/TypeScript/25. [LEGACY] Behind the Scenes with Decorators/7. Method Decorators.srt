@@ -1,0 +1,227 @@
+1
+00:00:02,020 --> 00:00:05,740
+So as already announced, now is the time to have a look at a different decorator,
+
+2
+00:00:05,740 --> 00:00:11,290
+the method decorator which, well you guessed it, allows us to decorate methods.
+
+3
+00:00:11,530 --> 00:00:18,340
+So I'll create a class for this again, I'll name it project and this class should have a project name which
+
+4
+00:00:18,340 --> 00:00:19,430
+is a string,
+
+5
+00:00:19,840 --> 00:00:24,220
+it should have a constructor where I can assign this name,
+
+6
+00:00:24,220 --> 00:00:29,380
+that's all I'm doing in here, so set this project name equal to the name passed to the constructor
+
+7
+00:00:29,810 --> 00:00:37,300
+and then as we're talking about method decorators, I want to have a method. I'll name it calcBudget, so
+
+8
+00:00:37,350 --> 00:00:42,180
+to calculate the budget of our project if you want to think of it like that
+
+9
+00:00:42,340 --> 00:00:48,380
+and all this should do is it basically console log let's say 1000.
+
+10
+00:00:48,400 --> 00:00:51,880
+So that's all this function does, not too fancy.
+
+11
+00:00:51,910 --> 00:00:59,590
+Now I want to write a decorator which allows me to make this method here editable or not editable because
+
+12
+00:00:59,590 --> 00:01:05,860
+right now what I can do and you can do that on all classes by default is of course I can instantiate it,
+
+13
+00:01:06,130 --> 00:01:14,060
+give it a name, Super Project for example and then I can call project, 
+
+14
+00:01:14,410 --> 00:01:16,510
+no, calcBudget.
+
+15
+00:01:16,660 --> 00:01:27,360
+I can then after doing this also set calcBudget to a new function and change it to then print 2000
+
+16
+00:01:27,370 --> 00:01:30,780
+for example and if I then call it again,
+
+17
+00:01:30,790 --> 00:01:35,080
+well what will we see? And then reload
+
+18
+00:01:35,110 --> 00:01:40,450
+or it was already there but reload the page and we see 1000 and 2000 which makes sense because we're
+
+19
+00:01:40,510 --> 00:01:46,600
+overwriting the function here, right? Now that I want to add some metadata to this method here to make it
+
+20
+00:01:46,620 --> 00:01:49,450
+non-overwritable or editable.
+
+21
+00:01:49,450 --> 00:01:55,720
+So I will add a function at the top which will serve as my decorator or which I will attach to be precise
+
+22
+00:01:55,810 --> 00:01:58,210
+and I'll name it editable,
+
+23
+00:01:58,240 --> 00:02:05,500
+this will take a boolean value, so that will be a factory which I am creating which then returns me the
+
+24
+00:02:05,500 --> 00:02:12,490
+actual function which gets attached to the metadata and/or the method and this function takes different
+
+25
+00:02:12,520 --> 00:02:17,610
+arguments than the function here which was to be attached to the class took.
+
+26
+00:02:17,650 --> 00:02:23,710
+Remember the function we attach the class only took the constructor function as an input.
+
+27
+00:02:23,710 --> 00:02:30,990
+Now here, this metadata which will get added to a method takes a target of type any because that varies
+
+28
+00:02:31,020 --> 00:02:38,460
+on the question if we have a static class or a static method or instantiate one,
+
+29
+00:02:38,470 --> 00:02:46,080
+so if we're calling a static method, then this would resolve to the constructor function,
+
+30
+00:02:46,150 --> 00:02:54,010
+if we're using an instantiated one, target would be the prototype of that object. Then we have the name
+
+31
+00:02:54,010 --> 00:02:58,210
+of the property and then we have the descriptor
+
+32
+00:02:58,480 --> 00:03:00,910
+and that is a type property descriptor.
+
+33
+00:03:00,910 --> 00:03:10,090
+Now what is a descriptor? A descriptor is something we best look up here, it has nothing to do with TypeScript
+
+34
+00:03:10,150 --> 00:03:19,270
+or metadata, it has to do with plain old Javascript and it comes from this object defined property method
+
+35
+00:03:19,270 --> 00:03:23,290
+here which allows us to create new properties with vanilla Javascript.
+
+36
+00:03:23,590 --> 00:03:27,170
+Here we pass a descriptor as the third argument
+
+37
+00:03:27,460 --> 00:03:33,240
+and as you can learn in this article, a descriptor allows you to configure a property, make it
+
+38
+00:03:33,280 --> 00:03:39,670
+reconfigurable so that you can't change the configuration afterwards can make it a new variable, assign
+
+39
+00:03:39,670 --> 00:03:40,320
+a value,
+
+40
+00:03:40,330 --> 00:03:43,100
+make it writable and so on.
+
+41
+00:03:43,120 --> 00:03:46,500
+So that is what a property descriptor does
+
+42
+00:03:47,140 --> 00:03:52,300
+and with this metadata, we get access to the descriptor and we can't change it.
+
+43
+00:03:52,540 --> 00:03:59,950
+So since I want to control the edibility of this method, what I do as I access the descriptor and then
+
+44
+00:03:59,950 --> 00:04:06,730
+the writable property on the descriptor and I set this equal to value, so that the user can control with
+
+45
+00:04:06,730 --> 00:04:09,030
+the editable factory here
+
+46
+00:04:09,160 --> 00:04:12,130
+if the method should be editable or not.
+
+47
+00:04:12,300 --> 00:04:17,470
+With that, I can attach my metadata like this, add editable and pass
+
+48
+00:04:17,490 --> 00:04:22,840
+let's say false to block the editing of this method.
+
+49
+00:04:22,840 --> 00:04:33,250
+Now with this, if I save this, close that and reload my page, now you see we print 1000 twice because
+
+50
+00:04:33,250 --> 00:04:38,000
+we're preventing this method here from being edited.
+
+51
+00:04:38,020 --> 00:04:43,620
+So this overwriting attempt here doesn't work, it's going into the void,
+
+52
+00:04:43,630 --> 00:04:46,360
+it's not throwing an error but it's not working either,
+
+53
+00:04:46,510 --> 00:04:48,560
+so here we just fail.
+
+54
+00:04:48,610 --> 00:04:51,280
+So that's how you attach a decorator to a method,
+
+55
+00:04:51,490 --> 00:04:57,340
+you have these three properties or these three parameters passed to that function which you can then
+
+56
+00:04:57,340 --> 00:05:05,380
+use in the function. Important, the target depends the question whether you're having this method as a 
+
+57
+00:05:05,390 --> 00:05:10,670
+static method in a static class or in an instantiated class or where you are using that.

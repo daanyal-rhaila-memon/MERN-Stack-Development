@@ -1,0 +1,223 @@
+1
+00:00:02,170 --> 00:00:09,220
+So as always, back I am in my editor here in the app.ts file, got my TypeScript compiler running and my
+
+2
+00:00:09,220 --> 00:00:12,220
+little server which doesn't log too much right now
+
+3
+00:00:12,310 --> 00:00:20,800
+and in this chapter, we'll have a look at decorators, so at functions we can add to methods or to
+
+4
+00:00:20,860 --> 00:00:25,580
+classes and yes, let's have a look at these decorators.
+
+5
+00:00:25,690 --> 00:00:33,490
+I'll start with a decorator which gets added to a class. So I might have class person here
+
+6
+00:00:33,850 --> 00:00:42,910
+and all I want to do basically is add a decorator which logs information about this class or as a
+
+7
+00:00:42,910 --> 00:00:47,780
+class decorator does about the constructor of this class.
+
+8
+00:00:47,920 --> 00:00:51,650
+So I'll explain it in a more detailed way in a second,
+
+9
+00:00:51,760 --> 00:00:59,010
+let me first create the decorator. A decorator is basically just a function you create,
+
+10
+00:00:59,300 --> 00:01:07,300
+so like this, name it logged for example. Now then it depends on where you want to append this decorator,
+
+11
+00:01:07,330 --> 00:01:09,410
+the arguments depend on that.
+
+12
+00:01:09,430 --> 00:01:15,570
+So I know that this will be a decorator attached to a class and decorators attached to a class will
+
+13
+00:01:15,640 --> 00:01:18,970
+get one argument by TypeScript.
+
+14
+00:01:18,970 --> 00:01:25,390
+Keep in mind, decorators are a TypeScript feature, so TypeScript manages which arguments will be passed
+
+15
+00:01:25,390 --> 00:01:31,200
+to a decorator depending on to what this decorator is attached to.
+
+16
+00:01:31,720 --> 00:01:38,620
+So I will specify this one argument which is the constructor of a class,
+
+17
+00:01:38,630 --> 00:01:40,760
+that's just what TypeScript passes to a decorator,
+
+18
+00:01:40,790 --> 00:01:42,320
+that's all that's to it.
+
+19
+00:01:42,530 --> 00:01:45,890
+You can't change this if you attach a decorator to a class,
+
+20
+00:01:45,890 --> 00:01:53,450
+it will get one argument and this one argument is the constructor function of this class. So constructor
+
+21
+00:01:53,450 --> 00:01:55,270
+function is what I could name it,
+
+22
+00:01:55,320 --> 00:02:02,360
+it will be of type function and then I can do whatever I want to do with or inside of the decorator.
+
+23
+00:02:02,630 --> 00:02:09,590
+So here, I simply want to log this constructor function so that we start simple and can see what happens.
+
+24
+00:02:10,010 --> 00:02:13,830
+Now I said I want to attach this decorator to this class
+
+25
+00:02:14,000 --> 00:02:16,830
+and how do I attach a decorator?
+
+26
+00:02:16,970 --> 00:02:24,320
+We do attach decorators by adding the @ sign and then the name of this function,
+
+27
+00:02:24,320 --> 00:02:27,940
+keep in mind again a decorator is just a function,
+
+28
+00:02:27,940 --> 00:02:31,370
+there is nothing special about this function which makes it a decorator,
+
+29
+00:02:31,370 --> 00:02:38,640
+it just becomes one when we append it or attach it with the @ sign. So I could attach any function
+
+30
+00:02:38,750 --> 00:02:46,400
+but then again keep in mind, it has to be a function which gets this single parameter if we want
+
+31
+00:02:46,400 --> 00:02:53,270
+to attach this decorator to a class because again, TypeScript only gives us this parameter when using
+
+32
+00:02:53,270 --> 00:02:56,570
+this function as a decorator on a class.
+
+33
+00:02:56,690 --> 00:02:57,490
+So with that,
+
+34
+00:02:57,530 --> 00:03:00,720
+notice that I am not adding the parentheses here,
+
+35
+00:03:00,770 --> 00:03:08,000
+I got my decorator set up, I can save this and if I then go to the console where we see function person
+
+36
+00:03:08,060 --> 00:03:11,700
+which is just the constructor function created by TypeScript,
+
+37
+00:03:11,780 --> 00:03:15,850
+so the constructor function of this class.
+
+38
+00:03:15,860 --> 00:03:18,020
+Now even though it worked fine,
+
+39
+00:03:18,260 --> 00:03:22,400
+what you should do because right now you can see we're getting an error here
+
+40
+00:03:22,400 --> 00:03:28,790
+that experimental support for decorators is a feature that is subject to change and that we
+
+41
+00:03:28,790 --> 00:03:33,070
+haven't set the experimental decorators option to remove this warning.
+
+42
+00:03:33,080 --> 00:03:39,590
+So in order to remove the warning, I can go to tsconfig and add another configuration here
+
+43
+00:03:39,810 --> 00:03:43,360
+where I say experimental decorators and set this to true,
+
+44
+00:03:43,400 --> 00:03:48,740
+which means yes I am aware that decorators is a feature which might change in the future but I want
+
+45
+00:03:48,740 --> 00:03:50,810
+to use it, don't warn me.
+
+46
+00:03:51,140 --> 00:03:55,370
+And with that, I set this up in a way that if I save this now,
+
+47
+00:03:55,850 --> 00:03:58,280
+well now I'm not getting this warning anymore.
+
+48
+00:03:59,440 --> 00:04:04,740
+Now clearly this class doesn't have a constructor but it does have an implicit constructor.
+
+49
+00:04:04,740 --> 00:04:10,620
+If we explicitly add one and then I just say console log
+
+50
+00:04:10,690 --> 00:04:16,320
+hi here, save this again and let's have a look at the console,
+
+51
+00:04:16,830 --> 00:04:19,120
+well then you see the console log hi here too
+
+52
+00:04:19,260 --> 00:04:28,650
+because again it prints the constructor of this class. So that's how you create a decorator or it's just
+
+53
+00:04:28,650 --> 00:04:29,930
+a normal function again
+
+54
+00:04:30,000 --> 00:04:36,750
+but how you make it a decorator by appending it with the @ sign and then again, it gets this constructor
+
+55
+00:04:36,750 --> 00:04:43,950
+function passed into this function by TypeScript because it is attached to a class and when attaching
+
+56
+00:04:43,950 --> 00:04:49,900
+a function to a class as a decorator, TypeScript gives you a reference to the constructor function.
