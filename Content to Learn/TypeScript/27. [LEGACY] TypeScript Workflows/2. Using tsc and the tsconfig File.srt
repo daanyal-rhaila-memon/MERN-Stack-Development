@@ -1,0 +1,127 @@
+1
+00:00:02,040 --> 00:00:07,460
+Consider TypeScript workflows in this module, I want to start with a pure TypeScript workflow.
+
+2
+00:00:07,480 --> 00:00:14,370
+So without a task runner like Gulp or a bundler or a dependency management system like webpack
+
+3
+00:00:14,530 --> 00:00:21,580
+but instead with a pure TypeScript workflow, a set up which might be all you need for a lot of projects.
+
+4
+00:00:22,130 --> 00:00:29,550
+I loaded the JQuery project where we simply use JQuery to help give this text some styling here.
+
+5
+00:00:29,830 --> 00:00:31,380
+So a very basic set up
+
+6
+00:00:31,420 --> 00:00:39,490
+and if you remember this, we import some typings to let TypeScript know where to find its JQuery
+
+7
+00:00:39,490 --> 00:00:43,860
+dependencies here and we're using SystemJS in the index.html file to
+
+8
+00:00:43,910 --> 00:00:46,010
+load JQuery here in the end.
+
+9
+00:00:46,630 --> 00:00:52,900
+What we also do is we simply compile our TypeScript code by running tsc,
+
+10
+00:00:52,930 --> 00:00:56,010
+so this compiles the app.ts file to the app.js
+
+11
+00:00:56,040 --> 00:01:00,290
+file here which then gets loaded in the index.html file.
+
+12
+00:01:00,650 --> 00:01:09,620
+Well this tsc command, by using this, we're basically using TypeScript as our only workflow tool,
+
+13
+00:01:09,640 --> 00:01:10,150
+right,
+
+14
+00:01:10,330 --> 00:01:16,280
+we don't have a task runner watching for any changes and then recompiling or something like this,
+
+15
+00:01:16,390 --> 00:01:22,870
+we're doing this with the tsc command and I showed you earlier in this course that the first thing which is
+
+16
+00:01:22,870 --> 00:01:30,890
+very important or which is very helpful is that on the tsc command, you can add the -w flag to enter
+
+17
+00:01:30,910 --> 00:01:36,380
+watch mode which basically means we're now watching all TypeScript files for changes
+
+18
+00:01:36,550 --> 00:01:41,080
+and whenever we make such a change, well we will re-trigger compilation,
+
+19
+00:01:41,110 --> 00:01:48,860
+so compilation will then run automatically without us having to run tsc which of course is a great convenient
+
+20
+00:01:48,890 --> 00:01:55,920
+enhancement in our workflow and something you definitely want to use when only using TypeScript.
+
+21
+00:01:56,140 --> 00:02:03,460
+But while this is nice to know but a pure TypeScript workflow also means that you have to understand
+
+22
+00:02:03,460 --> 00:02:10,570
+how the tsconfig.json file, the place where you configure your TypeScript project actually works.
+
+23
+00:02:11,130 --> 00:02:12,120
+And with works, 
+
+24
+00:02:12,220 --> 00:02:15,080
+I'm not talking about compiler options here,
+
+25
+00:02:15,100 --> 00:02:21,310
+I already had a look at these in the module about the TypeScript compiler and I explained some additional
+
+26
+00:02:21,310 --> 00:02:23,220
+options throughout this course
+
+27
+00:02:23,440 --> 00:02:30,430
+and really again, I already pointed towards the official documentation regarding these options because
+
+28
+00:02:30,430 --> 00:02:33,000
+there are just too many and a lot of them
+
+29
+00:02:33,220 --> 00:02:38,260
+you will probably not use that often, to go through them step-by-step.
+
+30
+00:02:38,260 --> 00:02:46,780
+Now what I want to consider this module though is this exclude node here or generally, how we can control
+
+31
+00:02:46,780 --> 00:02:53,830
+with the tsconfig.json file which TypeScript files in your project should get compiled.
+
+32
+00:02:53,830 --> 00:02:55,150
+So let's have a look at this.

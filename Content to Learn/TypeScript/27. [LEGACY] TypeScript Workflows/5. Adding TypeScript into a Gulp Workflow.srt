@@ -1,0 +1,387 @@
+1
+00:00:02,210 --> 00:00:07,160
+Sometimes you want to integrate TypeScript into your workflow when you are using a task runner like
+
+2
+00:00:07,160 --> 00:00:07,860
+Gulp.
+
+3
+00:00:08,060 --> 00:00:13,620
+So in this video, I want to show you how to do this how to combine TypeScript with Gulp.
+
+4
+00:00:13,850 --> 00:00:21,560
+For this, I will make or I will set up a simple Gulp workflow here by simply installing as a development dependency,
+
+5
+00:00:22,040 --> 00:00:33,070
+Gulp and then in order to use Gulp and TypeScript together, gulp -typescript. So by hitting enter,
+
+6
+00:00:33,070 --> 00:00:38,950
+both packages will get installed which allows me to set up a very basic Gulp workflow where I then can
+
+7
+00:00:38,950 --> 00:00:41,460
+integrate TypeScript.
+
+8
+00:00:41,470 --> 00:00:47,170
+So now, I will then as you will learn no longer use the tsc command but instead, use Gulp to compile
+
+9
+00:00:47,170 --> 00:00:48,430
+my TypeScript code.
+
+10
+00:00:48,790 --> 00:00:50,660
+Well let's see how this works.
+
+11
+00:00:50,710 --> 00:00:57,670
+I will first add a Gulp file of course to configure my Gulp workflow, the task runner. Here
+
+12
+00:00:57,790 --> 00:01:00,090
+I need to import Gulp of course,
+
+13
+00:01:00,130 --> 00:01:11,120
+so let's require Gulp here and I will also import TypeScript or specifically, gulp-typescript here, like
+
+14
+00:01:11,120 --> 00:01:11,680
+this.
+
+15
+00:01:13,200 --> 00:01:18,630
+Now gulp-typescript is a wrapper around TypeScript,
+
+16
+00:01:18,960 --> 00:01:24,390
+we can look at it on the official npm page of gulp-typescript or the Github page which you can simply
+
+17
+00:01:24,390 --> 00:01:26,790
+find through Googling if you're interested.
+
+18
+00:01:26,940 --> 00:01:31,350
+Here you will find a description on how it works, how to configure it which certainly is very interesting
+
+19
+00:01:31,740 --> 00:01:39,420
+and you will also learn that it wraps TypeScript, so that it contains the TypeScript compiler and
+
+20
+00:01:39,420 --> 00:01:46,550
+simply adjusts it to work in a Gulp workflow but it works the same way as the normal TypeScript works.
+
+21
+00:01:46,560 --> 00:01:51,000
+It is the normal TypeScript, just wrapped to work with Gulp in the end.
+
+22
+00:01:51,000 --> 00:01:57,090
+You will also learn how to use the options you can specify which you also learn about in the TypeScript
+
+23
+00:01:57,090 --> 00:02:00,780
+handbook and how to use them here in the Gulp workflow.
+
+24
+00:02:00,960 --> 00:02:05,920
+There are some options like watch which are not supported because you should use gulp.watch
+
+25
+00:02:05,970 --> 00:02:07,690
+but I will show you this.
+
+26
+00:02:07,770 --> 00:02:12,030
+So this is TypeScript or specifically, gulp-typescript which you can use here in Gulp
+
+27
+00:02:12,420 --> 00:02:16,590
+and then we also want to use our tsconfig.json file.
+
+28
+00:02:16,650 --> 00:02:22,740
+We're not using the tsc command anymore but we want to use the compiler options which we set up here,
+
+29
+00:02:23,940 --> 00:02:32,040
+so in order to use this file, I go to my Gulp file and here what I do is I add another variable and
+
+30
+00:02:32,040 --> 00:02:32,550
+I'll name it
+
+31
+00:02:32,550 --> 00:02:38,550
+tsProject to simply give this a name fitting to the project configuration here
+
+32
+00:02:39,090 --> 00:02:45,320
+and I use the TypeScript package, so the gulp-typescript package and here, the createProject method and
+
+33
+00:02:45,320 --> 00:02:50,990
+now to this method, you pass the path to your tsconfig file.
+
+34
+00:02:51,000 --> 00:02:56,910
+So here since both the Gulp file and the tsconfig.json live in the root folder, I simply pass
+
+35
+00:02:56,910 --> 00:03:01,360
+the file name but you would pass the file path here,
+
+36
+00:03:01,420 --> 00:03:02,430
+tsconfig.json.
+
+37
+00:03:02,970 --> 00:03:06,330
+So with this, I can now run the Gulp task here,
+
+38
+00:03:06,330 --> 00:03:13,090
+set up a Gulp task and I'll name it TypeScript, typescript like this.
+
+39
+00:03:13,180 --> 00:03:21,650
+Now in this task, what I want to do is I want to return tsProject,
+
+40
+00:03:21,700 --> 00:03:28,060
+so using this tsconfig.json file, source and I don't specify a source here because I want
+
+41
+00:03:28,060 --> 00:03:33,670
+to use the automatic file resolving of the TypeScript compiler,
+
+42
+00:03:33,680 --> 00:03:39,340
+so with the exclude and files node. You can overwrite this, you can of course target individual files here
+
+43
+00:03:39,370 --> 00:03:41,230
+and resolve your files
+
+44
+00:03:41,230 --> 00:03:47,970
+through Gulp and you can also learn more about this here in this article or in this page about
+
+45
+00:03:47,980 --> 00:03:48,950
+gulp-typescript
+
+46
+00:03:49,180 --> 00:03:54,980
+but here I will simply target all the TypeScript files as we did before by simply letting the TypeScript
+
+47
+00:03:55,000 --> 00:03:57,410
+compiler handle this
+
+48
+00:03:57,730 --> 00:04:05,120
+and then I pipe another workflow or another task and here I want to use ts, this is the gulp-typescript
+
+49
+00:04:05,120 --> 00:04:10,890
+package, so the TypeScript compiler and I use it like a method and to this method,
+
+50
+00:04:11,080 --> 00:04:13,540
+I again pass tsProject.
+
+51
+00:04:13,930 --> 00:04:20,600
+So while this might look strange, what happens here is we're basically telling gulp-typescript or we're
+
+52
+00:04:20,620 --> 00:04:22,330
+telling Gulp here
+
+53
+00:04:22,330 --> 00:04:28,150
+please use the tsconfig file which is connected to the TypeScript compiler of course since we connect it
+
+54
+00:04:28,150 --> 00:04:34,140
+here and then resolve all the files, the tsconfig.json file,
+
+55
+00:04:34,150 --> 00:04:39,640
+things we need to compile. Again, we're configuring it with exclude and the files
+
+56
+00:04:39,640 --> 00:04:48,010
+node here and in the next step, then use the TypeScript compiler and compile all these files, taking
+
+57
+00:04:48,020 --> 00:04:52,430
+the tsProject which again is this tsconfig file into account.
+
+58
+00:04:52,810 --> 00:04:58,240
+So compile it whilst using the options specified in the tsconfig file.
+
+59
+00:04:58,240 --> 00:04:59,380
+Now as a last step,
+
+60
+00:04:59,380 --> 00:05:08,470
+also adding it here with pipe, as a last step, simply output it here in the root folder,
+
+61
+00:05:08,470 --> 00:05:14,720
+this is why I pass an empty string because I want to keep all the paths like we found them here,
+
+62
+00:05:14,740 --> 00:05:16,570
+so we're outputting it here.
+
+63
+00:05:16,780 --> 00:05:19,330
+And of course fine tune this to your needs,
+
+64
+00:05:19,360 --> 00:05:25,500
+it's impossible here to set up the perfect workflow which will fit to any of your projects.
+
+65
+00:05:25,570 --> 00:05:28,550
+You will still use Gulp like you always used it,
+
+66
+00:05:28,600 --> 00:05:35,160
+you can still use it to pass in specific files here and pass them, pass an output path here.
+
+67
+00:05:35,290 --> 00:05:39,440
+You can also pipe other tasks, like bundling or uglifying
+
+68
+00:05:39,490 --> 00:05:45,160
+and again, definitely have a look at this description at this article here to learn more about how to
+
+69
+00:05:45,430 --> 00:05:52,290
+combine your gulp-typescript workflow here with source maps and with bundling and so on.
+
+70
+00:05:52,300 --> 00:05:57,880
+This is just a very basic workflow to show you how to integrate gulp-typescript and use a tsconfig.json
+
+71
+00:05:57,880 --> 00:06:00,170
+file which is of course key.
+
+72
+00:06:00,640 --> 00:06:08,520
+So with this task set up, I can now add another task which I'll name watch which is my watcher task and
+
+73
+00:06:08,520 --> 00:06:15,900
+all I want to do here in this closure is I will simply run gulp.watch and I will watch any TypeScript
+
+74
+00:06:15,900 --> 00:06:24,620
+files for changes in my project here and we'll then run the TypeScript task, like this.
+
+75
+00:06:24,890 --> 00:06:29,780
+So this will basically do the same as before with tsc -w
+
+76
+00:06:29,900 --> 00:06:32,170
+but now through Gulp.
+
+77
+00:06:32,250 --> 00:06:38,790
+Now the final thing I will do is, I will set up a default task and when running just Gulp,
+
+78
+00:06:38,880 --> 00:06:40,990
+I just want to run watch mode.
+
+79
+00:06:41,610 --> 00:06:43,670
+This is my very simple Gulp file,
+
+80
+00:06:43,710 --> 00:06:50,460
+again you could integrate this with your more advanced Gulp file, with uglifying, bundling, compiling CSS,
+
+81
+00:06:50,520 --> 00:06:59,220
+the TypeScript compilation is just one step in this workflow and you learned how to use the tsconfig
+
+82
+00:06:59,220 --> 00:06:59,820
+file,
+
+83
+00:06:59,910 --> 00:07:03,440
+how to use the file resolving through the tsconfig file
+
+84
+00:07:03,510 --> 00:07:08,010
+but again let me tell you, you don't have to use the tsconfig file for this,
+
+85
+00:07:08,010 --> 00:07:14,700
+you could also specify specific files and again, you will learn more in the official description or documentation
+
+86
+00:07:14,730 --> 00:07:17,880
+on this TypeScript package.
+
+87
+00:07:17,960 --> 00:07:19,600
+So with this Gulp workflow set up,
+
+88
+00:07:19,610 --> 00:07:25,880
+I'll go to my package.json file and add a very simple script which I'll name build and here I
+
+89
+00:07:25,880 --> 00:07:26,570
+will simply run
+
+90
+00:07:26,570 --> 00:07:28,040
+Gulp.
+
+91
+00:07:28,070 --> 00:07:35,710
+Now with this set up, I can run npm run build and now this will enter watch mode and if I now change this
+
+92
+00:07:35,710 --> 00:07:39,800
+to red for example here and save this, you see it recompiles
+
+93
+00:07:40,180 --> 00:07:48,320
+and if we then also restart the lite-server with npm start, you now see it is red and
+
+94
+00:07:48,340 --> 00:07:54,270
+again if I change this to something else like blue, it will trigger the recompilation and change tthis
+
+95
+00:07:54,270 --> 00:07:55,380
+to blue here too.
+
+96
+00:07:55,690 --> 00:08:00,840
+And this how you can integrate Gulp or TypeScript into your Gulp workflow, again
+
+97
+00:08:01,120 --> 00:08:03,120
+fine tune it to your needs.

@@ -1,0 +1,527 @@
+1
+00:00:01,640 --> 00:00:04,810
+Maybe you want to integrate TypeScript into your webpack workflow.
+
+2
+00:00:04,810 --> 00:00:11,110
+Now here again of course it depends on your specific workflow, how you want to configure all the details
+
+3
+00:00:11,120 --> 00:00:17,670
+but in this video, I will show you how easy it is to get webpack to compile your TypeScript code.
+
+4
+00:00:17,810 --> 00:00:24,440
+Now in order to show this, I will install webpack here as a development dependency and I not only need
+
+5
+00:00:24,530 --> 00:00:29,040
+webpack, I will also install the ts-loader and as the name implies,
+
+6
+00:00:29,040 --> 00:00:31,840
+this seems to have something to do with TypeScript.
+
+7
+00:00:31,940 --> 00:00:37,170
+It's a loader or you will use or you can use in webpack to compile TypeScript code.
+
+8
+00:00:37,520 --> 00:00:40,610
+So I'll just hit enter here to install both packages
+
+9
+00:00:41,440 --> 00:00:46,130
+and once these packages are installed, it's time to start configuring it.
+
+10
+00:00:46,300 --> 00:00:53,050
+Now the first step I will do is I will get rid of all the SystemJS related code here in my index.html
+
+11
+00:00:53,080 --> 00:00:59,740
+file because since we're using webpack now, we're no longer using SystemJS to load our files, instead
+
+12
+00:00:59,740 --> 00:01:04,540
+webpack will do all this and bundle the files for us.
+
+13
+00:01:04,570 --> 00:01:06,640
+So this is not the only change
+
+14
+00:01:06,640 --> 00:01:12,730
+therefore, what I will also need to do is get rid of the SystemJS import up here and now I will
+
+15
+00:01:12,730 --> 00:01:18,730
+simply import a bundle.js file which of course doesn't exist yet but webpack will create this
+
+16
+00:01:18,730 --> 00:01:20,760
+for us.
+
+17
+00:01:20,870 --> 00:01:23,760
+A next step is in the tsconfig.json file,
+
+18
+00:01:23,770 --> 00:01:32,320
+now I no longer need the exclude path here because now since webpack will handle all the bundling, importing
+
+19
+00:01:32,350 --> 00:01:41,440
+and compilation, webpack will automatically resolve for us which files it needs to bundle and we no longer
+
+20
+00:01:41,440 --> 00:01:44,800
+need to configure this here in the tsconfig.json file,
+
+21
+00:01:44,890 --> 00:01:50,860
+we also can get rid of the source map since webpack can do this for us and we may also get rid of the module
+
+22
+00:01:50,890 --> 00:01:57,550
+key here since we no longer need to compile our code to use any Javascript modules because we
+
+23
+00:01:57,550 --> 00:02:01,090
+don't use a module loader like SystemJS anymore,
+
+24
+00:02:01,090 --> 00:02:08,200
+again instead webpack will import all files we need and bundle them for us, so we may use a set up
+
+25
+00:02:08,200 --> 00:02:13,620
+like this which only has some compiler options which we want to use.
+
+26
+00:02:13,680 --> 00:02:17,130
+Now with this set up, I will add a new file,
+
+27
+00:02:17,190 --> 00:02:21,260
+the webpack.config.js
+
+28
+00:02:21,290 --> 00:02:26,140
+file which will hold my webpack configuration of course.
+
+29
+00:02:27,610 --> 00:02:33,850
+Now I will set up a very simple configuration here, one to show you how to easily compile your TypeScript
+
+30
+00:02:33,850 --> 00:02:34,630
+code.
+
+31
+00:02:34,900 --> 00:02:41,260
+I will of course export a Javascript object in this file as you always do in your webpack configuration
+
+32
+00:02:41,260 --> 00:02:42,120
+files
+
+33
+00:02:42,580 --> 00:02:45,610
+and then I need to specify an entry here.
+
+34
+00:02:45,940 --> 00:02:50,300
+Well the entry should be my app.ts file,
+
+35
+00:02:50,380 --> 00:02:53,620
+so this will be a relative path to app.ts.
+
+36
+00:02:53,660 --> 00:02:58,700
+I then will add output,
+
+37
+00:02:58,750 --> 00:03:00,490
+this is an object of course
+
+38
+00:03:00,680 --> 00:03:05,140
+and here I simply one to output anything or everything into a bundle.js
+
+39
+00:03:05,230 --> 00:03:05,700
+file
+
+40
+00:03:05,700 --> 00:03:11,130
+also in the root folder, of course you can fine tune this to your needs
+
+41
+00:03:11,250 --> 00:03:18,580
+and in the next module which is about ReactJS and TypeScript, you will also see a more
+
+42
+00:03:18,630 --> 00:03:26,970
+advanced or a slightly different version of this webpack.config file in the next example
+
+43
+00:03:26,970 --> 00:03:29,400
+to suit the needs of a ReactJS
+
+44
+00:03:29,400 --> 00:03:30,690
+setup
+
+45
+00:03:30,750 --> 00:03:31,970
+or project
+
+46
+00:03:32,100 --> 00:03:37,140
+but here I'll keep it simple and just show you how to compile your TypeScript files.
+
+47
+00:03:37,260 --> 00:03:43,510
+So this is the basic set up for entry and output files, as a next step here,
+
+48
+00:03:43,740 --> 00:03:51,150
+I will add the module key and this is again an object where I have my loaders. Now if all of this is
+
+49
+00:03:51,150 --> 00:03:52,300
+brand new to you,
+
+50
+00:03:52,500 --> 00:03:57,900
+definitely have a look at the webpack configuration because this is not TypeScript specific here.
+
+51
+00:03:57,900 --> 00:04:04,860
+So in my loaders, here of course I will only use one loader defined as a Javascript object where I
+
+52
+00:04:04,860 --> 00:04:12,810
+want to test all my, this should be forward slashes to have a regular expression where I want to test all
+
+53
+00:04:12,810 --> 00:04:16,290
+my TypeScript files, like this.
+
+54
+00:04:16,290 --> 00:04:24,030
+So this will make sure that all TypeScript files or all files ending with .ts are run through or are
+
+55
+00:04:24,120 --> 00:04:28,030
+compiled with this ts-loader here.
+
+56
+00:04:28,050 --> 00:04:35,760
+This of course is the loader we installed as a development dependency and this loader uses
+
+57
+00:04:35,790 --> 00:04:38,130
+TypeScript.
+
+58
+00:04:38,180 --> 00:04:40,430
+Now with this setup, we're done,
+
+59
+00:04:40,460 --> 00:04:42,970
+this is the very basic setup we need.
+
+60
+00:04:43,040 --> 00:04:50,090
+Now if you're also having a project where you are importing other TypeScript files, you might want to
+
+61
+00:04:50,090 --> 00:04:58,150
+add module resolution or the file extension resolution to automatically search for .ts files
+
+62
+00:04:58,220 --> 00:05:05,030
+if you import something like import JQuery and this were a jquery.ts file actually, you might want
+
+63
+00:05:05,030 --> 00:05:11,620
+to add the respective configuration here in the webpack config file to automatically tell webpack
+
+64
+00:05:11,620 --> 00:05:19,720
+that it should look for .ts files and you will see an example for this in the next module
+
+65
+00:05:19,730 --> 00:05:25,520
+when we implement or when we use TypeScript together with ReactJS, which is why I am keeping this a
+
+66
+00:05:25,520 --> 00:05:26,690
+bit shorter here.
+
+67
+00:05:26,840 --> 00:05:33,350
+So that is the very basic set up to compile my app.ts file here with webpack.
+
+68
+00:05:33,610 --> 00:05:41,530
+Now with this set up, what I can do is I can go to my package.json file and add two new scripts here,
+
+69
+00:05:41,570 --> 00:05:50,300
+for example I can add a build script where I want to run webpack -d and then maybe
+
+70
+00:05:50,360 --> 00:05:57,260
+--watch to enter watch mode with webpack and I can also add a build prod workflow,
+
+71
+00:05:57,260 --> 00:06:01,690
+of course these script names are all up to you where I simply run webpack -p
+
+72
+00:06:01,710 --> 00:06:10,250
+to well use webpack's production set up to create my bundle without any source maps or stuff
+
+73
+00:06:10,250 --> 00:06:11,460
+like this.
+
+74
+00:06:11,930 --> 00:06:13,240
+Well let's try this,
+
+75
+00:06:13,250 --> 00:06:16,130
+if I now run npm run build here,
+
+76
+00:06:16,520 --> 00:06:23,310
+select this, run build, we enter watch mode but I get an error that we can't load
+
+77
+00:06:23,320 --> 00:06:25,270
+TypeScript.
+
+78
+00:06:25,360 --> 00:06:30,580
+Now this might sound strange because we certainly have TypeScript installed, we used it all throughout
+
+79
+00:06:30,580 --> 00:06:32,120
+this course, right?
+
+80
+00:06:32,590 --> 00:06:41,170
+Well the reason for this error is that the ts-loader doesn't use our global TypeScript installation, it
+
+81
+00:06:41,170 --> 00:06:48,440
+looks for a local one and with a local, I mean a project specific one which has the huge advantage that
+
+82
+00:06:48,460 --> 00:06:55,810
+if we have different versions, let's say in our project we're using TypeScript version 1.7 and globally
+
+83
+00:06:55,820 --> 00:06:58,310
+we have version 1.8,
+
+84
+00:06:58,330 --> 00:07:00,290
+we're not interfering with this,
+
+85
+00:07:00,310 --> 00:07:04,000
+we will always use our local project specific version.
+
+86
+00:07:04,100 --> 00:07:12,530
+So in order to get our ts-loader to work, I will simply install, as a development dependency, TypeScript
+
+87
+00:07:12,800 --> 00:07:18,340
+like this and this is the TypeScript version the ts-loader will then use.
+
+88
+00:07:18,340 --> 00:07:22,870
+So if I now run npm run build, we're almost there
+
+89
+00:07:22,880 --> 00:07:26,040
+but no I get this error regarding JQuery
+
+90
+00:07:26,510 --> 00:07:33,350
+and the reason for this of course is that now we're no longer having our SystemJS set up where we tell
+
+91
+00:07:33,350 --> 00:07:36,120
+it where to find this JQuery package,
+
+92
+00:07:36,170 --> 00:07:41,720
+we're only importing JQuery here right, like this.
+
+93
+00:07:41,720 --> 00:07:49,380
+Now this of course would resolve to a jquery.js file by default which isn't found,
+
+94
+00:07:49,380 --> 00:07:51,880
+so that's something we're going to have to fix,
+
+95
+00:07:51,900 --> 00:07:54,650
+besides that we can see the bundled files were created,
+
+96
+00:07:54,660 --> 00:08:01,470
+so this works. We can simply fix this by changing our import statement here a bit. By default, webpack
+
+97
+00:08:01,500 --> 00:08:01,980
+here
+
+98
+00:08:02,010 --> 00:08:06,420
+use the ES5 import syntax or the
+
+99
+00:08:06,430 --> 00:08:13,080
+NodeJS import syntax to be specific. So we can simply tell it that we want to import the dollar
+
+100
+00:08:13,080 --> 00:08:16,850
+sign which we want to import with the require keyword
+
+101
+00:08:16,890 --> 00:08:19,640
+and here we just use JQuery, you like this.
+
+102
+00:08:20,010 --> 00:08:26,100
+So using require webpack will search through our node_modules folder where we of course have a JQuery
+
+103
+00:08:26,100 --> 00:08:32,190
+folder and it will done automatically find the file we need to use to import this and to get this to
+
+104
+00:08:32,190 --> 00:08:34,020
+work correctly.
+
+105
+00:08:34,080 --> 00:08:39,640
+So this is just the node_modules or the NodeJS import syntax which webpack knows and by adjusting it
+
+106
+00:08:39,660 --> 00:08:41,550
+like this, we get this to work.
+
+107
+00:08:41,550 --> 00:08:47,930
+So if I now run npm run build, you will see that it now bundles this correctly
+
+108
+00:08:48,100 --> 00:08:55,270
+and if I then also run npm start to run lite-server, we see it running though we don't see that this
+
+109
+00:08:55,270 --> 00:08:57,210
+would change the background color.
+
+110
+00:08:57,490 --> 00:09:03,130
+Now to finally fix this, what I'll do is I will move the script import to the end of this page
+
+111
+00:09:03,130 --> 00:09:08,540
+to only import it and run through it once the page has been completely loaded
+
+112
+00:09:08,740 --> 00:09:11,830
+and if I save this, you now see we get the styling,
+
+113
+00:09:11,860 --> 00:09:15,680
+we don't get any more errors here when compiling this
+
+114
+00:09:15,880 --> 00:09:18,030
+and you see, we are also in a watch mode.
+
+115
+00:09:18,040 --> 00:09:23,480
+So if I change this to green, it will recompile and change this to green here too.
+
+116
+00:09:23,710 --> 00:09:26,980
+And this is how we have a very basic webpack workflow
+
+117
+00:09:27,280 --> 00:09:34,200
+and if I remove these two files here, the files created through webpack and run npm run build prod,
+
+118
+00:09:35,050 --> 00:09:39,090
+you will see that the production workflow also works,
+
+119
+00:09:39,130 --> 00:09:44,800
+it now only creates our bundle.js file which is now also minified and so on and we no longer have
+
+120
+00:09:44,800 --> 00:09:45,950
+the source maps
+
+121
+00:09:46,270 --> 00:09:49,990
+and this of course is a very basic webpack workflow. As you see,
+
+122
+00:09:49,990 --> 00:09:52,120
+we have a very lean config file.
+
+123
+00:09:52,240 --> 00:09:58,440
+If we were to import other files than the JQuery package, so if we were to import our own files in the
+
+124
+00:09:58,640 --> 00:10:05,860
+app.ts file, again we might need to use or we might need to add the configuration here in the
+
+125
+00:10:05,860 --> 00:10:06,530
+webpack config file
+
+126
+00:10:06,550 --> 00:10:11,580
+to let webpack know that it should also consider .ts files when importing
+
+127
+00:10:11,920 --> 00:10:17,750
+since we don't specify the file extension here in the import, which we could also do though.
+
+128
+00:10:17,830 --> 00:10:23,390
+But again, you will see this in the next module when we use TypeScript with ReactJS
+
+129
+00:10:23,470 --> 00:10:25,570
+which is why I keep this relatively short.
+
+130
+00:10:25,780 --> 00:10:32,530
+So here, we got a very basic workflow, using webpack, specifying an entry point, creating a bundle and using
+
+131
+00:10:32,530 --> 00:10:40,120
+ts-loader together with a local TypeScript version which we installed here to compile our TypeScript
+
+132
+00:10:40,160 --> 00:10:43,670
+code and to make TypeScript work in our webpack set up.

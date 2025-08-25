@@ -1,0 +1,143 @@
+1
+00:00:01,710 --> 00:00:04,770
+Now there's one other approach to compile files,
+
+2
+00:00:05,010 --> 00:00:09,190
+you can also run tsc and then target a specific file, app.ts
+
+3
+00:00:09,210 --> 00:00:10,940
+for example.
+
+4
+00:00:11,370 --> 00:00:18,450
+Now if we do this, then we only compile this file and as, you can see I'm now getting the error that
+
+5
+00:00:18,480 --> 00:00:21,660
+we can't find the dollar sign symbol anymore.
+
+6
+00:00:21,990 --> 00:00:26,210
+Now this error makes sense because we're only targeting one file,
+
+7
+00:00:26,280 --> 00:00:28,400
+it doesn't care about other files now,
+
+8
+00:00:28,530 --> 00:00:32,640
+it's like if we were to just specify in the files 
+
+9
+00:00:32,650 --> 00:00:39,660
+node here, this single file and then run tsc, the same thing happens if we use a specific file here
+
+10
+00:00:39,660 --> 00:00:41,730
+when running the tsc command.
+
+11
+00:00:41,730 --> 00:00:47,680
+So if you target a specific file, your tsconfig file will not be used,
+
+12
+00:00:47,730 --> 00:00:51,710
+it is ignored because you're just compiling one file.
+
+13
+00:00:51,990 --> 00:00:59,580
+If you still want to pass some compiler options, well then you have to simply use it and or use these
+
+14
+00:00:59,580 --> 00:01:03,660
+options with their flags like you see them here in the leftmost column.
+
+15
+00:01:03,660 --> 00:01:11,970
+You can chain those flags to the command, like for example here if we wanted to make sure that we use
+
+16
+00:01:12,030 --> 00:01:19,020
+source maps, we could scroll down and learn that we have to use --sourceMap and this would
+
+17
+00:01:19,020 --> 00:01:24,120
+allow me to use the same as if I were to specify source map through here.
+
+18
+00:01:24,480 --> 00:01:29,760
+So it is important to keep in mind, if you target only one file, you can't use your tsconfig.json
+
+19
+00:01:29,780 --> 00:01:31,680
+file.
+
+20
+00:01:31,680 --> 00:01:40,070
+Now what if I want to run tsc but my tsconfig.json file is not positioned in the root folder?
+
+21
+00:01:40,320 --> 00:01:48,300
+So let's say I have a folder named config here and my tsconfig file would live in this config
+
+22
+00:01:48,300 --> 00:01:50,080
+folder here,
+
+23
+00:01:50,100 --> 00:01:58,600
+so now if I run tsc, I get an error that we don't find a tsconfig file and this of course makes
+
+24
+00:01:58,600 --> 00:02:03,380
+sense because by default, TypeScript doesn't scan your whole computer for this file,
+
+25
+00:02:03,460 --> 00:02:08,710
+it only scans the folder in which you're running the tsc command,
+
+26
+00:02:08,710 --> 00:02:10,070
+so which is the root folder,
+
+27
+00:02:10,090 --> 00:02:11,990
+the project folder in this case.
+
+28
+00:02:12,370 --> 00:02:18,970
+You can still tell TypeScript where to find the tsconfig.json file by simply adding 
+
+29
+00:02:18,970 --> 00:02:26,820
+--project or just -p after the tsc command and then the path to this file.
+
+30
+00:02:26,830 --> 00:02:33,500
+So in this case, the path would be config and then tsconfig.json.
+
+31
+00:02:33,570 --> 00:02:40,020
+If I run it like this, you'll see the command now runs without any errors because it now finds
+
+32
+00:02:40,020 --> 00:02:46,140
+the tsconfig.json file again. So I'm just reverting this and moving it back to the top level,
+
+33
+00:02:46,170 --> 00:02:47,900
+getting rid of the config folder
+
+34
+00:02:48,060 --> 00:02:53,670
+but this is important to know and to understand, how you can tell it where to find your configuration
+
+35
+00:02:53,670 --> 00:02:54,200
+file
+
+36
+00:02:54,240 --> 00:02:57,060
+if you are using a pure TypeScript workflow.
