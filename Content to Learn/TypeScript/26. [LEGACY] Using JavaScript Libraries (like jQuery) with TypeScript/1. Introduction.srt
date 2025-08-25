@@ -1,0 +1,59 @@
+1
+00:00:02,770 --> 00:00:08,380
+Now throughout this course, you learned a lot about the different types we can use in TypeScript and how we can use
+
+2
+00:00:08,470 --> 00:00:12,510
+TypeScript to enhance our projects in general.
+
+3
+00:00:12,500 --> 00:00:20,170
+Now there certainly are projects though where you use some third-party libraries which don't use TypeScript
+
+4
+00:00:20,260 --> 00:00:22,600
+which are not written in TypeScript,
+
+5
+00:00:22,720 --> 00:00:31,000
+so how can you now use such normal Javascript libraries in your TypeScript project and still take advantage
+
+6
+00:00:31,000 --> 00:00:35,800
+of all these type definitions and the enhanced IDE support and so on?
+
+7
+00:00:35,830 --> 00:00:40,690
+Now this is what we'll have a look at in this module and now just to avoid confusion,
+
+8
+00:00:40,690 --> 00:00:46,930
+I'm using a new editor here because this section here was basically recorded after I initially recorded
+
+9
+00:00:46,930 --> 00:00:51,840
+the course, it's an updated section and therefore here, I am using Visual Studio Code,
+
+10
+00:00:51,850 --> 00:00:54,580
+it's a normal code editor, normal IDE,
+
+11
+00:00:54,710 --> 00:00:57,430
+here I got an open empty folder
+
+12
+00:00:57,490 --> 00:00:59,010
+and this is where I will work in,
+
+13
+00:00:59,020 --> 00:01:02,940
+you can use any IDE to follow along of course.
+
+14
+00:01:03,040 --> 00:01:09,070
+And now with that let's dive in and let's see an example of when we might have an issue when we use a normal
+
+15
+00:01:09,070 --> 00:01:12,250
+Javascript library and how we can then fix this issue.

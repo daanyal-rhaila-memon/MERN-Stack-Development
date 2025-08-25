@@ -1,0 +1,175 @@
+1
+00:00:02,710 --> 00:00:07,330
+So as I mentioned in the last lecture, here I'm in the empty folder opened in Visual
+
+2
+00:00:07,330 --> 00:00:08,910
+Studio Code, my IDE
+
+3
+00:00:08,920 --> 00:00:16,150
+and now let's say here we have a normal project with an index.html file with a normal HTML5 skeleton,
+
+4
+00:00:17,030 --> 00:00:22,800
+TypeScript and third-party libraries and
+
+5
+00:00:24,250 --> 00:00:24,800
+now in here,
+
+6
+00:00:24,820 --> 00:00:27,520
+let's say I want to use the JQuery library.
+
+7
+00:00:27,730 --> 00:00:32,210
+So on jquery.com, what I normally would do when I want to use it, I click on download
+
+8
+00:00:32,470 --> 00:00:39,400
+and now we can download it and add it to our project or we use one of the CDN links to basically pull
+
+9
+00:00:39,400 --> 00:00:46,030
+it in from a server, from another server where it's hosted and here I'll just take the minified version
+
+10
+00:00:46,090 --> 00:00:51,850
+of the latest JQuery version and at this point of time, copy that script tag and add this in the body section
+
+11
+00:00:51,850 --> 00:00:54,480
+here of my index.html file.
+
+12
+00:00:54,500 --> 00:01:00,670
+So now I'm importing this JQuery script and of course this is Javascript, this is not in TypeScript
+
+13
+00:01:00,820 --> 00:01:02,120
+format.
+
+14
+00:01:02,260 --> 00:01:08,260
+Now let's say of course we also write our own app logic and we do this here in the app.ts file or whatever
+
+15
+00:01:08,260 --> 00:01:11,360
+you want to call it, here I will be using TypeScript
+
+16
+00:01:11,540 --> 00:01:14,040
+and here I will simply import that
+
+17
+00:01:14,110 --> 00:01:16,580
+but of course there I will also import app.js
+
+18
+00:01:16,600 --> 00:01:20,100
+because the goal is to compile that.
+
+19
+00:01:20,100 --> 00:01:26,380
+Now let's create a very simple application here with a button which says Click Me and my simple goal
+
+20
+00:01:26,380 --> 00:01:33,540
+is to now select this button with the help of JQuery and then do something, throw an alert whenever
+
+21
+00:01:33,610 --> 00:01:35,190
+we click this button.
+
+22
+00:01:35,350 --> 00:01:42,100
+Now with JQuery, with normal JQuery what we can do is we can add this, now just temporarily,
+
+23
+00:01:42,430 --> 00:01:45,300
+add a Javascript script here,
+
+24
+00:01:45,400 --> 00:01:49,640
+in this case I'm doing this inline in the index.html file, I'll change this later
+
+25
+00:01:50,110 --> 00:01:54,160
+and then I will just use this dollar sign which is made available by JQuery,
+
+26
+00:01:54,170 --> 00:01:55,810
+this is just a function.
+
+27
+00:01:55,810 --> 00:02:02,010
+We pass a CSS selector like the button selector and JQuery then gives us the click method
+
+28
+00:02:02,050 --> 00:02:05,440
+we can call to define a function that should be executed
+
+29
+00:02:05,560 --> 00:02:13,640
+when a click on this button occurs and there I can throw an alert, button was clicked.
+
+30
+00:02:13,650 --> 00:02:19,470
+Now this is not using TypeScript here of course, this is just Javascript but with that, I can now double-click
+
+31
+00:02:19,470 --> 00:02:26,250
+that index.html file to run this and on the running page if I click this button, I see this alert,
+
+32
+00:02:26,250 --> 00:02:34,350
+so this works but this is as I mentioned normal Javascript. When I copy that code and I move that into
+
+33
+00:02:34,350 --> 00:02:36,700
+my app.ts file here
+
+34
+00:02:37,050 --> 00:02:40,920
+and then here I'm using the terminal integrated into my IDE,
+
+35
+00:02:41,010 --> 00:02:46,890
+I simply run tsc --init to turn this into a TypeScript project with a tsconfig and
+
+36
+00:02:47,160 --> 00:02:56,480
+now what we will see if I add the no emit on error key here in the tsconfig and set this to
+
+37
+00:02:56,480 --> 00:02:59,190
+true so that we don't generate a Javascript file,
+
+38
+00:02:59,210 --> 00:03:00,240
+we have an error
+
+39
+00:03:00,470 --> 00:03:03,320
+and I already see it in my IDE too that it complains
+
+40
+00:03:03,530 --> 00:03:11,590
+but now if I were to run tsc in this project folder, I indeed get an error here that this dollar sign
+
+41
+00:03:11,590 --> 00:03:18,740
+thing is basically not known or that it can't find this. And this makes sense because we never defined
+
+42
+00:03:18,830 --> 00:03:20,440
+dollar sign as a method,
+
+43
+00:03:20,480 --> 00:03:26,320
+we have no method in here that would tell TypeScript what this is all about and therefore it complains,
+
+44
+00:03:26,540 --> 00:03:30,320
+even though we know that this code would run but TypeScript doesn't know that.

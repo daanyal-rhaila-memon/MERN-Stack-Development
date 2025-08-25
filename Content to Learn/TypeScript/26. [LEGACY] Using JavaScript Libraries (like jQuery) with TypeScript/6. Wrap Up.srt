@@ -1,0 +1,35 @@
+1
+00:00:02,530 --> 00:00:05,010
+So in this module, you learned that
+
+2
+00:00:05,290 --> 00:00:11,440
+you can make normal third-party libraries like JQuery work in your TypeScript code by installing
+
+3
+00:00:11,440 --> 00:00:13,510
+the fitting type definitions.
+
+4
+00:00:13,570 --> 00:00:15,490
+You also learned about a quicker hack
+
+5
+00:00:15,610 --> 00:00:18,240
+in case you just want to make the compilation work
+
+6
+00:00:18,370 --> 00:00:25,060
+but if you want full IDE suport and full TypeScript support, then you should install these type definitions
+
+7
+00:00:25,340 --> 00:00:31,420
+with the @types package and then the name of the library you want to install which implicitly then use
+
+8
+00:00:31,420 --> 00:00:35,820
+the types defined in this definitelytyped repository I showed you.
+
+9
+00:00:35,890 --> 00:00:40,630
+And this allows you to make any Javascript library work in your TypeScript project.

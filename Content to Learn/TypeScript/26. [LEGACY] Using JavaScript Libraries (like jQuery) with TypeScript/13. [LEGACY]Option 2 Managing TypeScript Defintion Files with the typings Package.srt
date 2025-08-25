@@ -1,0 +1,167 @@
+1
+00:00:01,790 --> 00:00:07,220
+If you create a project with loads of Javascript libraries, you probably don't want to copy and paste
+
+2
+00:00:07,250 --> 00:00:09,570
+all these definition files by hand,
+
+3
+00:00:09,860 --> 00:00:12,740
+also if you share it, you have to share all these files
+
+4
+00:00:12,800 --> 00:00:16,620
+and it's not doing the best or most convenient way.
+
+5
+00:00:16,970 --> 00:00:21,380
+So let's have a look at a great alternative to this approach.
+
+6
+00:00:21,440 --> 00:00:27,830
+There is actually a third-party package which you can install globally on your machine which handles
+
+7
+00:00:27,830 --> 00:00:32,140
+all these file downloading and creation for you,
+
+8
+00:00:32,420 --> 00:00:39,590
+it's named typings and you can install it by installing it globally on your machine with npm install
+
+9
+00:00:39,680 --> 00:00:42,340
+-g typings, on Mac
+
+10
+00:00:42,350 --> 00:00:45,590
+you will need to add a sudo in front of it.
+
+11
+00:00:45,740 --> 00:00:51,830
+Now here, I'll quickly enter my password and then this will download this typings package for me which is
+
+12
+00:00:51,830 --> 00:00:59,420
+a package manager allowing me to download various typings or definition files as we just did it
+
+13
+00:00:59,480 --> 00:01:00,590
+manually,
+
+14
+00:01:00,680 --> 00:01:02,030
+let's see how it works.
+
+15
+00:01:02,930 --> 00:01:07,580
+So I'll first get rid of this jquery.d.ts file here as I don't need it anymore
+
+16
+00:01:08,140 --> 00:01:12,150
+and next, I want to use typings to get it back.
+
+17
+00:01:12,520 --> 00:01:13,620
+So I run typings
+
+18
+00:01:13,630 --> 00:01:23,770
+since I installed it globally and then I have to run install and now JQuery because that is what
+
+19
+00:01:23,770 --> 00:01:26,080
+this is named, though that won't work,
+
+20
+00:01:26,100 --> 00:01:33,720
+we have to fetch it from the definitelytyped repository and therefore we have to write dt~jquery,
+
+21
+00:01:33,760 --> 00:01:35,920
+just keep that in mind.
+
+22
+00:01:36,060 --> 00:01:41,310
+If you want to download a file from the definitelytyped repository and that is the biggest repository
+
+23
+00:01:41,310 --> 00:01:45,330
+for definitely or for type definition files I know,
+
+24
+00:01:45,330 --> 00:01:51,410
+then you have to use this dt~ part in front of the name of the package you want to download.
+
+25
+00:01:51,510 --> 00:01:58,230
+Now with that, I'll add the --global flag to make it available globally in this project, this does
+
+26
+00:01:58,230 --> 00:02:04,440
+not mean that it gets installed globally on your machine, only that every file in your project will have
+
+27
+00:02:04,440 --> 00:02:13,200
+access to it and then --save to create a JSON file which holds a reference to this package,
+
+28
+00:02:13,410 --> 00:02:18,900
+so that if we share this project, we only have to share this JSON file and everyone else is then
+
+29
+00:02:18,900 --> 00:02:25,140
+able to just run typings install to install all the dependencies mentioned in this file, just like you
+
+30
+00:02:25,140 --> 00:02:29,110
+have package.json file for your project dependencies.
+
+31
+00:02:29,250 --> 00:02:33,280
+So let's hit enter and it's done,
+
+32
+00:02:33,320 --> 00:02:37,610
+it created this typings folder and this typings.json folder.
+
+33
+00:02:37,610 --> 00:02:43,400
+Now as I mentioned this JSON folder or this JSON file here excuse me simply holds a reference to this
+
+34
+00:02:43,420 --> 00:02:50,380
+JQuery dependency or this JQuery file and in the typings file folder,
+
+35
+00:02:50,420 --> 00:02:53,580
+we actually got this JQuery file added to it.
+
+36
+00:02:53,630 --> 00:02:58,810
+So this is the same file we manually downloaded in the last lecture.
+
+37
+00:02:58,820 --> 00:03:04,170
+Now with this installed, if I recompile my project, the error is gone too.
+
+38
+00:03:04,280 --> 00:03:07,120
+So here again we don't have to add any import,
+
+39
+00:03:07,130 --> 00:03:13,850
+it works automatically on its own simply by adding this typings.json file or this typings folder
+
+40
+00:03:13,860 --> 00:03:17,660
+then specifically automatically through the typings tool.
+
+41
+00:03:17,930 --> 00:03:24,110
+So that is the alternative to the other approach which is extremely convenient especially if you've
+
+42
+00:03:24,110 --> 00:03:28,100
+got multiple dependencies or multiple Javascript packages you're using.

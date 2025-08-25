@@ -1,0 +1,259 @@
+1
+00:00:02,060 --> 00:00:09,530
+Now with JQuery installed, I can go into my index.html or where I'm already at and here I want to add a
+
+2
+00:00:09,530 --> 00:00:14,660
+little div with an ID of app which I want to change through JQuery.
+
+3
+00:00:14,810 --> 00:00:20,050
+So here, just enter change it with JQuery so that we can see something on the screen
+
+4
+00:00:20,090 --> 00:00:26,820
+and then in my app.ts file, I want to use my JQuery code, like we know to use it with the dollar sign
+
+5
+00:00:27,260 --> 00:00:30,140
+and I'll ignore that my IDE marks it as red for now,
+
+6
+00:00:30,200 --> 00:00:32,860
+then I select the element with the app ID,
+
+7
+00:00:32,890 --> 00:00:34,740
+so basic JQuery here
+
+8
+00:00:34,970 --> 00:00:37,750
+and then I want to change the CSS styles.
+
+9
+00:00:37,850 --> 00:00:47,450
+So here, I'll pass a Javascript object and I want to change the background color to let's say green, of course
+
+10
+00:00:47,460 --> 00:00:49,240
+choose anything you like here.
+
+11
+00:00:51,410 --> 00:01:00,790
+Now what this should do is that as soon as I compile my code with tsc, it should allow me to see my application
+
+12
+00:01:00,790 --> 00:01:02,610
+with this changed background color.
+
+13
+00:01:02,830 --> 00:01:07,250
+Now right away we see that we get an error here, that the dollar sign isn't found
+
+14
+00:01:07,510 --> 00:01:09,730
+and how would we find it, TypeScript has
+
+15
+00:01:09,730 --> 00:01:13,150
+no chance of knowing what the dollar sign should refer to.
+
+16
+00:01:13,420 --> 00:01:21,550
+Well let's give it a try anyways and simply run our lite-server, npm start and see what we can find on
+
+17
+00:01:21,550 --> 00:01:23,740
+the web page,
+
+18
+00:01:23,910 --> 00:01:27,390
+well I only see change it with JQuery but no color.
+
+19
+00:01:27,840 --> 00:01:33,900
+Well it's not that surprising because first, we're not recognizing the dollar sign but we're not even
+
+20
+00:01:33,960 --> 00:01:35,980
+trying to import JQuery here,
+
+21
+00:01:36,030 --> 00:01:41,160
+we installed it in the node_modules folder but that doesn't mean that it automatically gets added to our
+
+22
+00:01:41,160 --> 00:01:42,330
+application.
+
+23
+00:01:42,330 --> 00:01:46,100
+We don't have a script import here in the index.html file
+
+24
+00:01:46,350 --> 00:01:52,970
+and we could add one but to stay in the TypeScript world, let's instead use import statement here
+
+25
+00:01:53,400 --> 00:01:56,430
+and let's try importing JQuery, something like that,
+
+26
+00:01:56,430 --> 00:01:57,630
+maybe this works.
+
+27
+00:01:57,930 --> 00:02:01,520
+So let me open up a new terminal here and run tsc again,
+
+28
+00:02:01,530 --> 00:02:03,540
+of course we still get the error,
+
+29
+00:02:03,540 --> 00:02:05,310
+maybe it changed though.
+
+30
+00:02:05,690 --> 00:02:06,800
+No, not really.
+
+31
+00:02:07,050 --> 00:02:14,220
+Well let's see if we get some errors here in the console and we do, that our SystemJS module loader
+
+32
+00:02:14,280 --> 00:02:18,440
+has problems loading the Javascript file, the JQuery Javascript file.
+
+33
+00:02:18,630 --> 00:02:23,430
+As you can see here, it's looking for JQuery.js in our root directory
+
+34
+00:02:23,580 --> 00:02:30,210
+and the reason why it's looking there is that we're importing just JQuery here which of course refers
+
+35
+00:02:30,210 --> 00:02:34,540
+to JQuery.js then and to our root folder, though both isn't true.
+
+36
+00:02:35,820 --> 00:02:38,620
+Let's first see where JQuery actually lives,
+
+37
+00:02:38,850 --> 00:02:42,920
+in the node_modules file, let's locate it here,
+
+38
+00:02:43,050 --> 00:02:45,890
+so that's the JQuery folder we downloaded.
+
+39
+00:02:46,200 --> 00:02:51,930
+Now in here, we get this dist folder which probably holds the files we should import and there, we get the
+
+40
+00:02:51,930 --> 00:02:56,730
+jquery.min.js file where which looks like the bundle version we might want.
+
+41
+00:02:56,790 --> 00:03:02,680
+So it's in node_modules/jquery/dist/jquery.min.js,
+
+42
+00:03:02,760 --> 00:03:07,590
+that would be the path we can throw into our index.html file
+
+43
+00:03:07,740 --> 00:03:14,100
+but again, I want to use SystemJS here to manage all my dependencies and files and therefore here,
+
+44
+00:03:14,160 --> 00:03:16,510
+I can simply add a new config,
+
+45
+00:03:16,890 --> 00:03:19,590
+I can add the map configuration.
+
+46
+00:03:19,590 --> 00:03:25,020
+Now of course, this is no SystemJS course and if you want to learn more about SystemJS and
+
+47
+00:03:25,030 --> 00:03:28,540
+the available configurations, check out the official documentation.
+
+48
+00:03:28,770 --> 00:03:36,780
+What map allows you is to use any of your imports like JQuery here and map it against a real path.
+
+49
+00:03:36,840 --> 00:03:42,170
+If you don't have map, then it will try to resolve it on its own which as you saw before doesn't work
+
+50
+00:03:42,180 --> 00:03:43,270
+in this case.
+
+51
+00:03:43,650 --> 00:03:52,380
+So here, what I have to enter on my map key is a Javascript object where I then map JQuery and
+
+52
+00:03:52,500 --> 00:03:59,950
+this path or this part here, this key has to match whatever you're entering here in your import,
+
+53
+00:04:00,060 --> 00:04:04,260
+so you can name this whatever you want but then you have to match it here.
+
+54
+00:04:04,650 --> 00:04:06,240
+So this should match
+
+55
+00:04:06,240 --> 00:04:08,720
+and now here the path where to look for it.
+
+56
+00:04:08,980 --> 00:04:11,990
+Now the path will be node_modules
+
+57
+00:04:12,340 --> 00:04:17,380
+jquery/dist/
+
+58
+00:04:17,520 --> 00:04:19,680
+jquery.min.js, that's the path or the file
+
+59
+00:04:19,680 --> 00:04:24,870
+we just located. Now with that in place, if we have a look at the server,
+
+60
+00:04:24,990 --> 00:04:26,420
+oh we see it's working,
+
+61
+00:04:26,430 --> 00:04:27,380
+so it is green,
+
+62
+00:04:27,390 --> 00:04:33,780
+we do find the file, though we still have the issue that if I run tsc, we're getting this
+
+63
+00:04:33,780 --> 00:04:35,130
+compilation error.
+
+64
+00:04:35,340 --> 00:04:40,790
+So somehow the code is working but we still have this error.
+
+65
+00:04:40,800 --> 00:04:42,390
+Now how does this make sense?

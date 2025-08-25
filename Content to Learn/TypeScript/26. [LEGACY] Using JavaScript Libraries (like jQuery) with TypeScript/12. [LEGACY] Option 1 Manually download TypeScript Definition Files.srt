@@ -1,0 +1,115 @@
+1
+00:00:01,510 --> 00:00:02,660
+A great alternative
+
+2
+00:00:02,670 --> 00:00:09,340
+and actually the way to do it is that there are people who already wrote such libraries and you can
+
+3
+00:00:09,340 --> 00:00:12,980
+find those libraries on definitelytyped.
+
+4
+00:00:13,300 --> 00:00:20,320
+So simply search for definitelytyped and you should find this Github repository which is named
+
+5
+00:00:20,320 --> 00:00:21,240
+definitelytyped.
+
+6
+00:00:21,640 --> 00:00:29,050
+There you will find thousands of Javascript packages which were kind of converted to TypeScript
+
+7
+00:00:29,260 --> 00:00:32,620
+in a sense of the translation file was written.
+
+8
+00:00:32,620 --> 00:00:38,350
+Now here you could basically scroll until you find JQuery but that is probably not the
+
+9
+00:00:38,350 --> 00:00:38,880
+way you want to do it,
+
+10
+00:00:38,890 --> 00:00:42,080
+a better way is simply to search for
+
+11
+00:00:42,430 --> 00:00:53,380
+definitelytyped and then JQuery and then you should find the respective page on this Github repository.
+
+12
+00:00:53,380 --> 00:00:59,240
+Now here, we have such a jquery.d.ts file which is the translation I was talking about.
+
+13
+00:00:59,830 --> 00:01:07,570
+If we have a look at it, we see how the creators of this file tried or did actually recreate JQuery or
+
+14
+00:01:07,660 --> 00:01:09,850
+create a translation for JQuery,
+
+15
+00:01:09,880 --> 00:01:12,970
+how it would look like in TypeScript.
+
+16
+00:01:12,970 --> 00:01:17,490
+Now what we can do is we can access the raw file here,
+
+17
+00:01:17,710 --> 00:01:22,810
+copy all of that, go back to our project and create a new file here
+
+18
+00:01:23,080 --> 00:01:28,950
+and let's name it jquery.d.ts, like so.
+
+19
+00:01:29,340 --> 00:01:32,400
+And in this file, I'll simply paste into it
+
+20
+00:01:32,400 --> 00:01:36,930
+the code I just copied from the definitelytyped repository.
+
+21
+00:01:36,930 --> 00:01:42,000
+Now with this pasted into here, let's try it again and run tsc
+
+22
+00:01:42,030 --> 00:01:44,310
+and as you see, the error is gone.
+
+23
+00:01:44,310 --> 00:01:47,090
+Notice, I didn't add any import,
+
+24
+00:01:47,130 --> 00:01:53,430
+I still only have my JQuery import here, so TypeScript is clever enough to automatically find
+
+25
+00:01:53,430 --> 00:02:00,840
+this file and then read it and learn how JQuery works which also gives me the advantage
+
+26
+00:02:00,840 --> 00:02:06,210
+that now, I get support by my IDE here which of course depends on your IDE
+
+27
+00:02:06,240 --> 00:02:07,710
+if you got this or not.
+
+28
+00:02:08,160 --> 00:02:15,710
+So that's the quick way to get in such a JQuery definition file or any definition file in general.
+
+29
+00:02:15,720 --> 00:02:17,740
+Now let's see which alternatives we have.

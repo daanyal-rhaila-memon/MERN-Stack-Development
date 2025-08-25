@@ -1,0 +1,39 @@
+1
+
+00:00:01,850  -->  00:00:02,410
+Great. 
+
+2
+
+00:00:02,450  -->  00:00:09,920
+So now you're able to implement any third-party libraries written in Javascript not in TypeScript into your
+
+3
+
+00:00:09,920  -->  00:00:14,690
+TypeScript project and still benefit from TypeScript strengths.
+
+4
+
+00:00:15,020  -->  00:00:22,640
+That was a key step to really now enable you to create your own more complex projects since you're no
+
+5
+
+00:00:22,640  -->  00:00:30,230
+longer limited by the issue that once we add other third-party libraries to it, you'll lose a lot of the
+
+6
+
+00:00:30,230  -->  00:00:33,120
+strengths TypeScript would have offered to you.
+
+7
+
+00:00:33,150  -->  00:00:39,840
+Now you're back in the TypeScript is awesome world whilst at the same time, using third-party packages
+
+8
+
+00:00:39,850  -->  00:00:40,040
+.

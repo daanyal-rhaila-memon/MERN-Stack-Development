@@ -1,0 +1,167 @@
+1
+00:00:02,160 --> 00:00:08,440
+With TypeScript 2.0, a nice alternative to using the typings package was added.
+
+2
+00:00:08,690 --> 00:00:15,470
+You can still use it as you learned it but TypeScript 2.0 now has a built-in typings manager which is
+
+3
+00:00:15,470 --> 00:00:18,040
+an awesome new feature to be honest.
+
+4
+00:00:18,110 --> 00:00:23,920
+So what you can do here is you can simply get rid of the typings.json file, also of the typings folder
+
+5
+00:00:23,930 --> 00:00:28,940
+if you already installed your typings, here I just start a new project which is why you would see
+
+6
+00:00:28,940 --> 00:00:29,900
+this folder
+
+7
+00:00:30,290 --> 00:00:36,660
+and now of course we encountered the issue that if we compile this, we're not aware of dollar sign,
+
+8
+00:00:36,650 --> 00:00:39,510
+we don't know what JQuery is.
+
+9
+00:00:39,650 --> 00:00:45,780
+Now all we have to do with the built-in typings manager is we have to run npm install,
+
+10
+00:00:45,800 --> 00:00:53,180
+so we use npm now to manage our typings, like we use it to manage all other packages which is the great
+
+11
+00:00:53,180 --> 00:00:59,420
+thing about this, --save development as we want to add them as a development dependency
+
+12
+00:00:59,630 --> 00:01:08,300
+and then this is important, @types, this is kind of the overall package used by the TypeScript company
+
+13
+00:01:08,300 --> 00:01:15,470
+or compiler here to manage all the times or get access to all the types and then the name of the types
+
+14
+00:01:15,470 --> 00:01:16,430
+package.
+
+15
+00:01:16,430 --> 00:01:17,660
+Now here's an important thing,
+
+16
+00:01:17,660 --> 00:01:21,150
+we're still using definitelytyped which you saw in the other videos,
+
+17
+00:01:21,200 --> 00:01:23,810
+so this big Github repository.
+
+18
+00:01:23,810 --> 00:01:27,000
+We're still talking about the community managed types here,
+
+19
+00:01:27,020 --> 00:01:32,150
+these are no type packages or declarations managed by the TypeScript team,
+
+20
+00:01:32,150 --> 00:01:36,950
+instead they just provide us an easier access to this big Github repository.
+
+21
+00:01:36,950 --> 00:01:41,720
+Therefore the names after the slash here stay the same, though we don't have to use
+
+22
+00:01:41,720 --> 00:01:43,540
+dt~ anymore,
+
+23
+00:01:43,640 --> 00:01:45,140
+we can just use types
+
+24
+00:01:45,140 --> 00:01:53,300
+and then in this case, JQuery. Now this will pull down JQuery type declaration files and add them to our
+
+25
+00:01:53,300 --> 00:01:59,780
+package.json as well and of course is the more important part to our node_modules which we can
+
+26
+00:02:00,020 --> 00:02:00,960
+check here,
+
+27
+00:02:00,970 --> 00:02:04,810
+here we see the types folder and we see the JQuery type here.
+
+28
+00:02:05,180 --> 00:02:12,410
+Now the great thing is, again this is managed here in our package, in our package.json file to
+
+29
+00:02:12,410 --> 00:02:13,200
+be precise,
+
+30
+00:02:13,300 --> 00:02:19,790
+here you can see this new entry which allows us to quickly reinstall it if we share our project here
+
+31
+00:02:19,790 --> 00:02:23,690
+without the node_modules folder or what you typically do. Now with this
+
+32
+00:02:23,690 --> 00:02:30,590
+if I run tsc again, you see the error is gone and now we recognize the dollar sign because the cool
+
+33
+00:02:30,590 --> 00:02:34,890
+thing is that the TypeScript compiler is aware of this new mechanism,
+
+34
+00:02:35,030 --> 00:02:42,690
+so it will automatically search for imports like this one which it doesn't know or for types it doesn't know
+
+35
+00:02:42,690 --> 00:02:46,020
+in the node_modules @types folder.
+
+36
+00:02:46,130 --> 00:02:48,940
+So all this is done automatically,
+
+37
+00:02:48,980 --> 00:02:50,820
+we don't have to do anything here
+
+38
+00:02:50,900 --> 00:02:55,940
+and with that, we don't have to use another package like the typings package anymore,
+
+39
+00:02:56,060 --> 00:02:59,570
+we can use npm only. Of course
+
+40
+00:02:59,570 --> 00:03:00,570
+and this is important,
+
+41
+00:03:00,620 --> 00:03:02,530
+you may still use typings,
+
+42
+00:03:02,540 --> 00:03:08,290
+there's nothing wrong with it but this is the faster way and it uses the same repository.

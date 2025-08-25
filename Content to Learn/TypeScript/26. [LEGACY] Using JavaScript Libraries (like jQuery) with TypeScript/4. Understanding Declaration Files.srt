@@ -1,0 +1,175 @@
+1
+00:00:02,650 --> 00:00:10,420
+And one better way to solve this which my IDE even suggests here is to install a so-called type definitions.
+
+2
+00:00:11,420 --> 00:00:17,810
+Type definitions is a feature TypeScript offers and you can learn more about that in the official documentation
+
+3
+00:00:17,870 --> 00:00:19,910
+under declaration files.
+
+4
+00:00:19,910 --> 00:00:27,380
+You can basically add your own declaration files which hold no script logic but which hold type and
+
+5
+00:00:27,380 --> 00:00:33,700
+function and so on definitions which TypeScript automatically considers when compiling your code.
+
+6
+00:00:33,710 --> 00:00:42,080
+So for example here, we could add a jquery.d.ts file and it has to be a .d.ts file for declaration
+
+7
+00:00:42,080 --> 00:00:49,190
+TypeScript file, TypeScript will look for files ending with .d.ts and in that file, you could
+
+8
+00:00:49,250 --> 00:00:55,400
+repeat that declare var dollar sign anything and what you will notice is that the error is now gone
+
+9
+00:00:55,400 --> 00:00:55,840
+in app.ts,
+
+10
+00:00:55,840 --> 00:01:02,980
+even though I commented it out here but implicitly, TypeScript automatically includes all .d.ts
+
+11
+00:01:02,990 --> 00:01:10,370
+file in its compilation step and therefore when I run tsc again here, it still works because it automatically
+
+12
+00:01:10,370 --> 00:01:12,280
+considers that file.
+
+13
+00:01:12,290 --> 00:01:18,710
+Now of course, we didn't add more than we had before, we just outsourced this line here into its own separate
+
+14
+00:01:18,710 --> 00:01:19,370
+file
+
+15
+00:01:19,640 --> 00:01:25,520
+but it's important to know that TypeScript considers such files because of course, you can define more
+
+16
+00:01:25,520 --> 00:01:28,600
+complex statements than just a single line
+
+17
+00:01:28,820 --> 00:01:34,610
+and actually, this is an advanced feature which you mostly only need when you create libraries you want
+
+18
+00:01:34,610 --> 00:01:40,250
+to share with other people on your own but you can write quite advanced type definitions and you'll learn
+
+19
+00:01:40,250 --> 00:01:47,000
+more about that here in the official docs where you learn how you can declare that something is not
+
+20
+00:01:47,000 --> 00:01:48,810
+just anything but a number
+
+21
+00:01:48,890 --> 00:01:50,570
+or that it is a function
+
+22
+00:01:50,630 --> 00:01:56,850
+and what this function would return and so on and other people already did that for JQuery
+
+23
+00:01:56,900 --> 00:02:04,490
+and a lot of other popular Javascript libraries. If you search for definitelytyped JQuery and you can
+
+24
+00:02:04,670 --> 00:02:08,360
+plugin any library name you're looking for,
+
+25
+00:02:08,360 --> 00:02:16,000
+you should find this definitelytyped Github repository here and in there if you click on that, you find
+
+26
+00:02:16,040 --> 00:02:18,240
+type definitions for JQuery
+
+27
+00:02:18,590 --> 00:02:24,620
+and if you click on that jquery.d.ts file here and it's actually also used in conjunction with a couple
+
+28
+00:02:24,620 --> 00:02:25,570
+of other files,
+
+29
+00:02:25,640 --> 00:02:30,760
+there you see an interface is defined and you see a lot of example code in there
+
+30
+00:02:30,830 --> 00:02:33,860
+but if you would go through and it's quite a long file,
+
+31
+00:02:33,950 --> 00:02:41,390
+you'll see that for example that an add method is defined and so on and you will also find that click method definition
+
+32
+00:02:41,390 --> 00:02:44,560
+in there if you search through that file.
+
+33
+00:02:44,570 --> 00:02:51,090
+There are a lot of examples but eventually you'll also find the function definition of click in there.
+
+34
+00:02:51,110 --> 00:02:57,830
+So in the end, this file adds all the logic, here it is by the way, adds all the logic you need to add
+
+35
+00:02:58,220 --> 00:03:07,250
+to make TypeScript fully aware of what's behind that dollar sign variable and behind the object this
+
+36
+00:03:07,370 --> 00:03:10,180
+function we can call there returns for example
+
+37
+00:03:10,550 --> 00:03:13,670
+and therefore I can now remove that jquery.d.ts file
+
+38
+00:03:13,910 --> 00:03:19,730
+and now we can simply install these type definitions with the help of npm and for that, I'll quickly
+
+39
+00:03:19,730 --> 00:03:27,020
+run npm init to turn this into a project that has a package.json file and where we can use npm,
+
+40
+00:03:27,080 --> 00:03:30,790
+this Node Package Manager to install third-party packages
+
+41
+00:03:30,980 --> 00:03:35,870
+and for this to work by the way, you need to have NodeJS installed in its latest version,
+
+42
+00:03:35,870 --> 00:03:41,500
+not because we'll write NodeJS code but because we'll use the Node Package Manager that ships together
+
+43
+00:03:41,510 --> 00:03:42,250
+with Node.
+
+44
+00:03:42,440 --> 00:03:44,300
+Now let's do that in the next lecture.

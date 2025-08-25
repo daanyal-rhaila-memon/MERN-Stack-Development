@@ -1,0 +1,99 @@
+1
+00:00:02,520 --> 00:00:09,820
+So TypeScript doesn't understand this dollar sign method here is made available globally because we
+
+2
+00:00:09,890 --> 00:00:14,720
+added our JQuery import here. Now
+
+3
+00:00:14,750 --> 00:00:17,210
+to inform TypeScript that this is available,
+
+4
+00:00:17,230 --> 00:00:19,830
+we've got a couple of ways of doing so.
+
+5
+00:00:19,870 --> 00:00:26,500
+The easiest fix which you can always use if you have a global method or variable of which you know
+
+6
+00:00:26,500 --> 00:00:32,770
+that it exists but TypeScript doesn't know it, you can use the declare keyword in your TypeScript file
+
+7
+00:00:32,800 --> 00:00:41,050
+where you will use that unknown function or variable, then var and then the name of that function or
+
+8
+00:00:41,050 --> 00:00:41,600
+variable,
+
+9
+00:00:41,620 --> 00:00:47,440
+no matter what it is, you always use declare var and then you simply give this a type of any, that is the
+
+10
+00:00:47,450 --> 00:00:49,490
+simplest way of making this work.
+
+11
+00:00:49,720 --> 00:00:52,220
+As you see, the error is now gone
+
+12
+00:00:52,330 --> 00:00:58,850
+and now when I run tsc again, it compiled successfully and it gives us this app.js file.
+
+13
+00:00:58,870 --> 00:01:06,010
+Now this is a cheap way of making this work but it is a way you can definitely use if you have no other
+
+14
+00:01:06,010 --> 00:01:06,410
+way
+
+15
+00:01:06,460 --> 00:01:13,660
+or if you just want to get it to work quickly. But it's not an ideal way because with this line here,
+
+16
+00:01:13,930 --> 00:01:20,000
+we almost pass no information at all to TypeScript about this dollar sign variable,
+
+17
+00:01:20,020 --> 00:01:25,330
+it doesn't even know whether it's a function or not, leave alone that it would know what we can do
+
+18
+00:01:25,330 --> 00:01:27,100
+with the result of this function.
+
+19
+00:01:27,100 --> 00:01:33,130
+So for example here, that we can call click on the result of this function call, TypeScript doesn't know
+
+20
+00:01:33,130 --> 00:01:34,720
+that because we only tell it
+
+21
+00:01:34,810 --> 00:01:36,110
+this can be anything
+
+22
+00:01:36,120 --> 00:01:39,790
+and therefore here I get no IDE support at all,
+
+23
+00:01:39,850 --> 00:01:45,710
+we get no warnings and we get no help because we don't give any useful information to TypeScript.
+
+24
+00:01:46,000 --> 00:01:51,340
+So this is an approach we can use if we got no other alternative but there are better ways of solving
+
+25
+00:01:51,340 --> 00:01:51,610
+this.

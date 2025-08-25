@@ -1,0 +1,59 @@
+1
+00:00:01,590 --> 00:00:06,960
+Well we already covered a lot of features and how to use them in TypeScript.
+
+2
+00:00:06,960 --> 00:00:14,070
+Now often times, you won't have a pure TypeScript project simply because you're not only writing your
+
+3
+00:00:14,070 --> 00:00:17,030
+own code but you may use a third-party package,
+
+4
+00:00:17,070 --> 00:00:18,840
+let's say JQuery.
+
+5
+00:00:19,230 --> 00:00:23,520
+Now these packages tend to be written in Javascript, not in TypeScript
+
+6
+00:00:23,670 --> 00:00:29,940
+which means if you import them, well all of a sudden you lose the typings and so on for a big chunk
+
+7
+00:00:29,940 --> 00:00:35,570
+of your project, namely for all the JQuery related code in this example.
+
+8
+00:00:35,610 --> 00:00:42,750
+Now to reintroduce these features, to make sure you're using the right types in conjunction with JQuery
+
+9
+00:00:42,750 --> 00:00:52,560
+or whatever your package is, we would need some way to get that information. Throughout this module,
+
+10
+00:00:52,560 --> 00:01:00,570
+you will learn how to combine your Javascript packages or third-party libraries with TypeScript and
+
+11
+00:01:00,570 --> 00:01:06,780
+create a nice translation for the TypeScript compiler to use to know which types
+
+12
+00:01:06,780 --> 00:01:11,820
+for example JQuery would use if it were written in TypeScript.
+
+13
+00:01:11,820 --> 00:01:18,360
+Now that's an amazing feature enabling you to have all the power of TypeScript available even when working
+
+14
+00:01:18,360 --> 00:01:20,760
+with non-TypeScript libraries.
+
+15
+00:01:20,940 --> 00:01:23,370
+Let's see how that works in this module.

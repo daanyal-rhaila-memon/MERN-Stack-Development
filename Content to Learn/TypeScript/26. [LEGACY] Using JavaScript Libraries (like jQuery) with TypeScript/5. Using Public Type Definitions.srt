@@ -1,0 +1,111 @@
+1
+00:00:02,550 --> 00:00:06,230
+So you learned about these declaration files which you could write on your own
+
+2
+00:00:06,300 --> 00:00:08,710
+but of course we don't want to write them on our own,
+
+3
+00:00:08,760 --> 00:00:13,690
+instead we can install the ones which were written by the community where you can contribute
+
+4
+00:00:13,770 --> 00:00:17,760
+but which you can also just consume. And for that, we'll need npm,
+
+5
+00:00:17,760 --> 00:00:23,660
+so make sure you install NodeJS to have that npm, that Node Package Management tool installed too
+
+6
+00:00:23,700 --> 00:00:30,500
+and then in the project folder, run npm init and answer all these questions with the default value. Then
+
+7
+00:00:30,500 --> 00:00:31,700
+you'll get this package.json
+
+8
+00:00:31,710 --> 00:00:37,230
+file and now you can install other packages with the npm install command.
+
+9
+00:00:37,650 --> 00:00:44,910
+And there I will install with --save-dev to mark it as a development-only dependency, the @types
+
+10
+00:00:45,120 --> 00:00:47,430
+and then the name of the library name,
+
+11
+00:00:47,460 --> 00:00:53,550
+so here, JQuery. So with npm install --save-dev @types/jquery,
+
+12
+00:00:53,550 --> 00:00:58,980
+I installed a type definition in the latest version for that JQuery package
+
+13
+00:00:59,160 --> 00:01:02,960
+and here we see an entry in the dev dependencies of the package.json file.
+
+14
+00:01:03,000 --> 00:01:10,110
+The cool thing is that the TypeScript compiler will automatically without any extra configuration
+
+15
+00:01:10,110 --> 00:01:17,970
+consider all these @types, so everything in the types folder, in the node_modules folder and will include
+
+16
+00:01:17,970 --> 00:01:23,910
+them. So it will automatically dive into that JQuery folder and include the type definition files in
+
+17
+00:01:23,910 --> 00:01:29,190
+there without us telling it to the compiler and therefore now if I repeat
+
+18
+00:01:30,080 --> 00:01:37,050
+tsc, this still compiles but now with these detailed type definitions installed. We don't just have the compilation
+
+19
+00:01:37,050 --> 00:01:39,430
+work again, which we had before too
+
+20
+00:01:39,900 --> 00:01:41,730
+but you can see in the IDE here,
+
+21
+00:01:41,760 --> 00:01:43,660
+I get way better support now,
+
+22
+00:01:43,740 --> 00:01:51,330
+I get autocompletion because now my IDE fully understands what's behind that dollar sign function because
+
+23
+00:01:51,330 --> 00:01:55,720
+TypeScript now fully understands it. And this is the way to go
+
+24
+00:01:55,800 --> 00:02:01,290
+and this is what I strongly recommend doing when you use third-party libraries which are not written
+
+25
+00:02:01,290 --> 00:02:02,520
+in TypeScript.
+
+26
+00:02:02,550 --> 00:02:09,780
+You should then install the respective type definitions which are available for basically every library
+
+27
+00:02:09,810 --> 00:02:16,650
+that is at least a bit more important and popular. JQuery has it and a lot of other popular Javascript
+
+28
+00:02:16,650 --> 00:02:19,280
+libraries also have their own type definitions.

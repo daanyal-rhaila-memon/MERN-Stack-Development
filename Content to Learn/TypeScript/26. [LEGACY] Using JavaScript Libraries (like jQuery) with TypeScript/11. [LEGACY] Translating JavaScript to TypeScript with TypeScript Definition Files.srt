@@ -1,0 +1,99 @@
+1
+00:00:01,860 --> 00:00:08,270
+It makes sense if you keep in mind that TypeScript compiles your file anyways but gives you these errors
+
+2
+00:00:08,640 --> 00:00:11,820
+and then here, it still doesn't know about that
+
+3
+00:00:11,850 --> 00:00:17,200
+but it compiles it and says basically well, if you know what you're doing, maybe it works and it does
+
+4
+00:00:17,200 --> 00:00:23,190
+work but it would be nice to not get this error and to get TypeScript to know JQuery which would also
+
+5
+00:00:23,190 --> 00:00:26,980
+give us other advantages of not only less errors
+
+6
+00:00:27,030 --> 00:00:32,970
+and these can quite add up if you have multiple JQuery commands but also in our IDE, some support
+
+7
+00:00:33,000 --> 00:00:34,000
+and so on.
+
+8
+00:00:34,410 --> 00:00:37,970
+So how do we tell TypeScript about JQuery?
+
+9
+00:00:38,460 --> 00:00:46,650
+We have to create a definition file for it which is basically a bridge between Javascript packages and
+
+10
+00:00:46,650 --> 00:00:47,780
+TypeScript.
+
+11
+00:00:48,420 --> 00:00:54,450
+Pure Javascript packages of course don't have types, don't have many of the features TypeScript has but
+
+12
+00:00:54,450 --> 00:01:01,770
+you can create some translation files which don't hold any TypeScript code which gets executed but just
+
+13
+00:01:01,770 --> 00:01:07,410
+some translations from Javascript to TypeScript and TypeScript can read those files to then learn
+
+14
+00:01:07,410 --> 00:01:14,100
+what the Javascript package would look like if it were written in TypeScript. Such a definition
+
+15
+00:01:14,100 --> 00:01:22,770
+file has the ending, .d.ts and on the official TypeScript manual, under handbook,
+
+16
+00:01:23,340 --> 00:01:29,790
+you can read more about it in the writing declaration files section.
+
+17
+00:01:29,790 --> 00:01:36,210
+This explains how to write such a file and how it works and basically as I just said, you use multiple
+
+18
+00:01:36,210 --> 00:01:39,800
+TypeScript constructs there but only kind of create the types,
+
+19
+00:01:39,810 --> 00:01:43,470
+you don't write any functions which would get executed or something like that,
+
+20
+00:01:43,650 --> 00:01:48,360
+you only declare which type a variable has, how an interface should look like,
+
+21
+00:01:48,450 --> 00:01:49,610
+which classes these
+
+22
+00:01:49,610 --> 00:01:54,170
+Javascript package you would use if it were written in TypeScript and so on.
+
+23
+00:01:54,540 --> 00:02:02,670
+As you can imagine, that's quite a lot of work for a big library like JQuery and I certainly don't want
+
+24
+00:02:02,670 --> 00:02:03,980
+to do this on my own.
+
+25
+00:02:04,170 --> 00:02:06,380
+So let's look for some alternatives.

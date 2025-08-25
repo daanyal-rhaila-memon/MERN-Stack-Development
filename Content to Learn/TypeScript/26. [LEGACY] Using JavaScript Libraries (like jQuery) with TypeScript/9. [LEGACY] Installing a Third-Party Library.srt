@@ -1,0 +1,84 @@
+1
+
+00:00:02,100  -->  00:00:06,360
+Now as mentioned, sometimes you want to add your own packages to your TypeScript
+
+2
+
+00:00:06,390  -->  00:00:10,950
+projects and these packages may only be available as JavaScript. In this module,
+
+3
+
+00:00:10,950  -->  00:00:16,440
+I'll have the example of JQuery, let's say in our TypeScript project which is not very awesome since
+
+4
+
+00:00:16,440  -->  00:00:22,800
+we don't have a single line of code but let's say here we want to use JQuery, we want to use it to do
+
+5
+
+00:00:22,800  -->  00:00:24,780
+something with the DOM and stuff you do with 
+
+6
+
+00:00:24,780  -->  00:00:25,750
+JQuery.
+
+7
+
+00:00:25,800  -->  00:00:29,170
+The first step of course is to install JQuery,
+
+8
+
+00:00:29,340  -->  00:00:32,070
+so I'll go down to my console here and I'll do that.
+
+9
+
+00:00:33,450  -->  00:00:36,270
+Now important to recognize this in my base project here,
+
+10
+
+00:00:36,270  -->  00:00:38,290
+I already got a package.json file,
+
+11
+
+00:00:38,290  -->  00:00:42,460
+I got my tsconfig file and all of these are very simple.
+
+12
+
+00:00:42,480  -->  00:00:48,120
+Here I only have the lite-server and SystemJS which is responsible for loading my modules even
+
+13
+
+00:00:48,120  -->  00:00:49,770
+though I don't have modules here
+
+14
+
+00:00:49,920  -->  00:00:55,750
+but you'll see why er'll use it here later on because we'll need to import JQuery then basically
+
+15
+
+00:00:55,770  -->  00:01:01,590
+but before importing, let's install it. Now since I already got my package.json, I can use npm install
+
+16
+
+00:01:02,100  -->  00:01:08,670
+and then --save to install it as a production dependency and then JQuery. This will
+
+17
+
+00:01:08,700  -->  00:01:12,540
+download JQuery and install it into my node_modules folder.
